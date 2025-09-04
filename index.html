@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/main/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vice Club | Tu guía definitiva de la saga Grand Theft Auto</title>
+</head>
+<body class="index">
+    <header>
+        <img src="assets/images/main/logo.webp" alt="Vice Club Logo">
+        <h1>VICE CLUB</h1>
+        <nav>
+            <button id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>    
+    </header>
+    <div class="block" id="container">
+        <div class="container-wrapper">
+            <h2 class="welcome-title">BIENVENIDO A VICE CLUB</h2>
+            <div class="fotd-container">
+                <div class="fotd-title">
+                    <h2>DATO DEL DÍA</h2>
+                </div>
+                <div class="fotd-description">
+                    <p>No existe ninguna canción que se repita en la saga GTA</p>
+                </div>
+                <div class="fotd-image">
+                    <img src="assets/images/qSszw4BHmV5CUeA2HMZoOrb8NTZ4gCgK.webp" alt="">
+                </div>
+            </div>
+        </div>
+    <div class="text-container">
+        <p>Aquí podrás encontrar todo lo que buscas sobre los juegos de la saga GTA: <span style="font-weight: bold;">Información</span>, <span style="font-weight: bold;">noticias</span>, todos los <span style="font-weight: bold;">trucos</span> y <span style="font-weight: bold;">mods indispensables</span> para tu partida, <span style="font-weight: bold;">mapas interactivos</span> para completar los coleccionables mientras juegas, todas las <span style="font-weight: bold;">radios</span> disponibles para escuchar en tu día a día, curiosidades y mucho más </p>
+        <p>Puedes encontrar actualizaciones a las páginas de manera periódica, así que no te olvides de visitarnos a menudo.</p>
+        <section class="news">
+            <h2>ÚLTIMAS NOTICIAS</h2>
+            <div id="newsContainer">
+            </div>
+            <button id="verMas">CARGAR MÁS NOTICIAS</button>
+        </section>
+        <details>
+            <summary>PREGUNTAS FRECUENTES</summary>
+            <h3>SOBRE LA PÁGINA</h3>
+            <h4>¿Cómo nace Vice Club?</h4>
+                <p>Vice Club nace como un proyecto personal de desarrollo web, sumado a mi afecto por la saga de videojuegos de Grand Theft Auto. </p>
+            <h4>¿Qué puedo encontrar en Vice Club?</h4>
+                <p>En Vice Club podrás encontar información agrupada por cada juego principal de la saga, como por ejemplo la ficha técnica, coleccionables, mapas interactivos, trucos, artworks, mods, noticias y más</p>
+            <h4>¿Cómo busco información por juego?</h4>
+                <p>¡Fácil! En el logo de arriba a la izquierda podrás encontrar un menú desplegable con todos los juegos principales de la saga. Al elegir el juego deseado, se te redirigirá a la página correspondiente. Para volver a esta página es tan sencillo como tocar en el título</p>
+        <h3>SOBRE MÍ</h3>
+            <h4>¿Quién soy?</h4>
+            <p>Mi nombre es Sebastián. Soy un desarrollador web principiante de Argentina y fanático de la saga GTA.</p>
+            <h4>¿Cómo puedo contactarte?</h4>
+                <p>Puedes enviarme un <a href="mailto:fragasebastian1@gmail.com">correo electrónico</a></p>
+            <h4>¿Juego favorito de la saga?</h4>
+                <p>San Andreas por todo lo que significó y lo que sigue significando a más de 20 años de su salida. Mención honorífica a la excelente historia que tiene GTA IV</p>
+        </details>
+        </div>
+        </div>
+        <div id="rightContent">
+            <a href="./III/inicio.html">
+                <img src="assets/images/main/III.webp" alt="Logo de GTA 3">
+            </a>
+            <a href="./VC/inicio.html">
+                <img src="assets/images/main/VC.webp" alt="Logo de GTA Vice City">
+            </a>
+            <a href="./SA/inicio.html">
+                <img src="assets/images/main/SA.webp" alt="Logo de GTA San Andreas">
+            </a>
+            <a href="./LCS/inicio.html">
+                <img src="assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories">
+            </a>
+            <a href="./VCS/inicio.html">
+                <img src="assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories">
+            </a>
+            <a href="./IV/inicio.html">
+                <img src="assets/images/main/IV.webp" alt="Logo de GTA 4">
+            </a>
+            <a href="./V/inicio.html">
+                <img src="assets/images/main/V.webp" alt="Logo de GTA 5">
+            </a>
+            <a href="./VI/inicio.html">
+                <img src="assets/images/main/VI.webp" alt="Logo de GTA 6">
+            </a>
+        </div>
+    <div id="imageOverlay" style="display: none;">
+        <span class="close-btn" id="closeBtn">×</span>
+        <img src="" alt="Imagen ampliada" class="overlay-img" id="overlayImg">
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("hamburger");
+    const rightContent = document.getElementById("rightContent");
+    const block = document.querySelector(".block");
+
+    button.addEventListener("click", function (event) {
+    event.stopPropagation();
+    rightContent.classList.toggle("show");
+    button.classList.toggle("active");
+
+    if (block) block.classList.toggle("menu-shift");
+});
+
+    document.addEventListener("click", function (event) {
+    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+    rightContent.classList.remove("show");
+    button.classList.remove("active");
+
+    if (block) block.classList.remove("menu-shift");
+    }
+});
+});
+</script>
+<script>
+const container = document.getElementById("newsContainer");
+const btn = document.getElementById("verMas");
+let noticias = [];
+let visibleCount = 2;
+let step = 2;
+
+
+fetch("https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" + Date.now())
+    .then(res => res.json())
+    .then(data => {
+    noticias = data;
+    renderNoticias();
+    });
+
+function renderNoticias() {
+    container.innerHTML = "";
+
+noticias.slice(0, visibleCount).forEach(noticia => {
+    const article = document.createElement("article");
+    article.classList.add("news-article");
+    article.innerHTML = `
+    <h3 class="news-title">${noticia.title}</h3>
+    <h4 class="news-date">${noticia.date}</h4>
+    <div class="news-content">
+    <p class="news-text">${noticia.paragraph1}</p>
+    <img src="${noticia.image}" alt="${noticia.title}" class="news-image">
+    <p class="news-text">${noticia.paragraph2}</p>
+    <a href="${noticia.link}" target="_blank" rel="noopener" class="news-link">
+        ${noticia.linkText || "Más información"}
+    </a>
+    </div>
+    `;
+    container.appendChild(article);
+});
+
+if (visibleCount < noticias.length) {
+    btn.style.display = "block";
+} else {
+    btn.style.display = "none";
+}
+}
+btn.addEventListener("click", () => {
+    visibleCount += step;
+    renderNoticias();
+});
+</script>
+<script>
+    document.addEventListener('click', function (e) {
+    const img = e.target;
+
+if (img.matches('.timeline-image, .news-image')) {
+    const overlay = document.getElementById('imageOverlay');
+    const overlayImg = document.getElementById('overlayImg');
+    overlayImg.src = img.src;
+    overlay.style.display = 'flex';
+}
+});
+
+document.getElementById('closeBtn').addEventListener('click', () => {
+    document.getElementById('imageOverlay').style.display = 'none';
+});
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+try {
+    const res = await fetch("facts.json");
+    const facts = await res.json();
+
+    const today = new Date();
+    const start = new Date(today.getFullYear(), 0, 0);
+    const diff = today - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+
+    const factIndex = dayOfYear % facts.length;
+    const fact = facts[factIndex];
+
+    document.querySelector(".fotd-description p").textContent = fact.description;
+    document.querySelector(".fotd-image img").src = fact.image;
+
+} catch (err) {
+    console.error("Error cargando los datos del día:", err);
+}
+});
+
+</script>
+</body>
+</html>

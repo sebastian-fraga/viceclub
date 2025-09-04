@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles_VI.css">
+    <title>Inicio - VI</title>
+</head>
+<body class="gta-vi">
+    <header>
+        <a href="../index.html">
+        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+        </a>
+        <h1>VICE CLUB</h1>
+        <nav>
+            <button id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>    
+    </header>
+    <div class="block" id="container">
+        <div class="text-container">
+        <h2>Grand Theft Auto VI</h2>
+        <p>Grand Theft Auto VI es el próximo juego que será lanzado por Rockstar Games el 26 de mayo de 2026.</p>
+
+        <p>El juego transcurrirá en el estado de Leonida, una parodia del estado de Florida. Contará con hasta 6 ubicaciones conocidas: Vice City (Miami), los Cayos de Leonida (Florida Keys), Grassrivers (Everglades), Port Gelhorn, Ambrosia y Monte Kalaga</p>
+
+        <p>El jugador controlará a Jason Duval y Lucia Caminos, una pareja criminal que deberá enfrentarse a una conspiración criminal en su contra, confiando el uno al otro para sobrevivir.</p>
+        </div>
+    <div class="ficha-tecnica">
+    <table class="infobox">
+        <thead>
+            <tr>
+                <th colspan="2" class="portada">
+                    <img src="../assets/images/main/portada_VI.webp" alt="Portada de GTA V">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Desarrollador</th>
+                <td>Rockstar Games</td>
+            </tr>
+            <tr>
+                <th>Distribuidor</th>
+                <td>Rockstar Games</td>
+            </tr>
+            <tr>
+                <th>Productor</th>
+                <td>?</td>
+            </tr>
+            <tr>
+                <th>Guionistas</th>
+                <td>
+                    <ul>
+                        <li>?</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Plataformas</th>
+                <td>
+                    <ul>
+                        <li>PlayStation 5</li>
+                        <li>Xbox Series X/S</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Fecha de lanzamiento</th>
+                <td>
+                <span class="table-platforms">PlayStation 5<br> Xbox Series X/S</span><br>
+                26 de mayo de 2026<br><br>
+                </td>
+            </tr>
+            <tr>
+                <th>Motor gráfico</th>
+            <td>
+                <ul>
+                    <li>RAGE</li>
+                </ul>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        </div>
+        <div id="rightContent">
+            <div class="right-content-logos">
+            <a href="../III/inicio.html">
+                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
+            </a>
+            <a href="../VC/inicio.html">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img">
+            </a>
+            <a href="../SA/inicio.html">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
+            </a>
+            <a href="../LCS/inicio.html">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+            </a>
+            <a href="../VCS/inicio.html">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
+            </a>
+            <a href="../IV/inicio.html">
+                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img">
+            </a>
+            <a href="../V/inicio.html">
+                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img">
+            </a>
+            <a href="#">
+                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6">
+            </a>
+        </div>
+        <nav class="right-content-nav">
+            <ul>
+                <li><a href="#" class="active">INICIO</a></li>
+                <li><a href="timeline.html" class="inactive">LÍNEA DE TIEMPO</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("hamburger");
+    const rightContent = document.getElementById("rightContent");
+    const block = document.querySelector(".block");
+
+    button.addEventListener("click", function (event) {
+    event.stopPropagation();
+    rightContent.classList.toggle("show");
+    button.classList.toggle("active");
+
+    if (block) block.classList.toggle("menu-shift");
+});
+
+    document.addEventListener("click", function (event) {
+    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+    rightContent.classList.remove("show");
+    button.classList.remove("active");
+
+    if (block) block.classList.remove("menu-shift");
+    }
+});
+});
+</script>
+</body>
+</html>
+</body>
+</html>

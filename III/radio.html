@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles_III.css">
+    <title>Radio - III</title>
+</head>
+<body class="gta-3">
+    <header>
+        <a href="../index.html">
+        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+        </a>
+        <h1>VICE CLUB</h1>
+        <nav>
+            <button id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>    
+    </header>
+    <div class="block" id="container" data-radios='["RADIO APAGADA","HEAD RADIO","DOUBLE CLEF FM","K-JAH RADIO","RISE FM","LIPS 106","GAME FM","MSX FM","FLASHBACK 95.6"]'>
+        <div class="text-container">
+        <h2>Radios de Grand Theft Auto III</h2>
+        <div class="radio-container">
+            <img src="../assets/images/radios/arrow.png" alt="Radio anterior" id="previousRadio">
+            <div class="radio-drag">
+                <p id="nameRadio">RADIO APAGADA</p>
+                </div>
+                <img src="../assets/images/radios/arrow.png" alt="Radio siguiente" id="nextRadio">
+            </div>
+        </div>
+        </div>
+        <div id="radioInfo" class="radio-info">
+            <img src="" alt="" id="radioImage">
+            <h3 id="radioTitle"></h3>
+            <p id="radioDJ"></p>
+            <p id="radioGenre"></p>
+            <ol id="radioList">
+            </ol>
+        </div>
+        <footer>
+            <div class="footer-album">
+                <img src="../assets/images/qSszw4BHmV5CUeA2HMZoOrb8NTZ4gCgK.webp" alt="">
+            </div>
+            <div class="footer-text">
+                <p id="songTitle">Canción</p>
+                <p id="artistName">Artista</p>
+            </div>
+            <div class="footer-container">
+            <div class="footer-controls">
+                <img src="../assets/images/radios/start.png" alt="Last song">
+                <img src="../assets/images/radios/pause.png" alt="Pause/Play">
+                <img src="../assets/images/radios/end.png" alt="Next song">
+            </div>
+            <div class="footer-timer">
+                <p id="currentTime">0:00</p>
+                <div id="bar">
+                    <div id="currentBar"></div>
+                </div>
+                <p id="totalTime">0:00</p>
+            </div>
+            </div>
+        </footer>
+        <div id="rightContent">
+            <div class="right-content-logos">
+            <a href="#">
+                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3">
+            </a>
+            <a href="../VC/radio.html">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img">
+            </a>
+            <a href="../SA/radio.html">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
+            </a>
+            <a href="../LCS/radio.html">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+            </a>
+            <a href="../VCS/radio.html">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
+            </a>
+            <a href="../IV/radio.html">
+                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img">
+            </a>
+            <a href="../V/radio.html">
+                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img">
+            </a>
+            <a href="../VI/inicio.html">
+                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" class="right-content-img">
+            </a>
+        </div>
+        <nav class="right-content-nav">
+            <ul>
+                <li><a href="inicio.html" class="inactive">INICIO</a></li>
+                <li><a href="herramientas_y_mods.html" class="inactive">HERRAMIENTAS Y MODS</a></li>
+                <li><a href="#" class="inactive">MAPA</a></li>
+                <li><a href="#" class="active">RADIO</a></li>
+                <li><a href="#" class="inactive">TRUCOS</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<script src="../assets/scripts/radioSlider.js"></script>    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("hamburger");
+    const rightContent = document.getElementById("rightContent");
+    const block = document.querySelector(".block");
+
+    button.addEventListener("click", function (event) {
+    event.stopPropagation();
+    rightContent.classList.toggle("show");
+    button.classList.toggle("active");
+
+    if (block) block.classList.toggle("menu-shift");
+});
+
+    document.addEventListener("click", function (event) {
+    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+    rightContent.classList.remove("show");
+    button.classList.remove("active");
+
+    if (block) block.classList.remove("menu-shift");
+    }
+});
+});
+</script>
+</body>
+</html>
+</body>
+</html>

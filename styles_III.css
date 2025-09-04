@@ -1,0 +1,113 @@
+/* #region FUENTES */
+@font-face {
+    font-family: "Arial Black Italic";
+    src: url(assets/fonts/ArialBlackItalic.ttf);
+}
+@font-face {
+    font-family: "Pricedown";
+    src: url(assets/fonts/Pricedown.otf);
+}
+/* #endregion */
+
+/* #region GENERAL */
+body::before {
+    background-image: url("assets/images/main/background_III.webp");
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: scale(1.1);
+    z-index: -1;
+}
+#rightContent::before {
+    background:linear-gradient(90deg, #F0C903, #b475efd9); 
+}
+.block {
+    background:
+    radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
+    radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
+    color: #ffffff;
+    box-shadow: 0px -60px 500px 100px #2889d372;
+    border: 5px solid #2e9aedcb;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.text-container {
+    justify-content: left;
+    align-items: left;
+}
+.text-container h2 {
+    font-family: "Arial Black Italic";
+    color: #e7a600;
+    text-shadow: 3px 3px 10px #000000;
+}
+.right-content-nav a {
+    font-family: "Arial Black Italic";
+    font-size: 1.6rem;
+}
+.right-content-nav a.active {
+    color: #e7a600;
+    text-shadow: 0 0 3px #000;
+    cursor: default;
+}
+.right-content-nav a.inactive {
+    color: #3f3f3f;
+    transition: color 0.4s;
+}
+.right-content-nav a.inactive:hover {
+    text-shadow: 0 0 3px #000;
+    color: #e7a600;
+}
+.right-content-nav a.inactive:active {
+    color: #b78301;
+}
+/* #endregion */
+
+/* #region FICHA TÉCNICA */
+.ficha-tecnica {
+    border-color: #e7a600d2 !important;
+    background-color: #e7a60062;
+}
+.ficha-tecnica th, span.table-platforms {
+    font-family: "Arial Black Italic";
+}
+span.table-platforms {
+    color: #e7a600;
+}
+/* #endregion */
+
+/* #region HERRAMIENTAS Y MODS */
+article.tools-wrapper  {
+    background-color: red 
+}
+article.tools-wrapper:not(.tools-image):hover {
+    background-color: #00256e81
+}
+.tools-title {
+    font-family: "Arial Black Italic";
+}
+/* #endregion */
+
+/* #region RADIO */
+#nameRadio {
+    font-family: "Pricedown";
+    background: url("assets/images/radios/III/background.png") center / cover no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: hard-light
+}
+#radioInfo {
+    background: radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
+    radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
+    border: 5px solid #2e9aedcb;
+}
+/* #endregion */

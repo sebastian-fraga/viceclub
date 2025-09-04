@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "GTAArtDecoRegular";
+    src: url(assets/fonts/GTAArtDecoRegular.ttf);
+}
+body::before {
+    background-image: url("assets/images/main/background_VI.webp");
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: scale(1.1);
+    z-index: -1;
+}
+#rightContent::before {
+    background:linear-gradient(90deg, #81eaf4, #b475efd9); 
+}
+.block {
+    background:
+    radial-gradient(circle 400px at 0px 0px, #f0bd3a30 15%, transparent 70%),
+    radial-gradient(circle 500px at 100% 100%, #f0bd3a30 15%, transparent 70%), #35094de8;
+    color: #ffffff;
+    box-shadow: 0px -60px 500px 100px #bb8be59e;
+    border: 5px solid #79d2ff;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.text-container {
+    justify-content: left;
+    align-items: left;
+}
+.text-container h2 {
+    font-family: "GTAArtDecoRegular";
+    background-image: linear-gradient(to right, #7487e7, #b64cbb, #e57da5, #e89b58);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 34px;
+    text-align: center;
+    line-height: 0.9 ;
+}
+.right-content-nav a {
+    font-family: "GTAArtDecoRegular";
+    font-size: 27px;
+}
+.right-content-nav a.active {
+    color: #81eaf4;
+    text-shadow: 0 0 3px #000;
+    cursor: default;
+}
+.right-content-nav a.inactive {
+    color: #505050fa;
+}
+.right-content-nav a.inactive:hover {
+    color: #81eaf4;
+    text-shadow: 0 0 3px #000;
+    transition: color 0.1s;
+}
+.right-content-nav a.inactive:active {
+    color: #67c8ee;
+    -webkit-text-fill-color: 67c8ee;
+}
+
+/*LÍNEA DE TIEMPO*/
+.timeline-last-updated {
+    color: #81eaf4;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'GTAArtDecoRegular';
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+.timeline-date {
+    text-align: left;
+    font-family: 'GTAArtDecoRegular';
+    font-size: 25px;
+    color: #e79efb;
+}
+.timeline-time {
+    text-align: left;
+    color: #fed4ff;
+    font-family: 'GTAArtDecoRegular';
+    font-size: 17px;
+    margin-top: -25px;
+}
+.block.timeline p {
+    margin: 0 0 20px 30px;
+    text-align: left;
+    text-wrap: wrap;
+    font-family: "GTAArtDecoRegular";
+    max-width: 100%;
+    text-indent: 1.7rem;
+}
+.block.timeline p + p {
+    margin-bottom: 70px;
+}
+.timeline-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, #dd6262, #ffc61a) ;
+}
+.timeline-image {
+    box-sizing: content-box;
+    align-items: center;
+    max-width: 50%;
+    display: block;
+    max-height: 90%;
+    height: auto;
+    margin: 10px auto 50px auto;
+    border-radius: 20px;
+    border: 3px solid #e79efb;
+    cursor: pointer;
+}
+.timeline-icon {
+    display: block;
+    position: absolute;
+}
+.block a {
+    text-decoration: none;
+    color: #f790b8;
+}
+.block a:active {
+    color: #c36086;
+}
+
+
+/*FICHA TÉCNICA*/
+.ficha-tecnica {
+    border-color: #acdaf3 !important;
+    background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
+}
+.ficha-tecnica th, span.table-platforms {
+    font-family: "GTAArtDecoRegular";
+}
+span.table-platforms {
+    color: #acdaf3;
+}

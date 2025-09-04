@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Chalet";
+    src: url("/assets/fonts/Chalet.otf");
+}
+body::before {
+    background-image: url("assets/images/main/background_V.webp");
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: scale(1.1);
+    z-index: -1;
+}
+#rightContent::before {
+    background:linear-gradient(90deg, #a3bd7c, #b475efd9); 
+}
+.block {
+    background:
+    radial-gradient(circle 500px at 30px 60px, #41cc3130 15%, transparent 70%),
+    radial-gradient(circle 500px at 100% 100%, #41cc3130 15%, transparent 70%), #032403d7;
+    color: #ffffff;
+    box-shadow: 0px -60px 500px 100px #37ab408e;
+    border: 5px solid #78f16d;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.text-container {
+    justify-content: left;
+    align-items: left;
+}
+.text-container h2 {
+    font-family: "Chalet";
+    color: #679a1c;
+    font-size: 34px;
+    text-align: center;
+    text-shadow: 3px 3px 10px #000000;
+}
+.right-content-nav a {
+    font-family: "Chalet";
+    font-size: 28px;
+}
+.right-content-nav a.active {
+    color: #a3bd7c;
+    text-shadow: 0 0 2px #000;
+    cursor: default;
+}
+.right-content-nav a.inactive {
+    color: #2c3a2cd1;
+}
+.right-content-nav a.inactive:hover {
+    color: #a3bd7c;
+    text-shadow: 0 0 1px #000;
+    transition: color 0.1s;
+}
+.right-content-nav a.inactive:active {
+    color: #748855;
+}
+
+
+
+/*FICHA TÉCNICA*/
+.ficha-tecnica {
+    border-color: #679a1c !important;
+    background-color: #689a1c5e;
+}
+.ficha-tecnica th, span.table-platforms {
+    font-family: "Chalet";
+}
+span.table-platforms {
+    color: #9ecb59;
+}
+
+/*RADIO*/
+
+.v-radio-wheel {
+    position: relative;
+    width: 600px;
+    height: 350px;
+}
+.v-radio-wheel .radio-image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: rotate(calc(var(--i) * 14.4deg)) translate(260px) rotate(calc(var(--i) * -14.4deg));
+    transform-origin: center;
+    opacity: 0.6;
+    filter: saturate(0%);
+    transition: opacity 0.3s;
+}
+.radio-image:hover {
+    opacity: 1;
+    filter: saturate(100%);
+    outline: 3px solid #4a6eb3;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.radio-image.selected {
+    outline: 3px solid #4a6eb3;
+    border-radius: 100%;
+    filter: saturate(100%);
+    opacity: 1;
+}
+.v-radio-center {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+    z-index: 10;
+    pointer-events: none;
+    text-wrap: nowrap;
+}
+#radioText {
+    font-family: "Chalet", sans-serif;
+}
