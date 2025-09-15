@@ -88,11 +88,12 @@ document.querySelectorAll("[data-radios]").forEach(container => {
       radioName.style.opacity = "1";
 
       if (currentRadio === "RADIO APAGADA") {
-        radioInfo.style.display = "none";
+        radioInfo.classList.remove("active");
         footer.style.display = "none";
       } else {
-        radioInfo.style.display = "grid";
-        footer.style.display = "flex";
+      radioInfo.classList.add("active");
+      footer.style.display = "flex";
+
         const data = radioData[currentRadio];
 
   radioTitle.textContent = currentRadio;

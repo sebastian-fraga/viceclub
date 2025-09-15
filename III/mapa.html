@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles_III.css">
+    <title>Mapa Interactivo - III</title>
+</head>
+<body class="gta-3">
+    <header>
+        <a href="../index.html">
+        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+        </a>
+        <h1>VICE CLUB</h1>
+        <nav>
+            <button id="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>    
+    </header>
+    <div class="block" id="container">
+        <div class="text-container">
+
+        </div>
+
+        </div>
+        <div id="rightContent">
+            <div class="right-content-logos">
+            <a href="#">
+                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3">
+            </a>
+            <a href="../VC/mapa.html">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img">
+            </a>
+            <a href="../SA/mapa.html">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
+            </a>
+            <a href="../LCS/mapa.html">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+            </a>
+            <a href="../VCS/mapa.html">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
+            </a>
+            <a href="../IV/mapa.html">
+                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img">
+            </a>
+            <a href="../V/mapa.html">
+                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img">
+            </a>
+            <a href="../VI/inicio.html">
+                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" class="right-content-img">
+            </a>
+        </div>
+        <nav class="right-content-nav">
+            <ul>
+                <li><a href="inicio.html" class="inactive">INICIO</a></li>
+                <li><a href="100.html" class="inactive">100%</a></li>
+                <li><a href="artworks.html" class="inactive">ARTWORKS</a></li>
+                <li><a href="herramientas_y_mods.html" class="inactive">HERRAMIENTAS Y MODS</a></li>
+                <li><a href="logros.html" class="inactive">LOGROS</a></li>
+                <li><a href="#" class="active">MAPA</a></li>
+                <li><a href="radio.html" class="inactive">RADIO</a></li>
+                <li><a href="trucos.html" class="inactive">TRUCOS</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("hamburger");
+    const rightContent = document.getElementById("rightContent");
+    const block = document.querySelector(".block");
+
+    button.addEventListener("click", function (event) {
+    event.stopPropagation();
+    rightContent.classList.toggle("show");
+    button.classList.toggle("active");
+
+    if (block) block.classList.toggle("menu-shift");
+});
+
+    document.addEventListener("click", function (event) {
+    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+    rightContent.classList.remove("show");
+    button.classList.remove("active");
+
+    if (block) block.classList.remove("menu-shift");
+    }
+});
+});
+</script>

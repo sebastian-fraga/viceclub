@@ -38,10 +38,10 @@ body::before {
 }
 .text-container h2 {
     font-family: "Eurostile";
-    color: #e70000;
+    color: #f29997;
     font-size: 34px;
     text-align: center;
-    text-shadow: 3px 3px 10px #000000;
+    text-shadow: 3px 3px 0px #000000;
 }
 .right-content-nav a {
     font-family: "Eurostile";

@@ -53,7 +53,7 @@ body::before {
     cursor: default;
 }
 .right-content-nav a.inactive {
-    color: #2c3a2cd1;
+    color: #4b524bd8;
 }
 .right-content-nav a.inactive:hover {
     color: #a3bd7c;
@@ -83,7 +83,7 @@ span.table-platforms {
 .v-radio-wheel {
     position: relative;
     width: 600px;
-    height: 350px;
+    height: 550px;
 }
 .v-radio-wheel .radio-image {
     position: absolute;

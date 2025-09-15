@@ -53,7 +53,7 @@ body::before {
     cursor: default;
 }
 .right-content-nav a.inactive {
-    color: #383e38dd;
+    color: #3b543b;
 }
 .right-content-nav a.inactive:hover {
     color: #4bf73b;
