@@ -97,6 +97,7 @@ body::before {
     font-family: "GTAArtDecoRegular";
     max-width: 100%;
     text-indent: 1.7rem;
+    font-size: 1.3rem;
 }
 .block.timeline p + p {
     margin-bottom: 70px;

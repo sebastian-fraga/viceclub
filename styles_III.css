@@ -82,6 +82,7 @@ body::before {
 span.table-platforms {
     color: #e7a600;
 }
+
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
@@ -99,15 +100,22 @@ article.tools-wrapper:not(.tools-image):hover {
 /* #region RADIO */
 #nameRadio {
     font-family: "Pricedown";
-    background: url("assets/images/radios/III/background.png") center / cover no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    mix-blend-mode: hard-light
+    color: #85b3c0;
+    text-shadow: 2px 5px 3px #031f2c;
+    transition: color 1s cubic-bezier(.14,.92,.77,.12);
 }
+#nameRadio.loading {
+    color: #617f89;
+    text-shadow: none;
+}
+
 #radioInfo {
     background: radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
     radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
     border: 5px solid #2e9aedcb;
+}
+#radioList li.active a {
+    color: #85b3c0;
+    text-shadow: 0 0 3px #000;
 }
 /* #endregion */

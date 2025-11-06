@@ -6,6 +6,7 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles_IV.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Radio - IV</title>
 </head>
 <body class="gta-iv">
@@ -26,12 +27,58 @@
         <div class="text-container">
         <h2>Radios de Grand Theft Auto IV</h2>
         <div class="radio-container">
+            <span class="material-symbols-rounded" id="previousRadio">
+            chevron_left
+            </span>
             <div class="radio-drag">
-                <p>RADIO APAGADA</p>
+                <p id="nameRadio">RADIO APAGADA</p>
                 </div>
+                <span class="material-symbols-rounded" id="nextRadio">
+            chevron_right
+            </span>
             </div>
         </div>
         </div>
+        <div id="radioInfo" class="radio-info">
+            <img src="" alt="" id="radioImage">
+            <h3 id="radioTitle"></h3>
+            <p id="radioDJ"></p>
+            <p id="radioGenre"></p>
+            <ol id="radioList">
+            </ol>
+        </div>
+        <footer>
+            <div class="footer-album">
+                <img id="albumArt">
+            </div>
+            <div class="footer-text">
+                <p id="songTitle">Canción</p>
+                <p id="artistName">Artista</p>
+            </div>
+            <div class="footer-container">
+            <div class="footer-controls">
+                <span class="material-symbols-rounded">
+                skip_previous
+                </span>
+                <span class="material-symbols-rounded">
+                pause_circle
+                </span>
+                <span class="material-symbols-rounded"style="display: none;">
+                play_circle
+                </span>
+                <span class="material-symbols-rounded">
+                skip_next
+                </span>
+            </div>
+            <div class="footer-timer">
+                <p id="currentTime">0:00</p>
+                <div id="bar">
+                    <div id="currentBar"></div>
+                </div>
+                <p id="totalTime">0:00</p>
+            </div>
+            </div>
+        </footer>
         <div id="rightContent">
         <div class="right-content-logos">
             <a href="../III/radio.html">

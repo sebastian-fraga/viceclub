@@ -6,6 +6,7 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../styles_LCS.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Radio - LCS</title>
 </head>
 <body class="gta-lcs">
@@ -34,9 +35,17 @@
             </div>
         </div>
         </div>
+        <div id="radioInfo" class="radio-info">
+            <img src="" alt="" id="radioImage">
+            <h3 id="radioTitle"></h3>
+            <p id="radioDJ"></p>
+            <p id="radioGenre"></p>
+            <ol id="radioList">
+            </ol>
+        </div>
         <footer>
             <div class="footer-album">
-                <img src="../assets/images/qSszw4BHmV5CUeA2HMZoOrb8NTZ4gCgK.webp" alt="">
+                <img id="albumArt">
             </div>
             <div class="footer-text">
                 <p id="songTitle">Canción</p>
@@ -44,9 +53,18 @@
             </div>
             <div class="footer-container">
             <div class="footer-controls">
-                <img src="../assets/images/radios/start.png" alt="Last song">
-                <img src="../assets/images/radios/pause.png" alt="Pause/Play">
-                <img src="../assets/images/radios/end.png" alt="Next song">
+                <span class="material-symbols-rounded">
+                skip_previous
+                </span>
+                <span class="material-symbols-rounded">
+                pause_circle
+                </span>
+                <span class="material-symbols-rounded"style="display: none;">
+                play_circle
+                </span>
+                <span class="material-symbols-rounded">
+                skip_next
+                </span>
             </div>
             <div class="footer-timer">
                 <p id="currentTime">0:00</p>
