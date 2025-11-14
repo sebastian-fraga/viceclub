@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles_III.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles_III.css">
+    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/main/background_III.webp" as="image" type="image/webp">
     <title>100% - III</title>
 </head>
+
 <body class="gta-3" data-game="gta-3">
     <header>
-        <a href="../index.html">
-        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
-            <button id="hamburger">
+            <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-        </nav>    
+        </nav>
     </header>
+    <div class="wip">
+        <p>EN CONSTRUCCIÓN</p>
+    </div>
     <div class="block" id="container">
         <div class="text-container checklist">
             <h2>Checklist del 100% de Grand Theft Auto III</h2>
@@ -31,7 +40,7 @@
                     <label>
                         <input type="checkbox">
                         Completar las 50 misiones de la historia*
-                        </label>
+                    </label>
                     <ul class="subitems">
                         <li><label><input type="checkbox">Misión 1: El Comienzo</label></li>
                         <li><label><input type="checkbox">Misión 2: Primer golpe</label></li>
@@ -43,7 +52,7 @@
                     <label>
                         <input type="checkbox">
                         Completar las 17 misiones de encargos telefónicos
-                        </label>
+                    </label>
                     <ul class="subitems">
                         <li><label><input type="checkbox">Marty Chonks</label></li>
                         <li><label><input type="checkbox">El Burro</label></li>
@@ -52,13 +61,13 @@
                     </ul>
                 </li>
             </ul>
-                <h3>Misiones secundarias</h3>
+            <h3>Misiones secundarias</h3>
             <ul>
                 <li>
                     <label>
                         <input type="checkbox">
-                        Completar las 4 misiones off-road 
-                        </label>
+                        Completar las 4 misiones off-road
+                    </label>
                     <ul class="subitems">
                         <li><label><input type="checkbox">Patriot Playground</label></li>
                         <li><label><input type="checkbox">Multistorey Mayhem</label></li>
@@ -69,8 +78,8 @@
                 <li>
                     <label>
                         <input type="checkbox">
-                        Completar las 4 misiones de vehículos RC 
-                        </label>
+                        Completar las 4 misiones de vehículos RC
+                    </label>
                     <ul class="subitems">
                         <li><label><input type="checkbox">Diablo Destruction</label></li>
                         <li><label><input type="checkbox">Mafia Massacre</label></li>
@@ -81,13 +90,13 @@
                 <li>
                     <label>
                         <input type="checkbox">
-                        Completar las 4 misiones de vehículos de emergencia 
-                        </label>
+                        Completar las 4 misiones de vehículos de emergencia
+                    </label>
                     <ul class="subitems">
                         <li><label><input type="checkbox">12 niveles de paramédico</label></li>
                         <li>
                             <label>
-                            <input type="checkbox">60 fuegos extinguidos como bombero
+                                <input type="checkbox">60 fuegos extinguidos como bombero
                             </label>
                             <ul class="subsubitems">
                                 <li><label><input type="checkbox">20 fuegos extinguidos en Portland</label></li>
@@ -97,12 +106,14 @@
                         </li>
                         <li>
                             <label>
-                            <input type="checkbox">60 criminales asesinados como vigilante
+                                <input type="checkbox">60 criminales asesinados como vigilante
                             </label>
                             <ul class="subsubitems">
                                 <li><label><input type="checkbox">20 criminales asesinados en Portland</label></li>
-                                <li><label><input type="checkbox">20 criminales asesinados en Staunton Island</label></li>
-                                <li><label><input type="checkbox">20 criminales asesinados en Shoreside Vale</label></li>
+                                <li><label><input type="checkbox">20 criminales asesinados en Staunton Island</label>
+                                </li>
+                                <li><label><input type="checkbox">20 criminales asesinados en Shoreside Vale</label>
+                                </li>
                             </ul>
                         </li>
                         <li><label><input type="checkbox">100 viajes como taxista</label></li>
@@ -110,25 +121,25 @@
                     </ul>
                 </li>
             </ul>
-                <h3>Coleccionables</h3>
+            <h3>Coleccionables</h3>
             <ul>
                 <li>
                     <label>
                         <input type="checkbox">
                         Recoger los 100 paquetes ocultos
-                        </label>
+                    </label>
                 </li>
                 <li>
                     <label>
                         <input type="checkbox">
                         Completar las 20 masacres
-                        </label>
+                    </label>
                 </li>
                 <li>
                     <label>
                         <input type="checkbox">
                         Completar los 20 saltos únicos
-                        </label>
+                    </label>
                 </li>
             </ul>
             <h3>Importación/Exportación</h3>
@@ -137,69 +148,69 @@
                     <label>
                         <input type="checkbox">
                         Portland Harbor: Grúa de vehículos
-                        </label>
-                        <ul class="subsubitems">
-                                <li><label><input type="checkbox">Blista</label></li>
-                                <li><label><input type="checkbox">Bobcat</label></li>
-                                <li><label><input type="checkbox">Bus</label></li>
-                                <li><label><input type="checkbox">Coach</label></li>
-                                <li><label><input type="checkbox">Dodo</label></li>
-                                <li><label><input type="checkbox">Flatbed</label></li>
-                                <li><label><input type="checkbox">Linerunner</label></li>
-                                <li><label><input type="checkbox">Moonbeam</label></li>
-                                <li><label><input type="checkbox">Mr. Whoopee</label></li>
-                                <li><label><input type="checkbox">Mule</label></li>
-                                <li><label><input type="checkbox">Patriot</label></li>
-                                <li><label><input type="checkbox">Pony</label></li>
-                                <li><label><input type="checkbox">Rumpo</label></li>
-                                <li><label><input type="checkbox">Securicar</label></li>
-                                <li><label><input type="checkbox">Trashmaster</label></li>
-                                <li><label><input type="checkbox">Yankee</label></li>
-                            </ul>
+                    </label>
+                    <ul class="subsubitems">
+                        <li><label><input type="checkbox">Blista</label></li>
+                        <li><label><input type="checkbox">Bobcat</label></li>
+                        <li><label><input type="checkbox">Bus</label></li>
+                        <li><label><input type="checkbox">Coach</label></li>
+                        <li><label><input type="checkbox">Dodo</label></li>
+                        <li><label><input type="checkbox">Flatbed</label></li>
+                        <li><label><input type="checkbox">Linerunner</label></li>
+                        <li><label><input type="checkbox">Moonbeam</label></li>
+                        <li><label><input type="checkbox">Mr. Whoopee</label></li>
+                        <li><label><input type="checkbox">Mule</label></li>
+                        <li><label><input type="checkbox">Patriot</label></li>
+                        <li><label><input type="checkbox">Pony</label></li>
+                        <li><label><input type="checkbox">Rumpo</label></li>
+                        <li><label><input type="checkbox">Securicar</label></li>
+                        <li><label><input type="checkbox">Trashmaster</label></li>
+                        <li><label><input type="checkbox">Yankee</label></li>
+                    </ul>
                 </li>
                 <li>
                     <label>
                         <input type="checkbox">
                         Portland Harbor: Vehículos de emergencia
-                        </label>
-                        <ul class="subsubitems">
-                                <li><label><input type="checkbox">Ambulancia</label></li>
-                                <li><label><input type="checkbox">Barracks OL</label></li>
-                                <li><label><input type="checkbox">Enforcer</label></li>
-                                <li><label><input type="checkbox">FBI Car</label></li>
-                                <li><label><input type="checkbox">Camión de bomberos</label></li>
-                                <li><label><input type="checkbox">Coche de policía</label></li>
-                                <li><label><input type="checkbox">Rhino</label></li>
-                            </ul>
+                    </label>
+                    <ul class="subsubitems">
+                        <li><label><input type="checkbox">Ambulancia</label></li>
+                        <li><label><input type="checkbox">Barracks OL</label></li>
+                        <li><label><input type="checkbox">Enforcer</label></li>
+                        <li><label><input type="checkbox">FBI Car</label></li>
+                        <li><label><input type="checkbox">Camión de bomberos</label></li>
+                        <li><label><input type="checkbox">Coche de policía</label></li>
+                        <li><label><input type="checkbox">Rhino</label></li>
+                    </ul>
                 </li>
                 <li>
                     <label>
                         <input type="checkbox">
                         Garage de Shoreside Vale
-                        </label>
-                        <ul class="subsubitems">
-                                <li><label><input type="checkbox">Banshee</label></li>
-                                <li><label><input type="checkbox">BF Injection</label></li>
-                                <li><label><input type="checkbox">Cabbie</label></li>
-                                <li><label><input type="checkbox">Cheetah</label></li>
-                                <li><label><input type="checkbox">Esperanto</label></li>
-                                <li><label><input type="checkbox">Idaho</label></li>
-                                <li><label><input type="checkbox">Infernus</label></li>
-                                <li><label><input type="checkbox">Kuruma</label></li>
-                                <li><label><input type="checkbox">Landstalker</label></li>
-                                <li><label><input type="checkbox">Manana</label></li>
-                                <li><label><input type="checkbox">Perennial</label></li>
-                                <li><label><input type="checkbox">Sentinel</label></li>
-                                <li><label><input type="checkbox">Stallion</label></li>
-                                <li><label><input type="checkbox">Stinger</label></li>
-                                <li><label><input type="checkbox">Stretch</label></li>
-                                <li><label><input type="checkbox">Taxi</label></li>
-                            </ul>
+                    </label>
+                    <ul class="subsubitems">
+                        <li><label><input type="checkbox">Banshee</label></li>
+                        <li><label><input type="checkbox">BF Injection</label></li>
+                        <li><label><input type="checkbox">Cabbie</label></li>
+                        <li><label><input type="checkbox">Cheetah</label></li>
+                        <li><label><input type="checkbox">Esperanto</label></li>
+                        <li><label><input type="checkbox">Idaho</label></li>
+                        <li><label><input type="checkbox">Infernus</label></li>
+                        <li><label><input type="checkbox">Kuruma</label></li>
+                        <li><label><input type="checkbox">Landstalker</label></li>
+                        <li><label><input type="checkbox">Manana</label></li>
+                        <li><label><input type="checkbox">Perennial</label></li>
+                        <li><label><input type="checkbox">Sentinel</label></li>
+                        <li><label><input type="checkbox">Stallion</label></li>
+                        <li><label><input type="checkbox">Stinger</label></li>
+                        <li><label><input type="checkbox">Stretch</label></li>
+                        <li><label><input type="checkbox">Taxi</label></li>
+                    </ul>
                 </li>
             </ul>
         </div>
-        
-        
+
+
     </div>
     <div id="rightContent">
         <div class="right-content-logos">
@@ -213,7 +224,8 @@
                 <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
             </a>
             <a href="../LCS/100.html">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
+                    class="right-content-img">
             </a>
             <a href="../VCS/100.html">
                 <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
@@ -241,32 +253,33 @@
             </ul>
         </nav>
     </div>
-        
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("hamburger");
-    const rightContent = document.getElementById("rightContent");
-    const block = document.querySelector(".block");
 
-    button.addEventListener("click", function (event) {
-    event.stopPropagation();
-    rightContent.classList.toggle("show");
-    button.classList.toggle("active");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("hamburger");
+            const rightContent = document.getElementById("rightContent");
+            const block = document.querySelector(".block");
 
-    if (block) block.classList.toggle("menu-shift");
-});
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                rightContent.classList.toggle("show");
+                button.classList.toggle("active");
 
-    document.addEventListener("click", function (event) {
-    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-    rightContent.classList.remove("show");
-    button.classList.remove("active");
+                if (block) block.classList.toggle("menu-shift");
+            });
 
-    if (block) block.classList.remove("menu-shift");
-    }
-});
-});
-</script>
-<script src="../assets/scripts/checklist.js"></script>
+            document.addEventListener("click", function (event) {
+                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                    rightContent.classList.remove("show");
+                    button.classList.remove("active");
+
+                    if (block) block.classList.remove("menu-shift");
+                }
+            });
+        });
+    </script>
+    <script src="../assets/scripts/checklist.js"></script>
 
 </body>
+
 </html>

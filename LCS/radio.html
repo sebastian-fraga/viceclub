@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles_LCS.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles_LCS.css">
+    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/main/background_LCS.webp" as="image" type="image/webp">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Radio - LCS</title>
 </head>
+
 <body class="gta-lcs">
     <header>
-        <a href="../index.html">
-        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
-            <button id="hamburger">
+            <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-        </nav>    
+        </nav>
     </header>
-    <div class="block" id="container" data-radios='["RADIO APAGADA","HEAD RADIO","DOUBLE CLEF FM","K-JAH","RISE FM","LIPS 106","RADIO DEL MUNDO","MSX 98", "FLASHBACK FM", "THE LIBERTY JAM"]'>
+    <div class="wip">
+        <p>EN CONSTRUCCIÓN</p>
+    </div>
+    <div class="block" id="container"
+        data-radios='["RADIO APAGADA","HEAD RADIO","DOUBLE CLEF FM","K-JAH","RISE FM","LIPS 106","RADIO DEL MUNDO","MSX 98", "FLASHBACK FM", "THE LIBERTY JAM"]'>
         <div class="text-container">
-        <h2>Radios de Grand Theft Auto: Liberty City Stories</h2>
-        <div class="radio-container">
-            <img src="../assets/images/radios/arrow.png" alt="Radio anterior" id="previousRadio">
-            <div class="radio-drag">
-                <p id="nameRadio">RADIO APAGADA</p>
+            <h2>Radios de Grand Theft Auto: Liberty City Stories</h2>
+            <div class="radio-container">
+                <img src="../assets/images/radios/arrow.png" alt="Radio anterior" id="previousRadio">
+                <div class="radio-drag">
+                    <p id="nameRadio">RADIO APAGADA</p>
                 </div>
                 <img src="../assets/images/radios/arrow.png" alt="Radio siguiente" id="nextRadio">
             </div>
         </div>
+    </div>
+    <div id="radioInfo" class="radio-info">
+        <img src="" alt="" id="radioImage">
+        <h3 id="radioTitle"></h3>
+        <p id="radioDJ"></p>
+        <p id="radioGenre"></p>
+        <ol id="radioList">
+        </ol>
+    </div>
+    <footer>
+        <div class="footer-album">
+            <img id="albumArt">
         </div>
-        <div id="radioInfo" class="radio-info">
-            <img src="" alt="" id="radioImage">
-            <h3 id="radioTitle"></h3>
-            <p id="radioDJ"></p>
-            <p id="radioGenre"></p>
-            <ol id="radioList">
-            </ol>
+        <div class="footer-text">
+            <p id="songTitle">Canción</p>
+            <p id="artistName">Artista</p>
         </div>
-        <footer>
-            <div class="footer-album">
-                <img id="albumArt">
-            </div>
-            <div class="footer-text">
-                <p id="songTitle">Canción</p>
-                <p id="artistName">Artista</p>
-            </div>
-            <div class="footer-container">
+        <div class="footer-container">
             <div class="footer-controls">
                 <span class="material-symbols-rounded">
-                skip_previous
+                    skip_previous
                 </span>
                 <span class="material-symbols-rounded">
-                pause_circle
+                    pause_circle
                 </span>
-                <span class="material-symbols-rounded"style="display: none;">
-                play_circle
+                <span class="material-symbols-rounded" style="display: none;">
+                    play_circle
                 </span>
                 <span class="material-symbols-rounded">
-                skip_next
+                    skip_next
                 </span>
             </div>
             <div class="footer-timer">
@@ -73,9 +84,9 @@
                 </div>
                 <p id="totalTime">0:00</p>
             </div>
-            </div>
-        </footer>
-        <div id="rightContent">
+        </div>
+    </footer>
+    <div id="rightContent">
         <div class="right-content-logos">
             <a href="../III/radio.html">
                 <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
@@ -114,32 +125,34 @@
             </ul>
         </nav>
     </div>
-<script src="../assets/scripts/radioSlider.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("hamburger");
-    const rightContent = document.getElementById("rightContent");
-    const block = document.querySelector(".block");
+    <script src="../assets/scripts/radioSlider.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("hamburger");
+            const rightContent = document.getElementById("rightContent");
+            const block = document.querySelector(".block");
 
-    button.addEventListener("click", function (event) {
-    event.stopPropagation();
-    rightContent.classList.toggle("show");
-    button.classList.toggle("active");
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                rightContent.classList.toggle("show");
+                button.classList.toggle("active");
 
-    if (block) block.classList.toggle("menu-shift");
-});
+                if (block) block.classList.toggle("menu-shift");
+            });
 
-    document.addEventListener("click", function (event) {
-    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-    rightContent.classList.remove("show");
-    button.classList.remove("active");
+            document.addEventListener("click", function (event) {
+                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                    rightContent.classList.remove("show");
+                    button.classList.remove("active");
 
-    if (block) block.classList.remove("menu-shift");
-    }
-});
-});
-</script>
+                    if (block) block.classList.remove("menu-shift");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
 </body>
+
 </html>

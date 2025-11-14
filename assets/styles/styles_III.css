@@ -1,17 +1,17 @@
 /* #region FUENTES */
 @font-face {
     font-family: "Arial Black Italic";
-    src: url(assets/fonts/ArialBlackItalic.ttf);
+    src: url("../fonts/ArialBlackItalic.ttf");
 }
 @font-face {
     font-family: "Pricedown";
-    src: url(assets/fonts/Pricedown.otf);
+    src: url("../fonts/Pricedown.otf");
 }
 /* #endregion */
 
 /* #region GENERAL */
 body::before {
-    background-image: url("assets/images/main/background_III.webp");
+    background-image: url("../images/main/background_III.webp");
     content: "";
     position: fixed;
     top: 0;

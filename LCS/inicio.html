@@ -1,120 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles_LCS.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles_LCS.css">
+    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/main/background_LCS.webp" as="image" type="image/webp">
     <title>Inicio - LCS</title>
 </head>
+
 <body class="gta-lcs">
     <header>
-        <a href="../index.html">
-        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
-            <button id="hamburger">
+            <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-        </nav>    
+        </nav>
     </header>
     <div class="block" id="container">
         <div class="text-container main">
-        <h2>Grand Theft Auto: Liberty City Stories </h2>
-        <p><span style="font-weight: bold; color: #f29997;">Grand Theft Auto: Liberty City Stories</span> es un videojuego desarrollado por Rockstar Leeds y distribuido por Rockstar Games, lanzado originalmente para la PlayStation Portable el 25 de octubre de 2005, y siendo porteado a PlayStation 2 más tarde, el 6 de junio de 2006.</p>
+            <h2>Grand Theft Auto: Liberty City Stories </h2>
+            <p><span style="font-weight: bold; color: #f29997;">Grand Theft Auto: Liberty City Stories</span> es un
+                videojuego desarrollado por Rockstar Leeds y distribuido por Rockstar Games, lanzado originalmente para
+                la PlayStation Portable el 25 de octubre de 2005, y siendo porteado a PlayStation 2 más tarde, el 6 de
+                junio de 2006.</p>
 
-        <p>La historia del juego transcurre en 1998, en Liberty City. Controlaremos a Toni Cipriani, un criminal integrante de la mafia de la Familia Leone</p>
+            <p>La historia del juego transcurre en 1998, en Liberty City. Controlaremos a Toni Cipriani, un criminal
+                integrante de la mafia de la Familia Leone</p>
 
-        <p>Es el primer juego de la saga en ofrecer un modo multijugador oficial. El mismo estuvo disponible para PlayStation Portable mediante el uso de Ad-Hoc, y contó con 7 modos de juego diferentes que iban desde Carreras, Partidas a muerte y diversos modos de equipos. También, habían más de 40 personajes para elegir</p>
+            <p>Es el primer juego de la saga en ofrecer un modo multijugador oficial. El mismo estuvo disponible para
+                PlayStation Portable mediante el uso de Ad-Hoc, y contó con 7 modos de juego diferentes que iban desde
+                Carreras, Partidas a muerte y diversos modos de equipos. También, habían más de 40 personajes para
+                elegir</p>
         </div>
-    <div class="ficha-tecnica">
-    <table class="infobox">
-        <thead>
-            <tr>
-                <th colspan="2" class="portada">
-                    <img src="../assets/images/main/portada_lcs.webp" alt="Portada de GTA LCS">
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Desarrolladores</th>
-                <td>Rockstar North<br>Rockstar Leeds</td>
-            </tr>
-            <tr>
-                <th>Distribuidor</th>
-                <td>Rockstar Games</td>
-            </tr>
-            <tr>
-                <th>Productor</th>
-                <td>Leslie Benzies</td>
-            </tr>
-            <tr>
-                <th>Guionistas</th>
-                <td>
-                    <ul>
-                        <li>Dan Houser</li>
-                        <li>James Worrall</li>
-                        <li>David Bland</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>Plataformas</th>
-                <td>
-                    <ul>
-                        <li>PlayStation Portable</li>
-                        <li>PlayStation 2</li>
-                        <li>iOS</li>
-                        <li>Android</li>
-                        <li>Amazon Fire OS</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>Fecha de lanzamiento</th>
-                <td>
-                <span class="table-platforms">PlayStation Portable</span><br>
-                25 de octubre de 2005 (NA)<br>
-                4 de noviembre de 2005 (EU)<br><br>
+        <div class="ficha-tecnica">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="portada">
+                            <img src="../assets/images/main/portada_lcs.webp" alt="Portada de GTA LCS">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Desarrolladores</th>
+                        <td>Rockstar North<br>Rockstar Leeds</td>
+                    </tr>
+                    <tr>
+                        <th>Distribuidor</th>
+                        <td>Rockstar Games</td>
+                    </tr>
+                    <tr>
+                        <th>Productor</th>
+                        <td>Leslie Benzies</td>
+                    </tr>
+                    <tr>
+                        <th>Guionistas</th>
+                        <td>
+                            <ul>
+                                <li>Dan Houser</li>
+                                <li>James Worrall</li>
+                                <li>David Bland</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Plataformas</th>
+                        <td>
+                            <ul>
+                                <li>PlayStation Portable</li>
+                                <li>PlayStation 2</li>
+                                <li>iOS</li>
+                                <li>Android</li>
+                                <li>Amazon Fire OS</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Fecha de lanzamiento</th>
+                        <td>
+                            <span class="table-platforms">PlayStation Portable</span><br>
+                            25 de octubre de 2005 (NA)<br>
+                            4 de noviembre de 2005 (EU)<br><br>
 
-                <span class="table-platforms">PlayStation 2</span><br>
-                6 de junio de 2006 (NA)<br>
-                23 de junio de 2006 (EU)<br><br>
+                            <span class="table-platforms">PlayStation 2</span><br>
+                            6 de junio de 2006 (NA)<br>
+                            23 de junio de 2006 (EU)<br><br>
 
-                <span class="table-platforms">iOS</span><br>
-                17 de diciembre de 2015 (10th)<br><br>
+                            <span class="table-platforms">iOS</span><br>
+                            17 de diciembre de 2015 (10th)<br><br>
 
-                <span class="table-platforms">Android</span><br>
-                11 de febrero de 2016 (10th)<br><br>
+                            <span class="table-platforms">Android</span><br>
+                            11 de febrero de 2016 (10th)<br><br>
 
-                <span class="table-platforms">Amazon Fire OS</span><br>
-                11 de marzo de 2016 (10th)<br><br>
-                </td>
-            </tr>
-            <tr>
-                <th>Motor gráfico</th>
-            <td>
-                <ul>
-                    <li>Rockstar Leeds 3D Engine</li>
-                </ul>
-            </td>
-            </tr>
-            <tr>
-                <th>Ventas</th>
-                <td>11 millones de copias (marzo de 2017)</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+                            <span class="table-platforms">Amazon Fire OS</span><br>
+                            11 de marzo de 2016 (10th)<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Motor gráfico</th>
+                        <td>
+                            <ul>
+                                <li>Rockstar Leeds 3D Engine</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ventas</th>
+                        <td>11 millones de copias (marzo de 2017)</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div id="rightContent">
-            <div class="right-content-logos">
+
+    </div>
+    <div id="rightContent">
+        <div class="right-content-logos">
             <a href="../III/inicio.html">
                 <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
             </a>
@@ -152,32 +165,34 @@
             </ul>
         </nav>
     </div>
-        
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("hamburger");
-    const rightContent = document.getElementById("rightContent");
-    const block = document.querySelector(".block");
 
-    button.addEventListener("click", function (event) {
-    event.stopPropagation();
-    rightContent.classList.toggle("show");
-    button.classList.toggle("active");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("hamburger");
+            const rightContent = document.getElementById("rightContent");
+            const block = document.querySelector(".block");
 
-    if (block) block.classList.toggle("menu-shift");
-});
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                rightContent.classList.toggle("show");
+                button.classList.toggle("active");
 
-    document.addEventListener("click", function (event) {
-    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-    rightContent.classList.remove("show");
-    button.classList.remove("active");
+                if (block) block.classList.toggle("menu-shift");
+            });
 
-    if (block) block.classList.remove("menu-shift");
-    }
-});
-});
-</script>
+            document.addEventListener("click", function (event) {
+                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                    rightContent.classList.remove("show");
+                    button.classList.remove("active");
+
+                    if (block) block.classList.remove("menu-shift");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
 </body>
+
 </html>

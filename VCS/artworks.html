@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles_VCS.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles_VCS.css">
+    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/main/background_VCS.webp" as="image" type="image/webp">
     <title>Artworks - VCS</title>
 </head>
 
 <body class="gta-vcs">
     <header>
-        <a href="../index.html">
-            <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
-            <button id="hamburger">
+            <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
         </nav>
     </header>
+    <div class="wip">
+        <p>EN CONSTRUCCIÓN</p>
+    </div>
     <div class="block" id="container">
         <div class="text-container">
 
@@ -42,7 +49,8 @@
                 <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
             </a>
             <a href="../LCS/artworks.html">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
+                    class="right-content-img">
             </a>
             <a href="../VCS/#">
                 <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories">

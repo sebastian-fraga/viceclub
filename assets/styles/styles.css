@@ -1,25 +1,29 @@
 /* #region FUENTES */
 @font-face {
     font-family: "Alfa";
-    src: url("assets/fonts/AlfaSlabOne-Regular.ttf")
+    src: url("../fonts/AlfaSlabOne-Regular.ttf")
 }
 @font-face {
     font-family: "GTAArtDecoRegular";
-    src: url("assets/fonts/GTAArtDecoRegular.ttf");
+    src: url("../fonts/GTAArtDecoRegular.ttf");
 }
 @font-face {
     font-family: "GTAArtDecoMedium";
-    src: url("assets/fonts/GTAArtDecoMedium.ttf");
+    src: url("../fonts/GTAArtDecoMedium.ttf");
 }
 /* #endregion */
 
 /* #region GENERAL */
 
 * {
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 :root {
     interpolate-size: allow-keywords;
+    --main-header-gradient: #8d75efd1;
+    --secondary-header-gradient: #b475efce;
+    --main-word-color: #4d9eff;
 }
 
 .hidden {
@@ -28,7 +32,7 @@
     pointer-events: none;
 }
 body.index::before {
-    background-image: url("assets/images/main/background.webp");
+    background-image: url("../images/main/background.webp");
     content: "";
     position: fixed;
     top: 0;
@@ -39,13 +43,24 @@ body.index::before {
     background-size: cover;
     background-attachment: fixed;
     transform: scale(1.1);
-    z-index: -1;
+    z-index: 10;
 }
 
 body {
     font-family: "GTAArtDecoRegular";
     min-height: 130vh;
     overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #7f63ec, #b475ef, #7f63ec);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.881);
 }
 body::before {
     animation: fondoZoom 12s ease-in-out infinite;
@@ -58,10 +73,11 @@ body::before {
     width: 100vw;
     height: 100vh;
     background: #000000ec;
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 100;
     transition: opacity 1.2s ease-out, visibility 1.2s ease-out;
 }
 #loader.hidden {
@@ -80,17 +96,24 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 50px;
-    background: linear-gradient(to right, #8d75efd1, #b475efce, #8d75efd1);
+    height: 3.4em;
+    background: linear-gradient(to right, var(--main-header-gradient), var(--secondary-header-gradient), var(--main-header-gradient));
     backdrop-filter: blur(10px);
-    padding: 10px;
+    padding: 0.6em 0;
     position: fixed;
     top: 0;
     right: 0;
     border-bottom: 3px solid #833fc3d9;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
     overflow: hidden;
+}
+header .logo-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
 }
 header a {
     margin: 0;
@@ -99,7 +122,7 @@ header a {
     transition: all 0.2s ease;
 }
 header img {
-    width: 4rem;
+    width: 4em;
     margin-left: 30px;
     filter: drop-shadow(1px 1px 20px #e399bc);
 }
@@ -109,14 +132,12 @@ header a:active {
 header a:hover {
     filter: brightness(0.9);
 }
-
 header h1 {
     font-family: "Alfa";
-    margin: 0;
-    font-size: 2.1rem;
+    font-size: 2.1em;
     text-align: center;
     -webkit-text-stroke: 1px #000000ad;
-    background-color: #4d9eff;
+    background-color: var(--main-word-color);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.2s ease;
@@ -133,11 +154,12 @@ header h1:active {
 header button {
     border-radius: 10px;
     border: 3px solid #417db5da;
-    padding: 3px;
+    padding: 0.3em;
     background-color: #76b1e8;
     cursor: pointer;
     filter: drop-shadow(1px 1px 20px #75e1e1);
     transition: background-color, transform 0.3s ease;
+    margin-right: 30px;
 }
 header button:hover {
     background-color: #448ed4;
@@ -160,13 +182,13 @@ header button.active .line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 header button .line {
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-out;
 }
 header .line {
     display: block;
-    width: 23px;
-    height: 3px;
-    margin: 4px;
+    width: 1.6em;
+    height: 0.23em;
+    margin: 0.3em;
     background-color: #e1faff;
 }
 #rightContent::before {
@@ -174,7 +196,7 @@ header .line {
     border-bottom-left-radius: 35px;
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: 10000;
     inset: 0;
     padding: 7px;
     padding-right: 0;
@@ -183,6 +205,7 @@ header .line {
         linear-gradient(#000 0 0);
     mask-composite: exclude; 
     background:linear-gradient(90deg, #b475efd9, #2081c7);
+    pointer-events: none;
 }
 body.index #rightContent {
     flex-direction: column;
@@ -204,7 +227,7 @@ body.index #rightContent {
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
     backdrop-filter: blur(30px);
-    z-index: 69420;
+    z-index: 10000;
 }
 #rightContent a {
     margin: 0;
@@ -269,39 +292,43 @@ body.index #rightContent {
 }
 
 .block {
-    margin: 80px 160px 0px 160px;
-    padding: 25px 0 15px 80px;
+    margin: 6em 9em;
     border-radius: 30px;
     transition: scale 0.4s ease-out;
     overflow-y: hidden;
     position: relative;
-    z-index: 1;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
 }
 .block:hover {
     scale: 1.003;
 }
 body.index .block {
-    background:
-    radial-gradient(circle closest-corner, #74aee4, #47bfbbc0, #74aee4);
+    background: linear-gradient(
+        180deg, 
+        rgba(141, 117, 239, 0.664), 
+        rgba(85, 150, 229, 0.664), 
+        rgba(141, 117, 239, 0.664)
+    );
     color: #000000;
     box-shadow: 0px -60px 500px 100px #00cc9c71;
     position: relative;
-    z-index: 1;
-    backdrop-filter: blur(20px);
+    z-index: 1000;
 }
 
 body.index .block::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 20px; 
+    border-radius: 30px; 
     padding: 12px; 
-    background:linear-gradient(180deg, #8d75efd1, #5596e5, #8d75efd1); 
+    background:linear-gradient(180deg, #8d75ef, #5596e5, #8d75ef); 
     mask: 
     linear-gradient(#000 0 0) content-box, 
     linear-gradient(#000 0 0);
     mask-composite: exclude;
-    z-index: -1
+    z-index: 100;
+    pointer-events: none;
 }
 body.index #container {
     display: flex;
@@ -310,44 +337,34 @@ body.index #container {
 h2.welcome-title  {
     font-family: "Alfa";
     line-height: 0.9;
-    font-size: 2.7rem;
+    font-size: 2.7em;
     width: fit-content;
-    margin-bottom: 0px;
+    margin: 1.5em auto;
     -webkit-text-stroke: 2px #0000006c;
     background: linear-gradient(to right, #0e72edc0, #fd8eafcc);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .fotd-container {
-    background:
-    radial-gradient(circle 150px at 10px 10px, #73e3fca7 15%, transparent 70%),
-    radial-gradient(circle 150px at 100% 100%, #73e3fca7 15%, transparent 70%), #c4efea;
-    padding: 20px;
-    border: 3px solid #88b4fa;
-    box-shadow: 0px 0px 15px 1px #0000002d;
+    background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+    margin: 0 1.5em;
+    padding: 30px 25px;
+    border: 1px solid #00000030;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
     border-radius: 25px;
-    margin: 15px;
     position: absolute;
-    top: 55px;
+    top: 4em;
     right: 15px;
 }
 .fotd-title h2 {
     text-align: center;
     font-family: "Alfa";
-    margin: 0;
-    width: auto;
-    font-size: 25px;
-    color: #0cbe94;
-    -webkit-text-stroke: 1px rgb(6, 91, 33);
-}
-.fotd-title h2::after {
-    content: "";
-    display: block;
-    width: 55%;
-    height: 5px;
-    background: linear-gradient(90deg, #03ade5, #bd1bbd);
-    margin: 2px auto;
-    border-radius: 2px;
+    font-size: 1.7em;
+    color: var(--main-word-color);
+    -webkit-text-stroke: 1px #3b3939;
+    border-radius: 20px;
+    background-color: #f9f9f92d;
+    padding: 12px 20px;
 }
 .fotd-description p {
     font-family: "GTAArtDecoRegular";
@@ -355,20 +372,26 @@ h2.welcome-title  {
     text-align: center;
     margin: 4px 0;
     text-wrap: balance;
+    line-height: 1.5;
+    background-color: #f9f9f92d;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .fotd-image img {
-    width: 45%;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #000000cd;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     display: block;
-    margin: 15px auto 0 auto;
-    aspect-ratio: 1 / 1;
+    margin: 20px auto;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
 }
-.text-container .index-text{
-    font-size: 1.4rem;
+.text-container .index-text {
+    font-size: 1.5em;
     text-align: left;
-    margin-top: 10px;
-    margin-right: 30px;
+    margin: 1em 5%;
     max-width: 70ch;
     color: #000000;
     background-image: linear-gradient(45deg, #000000, #272727 50%, #000000 100%);
@@ -378,104 +401,147 @@ h2.welcome-title  {
 }
 .text-container.main p {
     font-size: 1.5rem;
-    margin-right: 5%;
+    margin: 1.2em 3em;
 }
-section.news {
+.countdown-wrapper {
+    margin: 15em auto 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
     position: relative;
-    background: linear-gradient(to bottom, #8ef6f6 1%, #9f9fff66);
-    padding: 10px;
-    margin: 100px 30px 0px 0px;
     border-radius: 20px;
-    z-index: 1;
+    color: #fff;
+    width: 85%;
+    height: 100%;
 }
-section.news::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 20px; 
-    padding: 5px; 
-    background:linear-gradient(120deg, #03ace577, #bd1bbd77); 
-    mask: 
-    linear-gradient(#000 0 0) content-box, 
-    linear-gradient(#000 0 0);
-    mask-composite: exclude; 
-    z-index: -1
+.countdown-wrapper::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/main/background_VI.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    filter: brightness(0.6);
+    z-index: 0;
+    border-radius: 20px;
+}
+.countdown-wrapper h2 {
+    margin-top: 0.3em;
+    z-index: 10;
+}
+.countdown-wrapper img {
+    display: block;
+    margin: 0.3em auto 0 auto;
+    width: 130px;
+    z-index: 10;
+}
+#countdown {
+    margin: 1em auto;
+    font-size: 1.2em;
+    z-index: 10;
 }
 
+section.news {
+    position: relative;
+    background-image: linear-gradient(-225deg, #5270c437 0%, #B19FFF37 48%, #ECA1FE37 100%);
+    margin: 12em 0 3em 0;
+    padding: 15px 20px;
+    border-radius: 50px;
+    z-index: 10;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+}
 section.news h2 {
     position: relative;
     font-family: "Alfa";
-    line-height: 45px;
-    font-size: 2.5rem !important;
-    margin: 0 0 55px 0;
-    padding-top: 20px;
+    margin: 5px auto 30px auto;
+    line-height: 1.1;
+    font-size: 2.3em !important;
     text-align: center;
-    z-index: 1;
-    width: 100%;
-    font-weight: normal;
-    color: #0cbe94;
-    -webkit-text-stroke: 2px rgb(9, 85, 38);
+    z-index: 10;
+    font-weight: bold;
+    color: var(--main-word-color);
+    -webkit-text-stroke: 1px #000000ad;
 }
-section.news h2::after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 4px;
-    background: linear-gradient(90deg, #03ade5, #bd1bbd);
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-#newsContainer {
+.news-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    text-align: left;
+}
+.news-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(141, 117, 239, 0.2);
 }
 .news-title {
-    margin: 0;
-    font-size: 27px;
+    font-size: 2em;
     font-family: "GTAArtDecoMedium";
     text-align: center;
 }
 .news-date {
-    margin: 0 0 15px 0;
-    text-align: center;
+    margin: 0;
+    text-align: left;
     font-style: italic;
-    color: #4c7c64;
+    color: #6366f1;
     font-family: "GTAArtDecoRegular";
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-#newsContainer p {
-    font-size: 20px !important;
-    color: #000000 !important;
-    width: 100%;
+.news-content p {
     margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.2em;
+    color: #000000;
+    width: 100%;
     text-align: center;
     text-wrap: balance;
 }
-#newsContainer p i {
+.news-content b {
+    color: #030027;
+    font-weight: 600;
+}
+.news-content i {
     display: block;
     background: #ffffff43;
     border-left: 4px solid #8d75ef;
     padding: 10px 15px;
-    margin: 35px 0 5px 0;
+    margin: 10px auto 0 auto;
+    width: 60%;
     font-style: italic;
     border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.4;
 }
-
 .news-image {
-    width: 100%;
-    max-height: 300px;
+    width: 80%;
+    max-height: 400px;
     object-fit: cover;
-    margin: 15px auto;
-    border-radius: 20px;
+    margin: 25px auto;
+    border-radius: 15px;
     object-position: top;
-    box-shadow: 0 0 15px #000000cd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: block;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(141, 117, 239, 0.3);
 }
 .news-link {
     display: block;
     width: fit-content;
-    padding: 15px;
+    padding: 15px 30px;
     margin: 30px auto;
     text-align: center;
     text-decoration: none;
@@ -485,6 +551,12 @@ section.news h2::after {
     font-family: "GTAArtDecoMedium";
     text-transform: uppercase;
     transition: all 0.2s ease-out;
+}
+.news-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 .news-link:hover {
     background:linear-gradient(90deg, #02759c, #811081);
@@ -497,16 +569,14 @@ section.news h2::after {
     background: #ffffff43;
     border-radius: 15px;
     padding: 20px;
-    margin-bottom: 85px;
+    margin: 0 1em 85px 1em;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.2s ease;
-}
-.news-article:last-of-type {
-    border: none;
 }
 .news-article:nth-child(odd) {
     background: #fafbfb61;
 }
+
 #verMas {
     padding: 12px 25px;
     font-size: 1rem;
@@ -518,32 +588,27 @@ section.news h2::after {
     transition: transform 0.2s ease, filter 0.2s ease;
     margin: 0 auto;
 }
-#newsContainer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-#newsContainer .material-symbols-rounded {
+.news-content .material-symbols-rounded {
     font-size: 1.3rem;
     color: #ffffffea;
     transition: scale 0.2s ease-out;
 }
+
 .text-container h2:not(.welcome-title) {
-    font-size: 2rem;
+    font-size: 2.3em;
     text-align: center;
 }
 .text-container details {
-    margin-top: 30px;
     font-size: 22px;
     color: #000000;
     transition: color 0.2s ease-in-out;
+    margin: 4%;
 }
 .text-container summary:hover {
     cursor: pointer;
 }
 .text-container details[open] summary{
-    color: #b868e3;
+    color: #8e0fd2;
 }
 .text-container details::details-content {
     block-size: 0;
@@ -556,9 +621,10 @@ section.news h2::after {
 }
 .text-container details p {
     max-width: 120ch;
-    margin: 0;
+    margin: 0.2em 2em;
 }
 .text-container details h3 {
+    margin-top: 1em;
     font-size: 35px;
     width: max-content;
     color: #252258;
@@ -569,25 +635,22 @@ section.news h2::after {
 }
 .text-container details h4 {
     font-weight: 800;
-    margin: 22px 0 6px 0;
+    margin: 0.5em 2em;
     color: #000;
 }
-.text-container details h3 + h4 {
-    margin-top: -20px !important;
-}
 .text-container details a {
-    color: #2b66ae;
+    color: #083d7e;
     text-decoration: none;
     transition: all 0.15s ease-out;
     display: inline-block;
 }
 .text-container details a:hover {
-    transform: scale(1.07);
-    padding-left: 4px;
+    color: #1571e2;
 }
 .text-container details a:active {
     color: #663c7d;
 }
+
 #imageOverlay {
     position: fixed;
     top: 0;
@@ -596,16 +659,30 @@ section.news h2::after {
     height: 100%;
     background: #000000b3;
     backdrop-filter: blur(8px) brightness(0.5);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 100000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
-.overlay-img {
+#imageOverlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+#overlayImg {
     max-width: 95%;
     max-height: 95%;
     box-shadow: 0 0 20px #000000;
     border-radius: 10px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+#imageOverlay.open #overlayImg {
+    transform: scale(1);
+    opacity: 1;
 }
 .close-btn {
     position: absolute;
@@ -615,7 +692,7 @@ section.news h2::after {
     color: #e8baf6;
     text-shadow: 0px 0px 20px #e2b5f6;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 100000;
     transition: transform 0.1s ease-out, filter 0.05s ease-out;
 }
 .close-btn:active {
@@ -632,6 +709,18 @@ section.news h2::after {
     cursor: pointer;
     filter: brightness(0.9);
 }
+.wip {
+    top: 7vh;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    text-align: center;
+    background-color: rgba(238, 255, 50, 0.7);
+}
+.wip p {
+    font-weight: 900;
+    font-size: 2em;
+}
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
@@ -639,33 +728,31 @@ section.news h2::after {
     border: 3px solid;
     border-radius: 30px;
     width: 95%;
-    max-width: 50vw;
     margin-right: 20px;
 }
-.infobox img {
+.ficha-tecnica table {
+    max-width: 500px;
+    font-size: 15px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin: 0 auto;
+}
+.ficha-tecnica table img {
     border-radius: 10px;
     margin: 0 auto;
 }
-.infobox ul, .infobox li {
+.ficha-tecnica table ul, .ficha-tecnica table li {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: left;
 }
-.ficha-tecnica .infobox {
-    max-width: 500px;
-    font-size: 15px;
-}
-.ficha-tecnica table {
-    border-collapse: separate;
-    border-spacing: 0 15px;
-}
-.ficha-tecnica .infobox td {
+.ficha-tecnica table td {
     font-size: 17px;
     padding-right: 2px;
     text-align: left;
 }
-.ficha-tecnica .infobox th {
+.ficha-tecnica table th {
     font-size: 19px;
     text-align: center;
     text-wrap: balance;
@@ -1083,8 +1170,8 @@ footer {
 /* #endregion */
 
 /* #region MEDIA QUERIES */
-@media (min-width: 769px) {
-.container-wrapper {
+@media (min-width: 950px) {
+.top-content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex;
@@ -1145,31 +1232,42 @@ footer {
         text-align: center !important;
         line-height: 1.1 !important;
     }
-    section.news {
-        margin: 90px 10px 0 10px;
+    .countdown-wrapper {
+        margin: 2em auto;
     }
-    section.news::before {
-        background: none !important;
+    .countdown-wrapper h2 {
+        font-size: 1.3em !important;
+    }
+    section.news {
+        margin: 3em auto;
     }
     section.news h2 {
-        font-size: 2.3rem !important;
-    }
-    .news-title {
-        font-size: 21px;
+        font-size: 2.3em;
     }
     .news-article {
-        width: 90%;
-        padding: 20px;
-        margin-bottom: 20px;
+        margin: 2em 0;
     }
-    #newsContainer p {
-        font-size: 1rem !important;
+    .news-header {
+        justify-content: center;
     }
-    .news-image {
+    .news-title {
+        font-size: 1.2em;
+    }
+    .news-content p {
+        font-size: 1em;
+    }
+    .news-content i {
         width: 90%;
-        height: 90%;
-        max-width: 100%;
-        height: auto;
+        font-size: 1em;
+    }
+    .news-date {
+        font-size: 1em;
+        text-align: right;
+    }
+    .text-container.main p {
+        text-align: left;
+        margin: 1em 10px;
+        font-size: 1.3em;
     }
     .text-container details {
         text-wrap: balance;
@@ -1181,8 +1279,8 @@ footer {
         margin-bottom: 30px !important;
     }
     .text-container details p {
-    margin: auto 10px !important;
-    font-size: 1rem !important;
+        margin: auto 10px !important;
+        font-size: 1rem !important;
     }
     .ficha-tecnica {
         margin: 0 auto;

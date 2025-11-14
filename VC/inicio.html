@@ -1,143 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../styles_VC.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/styles_VC.css">
+    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/images/main/background_VC.webp" as="image" type="image/webp">
     <title>Inicio - VC</title>
 </head>
+
 <body class="gta-vc">
     <header>
-        <a href="../index.html">
-        <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
-            <button id="hamburger">
+            <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-        </nav>    
+        </nav>
     </header>
     <div class="block" id="container">
         <div class="text-container main">
-        <h2>Grand Theft Auto: Vice City</h2>
-        <p><span style="font-weight: bold; color: rgb(228, 105, 250);">Grand Theft Auto: Vice City</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games, lanzado el 29 de octubre de 2002.</p>
+            <h2>Grand Theft Auto: Vice City</h2>
+            <p><span style="font-weight: bold; color: rgb(228, 105, 250);">Grand Theft Auto: Vice City</span> es un
+                videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por
+                Rockstar Games, lanzado el 29 de octubre de 2002.</p>
 
-        <p>El juego transcurre en Vice City, una ciudad ficticia parodia de Miami, en el año 1986.</p>
+            <p>El juego transcurre en Vice City, una ciudad ficticia parodia de Miami, en el año 1986.</p>
 
-        <p>El jugador tomará el control de Tommy Vercetti, un hombre que salió de prisión tras cumplir una sentencia de 15 años, quien deberá supervisar un trato de drogas a pedido de la familia Forelli. Tras salir mal y perder el dinero de Sonny Forelli, Tommy comienza en la búsqueda del responsable, trabajando para varias figuras importantes del submundo criminal de Vice City.</p>
+            <p>El jugador tomará el control de Tommy Vercetti, un hombre que salió de prisión tras cumplir una sentencia
+                de 15 años, quien deberá supervisar un trato de drogas a pedido de la familia Forelli. Tras salir mal y
+                perder el dinero de Sonny Forelli, Tommy comienza en la búsqueda del responsable, trabajando para varias
+                figuras importantes del submundo criminal de Vice City.</p>
         </div>
-    <div class="ficha-tecnica">
-    <table class="infobox">
-        <thead>
-            <tr>
-                <th colspan="2" class="portada">
-                    <img src="../assets/images/main/portada_vc.webp" alt="Portada de GTA VC">
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>DESARROLLADOR</th>
-                <td>Rockstar North</td>
-            </tr>
-            <tr>
-                <th>DISTRIBUIDOR</th>
-                <td>Rockstar Games</td>
-            </tr>
-            <tr>
-                <th>PRODUCTOR</th>
-                <td>Leslie Benzies</td>
-            </tr>
-            <tr>
-                <th>GUIONISTAS</th>
-                <td>
-                    <ul>
-                        <li>Dan Houser</li>
-                        <li>James Worrall</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>PLATAFORMAS</th>
-                <td>
-                    <ul>
-                        <li>PlayStation 2</li>
-                        <li>Xbox</li>
-                        <li>Microsoft Windows</li>
-                        <li>macOS</li>
-                        <li>Android</li>
-                        <li>iOS</li>
-                        <li>Amazon Fire OS</li>
-                        <li>PlayStation 4</li>
-                        <li>PlayStation 5</li>
-                        <li>Xbox Series X/S</li>
-                        <li>Nintendo Switch</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>FECHA DE LANZAMIENTO</th>
-                <td>
-                <span class="table-platforms">PlayStation 2</span><br>
-                29 de octubre de 2002 (NA)<br>
-                8 de noviembre de 2002 (EU)<br><br>
+        <div class="ficha-tecnica">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="portada">
+                            <img src="../assets/images/main/portada_vc.webp" alt="Portada de GTA VC">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>DESARROLLADOR</th>
+                        <td>Rockstar North</td>
+                    </tr>
+                    <tr>
+                        <th>DISTRIBUIDOR</th>
+                        <td>Rockstar Games</td>
+                    </tr>
+                    <tr>
+                        <th>PRODUCTOR</th>
+                        <td>Leslie Benzies</td>
+                    </tr>
+                    <tr>
+                        <th>GUIONISTAS</th>
+                        <td>
+                            <ul>
+                                <li>Dan Houser</li>
+                                <li>James Worrall</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>PLATAFORMAS</th>
+                        <td>
+                            <ul>
+                                <li>PlayStation 2</li>
+                                <li>Xbox</li>
+                                <li>Microsoft Windows</li>
+                                <li>macOS</li>
+                                <li>Android</li>
+                                <li>iOS</li>
+                                <li>Amazon Fire OS</li>
+                                <li>PlayStation 4</li>
+                                <li>PlayStation 5</li>
+                                <li>Xbox Series X/S</li>
+                                <li>Nintendo Switch</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>FECHA DE LANZAMIENTO</th>
+                        <td>
+                            <span class="table-platforms">PlayStation 2</span><br>
+                            29 de octubre de 2002 (NA)<br>
+                            8 de noviembre de 2002 (EU)<br><br>
 
-                <span class="table-platforms">Microsoft Windows</span><br>
-                13 de mayo de 2003 (NA)<br>
-                16 de mayo de 2003 (EU)<br><br>
+                            <span class="table-platforms">Microsoft Windows</span><br>
+                            13 de mayo de 2003 (NA)<br>
+                            16 de mayo de 2003 (EU)<br><br>
 
-                <span class="table-platforms">Xbox</span><br>
-                4 de noviembre de 2003 (NA)<br>
-                2 de enero de 2004 (EU)<br><br>
+                            <span class="table-platforms">Xbox</span><br>
+                            4 de noviembre de 2003 (NA)<br>
+                            2 de enero de 2004 (EU)<br><br>
 
-                <span class="table-platforms">macOS</span><br>
-                12 de noviembre de 2010<br><br>
+                            <span class="table-platforms">macOS</span><br>
+                            12 de noviembre de 2010<br><br>
 
-                <span class="table-platforms">iOS</span><br>
-                6 de diciembre de 2012 (10th)<br><br>
+                            <span class="table-platforms">iOS</span><br>
+                            6 de diciembre de 2012 (10th)<br><br>
 
-                <span class="table-platforms">Android</span><br>
-                12 de diciembre de 2012 (10th)<br><br>
+                            <span class="table-platforms">Android</span><br>
+                            12 de diciembre de 2012 (10th)<br><br>
 
-                <span class="table-platforms">Amazon Fire OS</span><br>
-                15 de mayo de 2014 (10th)<br><br>
+                            <span class="table-platforms">Amazon Fire OS</span><br>
+                            15 de mayo de 2014 (10th)<br><br>
 
-                <span class="table-platforms">PlayStation 4, PlayStation 5 <br>Xbox One, Xbox Series X/S
-                <br>Microsoft Windows
-                <br>Nintendo Switch
-                </span>
-                <br>
-                11 de noviembre de 2021 (DE)<br><br>
+                            <span class="table-platforms">PlayStation 4, PlayStation 5 <br>Xbox One, Xbox Series X/S
+                                <br>Microsoft Windows
+                                <br>Nintendo Switch
+                            </span>
+                            <br>
+                            11 de noviembre de 2021 (DE)<br><br>
 
-                <span class="table-platforms">Android<br>iOS</span><br>
-                14 de diciembre de 2023 (DE)<br><br>
-                </td>
-            </tr>
-            <tr>
-                <th>MOTOR GRÁFICO</th>
-            <td>
-                <ul>
-                    <li>RenderWare</li>
-                    <li>Unreal Engine (DE)</li>
-                </ul>
-            </td>
-            </tr>
-            <tr>
-                <th>VENTAS</th>
-                <td>17.5 millones de copias (marzo de 2008)</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
+                            <span class="table-platforms">Android<br>iOS</span><br>
+                            14 de diciembre de 2023 (DE)<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>MOTOR GRÁFICO</th>
+                        <td>
+                            <ul>
+                                <li>RenderWare</li>
+                                <li>Unreal Engine (DE)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>VENTAS</th>
+                        <td>17.5 millones de copias (marzo de 2008)</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div id="rightContent">
-            <div class="right-content-logos">
+
+    </div>
+    <div id="rightContent">
+        <div class="right-content-logos">
             <a href="../III/inicio.html">
                 <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
             </a>
@@ -148,7 +159,8 @@
                 <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
             </a>
             <a href="../LCS/inicio.html">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" class="right-content-img">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
+                    class="right-content-img">
             </a>
             <a href="../VCS/inicio.html">
                 <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
@@ -176,32 +188,34 @@
             </ul>
         </nav>
     </div>
-        
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("hamburger");
-    const rightContent = document.getElementById("rightContent");
-    const block = document.querySelector(".block");
 
-    button.addEventListener("click", function (event) {
-    event.stopPropagation();
-    rightContent.classList.toggle("show");
-    button.classList.toggle("active");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("hamburger");
+            const rightContent = document.getElementById("rightContent");
+            const block = document.querySelector(".block");
 
-    if (block) block.classList.toggle("menu-shift");
-});
+            button.addEventListener("click", function (event) {
+                event.stopPropagation();
+                rightContent.classList.toggle("show");
+                button.classList.toggle("active");
 
-    document.addEventListener("click", function (event) {
-    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-    rightContent.classList.remove("show");
-    button.classList.remove("active");
+                if (block) block.classList.toggle("menu-shift");
+            });
 
-    if (block) block.classList.remove("menu-shift");
-    }
-});
-});
-</script>
+            document.addEventListener("click", function (event) {
+                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                    rightContent.classList.remove("show");
+                    button.classList.remove("active");
+
+                    if (block) block.classList.remove("menu-shift");
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
 </body>
+
 </html>

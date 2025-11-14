@@ -1,9 +1,10 @@
 @font-face {
     font-family: "Helvetica Neue";
-    src: url(assets/fonts/HelveticaNeueHeavy.otf);
+    src: url("../fonts/HelveticaNeueHeavy.otf");
 }
+
 body::before {
-    background-image: url("assets/images/main/background_IV.webp");
+    background-image: url("../images/main/background_IV.webp");
     content: "";
     position: fixed;
     top: 0;
@@ -17,12 +18,11 @@ body::before {
     z-index: -1;
 }
 #rightContent::before {
-    background:linear-gradient(90deg, #eaeaea, #b475efd9); 
+    background:linear-gradien(90deg, #eaeaea, #b475efd9);
 }
 .block {
-    background:
-    radial-gradient(circle 500px at 30px 60px, #b3b6b830 15%, transparent 70%),
-    radial-gradient(circle 500px at 100% 100%, #b3b6b830 15%, transparent 70%), #090909f6;
+    background: radial-gradient(circle 500px at 30px 60px, #b3b6b830 15%, transparent 70%),
+    radial-gradient(circle 500px at 100% 100%, #b3b6b830 15%,transparent 70%), #090909f6;
     color: #ffffff;
     box-shadow: 0px -60px 500px 100px #050505ba;
     border: 5px solid #c3c3c3;
@@ -41,7 +41,7 @@ body::before {
     color: #ffffff;
     font-size: 34px;
     text-align: center;
-    text-shadow: 3px 3px 10px #000000;
+    text-shadow: 3px 3px 10px#000000;
 }
 .right-content-nav a {
     font-family: "Helvetica Neue";
@@ -60,25 +60,21 @@ body::before {
     text-shadow: 0 0 1px #000;
     transition: color 0.1s;
 }
-.right-content-nav a.inactive:active {
+.right-content-nav ainactive:active {
     color: #d3d3d3;
 }
-
 /*FICHA TÉCNICA*/
 .ficha-tecnica {
     border-color: #ffffffd2 !important;
     background-color: #a1a1a197;
 }
-.ficha-tecnica th, span.table-platforms {
+.ficha-tecnica th, spantable-platforms {
     font-family: "Helvetica Neue";
 }
 span.table-platforms {
     color: #ffffff;
 }
-
-
 /*RADIO*/
-
 .radio-item {
     background-color: #5c5952;
     padding: 5px;
