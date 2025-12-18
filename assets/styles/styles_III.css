@@ -86,14 +86,22 @@ span.table-platforms {
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-article.tools-wrapper  {
-    background-color: red 
-}
-article.tools-wrapper:not(.tools-image):hover {
-    background-color: #00256e81
-}
-.tools-title {
-    font-family: "Arial Black Italic";
+details.mod summary img {
+    clip-path: polygon(
+    50% 0%,
+    75% 6.7%,
+    93.3% 25%,
+    100% 50%,
+    93.3% 75%,
+    75% 93.3%,
+    50% 100%,
+    25% 93.3%,
+    6.7% 75%,
+    0% 50%,
+    6.7% 25%,
+    25% 6.7%
+    );
+    background: #2F4981;
 }
 /* #endregion */
 

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background.webp" as="image" type="image/webp">
+    <meta name="google-site-verification" content="GVbjMlpkVWXIRd94KNcfTwXJAVZVnMkeFjwcMm0wsZE" />
 
     <title>Vice Club | Tu guía definitiva de la saga GTA</title>
 </head>
@@ -132,44 +131,41 @@
     </div>
     <!--Loader-->
     <script>
-window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    const content = document.getElementById("container");
-    const header = document.querySelector("header");
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        const content = document.getElementById("container");
+        const header = document.querySelector("header");
 
-
-    setTimeout(() => {
-        loader.classList.add("hidden");
-        content.style.display = "block";
-        header.style.display = "flex";
-        setTimeout(() => loader.remove(), 1500);
-    }, 1300);
-});
+        setTimeout(() => {
+            loader.classList.add("hidden");
+            content.style.display = "block";
+            header.style.display = "flex";
+            setTimeout(() => loader.remove(), 1500);
+        }, 1300);
+    });
     </script>
     <!--rightContent-->
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("hamburger");
-    const rightContent = document.getElementById("rightContent");
-    const block = document.querySelector(".block");
-
-    button.addEventListener("click", function (event) {
-    event.stopPropagation();
-    rightContent.classList.toggle("show");
-    button.classList.toggle("active");
-
-    if (block) block.classList.toggle("menu-shift");
-});
-
-    document.addEventListener("click", function (event) {
-    if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-    rightContent.classList.remove("show");
-    button.classList.remove("active");
-
-    if (block) block.classList.remove("menu-shift");
-    }
-});
-});
+    document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("hamburger");
+        const rightContent = document.getElementById("rightContent");
+        const block = document.querySelector(".block");
+        
+        button.addEventListener("click", function (event) {
+            event.stopPropagation();
+            rightContent.classList.toggle("show");
+            button.classList.toggle("active"); 
+            if (block) block.classList.toggle("menu-shift");
+        });
+        
+        document.addEventListener("click", function (event) {
+            if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                rightContent.classList.remove("show");
+                button.classList.remove("active");
+                if (block) block.classList.remove("menu-shift");
+            }
+        });
+    });
     </script>
     <!--News-->
     <script>
