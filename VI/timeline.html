@@ -7,9 +7,8 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_VI.css">
-    <link rel="preload" href="../assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="../assets/images/main/background_VI.webp" as="image" type="image/webp">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Línea de tiempo - VI</title>
 </head>
 
@@ -100,9 +99,9 @@
         });
     </script>
     <script>
-    document.addEventListener('click', function (e) {
-        const img = e.target;
-        if (img.matches('.timeline-image')) {
+        document.addEventListener('click', function (e) {
+            const img = e.target;
+            if (img.matches('.timeline-image')) {
                 const overlay = document.getElementById('imageOverlay');
                 const overlayImg = document.getElementById('overlayImg');
 
@@ -134,20 +133,20 @@
                 `;
 
                 data.entries.forEach(entry => {
-                const [day, month, year] = entry.date.split('/');
+                    const [day, month, year] = entry.date.split('/');
 
-                if (lastYear && lastYear !== year) {
-                    const divider = document.createElement('div');
-                    divider.classList.add('timeline-divider');
-                    container.appendChild(divider);
-                }
-                lastYear = year;
+                    if (lastYear && lastYear !== year) {
+                        const divider = document.createElement('div');
+                        divider.classList.add('timeline-divider');
+                        container.appendChild(divider);
+                    }
+                    lastYear = year;
 
-                if (entry.events && Array.isArray(entry.events)) {
-                    entry.events.forEach((ev, i) => {
-                        const article = document.createElement('article');
+                    if (entry.events && Array.isArray(entry.events)) {
+                        entry.events.forEach((ev, i) => {
+                            const article = document.createElement('article');
 
-                        article.innerHTML = `
+                            article.innerHTML = `
                             ${i === 0 ? `<h3 class="timeline-date">${entry.date}</h3>` : ''}
                             <h4 class="timeline-time">${ev.time}</h4>
                             <p>
@@ -156,15 +155,15 @@
                                 </span>
                                 ${ev.text}
                             </p>
-                            ${ev.image ? `<img src="${ev.image}" class="timeline-image">` : ''}
+                            ${ev.image ? `<img src="${ev.image}" class="timeline-image" loading="lazy">` : ''}
                         `;
-                    container.appendChild(article);
-                });
-            }
-            
-            else {
-                const article = document.createElement('article');
-                article.innerHTML = `
+                            container.appendChild(article);
+                        });
+                    }
+
+                    else {
+                        const article = document.createElement('article');
+                        article.innerHTML = `
                     <h3 class="timeline-date">${entry.date}</h3>
                     <h4 class="timeline-time">${entry.time}</h4>
                     <p>
@@ -175,14 +174,15 @@
                     </p>
                         ${entry.image ? `<img src="${entry.image}" class="timeline-image">` : ''}
                 `;
-                container.appendChild(article);
+                        container.appendChild(article);
+                    }
+                });
+            } catch (error) {
+                console.error("Error al cargar el JSON:", error);
             }
-        });
-    } catch(error) {
-        console.error("Error al cargar el JSON:", error);
-    }
-}
-loadTimeline();
+        }
+        loadTimeline();
     </script>
 </body>
+
 </html>

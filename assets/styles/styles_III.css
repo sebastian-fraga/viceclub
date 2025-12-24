@@ -3,10 +3,12 @@
     font-family: "Arial Black Italic";
     src: url("../fonts/ArialBlackItalic.ttf");
 }
+
 @font-face {
     font-family: "Pricedown";
     src: url("../fonts/Pricedown.otf");
 }
+
 /* #endregion */
 
 /* #region GENERAL */
@@ -24,51 +26,62 @@ body::before {
     transform: scale(1.1);
     z-index: -1;
 }
+
 #rightContent::before {
-    background:linear-gradient(90deg, #F0C903, #b475efd9); 
+    background: linear-gradient(90deg, #F0C903, #b475efd9);
 }
+
 .block {
     background:
-    radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
-    radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
+        radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
+        radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
     color: #ffffff;
     box-shadow: 0px -60px 500px 100px #2889d372;
     border: 5px solid #2e9aedcb;
 }
+
 #container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .text-container {
     justify-content: left;
     align-items: left;
 }
+
 .text-container h2 {
     font-family: "Arial Black Italic";
     color: #e7a600;
     text-shadow: 3px 3px 10px #000000;
 }
+
 .right-content-nav a {
     font-family: "Arial Black Italic";
     font-size: 1.6rem;
 }
+
 .right-content-nav a.active {
     color: #e7a600;
     text-shadow: 0 0 3px #000;
     cursor: default;
 }
+
 .right-content-nav a.inactive {
     color: #3f3f3f;
     transition: color 0.4s;
 }
+
 .right-content-nav a.inactive:hover {
     text-shadow: 0 0 3px #000;
     color: #e7a600;
 }
+
 .right-content-nav a.inactive:active {
     color: #b78301;
 }
+
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
@@ -76,9 +89,12 @@ body::before {
     border-color: #e7a600d2 !important;
     background-color: #e7a60062;
 }
-.ficha-tecnica th, span.table-platforms {
+
+.ficha-tecnica th,
+span.table-platforms {
     font-family: "Arial Black Italic";
 }
+
 span.table-platforms {
     color: #e7a600;
 }
@@ -86,23 +102,92 @@ span.table-platforms {
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-details.mod summary img {
-    clip-path: polygon(
-    50% 0%,
-    75% 6.7%,
-    93.3% 25%,
-    100% 50%,
-    93.3% 75%,
-    75% 93.3%,
-    50% 100%,
-    25% 93.3%,
-    6.7% 75%,
-    0% 50%,
-    6.7% 25%,
-    25% 6.7%
-    );
-    background: #2F4981;
+
+
+details.mod {
+    border: 1px solid #3d5a9e;
+    background: linear-gradient(135deg, #0f1729 0%, #1a2332 100%);
 }
+
+.mod-text h4 {
+    font-family: "Arial Black Italic";
+    color: #ffffff;
+}
+
+.mod-text p {
+    color: #e8e8e8;
+}
+
+details.mod[open] {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+    background: linear-gradient(135deg, #0f1729 0%, #1e2a3d 100%);
+}
+
+details.mod summary img {
+    clip-path: polygon(50% 0%,
+            75% 6.7%,
+            93.3% 25%,
+            100% 50%,
+            93.3% 75%,
+            75% 93.3%,
+            50% 100%,
+            25% 93.3%,
+            6.7% 75%,
+            0% 50%,
+            6.7% 25%,
+            25% 6.7%);
+    background: radial-gradient(circle 70px at top left, #5b8ab8, #3d5f9e);
+}
+
+.mod-actions a {
+    color: #ffffff;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.mod-actions a:hover {
+    border: 1px solid rgba(59, 130, 246, 0.8);
+    background-color: rgba(59, 130, 246, 0.15);
+}
+
+.mod-actions a.active {
+    border: 2px solid #60d4ff;
+    box-shadow: 0 10px 20px 0 rgba(99, 102, 241, 0.5);
+    background-color: rgba(59, 130, 246, 0.6);
+}
+
+.mod-actions span {
+    color: #93c5fd;
+}
+
+.mod-features {
+    border-top: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.tab-content h5 {
+    color: #fbbf24;
+}
+
+.tab-content[data-content="info"] li {
+    color: #f0f0f0;
+}
+
+.tab-content[data-content="info"] li::before {
+    color: #60d4ff;
+    text-shadow: 0 0 12px rgba(96, 212, 255, 0.7);
+}
+
+.tab-content a {
+    border: 1px solid #60d4ff;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
+    color: #ffffff;
+}
+
+.tab-content a:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+}
+
 /* #endregion */
 
 /* #region RADIO */
@@ -110,8 +195,9 @@ details.mod summary img {
     font-family: "Pricedown";
     color: #85b3c0;
     text-shadow: 2px 5px 3px #031f2c;
-    transition: color 1s cubic-bezier(.14,.92,.77,.12);
+    transition: color 1s cubic-bezier(.14, .92, .77, .12);
 }
+
 #nameRadio.loading {
     color: #617f89;
     text-shadow: none;
@@ -119,11 +205,13 @@ details.mod summary img {
 
 #radioInfo {
     background: radial-gradient(circle 500px at 30px 60px, #3F4B9928 15%, transparent 70%),
-    radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
+        radial-gradient(circle 500px at 100% 100%, #3F4B9928 15%, transparent 70%), #010b1eea;
     border: 5px solid #2e9aedcb;
 }
+
 #radioList li.active a {
     color: #85b3c0;
     text-shadow: 0 0 3px #000;
 }
+
 /* #endregion */

@@ -2,13 +2,13 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link rel="stylesheet" href="../assets/styles/styles_VC.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_VC.webp" as="image" type="image/webp">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp" />
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <link rel="stylesheet" href="../assets/styles/styles_VC.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Herramientas y Mods - VC</title>
 </head>
 
@@ -16,7 +16,7 @@
     <header>
         <div class="logo-container">
             <a href="../index.html">
-                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo" />
             </a>
             <h1>VICE CLUB</h1>
         </div>
@@ -28,44 +28,40 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
     <div class="block" id="container">
         <div class="text-container">
             <h2>Herramientas y Mods para Grand Theft Auto: Vice City</h2>
-            <h3 style="font-size: 22px; margin-top: 100px;">ESENCIALES</h3>
-            <section class="tools-wrapper">
-            </section>
+            <h3 class="mod-title">ESENCIALES</h3>
+            <section class="mods-container" id="modsContainer" data-game="VC"></section>
         </div>
-
     </div>
     <div id="rightContent">
         <div class="right-content-logos">
             <a href="../III/herramientas_y_mods.html">
-                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
+                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img" />
             </a>
             <a href="#">
-                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" />
             </a>
             <a href="../SA/herramientas_y_mods.html">
-                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img" />
             </a>
             <a href="../LCS/inicio.html">
                 <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
-                    class="right-content-img">
+                    class="right-content-img" />
             </a>
             <a href="../VCS/inicio.html">
-                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories"
+                    class="right-content-img" />
             </a>
             <a href="../IV/herramientas_y_mods.html">
-                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img">
+                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img" />
             </a>
             <a href="../V/herramientas_y_mods.html">
-                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img">
+                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img" />
             </a>
             <a href="../VI/inicio.html">
-                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" class="right-content-img">
+                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" class="right-content-img" />
             </a>
         </div>
         <nav class="right-content-nav">
@@ -96,7 +92,10 @@
             });
 
             document.addEventListener("click", function (event) {
-                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+                if (
+                    !rightContent.contains(event.target) &&
+                    !button.contains(event.target)
+                ) {
                     rightContent.classList.remove("show");
                     button.classList.remove("active");
 
@@ -106,34 +105,40 @@
         });
     </script>
     <script>
-        document.querySelectorAll(".tools").forEach(tool => {
-            const arrow = tool.querySelector(".tools-arrow");
-            const tabs = tool.querySelectorAll(".tools-tabs button");
-            const contents = tool.querySelectorAll(".tools-tab-content");
+        document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("click", function (e) {
+                const link = e.target.closest(".tab-link");
+                if (!link) return;
 
-            tool.querySelector(".tools-header").addEventListener("click", () => {
-                tool.classList.toggle("expanded");
-            });
+                e.preventDefault();
+                e.stopPropagation();
 
-            tabs.forEach(tab => {
-                tab.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    tabs.forEach(btn => btn.classList.remove("active"));
-                    tab.classList.add("active");
+                const targetTab = link.getAttribute("data-tab");
+                const parentDetails = link.closest("details");
 
-                    const selected = tab.dataset.tab;
-                    contents.forEach(c => {
-                        c.classList.toggle("active", c.dataset.content === selected);
-                    });
+                if (!parentDetails) return;
+
+                parentDetails.querySelectorAll(".tab-link").forEach((tab) => {
+                    tab.classList.remove("active");
                 });
-            });
 
-            tabs[0].click();
+                link.classList.add("active");
+
+                parentDetails.querySelectorAll(".tab-content").forEach((content) => {
+                    content.classList.remove("active");
+                });
+
+                const targetContent = parentDetails.querySelector(
+                    `[data-content="${targetTab}"]`
+                );
+
+                if (targetContent) {
+                    targetContent.classList.add("active");
+                }
+            });
         });
     </script>
-</body>
-
-</html>
+    <script src="../assets/scripts/mods.js"></script>
 </body>
 
 </html>

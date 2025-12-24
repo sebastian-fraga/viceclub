@@ -1,4 +1,7 @@
-const MODS_URL = "https://viceclub.s3.us-east-1.amazonaws.com/III/mods/mods.json?t" + Date.now();
+const container = document.getElementById("modsContainer");
+const game = container.dataset.game;
+
+const MODS_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${game}/mods/mods.json?t=${Date.now()}`;
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
@@ -14,7 +17,7 @@ function renderMods(mods) {
   const container = document.getElementById("modsContainer");
   container.innerHTML = "";
 
-  mods.forEach(mod => {
+  mods.forEach((mod) => {
     const details = document.createElement("details");
     details.className = "mod";
 
@@ -50,24 +53,27 @@ function renderMods(mods) {
           <div class="tab-content active" data-content="info">
             <h5>${mod.info.title}</h5>
             <ul>
-              ${mod.info.features.map(f => `<li>${f}</li>`).join("")}
+              ${mod.info.features.map((f) => `<li>${f}</li>`).join("")}
             </ul>
             <a href="${mod.info.link}" target="_blank">
             Ver más
-          </a>
+            </a>
+            <div class="mod-author">
+              <p>Creado por ${mod.info.author}</p>
+            </div>
           </div>
 
           <div class="tab-content" data-content="screenshots">
             <div class="screenshots">
               ${mod.screenshots
-                .map(img => `<img src="${img}" loading="lazy" alt="">`)
+                .map((img) => `<img src="${img}" loading="lazy" alt="">`)
                 .join("")}
             </div>
           </div>
 
           <div class="tab-content" data-content="download">
           <ol>
-          ${mod.download.steps.map(s => `<li>${s}</li>`).join("")}
+          ${mod.download.steps.map((s) => `<li>${s}</li>`).join("")}
           </ol>
           <a href="${mod.download.link}" target="_blank">
             Descargar

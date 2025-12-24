@@ -4,7 +4,7 @@
 
     }
 
-    body::before {
+body::before {
         background-image: url("../images/main/background_VC.webp");
         content: "";
         position: fixed;
@@ -17,18 +17,18 @@
         background-attachment: fixed;
         transform: scale(1.1);
         z-index: -1;
-    }
+}
 
     #rightContent::before {
         background:linear-gradient(90deg, #38eeff, #b475ef);
     }
 
     .block {
-        background: radial-gradient(circle 500px at 30px 60px, #df2aff32 15%, transparent 70%),
-        radial-gradient(circle 500px at 100% 100%, #df2aff32 15%, transparent 70%), #1c0326ef;
+        background: radial-gradient(circle 1200px at 30px 60px, #df2aff10 15%, transparent 70%),
+        radial-gradient(circle 1200px at 100% 100%, #df2aff10 15%, transparent 70%), #1c0326e0;
         color: #ffffff;
         box-shadow: 0px -60px 500px 100px #03373e7e;
-        border: 5px solid #00d4e7;
+        border: 5px solid #de73ff;
     }
 
     #container {
@@ -101,3 +101,81 @@
         radial-gradient(circle 500px at 100% 100%, #df2aff32 15%, transparent 70%), #1c0326ef;
         border: 5px solid #8fe2ea;
     }
+
+
+
+details.mod {
+    border: 1px solid #8b4fa8;
+    background: linear-gradient(135deg, #2d1b3d 0%, #1a0f26 100%);
+}
+.mod-text h4 {
+    font-family: "SF Arborcrest";
+}
+details.mod[open] {
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    background: linear-gradient(135deg, #2d1b3d 0%, #1f1233 100%);
+}
+details.mod summary img {
+    clip-path: polygon(
+        50% 0%,
+        75% 6.7%,
+        93.3% 25%,
+        100% 50%,
+        93.3% 75%,
+        75% 93.3%,
+        50% 100%,
+        25% 93.3%,
+        6.7% 75%,
+        0% 50%,
+        6.7% 25%,
+        25% 6.7%
+    );
+    background: radial-gradient(circle 50px at center, #60a5d5, #c77ee8);
+}
+.mod-actions a {
+    color: #ffffff;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+}
+.mod-actions a:hover {
+    border: 1px solid rgba(168, 85, 247, 0.8);
+    background-color: rgba(168, 85, 247, 0.15);
+}
+
+.mod-actions a.active {
+    border: 2px solid #7dd3fc;
+    box-shadow: 0 10px 20px 0 rgba(168, 85, 247, 0.6);
+    background-color: rgba(168, 85, 247, 0.3);
+}
+
+.mod-actions span {
+    color: #7dd3fc;
+}
+
+.mod-features {
+    border-top: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+.tab-content h5 {
+    color: #60d9fa;
+}
+
+.tab-content[data-content="info"] li {
+    color: #f0f0f0;
+}
+
+.tab-content[data-content="info"] li::before {
+    color: #60d9fa;
+    text-shadow: 0 0 10px rgba(96, 217, 250, 0.6);
+}
+
+.tab-content a {
+    border: 1px solid #7dd3fc;
+    background: linear-gradient(135deg, rgba(96, 217, 250, 0.25) 0%, rgba(168, 85, 247, 0.25) 100%);
+    color: #ffffff;
+}
+
+.tab-content a:hover {
+    background: linear-gradient(135deg, rgba(96, 217, 250, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
+    box-shadow: 0 4px 15px rgba(96, 217, 250, 0.4);
+}

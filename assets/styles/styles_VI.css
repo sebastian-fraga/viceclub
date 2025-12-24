@@ -26,9 +26,10 @@ body::before {
 }
 
 .block {
-    background: #4c096ec2;
-    box-shadow: 0px -60px 500px 100px #8c1cee7d;
-    border: 5px solid #79d2ff;
+    background: linear-gradient(45deg, #fcc5e4aa 0%, #fda34baa 15%, #ff7882aa 35%, #c8699eaa 52%, #7046aaaa 71%, #0c1db8aa 100%);
+    box-shadow: 0px -60px 500px 100px rgba(232, 155, 140, 0.4);
+    backdrop-filter: brightness(0.2) blur(5px);
+    border: 5px solid #c9ecef;
 }
 #container {
     display: flex;
@@ -42,9 +43,8 @@ body::before {
 }
 .text-container h2 {
     font-family: "GTAArtDecoRegular";
-    background-image: linear-gradient(to right, var(--gradient));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff;
+    text-shadow: 0 2px 40px rgb(255, 255, 255);
     font-size: 34px;
     text-align: center;
     line-height: 0.9;
@@ -77,12 +77,14 @@ body::before {
 /* #endregion */
 
 /* #region LÍNEA DE TIEMPO */
+
 article {
     padding: 0 3em;
     margin-bottom: 4em;
 }
+
 article p {
-    color: #fff;
+    color: #ffffff;
     margin: 0 0 20px 30px;
     text-align: left;
     text-wrap: wrap;
@@ -90,42 +92,53 @@ article p {
     max-width: 100%;
     text-indent: 1.7rem;
     font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
 .timeline-last-updated {
-    color: var(--accent-color);
+    color: #79b3ffcb; 
     font-weight: bold;
     font-size: 15px;
     text-align: center;
     margin-bottom: 40px;
 }
+
 .timeline-date {
     text-align: left;
     font-size: 25px;
-    background-image: linear-gradient(to bottom, var(--gradient));
+    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600; 
 }
+
 .timeline-time {
     text-align: left;
-    background-image: linear-gradient(to bottom, var(--gradient));
+    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 17px;
 }
+
 .block.timeline p + p {
     margin-bottom: 30px;
 }
+
 .timeline-divider {
     height: 2px;
     border-radius: 1em;
     width: 100%;
-    background: linear-gradient(to right, #dd6262, #ffc61a);
+    background: linear-gradient(to right, #f59e0b, #fbbf24, #60d9fa);
     margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
 }
+
 .timeline-icon {
-    color: var(--accent-color);
+    color: #60d9fa;
+    filter: drop-shadow(0 0 5px rgba(96, 217, 250, 0.6));
 }
+
 .timeline-image {
     box-sizing: content-box;
     align-items: center;
@@ -135,16 +148,32 @@ article p {
     height: auto;
     margin: 10px auto 50px auto;
     border-radius: 20px;
-    border: 3px solid #e79efb;
+    border: 3px solid #a855f7;
     cursor: pointer;
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
 }
+
+.timeline-image:hover {
+    border-color: #c084fc;
+    box-shadow: 0 12px 35px rgba(168, 85, 247, 0.6);
+    transform: scale(1.02);
+}
+
 article a {
     text-decoration: none;
-    color: #f790b8;
+    color: #f472b6;
     transition: color 0.15s ease-in-out;
+    font-weight: 500;
 }
+
+article a:hover {
+    color: #fbbf24;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
 article a:active {
-    color: #c36086;
+    color: #ec4899;
 }
 /* #endregion */
 
