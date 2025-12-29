@@ -63,7 +63,10 @@ body::before {
 .right-content-nav ainactive:active {
     color: #d3d3d3;
 }
+
+
 /*FICHA TÉCNICA*/
+
 .ficha-tecnica {
     border-color: #ffffffd2 !important;
     background-color: #a1a1a197;
@@ -74,6 +77,98 @@ body::before {
 span.table-platforms {
     color: #ffffff;
 }
+
+
+
+
+
+
+details.mod {
+    border: 1px solid #7fbf3f;
+    background: linear-gradient(
+        135deg,
+        #1c351c 0%,
+        #0b140b 100%
+    );
+}
+
+.mod-text h4 {
+    font-family: "Helvetica Neue";
+    color: #ffffff;
+}
+
+.mod-text p {
+    color: #d4d4d4;
+}
+
+details.mod[open] {
+    border: 2px solid #b6ff3b;
+    box-shadow: 0 0 35px rgba(182, 255, 59, 0.6);
+    background: linear-gradient(
+        135deg,
+        #203a20 0%,
+        #2e4a2e 100%
+    );
+}
+
+details.mod summary img {
+    border-radius: 50%;
+    background: #fff;
+}
+
+.mod-actions a {
+    color: #ffffff;
+    border: 1px solid rgba(154, 205, 50, 0.4);
+}
+
+.mod-actions a:hover {
+    border: 1px solid rgba(154, 205, 50, 0.8);
+    background-color: rgba(154, 205, 50, 0.15);
+}
+
+.mod-actions a.active {
+    border: 2px solid #9acd32;
+    box-shadow: 0 10px 20px 0 rgba(154, 205, 50, 0.5);
+    background-color: rgba(107, 142, 35, 0.5);
+}
+
+.mod-actions span {
+    color: #cddc39;
+}
+
+.mod-features {
+    border-top: 1px solid rgba(154, 205, 50, 0.4);
+}
+
+.tab-content h5 {
+    color: #ffb84d;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+}
+
+.tab-content[data-content="info"] li {
+    color: #f0f0f0;
+}
+
+.tab-content[data-content="info"] li::before {
+    color: #9acd32;
+    text-shadow: 0 0 12px rgba(154, 205, 50, 0.7);
+}
+
+.tab-content a {
+    border: 1px solid #9acd32;
+    background: linear-gradient(135deg, rgba(107, 142, 35, 0.4) 0%, rgba(85, 107, 47, 0.4) 100%);
+    color: #ffffff;
+}
+
+.tab-content a:hover {
+    background: linear-gradient(135deg, rgba(107, 142, 35, 0.6) 0%, rgba(85, 107, 47, 0.6) 100%);
+    box-shadow: 0 4px 15px rgba(154, 205, 50, 0.5);
+}
+
+
+
+
 /*RADIO*/
 .radio-item {
     background-color: #5c5952;

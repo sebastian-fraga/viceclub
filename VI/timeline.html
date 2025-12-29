@@ -121,7 +121,7 @@
     <script>
         async function loadTimeline() {
             try {
-                const response = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/timeline.json?t=' + Date.now());
+                const response = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/VI/timeline.json?t=' + Date.now());
                 const data = await response.json();
                 const container = document.getElementById('timelineContainer');
 

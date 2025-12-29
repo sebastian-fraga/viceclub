@@ -3,6 +3,7 @@
     font-family: "GTAArtDecoRegular";
     src: url("../fonts/GTAArtDecoRegular.ttf");
 }
+
 /* #endregion */
 
 /* #region GENERAL */
@@ -10,6 +11,7 @@
     --gradient: #7487e7, #ea49f2, #fa72a7, #ffa14f;
     --accent-color: #afbcfc;
 }
+
 body::before {
     background-image: url("../images/main/background_VI.webp");
     content: "";
@@ -26,9 +28,10 @@ body::before {
 }
 
 .block {
-    background: linear-gradient(45deg, #fcc5e4aa 0%, #fda34baa 15%, #ff7882aa 35%, #c8699eaa 52%, #7046aaaa 71%, #0c1db8aa 100%);
-    box-shadow: 0px -60px 500px 100px rgba(232, 155, 140, 0.4);
-    backdrop-filter: brightness(0.2) blur(5px);
+    background: linear-gradient(45deg, #ff7882aa 35%, #c8699eaa 52%, #7046aaaa 71%, #0c1db8aa 100%);
+    box-shadow: 0px -60px 50px 10px rgba(232, 155, 140, 0.4);
+    backdrop-filter: brightness(0.2) blur(12px);
+    -webkit-backdrop-filter: brightness(0.2) blur(12px);
     border: 5px solid #c9ecef;
 }
 #container {
@@ -36,11 +39,13 @@ body::before {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .text-container {
     justify-content: left;
     align-items: left;
     color: #ffffff;
 }
+
 .text-container h2 {
     font-family: "GTAArtDecoRegular";
     color: #ffffff;
@@ -51,25 +56,30 @@ body::before {
 }
 
 #rightContent::before {
-    background:linear-gradient(90deg, #81eaf4, #b475efd9);
+    background: linear-gradient(90deg, #81eaf4, #b475efd9);
 }
+
 .right-content-nav a {
     font-family: "GTAArtDecoRegular";
     font-size: 27px;
 }
+
 .right-content-nav a.active {
     color: #81eaf4;
     text-shadow: 0 0 3px #000;
     cursor: default;
 }
+
 .right-content-nav a.inactive {
     color: #505050fa;
     transition: color 0.2s;
 }
+
 .right-content-nav a.inactive:hover {
     color: #81eaf4;
     text-shadow: 0 0 3px #000;
 }
+
 .right-content-nav a.inactive:active {
     color: #67c8ee;
 }
@@ -96,11 +106,12 @@ article p {
 }
 
 .timeline-last-updated {
-    color: #79b3ffcb; 
+    color: #79b3ff;
     font-weight: bold;
     font-size: 15px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-top: 0.6em;
+    margin-bottom: 3em;
 }
 
 .timeline-date {
@@ -109,7 +120,7 @@ article p {
     background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 .timeline-time {
@@ -121,7 +132,7 @@ article p {
     font-size: 17px;
 }
 
-.block.timeline p + p {
+.block.timeline p+p {
     margin-bottom: 30px;
 }
 
@@ -162,7 +173,7 @@ article p {
 
 article a {
     text-decoration: none;
-    color: #f472b6;
+    color: #79b3ffcb;
     transition: color 0.15s ease-in-out;
     font-weight: 500;
 }
@@ -175,20 +186,48 @@ article a:hover {
 article a:active {
     color: #ec4899;
 }
+
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
-    .ficha-tecnica {
-        border-color: #acdaf3 !important;
-        background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
-        color: #ffffff;
-    }
+.ficha-tecnica {
+    border-color: #acdaf3 !important;
+    background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
+    color: #ffffff;
+}
 
-    .ficha-tecnica th, span.table-platforms {
-        font-family: "GTAArtDecoRegular";
-    }
+.ficha-tecnica th,
+span.table-platforms {
+    font-family: "GTAArtDecoRegular";
+}
 
-    span.table-platforms {
-        color: #acdaf3;
-    }
+span.table-platforms {
+    color: #acdaf3;
+}
+
 /* #endregion */
+
+@media screen and (max-width: 1550px) {
+    .block::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            45deg,
+            rgba(112, 70, 170, 0.65) 71%,
+            rgba(12, 29, 184, 0.65) 100%
+        );
+        z-index: -1;
+    }
+    article {
+        padding: 0 0.2em;
+    }
+    article p {
+        text-indent: 0;
+        text-wrap: balance;
+        margin: 1em 0;
+    }
+    .timeline-date, .timeline-time {
+        background-image: linear-gradient(to bottom, #ff7881, #ffc37f);
+    }
+}

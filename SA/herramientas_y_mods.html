@@ -7,8 +7,8 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_SA.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_SA.webp" as="image" type="image/webp">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Herramientas y Mods - SA</title>
 </head>
 
@@ -28,18 +28,13 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
     <div class="block" id="container">
         <div class="text-container">
             <h2>Herramientas y Mods para Grand Theft Auto: San Andreas</h2>
-            <h3 style="font-size: 22px; margin-top: 100px;">ESENCIALES</h3>
-            <section class="tools-wrapper">
-
+            <h3 class="mod-title">ESENCIALES</h3>
+            <section class="mods-container" id="modsContainer" data-game="SA">
             </section>
         </div>
-
     </div>
     <div id="rightContent">
         <div class="right-content-logos">
@@ -107,34 +102,43 @@
         });
     </script>
     <script>
-        document.querySelectorAll(".tools").forEach(tool => {
-            const arrow = tool.querySelector(".tools-arrow");
-            const tabs = tool.querySelectorAll(".tools-tabs button");
-            const contents = tool.querySelectorAll(".tools-tab-content");
+        document.addEventListener('DOMContentLoaded', function () {
 
-            tool.querySelector(".tools-header").addEventListener("click", () => {
-                tool.classList.toggle("expanded");
-            });
+            document.addEventListener('click', function (e) {
+                const link = e.target.closest('.tab-link');
+                if (!link) return;
 
-            tabs.forEach(tab => {
-                tab.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    tabs.forEach(btn => btn.classList.remove("active"));
-                    tab.classList.add("active");
+                e.preventDefault();
+                e.stopPropagation();
 
-                    const selected = tab.dataset.tab;
-                    contents.forEach(c => {
-                        c.classList.toggle("active", c.dataset.content === selected);
-                    });
+                const targetTab = link.getAttribute('data-tab');
+                const parentDetails = link.closest('details');
+
+                if (!parentDetails) return;
+
+                parentDetails.querySelectorAll('.tab-link').forEach(tab => {
+                    tab.classList.remove('active');
                 });
+
+                link.classList.add('active');
+
+                parentDetails.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                const targetContent = parentDetails.querySelector(
+                    `[data-content="${targetTab}"]`
+                );
+
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
             });
 
-            tabs[0].click();
         });
     </script>
-</body>
 
-</html>
+    <script src="../assets/scripts/mods.js"></script>
 </body>
 
 </html>

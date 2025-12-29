@@ -1,8 +1,5 @@
 /* #region FUENTES */
-@font-face {
-    font-family: "Alfa";
-    src: url("../fonts/AlfaSlabOne-Regular.ttf")
-}
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 @font-face {
     font-family: "GTAArtDecoRegular";
@@ -149,7 +146,7 @@ header a:hover {
 }
 
 header h1 {
-    font-family: "Alfa";
+    font-family: "Alfa Slab One";
     font-size: 2.1em;
     text-align: center;
     -webkit-text-stroke: 1px #000000ad;
@@ -238,7 +235,7 @@ header .line {
 
 body.index #rightContent {
     flex-direction: column;
-    width: 5%;
+    max-width: 7%;
 }
 
 #rightContent {
@@ -256,7 +253,7 @@ body.index #rightContent {
     transition: all 0.5s ease-in-out;
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(25px);
     z-index: 10000;
 }
 
@@ -265,7 +262,7 @@ body.index #rightContent {
 }
 
 #rightContent img {
-    width: 5rem;
+    width: 80px;
     padding: 4px 20px;
     transition: all 0.2s ease-in-out;
 }
@@ -281,8 +278,8 @@ body.index #rightContent {
 .right-content-logos {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 90%;
+    justify-content: space-around;
+    height: 95%;
 }
 
 .right-content-img {
@@ -305,13 +302,11 @@ body.index #rightContent {
 
 .right-content-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 20px 0px;
 }
 
 .right-content-nav li {
     text-align: left;
-    padding: 8px 20px;
+    padding: 8px 0 8px 5px;
     line-height: 0.9;
 }
 
@@ -319,18 +314,14 @@ body.index #rightContent {
     text-decoration: none;
     font-weight: bold;
 }
-
 .right-content-nav li:first-child a {
     font-size: 35px;
 }
 
 .right-content-nav li:first-child {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.right-content-nav li:not(:first-child) {
-    margin-left: 10px;
-}
 
 .right-content-nav a.inactive {
     transition: color 0.4s;
@@ -344,6 +335,7 @@ body.index #rightContent {
     position: relative;
     z-index: 1000;
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);    
 }
 
 .block:hover {
@@ -382,7 +374,7 @@ body.index #container {
 }
 
 h2.welcome-title {
-    font-family: "Alfa";
+    font-family: "Alfa Slab One";
     line-height: 0.9;
     font-size: 2.7em;
     width: fit-content;
@@ -402,12 +394,13 @@ h2.welcome-title {
     border-radius: 25px;
     position: absolute;
     top: 4em;
-    right: 15px;
+    right: 0;
+    max-width: 300px;
 }
 
 .fotd-title h2 {
     text-align: center;
-    font-family: "Alfa";
+    font-family: "Alfa Slab One";
     font-size: 1.7em;
     color: var(--main-word-color);
     -webkit-text-stroke: 1px #3b3939;
@@ -443,8 +436,8 @@ h2.welcome-title {
 .text-container .index-text {
     font-size: 1.5em;
     text-align: left;
-    margin: 1em 5%;
-    max-width: 70ch;
+    margin: 1em 0 0 3em;
+    max-width: 60ch;
     color: #000000;
     background-image: linear-gradient(45deg, #000000, #272727 50%, #000000 100%);
     background-clip: text;
@@ -458,11 +451,10 @@ h2.welcome-title {
 }
 
 .countdown-wrapper {
-    margin: 15em auto 2em auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: center;
+    margin: 15em auto 2em auto;
     gap: 0.4em;
     position: relative;
     border-radius: 20px;
@@ -478,12 +470,10 @@ h2.welcome-title {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/main/background_VI.webp');
+    background-image: linear-gradient(to bottom, #12ace03c, #000000c0), url('../images/main/VI_countdown.webp');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    opacity: 0.9;
-    filter: brightness(0.6);
     z-index: 0;
     border-radius: 20px;
 }
@@ -494,7 +484,7 @@ h2.welcome-title {
     inset: 0;
     border-radius: 20px;
     padding: 5px;
-    background: linear-gradient(90deg, #E39986, #8c34b5, #E39986);
+    background: linear-gradient(135deg, #E39986, #f483f8, #544eff, #E39986);
     mask:
         linear-gradient(#000 0 0) content-box,
         linear-gradient(#000 0 0);
@@ -505,6 +495,7 @@ h2.welcome-title {
 .countdown-wrapper h2 {
     margin-top: 0.3em;
     z-index: 10;
+    text-shadow: 0 2px #000000;
 }
 
 .countdown-wrapper img {
@@ -512,11 +503,13 @@ h2.welcome-title {
     margin: 0.3em auto 0 auto;
     width: 130px;
     z-index: 10;
+    transform: translateX(-10px);
 }
 
 #countdown {
     margin: 1em auto;
     font-size: 1.2em;
+    text-shadow: 0 2px #000000;
     z-index: 10;
 }
 
@@ -532,7 +525,7 @@ section.news {
 
 section.news h2 {
     position: relative;
-    font-family: "Alfa";
+    font-family: "Alfa Slab One";
     margin: 5px auto 30px auto;
     line-height: 1.1;
     font-size: 2.3em !important;
@@ -683,7 +676,9 @@ section.news h2 {
 }
 
 .text-container h2:not(.welcome-title) {
-    font-size: 2.3em;
+    margin-top: 1em;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    line-height: 1.2;
     text-align: center;
 }
 
@@ -839,9 +834,9 @@ body.index details a:active {
 /* #region FICHA TÉCNICA */
 .ficha-tecnica {
     border: 3px solid;
-    border-radius: 30px;
-    width: 95%;
-    margin-right: 20px;
+    border-radius: 0 25px 25px 0;
+    width: 100%;
+    max-width: 700px;
 }
 
 .ficha-tecnica table {
@@ -918,8 +913,8 @@ span.table-platforms {
 /* #region HERRAMIENTAS Y MODS */
 
 .mod-title {
-    margin: 1.8em 2em;
-    font-size: 1.5em;
+    margin: 1.8em auto;
+    font-size: clamp(30px, 3vw, 35px);
 }
 
 section.mods-container {
@@ -1078,17 +1073,16 @@ details.mod[open] .mod-actions {
 
 .tab-content[data-content="info"] ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     list-style: none;
-    row-gap: 0.7em;
+    gap: 0.7em;
 }
 
 .tab-content[data-content="info"] li {
     position: relative;
-    padding-left: 1.5em;
+    padding-left: 1.5em
 }
-
 .tab-content[data-content="info"] li::before {
     position: absolute;
     left: 0;
@@ -1410,50 +1404,67 @@ footer {
 /* #endregion */
 
 /* #region MEDIA QUERIES */
-@media (min-width: 950px) {
-    .top-content-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex;
-    }
 
-    .fotd-container {
-        width: 300px;
-        margin-top: 0;
-    }
 
-    .text-container {
-        margin-top: 30px;
-    }
-}
+@media (max-width: 1550px) {
 
-@media (max-width: 1780px)
-/* (PARA CUALQUIER PANTALLA MENOS PCS) */
-    {
-    #container {
-        flex-direction: column !important;
+    /* #region GENERAL */
+    header {
+        justify-content: center;
+        gap: 10px;
     }
-
+    header img {
+        margin: 0;
+    }
+    header .logo-container {
+        gap: 10px;
+        flex: 0 0 auto;
+    }
+    header h1{
+        font-size: 2.2em;
+    }
+    header img {
+        width: 60px;
+    }
+    header button  {
+        margin: 0
+    }
+    body.index .block {
+        box-shadow: 0px -60px 10px #00cc9c71;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
     .block {
+        flex-direction: column !important; 
         padding: 15px;
-        margin: 90px 10px 20px 10px;
-        text-align: center
+        margin: 75px 5px 20px 5px;
+        text-align: center;
     }
-
-    ;
-
     .text-container {
-        display: flex !important;
-        flex-direction: column !important;
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
     }
+    body.index #rightContent {
+        max-width: 20%;
+    }
+    body.index #rightContent img {
+        width: 70px;
+    }
+    #rightContent {
+        width: 90%;
+        right: -100dvw;
+        height: 90dvh;
+    }
+    .right-content-nav li {
+        padding: 5px;
+    }
+    /* #endregion */
 
+    /* #region INDEX */
     .text-container .index-text {
-        margin-bottom: 15px;
+        margin: 0 0 55px 0;
         text-wrap: balance;
-    }
-
-    body {
-        min-height: 90vh;
     }
 
     body.index .text-container p {
@@ -1464,15 +1475,10 @@ footer {
         width: 15% !important;
     }
 
-    #rightContent {
-        width: 80%;
-        right: -100vw;
-    }
-
     .fotd-container {
         position: static !important;
         margin: 30px auto !important;
-        width: 75%;
+        width: 80%;
     }
 
     .fotd-image {
@@ -1488,7 +1494,8 @@ footer {
     }
 
     .countdown-wrapper {
-        margin: 2em auto;
+        width: 100%;
+        margin: 2em 0;
     }
 
     .countdown-wrapper h2 {
@@ -1535,31 +1542,100 @@ footer {
         font-size: 1.3em;
     }
 
-    .text-container details {
+    body.index details {
         text-wrap: balance;
     }
 
-    .text-container details h3 {
+    body.index details h3 {
         margin: 0 auto 40px auto;
     }
-
-    .text-container details p:nth-of-type(3),
-    .text-container details p:nth-of-type(6) {
-        margin-bottom: 30px !important;
+    body.index details h4 {
+        font-size: 1.2em;
     }
-
-    .text-container details p {
-        margin: auto 10px !important;
-        font-size: 1rem !important;
+    body.index details p {
+        font-size: 0.9em;
+        text-wrap: balance;
+        color: #000000b8;
+        margin: 0 0 45px 0;
     }
+    /* #endregion */
+
+    /* #region INICIO */
+    .text-container.main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.1em;
+    }
+    .text-container h2:not(.welcome-title) {
+        margin: 0.4em 0.2em;
+    }
+    .text-container.main p {
+        line-height: 1.6;
+        opacity: 0.85;
+    }
+    /* #endregion */
+
+    /* #region FICHA TÉCNICA */
 
     .ficha-tecnica {
         margin: 0 auto;
         display: flex;
+        border-radius: 25px;
         justify-content: center;
         width: 100%;
+        max-width: 400px;
+    }
+    /* #endregion */
+
+    /* #region HERRAMIENTAS Y MODS */
+    section.mods-container {
+        gap: 3em;
+    }
+    details.mod {
+        padding: 1em;
+        max-width: 70vw;
+    }
+    details.mod summary>span {
+        opacity: 1;
+        right: 0;
+        top: 0;
+    }
+    details.mod summary {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        gap: 1em;
+    }
+    details.mod summary img {
+        margin: 0 auto;
     }
 
+    details.mod[open] summary {
+        justify-items: center;
+        text-align: center;
+        gap: 0;
+    }
+    details.mod[open] summary img {
+        width: 80px;
+        height: auto;
+    }
+    details.mod[open] .mod-actions {
+        flex-direction: column;
+    }
+    details.mod[open] .mod-text h4, details.mod[open] .mod-text p {
+        grid-column: 1 / 3;
+    }
+    .tab-content[data-content="info"] ul {
+        gap: 3em;
+    }
+    .mod-actions a {
+        width: 100%;
+        height: 40px;
+        padding: 0 1em;
+    }
+    /* #endregion */
+    /* #region RADIO */
     #radioInfo {
         margin: 15px 10px 0px 10px;
     }
@@ -1581,6 +1657,35 @@ footer {
         font-size: 17px !important;
         left: 50%;
     }
+    /* #endregion */
 }
 
+@media screen and (max-width: 400px) {
+    header h1{
+        font-size: 1.8em;
+    }
+    header img {
+        width: 40px;
+    }
+    details.mod[open] summary {
+        grid-template-rows: 1fr;
+        grid-template-columns: none;
+    }
+    details.mod[open] summary img {
+        grid-row: 1;
+    }
+    details.mod[open] .mod-text h4 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    details.mod[open] .mod-text p {
+        grid-row: 2;
+    }
+    .mod-actions {
+        grid-column: 1/3;
+        grid-row: 3;
+        margin: 3em auto;
+        width: 100%
+    }
+}
 /* #endregion */

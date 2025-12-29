@@ -1,142 +1,147 @@
+/* #region FUENTES */
 @font-face {
     font-family: "SF Arborcrest";
     src: url("../fonts/SF\ Arborcrest.ttf");
-
-    }
-
-body::before {
-        background-image: url("../images/main/background_VC.webp");
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        transform: scale(1.1);
-        z-index: -1;
 }
 
-    #rightContent::before {
-        background:linear-gradient(90deg, #38eeff, #b475ef);
-    }
+/* #endregion */
 
-    .block {
-        background: radial-gradient(circle 1200px at 30px 60px, #df2aff10 15%, transparent 70%),
+/* #region GENERAL */
+
+body::before {
+    background-image: url("../images/main/background_VC.webp");
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+#rightContent::before {
+    background: linear-gradient(90deg, #38eeff, #b475ef);
+}
+
+.block {
+    background: radial-gradient(circle 1200px at 30px 60px, #df2aff10 15%, transparent 70%),
         radial-gradient(circle 1200px at 100% 100%, #df2aff10 15%, transparent 70%), #1c0326e0;
-        color: #ffffff;
-        box-shadow: 0px -60px 500px 100px #03373e7e;
-        border: 5px solid #de73ff;
-    }
+    color: #ffffff;
+    box-shadow: 0px -60px 500px 100px #03373e7e;
+    border: 5px solid #de73ff;
+}
 
-    #container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
 
-    .text-container {
-        justify-content: left;
-        align-items: left;
-    }
+.text-container {
+    justify-content: left;
+    align-items: left;
+}
 
-    .text-container h2 {
-        font-family: "SF Arborcrest";
-        color: #00d4e7;
-        text-shadow: 3px 3px 10px #000000;
-    }
+.text-container h2 {
+    font-family: "SF Arborcrest";
+    color: #00d4e7;
+    text-shadow: 3px 3px 10px #000000;
+}
 
-    .right-content-nav a {
-        font-family: "SF Arborcrest";
-        font-size: 1.7rem;
-    }
+.right-content-nav a {
+    font-family: "SF Arborcrest";
+    font-size: 1.7rem;
+}
 
-    .right-content-nav a.active {
-        color: #00d4e7;
-        text-shadow: 0 0 3px #000;
-        cursor: default;
-    }
+.right-content-nav a.active {
+    color: #00d4e7;
+    text-shadow: 0 0 3px #000;
+    cursor: default;
+}
 
-    .right-content-nav a.inactive {
-        color: #484c4c;
-    }
+.right-content-nav a.inactive {
+    color: #fafafa2e;
+    transition: color 0.15s;
+}
 
-    .right-content-nav a.inactive:hover {
-        color: #00d4e7;
-        text-shadow: 0 0 3px #000;
-        transition: color 0.15s;
-    }
+.right-content-nav a.inactive:hover {
+    color: #00d4e7;
+    text-shadow: 0 0 3px #000;
+}
 
-    .right-content-nav a.inactive:active {
-        color: #018e9b;
-    }
+.right-content-nav a.inactive:active {
+    color: #018e9b;
+}
 
+/* #endregion */
 
-    /*FICHA TÉCNICA*/
-    .ficha-tecnica {
-        border-color: #00d4e7d2 !important;
-        background-color: #018e9b97;
-    }
+/* #region FICHA TÉCNICA */
+.ficha-tecnica {
+    border-color: #00d4e7d2 !important;
+    background-color: #018e9b97;
+}
 
-    .ficha-tecnica th, span.table-platforms {
-        font-family: "SF Arborcrest";
-        text-align: center;
-    }
+.ficha-tecnica th,
+span.table-platforms {
+    font-family: "SF Arborcrest";
+    text-align: center;
+}
 
-    span.table-platforms {
-        color: #00d4e7;
-    }
+span.table-platforms {
+    color: #00d4e7;
+}
 
-    /*RADIO*/
-    #nameRadio {
-        font-family: "SF Arborcrest";
-        color: #81becf;
-        text-shadow: 5px 5px 1px #000000;
-    }
+/* #endregion */
 
-    #radioInfo {
-        background: radial-gradient(circle 500px at 30px 60px, #df2aff32 15%, transparent 70%),
-        radial-gradient(circle 500px at 100% 100%, #df2aff32 15%, transparent 70%), #1c0326ef;
-        border: 5px solid #8fe2ea;
-    }
+/* #region 100% CHECKLIST */
 
+/* #endregion */
 
+/* #region ARTWORKS */
+/* #endregion */
 
+/* #region HERRAMIENTAS Y MODS */
 details.mod {
     border: 1px solid #8b4fa8;
     background: linear-gradient(135deg, #2d1b3d 0%, #1a0f26 100%);
 }
+
 .mod-text h4 {
     font-family: "SF Arborcrest";
 }
+
 details.mod[open] {
     border: 2px solid #a855f7;
     box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
     background: linear-gradient(135deg, #2d1b3d 0%, #1f1233 100%);
 }
+
 details.mod summary img {
-    clip-path: polygon(
-        50% 0%,
-        75% 6.7%,
-        93.3% 25%,
-        100% 50%,
-        93.3% 75%,
-        75% 93.3%,
-        50% 100%,
-        25% 93.3%,
-        6.7% 75%,
-        0% 50%,
-        6.7% 25%,
-        25% 6.7%
-    );
+    clip-path: polygon(50% 0%,
+            75% 6.7%,
+            93.3% 25%,
+            100% 50%,
+            93.3% 75%,
+            75% 93.3%,
+            50% 100%,
+            25% 93.3%,
+            6.7% 75%,
+            0% 50%,
+            6.7% 25%,
+            25% 6.7%);
     background: radial-gradient(circle 50px at center, #60a5d5, #c77ee8);
 }
+
 .mod-actions a {
     color: #ffffff;
     border: 1px solid rgba(168, 85, 247, 0.4);
 }
+
 .mod-actions a:hover {
     border: 1px solid rgba(168, 85, 247, 0.8);
     background-color: rgba(168, 85, 247, 0.15);
@@ -179,3 +184,31 @@ details.mod summary img {
     background: linear-gradient(135deg, rgba(96, 217, 250, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
     box-shadow: 0 4px 15px rgba(96, 217, 250, 0.4);
 }
+/* #endregion */
+
+/* #region LOGROS */
+
+/* #endregion */
+
+/* #region MAPA */
+
+/* #endregion */
+
+/* #region RADIO */
+#nameRadio {
+    font-family: "SF Arborcrest";
+    color: #81becf;
+    text-shadow: 5px 5px 1px #000000;
+}
+
+#radioInfo {
+    background: radial-gradient(circle 500px at 30px 60px, #df2aff32 15%, transparent 70%),
+        radial-gradient(circle 500px at 100% 100%, #df2aff32 15%, transparent 70%), #1c0326ef;
+    border: 5px solid #8fe2ea;
+}
+
+/* #endregion */
+
+/* #region TRUCOS */
+
+/* #endregion */

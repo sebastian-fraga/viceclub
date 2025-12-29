@@ -7,8 +7,6 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_III.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_III.webp" as="image" type="image/webp">
     <title>Inicio - III</title>
 </head>
 
@@ -201,22 +199,16 @@
                 rightContent.classList.toggle("show");
                 button.classList.toggle("active");
 
-                if (block) block.classList.toggle("menu-shift");
             });
 
             document.addEventListener("click", function (event) {
                 if (!rightContent.contains(event.target) && !button.contains(event.target)) {
                     rightContent.classList.remove("show");
                     button.classList.remove("active");
-
-                    if (block) block.classList.remove("menu-shift");
                 }
             });
         });
     </script>
-</body>
-
-</html>
 </body>
 
 </html>

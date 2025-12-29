@@ -40,6 +40,14 @@ body::before {
     border: 5px solid #2e9aedcb;
 }
 
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+
 .text-container h2 {
     font-family: "Arial Black Italic";
     color: #e7a600;
@@ -48,7 +56,7 @@ body::before {
 
 .right-content-nav a {
     font-family: "Arial Black Italic";
-    font-size: 1.6rem;
+    font-size: 1.6em;
 }
 
 .right-content-nav a.active {
@@ -58,7 +66,7 @@ body::before {
 }
 
 .right-content-nav a.inactive {
-    color: #3f3f3f;
+    color: #fafafa2e;
     transition: color 0.4s;
 }
 
@@ -90,9 +98,15 @@ span.table-platforms {
 
 /* #endregion */
 
+/* #region 100% CHECKLIST */
+
+/* #endregion */
+
+/* #region ARTWORKS */
+
+/* #endregion */
+
 /* #region HERRAMIENTAS Y MODS */
-
-
 details.mod {
     border: 1px solid #3d5a9e;
     background: linear-gradient(135deg, #0f1729 0%, #1a2332 100%);
@@ -163,7 +177,7 @@ details.mod summary img {
 
 .tab-content[data-content="info"] li::before {
     color: #60d4ff;
-    text-shadow: 0 0 12px rgba(96, 212, 255, 0.7);
+    text-shadow: 0 0 5px rgb(188, 234, 250);
 }
 
 .tab-content a {
@@ -176,10 +190,18 @@ details.mod summary img {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
 }
+/* #endregion */
+
+/* #region LOGROS */
+
+/* #endregion */
+
+/* #region MAPA */
 
 /* #endregion */
 
 /* #region RADIO */
+
 #nameRadio {
     font-family: "Pricedown";
     color: #85b3c0;
@@ -202,5 +224,9 @@ details.mod summary img {
     color: #85b3c0;
     text-shadow: 0 0 3px #000;
 }
+
+/* #endregion */
+
+/* #region TRUCOS */
 
 /* #endregion */
