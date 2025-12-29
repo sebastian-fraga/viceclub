@@ -457,12 +457,8 @@ section.welcome-text .index-text span {
     cursor: pointer;
     opacity: 1;
 }
-.share-button:active {
-    transform: translateY(0);
-}
 .share-button .material-symbols-rounded {
     font-size: 1.4em;
-    transition: transform 0.3s ease;
 }
 .fotd-description p {
     font-family: "GTAArtDecoRegular";
