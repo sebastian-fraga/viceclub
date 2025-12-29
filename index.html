@@ -10,7 +10,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta name="google-site-verification" content="e3ij8udcLdjfKnNmR5hRDesQJxbdZuOSbEbeFCYC-hg" />
-    <meta name="description" content="Guías completas de GTA, checklists para el 100%, mapas interactivos, mods, trucos y radios de GTA San Andreas, GTA 5, GTA 6 y más">
+    <meta name="description"
+        content="Guías completas de GTA, checklists para el 100%, mapas interactivos, mods, trucos y radios de GTA San Andreas, GTA 5, GTA 6 y más">
     <title>Vice Club | La guía definitiva de la saga Grand Theft Auto</title>
 </head>
 
@@ -77,7 +78,7 @@
         </nav>
     </header>
     <div class="block" id="container" style="display: none;">
-        <div class="top-content-wrapper">
+        <div class="welcome-wrapper">
             <h2 class="welcome-title">BIENVENIDO A VICE CLUB</h2>
             <div class="fotd-container">
                 <div class="fotd-title">
@@ -89,12 +90,23 @@
                 <div class="fotd-description">
                     <p></p>
                     <span class="fotd-source"></span>
+                    <button class="share-button">
+                        <span class="material-symbols-rounded">share</span>
+                    </button>
                 </div>
             </div>
+            <section class="welcome-text">
+                <p class="index-text">Aquí podrás encontrar todo lo que buscas sobre los juegos de la saga GTA:
+                    <span>Información</span>, <span>noticias</span>, todos los <span>trucos</span> y <span>mods
+                        indispensables</span> para tu partida, <span>mapas interactivos</span> para completar los
+                    coleccionables mientras juegas, todas las <span>radios</span> disponibles para escuchar en tu día a
+                    día, curiosidades y mucho más
+                </p>
+                <p class="index-text">Este sitio web se actualizará con regularidad así que no olvides de agregarlo a
+                    favoritos y de visitarnos a menudo!</p>
+            </section>
         </div>
-        <main class="text-container">
-            <p class="index-text">Aquí podrás encontrar todo lo que buscas sobre los juegos de la saga GTA: <span style="font-weight: bold;">Información</span>, <span style="font-weight: bold;">noticias</span>, todos los <span style="font-weight: bold;">trucos</span> y <span style="font-weight: bold;">mods indispensables</span> para tu partida, <span style="font-weight: bold;">mapas interactivos</span> para completar los coleccionables mientras juegas, todas las <span style="font-weight: bold;">radios</span> disponibles para escuchar en tu día a día, curiosidades y mucho más</p>
-            <p class="index-text">Este sitio web se actualizará con regularidad así que no olvides de agregarlo a favoritos y de visitarnos a menudo!</p>
+        <main>
             <div class="countdown-wrapper">
                 <h2>Lanzamiento de Grand Theft Auto VI</h2>
                 <img src="assets/images/main/VI.webp" alt="Logo de Grand Theft Auto VI">
@@ -184,7 +196,7 @@
         });
     </script>
     <!--rightContent-->
-    <script>
+    <script async>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");
             const rightContent = document.getElementById("rightContent");
@@ -207,7 +219,7 @@
         });
     </script>
     <!--News-->
-    <script>
+    <script async>
         const container = document.getElementById("newsContainer");
         const btn = document.getElementById("verMas");
         let noticias = [];
@@ -266,7 +278,7 @@
         });
     </script>
     <!--Overlay-->
-    <script>
+    <script async>
         document.addEventListener('click', function (e) {
             const img = e.target;
             if (img.matches('.news-image')) {
@@ -286,10 +298,10 @@
         });
     </script>
     <!--Facts-->
-    <script>
+    <script async>
         document.addEventListener("DOMContentLoaded", async () => {
             try {
-                const res = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t' + Date.now());
+                const res = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t=' + Date.now());
                 const facts = await res.json();
                 const today = new Date();
                 const start = new Date(today.getFullYear(), 0, 0);
@@ -305,17 +317,107 @@
 
                 if (fact.source) {
                     sourceContainer.innerHTML = `
-                        <a href="${fact.source}" target="_blank" rel="noopener">Ver fuente>
-                            <span class="material-symbols-rounded">info</span>
-                        </a>
-                    `;
+                <a href="${fact.source}" target="_blank" rel="noopener">Ver fuente
+                    <span class="material-symbols-rounded">info</span>
+                </a>
+            `;
                 } else {
                     sourceContainer.innerHTML = "";
+                }
+
+                const shareBtn = document.querySelector(".share-button");
+                if (shareBtn) {
+                    shareBtn.addEventListener("click", () => shareFact(fact.description));
                 }
             } catch (err) {
                 console.error("Error cargando los datos del día:", err);
             }
         });
+
+        function shareFact(factText) {
+            const siteUrl = window.location.origin;
+            const cleanText = factText.replace(/<[^>]*>/g, '');
+            const shareText = `¿Sabías que... ${cleanText}?\n\nConocé más en Vice Club\n${siteUrl}`;
+
+            shareToClipboard(shareText);
+        }
+
+        function shareToClipboard(texto) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(texto)
+                    .then(() => {
+                        showToast('Copiado!');
+                    })
+                    .catch(() => {
+                        // Si falla, usar método antiguo
+                        fallbackCopy(texto);
+                    });
+            } else {
+                fallbackCopy(texto);
+            }
+        }
+
+        function fallbackCopy(texto) {
+            const textArea = document.createElement('textarea');
+            textArea.value = texto;
+            textArea.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        border: none;
+        outline: none;
+        boxShadow: none;
+        background: transparent;
+        opacity: 0;
+        pointer-events: none;
+    `;
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast('Copiado!');
+                } else {
+                    showToast('Error al copiar');
+                }
+            } catch (err) {
+                showToast('Error al copiar');
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            const descContainer = document.querySelector('.fotd-description')
+            toast.textContent = msg;
+            toast.style.cssText = `
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(50%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        z-index: 9999;
+        white-space: nowrap;
+        pointer-events: none;
+        animation: slideUp 0.3s ease, fadeOut 0.3s ease 1.7s;
+
+    `;
+            descContainer.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
     </script>
     <!--Countdown-->
     <script>
