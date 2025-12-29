@@ -40,17 +40,6 @@ body::before {
     border: 5px solid #2e9aedcb;
 }
 
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.text-container {
-    justify-content: left;
-    align-items: left;
-}
-
 .text-container h2 {
     font-family: "Arial Black Italic";
     color: #e7a600;
