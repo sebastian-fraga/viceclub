@@ -1617,16 +1617,18 @@ footer {
     .text-container.main {
         display: flex;
         flex-direction: column;
-        gap: 1.1em;
     }
     .text-container h2:not(.welcome-title) {
         margin: 0.4em 0.2em;
     }
     .text-container.main p {
-        line-height: 1.6;
+        line-height: 1.7;
         text-align: left;
+        max-width: 30ch;
         word-wrap: balance;
-        opacity: 0.85;
+        opacity: 0.9;
+        margin: 1.8em 0;
+        font-size: 1.2em;
     }
     /* #endregion */
 
