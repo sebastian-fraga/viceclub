@@ -2,6 +2,14 @@
     font-family: "Chalet";
     src: url("../fonts/Chalet.otf");
 }
+::selection {
+    background: #bcf19a;
+    color: #1a2a1a;
+}
+::-moz-selection {
+    background: #ffffff;
+    color: #1a2a1a;
+}
 body::before {
     background-image: url("../images/main/background_V.webp");
     content: "";
@@ -21,8 +29,8 @@ body::before {
 }
 .block {
     background: 
-        radial-gradient(circle 600px at 0% 200px, #a7f3d0, #abff9389),
-        radial-gradient(circle 600px at 100% 200px, #a7f3d0, #abff9389);
+        radial-gradient(circle 600px at 0% 200px, #a7f3d0e2, #abff9389),
+        radial-gradient(circle 600px at 100% 200px, #a7f3d0e2, #aaff9355);
     box-shadow: 0px -60px 500px 100px #37ab408e;
     border: 5px solid #96fbc3af;
 }

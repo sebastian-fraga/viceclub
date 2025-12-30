@@ -11,7 +11,14 @@
     --gradient: #7487e7, #ea49f2, #fa72a7, #ffa14f;
     --accent-color: #afbcfc;
 }
-
+::selection {
+    background: var(--accent-color);
+    color: #2f2f2f;
+}
+::-moz-selection {
+    background: var(--accent-color);
+    color: #2f2f2f;
+}
 body::before {
     background-image: url("../images/main/background_VI.webp");
     content: "";

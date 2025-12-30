@@ -3,6 +3,14 @@
     src: url("../fonts/Eurostile\ Bold.ttf");
 }
 
+::selection {
+    background: #32a1cd;
+    color: #1a2a1a;
+}
+::-moz-selection {
+    background: #32a1cd;
+    color: #1a2a1a;
+}
 body::before {
     background-image: url("../images/main/background_LCS.webp");
     content: "";

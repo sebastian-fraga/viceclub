@@ -2,7 +2,14 @@
     font-family: "Helvetica Neue";
     src: url("../fonts/HelveticaNeueHeavy.otf");
 }
-
+::selection {
+    background: #ffffff;
+    color: #1a2a1a;
+}
+::-moz-selection {
+    background: #ffffff;
+    color: #1a2a1a;
+}
 body::before {
     background-image: url("../images/main/background_IV.webp");
     content: "";

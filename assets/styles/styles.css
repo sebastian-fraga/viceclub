@@ -392,8 +392,8 @@ body.index main {
     font-size: 2.7em;
     width: 100%;
     margin: 1.5em auto 0 auto;
-    -webkit-text-stroke: 2px #0000006c;
-    background: linear-gradient(to right, #0e72ede3, #fd8eafe3);
+    -webkit-text-stroke: 2px #0000007a;
+    background: linear-gradient(to right, #0e72ed, #fd8eaf);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -615,7 +615,7 @@ section.news h2 {
 .news-content p {
     margin: 1.8em auto;
     line-height: 1.7;
-    font-size: 1.15em;
+    font-size: 1.3em;
     color: #2a2a2a;
     width: 100%;
     text-align: center;
@@ -739,7 +739,7 @@ body.index details[open] summary {
 
 details::details-content {
     block-size: 0;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in-out;
     transition-behavior: allow-discrete;
     overflow: hidden;
 }
@@ -973,7 +973,6 @@ details.mod {
     flex-direction: column;
     align-items: stretch;
     color: #fff;
-    transition: all 0.3s;
     border-radius: 25px;
     padding: 1em;
     cursor: pointer;
@@ -991,7 +990,7 @@ details.mod summary img {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    transition: all 0.3s;
+    transition: all 0.3s ease-out;
     display: block;
 }
 
@@ -1618,7 +1617,6 @@ footer {
     .text-container.main {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 1.1em;
     }
     .text-container h2:not(.welcome-title) {
@@ -1626,6 +1624,8 @@ footer {
     }
     .text-container.main p {
         line-height: 1.6;
+        text-align: left;
+        word-wrap: balance;
         opacity: 0.85;
     }
     /* #endregion */
@@ -1664,7 +1664,10 @@ footer {
     details.mod summary img {
         margin: 0 auto;
     }
+    .mod-expanded {
+        transition: block-size 0.2s ease, opacity 0.2s ease;
 
+    }
     details.mod[open] summary {
         justify-items: center;
         text-align: center;
