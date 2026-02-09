@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function renderMods(mods) {
-  const container = document.getElementById("modsContainer");
   container.innerHTML = "";
 
   mods.forEach((mod) => {

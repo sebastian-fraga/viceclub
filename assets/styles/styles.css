@@ -464,11 +464,11 @@ header {
         grid-column: 1 / -1;
         font-family: "Alfa Slab One";
         line-height: 0.9;
-        font-size: 2.7em;
+        font-size: 2.9em;
         width: 100%;
         margin: 1.5em auto 0 auto;
-        -webkit-text-stroke: 2px #0000007a;
-        background: linear-gradient(to right, #0e72ed, #fd8eaf);
+        -webkit-text-stroke: 2px #00000082;
+        background: linear-gradient(to right, #0e72ed, #ff8bae);
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -486,7 +486,7 @@ header {
             text-align: left;
             margin: 1em 0 0 3em;
             color: #2a2a2a;
-            background-image: linear-gradient(45deg, #000000, #272727 50%, #000000 100%);
+            background-image: linear-gradient(45deg, #000000, #292222 50%, #000000 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -592,6 +592,7 @@ header {
     }
 
     & h2 {
+        font-size: 2em;
         margin: 0.3em auto;
         z-index: 10;
         text-shadow: 0 2px #000000;
@@ -1012,8 +1013,10 @@ details[open]::details-content {
         color: #fff;
         border-radius: 25px;
         padding: 1.2em;
-        cursor: pointer;
         width: 600px;
+        min-height: 120px;
+        contain: layout paint;
+
 
         & summary {
             display: grid;
@@ -1025,7 +1028,7 @@ details[open]::details-content {
                 width: 100px;
                 height: 100px;
                 object-fit: contain;
-                transition: all 0.3s ease-out;
+                transition: width 0.3s ease-out height 0.3s ease-out;
                 display: block;
             }
 
@@ -1089,6 +1092,7 @@ details[open]::details-content {
                 justify-items: center;
 
                 & img {
+                    display: block;
                     grid-column: 1;
                     grid-row: 1 / -1;
                     width: 120px;
@@ -1125,6 +1129,7 @@ details[open]::details-content {
 
         & .mod-expanded {
             width: 100%;
+            will-change: transform, opacity;
 
             & .mod-features .tab-content {
                 display: none;
@@ -1932,16 +1937,19 @@ footer {
             padding: 1em 0.5em;
             max-width: 75vw;
 
+
             & summary {
                 grid-template-columns: 1fr;
                 text-align: center;
                 justify-items: center;
                 gap: 1em;
+                position: relative;
+                width: 100%;
 
                 & .material-symbols-rounded.arrow {
                     opacity: 1;
-                    right: 5px;
-                    top: 5px;
+                    right: 5px !important;
+                    top: 5px !important;
                 }
 
                 & img {
@@ -1952,15 +1960,20 @@ footer {
             }
 
             & .mod-expanded {
-                transition: block-size 0.2s ease, opacity 0.2s ease;
+                opacity: 0;
+                transform: translateY(-6px);
+
             }
 
             &[open] {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                max-width: 75vw;
 
                 & summary {
+                    display: flex;
+                    flex-direction: column;
                     justify-items: center;
                     text-align: center;
                     gap: 0;
@@ -1974,15 +1987,22 @@ footer {
 
 
                     & .mod-text {
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
                         & h4 {
                             grid-row: 2;
                             grid-column: 1 / -1;
                             text-align: center;
+                            transition: none;
                         }
 
                         & p {
                             grid-row: 3;
                             grid-column: 1 / -1;
+                            transition: none;
                         }
                     }
 
@@ -2004,11 +2024,13 @@ footer {
             }
 
             & .mod-expanded {
-                & .mod-features {
-                    & .tab-content[data-content="info"] ul {
-                        line-height: 2;
-                        gap: 2em;
-                    }
+                opacity: 1;
+                transform: translateY(0);
+                transition: opacity 0.2s ease, transform 0.2s ease;
+
+                & .tab-content[data-content="info"] ul {
+                    line-height: 2;
+                    gap: 2em;
                 }
             }
         }
@@ -2028,6 +2050,7 @@ footer {
             justify-content: center;
         }
     }
+
     .achievement-content {
         contain-intrinsic-size: 90vw;
 
@@ -2037,6 +2060,7 @@ footer {
             margin: 2em auto 15px auto;
         }
     }
+
     /* #endregion */
 
     /* #region RADIO */
@@ -2063,8 +2087,9 @@ footer {
     }
 
     /* #endregion */
+
+
+
+
+    /* #endregion */
 }
-
-
-
-/* #endregion */
