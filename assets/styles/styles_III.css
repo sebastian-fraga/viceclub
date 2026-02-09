@@ -85,6 +85,11 @@ body::before {
 .ficha-tecnica {
     border-color: #e7a600d2 !important;
     background-color: #e7a60062;
+    & table {
+        & tr {
+            border-color: #ffc32af8;
+        }
+    }
 }
 
 .ficha-tecnica th,
@@ -193,7 +198,9 @@ details.mod summary img {
 /* #endregion */
 
 /* #region LOGROS */
-
+.achievement-selector button {
+    background: #ffdead;
+}
 /* #endregion */
 
 /* #region MAPA */

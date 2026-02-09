@@ -7,10 +7,12 @@
     background: #32a1cd;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #32a1cd;
     color: #1a2a1a;
 }
+
 body::before {
     background-image: url("../images/main/background_LCS.webp");
     content: "";
@@ -87,6 +89,12 @@ body::before {
 .ficha-tecnica {
     border-color: #e70000aa !important;
     background-color: #9b00006c;
+
+    & table {
+        & tr {
+            border-color: #e70000aa;
+        }
+    }
 }
 
 .ficha-tecnica th,
@@ -95,7 +103,7 @@ span.table-platforms {
 }
 
 span.table-platforms {
-    color: #e70000;
+    color: #ff8888;
 }
 
 

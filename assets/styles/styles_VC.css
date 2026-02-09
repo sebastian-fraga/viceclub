@@ -11,6 +11,7 @@
     background: #32a1cd;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #32a1cd;
     color: #1a2a1a;
@@ -47,7 +48,7 @@ body::before {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+
 }
 
 .text-container {
@@ -92,6 +93,12 @@ body::before {
 .ficha-tecnica {
     border-color: #00d4e7d2 !important;
     background-color: #018e9b97;
+
+    & table {
+        & tr {
+            border-color: #00d4e7a7;
+        }
+    }
 }
 
 .ficha-tecnica th,
@@ -192,9 +199,13 @@ details.mod summary img {
     background: linear-gradient(135deg, rgba(96, 217, 250, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
     box-shadow: 0 4px 15px rgba(96, 217, 250, 0.4);
 }
+
 /* #endregion */
 
 /* #region LOGROS */
+.achievement-selector button {
+    background: #adf5ff;
+}
 
 /* #endregion */
 

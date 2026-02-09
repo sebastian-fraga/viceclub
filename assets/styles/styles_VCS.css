@@ -7,14 +7,17 @@
     font-family: "Rage Italic";
     src: url("../fonts/RageItalic.woff");
 }
+
 ::selection {
     background: #fba1f8;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #fba1f8;
     color: #1a2a1a;
 }
+
 body::before {
     background-image: url("../images/main/background_VCS.webp");
     content: "";
@@ -91,6 +94,12 @@ body::before {
 .ficha-tecnica {
     border-color: #a300acd2 !important;
     background-color: #76007c97;
+
+    & table {
+        & tr {
+            border-color: #f980ffd2;
+        }
+    }
 }
 
 .ficha-tecnica th,

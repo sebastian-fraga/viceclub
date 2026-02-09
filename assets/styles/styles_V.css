@@ -2,14 +2,21 @@
     font-family: "Chalet";
     src: url("../fonts/Chalet.otf");
 }
+
 ::selection {
     background: #bcf19a;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #ffffff;
     color: #1a2a1a;
 }
+
+body {
+    color: #f2f2f2;
+}
+
 body::before {
     background-image: url("../images/main/background_V.webp");
     content: "";
@@ -24,64 +31,83 @@ body::before {
     transform: scale(1.1);
     z-index: -1;
 }
+
 #rightContent::before {
-    background:linear-gradient(90deg, #a3bd7c, #b475efd9); 
+    background: linear-gradient(90deg, #a3bd7c, #b475efd9);
 }
+
 .block {
-    background: 
-        radial-gradient(circle 600px at 0% 200px, #a7f3d0e2, #abff9389),
-        radial-gradient(circle 600px at 100% 200px, #a7f3d0e2, #aaff9355);
+    background: #036512c3;
     box-shadow: 0px -60px 500px 100px #37ab408e;
     border: 5px solid #96fbc3af;
 }
+
 #container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .text-container {
     justify-content: left;
     align-items: left;
 }
+
 .text-container h2 {
     font-family: "Chalet";
-    color: #16a007;
+    color: rgba(93, 182, 229, 255);
     font-size: 34px;
     text-align: center;
     text-shadow: 3px 3px 1px #000000;
 }
+
 .right-content-nav a {
     font-family: "Chalet";
     font-size: 28px;
 }
+
 .right-content-nav a.active {
-    color: #a3bd7c;
+    color: rgba(93, 182, 229, 255);
     text-shadow: 0 0 2px #000;
     cursor: default;
 }
+
 .right-content-nav a.inactive {
-    color: #4b524bd8;
+    color: rgba(93, 181, 229, 0.189);
 }
+
 .right-content-nav a.inactive:hover {
-    color: #a3bd7c;
+    color: #5db5e5;
     text-shadow: 0 0 1px #000;
     transition: color 0.1s;
 }
+
 .right-content-nav a.inactive:active {
-    color: #748855;
+    color: rgb(59, 145, 191);
 }
 
 
 /*FICHA TÉCNICA*/
 .ficha-tecnica {
-    border-color: #679a1c !important;
-    background-color: #689a1c5e;
+    border-color: #d9ff92 !important;
+    background-color: #1c9a595e;
+
+    & table {
+        & tr {
+            border-color: #d9ff92f8;
+        }
+    }
 }
-.ficha-tecnica th, span.table-platforms {
-    font-family: "Chalet";
-}
+
+.ficha-tecnica th,
 span.table-platforms {
-    color: #16a007;
+    font-family: "Chalet";
+    text-shadow: 2px 2px #000;
+
+}
+
+span.table-platforms {
+    color: #5db5e5;
 }
 
 /*RADIO*/
@@ -91,6 +117,7 @@ span.table-platforms {
     width: 600px;
     height: 550px;
 }
+
 .v-radio-wheel .radio-image {
     position: absolute;
     width: 60px;
@@ -103,6 +130,7 @@ span.table-platforms {
     filter: saturate(0%);
     transition: opacity 0.3s;
 }
+
 .radio-image:hover {
     opacity: 1;
     filter: saturate(100%);
@@ -110,12 +138,14 @@ span.table-platforms {
     border-radius: 100%;
     cursor: pointer;
 }
+
 .radio-image.selected {
     outline: 3px solid #4a6eb3;
     border-radius: 100%;
     filter: saturate(100%);
     opacity: 1;
 }
+
 .v-radio-center {
     position: absolute;
     top: 50%;
@@ -129,6 +159,7 @@ span.table-platforms {
     pointer-events: none;
     text-wrap: nowrap;
 }
+
 #radioText {
     font-family: "Chalet", sans-serif;
 }

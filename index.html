@@ -90,9 +90,6 @@
                 <div class="fotd-description">
                     <p></p>
                     <span class="fotd-source"></span>
-                    <button class="share-button">
-                        <span class="material-symbols-rounded">share</span>
-                    </button>
                 </div>
             </div>
             <section class="welcome-text">
@@ -241,13 +238,13 @@
                 article.classList.add("news-article");
                 article.innerHTML = `
             <div class="news-header">
-                <h3 class="news-title">${noticia.title}</h3>
-                <h4 class="news-date">${noticia.date}</h4>
+                <h3>${noticia.title}</h3>
+                <h4>${noticia.date}</h4>
             </div>
             <div class="news-content">
-                <p class="news-text">${noticia.paragraph1}</p>
+                <p>${noticia.paragraph1}</p>
                 <img src="${noticia.image}" alt="${noticia.title}" class="news-image" loading="lazy">
-                <p class="news-text">${noticia.paragraph2}</p>
+                <p>${noticia.paragraph2}</p>
                 <a href="${noticia.link}" target="_blank" rel="noopener" class="news-link">
                 ${noticia.linkText || "Más información"}
                     <span class="material-symbols-rounded">arrow_outward</span>
@@ -258,7 +255,7 @@
             });
 
             if (visibleCount < noticias.length) {
-                btn.style.display = "block";
+                btn.style.display = "flex";
             } else {
                 btn.style.display = "none";
             }
@@ -325,99 +322,12 @@
                     sourceContainer.innerHTML = "";
                 }
 
-                const shareBtn = document.querySelector(".share-button");
-                if (shareBtn) {
-                    shareBtn.addEventListener("click", () => shareFact(fact.description));
-                }
             } catch (err) {
                 console.error("Error cargando los datos del día:", err);
             }
         });
 
-        function shareFact(factText) {
-            const siteUrl = window.location.origin;
-            const cleanText = factText.replace(/<[^>]*>/g, '');
-            const shareText = `¿Sabías que... ${cleanText}?\n\nConocé más en Vice Club\n${siteUrl}`;
 
-            shareToClipboard(shareText);
-        }
-
-        function shareToClipboard(texto) {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(texto)
-                    .then(() => {
-                        showToast('Copiado!');
-                    })
-                    .catch(() => {
-                        // Si falla, usar método antiguo
-                        fallbackCopy(texto);
-                    });
-            } else {
-                fallbackCopy(texto);
-            }
-        }
-
-        function fallbackCopy(texto) {
-            const textArea = document.createElement('textarea');
-            textArea.value = texto;
-            textArea.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        border: none;
-        outline: none;
-        boxShadow: none;
-        background: transparent;
-        opacity: 0;
-        pointer-events: none;
-    `;
-
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-
-            try {
-                const successful = document.execCommand('copy');
-                if (successful) {
-                    showToast('Copiado!');
-                } else {
-                    showToast('Error al copiar');
-                }
-            } catch (err) {
-                showToast('Error al copiar');
-            }
-
-            document.body.removeChild(textArea);
-        }
-
-        function showToast(msg) {
-            const toast = document.createElement('div');
-            const descContainer = document.querySelector('.fotd-description')
-            toast.textContent = msg;
-            toast.style.cssText = `
-        position: absolute;
-        top: 40px;
-        left: 50%;
-        transform: translateX(50%);
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 12px;
-        font-weight: bold;
-        font-size: 14px;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        z-index: 9999;
-        white-space: nowrap;
-        pointer-events: none;
-        animation: slideUp 0.3s ease, fadeOut 0.3s ease 1.7s;
-
-    `;
-            descContainer.appendChild(toast);
-            setTimeout(() => toast.remove(), 2000);
-        }
     </script>
     <!--Countdown-->
     <script>

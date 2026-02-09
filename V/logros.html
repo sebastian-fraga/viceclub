@@ -28,15 +28,41 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
+
     <div class="block" id="container">
         <div class="text-container">
+            <h2>Logros de Grand Theft Auto V</h2>
+            <div class="achievement-selector">
+                <button class="active" data-seccion="original">Originales
+                    <img src="../assets/images/platforms/playstation.svg" alt="" loading="lazy">
+                </button>
+                <button data-seccion="enhanced">Versión "Enhanced"
+                    <img src="../assets/images/platforms/playstation.svg" alt="" loading="lazy">
+                </button>
+
+            </div>
+
+            <div id="original" class="achievement-content">
+                <div class="achievement-disclaimer">
+                    <h3>*Este listado muestra los logros lanzados junto a la primera versión del juego, para PlayStation 3 y Xbox 360, pero sigue siendo válido para versiones actuales
+                    </h3>
+                </div>
+                <div class="achievement-list">
+
+                </div>
+            </div>
+
+            <div id="enhanced" class="achievement-content" style="display: none;">
+                <div class="achievement-list">
+                    <h3>Este listado es un agregado del set original de logros, y pertenece a las versiones lanzadas en PlayStation 4, Xbox One, y lanzamientos posteriores
+                    </h3>
+                </div>
+            </div>
 
         </div>
 
     </div>
+
     <div id="rightContent">
         <div class="right-content-logos">
             <a href="../III/logros.html">
@@ -48,11 +74,11 @@
             <a href="../SA/logros.html">
                 <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
             </a>
-            <a href="../LCS/logros.html">
+            <a href="../LCS/inicio.html">
                 <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
                     class="right-content-img">
             </a>
-            <a href="../VCS/logros.html">
+            <a href="../VCS/inicio.html">
                 <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
             </a>
             <a href="../IV/logros.html">
@@ -103,3 +129,7 @@
             });
         });
     </script>
+    <script src="../assets/scripts/achivements.js"></script>
+</body>
+
+</html>

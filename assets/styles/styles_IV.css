@@ -2,14 +2,17 @@
     font-family: "Helvetica Neue";
     src: url("../fonts/HelveticaNeueHeavy.otf");
 }
+
 ::selection {
     background: #ffffff;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #ffffff;
     color: #1a2a1a;
 }
+
 body::before {
     background-image: url("../images/main/background_IV.webp");
     content: "";
@@ -24,25 +27,30 @@ body::before {
     transform: scale(1.1);
     z-index: -1;
 }
+
 #rightContent::before {
-    background:linear-gradien(90deg, #eaeaea, #b475efd9);
+    background: linear-gradien(90deg, #eaeaea, #b475efd9);
 }
+
 .block {
     background: radial-gradient(circle 500px at 30px 60px, #b3b6b830 15%, transparent 70%),
-    radial-gradient(circle 500px at 100% 100%, #b3b6b830 15%,transparent 70%), #090909f6;
+        radial-gradient(circle 500px at 100% 100%, #b3b6b830 15%, transparent 70%), #090909f6;
     color: #ffffff;
     box-shadow: 0px -60px 500px 100px #050505ba;
     border: 5px solid #c3c3c3;
 }
+
 #container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 .text-container {
     justify-content: left;
     align-items: left;
 }
+
 .text-container h2 {
     font-family: "Helvetica Neue";
     color: #ffffff;
@@ -50,23 +58,28 @@ body::before {
     text-align: center;
     text-shadow: 3px 3px 10px#000000;
 }
+
 .right-content-nav a {
     font-family: "Helvetica Neue";
     font-size: 27px;
 }
+
 .right-content-nav a.active {
     color: #ffffff;
     text-shadow: 0 0 1px #000;
     cursor: default;
 }
+
 .right-content-nav a.inactive {
     color: #6a6a6ac4;
 }
+
 .right-content-nav a.inactive:hover {
     color: #ffffff;
     text-shadow: 0 0 1px #000;
     transition: color 0.1s;
 }
+
 .right-content-nav ainactive:active {
     color: #d3d3d3;
 }
@@ -77,26 +90,35 @@ body::before {
 .ficha-tecnica {
     border-color: #ffffffd2 !important;
     background-color: #a1a1a197;
+
+    & table {
+        & tr {
+            border-color: #d6d6d6f8;
+        }
+    }
 }
-.ficha-tecnica th, spantable-platforms {
+
+.ficha-tecnica th,
+spantable-platforms {
     font-family: "Helvetica Neue";
 }
+
 span.table-platforms {
     color: #ffffff;
 }
 
 
-
+.achievement-card:nth-of-type(n + 42) {
+    opacity: 0.25;
+}
 
 
 
 details.mod {
     border: 1px solid #7fbf3f;
-    background: linear-gradient(
-        135deg,
-        #1c351c 0%,
-        #0b140b 100%
-    );
+    background: linear-gradient(135deg,
+            #1c351c 0%,
+            #0b140b 100%);
 }
 
 .mod-text h4 {
@@ -111,11 +133,9 @@ details.mod {
 details.mod[open] {
     border: 2px solid #b6ff3b;
     box-shadow: 0 0 35px rgba(182, 255, 59, 0.6);
-    background: linear-gradient(
-        135deg,
-        #203a20 0%,
-        #2e4a2e 100%
-    );
+    background: linear-gradient(135deg,
+            #203a20 0%,
+            #2e4a2e 100%);
 }
 
 details.mod summary img {
@@ -184,6 +204,7 @@ details.mod summary img {
     border: 3px solid #90908e;
     cursor: pointer;
 }
+
 .radio-item:hover {
     filter: brightness(60%);
 }

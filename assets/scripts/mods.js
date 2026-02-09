@@ -29,7 +29,7 @@ function renderMods(mods) {
           <p>${mod.description}</p>
         </div>
 
-        <span class="material-symbols-rounded">expand_more</span>
+        <span class="material-symbols-rounded arrow">expand_more</span>
 
         <nav class="mod-actions">
           <a href="#" data-tab="info" class="tab-link active">
@@ -56,7 +56,8 @@ function renderMods(mods) {
               ${mod.info.features.map((f) => `<li>${f}</li>`).join("")}
             </ul>
             <a href="${mod.info.link}" target="_blank">
-            Ver más
+              <span>VER MÁS</span>
+              <span class="material-symbols-rounded">open_in_new</span>
             </a>
             <div class="mod-author">
               <p>Creado por ${mod.info.author}</p>
@@ -76,7 +77,8 @@ function renderMods(mods) {
           ${mod.download.steps.map((s) => `<li>${s}</li>`).join("")}
           </ol>
           <a href="${mod.download.link}" target="_blank">
-            Descargar
+            <span>DESCARGAR</span>
+              <span class="material-symbols-rounded">open_in_new</span>
           </a>
           </div>
 

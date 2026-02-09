@@ -2,14 +2,17 @@
     font-family: "Bank Gothic";
     src: url("../fonts/BankGothic.ttf");
 }
+
 ::selection {
     background: #9acd32;
     color: #1a2a1a;
 }
+
 ::-moz-selection {
     background: #9acd32;
     color: #1a2a1a;
 }
+
 body::before {
     background-image: url("../images/main/background_SA.webp");
     content: "";
@@ -86,6 +89,12 @@ body::before {
 .ficha-tecnica {
     border-color: #4bf73bd2 !important;
     background-color: #30be2370;
+
+    & table {
+        & tr {
+            border-color: #4bf73bd2;
+        }
+    }
 }
 
 .ficha-tecnica th,
@@ -94,7 +103,8 @@ span.table-platforms {
 }
 
 span.table-platforms {
-    color: #96f46a;
+    color: #e69a04;
+    text-shadow: 2px 2px #000;
 }
 
 
@@ -105,11 +115,9 @@ span.table-platforms {
 
 details.mod {
     border: 1px solid #7fbf3f;
-    background: linear-gradient(
-        135deg,
-        #1c351c 0%,
-        #0b140b 100%
-    );
+    background: linear-gradient(135deg,
+            #1c351c 0%,
+            #0b140b 100%);
 }
 
 .mod-text h4 {
@@ -124,20 +132,16 @@ details.mod {
 details.mod[open] {
     border: 2px solid #b6ff3b;
     box-shadow: 0 0 35px rgba(182, 255, 59, 0.6);
-    background: linear-gradient(
-        135deg,
-        #203a20 0%,
-        #2e4a2e 100%
-    );
+    background: linear-gradient(135deg,
+            #203a20 0%,
+            #2e4a2e 100%);
 }
 
 details.mod summary img {
     border-radius: 50%;
-    background: radial-gradient(
-        circle 70px at top left,
-        #d4ff4d,
-        #4a7a28
-    );
+    background: radial-gradient(circle 70px at top left,
+            #d4ff4d,
+            #4a7a28);
 }
 
 .mod-actions a {
@@ -191,6 +195,10 @@ details.mod summary img {
 }
 
 
+
+.achievement-selector button {
+    background: #d2ffad;
+}
 
 
 /*RADIO*/

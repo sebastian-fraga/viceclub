@@ -8,17 +8,19 @@
 
 /* #region GENERAL */
 :root {
-    --gradient: #7487e7, #ea49f2, #fa72a7, #ffa14f;
     --accent-color: #afbcfc;
 }
+
 ::selection {
     background: var(--accent-color);
     color: #2f2f2f;
 }
+
 ::-moz-selection {
     background: var(--accent-color);
     color: #2f2f2f;
 }
+
 body::before {
     background-image: url("../images/main/background_VI.webp");
     content: "";
@@ -35,12 +37,13 @@ body::before {
 }
 
 .block {
-    background: linear-gradient(45deg, #ff7882aa 35%, #c8699eaa 52%, #7046aaaa 71%, #0c1db8aa 100%);
-    box-shadow: 0px -60px 50px 10px rgba(232, 155, 140, 0.4);
-    backdrop-filter: brightness(0.2) blur(12px);
-    -webkit-backdrop-filter: brightness(0.2) blur(12px);
+    background: linear-gradient(45deg, #36304dc3, #2e335aba);
+    box-shadow: 0px 0 60px rgba(0, 0, 0, 0.4);
+    backdrop-filter: brightness(0.7) blur(12px);
+    -webkit-backdrop-filter: brightness(0.7) blur(12px);
     border: 5px solid #c9ecef;
 }
+
 #container {
     display: flex;
     flex-direction: row;
@@ -54,12 +57,12 @@ body::before {
 }
 
 .text-container h2 {
-    font-family: "GTAArtDecoRegular";
-    color: #ffffff;
-    text-shadow: 0 2px 40px rgb(255, 255, 255);
-    font-size: 34px;
+    font-family: "GTAArtDecoMedium";
     text-align: center;
     line-height: 0.9;
+    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #rightContent::before {
@@ -201,6 +204,12 @@ article a:active {
     border-color: #acdaf3 !important;
     background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
     color: #ffffff;
+
+    & table {
+        & tr {
+            border-color: #d0e4f1;
+        }
+    }
 }
 
 .ficha-tecnica th,
@@ -219,22 +228,24 @@ span.table-platforms {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-            45deg,
-            rgba(112, 70, 170, 0.65) 71%,
-            rgba(12, 29, 184, 0.65) 100%
-        );
+        background: linear-gradient(45deg,
+                rgba(112, 70, 170, 0.65) 71%,
+                rgba(12, 29, 184, 0.65) 100%);
         z-index: -1;
     }
+
     article {
         padding: 0 0.2em;
     }
+
     article p {
         text-indent: 0;
         text-wrap: balance;
         margin: 1em 0;
     }
-    .timeline-date, .timeline-time {
+
+    .timeline-date,
+    .timeline-time {
         background-image: linear-gradient(to bottom, #ff7881, #ffc37f);
     }
 }

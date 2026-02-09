@@ -7,8 +7,6 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_IV.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_IV.webp" as="image" type="image/webp">
     <title>Logros - IV</title>
 </head>
 
@@ -28,12 +26,44 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
     <div class="block" id="container">
         <div class="text-container">
+            <h2>Logros de Grand Theft Auto IV</h2>
+            <div class="achievement-selector">
+                <button class="active" data-seccion="iv">IV
+                    <img src="../assets/images/platforms/playstation.svg" alt="" loading="lazy">
+                </button>
+                <button data-seccion="tlad">The Lost and Damned
+                    <img src="../assets/images/platforms/playstation.svg" alt="" loading="lazy">
+                </button>
+                <button data-seccion="tbogt">The Ballad of Gay Tony
+                    <img src="../assets/images/platforms/socialclub.png" alt="" loading="lazy">
+                </button>
 
+            </div>
+
+            <div id="iv" class="achievement-content">
+                <div class="achievement-disclaimer">
+                    <h3>Este listado pertenece a la versión de PlayStation 4 del juego, lanzado de forma digital</h3>
+                    <p>Nota: Esta versión se encuentra retirada de PlayStation Store, por lo que es imposible jugarla si
+                        no obtuviste el juego antes del 11 de noviembre de 2021</p>
+                </div>
+                <div class="achievement-list">
+
+                </div>
+            </div>
+
+            <div id="tlad" class="achievement-content" style="display: none;">
+                <div class="achievement-list">
+
+                </div>
+            </div>
+
+            <div id="tbogt" class="achievement-content" style="display: none;">
+                <div class="achievement-list">
+
+                </div>
+            </div>
         </div>
 
     </div>
@@ -48,11 +78,11 @@
             <a href="../SA/logros.html">
                 <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
             </a>
-            <a href="../LCS/logros.html">
+            <a href="../LCS/inicio.html">
                 <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
                     class="right-content-img">
             </a>
-            <a href="../VCS/logros.html">
+            <a href="../VCS/inicio.html">
                 <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
             </a>
             <a href="#">
@@ -103,3 +133,7 @@
             });
         });
     </script>
+    <script src="../assets/scripts/achivements.js"></script>
+</body>
+
+</html>
