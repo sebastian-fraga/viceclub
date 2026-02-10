@@ -32,6 +32,8 @@
         <div class="text-container" id="timelineContainer">
         </div>
     </div>
+    <div class="timeline-arrow" id="arrowButton">
+        <span class="material-symbols-rounded">south</span>
     </div>
     <div id="rightContent">
         <div class="right-content-logos">
@@ -181,7 +183,26 @@
                 console.error("Error al cargar el JSON:", error);
             }
         }
-        loadTimeline();
+        loadTimeline().then(() => {
+            const arrowButton = document.getElementById("arrowButton");
+            const articles = document.querySelectorAll("article");
+            const lastArticle = articles[articles.length - 1];
+
+            arrowButton.addEventListener("click", () => {
+                lastArticle.scrollIntoView();
+            });
+
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.scrollY;
+                const lastArticleTop = lastArticle.offsetTop;
+
+                if (currentScroll >= lastArticleTop - 700) {
+                    arrowButton.classList.add("hidden");
+                } else {
+                    arrowButton.classList.remove("hidden");
+                }
+            });
+        });
     </script>
 </body>
 

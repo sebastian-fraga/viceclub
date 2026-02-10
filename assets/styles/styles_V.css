@@ -110,6 +110,13 @@ span.table-platforms {
     color: #5db5e5;
 }
 
+
+.achievement-selector button {
+    background: #5db5e5c2;
+    color: #f2f2f2;
+    text-shadow: 1px 1px #000;
+}
+
 /*RADIO*/
 
 .v-radio-wheel {

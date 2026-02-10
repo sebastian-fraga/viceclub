@@ -208,7 +208,7 @@ body {
         & .text-container {
             & h2 {
                 margin-top: 1em;
-                font-size: clamp(1.5rem, 5vw, 2rem);
+                font-size: clamp(1.5rem, 5vw, 2.3rem);
                 line-height: 1.2;
                 text-align: center;
             }
@@ -968,24 +968,276 @@ details[open]::details-content {
 
 /* #region 100% CHECKLIST */
 
-.checklist h3 {
-    font-size: 30px;
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0 24px;
+    flex-wrap: wrap;
+
+    & .progress-label {
+        display: flex;
+        flex-direction: column;
+        min-width: 80px;
+
+        & .progress-text {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
+        }
+
+        & .progress-count {
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+    }
+
+    & .progress-bar-bg {
+        flex: 1;
+        min-width: 120px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        overflow: hidden;
+
+        & .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffcc00, #f4db79);
+            border-radius: 4px;
+            transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+    }
+
+    & .progress-pct {
+        font-size: 0.9rem;
+        font-weight: 700;
+        min-width: 38px;
+        text-align: right;
+        opacity: 0.9;
+    }
 }
 
-.checklist ul {
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 14px;
+    margin: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    user-select: none;
+    transition: background 0.2s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.09);
+    }
+
+    & .section-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+        padding-left: 12px;
+
+        & .section-badge {
+            font-size: 0.82rem;
+            opacity: 0.6;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        & .section-check-all {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+            color: inherit;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.complete {
+                color: #e5f503;
+
+
+                & svg {
+                    stroke: #ffe23f;
+                    filter: drop-shadow(0 0 3px #fbda1f);
+                }
+            }
+
+            & svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+
+.section-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* CRÍTICO: tamaño fijo para que el SVG no se dispare */
+.section-arrow svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.section-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* --- Checklist list --------------------------------------- */
+.checklist-list-wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.checklist-list-wrapper.section-collapsed {
+    grid-template-rows: 0fr;
+    opacity: 0;
+}
+
+.checklist-list {
     list-style: none;
-    padding-left: 30px;
-    font-size: 20px;
+    padding: 0;
+    margin:4px 0 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 0;
 }
 
-.checklist input {
-    margin-bottom: 10px;
+
+/* --- Individual item -------------------------------------- */
+.checklist-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background 0.2s, border-color 0.2s;
 }
 
-.checklist label.checked {
-    text-decoration: line-through rgb(255, 0, 0);
-    text-decoration-thickness: 4px;
-    text-decoration-skip-ink: none;
+.checklist-item:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.checklist-item.completed {
+    background: rgba(255, 200, 0, 0.06);
+    border-color: rgba(255, 180, 0, 0.25);
+}
+
+/* --- Row (checkbox + info + toggle button) --------------- */
+.checklist-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    cursor: default;
+    user-select: none;
+}
+
+/* --- Custom checkbox -------------------------------------- */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.checklist-cb {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+
+.checklist-cb:checked+.checkbox-custom {
+    background: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.checklist-cb:checked+.checkbox-custom::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 9px;
+    border: 2px solid #111;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+/* --- Mission info ----------------------------------------- */
+.checklist-info {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.checklist-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.checklist-item.completed .checklist-title {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 520px) {
+
+    .progress-wrapper {
+        gap: 8px;
+    }
 }
 
 /* #endregion */
@@ -1232,7 +1484,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     & button {
         font-family: "GTAArtDecoMedium";
-        padding: 0.3em 0.4em;
+        padding: 0.6em 0.8em;
         opacity: 0.2;
         cursor: pointer;
         display: flex;
@@ -1241,6 +1493,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         border-radius: 6px;
         border: none;
         transition: scale 0.2s ease-in;
+        text-transform: uppercase;
 
         &.active {
             opacity: 1;
@@ -1403,6 +1656,25 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 .achievement-toggle[aria-expanded="true"]+.achievement-guide-text {
     padding: 12px 16px 16px !important;
+}
+
+/* #endregion */
+
+/* #region MAPA */
+.map-container {
+    margin: 3em;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 60%;
+    height: auto;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        border: 2px solid #ffffffb2;
+    }
 }
 
 /* #endregion */
@@ -1690,7 +1962,6 @@ footer {
 /* #endregion */
 
 /* #region MEDIA QUERIES */
-
 
 @media (max-width: 1350px) {
 
@@ -2089,7 +2360,6 @@ footer {
     /* #endregion */
 
 
-
-
-    /* #endregion */
 }
+
+/* #endregion */

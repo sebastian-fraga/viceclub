@@ -99,13 +99,19 @@ body::before {
 }
 
 .ficha-tecnica th,
-spantable-platforms {
+.table-platforms {
     font-family: "Helvetica Neue";
 }
 
 span.table-platforms {
     color: #ffffff;
 }
+
+
+.achievement-selector button {
+    background: rgba(229, 228, 228, 0.759);
+}
+
 
 
 .achievement-card:nth-of-type(n + 42) {

@@ -7,6 +7,10 @@
 /* #endregion */
 
 /* #region GENERAL */
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --accent-color: #afbcfc;
 }
@@ -37,164 +41,200 @@ body::before {
 }
 
 .block {
-    background: linear-gradient(45deg, #36304dc3, #2e335aba);
+    background: linear-gradient(45deg,
+            rgba(112, 70, 170, 0.85) 71%,
+            rgba(12, 29, 184, 0.85) 100%);
     box-shadow: 0px 0 60px rgba(0, 0, 0, 0.4);
     backdrop-filter: brightness(0.7) blur(12px);
     -webkit-backdrop-filter: brightness(0.7) blur(12px);
     border: 5px solid #c9ecef;
-}
-
-#container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    & .text-container {
+        justify-content: left;
+        align-items: left;
+        color: #f2f2f2;
+
+        & h2 {
+            font-family: "GTAArtDecoMedium";
+            text-align: center;
+            line-height: 0.9;
+            background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
-.text-container {
-    justify-content: left;
-    align-items: left;
-    color: #ffffff;
+#rightContent {
+    &::before {
+        background: linear-gradient(90deg, #81eaf4, #b475efd9);
+    }
+
+    & .right-content-nav {
+        & ul {
+            & li {
+                & a {
+                    font-family: "GTAArtDecoRegular";
+                    font-size: 27px;
+
+                    &.active {
+                        color: #81eaf4;
+                        text-shadow: 0 0 3px #000;
+                        cursor: default;
+                    }
+
+                    &.inactive {
+                        color: #505050fa;
+                        transition: color 0.2s;
+
+                        &:hover {
+                            color: #81eaf4;
+                            text-shadow: 0 0 3px #000;
+                        }
+
+                        &:active {
+                            color: #67c8ee;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.text-container h2 {
-    font-family: "GTAArtDecoMedium";
-    text-align: center;
-    line-height: 0.9;
-    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#rightContent::before {
-    background: linear-gradient(90deg, #81eaf4, #b475efd9);
-}
-
-.right-content-nav a {
-    font-family: "GTAArtDecoRegular";
-    font-size: 27px;
-}
-
-.right-content-nav a.active {
-    color: #81eaf4;
-    text-shadow: 0 0 3px #000;
-    cursor: default;
-}
-
-.right-content-nav a.inactive {
-    color: #505050fa;
-    transition: color 0.2s;
-}
-
-.right-content-nav a.inactive:hover {
-    color: #81eaf4;
-    text-shadow: 0 0 3px #000;
-}
-
-.right-content-nav a.inactive:active {
-    color: #67c8ee;
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* #endregion */
 
 /* #region LÍNEA DE TIEMPO */
 
-article {
-    padding: 0 3em;
-    margin-bottom: 4em;
+.block.timeline {
+    & #timelineContainer {
+        & .timeline-last-updated {
+            color: #cce2ff;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: center;
+            margin-top: 0.6em;
+            margin-bottom: 3em;
+        }
+
+        & article {
+            padding: 0 3em;
+            margin-bottom: 4em;
+
+            & p {
+                color: #ffffff;
+                margin: 0 0 20px 30px;
+                text-align: left;
+                text-wrap: wrap;
+                font-family: "GTAArtDecoRegular";
+                max-width: 100%;
+                text-indent: 1.7rem;
+                font-size: 1.3rem;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+                & .timeline-icon {
+                    color: #60d9fa;
+                    filter: drop-shadow(0 0 5px rgba(96, 217, 250, 0.6));
+                }
+
+                &+p {
+                    margin-bottom: 30px;
+                }
+            }
+
+            & h3 {
+                text-align: left;
+                font-size: 25px;
+                background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+
+            & h4 {
+                text-align: left;
+                background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 900;
+                font-size: 17px;
+            }
+
+            & img {
+                align-items: center;
+                max-width: 50%;
+                display: block;
+                max-height: 90%;
+                height: auto;
+                margin: 10px auto 50px auto;
+                border-radius: 20px;
+                border: 3px solid #d6aaff;
+                cursor: pointer;
+                box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
+                transition: all 0.3s ease;
+
+                &:hover {
+                    border-color: #c084fc;
+                    box-shadow: 0 12px 35px rgba(168, 85, 247, 0.6);
+                    transform: scale(1.02);
+                }
+            }
+
+            & a {
+                text-decoration: none;
+                color: #79b3ff;
+                transition: color 0.15s ease-in-out;
+                font-weight: 500;
+
+                &:hover {
+                    color: #fbbf24;
+                    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+                }
+
+                &:active {
+                    color: #ec4899;
+                }
+            }
+        }
+
+        & .timeline-divider {
+            height: 2px;
+            border-radius: 1em;
+            width: 100%;
+            background: linear-gradient(to right, #ff96ff, #60c6e8, #d5a9f5);
+            margin-bottom: 1em;
+            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+    }
 }
 
-article p {
-    color: #ffffff;
-    margin: 0 0 20px 30px;
-    text-align: left;
-    text-wrap: wrap;
-    font-family: "GTAArtDecoRegular";
-    max-width: 100%;
-    text-indent: 1.7rem;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.timeline-last-updated {
-    color: #79b3ff;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-    margin-top: 0.6em;
-    margin-bottom: 3em;
-}
-
-.timeline-date {
-    text-align: left;
-    font-size: 25px;
-    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-}
-
-.timeline-time {
-    text-align: left;
-    background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-    font-size: 17px;
-}
-
-.block.timeline p+p {
-    margin-bottom: 30px;
-}
-
-.timeline-divider {
-    height: 2px;
-    border-radius: 1em;
-    width: 100%;
-    background: linear-gradient(to right, #f59e0b, #fbbf24, #60d9fa);
-    margin-bottom: 1em;
-    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
-}
-
-.timeline-icon {
-    color: #60d9fa;
-    filter: drop-shadow(0 0 5px rgba(96, 217, 250, 0.6));
-}
-
-.timeline-image {
-    box-sizing: content-box;
+.timeline-arrow {
+    display: flex;
     align-items: center;
-    max-width: 50%;
-    display: block;
-    max-height: 90%;
-    height: auto;
-    margin: 10px auto 50px auto;
-    border-radius: 20px;
-    border: 3px solid #a855f7;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background: rgba(187, 99, 255, 0.802);
+    border: 1px solid rgba(0, 0, 0, 0.357);
+    padding: 0.7em;
+    border-radius: 100%;
+    color: #ffffff;
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
-    transition: all 0.3s ease;
-}
+    transition: background 0.15s ease scale 0.4s ease;
 
-.timeline-image:hover {
-    border-color: #c084fc;
-    box-shadow: 0 12px 35px rgba(168, 85, 247, 0.6);
-    transform: scale(1.02);
-}
-
-article a {
-    text-decoration: none;
-    color: #79b3ffcb;
-    transition: color 0.15s ease-in-out;
-    font-weight: 500;
-}
-
-article a:hover {
-    color: #fbbf24;
-    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
-}
-
-article a:active {
-    color: #ec4899;
+    &:active {
+        background: rgba(145, 26, 236, 0.802);
+        scale: 0.85;
+    }
 }
 
 /* #endregion */
@@ -207,7 +247,7 @@ article a:active {
 
     & table {
         & tr {
-            border-color: #d0e4f1;
+            border-color: #e69df0;
         }
     }
 }
@@ -223,7 +263,7 @@ span.table-platforms {
 
 /* #endregion */
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1350px) {
     .block::before {
         content: "";
         position: absolute;
@@ -234,18 +274,44 @@ span.table-platforms {
         z-index: -1;
     }
 
-    article {
-        padding: 0 0.2em;
+    .block.timeline {
+        & #timelineContainer {
+
+            & .timeline-last-updated {
+                font-size: 0.79em;
+            }
+
+            & article {
+                padding: 0;
+
+                & p {
+                    font-size: 1.2em;
+                    text-indent: 0;
+                    text-wrap: balance;
+                    margin: 1em 0;
+                    text-align: center;
+                    max-width: 40ch;
+                }
+
+                & h3 {
+                    text-align: center;
+                    font-size: 1.3em;
+                }
+
+                & h4 {
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+
+                & img {
+                    max-width: 90%;
+                }
+            }
+        }
     }
 
-    article p {
-        text-indent: 0;
-        text-wrap: balance;
-        margin: 1em 0;
-    }
-
-    .timeline-date,
-    .timeline-time {
-        background-image: linear-gradient(to bottom, #ff7881, #ffc37f);
+    .timeline-arrow {
+        bottom: 40px;
+        z-index: 10000;
     }
 }
