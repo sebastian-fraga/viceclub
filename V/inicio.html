@@ -31,11 +31,19 @@
     <div class="block" id="container">
         <div class="text-container main">
             <h2>Grand Theft Auto V</h2>
-            <p><span style="color: rgba(93, 182, 229, 255); text-shadow: 3px 3px #000; font-weight: bold;">Grand Theft Auto V</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games lanzado originalmente para PlayStation 3 y Xbox 360 el 17 de septiembre de 2013. También cuenta con versiones para consolas de octava generación (PlayStation 4 y Xbox One) llamada 'Enhanced', y para consolas de novena generación (PlayStation 5 y Xbox Series X/S) llamada 'Expanded & Enhanced'.</p>
+            <p><span style="color: rgba(93, 182, 229, 255); text-shadow: 3px 3px #000; font-weight: bold;">Grand Theft
+                    Auto V</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North
+                y distribuido por Rockstar Games lanzado originalmente para PlayStation 3 y Xbox 360 el 17 de septiembre
+                de 2013. También cuenta con versiones para consolas de octava generación (PlayStation 4 y Xbox One)
+                llamada 'Enhanced', y para consolas de novena generación (PlayStation 5 y Xbox Series X/S) llamada
+                'Expanded & Enhanced'.</p>
 
-            <p>La historia transcurre en Los Santos, una parodia de Los Ángeles, y en Blaine County, correspondiente al desierto de California. El jugador tomará el control de tres personajes: Michael de Santa, Franklin Clinton y Trevor Philips.</p>
+            <p>La historia transcurre en Los Santos, una parodia de Los Ángeles, y en Blaine County, correspondiente al
+                desierto de California. El jugador tomará el control de tres personajes: Michael de Santa, Franklin
+                Clinton y Trevor Philips.</p>
 
-            <p>Es el segundo juego más vendido de la historia, con 225 millones de copias vendidas hasta la fecha, solo siendo superado por Minecraft.</p>
+            <p>Es el segundo juego más vendido de la historia, con 225 millones de copias vendidas hasta la fecha, solo
+                siendo superado por Minecraft.</p>
         </div>
         <div class="ficha-tecnica">
             <table>
@@ -157,7 +165,38 @@
             </ul>
         </nav>
     </div>
+    <audio id="clickSound" preload="auto">
+        <source src="../assets/sounds/select_v.wav" type="audio/mpeg">
+    </audio>
+    <audio id="hoverSound" preload="auto">
+        <source src="../assets/sounds/hover_v.wav" type="audio/mpeg">
+    </audio>
+    <script>
+        const clickSound = document.getElementById('clickSound');
+        const hoverSound = document.getElementById('hoverSound');
 
+        document.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                clickSound.currentTime = 0;
+                clickSound.play();
+
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                }
+            });
+
+            link.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");
@@ -182,9 +221,6 @@
             });
         });
     </script>
-</body>
-
-</html>
 </body>
 
 </html>

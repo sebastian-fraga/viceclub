@@ -96,11 +96,17 @@ body {
             & svg {
                 & g {
                     & path {
-                        stroke: #c150fa;
-                        stroke-dasharray: 400 40;
-                        stroke-dashoffset: 200;
-                        animation: draw 1.3s forwards ease-out, fill 1.8s forwards 2s ease-out;
+                        fill: none;
+                        stroke: #ffffff;
+                        stroke-width: 1;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+
+                        animation: neon-flicker 5.2s infinite;
+                        filter:
+                            drop-shadow(0 0 4px #50e0fa) drop-shadow(0 0 10px #50e0fa) drop-shadow(0 0 22px #50e0fa);
                     }
+
                 }
             }
         }
@@ -1120,7 +1126,7 @@ details[open]::details-content {
 .checklist-list {
     list-style: none;
     padding: 0;
-    margin:4px 0 4px;
+    margin: 4px 0 4px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -1927,18 +1933,41 @@ footer {
 /* #endregion */
 
 /* #region ANIMACIONES */
+@keyframes neon-flicker {
+    0% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 4px #c150fa) drop-shadow(0 0 10px #c150fa) drop-shadow(0 0 12px #c150fa);
+    }
 
-@keyframes draw {
-    to {
-        stroke-dashoffset: 1;
+    2% {
+        opacity: 0.3;
+        filter: none;
+    }
+
+    5% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 6px #c150fa) drop-shadow(0 0 14px #c150fa) drop-shadow(0 0 12px #c150fa);
+    }
+
+    9% {
+        opacity: 0.5;
+        filter:
+            drop-shadow(0 0 3px #c150fa);
+    }
+
+    14% {
+        opacity: 1;
+        filter:
+            drop-shadow(0 0 8px #c150fa) drop-shadow(0 0 18px #c150fa) drop-shadow(0 0 12px #c150fa);
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
-@keyframes fill {
-    to {
-        fill: #d70e0e;
-    }
-}
 
 @keyframes slideUp {
     from {

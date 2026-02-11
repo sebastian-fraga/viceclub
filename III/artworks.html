@@ -78,7 +78,38 @@
             </ul>
         </nav>
     </div>
+    <audio id="clickSound" preload="auto">
+        <source src="../assets/sounds/select_iii.wav" type="audio/mpeg">
+    </audio>
+    <audio id="hoverSound" preload="auto">
+        <source src="../assets/sounds/hover_iii.wav" type="audio/mpeg">
+    </audio>
+    <script>
+        const clickSound = document.getElementById('clickSound');
+        const hoverSound = document.getElementById('hoverSound');
 
+        document.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                clickSound.currentTime = 0;
+                clickSound.play();
+
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 870);
+                }
+            });
+
+            link.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");
@@ -103,3 +134,6 @@
             });
         });
     </script>
+</body>
+
+</html>

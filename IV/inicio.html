@@ -31,14 +31,20 @@
     <div class="block" id="container">
         <div class="text-container main">
             <h2>Grand Theft Auto IV </h2>
-            <p><span style="font-weight: bold; color: rgb(255, 255, 255);">Grand Theft Auto IV</span> es un videojuego de
-                acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games lanzado originalmente el 29 de abril de 2008 para PlayStation 3 y Xbox 360.</p>
+            <p><span style="font-weight: bold; color: rgb(255, 255, 255);">Grand Theft Auto IV</span> es un videojuego
+                de
+                acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games
+                lanzado originalmente el 29 de abril de 2008 para PlayStation 3 y Xbox 360.</p>
 
-            <p>El juego transcurre en una moderna Liberty City, parodia de la ciudad de Nueva York, y en el estado de Alderney (Nueva Jersey).</p>
+            <p>El juego transcurre en una moderna Liberty City, parodia de la ciudad de Nueva York, y en el estado de
+                Alderney (Nueva Jersey).</p>
 
-            <p>El jugador tomará el control de Niko Bellic, un militar ex-combatiente serbio que llega a la ciudad en busca de venganza por una traición que recibió durante la guerra.</p>
+            <p>El jugador tomará el control de Niko Bellic, un militar ex-combatiente serbio que llega a la ciudad en
+                busca de venganza por una traición que recibió durante la guerra.</p>
 
-            <p>Además, el videojuego introduce la mecánica del teléfono: Desde él, el jugador puede recibir llamadas de contactos para desbloquear misiones, o hacerlas para poder realizar actividades secundarias con amigos o parejas.</p>
+            <p>Además, el videojuego introduce la mecánica del teléfono: Desde él, el jugador puede recibir llamadas de
+                contactos para desbloquear misiones, o hacerlas para poder realizar actividades secundarias con amigos o
+                parejas.</p>
         </div>
         <div class="ficha-tecnica">
             <table>
@@ -151,7 +157,38 @@
             </ul>
         </nav>
     </div>
+    <audio id="clickSound" preload="auto">
+        <source src="../assets/sounds/select_iv.wav" type="audio/mpeg">
+    </audio>
+    <audio id="hoverSound" preload="auto">
+        <source src="../assets/sounds/hover_iv.wav" type="audio/mpeg">
+    </audio>
+    <script>
+        const clickSound = document.getElementById('clickSound');
+        const hoverSound = document.getElementById('hoverSound');
 
+        document.querySelectorAll('a').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                clickSound.currentTime = 0;
+                clickSound.play();
+
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 750);
+                }
+            });
+
+            link.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");
@@ -176,9 +213,6 @@
             });
         });
     </script>
-</body>
-
-</html>
 </body>
 
 </html>
