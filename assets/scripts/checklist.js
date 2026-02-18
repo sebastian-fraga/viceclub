@@ -1,5 +1,77 @@
 const STORAGE_KEY = `viceclub_checklist_${location.pathname}`;
 
+
+async function renderChecklistFromJSON() {
+  const rutaActual = window.location.pathname;
+  const carpetas = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
+  let juego = null;
+
+  carpetas.forEach(function (carpeta) {
+    if (rutaActual.includes("/" + carpeta + "/")) {
+      juego = carpeta;
+    }
+  });
+
+  if (!juego) {
+    console.error("No se pudo detectar el juego desde la URL.");
+    return;
+  }
+
+  const rutaJSON = "https://viceclub.s3.us-east-1.amazonaws.com/" + juego + "/checklist.json";
+
+  try {
+    const response = await fetch(rutaJSON);
+    const data = await response.json();
+    const container = document.querySelector('.checklist-container');
+
+    if (!container) {
+      console.error('No se encontró .checklist-container');
+      return;
+    }
+
+    container.innerHTML = data.sections.map(section => `
+      <article data-section-id="${section.id}">
+        <h3>
+          ${section.icon ? `<img src="/assets/images/checklist/${juego}/${section.icon}.webp" class="checklist-icon" alt="Icono de misión" loading=lazy">` : ""}
+          ${section.title}
+        </h3>
+        <ul class="checklist-list">
+          ${section.items.map(item => `
+            <li class="checklist-item" data-id="${item.id}">
+              <div class="checklist-row" role="button" tabindex="0" aria-expanded="false">
+                <label class="checkbox-label" title="Marcar como completado">
+                  <input type="checkbox" class="checklist-cb" aria-label="${item.text}">
+                    <span class="checkbox-custom"></span>
+                </label>
+                <div class="checklist-info">
+                  <span class="checklist-title">
+                    ${item.icon ? `<img src="/assets/images/checklist/${juego}/${item.icon}.webp" class="checklist-icon" alt="Icono de misión" loading="lazy">` : ""}
+                    ${item.text}
+                  </span>
+                </div>
+              </div>
+            </li>
+            `).join('')}
+            </ul>
+      </article>
+    `).join('');
+
+    buildProgressBar();
+    initSections();
+    initCheckboxes();
+    initItemDropdowns();
+
+    document.querySelectorAll(".checklist-container article").forEach(article => {
+      updateSectionProgress(article);
+    });
+
+    updateProgress();
+
+  } catch (error) {
+    console.error('Error cargando el checklist desde:', rutaJSON, error);
+  }
+}
+
 function loadChecked() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
   catch { return {}; }
@@ -14,8 +86,11 @@ function updateProgress() {
   const done = document.querySelectorAll(".checklist-cb:checked");
   const total = all.length;
   const count = done.length;
-  const pct = total ? Math.round((count / total) * 100) : 0;
+  const rawPct = total ? (count / total) * 100 : 0;
 
+  const pct = Number.isInteger(rawPct)
+    ? rawPct.toString()
+    : rawPct.toFixed(2);
   const fill = document.getElementById("progressFill");
   const pctEl = document.getElementById("progressPct");
   const countEl = document.getElementById("progressCount");
@@ -40,7 +115,6 @@ function updateSectionProgress(article) {
     checkAllBtn.classList.toggle("complete", complete);
   }
 }
-
 
 function buildProgressBar() {
   const pctEl = document.querySelector(".checklist-percentage");
@@ -90,16 +164,35 @@ function initSections() {
 
     const wrapper = document.createElement("div");
     wrapper.className = "checklist-list-wrapper section-collapsed";
+    wrapper.style.display = "none";
     ul.parentNode.insertBefore(wrapper, ul);
     wrapper.appendChild(ul);
 
     h3.addEventListener("click", function (e) {
       if (e.target.closest(".section-check-all")) return;
       const isOpen = !wrapper.classList.contains("section-collapsed");
-      wrapper.classList.toggle("section-collapsed", isOpen);
+
+      if (!isOpen) {
+        // 👉 Abrir
+        wrapper.style.display = "block";
+
+        // Forzamos reflow para que la animación funcione
+        wrapper.offsetHeight;
+
+        wrapper.classList.remove("section-collapsed");
+      } else {
+        // 👉 Cerrar
+        wrapper.classList.add("section-collapsed");
+
+        setTimeout(() => {
+          wrapper.style.display = "none";
+        }, 220); // mismo tiempo que el transition CSS
+      }
+
       h3.setAttribute("aria-expanded", String(!isOpen));
       h3.querySelector(".section-arrow").classList.toggle("open", !isOpen);
     });
+
 
     h3.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
@@ -183,14 +276,5 @@ function initItemDropdowns() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  buildProgressBar();
-  initSections();
-  initCheckboxes();
-  initItemDropdowns();
-
-  document.querySelectorAll(".checklist-container article").forEach(article => {
-    updateSectionProgress(article);
-  });
-
-  updateProgress();
+  renderChecklistFromJSON();
 });

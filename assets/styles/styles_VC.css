@@ -114,6 +114,54 @@ span.table-platforms {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #ffadfc, #e0b4ff);
+        }
+    }
+}
+
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #ff5ff4;
+
+                    & svg {
+                        stroke: #fda7f7;
+                        filter: drop-shadow(0 0 3px #ff9ef9);
+                    }
+                }
+            }
+        }
+
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(0, 213, 255, 0.06);
+                        border-color: rgba(0, 238, 255, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #00a6ff;
+                                        border-color: #00c8ff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* #endregion */
 

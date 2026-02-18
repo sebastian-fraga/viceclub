@@ -1,3 +1,5 @@
+/* #region FUENTES */
+
 @font-face {
     font-family: "Eurostile";
     src: url("../fonts/Eurostile\ Bold.ttf");
@@ -13,6 +15,9 @@
     color: #1a2a1a;
 }
 
+/* #endregion */
+
+/* #region GENERAL */
 body::before {
     background-image: url("../images/main/background_LCS.webp");
     content: "";
@@ -84,8 +89,9 @@ body::before {
     color: #9b0000;
 }
 
+/* #endregion */
 
-/*FICHA TÉCNICA*/
+/* #region FICHA TÉCNICA */
 .ficha-tecnica {
     border-color: #e70000aa !important;
     background-color: #9b00006c;
@@ -106,10 +112,69 @@ span.table-platforms {
     color: #ff8888;
 }
 
+/* #endregion */
 
-/*RADIO*/
+/* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #ff675c, #f41212);
+        }
+    }
+}
+
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #ff0808;
+
+                    & svg {
+                        stroke: #fa8e88;
+                        filter: drop-shadow(0 0 5px #bd1111);
+                    }
+                }
+            }
+        }
+
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(116, 18, 18, 0.422);
+                        border-color: rgba(205, 45, 45, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #ff8080;
+                                        border-color: #ab5050;
+                                        &::after {
+                                            border-color: #461f1f;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+
+/* #region RADIO */
 #nameRadio {
     font-family: "Eurostile";
     color: #3b9de8;
     text-shadow: 6px 6px 1px #000000;
 }
+
+/* #endregion */

@@ -1,7 +1,13 @@
+/* #region FUENTES */
+
 @font-face {
     font-family: "Bank Gothic";
     src: url("../fonts/BankGothic.ttf");
 }
+
+/* #endregion */
+
+/* #region GENERAL */
 
 ::selection {
     background: #9acd32;
@@ -84,8 +90,9 @@ body::before {
     color: #30be23;
 }
 
+/* #endregion */
 
-/*FICHA TÉCNICA*/
+/* #region FICHA TÉCNICA */
 .ficha-tecnica {
     border-color: #4bf73bd2 !important;
     background-color: #30be2370;
@@ -107,11 +114,61 @@ span.table-platforms {
     text-shadow: 2px 2px #000;
 }
 
+/* #endregion */
 
+/* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #b5ffad, #c3ffb4);
+        }
+    }
+}
 
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #228733;
 
+                    & svg {
+                        stroke: #77d787;
+                        filter: drop-shadow(0 0 3px #1cdb0b);
+                    }
+                }
+            }
+        }
 
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(13, 255, 0, 0.06);
+                        border-color: rgba(0, 255, 60, 0.25);
+                    }
 
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #62ff00;
+                                        border-color: #59ff00;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region HERRAMIENTAS Y MODS */
 
 details.mod {
     border: 1px solid #7fbf3f;
@@ -194,14 +251,17 @@ details.mod summary img {
     box-shadow: 0 4px 15px rgba(154, 205, 50, 0.5);
 }
 
+/* #endregion */
 
+/* #region LOGROS  */
 
 .achievement-selector button {
     background: #d2ffad;
 }
 
+/* #endregion */
 
-/*RADIO*/
+/* #region RADIO */
 .radio-drag p {
     font-family: "Bank Gothic";
     color: #9d7119;
@@ -216,3 +276,4 @@ details.mod summary img {
     box-shadow: 0px -60px 500px 100px #31490b9d;
     border: 5px solid #0da419;
 }
+/* #endregion */

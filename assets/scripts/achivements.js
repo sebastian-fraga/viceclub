@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const rutaActual = window.location.pathname;
-    const carpetas = ["III", "VC", "SA", "LCS", "VCS", "IV", "V", "VI"];
+    const carpetas = ["III", "VC", "SA", "IV", "V"];
     let juego = null;
 
     carpetas.forEach(function (carpeta) {

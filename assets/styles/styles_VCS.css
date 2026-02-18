@@ -1,3 +1,5 @@
+/* #region FUENTES  */
+
 @font-face {
     font-family: "Geneva";
     src: url("../fonts/Geneva.ttf");
@@ -7,6 +9,10 @@
     font-family: "Rage Italic";
     src: url("../fonts/RageItalic.woff");
 }
+
+/* #endregion */
+
+/* #region GENERAL */
 
 ::selection {
     background: #fba1f8;
@@ -89,8 +95,9 @@ body::before {
     color: #be629e;
 }
 
+/* #endregion */
 
-/*FICHA TÉCNICA*/
+/* #region FICHA TÉCNICA */
 .ficha-tecnica {
     border-color: #a300acd2 !important;
     background-color: #76007c97;
@@ -111,9 +118,74 @@ span.table-platforms {
     color: #faa3ff;
 }
 
-/*RADIO*/
+/* #endregion */
+
+/* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #ffadfc, #e372d2);
+        }
+    }
+}
+
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #ff93f8;
+
+                    & svg {
+                        stroke: #ff93f8;
+                        filter: drop-shadow(0 0 3px #f1adec);
+                    }
+                }
+            }
+        }
+
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(255, 0, 166, 0.06);
+                        border-color: rgba(255, 0, 225, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #e065ff;
+                                        border-color: #d784f0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.checklist-disclaimer {
+    font-size: 0.9em;
+    color: #c2bdbd;
+    padding-block: 1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* #endregion */
+
+
+/* #region RADIO */
 .radio-drag p {
     font-family: "Rage Italic";
     color: #5091c0;
     text-shadow: 7px 4px 1px #000000;
 }
+
+/* #endregion */

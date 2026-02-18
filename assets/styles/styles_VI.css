@@ -1,11 +1,3 @@
-/* #region FUENTES */
-@font-face {
-    font-family: "GTAArtDecoRegular";
-    src: url("../fonts/GTAArtDecoRegular.ttf");
-}
-
-/* #endregion */
-
 /* #region GENERAL */
 html {
     scroll-behavior: smooth;
@@ -108,6 +100,30 @@ body::before {
 .hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* #endregion */
+
+/* #region FICHA TÉCNICA */
+.ficha-tecnica {
+    border-color: #acdaf3 !important;
+    background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
+    color: #ffffff;
+
+    & table {
+        & tr {
+            border-color: #e69df0;
+        }
+    }
+}
+
+.ficha-tecnica th,
+span.table-platforms {
+    font-family: "GTAArtDecoRegular";
+}
+
+span.table-platforms {
+    color: #acdaf3;
 }
 
 /* #endregion */
@@ -239,30 +255,7 @@ body::before {
 
 /* #endregion */
 
-/* #region FICHA TÉCNICA */
-.ficha-tecnica {
-    border-color: #acdaf3 !important;
-    background: radial-gradient(circle at bottom right, #4b60c7ac, #b64cbbac, #e57da5ac, #e89b58ac);
-    color: #ffffff;
-
-    & table {
-        & tr {
-            border-color: #e69df0;
-        }
-    }
-}
-
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "GTAArtDecoRegular";
-}
-
-span.table-platforms {
-    color: #acdaf3;
-}
-
-/* #endregion */
-
+/* #region MEDIA QUERIES */
 @media screen and (max-width: 1350px) {
     .block::before {
         content: "";
@@ -315,3 +308,5 @@ span.table-platforms {
         z-index: 10000;
     }
 }
+
+/* #endregion */

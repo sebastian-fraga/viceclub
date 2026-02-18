@@ -1,8 +1,13 @@
+/* #region FUENTES */
+
 @font-face {
     font-family: "Chalet";
     src: url("../fonts/Chalet.otf");
 }
 
+/* #endregion */
+
+/* #region GENERAL */
 ::selection {
     background: #bcf19a;
     color: #1a2a1a;
@@ -86,8 +91,9 @@ body::before {
     color: rgb(59, 145, 191);
 }
 
+/* #endregion */
 
-/*FICHA TÉCNICA*/
+/* #region FICHA TÉCNICA */
 .ficha-tecnica {
     border-color: #d9ff92 !important;
     background-color: #1c9a595e;
@@ -110,14 +116,70 @@ span.table-platforms {
     color: #5db5e5;
 }
 
+/* #endregion */
 
+/* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #a0f2f8, #a5ffa4,#ffa85d);
+        }
+    }
+}
+
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #d6fa88;
+
+                    & svg {
+                        stroke: #88fac5;
+                        filter: drop-shadow(0 0 5px #79ffce);
+                    }
+                }
+            }
+        }
+
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(18, 116, 101, 0.422);
+                        border-color: rgba(45, 205, 175, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #80d7ff;
+                                        border-color: #83ffff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region LOGROS */
 .achievement-selector button {
     background: #5db5e5c2;
     color: #f2f2f2;
     text-shadow: 1px 1px #000;
 }
 
-/*RADIO*/
+/* #endregion */
+
+/* #region RADIO */
 
 .v-radio-wheel {
     position: relative;
@@ -170,3 +232,5 @@ span.table-platforms {
 #radioText {
     font-family: "Chalet", sans-serif;
 }
+
+/* #endregion */

@@ -1,7 +1,13 @@
+/* #region FUENTES */
+
 @font-face {
     font-family: "Helvetica Neue";
     src: url("../fonts/HelveticaNeueHeavy.otf");
 }
+
+/* #endregion */
+
+/* #region GENERAL */
 
 ::selection {
     background: #ffffff;
@@ -84,8 +90,9 @@ body::before {
     color: #d3d3d3;
 }
 
+/* #endregion */
 
-/*FICHA TÉCNICA*/
+/* #region FICHA TÉCNICA */
 
 .ficha-tecnica {
     border-color: #ffffffd2 !important;
@@ -107,19 +114,62 @@ span.table-platforms {
     color: #ffffff;
 }
 
+/* #endregion */
 
-.achievement-selector button {
-    background: rgba(229, 228, 228, 0.759);
+/* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #ebffe9, #c4c4c4);
+        }
+    }
 }
 
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #9da49e;
 
+                    & svg {
+                        stroke: #b3b3b3;
+                        filter: drop-shadow(0 0 5px #ffffff);
+                    }
+                }
+            }
+        }
 
-.achievement-card:nth-of-type(n + 42) {
-    opacity: 0.25;
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(218, 218, 218, 0.06);
+                        border-color: rgba(185, 185, 185, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #f1f1f1;
+                                        border-color: #eef0ed;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
+/* #endregion */
 
 
+/* #region HERRAMIENTAS Y MODS */
 details.mod {
     border: 1px solid #7fbf3f;
     background: linear-gradient(135deg,
@@ -199,10 +249,23 @@ details.mod summary img {
     box-shadow: 0 4px 15px rgba(154, 205, 50, 0.5);
 }
 
+/* #endregion */
+
+/* #region LOGROS  */
+.achievement-selector button {
+    background: rgba(229, 228, 228, 0.759);
+}
 
 
 
-/*RADIO*/
+.achievement-card:nth-of-type(n + 42) {
+    opacity: 0.25;
+}
+
+/* #endregion */
+
+/* #region RADIO */
+
 .radio-item {
     background-color: #5c5952;
     padding: 5px;
@@ -214,3 +277,5 @@ details.mod summary img {
 .radio-item:hover {
     filter: brightness(60%);
 }
+
+/* #endregion */

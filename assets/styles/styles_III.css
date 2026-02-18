@@ -44,7 +44,7 @@ body::before {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+
 }
 
 
@@ -85,6 +85,7 @@ body::before {
 .ficha-tecnica {
     border-color: #e7a600d2 !important;
     background-color: #e7a60062;
+
     & table {
         & tr {
             border-color: #ffc32af8;
@@ -104,6 +105,54 @@ span.table-platforms {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
+.progress-wrapper {
+    & .progress-bar-bg {
+        & .progress-bar-fill {
+            background: linear-gradient(90deg, #ffcc00, #ffeeab);
+        }
+    }
+}
+
+.checklist-container {
+    & article {
+        & .section-header {
+            & .section-check-all {
+                &.complete {
+                    color: #e5f503;
+
+                    & svg {
+                        stroke: #ffe23f;
+                        filter: drop-shadow(0 0 3px #fbda1f);
+                    }
+                }
+            }
+        }
+
+        & .checklist-list-wrapper {
+            & ul {
+                & li {
+                    &.completed {
+                        background: rgba(255, 200, 0, 0.06);
+                        border-color: rgba(255, 180, 0, 0.25);
+                    }
+
+                    & .checklist-row {
+                        & label {
+                            & input {
+                                &:checked {
+                                    &+span {
+                                        background: #ffcc00;
+                                        border-color: #ffcc00;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* #endregion */
 
@@ -195,12 +244,14 @@ details.mod summary img {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
 }
+
 /* #endregion */
 
 /* #region LOGROS */
 .achievement-selector button {
     background: #ffdead;
 }
+
 /* #endregion */
 
 /* #region MAPA */
