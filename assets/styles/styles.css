@@ -187,7 +187,8 @@ body {
 
                 &:hover {
                     cursor: pointer;
-                    color: #1571e2;
+                    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+                    color: #fbbf24;
                 }
 
                 &:active {
@@ -673,8 +674,8 @@ header {
                 margin: 0;
                 text-align: right;
                 font-style: italic;
-                color: #6b7db8;
-                font-family: "GTAArtDecoRegular";
+                color: #506cc9;
+                font-family: "GTAArtDecoMedium";
                 font-size: 1.1rem;
                 font-weight: 500;
                 display: flex;
@@ -2018,7 +2019,9 @@ footer {
         & .block {
             flex-direction: column !important;
             padding: 15px;
-            margin: 75px 5px 20px 5px;
+            margin: 75px 5px 10px 5px;
+            border-radius: 6px;
+            border-width: 5px;
             text-align: center;
 
             & .text-container {
@@ -2037,6 +2040,7 @@ footer {
 
                 & h2 {
                     line-height: 1.5;
+                    font-size: 2.1em;
                 }
             }
         }
@@ -2046,10 +2050,15 @@ footer {
                 box-shadow: 0px -60px 10px #00cc9c71;
                 backdrop-filter: blur(9px);
                 -webkit-backdrop-filter: blur(9px);
+                border-radius: 10px;
                 background: linear-gradient(180deg,
                         rgba(141, 117, 239, 0.8),
                         rgba(85, 150, 229, 0.8),
                         rgba(141, 117, 239, 0.8));
+
+                &::before {
+                    border-radius: 12px;
+                }
             }
 
             & #rightContent {
@@ -2113,11 +2122,11 @@ footer {
 
         & .welcome-text {
             & .index-text {
-                margin: 0 15px 3em 15px;
+                margin: 0 15px 2em 15px;
                 text-align: left;
                 font-size: 1.3em;
                 max-width: 50ch;
-                line-height: 1.45;
+                line-height: 1.6;
             }
         }
 
@@ -2132,10 +2141,18 @@ footer {
         }
     }
 
-
     .countdown-wrapper {
+        border-radius: 25px;
         width: 100%;
-        margin: 2em 0;
+        margin: 2em 0 4em 0;
+
+        &::before {
+            border-radius: 25px;
+        }
+
+        &::after {
+            border-radius: 25px;
+        }
 
         & h2 {
             font-size: 1.3em !important;
@@ -2145,6 +2162,8 @@ footer {
 
     .news {
         margin: 3em auto;
+        border-radius: 45px;
+        padding-top: 1.5em;
 
         & h2 {
             font-size: 2.3em;
@@ -2153,6 +2172,8 @@ footer {
 
         & .news-article {
             margin: 2em 0;
+            padding: 50px 30px;
+            border-radius: 20px;
 
 
             & .news-header {
@@ -2162,7 +2183,7 @@ footer {
                     font-size: 2em;
                     text-align: center;
                     text-wrap: balance;
-                    margin-bottom: 1em;
+                    margin-bottom: 0.5em;
                 }
 
                 & h4 {
@@ -2184,6 +2205,14 @@ footer {
                     text-align: center;
                     line-height: 1.8;
                     font-size: 0.8em;
+                }
+
+                & img {
+                    width: 100%;
+                }
+
+                & a {
+                    border: 2px solid rgba(26, 26, 26, 0.5);
                 }
             }
         }

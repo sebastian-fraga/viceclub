@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viceclub.vercel.app/sitemap.xml
