@@ -1,49 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://viceclub.vercel.app/</loc>
-		<lastmod>2025-12-24</lastmod>
-		<priority>1.0</priority>
-	</url>
-	<url>
-		<loc>https://viceclub.vercel.app/III/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-	<url>
-		<loc>https://viceclub.vercel.app/III/herramientas_y_mods.html</loc>
-		<priority>0.8</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/VC/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/SA/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/LCS/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/VCS/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/IV/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/V/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/VI/inicio.html</loc>
-		<priority>0.9</priority>
-	</url>
-    <url>
-		<loc>https://viceclub.vercel.app/VI/timeline.html</loc>
-		<priority>0.8</priority>
-	</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://viceclub.vercel.app/</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/III/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/III/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/III/herramientas_y_mods.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/III/logros.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VC/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VC/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VC/herramientas_y_mods.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VC/logros.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GTA San Andreas -->
+  <url>
+    <loc>https://viceclub.vercel.app/SA/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/SA/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/SA/herramientas_y_mods.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/SA/logros.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GTA Liberty City Stories -->
+  <url>
+    <loc>https://viceclub.vercel.app/LCS/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/LCS/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- GTA Vice City Stories -->
+  <url>
+    <loc>https://viceclub.vercel.app/VCS/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VCS/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GTA IV -->
+  <url>
+    <loc>https://viceclub.vercel.app/IV/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/IV/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/IV/herramientas_y_mods.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/IV/logros.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GTA V -->
+  <url>
+    <loc>https://viceclub.vercel.app/V/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/V/100.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/V/herramientas_y_mods.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/V/logros.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GTA VI -->
+  <url>
+    <loc>https://viceclub.vercel.app/VI/inicio.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VI/timeline.html</loc>
+    <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
