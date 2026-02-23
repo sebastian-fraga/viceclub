@@ -7,10 +7,23 @@
     "theme_color": "#806fcd",
     "icons": [
         {
-        "src": "assets/images/main/logo.webp",
-        "sizes": "500x500",
-        "type": "image/webp",
-        "purpose": "any maskable"
+            "src": "./assets/images/app/viceclub.png",
+            "sizes": "626x626",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/images/app/desktop.png",
+            "sizes": "2880x1474",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/assets/images/app/mobile.png",
+            "sizes": "850x1474",
+            "type": "image/png"
         }
     ]
 }
