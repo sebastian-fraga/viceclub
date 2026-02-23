@@ -7,17 +7,17 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_III.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_III.webp" as="image" type="image/webp">
     <title>Trucos - III</title>
 </head>
 
 <body class="gta-3">
     <header>
-        <a href="../index.html">
-            <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-        </a>
-        <h1>VICE CLUB</h1>
+        <div class="logo-container">
+            <a href="../index.html">
+                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
+            </a>
+            <h1>VICE CLUB</h1>
+        </div>
         <nav>
             <button id="hamburger" aria-label="Abrir menú">
                 <span class="line"></span>
@@ -26,12 +26,18 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
+
     <div class="block" id="container">
         <div class="text-container">
+            <h2>Trucos de Grand Theft Auto III</h2>
+            <div class="platform-selector">
+                <button data-platform="ps" class="platform-btn">PlayStation</button>
+                <button data-platform="xbox" class="platform-btn">Xbox</button>
+                <button data-platform="switch" class="platform-btn">Nintendo Switch</button>
+                <button data-platform="pc" class="platform-btn">PC</button>
+            </div>
 
+            <div id="cheatsContainer"></div>
         </div>
 
     </div>
@@ -41,17 +47,20 @@
                 <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" loading="lazy">
             </a>
             <a href="../VC/trucos.html">
-                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img" loading="lazy">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img"
+                    loading="lazy">
             </a>
             <a href="../SA/trucos.html">
-                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img" loading="lazy">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img"
+                    loading="lazy">
             </a>
             <a href="../LCS/trucos.html">
                 <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories"
                     class="right-content-img" loading="lazy">
             </a>
             <a href="../VCS/trucos.html">
-                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img" loading="lazy">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img"
+                    loading="lazy">
             </a>
             <a href="../IV/trucos.html">
                 <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img" loading="lazy">
@@ -132,6 +141,7 @@
             });
         });
     </script>
+    <script src="../assets/scripts/cheats.js"></script>
 </body>
 
 </html>

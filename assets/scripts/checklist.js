@@ -173,20 +173,17 @@ function initSections() {
       const isOpen = !wrapper.classList.contains("section-collapsed");
 
       if (!isOpen) {
-        // 👉 Abrir
         wrapper.style.display = "block";
 
-        // Forzamos reflow para que la animación funcione
         wrapper.offsetHeight;
 
         wrapper.classList.remove("section-collapsed");
       } else {
-        // 👉 Cerrar
         wrapper.classList.add("section-collapsed");
 
         setTimeout(() => {
           wrapper.style.display = "none";
-        }, 220); // mismo tiempo que el transition CSS
+        }, 220);
       }
 
       h3.setAttribute("aria-expanded", String(!isOpen));

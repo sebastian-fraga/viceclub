@@ -1029,6 +1029,7 @@ details[open]::details-content {
     display: flex;
     flex-direction: column;
     gap: 0.4em;
+    padding-bottom: 2em;
 
     & article {
         & .section-header {
@@ -1917,6 +1918,107 @@ footer {
 
 /* #endregion */
 
+/* #region TRUCOS */
+.platform-selector {
+    margin: 2em 0 1.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+
+    & button {
+        font-size: 1em;
+        padding: 6px 10px;
+        border-radius: 10px;
+        border: 2px solid;
+        font-weight: 600;
+
+        &.active {
+            background-color: rgba(123, 123, 229, 0.701);
+            color: #f2f2f2;
+        }
+    }
+}
+
+#cheatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    & section {
+        margin: 1em 0;
+        border: 2px solid white;
+        background: rgba(123, 123, 229, 0.701);
+        padding: 2em 2.5em 0 2.5em;
+        border-radius: 20px;
+
+        & h3 {
+            font-size: 1.6em;
+            font-family: "GTAArtDecoMedium";
+            text-shadow: 2px 2px #000000bf;
+        }
+
+        & .category-list {
+            margin-block: 1em 0;
+
+            & .cheat-item {
+                padding: 12px 0;
+                margin-block: 1em 0.7em;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+
+                & h4 {
+                    font-size: 1.1em;
+                    margin-left: 15px;
+                }
+
+                & .cheat-code {
+                    display: flex;
+                    align-items: center;
+                    margin: 0.5em 0 0.6em 1em;
+                    gap: 0.4em;
+
+                    & .pc-code {
+                        display: inline-block;
+                        padding: 4px 12px;
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        background: linear-gradient(180deg, #ffffff, #e0e0e0);
+                        color: #111;
+                        border-radius: 6px;
+                        border: 1px solid #999;
+                        box-shadow:
+                            0 3px 0 #888,
+                            0 5px 8px rgba(0, 0, 0, 0.3);
+                        font-family: monospace;
+                        transition: 0.15s;
+
+                        &:hover {
+                            transform: translateY(2px);
+                            box-shadow:
+                                0 1px 0 #888,
+                                0 2px 4px rgba(0, 0, 0, 0.2);
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & img {
+        width: 55px;
+        height: auto;
+    }
+}
+
+/* #endregion */
+
 /* #region ANIMACIONES */
 @keyframes neon-flicker {
     0% {
@@ -2428,7 +2530,54 @@ footer {
 
     /* #endregion */
 
+    /* #region TRUCOS */
+    .platform-selector {
+        margin: 2em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 60%;
+        max-width: 300px;
+        gap: 0.5em;
 
+        & button {
+            height: 45px;
+        }
+    }
+
+    #cheatsContainer {
+
+        & section {
+            padding: 1em;
+
+            & h3 {
+                font-size: 1.6em;
+            }
+
+            & .category-list {
+                margin-block: 0;
+
+                & .cheat-item {
+                    margin-block: 0;
+
+                    & h4 {
+                        font-size: 1.1em;
+                    }
+
+                    & .cheat-code {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        & img {
+            width: 40px;
+        }
+    }
+
+    /* #endregion */
 }
 
 /* #endregion */
