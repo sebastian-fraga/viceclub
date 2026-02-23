@@ -1932,11 +1932,6 @@ footer {
         border-radius: 10px;
         border: 2px solid;
         font-weight: 600;
-
-        &.active {
-            background-color: rgba(123, 123, 229, 0.701);
-            color: #f2f2f2;
-        }
     }
 }
 
@@ -1948,7 +1943,6 @@ footer {
     & section {
         margin: 1em 0;
         border: 2px solid white;
-        background: rgba(123, 123, 229, 0.701);
         padding: 2em 2.5em 0 2.5em;
         border-radius: 20px;
 

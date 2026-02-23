@@ -2,14 +2,15 @@
     "name": "Vice Club",
     "short_name": "Vice Club",
     "start_url": "/index.html",
-    "display": "fullscreen",
+    "display": "standalone",
     "background_color": "#806fcd",
     "theme_color": "#806fcd",
     "icons": [
         {
         "src": "assets/images/main/logo.webp",
-        "sizes": "65x63",
-        "type": "image/webp"
+        "sizes": "150x150",
+        "type": "image/webp",
+        "purpose": "any maskable"
         }
     ]
 }
