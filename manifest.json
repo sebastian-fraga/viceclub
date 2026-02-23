@@ -3,7 +3,7 @@
     "short_name": "Vice Club",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#806fcd",
+    "background_color": "#A28BE2",
     "theme_color": "#806fcd",
     "icons": [
         {
