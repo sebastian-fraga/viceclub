@@ -262,6 +262,7 @@ details.mod summary img {
 /* #endregion */
 
 /* #region RADIO */
+
 .radio-drag p {
     font-family: "Bank Gothic";
     color: #9d7119;
@@ -276,4 +277,28 @@ details.mod summary img {
     box-shadow: 0px -60px 500px 100px #31490b9d;
     border: 5px solid #0da419;
 }
+/* #endregion */
+
+/* #region TRUCOS */
+.platform-selector {
+    & button {
+        &.active {
+            background-color: rgba(177, 255, 125, 0.3);
+            border-color: #0c0c0c3e;
+            color: rgb(170, 244, 120);
+        }
+    }
+}
+
+#cheatsContainer {
+    & section {
+        border-color: rgba(251, 255, 5, 0.6);
+        background: linear-gradient(225deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
+
+        &:nth-of-type(even) {
+            background: linear-gradient(45deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
+        }
+    }
+}
+
 /* #endregion */

@@ -7,9 +7,10 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_VCS.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_VCS.webp" as="image" type="image/webp">
-    <title>Trucos - VCS</title>
+    <meta property="og:site_name" content="Vice Club">
+    <meta name="description"
+        content="Todos los trucos para GTA VCS: Trucos para las versiones de PlayStation 2 y PlayStation Portable">
+    <title>GTA VCS Trucos | Lista Completa | Vice Club</title>
 </head>
 
 <body class="gta-vcs">
@@ -28,12 +29,17 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
     <div class="block" id="container">
         <div class="text-container">
+            <h2>Trucos de Grand Theft Auto: Vice City Stories</h2>
+            <div class="platform-selector">
+                <button data-platform="ps" class="platform-btn">PlayStation</button>
+                <button data-platform="xbox" class="platform-btn">Xbox</button>
+                <button data-platform="switch" class="platform-btn">Nintendo Switch</button>
+                <button data-platform="pc" class="platform-btn">PC</button>
+            </div>
 
+            <div id="cheatsContainer"></div>
         </div>
 
     </div>
@@ -132,6 +138,7 @@
             });
         });
     </script>
+    <script src="../assets/scripts/cheats.js"></script>
 </body>
 
 </html>

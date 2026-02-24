@@ -21,6 +21,7 @@ const BUTTON_ICONS = {
 };
 
 
+
 function detectarJuego() {
     const ruta = window.location.pathname;
     let juegoDetectado = null;
@@ -57,18 +58,25 @@ async function loadCheats() {
     }
 }
 
+function getAvailablePlatforms(cheatsObject) {
 
-function groupByCategory(cheatsArray) {
-    return cheatsArray.reduce((groups, cheat) => {
-        const category = cheat.category || "Otros";
+    const platforms = new Set();
 
-        if (!groups[category]) {
-            groups[category] = [];
-        }
+    Object.values(cheatsObject).forEach(categoryArray => {
 
-        groups[category].push(cheat);
-        return groups;
-    }, {});
+        categoryArray.forEach(cheat => {
+
+            if (!cheat.codes) return;
+
+            Object.keys(cheat.codes).forEach(platform => {
+                platforms.add(platform);
+            });
+
+        });
+
+    });
+
+    return Array.from(platforms);
 }
 
 function renderCheats() {
@@ -163,10 +171,26 @@ function initPlatformSelector() {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", async () => {
 
-    cheats = await loadCheats();
+    const cheatsObject = await loadCheats();
 
-    initPlatformSelector();
+    const availablePlatforms = getAvailablePlatforms(cheatsObject);
+
+    // Ya viene agrupado → lo usamos directo
+    cheats = cheatsObject;
+
+    if (availablePlatforms.length === 1) {
+
+        currentPlatform = availablePlatforms[0];
+
+        const selector = document.querySelector(".platform-selector");
+        if (selector) selector.style.display = "none";
+
+    } else {
+        initPlatformSelector();
+    }
+
     renderCheats();
 });

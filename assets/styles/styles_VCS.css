@@ -180,12 +180,32 @@ span.table-platforms {
 
 /* #endregion */
 
-
 /* #region RADIO */
+
+
 .radio-drag p {
     font-family: "Rage Italic";
     color: #5091c0;
     text-shadow: 7px 4px 1px #000000;
+}
+
+/* #endregion */
+
+/* #region TRUCOS */
+.platform-selector {
+    display: none;
+}
+
+#cheatsContainer {
+    margin-top: 1.5em;
+    & section {
+        border-color: rgba(205, 5, 255, 0.6);
+        background: linear-gradient(225deg, rgba(246, 125, 255, 0.5), rgba(159, 28, 220, 0.5));
+
+        &:nth-of-type(even) {
+            background: linear-gradient(45deg, rgba(246, 125, 255, 0.5), rgba(159, 28, 220, 0.5));
+        }
+    }
 }
 
 /* #endregion */

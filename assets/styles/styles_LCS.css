@@ -171,10 +171,30 @@ span.table-platforms {
 
 
 /* #region RADIO */
+
 #nameRadio {
     font-family: "Eurostile";
     color: #3b9de8;
     text-shadow: 6px 6px 1px #000000;
+}
+
+/* #endregion */
+
+/* #region TRUCOS */
+.platform-selector {
+    display: none;
+}
+
+#cheatsContainer {
+    margin-top: 1.5em;
+    & section {
+        border-color: rgba(255, 38, 5, 0.6);
+        background: linear-gradient(225deg, rgba(255, 125, 125, 0.5), rgba(68, 12, 5, 0.5));
+
+        &:nth-of-type(even) {
+            background: linear-gradient(45deg, rgba(255, 125, 125, 0.5), rgba(68, 12, 5, 0.5));
+        }
+    }
 }
 
 /* #endregion */

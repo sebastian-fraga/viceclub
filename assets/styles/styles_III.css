@@ -297,7 +297,13 @@ details.mod summary img {
 
 #cheatsContainer {
     & section {
-        background: rgba(125, 125, 255, 0.5);
+        border-color: rgba(251, 255, 5, 0.6);
+        background: linear-gradient(225deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
+
+        &:nth-of-type(even) {
+            background: linear-gradient(45deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
+        }
     }
 }
+
 /* #endregion */

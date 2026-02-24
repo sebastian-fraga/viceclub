@@ -7,9 +7,10 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_LCS.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_LCS.webp" as="image" type="image/webp">
-    <title>Trucos - LCS</title>
+    <meta property="og:site_name" content="Vice Club">
+    <meta name="description"
+        content="Todos los trucos para GTA LCS: Trucos para las versiones de PlayStation 2, y PlayStation Portable">
+    <title>GTA LCS Trucos | Lista Completa | Vice Club</title>
 </head>
 
 <body class="gta-lcs">
@@ -28,14 +29,18 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
     <div class="block" id="container">
         <div class="text-container">
+            <h2>Trucos de Grand Theft Auto: Liberty City Stories</h2>
+            <div class="platform-selector">
+                <button data-platform="ps" class="platform-btn">PlayStation</button>
+                <button data-platform="xbox" class="platform-btn">Xbox</button>
+                <button data-platform="switch" class="platform-btn">Nintendo Switch</button>
+                <button data-platform="pc" class="platform-btn">PC</button>
+            </div>
 
+            <div id="cheatsContainer"></div>
         </div>
-
     </div>
     <div id="rightContent">
         <div class="right-content-logos">
@@ -75,7 +80,7 @@
             </ul>
         </nav>
     </div>
-<audio id="clickSound" preload="auto">
+    <audio id="clickSound" preload="auto">
         <source src="../assets/sounds/select_lcs.wav" type="audio/mpeg">
     </audio>
     <audio id="hoverSound" preload="auto">
@@ -131,5 +136,7 @@
             });
         });
     </script>
+    <script src="../assets/scripts/cheats.js"></script>
 </body>
+
 </html>
