@@ -62,29 +62,32 @@ body::before {
     text-shadow: 3px 3px 10px #000000;
 }
 
-.right-content-nav a {
-    font-family: "SF Arborcrest";
-    font-size: 1.7rem;
-}
+#rightContent {
+    & .right-content-nav {
+        & .right-content-links {
+            & a {
+                font-family: "SF Arborcrest";
 
-.right-content-nav a.active {
-    color: #00d4e7;
-    text-shadow: 0 0 3px #000;
-    cursor: default;
-}
+                &.active {
+                    color: #00d4e7;
+                    background: #71b4d032;
+                    text-shadow: 0 0 3px #000;
 
-.right-content-nav a.inactive {
-    color: #fafafa2e;
-    transition: color 0.15s;
-}
+                    &::before {
+                        background-color: #00d4e7;
+                    }
+                }
 
-.right-content-nav a.inactive:hover {
-    color: #00d4e7;
-    text-shadow: 0 0 3px #000;
-}
+                &:active {
+                    background: #71c5d05c;
 
-.right-content-nav a.inactive:active {
-    color: #018e9b;
+                    &::before {
+                        background-color: #00d4e7;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */

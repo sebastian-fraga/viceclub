@@ -70,29 +70,31 @@ body::before {
     text-shadow: 0px 0px 3px #000000;
 }
 
-.right-content-nav a {
-    font-family: "Geneva";
-    font-size: 25px;
-}
+#rightContent {
+    & .right-content-nav {
+        & .right-content-links {
+            & a {
+                font-family: "Geneva";
 
-.right-content-nav a.active {
-    color: #e360b5;
-    text-shadow: 0 0 1px #000;
-    cursor: default;
-}
+                &.active {
+                    color: #e360b5;
+                    background: #d071cd32;
 
-.right-content-nav a.inactive {
-    color: #523454c0;
-}
+                    &::before {
+                        background-color: #e360b5;
+                    }
+                }
 
-.right-content-nav a.inactive:hover {
-    color: #c269ac;
-    text-shadow: 0 0 1px #000;
-    transition: color 0.1s;
-}
+                &:active {
+                    background: #ce71d05c;
 
-.right-content-nav a.inactive:active {
-    color: #be629e;
+                    &::before {
+                        background-color: #e360b5;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
@@ -198,6 +200,7 @@ span.table-platforms {
 
 #cheatsContainer {
     margin-top: 1.5em;
+
     & section {
         border-color: rgba(205, 5, 255, 0.6);
         background: linear-gradient(225deg, rgba(246, 125, 255, 0.5), rgba(159, 28, 220, 0.5));

@@ -42,76 +42,65 @@
             <div id="cheatsContainer"></div>
         </div>
     </div>
+
     <div id="rightContent">
         <div class="right-content-logos">
-            <a href="../III/trucos.html">
-                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" class="right-content-img">
+            <a href="../III/inicio.html">
+                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" loading="lazy">
             </a>
-            <a href="../VC/trucos.html">
-                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" class="right-content-img">
+            <a href="../VC/inicio.html">
+                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" loading="lazy">
             </a>
-            <a href="../SA/trucos.html">
-                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" class="right-content-img">
+            <a href="../SA/inicio.html">
+                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" loading="lazy">
             </a>
-            <a href="../LCS/trucos.html">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories">
+            <a href="#" class="active">
+                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" loading="lazy"
+                    class="active">
             </a>
-            <a href="../VCS/trucos.html">
-                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" class="right-content-img">
+            <a href="../VCS/inicio.html">
+                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" loading="lazy">
             </a>
-            <a href="../IV/trucos.html">
-                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" class="right-content-img">
+            <a href="../IV/inicio.html">
+                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" loading="lazy">
             </a>
-            <a href="../V/trucos.html">
-                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" class="right-content-img">
+            <a href="../V/inicio.html">
+                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" loading="lazy">
             </a>
             <a href="../VI/inicio.html">
-                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" class="right-content-img">
+                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" loading="lazy">
             </a>
         </div>
         <nav class="right-content-nav">
-            <ul>
-                <li><a href="inicio.html" class="inactive">INICIO</a></li>
-                <li><a href="100.html" class="inactive">100%</a></li>
-                <li><a href="artworks.html" class="inactive">ARTWORKS</a></li>
-                <li><a href="mapa.html" class="inactive">MAPA</a></li>
-                <li><a href="radio.html" class="inactive">RADIO</a></li>
-                <li><a href="#" class="active">TRUCOS</a></li>
-            </ul>
+            <div class="right-content-links">
+                <a href="inicio.html">INICIO</a>
+                <a href="100.html">100%</a>
+                <a href="artworks.html">ARTWORKS</a>
+                <a href="mapa.html">MAPA</a>
+                <a href="radio.html">RADIO</a>
+                <a href="#" class="active">TRUCOS</a>
+            </div>
+            <div class="right-content-footer">
+                <div class="footer-settings">
+                    <p>Sonidos de hover y click</p>
+                    <label>
+                        <input type="checkbox" id="soundToggle">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
         </nav>
     </div>
+
+    <!-- Sounds -->
     <audio id="clickSound" preload="auto">
         <source src="../assets/sounds/select_lcs.wav" type="audio/mpeg">
     </audio>
     <audio id="hoverSound" preload="auto">
         <source src="../assets/sounds/hover_lcs.wav" type="audio/mpeg">
     </audio>
-    <script>
-        const clickSound = document.getElementById('clickSound');
-        const hoverSound = document.getElementById('hoverSound');
+    <script src="../assets/scripts/sounds.js"></script>
 
-        document.querySelectorAll('a').forEach(link => {
-
-            link.addEventListener('click', function (e) {
-                clickSound.currentTime = 0;
-                clickSound.play();
-
-                const href = this.getAttribute('href');
-                if (href && href !== '#') {
-                    e.preventDefault();
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 300);
-                }
-            });
-
-            link.addEventListener('mouseenter', () => {
-                hoverSound.currentTime = 0;
-                hoverSound.play();
-            });
-
-        });
-    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");

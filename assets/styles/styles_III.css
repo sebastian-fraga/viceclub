@@ -54,30 +54,34 @@ body::before {
     text-shadow: 3px 3px 10px #000000;
 }
 
-.right-content-nav a {
-    font-family: "Arial Black Italic";
-    font-size: 1.6em;
+#rightContent {
+    & .right-content-nav {
+        & .right-content-links {
+            & a {
+                font-family: "Arial Black Italic";
+
+                &.active {
+                    color: #e7a600;
+                    background: #d0cb7132;
+                    text-shadow: 0 0 3px #000;
+
+                    &::before {
+                        background-color: #D7A83B;
+                    }
+                }
+
+                &:active {
+                    background: #d0cb715c;
+
+                    &::before {
+                        background-color: #D7A83B;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.right-content-nav a.active {
-    color: #e7a600;
-    text-shadow: 0 0 3px #000;
-    cursor: default;
-}
-
-.right-content-nav a.inactive {
-    color: #fafafa2e;
-    transition: color 0.4s;
-}
-
-.right-content-nav a.inactive:hover {
-    text-shadow: 0 0 3px #000;
-    color: #e7a600;
-}
-
-.right-content-nav a.inactive:active {
-    color: #b78301;
-}
 
 /* #endregion */
 
@@ -297,7 +301,7 @@ details.mod summary img {
 
 #cheatsContainer {
     & section {
-        border-color: rgba(251, 255, 5, 0.6);
+        border-color: rgba(239, 240, 166, 0.65);
         background: linear-gradient(225deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
 
         &:nth-of-type(even) {

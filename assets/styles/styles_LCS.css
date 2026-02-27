@@ -33,9 +33,6 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradient(90deg, #ff0000, #b475efd9);
-}
 
 .block {
     background: radial-gradient(circle 500px at 30px 60px, #fc040430 15%, transparent 70%),
@@ -64,29 +61,31 @@ body::before {
     text-shadow: 3px 3px 0px #000000;
 }
 
-.right-content-nav a {
-    font-family: "Eurostile";
-    font-size: 27px;
-}
+#rightContent {
+    & .right-content-nav {
+        & .right-content-links {
+            & a {
+                font-family: "Eurostile";
 
-.right-content-nav a.active {
-    color: #ff0000;
-    text-shadow: 0 0 1px #000;
-    cursor: default;
-}
+                &.active {
+                    color: #f33d3d;
+                    background: #d0877132;
 
-.right-content-nav a.inactive {
-    color: #574747fd;
-    transition: color 0.1s;
-}
+                    &::before {
+                        background-color: #f33d3d;
+                    }
+                }
 
-.right-content-nav a.inactive:hover {
-    color: #e70000;
-    text-shadow: 0 0 1px #000;
-}
+                &:active {
+                    background: #d079715c;
 
-.right-content-nav a.inactive:active {
-    color: #9b0000;
+                    &::before {
+                        background-color: #f33d3d;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
@@ -153,6 +152,7 @@ span.table-platforms {
                                     &+span {
                                         background: #ff8080;
                                         border-color: #ab5050;
+
                                         &::after {
                                             border-color: #461f1f;
                                         }
@@ -187,6 +187,7 @@ span.table-platforms {
 
 #cheatsContainer {
     margin-top: 1.5em;
+
     & section {
         border-color: rgba(255, 38, 5, 0.6);
         background: linear-gradient(225deg, rgba(255, 125, 125, 0.5), rgba(68, 12, 5, 0.5));

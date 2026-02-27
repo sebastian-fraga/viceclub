@@ -65,29 +65,31 @@ body::before {
     -webkit-text-stroke: 1px #aade1029;
 }
 
-.right-content-nav a {
-    font-family: "Bank Gothic";
-    font-size: 27px;
-}
+#rightContent {
+    & .right-content-nav {
+        & .right-content-links {
+            & a {
+                font-family: "Bank Gothic";
 
-.right-content-nav a.active {
-    color: #4bf73b;
-    text-shadow: 0 0 3px #000;
-    cursor: default;
-}
+                &.active {
+                    color: #32ae26;
+                    background: #71d07432;
 
-.right-content-nav a.inactive {
-    color: #5ab35a55;
-    transition: color 0.15s;
-}
+                    &::before {
+                        background-color: #32ae26;
+                    }
+                }
 
-.right-content-nav a.inactive:hover {
-    color: #4bf73b;
-    text-shadow: 0 0 3px #000;
-}
+                &:active {
+                    background: #76d0715c;
 
-.right-content-nav a.inactive:active {
-    color: #30be23;
+                    &::before {
+                        background-color: #32ae26;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
@@ -277,6 +279,7 @@ details.mod summary img {
     box-shadow: 0px -60px 500px 100px #31490b9d;
     border: 5px solid #0da419;
 }
+
 /* #endregion */
 
 /* #region TRUCOS */

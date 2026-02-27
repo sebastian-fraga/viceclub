@@ -61,35 +61,25 @@ body::before {
 }
 
 #rightContent {
-    &::before {
-        background: linear-gradient(90deg, #81eaf4, #b475efd9);
-    }
-
     & .right-content-nav {
-        & ul {
-            & li {
-                & a {
-                    font-family: "GTAArtDecoRegular";
-                    font-size: 27px;
+        & .right-content-links {
+            & a {
+                font-family: "GTAArtDecoRegular";
 
-                    &.active {
-                        color: #81eaf4;
-                        text-shadow: 0 0 3px #000;
-                        cursor: default;
+                &.active {
+                    color: #81eaf4;
+                    background: #3ecce932;
+
+                    &::before {
+                        background-color: #81eaf4;
                     }
+                }
 
-                    &.inactive {
-                        color: #505050fa;
-                        transition: color 0.2s;
+                &:active {
+                    background: #3ecce956;
 
-                        &:hover {
-                            color: #81eaf4;
-                            text-shadow: 0 0 3px #000;
-                        }
-
-                        &:active {
-                            color: #67c8ee;
-                        }
+                    &::before {
+                        background-color: #81eaf4;
                     }
                 }
             }
@@ -143,7 +133,7 @@ span.table-platforms {
 
         & article {
             padding: 0 3em;
-            margin-bottom: 4em;
+            margin: 0 auto 4em auto;
 
             & p {
                 color: #ffffff;
@@ -186,9 +176,9 @@ span.table-platforms {
 
             & img {
                 align-items: center;
-                max-width: 50%;
+                max-width: 60vw;
                 display: block;
-                max-height: 90%;
+                max-height: 55vh;
                 height: auto;
                 margin: 10px auto 50px auto;
                 border-radius: 20px;
@@ -239,17 +229,22 @@ span.table-platforms {
     position: fixed;
     bottom: 10px;
     right: 30px;
-    background: rgba(187, 99, 255, 0.802);
-    border: 1px solid rgba(0, 0, 0, 0.357);
+    background: rgba(187, 99, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.7);
     padding: 0.7em;
     border-radius: 100%;
     color: #ffffff;
     cursor: pointer;
-    transition: background 0.15s ease scale 0.4s ease;
+    transition: background 0.15s ease, scale 0.4s ease, border-color 0.2s ease;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5);
 
     &:active {
         background: rgba(145, 26, 236, 0.802);
         scale: 0.85;
+    }
+
+    &:hover {
+        border-color: #c084fc;
     }
 }
 
@@ -271,7 +266,8 @@ span.table-platforms {
         & #timelineContainer {
 
             & .timeline-last-updated {
-                font-size: 0.79em;
+                font-size: 0.85em;
+                font-weight: 100;
             }
 
             & article {
@@ -281,19 +277,19 @@ span.table-platforms {
                     font-size: 1.2em;
                     text-indent: 0;
                     text-wrap: balance;
-                    margin: 1em 0;
+                    margin: 1em auto;
                     text-align: center;
-                    max-width: 40ch;
+                    max-width: 35ch;
                 }
 
                 & h3 {
                     text-align: center;
-                    font-size: 1.3em;
+                    font-size: 1.5em;
                 }
 
                 & h4 {
                     text-align: center;
-                    font-size: 1.2em;
+                    font-size: 1.35em;
                 }
 
                 & img {

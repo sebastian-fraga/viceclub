@@ -174,10 +174,15 @@
         </a>
     </div>
     <div id="imageOverlay">
-        <span class="material-symbols-rounded   close-btn" id="closeBtn">
+        <span class="material-symbols-rounded close-btn" id="closeBtn">
             close_small
         </span>
-        <img src="" alt="Imagen ampliada" id="overlayImg">
+        <div class="image-wrapper">
+            <img src="" alt="Imagen ampliada" id="overlayImg">
+            <div class="overlay-footer">
+                <p id="overlayFooterText"></p>
+            </div>
+        </div>
     </div>
     <!--Loader-->
     <script>
@@ -245,7 +250,7 @@
             </div>
             <div class="news-content">
                 <p>${noticia.paragraph1}</p>
-                <img src="${noticia.image}" alt="${noticia.title}" class="news-image" loading="lazy">
+                <img src="${noticia.image}" alt="${noticia.title}" class="news-image" loading="lazy" data-footer="${noticia.footerText}">
                 <p>${noticia.paragraph2}</p>
                 <a href="${noticia.link}" target="_blank" rel="noopener" class="news-link">
                 ${noticia.linkText || "Más información"}
@@ -277,25 +282,7 @@
         });
     </script>
     <!--Overlay-->
-    <script async>
-        document.addEventListener('click', function (e) {
-            const img = e.target;
-            if (img.matches('.news-image')) {
-                const overlay = document.getElementById('imageOverlay');
-                const overlayImg = document.getElementById('overlayImg');
-
-                overlayImg.src = img.src;
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        document.getElementById('closeBtn').addEventListener('click', () => {
-            const overlay = document.getElementById('imageOverlay');
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-    </script>
+    <script src="./assets/scripts/overlay.js"></script>
     <!--Facts-->
     <script async>
         document.addEventListener("DOMContentLoaded", async () => {
@@ -353,12 +340,12 @@
         setInterval(updateCountdown, 1000);
     </script>
     <!-- Service Worker -->
-    <script>
+    <!-- <script>
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/sw.js")
                 .then(() => console.log("Service Worker registrado"));
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
