@@ -72,7 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
     makeDial(120);
   }
 
+
   function makeDial(offsetAngle = 0) {
+    if (!window.location.pathname.includes("/V/")) return;
+
     const items = document.querySelectorAll("#radioGrid .radio-card");
     const total = items.length;
     const step = 360 / total;
