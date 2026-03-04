@@ -84,64 +84,82 @@ function renderCheats() {
     const container = document.getElementById("cheatsContainer");
     if (!container) return;
 
-    container.innerHTML = Object.entries(cheats).map(([category, cheatsInCategory]) => {
+    container.innerHTML = "";
+    const fragment = document.createDocumentFragment();
 
-        const cheatsHTML = cheatsInCategory.map(cheat => {
+    Object.entries(cheats).forEach(([category, cheatsInCategory]) => {
+
+        const section = document.createElement("section");
+        section.className = "cheat-category";
+
+        const title = document.createElement("h3");
+        title.className = "category-title";
+        title.textContent = category;
+
+        const list = document.createElement("div");
+        list.className = "category-list";
+
+        cheatsInCategory.forEach(cheat => {
 
             const code = cheat.codes[currentPlatform];
+            if (!code) return;
 
-            if (!code) return "";
+            const cheatItem = document.createElement("div");
+            cheatItem.className = "cheat-item";
+            cheatItem.id = cheat.id;
 
-            let renderedCode;
+            const cheatTitle = document.createElement("h4");
+            cheatTitle.className = "cheat-title";
+            cheatTitle.textContent = cheat.title;
+
+            const cheatCode = document.createElement("div");
+            cheatCode.className = "cheat-code";
 
             if (currentPlatform === "pc") {
-                renderedCode = `
-                    <span class="pc-code">
-                        ${code[0]}
-                    </span>
-                `;
+
+                const span = document.createElement("span");
+                span.className = "pc-code";
+                span.textContent = code[0];
+                cheatCode.appendChild(span);
+
             } else {
-                renderedCode = code.map(btn => {
+
+                code.forEach(btn => {
 
                     const icon = BUTTON_ICONS[currentPlatform]?.[btn];
 
                     if (!icon) {
-                        return `<span class="btn-text">${btn}</span>`;
+                        const span = document.createElement("span");
+                        span.className = "btn-text";
+                        span.textContent = btn;
+                        cheatCode.appendChild(span);
+                        return;
                     }
 
-                    return `
-                        <img
-                            src="../assets/images/cheats/${currentPlatform}/${icon}"
-                            class="btn-icon"
-                            alt="${btn}"
-                            loading="lazy"
-                        >
-                    `;
-                }).join("");
+                    const img = document.createElement("img");
+                    img.src = `../assets/images/cheats/${currentPlatform}/${icon}`;
+                    img.className = "btn-icon";
+                    img.alt = btn;
+                    img.loading = "lazy";
+
+                    cheatCode.appendChild(img);
+                });
             }
 
-            return `
-                <div class="cheat-item" id="${cheat.id}">
-                    <h4 class="cheat-title">${cheat.title}</h4>
-                    <div class="cheat-code">
-                        ${renderedCode}
-                    </div>
-                </div>
-            `;
-        }).join("");
+            cheatItem.appendChild(cheatTitle);
+            cheatItem.appendChild(cheatCode);
+            list.appendChild(cheatItem);
+        });
 
-        if (!cheatsHTML.trim()) return "";
+        if (list.children.length === 0) return;
 
-        return `
-            <section class="cheat-category">
-                <h3 class="category-title">${category}</h3>
-                <div class="category-list">
-                    ${cheatsHTML}
-                </div>
-            </section>
-        `;
+        section.appendChild(title);
+        section.appendChild(list);
+        fragment.appendChild(section);
 
-    }).join("");
+    });
+
+    container.appendChild(fragment);
 }
 
 
@@ -178,7 +196,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const availablePlatforms = getAvailablePlatforms(cheatsObject);
 
-    // Ya viene agrupado → lo usamos directo
+
     cheats = cheatsObject;
 
     if (availablePlatforms.length === 1) {

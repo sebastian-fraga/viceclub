@@ -29,32 +29,87 @@ async function renderChecklistFromJSON() {
       return;
     }
 
-    container.innerHTML = data.sections.map(section => `
-      <article data-section-id="${section.id}">
-        <h3>
-          ${section.icon ? `<img src="/assets/images/checklist/${juego}/${section.icon}.webp" class="checklist-icon" alt="Icono de misión" loading=lazy">` : ""}
-          ${section.title}
-        </h3>
-        <ul class="checklist-list">
-          ${section.items.map(item => `
-            <li class="checklist-item" data-id="${item.id}">
-              <div class="checklist-row" role="button" tabindex="0" aria-expanded="false">
-                <label class="checkbox-label" title="Marcar como completado">
-                  <input type="checkbox" class="checklist-cb" aria-label="${item.text}">
-                    <span class="checkbox-custom"></span>
-                </label>
-                <div class="checklist-info">
-                  <span class="checklist-title">
-                    ${item.icon ? `<img src="/assets/images/checklist/${juego}/${item.icon}.webp" class="checklist-icon" alt="Icono de misión" loading="lazy">` : ""}
-                    ${item.text}
-                  </span>
-                </div>
-              </div>
-            </li>
-            `).join('')}
-            </ul>
-      </article>
-    `).join('');
+    container.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    data.sections.forEach(section => {
+      const article = document.createElement("article");
+      article.dataset.sectionId = section.id;
+
+      const h3 = document.createElement("h3");
+
+      if (section.icon) {
+        const img = document.createElement("img");
+        img.src = `/assets/images/checklist/${juego}/${section.icon}.webp`;
+        img.className = "checklist-icon";
+        img.alt = "Icono de misión";
+        img.loading = "lazy";
+        h3.appendChild(img);
+      }
+
+      const titleText = document.createTextNode(section.title);
+      h3.appendChild(titleText);
+
+      article.appendChild(h3);
+
+      const ul = document.createElement("ul");
+      ul.className = "checklist-list";
+
+      section.items.forEach(item => {
+        const li = document.createElement("li");
+        li.className = "checklist-item";
+        li.dataset.id = item.id;
+
+        const row = document.createElement("div");
+        row.className = "checklist-row";
+        row.setAttribute("role", "button");
+        row.setAttribute("tabindex", "0");
+        row.setAttribute("aria-expanded", "false");
+
+        const label = document.createElement("label");
+        label.className = "checkbox-label";
+        label.title = "Marcar como completado";
+
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.className = "checklist-cb";
+        input.setAttribute("aria-label", item.text);
+
+        const spanCustom = document.createElement("span");
+        spanCustom.className = "checkbox-custom";
+
+        label.appendChild(input);
+        label.appendChild(spanCustom);
+
+        const info = document.createElement("div");
+        info.className = "checklist-info";
+
+        const title = document.createElement("span");
+        title.className = "checklist-title";
+
+        if (item.icon) {
+          const icon = document.createElement("img");
+          icon.src = `/assets/images/checklist/${juego}/${item.icon}.webp`;
+          icon.className = "checklist-icon";
+          icon.alt = "Icono de misión";
+          icon.loading = "lazy";
+          title.appendChild(icon);
+        }
+
+        title.appendChild(document.createTextNode(item.text));
+
+        info.appendChild(title);
+        row.appendChild(label);
+        row.appendChild(info);
+        li.appendChild(row);
+        ul.appendChild(li);
+      });
+
+      article.appendChild(ul);
+      fragment.appendChild(article);
+    });
+
+    container.appendChild(fragment);
 
     buildProgressBar();
     initSections();

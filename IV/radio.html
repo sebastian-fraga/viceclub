@@ -7,11 +7,12 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_IV.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_IV.webp" as="image" type="image/webp">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Radio - IV</title>
+    <meta property="og:site_name" content="Vice Club">
+    <meta name="description"
+        content="Radios de GTA IV. Escucha todas las emisoras de Grand Theft Auto: IV en Vice Club">
+    <title>GTA IV Radios | Vice Club</title>
 </head>
 
 <body class="gta-iv">
@@ -30,25 +31,16 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
+
     <div class="block" id="container">
         <div class="text-container">
             <h2>Radios de Grand Theft Auto IV</h2>
             <div class="radio-container">
-                <span class="material-symbols-rounded" id="previousRadio">
-                    chevron_left
-                </span>
-                <div class="radio-drag">
-                    <p id="nameRadio">RADIO APAGADA</p>
-                </div>
-                <span class="material-symbols-rounded" id="nextRadio">
-                    chevron_right
-                </span>
+                <div id="radioGrid" class="radio-grid"></div>
             </div>
         </div>
     </div>
+
     <div id="radioInfo" class="radio-info">
         <img src="" alt="" id="radioImage">
         <h3 id="radioTitle"></h3>
@@ -57,28 +49,23 @@
         <ol id="radioList">
         </ol>
     </div>
+
     <footer>
-        <div class="footer-album">
-            <img id="albumArt">
+        <div class="footer-left">
+            <div class="footer-album">
+                <img id="albumArt">
+            </div>
+            <div class="footer-text">
+                <p id="songTitle">Canción</p>
+                <p id="artistName">Artista</p>
+            </div>
         </div>
-        <div class="footer-text">
-            <p id="songTitle">Canción</p>
-            <p id="artistName">Artista</p>
-        </div>
-        <div class="footer-container">
+        <div class="footer-center">
             <div class="footer-controls">
-                <span class="material-symbols-rounded">
-                    skip_previous
-                </span>
-                <span class="material-symbols-rounded">
-                    pause_circle
-                </span>
-                <span class="material-symbols-rounded" style="display: none;">
-                    play_circle
-                </span>
-                <span class="material-symbols-rounded">
-                    skip_next
-                </span>
+                <span class="material-symbols-rounded">skip_previous</span>
+                <span class="material-symbols-rounded">pause_circle</span>
+                <span class="material-symbols-rounded" style="display: none;">play_circle</span>
+                <span class="material-symbols-rounded">skip_next</span>
             </div>
             <div class="footer-timer">
                 <p id="currentTime">0:00</p>
@@ -88,6 +75,7 @@
                 <p id="totalTime">0:00</p>
             </div>
         </div>
+        <div class="footer-right"></div>
     </footer>
 
     <div id="rightContent">
@@ -173,6 +161,8 @@
             });
         });
     </script>
+
+    <script src="../assets/scripts/radio.js"></script>
 </body>
 
 </html>

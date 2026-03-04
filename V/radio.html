@@ -7,9 +7,11 @@
     <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
     <link rel="stylesheet" href="../assets/styles/styles.css">
     <link rel="stylesheet" href="../assets/styles/styles_V.css">
-    <link rel="preload" href="assets/fonts/GTAArtDecoRegular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/images/main/background_V.webp" as="image" type="image/webp">
-    <title>Radio - V</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <meta property="og:site_name" content="Vice Club">
+    <meta name="description" content="Radios de GTA V. Escucha todas las emisoras de Grand Theft Auto V en Vice Club">
+    <title>GTA V Radios | Vice Club</title>
 </head>
 
 <body class="gta-5">
@@ -28,84 +30,45 @@
             </button>
         </nav>
     </header>
-    <div class="wip">
-        <p>EN CONSTRUCCIÓN</p>
-    </div>
+
     <div class="block" id="container">
         <div class="text-container">
             <h2>Radios de Grand Theft Auto V</h2>
             <div class="radio-container">
-                <div class="v-radio-wheel">
-                    <img src="../assets/images/radios/V/wcc.webp" alt="" class="radio-image" style="--i:0;"
-                        data-name="West Coast Classics">
-                    <img src="../assets/images/radios/V/east.webp" alt="" class="radio-image" style="--i:1;"
-                        data-name="East Los FM">
-                    <img src="../assets/images/radios/V/soulwax.webp" alt="" class="radio-image" style="--i:2;"
-                        data-name="Soulwax FM">
-                    <img src="../assets/images/radios/V/rebel.webp" alt="" class="radio-image" style="--i:3;"
-                        data-name="Rebel Radio">
-                    <img src="../assets/images/radios/V/channel.webp" alt="" class="radio-image" style="--i:4;"
-                        data-name="Channel X">
-                    <img src="../assets/images/radios/V/rls_v.webp" alt="" class="radio-image" style="--i:5;"
-                        data-name="Radio Los Santos">
-                    <img src="../assets/images/radios/V/nsp.webp" alt="" class="radio-image" style="--i:24;"
-                        data-name="Non-Stop Pop FM">
-                    <img src="../assets/images/radios/V/lsrr.webp" alt="" class="radio-image" style="--i:23;"
-                        data-name="Los Santos Rock Radio">
-                    <img src="../assets/images/radios/V/ssls.webp" alt="" class="radio-image" style="--i:22;"
-                        data-name="Still Slipping Los Santos">
-                    <img src="../assets/images/radios/V/ifruit.webp" alt="" class="radio-image" style="--i:21;"
-                        data-name="iFruit Radio">
-                    <img src="../assets/images/radios/V/lsur.webp" alt="" class="radio-image" style="--i:20;"
-                        data-name="Los Santos Underground Radio">
-                    <img src="../assets/images/radios/V/blonded.webp" alt="" class="radio-image" style="--i:19;"
-                        data-name="blonded Los Santos 97.8 FM">
-                    <img src="../assets/images/radios/V/vbr.webp" alt="" class="radio-image" style="--i:18;"
-                        data-name="Vinewood Boulevard Radio">
-                    <img src="../assets/images/radios/V/space.webp" alt="" class="radio-image" style="--i:17;"
-                        data-name="Space 103.2 FM">
-                    <img src="../assets/images/radios/V/kult.webp" alt="" class="radio-image" style="--i:16;"
-                        data-name="K.U.L.T. 99.1 FM">
-                    <img src="../assets/images/radios/V/mirror.webp" alt="" class="radio-image" style="--i:15;"
-                        data-name="Radio Mirror Park">
-                    <img src="../assets/images/radios/V/lab.webp" alt="" class="radio-image" style="--i:14;"
-                        data-name="The Lab">
-                    <img src="../assets/images/radios/V/lowdown.webp" alt="" class="radio-image" style="--i:13;"
-                        data-name="The Lowdown 91.1">
-                    <img src="../assets/images/radios/V/flylo.webp" alt="" class="radio-image" style="--i:12;"
-                        data-name="FlyLo FM">
-                    <img src="../assets/images/radios/V/ww_fm.webp" alt="" class="radio-image" style="--i:11;"
-                        data-name="WorldWide FM">
-                    <img src="../assets/images/radios/V/tba.webp" alt="" class="radio-image" style="--i:10;"
-                        data-name="The Blue Ark">
-                    <img src="../assets/images/radios/V/mlr.webp" alt="" class="radio-image" style="--i:9;"
-                        data-name="The Music Locker">
-                    <img src="../assets/images/radios/V/motomami.webp" alt="" class="radio-image" style="--i:8;"
-                        data-name="Motomami Los Santos">
-                    <img src="../assets/images/radios/V/reproductor.webp" alt="" class="radio-image" style="--i:7;"
-                        data-name="Reproductor">
-                    <img src="../assets/images/radios/V/radio-off.webp" alt="" class="radio-image" style="--i:6;"
-                        data-name="Radio apagado">
-                    <div class="v-radio-center">
+                <div class="radio-wheel" id="radioGrid">
+                    <div class="radio-center">
                         <p id="radioText">Radio apagado</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="radioInfo" class="radio-info">
+        <img src="" alt="" id="radioImage">
+        <h3 id="radioTitle"></h3>
+        <div id="radioDJ"></div>
+        <div id="radioGenre"></div>
+        <ol id="radioList">
+        </ol>
+    </div>
+
     <footer>
-        <div class="footer-album">
-            <img src="../assets/images/qSszw4BHmV5CUeA2HMZoOrb8NTZ4gCgK.webp" alt="">
+        <div class="footer-left">
+            <div class="footer-album">
+                <img id="albumArt">
+            </div>
+            <div class="footer-text">
+                <p id="songTitle">Canción</p>
+                <p id="artistName">Artista</p>
+            </div>
         </div>
-        <div class="footer-text">
-            <p id="songTitle">Canción</p>
-            <p id="artistName">Artista</p>
-        </div>
-        <div class="footer-container">
+        <div class="footer-center">
             <div class="footer-controls">
-                <img src="../assets/images/radios/start.png" alt="Last song">
-                <img src="../assets/images/radios/pause.png" alt="Pause/Play">
-                <img src="../assets/images/radios/end.png" alt="Next song">
+                <span class="material-symbols-rounded">skip_previous</span>
+                <span class="material-symbols-rounded">pause_circle</span>
+                <span class="material-symbols-rounded" style="display: none;">play_circle</span>
+                <span class="material-symbols-rounded">skip_next</span>
             </div>
             <div class="footer-timer">
                 <p id="currentTime">0:00</p>
@@ -115,7 +78,9 @@
                 <p id="totalTime">0:00</p>
             </div>
         </div>
+        <div class="footer-right"></div>
     </footer>
+
 
     <div id="rightContent">
         <div class="right-content-logos">
@@ -200,26 +165,9 @@
             });
         });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const radioImages = document.querySelectorAll(".radio-image");
-            const radioText = document.getElementById("radioText");
 
-            let selectedRadio = document.querySelector('.radio-image[data-name="Radio apagado"]');
-            selectedRadio.classList.add("selected");
+    <script src="../assets/scripts/radio.js"></script>
 
-            radioImages.forEach(img => {
-                img.addEventListener("click", () => {
-                    const name = img.getAttribute("data-name");
-
-                    radioText.textContent = name;
-
-                    radioImages.forEach(el => el.classList.remove("selected"));
-                    img.classList.add("selected");
-                });
-            });
-        });
-    </script>
 
 </body>
 

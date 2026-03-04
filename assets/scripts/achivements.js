@@ -51,29 +51,88 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 tarjeta.className = "achievement-card";
 
-                tarjeta.innerHTML = `
-                    <div class="achievement-card-header">
-                        <img src="${logro.imagen}" alt="${logro.nombre}" class="achievement-img" loading="lazy" decoding="async">
-                        <div class="achievement-card-info">
-                            <h3 class="achievement-name">${logro.nombre}</h3>
-                            <p class="achievement-description">${logro.descripcion}</p>
-                            <div class="achievement-tag-container">
-                                ${(logro.tags || []).map(tag => {
+                tarjeta.innerHTML = "";
+                const fragment = document.createDocumentFragment();
+
+                // Header
+                const header = document.createElement("div");
+                header.className = "achievement-card-header";
+
+                // Imagen
+                const img = document.createElement("img");
+                img.src = logro.imagen;
+                img.alt = logro.nombre;
+                img.className = "achievement-img";
+                img.loading = "lazy";
+                img.decoding = "async";
+
+                header.appendChild(img);
+
+                // Info container
+                const info = document.createElement("div");
+                info.className = "achievement-card-info";
+
+                // Nombre
+                const h3 = document.createElement("h3");
+                h3.className = "achievement-name";
+                h3.textContent = logro.nombre;
+
+                // Descripción
+                const desc = document.createElement("p");
+                desc.className = "achievement-description";
+                desc.textContent = logro.descripcion;
+
+                // Tags
+                const tagContainer = document.createElement("div");
+                tagContainer.className = "achievement-tag-container";
+
+                (logro.tags || []).forEach(tag => {
                     const estilo = coloresTags[tag] || {};
 
-                    return `<span class="achievement-tag" style="background-color: ${estilo.background || "#2a2a3d"}; color: ${estilo.color || "#b0b0cc"}">${tag}</span>`;
-                }).join("")}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="achievement-card-guide">
-                        <button class="achievement-toggle" aria-expanded="false">
-                            <span>Guía</span>
-                            <span class="achievement-toggle-icon">+</span>
-                        </button>
-                        <p class="achievement-guide-text">${logro.como_conseguirlo}</p>
-                    </div>
-                `;
+                    const span = document.createElement("span");
+                    span.className = "achievement-tag";
+                    span.textContent = tag;
+
+                    span.style.backgroundColor = estilo.background || "#2a2a3d";
+                    span.style.color = estilo.color || "#b0b0cc";
+
+                    tagContainer.appendChild(span);
+                });
+
+                info.appendChild(h3);
+                info.appendChild(desc);
+                info.appendChild(tagContainer);
+
+                header.appendChild(info);
+
+                const guide = document.createElement("div");
+                guide.className = "achievement-card-guide";
+
+                const button = document.createElement("button");
+                button.className = "achievement-toggle";
+                button.setAttribute("aria-expanded", "false");
+
+                const spanText = document.createElement("span");
+                spanText.textContent = "Guía";
+
+                const spanIcon = document.createElement("span");
+                spanIcon.className = "achievement-toggle-icon";
+                spanIcon.textContent = "+";
+
+                button.appendChild(spanText);
+                button.appendChild(spanIcon);
+
+                const guideText = document.createElement("p");
+                guideText.className = "achievement-guide-text";
+                guideText.textContent = logro.como_conseguirlo;
+
+                guide.appendChild(button);
+                guide.appendChild(guideText);
+
+                fragment.appendChild(header);
+                fragment.appendChild(guide);
+
+                tarjeta.appendChild(fragment);
 
                 contenedor.appendChild(tarjeta);
             });

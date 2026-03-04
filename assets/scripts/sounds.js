@@ -40,11 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const href = this.getAttribute('href');
 
-            if (href && href !== '#' && !href.startsWith('http')) {
-                e.preventDefault();
-                setTimeout(() => {
-                    window.location.href = href;
-                }, delay);
+            if (href && href !== "#") {
+                try {
+                    const url = new URL(href, window.location.href);
+
+                    if (
+                        url.protocol === "http:" ||
+                        url.protocol === "https:"
+                    ) {
+                        e.preventDefault();
+
+                        setTimeout(() => {
+                            window.location.href = url.href;
+                        }, delay);
+                    }
+
+                } catch (err) {
+
+                }
             }
 
         });

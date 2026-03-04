@@ -41,9 +41,10 @@ body::before {
     background: linear-gradient(90deg, #a3bd7c, #b475efd9);
 }
 
-.block {
+.block,
+#radioInfo {
     background: #036512c3;
-    box-shadow: 0px -60px 500px 100px #37ab408e;
+    box-shadow: inset 0 0 10px 10px #37ab408e;
     border: 5px solid #96fbc3af;
 }
 
@@ -184,23 +185,54 @@ span.table-platforms {
 
 /* #region RADIO */
 
-.v-radio-wheel {
+.radio-wheel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 600px;
-    height: 550px;
-}
+    width: 100%;
+    height: 500px;
+    padding-block: 7em;
+    margin: 0 auto;
+    overflow: visible;
 
-.v-radio-wheel .radio-image {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 50%;
-    left: 50%;
-    transform: rotate(calc(var(--i) * 14.4deg)) translate(260px) rotate(calc(var(--i) * -14.4deg));
-    transform-origin: center;
-    opacity: 0.6;
-    filter: saturate(0%);
-    transition: opacity 0.3s;
+    & .radio-card {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+
+        top: 50%;
+        left: 50%;
+        margin-top: -35px;
+        margin-left: -35px;
+        transform-origin: 35px 35px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            filter: grayscale(100%);
+            object-fit: contain;
+            padding: 2px;
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                outline: 3px #5486e2a6 solid;
+                filter: grayscale(50%);
+                opacity: 0.9;
+            }
+
+
+        }
+
+        &.active {
+            & img {
+                opacity: 1;
+                filter: grayscale(0);
+                outline: 3px #5486e2 solid;
+            }
+        }
+    }
 }
 
 .radio-image:hover {
@@ -218,7 +250,7 @@ span.table-platforms {
     opacity: 1;
 }
 
-.v-radio-center {
+.radio-center {
     position: absolute;
     top: 50%;
     left: 55%;
@@ -232,8 +264,46 @@ span.table-platforms {
     text-wrap: nowrap;
 }
 
-#radioText {
-    font-family: "Chalet", sans-serif;
+#radioInfo {
+
+    & #radioDJ,
+    & #radioGenre {
+        & p {
+            color: #dfffe2;
+        }
+    }
+}
+
+footer {
+    & .footer-left {
+        & .footer-album {
+            & img {
+                border: 3px solid #d5ffc4;
+                background: linear-gradient(135deg, rgb(169, 255, 183), rgb(149, 255, 149) 60%);
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region MEDIA QUERIES  */
+
+@media (max-width: 1350px) {
+
+    body {
+        &::before {
+            background-image: url("../images/main/background_V-mobile.webp");
+        }
+    }
+
+    .radio-wheel {
+        padding-block: 4em;
+        & .radio-card {
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
 
 /* #endregion */

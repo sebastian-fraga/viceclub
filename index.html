@@ -101,17 +101,41 @@
                     coleccionables mientras juegas, todas las <span>radios</span> disponibles para escuchar en tu día a
                     día, curiosidades y mucho más
                 </p>
-                <p class="index-text">Este sitio web se actualizará con regularidad así que no olvides de agregarlo a
-                    favoritos y de visitarnos a menudo!</p>
+                <p class="index-text">
+                    ¡Actualizaciones de contenido <span>cada semana</span>! No dudes en visitarnos a menudo y agregar la página a favoritos (o incluso instalarla como una aplicación independiente!)
+                </p>
             </section>
         </div>
         <main>
-            <div class="countdown-wrapper">
-                <h2>Lanzamiento de Grand Theft Auto VI</h2>
-                <img src="assets/images/main/VI.webp" alt="Logo de Grand Theft Auto VI">
-                <div id="countdown">
+            <section class="countdown-wrapper">
+                <div class="countdown-header">
+                    <h2>Lanzamiento de Grand Theft Auto VI</h2>
                 </div>
-            </div>
+                <div id="countdown">
+                    <div class="time-box">
+                        <span id="days">0</span>
+                        <p>DÍAS</p>
+                        <div class="time-separator">:</div>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">0</span>
+                        <p>HORAS</p>
+                        <div class="time-separator">:</div>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">0</span>
+                        <p>MINUTOS</p>
+                        <div class="time-separator">:</div>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">0</span>
+                        <p>SEGUNDOS</p>
+                    </div>
+                </div>
+            </section>
 
             <section class="news">
                 <h2>ÚLTIMAS NOTICIAS</h2>
@@ -172,7 +196,9 @@
         <a href="./VI/inicio.html">
             <img src="assets/images/main/VI.webp" alt="Logo de GTA 6" loading="lazy">
         </a>
+
     </div>
+
     <div id="imageOverlay">
         <span class="material-symbols-rounded close-btn" id="closeBtn">
             close_small
@@ -184,6 +210,7 @@
             </div>
         </div>
     </div>
+
     <!--Loader-->
     <script>
         window.addEventListener("load", () => {
@@ -199,6 +226,7 @@
             }, 1400);
         });
     </script>
+
     <!--rightContent-->
     <script async>
         document.addEventListener("DOMContentLoaded", function () {
@@ -321,21 +349,45 @@
     <!--Countdown-->
     <script>
         const countDownDate = new Date("Nov 19, 2026 00:00:00").getTime();
-        const countdownElement = document.getElementById("countdown");
+
+        const daysSpan = document.getElementById("days");
+        const hoursSpan = document.getElementById("hours");
+        const minutesSpan = document.getElementById("minutes");
+        const secondsSpan = document.getElementById("seconds");
+
+        function animate(element) {
+            element.classList.remove("pop");
+            void element.offsetWidth;
+            element.classList.add("pop");
+        }
+
+        function updateValue(element, newValue) {
+            if (element.textContent !== newValue.toString()) {
+                element.textContent = newValue;
+                animate(element);
+            }
+        }
 
         function updateCountdown() {
             const now = Date.now();
             const distance = countDownDate - now;
+
             if (distance < 0) {
-                countdownElement.textContent = "LLEGÓ EL DÍA!";
+                document.getElementById("countdown").textContent = "LLEGÓ EL DÍA!";
                 return;
             }
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            updateValue(daysSpan, days);
+            updateValue(hoursSpan, hours);
+            updateValue(minutesSpan, minutes);
+            updateValue(secondsSpan, seconds);
         }
+
         updateCountdown();
         setInterval(updateCountdown, 1000);
     </script>

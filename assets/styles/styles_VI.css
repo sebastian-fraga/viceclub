@@ -252,6 +252,13 @@ span.table-platforms {
 
 /* #region MEDIA QUERIES */
 @media screen and (max-width: 1350px) {
+
+    body {
+        &::before {
+            background-image: url("../images/main/background_VI-mobile.webp");
+        }
+    }
+
     .block::before {
         content: "";
         position: absolute;
