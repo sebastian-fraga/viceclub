@@ -2798,6 +2798,7 @@ footer {
             justify-content: start;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
 
             & .radio-card {
 
