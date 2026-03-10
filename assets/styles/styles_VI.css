@@ -57,6 +57,34 @@ body::before {
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        & .characters-container {
+
+            & .characters-header {
+                & h2 {
+                    background-image: linear-gradient(to bottom, #8fbaf3, #f5a3d5, #ecc598);
+                }
+                &::before,
+                &::after {
+                    background: linear-gradient(90deg, transparent, #ccbdff, transparent);
+
+                }
+            }
+
+            & .characters-list {
+                & article {
+                    &:hover {
+                        outline-color: #8cafd6 !important;
+                    }
+
+                    & .character-text {
+                        & span {
+                            color: #b6c3fdd7;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -13,7 +13,8 @@
 
 /* #region GENERAL */
 
-html, *:hover {
+html,
+*:hover {
     cursor: url("../cursors/III.cur"), auto !important;
 }
 
@@ -37,7 +38,8 @@ body::before {
     background: linear-gradient(90deg, #F0C903, #b475efd9);
 }
 
-.block, #radioInfo {
+.block,
+#radioInfo {
     background: #010b1ec7;
     color: #f3f3f3;
     box-shadow: inset 0 0 10px 10px #2889d338;
@@ -51,11 +53,38 @@ body::before {
 
 }
 
+.text-container {
+    & h2 {
+        font-family: "Arial Black Italic";
+        color: #e7a600;
+        text-shadow: 3px 3px 10px #000000;
+    }
 
-.text-container h2 {
-    font-family: "Arial Black Italic";
-    color: #e7a600;
-    text-shadow: 3px 3px 10px #000000;
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #c8a84b, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #D7A83B !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #f5f097d7;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #rightContent {
@@ -276,6 +305,7 @@ details.mod summary img {
 }
 
 #radioInfo {
+
     & #radioDJ,
     & #radioGenre {
         & p {

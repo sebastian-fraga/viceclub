@@ -67,12 +67,38 @@ body::before {
     align-items: left;
 }
 
-.text-container h2 {
-    font-family: "Geneva", sans-serif;
-    color: #faa3ff;
-    font-size: 40px;
-    text-align: center;
-    text-shadow: 0px 0px 3px #000000;
+.text-container {
+    & h2 {
+        font-family: "Geneva";
+        color: #faa3ff;
+        text-shadow: 3px 3px 10px #000000;
+    }
+
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #e199f3, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #25f0ff !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #f5e0ff;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #rightContent {

@@ -59,12 +59,39 @@ body::before {
     align-items: left;
 }
 
-.text-container h2 {
-    font-family: "Eurostile";
-    color: #f29997;
-    font-size: 34px;
-    text-align: center;
-    text-shadow: 3px 3px 0px #000000;
+
+.text-container {
+    & h2 {
+        font-family: "Eurostile";
+        color: #f29997;
+        text-shadow: 2px 2px #000;
+    }
+
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #fd4a4a, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #f0897b !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #f8b4b4;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #rightContent {

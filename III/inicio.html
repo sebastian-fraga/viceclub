@@ -30,22 +30,93 @@
         </nav>
     </header>
     <div class="block" id="container">
-        <div class="text-container main">
-            <h2>Grand Theft Auto III</h2>
-            <p><span style="font-weight: bold; color: rgb(231, 183, 61);">Grand Theft Auto III</span> es un videojuego
-                de acción y sandbox de mundo abierto desarrollado por DMA Design (actualmente Rockstar North) y
-                distribuido por Rockstar Games lanzado el 23 de octubre de 2001. Es el primer Grand Theft Auto con vista
-                en tercera persona y en 3D, sentando un precendente en la saga.</p>
+        <div class="text-container">
+                <h2>Grand Theft Auto III</h2>
+                <p><span style="font-weight: bold; color: rgb(231, 183, 61);">Grand Theft Auto III</span> es un
+                    videojuego
+                    de acción y sandbox de mundo abierto desarrollado por DMA Design (actualmente Rockstar North) y
+                    distribuido por Rockstar Games lanzado el 23 de octubre de 2001. Es el primer Grand Theft Auto con
+                    vista
+                    en tercera persona y en 3D, sentando un precendente en la saga.</p>
 
-            <p>El juego transcurre en Liberty City, una ciudad ficticia parodia de Nueva York. Cuenta con 3 islas
-                principales: Portland, Staunton Island y Shoreside Vale, las cuales se irán desbloqueando a medida que
-                se avance en la historia.</p>
+                <p>El juego transcurre en Liberty City, una ciudad ficticia parodia de Nueva York. Cuenta con 3 islas
+                    principales: Portland, Staunton Island y Shoreside Vale, las cuales se irán desbloqueando a medida
+                    que
+                    se avance en la historia.</p>
 
-            <p>El jugador tomará el control de Claude, un hombre que fue arrestrado por un robo a un banco, donde fue
-                traicionado por su pareja en ese momento, Catalina, disparándole en su hombro en la escena del delito.
-                Claude deberá hacer misiones con contactos de la mafia Leone, escalando entre distintas pandillas,
-                organizaciones y bandas. La historia cuenta con un total de 50 misiones.</p>
+                <p>El jugador tomará el control de Claude, un hombre que fue arrestrado por un robo a un banco, donde
+                    fue
+                    traicionado por su pareja en ese momento, Catalina, disparándole en su hombro en la escena del
+                    delito.
+                    Claude deberá hacer misiones con contactos de la mafia Leone, escalando entre distintas pandillas,
+                    organizaciones y bandas. La historia cuenta con un total de 50 misiones.</p>
+            <div class="characters-container">
+                <div class="characters-header">
+                    <h2>Personajes</h2>
+                </div>
+                <div class="characters-list">
+                    <article>
+                        <img src="../assets/images/characters/III/claude.webp" alt="">
+                        <div class="character-text">
+                            <p>Claude</p>
+                            <span>Protagonista</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/catalina.webp" alt="">
+                        <div class="character-text">
+                            <p>Catalina</p>
+                            <span>Antagonista principal</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/8ball.webp" alt="">
+                        <div class="character-text">
+                            <p>8-Ball</p>
+                            <span>Aliado de Claude</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/salvatore.webp" alt="">
+                        <div class="character-text">
+                            <p>Salvatore Leone</p>
+                            <span>Don de la familia Leone</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/maria.webp" alt="">
+                        <div class="character-text">
+                            <p>María Latore</p>
+                            <span>Esposa de Salvatore</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/burro.webp" alt="">
+                        <div class="character-text">
+                            <p>El Burro</p>
+                            <span>Jefe de los Diablos</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/ray.webp" alt="">
+                        <div class="character-text">
+                            <p>Ray Machowski</p>
+                            <span>Policía corrupto</span>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="../assets/images/characters/III/donald.webp" alt="">
+                        <div class="character-text">
+                            <p>Donald Love</p>
+                            <span>Político y magnate</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
+
+
+
         <div class="ficha-tecnica">
             <table>
                 <thead>
@@ -148,7 +219,9 @@
             </table>
         </div>
 
+
     </div>
+
 
 
     <div id="rightContent">
@@ -191,7 +264,7 @@
             </div>
             <div class="right-content-footer">
                 <div class="footer-settings">
-                    <p>Sonidos de hover y click</p>
+                    <p>Sonidos</p>
                     <label>
                         <input type="checkbox" id="soundToggle">
                         <span></span>
@@ -209,7 +282,7 @@
         <source src="../assets/sounds/hover_iii.wav" type="audio/mpeg">
     </audio>
     <script src="../assets/scripts/sounds.js"></script>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const button = document.getElementById("hamburger");

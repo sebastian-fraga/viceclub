@@ -62,14 +62,39 @@ body::before {
     align-items: left;
 }
 
-.text-container h2 {
-    font-family: "Helvetica Neue";
-    color: #ffffff;
-    font-size: 34px;
-    text-align: center;
-    text-shadow: 3px 3px 10px#000000;
-}
+.text-container {
+    & h2 {
+        font-family: "Helvetica Neue";
+        color: #F3F3F3;
+        text-shadow: 3px 3px 10px #000000;
+    }
 
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #c7c7c7, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #D7A83B !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #f1f1e8d7;
+                    }
+                }
+            }
+        }
+    }
+}
 
 #rightContent {
     & .right-content-nav {

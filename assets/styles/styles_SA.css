@@ -62,12 +62,39 @@ body::before {
     align-items: left;
 }
 
-.text-container h2 {
-    font-family: "Bank Gothic";
-    color: #cefcb5;
-    font-size: 34px;
-    text-align: center;
-    -webkit-text-stroke: 1px #aade1029;
+
+.text-container {
+    & h2 {
+        font-family: "Bank Gothic";
+        color: #e69a04;
+        text-shadow: 2px 2px #000;
+    }
+
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #fdd04a, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #c2d138 !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #92e073;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #rightContent {

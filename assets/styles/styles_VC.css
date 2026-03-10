@@ -57,14 +57,37 @@ body::before {
 }
 
 .text-container {
-    justify-content: left;
-    align-items: left;
-}
+    & h2 {
+        font-family: "SF Arborcrest";
+        color: #00cce7;
+        text-shadow: 3px 3px 10px #000000;
+    }
 
-.text-container h2 {
-    font-family: "SF Arborcrest";
-    color: #00d4e7;
-    text-shadow: 3px 3px 10px #000000;
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #4bc8b7, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #9beffa !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #97f5f5d7;
+                    }
+                }
+            }
+        }
+    }
 }
 
 #rightContent {

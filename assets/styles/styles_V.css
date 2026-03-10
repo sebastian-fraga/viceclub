@@ -59,12 +59,39 @@ body::before {
     align-items: left;
 }
 
-.text-container h2 {
-    font-family: "Chalet";
-    color: rgba(93, 182, 229, 255);
-    font-size: 34px;
-    text-align: center;
-    text-shadow: 3px 3px 1px #000000;
+
+.text-container {
+    & h2 {
+        font-family: "Chalet";
+        color: rgba(93, 182, 229, 255);
+        text-shadow: 2px 2px #000;
+    }
+
+    & .characters-container {
+
+        & .characters-header {
+
+            &::before,
+            &::after {
+                background: linear-gradient(90deg, transparent, #97e7f5, transparent);
+
+            }
+        }
+
+        & .characters-list {
+            & article {
+                &:hover {
+                    outline-color: #7becf0 !important;
+                }
+
+                & .character-text {
+                    & span {
+                        color: #dffcd1;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -216,6 +243,7 @@ span.table-platforms {
             padding: 2px;
             border-radius: 50%;
             transition: all 0.2s ease-in-out;
+
             &:hover {
                 outline: 3px #5486e2a6 solid;
                 filter: grayscale(50%);
@@ -299,6 +327,7 @@ footer {
 
     .radio-wheel {
         padding-block: 4em;
+
         & .radio-card {
             width: 40px;
             height: 40px;
