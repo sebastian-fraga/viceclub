@@ -1222,7 +1222,7 @@ details[open]::details-content {
         border-spacing: 0;
         border-collapse: collapse;
         margin: 0 auto;
-        
+
 
         & tr {
             border: 1px solid;
@@ -2465,7 +2465,7 @@ footer {
         & .block {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: flex-start;
             padding: 25px;
             margin: 75px 5px 10px 5px;
@@ -2473,11 +2473,13 @@ footer {
             border-width: 5px;
             text-align: center;
 
+
             & .text-container {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
+                align-items: center;
+                justify-content: center;
+
 
                 & p {
                     line-height: 1.9;

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<!-- Main -->
   <url>
     <loc>https://viceclub.vercel.app/</loc>
     <lastmod>2026-02-21</lastmod>
     <priority>1.0</priority>
   </url>
 
+<!-- III -->
   <url>
     <loc>https://viceclub.vercel.app/III/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -31,6 +33,7 @@
     <priority>0.8</priority>
   </url>
 
+<!-- VC -->
   <url>
     <loc>https://viceclub.vercel.app/VC/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -55,7 +58,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GTA San Andreas -->
+  <!-- SA -->
   <url>
     <loc>https://viceclub.vercel.app/SA/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -80,7 +83,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GTA Liberty City Stories -->
+  <!-- LCS -->
   <url>
     <loc>https://viceclub.vercel.app/LCS/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -94,7 +97,7 @@
   </url>
 
 
-  <!-- GTA Vice City Stories -->
+  <!-- VCS -->
   <url>
     <loc>https://viceclub.vercel.app/VCS/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -107,7 +110,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GTA IV -->
+  <!-- IV -->
   <url>
     <loc>https://viceclub.vercel.app/IV/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -132,7 +135,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GTA V -->
+  <!-- V -->
   <url>
     <loc>https://viceclub.vercel.app/V/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
@@ -157,7 +160,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GTA VI -->
+  <!-- VI -->
   <url>
     <loc>https://viceclub.vercel.app/VI/inicio.html</loc>
     <lastmod>2026-02-21</lastmod>
