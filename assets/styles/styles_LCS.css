@@ -48,12 +48,6 @@ body::before {
     border: 5px solid #db594ae7;
 }
 
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 .text-container {
     justify-content: left;
     align-items: left;

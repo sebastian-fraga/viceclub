@@ -51,11 +51,6 @@ body::before {
     border: 5px solid #0da419;
 }
 
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
 
 .text-container {
     justify-content: left;

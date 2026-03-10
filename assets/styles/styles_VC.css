@@ -49,12 +49,6 @@ body::before {
     border: 5px solid #ffa5f7;
 }
 
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-}
 
 .text-container {
     & h2 {
