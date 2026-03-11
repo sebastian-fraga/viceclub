@@ -246,6 +246,9 @@ body {
         align-items: flex-start;
 
         & .text-container {
+            min-width: 0 !important;
+            overflow: hidden !important;
+
             & h2 {
                 margin-top: 1em;
                 font-size: clamp(1.5rem, 5vw, 2.3rem);
@@ -302,7 +305,7 @@ body {
                     width: min(250px, 100%);
                     height: 300px;
                     border: 1px solid rgba(255, 255, 255, 0.2);
-                    border-radius: 6px;
+                    border-radius: 10px;
                     position: relative;
                     overflow: hidden;
                     transition: all 0.2s;
@@ -1279,6 +1282,7 @@ details[open]::details-content {
     align-items: center;
     gap: 12px;
     margin: 16px 0 24px;
+    padding: 0.5em 1.5em 0 1.5em;
     flex-wrap: wrap;
 
     & .progress-label {
@@ -1328,7 +1332,7 @@ details[open]::details-content {
     display: flex;
     flex-direction: column;
     gap: 0.4em;
-    padding-bottom: 2em;
+    padding: 0.5em 1.5em 2em 1.5em;
 
     & article {
         & .section-header {
@@ -1992,7 +1996,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         cursor: pointer;
         text-align: center;
         transition: all 0.2s ease;
-        overflow: visible;
 
         & .radio-card {
             transition: transform 0.2s ease;
@@ -2040,7 +2043,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     grid-template-rows: auto auto;
     gap: 12px 10px;
     align-items: center;
-    margin: 1em 8em;
+    margin: 2em clamp(1rem, 6vw, 8rem) 1em;
     padding: 15px;
     color: #f2f2f2;
     border-radius: 30px;
@@ -2102,10 +2105,13 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             width: max-content;
             opacity: 0.5;
             transition: opacity 0.3s ease;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
 
             &.active {
                 opacity: 1;
                 font-weight: bold;
+                font-size: 1.15em;
             }
 
             &:hover {
@@ -2270,6 +2276,7 @@ footer {
 #cheatsContainer {
     display: flex;
     flex-direction: column;
+    padding: 1em 10em;
     gap: 1.5em;
 
     & section {
@@ -2462,6 +2469,9 @@ footer {
     }
 
     body {
+        max-width: 100vw;
+        overflow-x: clip;
+
         & .block {
             display: flex;
             flex-direction: column;
@@ -2491,7 +2501,7 @@ footer {
 
                 & h2 {
                     line-height: 1.5;
-                    font-size: 2.1em;
+                    font-size: 1.2em;
                 }
 
             }
@@ -2951,16 +2961,21 @@ footer {
 
     /* #region RADIO */
     .radio-container {
-
+        overflow: hidden !important;
 
         & .radio-grid {
+            overflow-x: scroll !important;
+            overflow-y: visible !important;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
             gap: 1.8em;
             border-radius: 40px;
             padding: 0.5em 2em;
             margin-inline: 0;
             margin-block: 2em;
+            display: flex;
             justify-content: start;
-            overflow-x: scroll;
             scroll-snap-type: x mandatory;
             flex-wrap: nowrap;
 
@@ -3091,6 +3106,7 @@ footer {
     }
 
     #cheatsContainer {
+        padding: 1em 2em;
 
         & section {
             padding: 1em;
@@ -3129,7 +3145,9 @@ footer {
 }
 
 @media (min-width: 661px) and (max-width: 900px) {
-    .block {
+
+    .block,
+    #radioInfo {
         margin: 5em 2em 1em 2em;
 
         .characters-list {
@@ -3138,9 +3156,11 @@ footer {
     }
 }
 
-@media (min-width: 800px) and (max-width: 1600px) {
+@media (min-width: 900px) and (max-width: 1600px) {
     body {
-        & .block {
+
+        & .block,
+        #radioInfo {
             margin: 6em 1em 1em 8em;
         }
     }

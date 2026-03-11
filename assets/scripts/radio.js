@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
   const footer = document.querySelector("footer");
   const radioInfo = document.getElementById("radioInfo");
   const radioTitle = document.getElementById("radioTitle");
@@ -8,8 +7,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const audio = new Audio();
   let currentRadio = null;
-  let currentSongIndex = -1;
   let radioData = {};
+  let targetTime = null;
+
+  function getCurrentSongIndex() {
+
+    if (!currentRadio) return -1;
+
+    const songs = radioData[currentRadio]?.songs;
+    if (!songs) return -1;
+
+    const currentTime = audio.currentTime;
+
+    for (let i = 0; i < songs.length; i++) {
+
+      const start = Number(songs[i].start);
+      const end = Number(songs[i].end);
+
+      if (currentTime >= start && currentTime < end) {
+        return i;
+      }
+
+    }
+
+    return -1;
+
+  }
 
   async function loadRadioData() {
     const rutaActual = window.location.pathname;
@@ -27,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json`;
+    const cacheBust = `?v=${Date.now()}`;
+    const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json${cacheBust}`;
 
     try {
       const response = await fetch(rutaJSON);
@@ -71,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     makeDial(120);
   }
-
 
   function makeDial(offsetAngle = 0) {
     if (!window.location.pathname.includes("/V/")) return;
@@ -126,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    audio.src = data.audio;
+    audio.src = `${data.audio}?v=${Date.now()}`;
     audio.play();
 
     playPauseBtn.style.display = "inline";
@@ -135,11 +158,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const songs = data.songs;
 
     if (songs && songs.length > 0) {
-      currentSongIndex = 0;
-      updateActiveSong(0);
+
+      renderSongList(songs, -1);
+      document.getElementById("songTitle").textContent = "";
+      document.getElementById("artistName").textContent = "";
     } else {
-      document.getElementById("songTitle").textContent =
-        "Sin información de canciones";
+      document.getElementById("songTitle").textContent = "Sin información de canciones";
       document.getElementById("artistName").textContent = "";
     }
   }
@@ -163,10 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
         li.classList.add("active");
       }
 
-
       li.addEventListener("click", () => {
-        audio.currentTime = Number(song.start);
-        updateActiveSong(i);
+        seekTo(Number(song.start));
       });
 
       radioList.appendChild(li);
@@ -175,9 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateActiveSong(index) {
 
-    currentSongIndex = index;
-    const songs = radioData[currentRadio].songs;
-
+    const songs = radioData[currentRadio]?.songs;
     if (!songs || !songs[index]) return;
 
     document.getElementById("songTitle").textContent = songs[index].title;
@@ -185,7 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderSongList(songs, index);
   }
-
 
   const prevSongBtn = document.querySelector(".footer-controls span:nth-child(1)");
   const playPauseBtn = document.querySelector(".footer-controls span:nth-child(2)");
@@ -209,7 +228,48 @@ document.addEventListener("DOMContentLoaded", function () {
     playPauseBtn.style.display = "inline";
   });
 
+  let lastSongIndex = -1;
+  let isSeeking = false;
+
+  function seekTo(time) {
+    isSeeking = true;
+    targetTime = time;
+
+    lastSongIndex = -2;
+    document.getElementById("songTitle").textContent = "";
+    document.getElementById("artistName").textContent = "";
+    document.querySelectorAll("#radioList li").forEach(li => li.classList.remove("active"));
+
+    audio.currentTime = Math.max(0, Math.min(time, audio.duration));
+  }
+
+
+  audio.addEventListener("seeked", () => {
+
+    isSeeking = false;
+
+    if (targetTime !== null) {
+      audio.currentTime = targetTime;
+      targetTime = null;
+    }
+
+    const activeIndex = getCurrentSongIndex();
+    lastSongIndex = activeIndex;
+
+    if (activeIndex !== -1) {
+      updateActiveSong(activeIndex);
+    } else {
+      document.getElementById("songTitle").textContent = "";
+      document.getElementById("artistName").textContent = "";
+      const songs = radioData[currentRadio]?.songs;
+      if (songs) renderSongList(songs, -1);
+    }
+
+  });
+
   audio.addEventListener("timeupdate", () => {
+
+    if (isSeeking) return;
 
     const totalTime = audio.duration;
     const currentTime = audio.currentTime;
@@ -233,31 +293,75 @@ document.addEventListener("DOMContentLoaded", function () {
       currentTimeDisplay.textContent = formatTime(currentTime);
       totalTimeDisplay.textContent = formatTime(totalTime);
 
-      const songs = radioData[currentRadio]?.songs;
-      if (songs && songs.length > 0) {
+      const activeIndex = getCurrentSongIndex();
 
-        for (let i = 0; i < songs.length; i++) {
-          if (
-            currentTime >= Number(songs[i].start) &&
-            currentTime < Number(songs[i].end)
-          ) {
-            if (currentSongIndex !== i) {
-              updateActiveSong(i);
-            }
-            break;
-          }
+      if (activeIndex !== lastSongIndex) {
+        lastSongIndex = activeIndex;
+
+        if (activeIndex !== -1) {
+          updateActiveSong(activeIndex);
+        } else {
+          document.getElementById("songTitle").textContent = "";
+          document.getElementById("artistName").textContent = "";
+          document.querySelectorAll("#radioList li").forEach(li => {
+            li.classList.remove("active");
+          });
         }
       }
     }
   });
 
+  audio.addEventListener("ended", () => {
+    playPauseBtn.style.display = "none";
+    playBtn.style.display = "inline";
+  });
+  
+  const debugMode = true;
+
+  if (debugMode) {
+    document.addEventListener("click", () => {
+      const seconds = Math.floor(audio.currentTime);
+      navigator.clipboard.writeText(seconds.toString());
+      console.log("Tiempo copiado:", seconds);
+    });
+  }
+
+  function seekRelative(seconds) {
+
+    if (isSeeking) return;
+
+    const newTime = Math.max(
+      0,
+      Math.min(audio.currentTime + seconds, audio.duration)
+    );
+
+    seekTo(newTime);
+
+  }
+  document.addEventListener("keydown", (e) => {
+
+    if (!audio.duration) return;
+    if (isSeeking) return;
+    if (e.repeat) return;
+
+    if (e.key === "ArrowRight") {
+      seekRelative(5);
+    }
+
+    if (e.key === "ArrowLeft") {
+      seekRelative(-5);
+    }
+
+  });
+
   fullProgressBar.addEventListener("click", (e) => {
+    e.stopPropagation();
 
     const width = fullProgressBar.clientWidth;
     const clickX = e.offsetX;
     const timeToSeek = (clickX / width) * audio.duration;
 
-    audio.currentTime = timeToSeek;
+    seekTo((clickX / width) * audio.duration);
   });
 
   function handleSongChange(direction) {
@@ -267,16 +371,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const songs = radioData[currentRadio].songs;
     if (!songs || songs.length === 0) return;
 
+    const currentTime = audio.currentTime;
+    const index = getCurrentSongIndex();
+
     if (direction === "next") {
-      const nextIndex = (currentSongIndex + 1) % songs.length;
-      audio.currentTime = Number(songs[nextIndex].start);
-      updateActiveSong(nextIndex);
+      const next = index !== -1
+        ? songs[(index + 1) % songs.length]
+        : songs.find(s => Number(s.start) > currentTime);
+      if (next) {
+        seekTo(Number(next.start));
+      }
     }
 
     if (direction === "prev") {
-      const prevIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-      audio.currentTime = Number(songs[prevIndex].start);
-      updateActiveSong(prevIndex);
+      const prev = index !== -1
+        ? songs[(index - 1 + songs.length) % songs.length]
+        : [...songs].reverse().find(s => Number(s.end) < currentTime);
+      if (prev) {
+        seekTo(Number(prev.start));
+      }
     }
   }
 
