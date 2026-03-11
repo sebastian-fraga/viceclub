@@ -2501,7 +2501,7 @@ footer {
 
                 & h2 {
                     line-height: 1.5;
-                    font-size: 1.2em;
+                    font-size: 1.7em;
                 }
 
             }
@@ -2968,7 +2968,6 @@ footer {
             overflow-y: visible !important;
             box-sizing: border-box;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
             gap: 1.8em;
             border-radius: 40px;
             padding: 0.5em 2em;
@@ -3001,11 +3000,13 @@ footer {
     #radioInfo {
         display: flex;
         flex-direction: column;
-        padding-bottom: 10em;
+        padding-bottom: 7em;
         border-radius: 10px;
         margin: 5px 5px 10px 5px;
         padding-top: 2em;
         text-align: center;
+        overflow: hidden;
+
 
         &.active {
             transform: translateY(0);
@@ -3015,34 +3016,35 @@ footer {
         }
 
         & img {
-            width: 140px;
+            width: 120px;
             height: auto;
         }
 
         & h3 {
-            font-size: 1.8em;
+            font-size: 1.5em;
         }
 
 
         & ol {
-
             display: flex;
-            align-items: start;
+            align-items: stretch;
             flex-direction: column;
-            justify-content: left;
+            justify-content: space-between;
             text-align: left;
             gap: 0.2em;
             margin-top: 1em;
+            padding-left: 0;
 
             & li {
-                padding-top: 0.2em;
-                padding-top: 0.3em;
-                max-width: 30ch;
-                text-overflow: ellipsis;
+                overflow-wrap: anywhere;
+                max-width: 25ch;
+                word-break: break-word;
+                font-size: 0.95em;
 
                 &.active {
                     opacity: 1;
                     font-weight: bold;
+                    font-size: 1em;
                 }
 
                 &:hover {
@@ -3054,8 +3056,9 @@ footer {
     }
 
     footer {
+        padding-bottom: 1em;
         display: none;
-        gap: 1em;
+        gap: 0;
         justify-content: center;
 
 
