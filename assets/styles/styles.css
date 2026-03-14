@@ -39,7 +39,7 @@ body {
     font-family: "GTAArtDecoRegular";
     overflow-x: hidden;
     overflow-y: auto;
-    padding-bottom: 12vh;
+    padding-bottom: 5vh;
     -webkit-tap-highlight-color: transparent;
 
 
@@ -2853,7 +2853,7 @@ footer {
 
             & .news-content {
                 & p {
-                    font-size: 1.25em;
+                    font-size: 1.15em;
                     text-align: left;
                     line-height: 1.9;
                     max-width: 30ch;
