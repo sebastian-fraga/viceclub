@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    const cacheBust = `?v=${Date.now()}`;
-    const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json${cacheBust}`;
+    const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json`;
 
     try {
       const response = await fetch(rutaJSON);
@@ -207,14 +206,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const prevSongBtn = document.querySelector(".footer-controls span:nth-child(1)");
-  const playPauseBtn = document.querySelector(".footer-controls span:nth-child(2)");
-  const playBtn = document.querySelector(".footer-controls span:nth-child(3)");
+  const playPauseBtn = document.querySelector(".footer-pause");
+  const playBtn = document.querySelector(".footer-play");
   const nextSongBtn = document.querySelector(".footer-controls span:nth-child(4)");
 
   const currentTimeDisplay = document.getElementById("currentTime");
   const totalTimeDisplay = document.getElementById("totalTime");
   const progressBar = document.getElementById("currentBar");
   const fullProgressBar = document.getElementById("bar");
+
 
   playPauseBtn.addEventListener("click", () => {
     audio.pause();
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     playPauseBtn.style.display = "none";
     playBtn.style.display = "inline";
   });
-  
+
   const debugMode = true;
 
   if (debugMode) {

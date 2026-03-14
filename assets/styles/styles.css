@@ -178,58 +178,108 @@ body {
         }
 
         & details {
-            font-size: 22px;
-            color: #000000;
+            font-size: 1.5em;
+            color: #15011bb2;
             transition: color 0.2s ease-in-out;
-            margin: 4%;
+            padding: 2em 3em;
 
             & summary {
                 cursor: pointer;
+                letter-spacing: 2px;
+                font-size: 1.1em;
             }
 
-            & p {
-                max-width: 120ch;
-                margin: 0.2em 3em 2em 3em;
-                color: #000000b8;
-            }
+            & .faq-section {
+                display: flex;
+                flex-direction: column;
 
-            & h3 {
-                margin-top: 1em;
-                font-size: 35px;
-                width: max-content;
-                color: #252258;
-                border-bottom: 3px solid;
-                border-image: linear-gradient(to right, #455eec, #d049ee);
-                border-image-slice: 1;
-                text-align: left;
-            }
-
-            & h4 {
-                font-weight: 800;
-                margin: 0.5em 2em;
-                color: #000;
-            }
-
-            & a {
-                color: #083d7e;
-                text-decoration: none;
-                transition: all 0.15s ease-out;
-                display: inline-block;
-
-                &:hover {
-                    cursor: pointer;
-                    text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
-                    color: #fbbf24;
+                & h3 {
+                    margin-block: 1.4em 0.3em;
+                    font-size: 1.3em;
+                    width: max-content;
+                    color: #252258;
+                    border-bottom: 3px solid;
+                    border-image: linear-gradient(to right, #455eec, #d049ee);
+                    border-image-slice: 1;
+                    text-align: left;
                 }
 
-                &:active {
-                    color: #663c7d;
+                & .faq-question {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    background: linear-gradient(135deg, #fdb6f959, #e974df83);
+                    border: 1px solid #0000003b;
+                    border-radius: 18px;
+                    margin: 0.3em;
+                    padding: 1em 2em;
+
+
+                    & h4 {
+                        font-family: "GTAArtDecoMedium";
+                        color: #0c0c0c;
+                        margin-bottom: 0.3em;
+                    }
+
+                    & p {
+                        max-width: 120ch;
+                        font-size: 0.75em;
+                        line-height: 1.45;
+                        margin-left: 1.4em;
+                        color: #1b1b1b;
+                    }
+
+
+
+                    & a {
+                        color: #006aeb;
+                        text-shadow: 0 0 8px rgba(114, 161, 250, 0.5);
+                        text-decoration: none;
+                        transition: all 0.15s ease-out;
+                        display: inline-block;
+
+                        &:hover {
+                            cursor: pointer;
+                            text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+                            color: #fbbf24;
+                        }
+
+                    }
                 }
             }
+
+
+
+
 
             &[open] summary {
-                color: #8e0fd2;
+                color: #070707;
             }
+        }
+    }
+
+    & .support {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 3em 2em 1em;
+        padding: 2em;
+        border-top: 1px solid rgba(90, 63, 160, 0.3);
+
+        & p {
+            max-width: 60ch;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #1e0e40;
+            margin-bottom: 0.5em;
+        }
+
+        & .support-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5em;
+            flex-wrap: wrap;
         }
     }
 
@@ -2190,15 +2240,27 @@ footer {
 
         & .footer-controls {
             display: flex;
-            gap: 15px;
+            align-items: center;
+            gap: 1em;
             transition: all 0.2s ease-in-out;
             justify-content: center;
+            user-select: none;
+
+            & .footer-pause,
+            & .footer-play {
+                color: #d0f2f8;
+                font-size: 54px;
+                text-shadow: 2px 2px 3px #0000005e;
+
+            }
 
             & span {
-                font-size: 50px;
-                color: #d8fefa;
-                text-shadow: 2px 2px 3px #0244339c;
+                font-size: 42px;
+                color: #cbeef8;
+                text-shadow: 2px 2px 3px #0000005e;
                 transition: all 0.2s ease-in-out;
+
+
 
                 &:hover {
                     cursor: pointer;
@@ -2209,13 +2271,14 @@ footer {
                     transform: scale(0.99);
                     color: #e7c1fe;
                 }
+
             }
         }
 
         & .footer-timer {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 1em;
             width: 450px;
             color: #ebe9e9;
             font-family: "GTAArtDecoMedium";
@@ -2223,22 +2286,37 @@ footer {
             & #bar {
                 flex: 1;
                 height: 7px;
-                background: rgba(192, 192, 192, 0.3);
+                background: rgba(192, 192, 192, 0.2);
                 box-shadow: 0 0 1px #000000;
                 border-radius: 12px;
-                overflow: hidden;
+                overflow: visible;
                 transition: background 0.3s ease-out;
 
                 &:hover {
-                    background: linear-gradient(to right, rgba(192, 192, 192, 0.4)), transparent;
+                    background: linear-gradient(to right, rgba(192, 192, 192, 0.3)), transparent;
                 }
 
                 & #currentBar {
                     width: 15%;
                     height: 100%;
-                    background: linear-gradient(to right, rgb(237, 156, 247), rgb(245, 156, 255));
+                    background: linear-gradient(to right, rgb(233, 128, 247), rgb(245, 151, 255));
                     transition: all 0.3s ease-out;
                     border-radius: 25px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: -5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 13px;
+                        height: 13px;
+                        background: #fff;
+                        border-radius: 50%;
+                        z-index: 100;
+
+                    }
 
                     &:hover {
                         filter: brightness(0.9);
@@ -2248,6 +2326,10 @@ footer {
 
             & p {
                 text-shadow: 1px 1px 2px #000;
+                font-size: 1.1em;
+                width: 55px;
+                text-align: center;
+
             }
         }
     }
@@ -2585,26 +2667,35 @@ footer {
             }
 
             details {
+                padding: 0;
                 font-size: 1.3em;
 
-                & h3 {
-                    margin: 20px auto 40px auto;
+                & .faq-section {
+
+                    & h3 {
+                        margin: 1em auto 0.3em auto;
+                    }
+
+                    & .faq-question {
+                        & h4 {
+                            text-wrap: balance;
+                            max-width: 18ch;
+                            margin: 0.9em auto 0.2em auto;
+                            font-size: 1.2em;
+                        }
+
+                        & p {
+                            font-size: 0.85em;
+                            text-wrap: balance;
+                            margin: 10px auto 25px auto;
+                            line-height: 1.7;
+                            max-width: 55ch;
+                        }
+                    }
                 }
 
-                & h4 {
-                    text-wrap: balance;
-                    max-width: 18ch;
-                    margin: 15px auto 20px auto;
-                    font-size: 1.2em;
-                }
 
-                & p {
-                    font-size: 0.85em;
-                    text-wrap: balance;
-                    margin: 10px auto 25px auto;
-                    line-height: 1.7;
-                    max-width: 55ch;
-                }
+
             }
         }
 
@@ -2629,6 +2720,20 @@ footer {
             & .right-content-logos {
                 gap: 0.4em;
 
+            }
+        }
+
+        & .support {
+            padding: 1.5em 0;
+
+            & p {
+                line-height: 1.9;
+                font-size: 1.3;
+                margin-bottom: 1.5em;
+            }
+
+            & .support-buttons {
+                gap: 0.8em;
             }
         }
     }
@@ -2674,15 +2779,17 @@ footer {
         width: 85%;
         margin: 2em auto 4em auto;
         border-radius: 25px;
+        padding: 0.5em 1em;
         justify-content: center;
 
         &::before {
             background:
                 url("../images/main/countdown.webp");
-            border-radius: 25px;
+            border-radius: 20px;
         }
 
         & .countdown-header {
+
             & h2 {
                 line-height: 1.3;
                 font-size: 1.7em;
@@ -2716,7 +2823,7 @@ footer {
     .news {
         margin: 3em auto 5em auto;
         border-radius: 45px;
-        padding-top: 1.5em;
+        padding: 1.5em 0;
 
         & h2 {
             font-size: 2.3em;
@@ -2746,7 +2853,7 @@ footer {
 
             & .news-content {
                 & p {
-                    font-size: 1.3em;
+                    font-size: 1.25em;
                     text-align: left;
                     line-height: 1.9;
                     max-width: 30ch;
@@ -2774,8 +2881,11 @@ footer {
 
         & button {
             width: auto;
+            font-size: 1.2em;
         }
     }
+
+
 
     /* #endregion */
 
