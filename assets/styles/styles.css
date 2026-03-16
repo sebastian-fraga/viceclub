@@ -17,6 +17,7 @@
 
 /* #region GENERAL */
 
+
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +38,7 @@
 
 body {
     font-family: "GTAArtDecoRegular";
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
     -webkit-tap-highlight-color: transparent;
 
 
@@ -68,8 +67,7 @@ body {
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            transform: scale(1.1);
-            z-index: 10;
+            z-index: -1;
         }
 
         ::selection {
@@ -115,6 +113,7 @@ body {
         }
 
         & #rightContent {
+
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -147,6 +146,7 @@ body {
         }
 
         & .block {
+
             flex-direction: column;
             background: linear-gradient(180deg,
                     rgba(141, 117, 239, 0.664),
@@ -156,6 +156,8 @@ body {
             box-shadow: 0px 0 250px #6e77f962;
             position: relative;
             z-index: 1000;
+
+
 
             &::before {
                 content: "";
@@ -2552,7 +2554,6 @@ footer {
 
     body {
         max-width: 100vw;
-        overflow-x: clip;
 
         & .block {
             display: flex;
@@ -2560,11 +2561,13 @@ footer {
             align-items: center;
             justify-content: flex-start;
             padding: 25px;
-            margin: 75px 5px 10px 5px;
+            margin: 85px 5px 10px 5px;
             border-radius: 6px;
             border-width: 5px;
             text-align: center;
-
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            
 
             & .text-container {
                 display: flex;
@@ -2637,8 +2640,6 @@ footer {
 
             & .block {
                 box-shadow: 0px -60px 10px #00cc9c71;
-                backdrop-filter: blur(9px);
-                -webkit-backdrop-filter: blur(9px);
                 border-radius: 10px;
                 background: linear-gradient(180deg,
                         rgba(141, 117, 239, 0.8),

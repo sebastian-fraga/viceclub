@@ -10,28 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
   let radioData = {};
   let targetTime = null;
 
-  function getCurrentSongIndex() {
 
+  function getCurrentSongIndex() {
     if (!currentRadio) return -1;
 
-    const songs = radioData[currentRadio]?.songs;
+    const data = radioData[currentRadio];
+    const songs = data?._activeSongs ?? data?.songs;
     if (!songs) return -1;
 
     const currentTime = audio.currentTime;
 
     for (let i = 0; i < songs.length; i++) {
-
       const start = Number(songs[i].start);
       const end = Number(songs[i].end);
-
-      if (currentTime >= start && currentTime < end) {
-        return i;
-      }
-
+      if (currentTime >= start && currentTime < end) return i;
     }
 
     return -1;
-
   }
 
   async function loadRadioData() {
@@ -65,25 +60,47 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderRadioGrid() {
     radioGrid.innerHTML = "";
 
+    const rutaActual = window.location.pathname;
+    const esGTA5 = rutaActual.includes("/V/");
+
+    if (esGTA5) {
+      const offCard = document.createElement("div");
+      offCard.classList.add("radio-card", "active");
+      offCard.dataset.off = "true";
+      offCard.innerHTML = `<img src="../assets/images/radios/V/off.webp" alt="Apagado">`;
+
+      offCard.addEventListener("click", () => {
+        document.querySelectorAll(".radio-card").forEach(c => c.classList.remove("active"));
+        offCard.classList.add("active");
+
+        if (currentRadio && radioData[currentRadio]) {
+          delete radioData[currentRadio]._activeSongs;
+        }
+
+        audio.pause();
+        audio.src = "";
+        currentRadio = null;
+        footer.classList.remove("active");
+        radioInfo.classList.remove("active");
+      });
+
+      radioGrid.appendChild(offCard);
+    }
+
     Object.keys(radioData).forEach((radioKey) => {
-
       const radio = radioData[radioKey];
-      if (!radio || !radio.audio) return;
-
+      if (!radio || (!radio.audio && !radio.playlists)) return;
       const card = document.createElement("div");
       card.classList.add("radio-card");
-
-      card.innerHTML = `
-          <img src="${radio.image}" alt="${radio.displayName}">
-        `;
+      card.innerHTML = `<img src="${radio.image}" alt="${radio.displayName}">`;
 
       card.addEventListener("click", () => {
-
-        document.querySelectorAll(".radio-card").forEach(c =>
-          c.classList.remove("active")
-        );
-
+        document.querySelectorAll(".radio-card").forEach(c => c.classList.remove("active"));
         card.classList.add("active");
+
+        if (currentRadio && radioData[currentRadio]) {
+          delete radioData[currentRadio]._activeSongs;
+        }
 
         currentRadio = radioKey;
         updateRadioDirect(radioKey);
@@ -103,27 +120,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const step = 360 / total;
 
     const isMobile = window.innerWidth < 1024;
-
-    const radius = isMobile ? 140 : 280;
-    const offset = isMobile ? 90 : offsetAngle;
+    const radius = isMobile ? 180 : 310;
+    const offset = isMobile ? 90 : 90;
 
     items.forEach((item, index) => {
       const angle = step * index + offset;
-
       item.style.transform = `
-            rotate(${angle}deg)
-            translate(${radius}px)
-            rotate(-${angle}deg)
-        `;
+        rotate(${angle}deg)
+        translate(${radius}px)
+        rotate(-${angle}deg)
+      `;
     });
   }
 
   function updateRadioDirect(radioKey) {
-
     const data = radioData[radioKey];
     if (!data) return;
-
-    playRadio(radioKey);
 
     radioInfo.classList.add("active");
     footer.classList.add("active");
@@ -131,16 +143,85 @@ document.addEventListener("DOMContentLoaded", function () {
     radioTitle.textContent = data.displayName;
     document.getElementById("radioImage").src = data.image || "";
     document.getElementById("albumArt").src = data.image || "";
+
+    if (data.playlists) {
+      audio.pause();
+      audio.src = "";
+      playPauseBtn.style.display = "none";
+      playBtn.style.display = "inline";
+
+      const selectorHTML = data.playlists.map((playlist, i) => `
+        <button class="playlist-btn${i === 0 ? " active" : ""}" data-index="${i}">
+          ${playlist.name}
+        </button>
+      `).join("");
+
+      document.getElementById("radioDJ").innerHTML = `<div id="playlistSelector">${selectorHTML}</div>`;
+      document.getElementById("radioGenre").innerHTML = "";
+
+      updateRadioReproductor(radioKey, 0);
+
+      document.querySelectorAll(".playlist-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".playlist-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          updateRadioReproductor(radioKey, Number(btn.dataset.index));
+        });
+      });
+
+      return;
+    }
+
+    playRadio(radioKey);
     document.getElementById("radioDJ").innerHTML =
-      data.dj
-        ? `<span>Conducido por:</span> <p>${data.dj}</p>` : "";
+      data.dj ? `<span>Conducido por:</span> <p>${data.dj}</p>` : "";
     document.getElementById("radioGenre").innerHTML =
-      data.genre
-        ? `<span>Género:</span> <p>${data.genre}</p>` : "";
+      data.genre ? `<span>Género:</span> <p>${data.genre}</p>` : "";
+  }
+
+  function updateRadioReproductor(radioKey, playlistIndex) {
+    const data = radioData[radioKey];
+    const playlist = data.playlists[playlistIndex];
+    if (!playlist) return;
+
+
+    data._activeSongs = playlist.songs ?? [];
+
+
+    const djEl = document.getElementById("radioDJ");
+    const genreEl = document.getElementById("radioGenre");
+    const selector = document.getElementById("playlistSelector");
+
+    djEl.innerHTML = "";
+    if (selector) djEl.appendChild(selector);
+
+    if (playlist.dj) {
+      const djInfo = document.createElement("div");
+      djInfo.innerHTML = `<span>Conducido por:</span> <p>${playlist.dj}</p>`;
+      djEl.appendChild(djInfo);
+    }
+
+    genreEl.innerHTML = playlist.genre
+      ? `<span>Género:</span> <p>${playlist.genre}</p>` : "";
+
+    if (playlist.audio) {
+      audio.src = `${playlist.audio}?v=${Date.now()}`;
+      audio.play();
+      playPauseBtn.style.display = "inline";
+      playBtn.style.display = "none";
+    }
+
+    if (data._activeSongs.length > 0) {
+      renderSongList(data._activeSongs, -1);
+      document.getElementById("songTitle").textContent = "";
+      document.getElementById("artistName").textContent = "";
+    } else {
+      document.getElementById("songTitle").textContent = "Sin información de canciones";
+      document.getElementById("artistName").textContent = "";
+    }
   }
 
   function playRadio(name) {
-
     const data = radioData[name];
 
     if (!data || !data.audio) {
@@ -157,7 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const songs = data.songs;
 
     if (songs && songs.length > 0) {
-
       renderSongList(songs, -1);
       document.getElementById("songTitle").textContent = "";
       document.getElementById("artistName").textContent = "";
@@ -168,35 +248,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function renderSongList(songs, activeIndex) {
-
     const radioList = document.getElementById("radioList");
     radioList.innerHTML = "";
 
     if (!songs || songs.length === 0) return;
 
     songs.forEach((song, i) => {
-
       const li = document.createElement("li");
 
       li.textContent = song.artist
         ? `${song.artist} — ${song.title}`
         : song.title;
 
-      if (i === activeIndex) {
-        li.classList.add("active");
-      }
+      if (i === activeIndex) li.classList.add("active");
 
-      li.addEventListener("click", () => {
-        seekTo(Number(song.start));
-      });
+      li.addEventListener("click", () => seekTo(Number(song.start)));
 
       radioList.appendChild(li);
     });
   }
 
   function updateActiveSong(index) {
-
-    const songs = radioData[currentRadio]?.songs;
+    const data = radioData[currentRadio];
+    const songs = data?._activeSongs ?? data?.songs;
     if (!songs || !songs[index]) return;
 
     document.getElementById("songTitle").textContent = songs[index].title;
@@ -214,7 +288,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalTimeDisplay = document.getElementById("totalTime");
   const progressBar = document.getElementById("currentBar");
   const fullProgressBar = document.getElementById("bar");
-
 
   playPauseBtn.addEventListener("click", () => {
     audio.pause();
@@ -243,9 +316,7 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.currentTime = Math.max(0, Math.min(time, audio.duration));
   }
 
-
   audio.addEventListener("seeked", () => {
-
     isSeeking = false;
 
     if (targetTime !== null) {
@@ -261,21 +332,19 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       document.getElementById("songTitle").textContent = "";
       document.getElementById("artistName").textContent = "";
-      const songs = radioData[currentRadio]?.songs;
+      const data = radioData[currentRadio];
+      const songs = data?._activeSongs ?? data?.songs;
       if (songs) renderSongList(songs, -1);
     }
-
   });
 
   audio.addEventListener("timeupdate", () => {
-
     if (isSeeking) return;
 
     const totalTime = audio.duration;
     const currentTime = audio.currentTime;
 
     if (!isNaN(totalTime)) {
-
       const progress = (currentTime / totalTime) * 100;
       progressBar.style.width = `${progress}%`;
 
@@ -303,9 +372,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           document.getElementById("songTitle").textContent = "";
           document.getElementById("artistName").textContent = "";
-          document.querySelectorAll("#radioList li").forEach(li => {
-            li.classList.remove("active");
-          });
+          document.querySelectorAll("#radioList li").forEach(li => li.classList.remove("active"));
         }
       }
     }
@@ -327,69 +394,48 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function seekRelative(seconds) {
-
     if (isSeeking) return;
-
-    const newTime = Math.max(
-      0,
-      Math.min(audio.currentTime + seconds, audio.duration)
-    );
-
+    const newTime = Math.max(0, Math.min(audio.currentTime + seconds, audio.duration));
     seekTo(newTime);
-
   }
-  document.addEventListener("keydown", (e) => {
 
+  document.addEventListener("keydown", (e) => {
     if (!audio.duration) return;
     if (isSeeking) return;
     if (e.repeat) return;
 
-    if (e.key === "ArrowRight") {
-      seekRelative(5);
-    }
-
-    if (e.key === "ArrowLeft") {
-      seekRelative(-5);
-    }
-
+    if (e.key === "ArrowRight") seekRelative(5);
+    if (e.key === "ArrowLeft") seekRelative(-5);
   });
 
   fullProgressBar.addEventListener("click", (e) => {
     e.stopPropagation();
-
     const width = fullProgressBar.clientWidth;
     const clickX = e.offsetX;
-    const timeToSeek = (clickX / width) * audio.duration;
-
     seekTo((clickX / width) * audio.duration);
   });
 
   function handleSongChange(direction) {
-
     if (!currentRadio) return;
 
-    const songs = radioData[currentRadio].songs;
+    const data = radioData[currentRadio];
+    const songs = data?._activeSongs ?? data?.songs;
     if (!songs || songs.length === 0) return;
 
-    const currentTime = audio.currentTime;
     const index = getCurrentSongIndex();
 
     if (direction === "next") {
       const next = index !== -1
         ? songs[(index + 1) % songs.length]
-        : songs.find(s => Number(s.start) > currentTime);
-      if (next) {
-        seekTo(Number(next.start));
-      }
+        : songs.find(s => Number(s.start) > audio.currentTime);
+      if (next) seekTo(Number(next.start));
     }
 
     if (direction === "prev") {
       const prev = index !== -1
         ? songs[(index - 1 + songs.length) % songs.length]
-        : [...songs].reverse().find(s => Number(s.end) < currentTime);
-      if (prev) {
-        seekTo(Number(prev.start));
-      }
+        : [...songs].reverse().find(s => Number(s.end) < audio.currentTime);
+      if (prev) seekTo(Number(prev.start));
     }
   }
 
