@@ -33,6 +33,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://viceclub.vercel.app/III/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 <!-- VC -->
   <url>
     <loc>https://viceclub.vercel.app/VC/inicio.html</loc>
@@ -55,6 +61,12 @@
   <url>
     <loc>https://viceclub.vercel.app/VC/logros.html</loc>
     <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VC/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
     <priority>0.8</priority>
   </url>
 
@@ -83,6 +95,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://viceclub.vercel.app/SA/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <!-- LCS -->
   <url>
     <loc>https://viceclub.vercel.app/LCS/inicio.html</loc>
@@ -96,6 +114,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://viceclub.vercel.app/LCS/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <priority>0.8</priority>
+  </url>
 
   <!-- VCS -->
   <url>
@@ -107,6 +130,12 @@
   <url>
     <loc>https://viceclub.vercel.app/VCS/100.html</loc>
     <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/VCS/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
     <priority>0.8</priority>
   </url>
 
@@ -135,6 +164,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://viceclub.vercel.app/IV/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <!-- V -->
   <url>
     <loc>https://viceclub.vercel.app/V/inicio.html</loc>
@@ -157,6 +192,12 @@
   <url>
     <loc>https://viceclub.vercel.app/V/logros.html</loc>
     <lastmod>2026-02-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viceclub.vercel.app/V/radio.html</loc>
+    <lastmod>2026-03-16</lastmod>
     <priority>0.8</priority>
   </url>
 
