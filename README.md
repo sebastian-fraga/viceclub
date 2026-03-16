@@ -42,5 +42,4 @@ At Vice Club, you'll find everything related to the main titles of the Grand The
 
 ## 🔜 Currently working on...
 
-- Expanding mod lists
-- Improving responsive design for mobile screens
+- Completing info on radio stations
