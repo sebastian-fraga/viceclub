@@ -142,6 +142,11 @@ body {
                     width: 110px;
                     height: 110px;
                 }
+
+                & span {
+                    position: absolute;
+                    left: -999999px;
+                }
             }
         }
 
