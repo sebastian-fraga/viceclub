@@ -2182,9 +2182,10 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 footer {
     display: none;
-    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: space-between;
+    padding: 10px 15px;
     font-size: 14px;
     background: linear-gradient(to right, #8d75efd1 10%, #b475efce 50%, #8d75efd1 90%);
     border-top: 3px solid #833fc3d9;
@@ -2243,7 +2244,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1em;
+        gap: 0.5em;
 
         & .footer-controls {
             display: flex;
@@ -2337,6 +2338,68 @@ footer {
                 width: 55px;
                 text-align: center;
 
+            }
+        }
+    }
+
+    & .footer-right {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        & .footer-volume {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            & span {
+                text-shadow: 2px 2px 3px #0000005e;
+                font-size: 1.7em;
+                color: #f2f2f2;
+            }
+
+            & input[type="range"] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 150px;
+                height: 7px;
+                border-radius: 12px;
+                background: rgba(192, 192, 192, 0.2);
+                outline: none;
+                cursor: pointer;
+            }
+
+            /* Track (Chrome) */
+            input[type="range"]::-webkit-slider-runnable-track {
+                height: 7px;
+                border-radius: 12px;
+            }
+
+            /* Thumb */
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 13px;
+                height: 13px;
+                background: #ffffff;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-top: -3px;
+                /* centra el thumb */
+            }
+
+            /* Firefox */
+            input[type="range"]::-moz-range-thumb {
+                width: 13px;
+                height: 13px;
+                background: #ffffff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            input[type="range"]::-moz-range-track {
+                height: 7px;
+                border-radius: 12px;
+                background: rgba(192, 192, 192, 0.2);
             }
         }
     }
@@ -2565,14 +2628,13 @@ footer {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 25px;
             margin: 85px 5px 10px 5px;
             border-radius: 6px;
             border-width: 5px;
             text-align: center;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            
+
 
             & .text-container {
                 display: flex;
@@ -3191,18 +3253,20 @@ footer {
 
 
             & .footer-controls {
-
                 width: 100%;
-
-
             }
 
             & .footer-timer {
+                max-width: 400px;
 
-                max-width: 250px;
-
-
+                & #bar {
+                    height: 10px;
+                }
             }
+        }
+
+        & .footer-right {
+            display: none
         }
     }
 

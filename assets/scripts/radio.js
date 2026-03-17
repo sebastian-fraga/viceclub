@@ -444,4 +444,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadRadioData();
 
+  const volumeSlider = document.querySelector(".footer-volume input");
+  const volumeIcon = document.querySelector(".footer-volume span");
+
+  if (volumeSlider) {
+    const savedVolume = localStorage.getItem("volume");
+    if (savedVolume !== null) {
+      audio.volume = savedVolume / 100;
+      volumeSlider.value = savedVolume;
+      if (savedVolume == 0) volumeIcon.textContent = "volume_off";
+      else if (savedVolume < 50) volumeIcon.textContent = "volume_down";
+      else volumeIcon.textContent = "volume_up";
+    }
+
+    volumeSlider.addEventListener("input", () => {
+      const vol = volumeSlider.value;
+      audio.volume = vol / 100;
+      localStorage.setItem("volume", vol);
+
+      if (vol == 0) volumeIcon.textContent = "volume_off";
+      else if (vol < 50) volumeIcon.textContent = "volume_down";
+      else volumeIcon.textContent = "volume_up";
+    });
+
+    function updateRange() {
+      const value = (volumeSlider.value - volumeSlider.min) / (volumeSlider.max - volumeSlider.min) * 100;
+
+      volumeSlider.style.background = `
+      linear-gradient(to right,  #e39dff ${value}%,
+        rgba(192,192,192,0.3) ${value}%
+        )`;
+      volumeSlider.style.transition = "background 0.1s linear";
+    }
+
+    volumeSlider.addEventListener("input", updateRange);
+    updateRange();
+  }
 });
