@@ -13,6 +13,16 @@
 
 /* #region GENERAL */
 
+:root {
+    --font-title: "Arial Black Italic";
+    --block-color: #010b1ec7;
+    --block-text: #f3f3f3;
+    --block-shadow: #2889d338;
+    --block-border: #2e9aedcb;
+    --title-color: #e7a600;
+    --accent-color: #f5cf70;
+}
+
 html,
 *:hover {
     cursor: url("../cursors/III.cur"), auto !important;
@@ -34,156 +44,16 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradient(90deg, #F0C903, #b475efd9);
-}
-
-.block,
-#radioInfo {
-    background: #010b1ec7;
-    color: #f3f3f3;
-    box-shadow: inset 0 0 10px 10px #2889d338;
-    border: 5px solid #2e9aedcb;
-}
-
-
 .text-container {
     & h2 {
-        font-family: "Arial Black Italic";
-        color: #e7a600;
         text-shadow: 3px 3px 10px #000000;
     }
-
-    & .characters-container {
-
-        & .characters-header {
-
-            &::before,
-            &::after {
-                background: linear-gradient(90deg, transparent, #c8a84b, transparent);
-
-            }
-        }
-
-        & .characters-list {
-            & article {
-                &:hover {
-                    outline-color: #D7A83B !important;
-                }
-
-                & .character-text {
-                    & span {
-                        color: #f5f097d7;
-                    }
-                }
-            }
-        }
-    }
-}
-
-#rightContent {
-    & .right-content-nav {
-        & .right-content-links {
-            & a {
-                font-family: "Arial Black Italic";
-
-                &.active {
-                    color: #e7a600;
-                    background: #d0cb7132;
-                    text-shadow: 0 0 3px #000;
-
-                    &::before {
-                        background-color: #D7A83B;
-                    }
-                }
-
-                &:active {
-                    background: #d0cb715c;
-
-                    &::before {
-                        background-color: #D7A83B;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-/* #endregion */
-
-/* #region FICHA TÉCNICA */
-.ficha-tecnica {
-    border-color: #e7a600d2 !important;
-    background-color: #e7a60062;
-
-    & table {
-        & tr {
-            border-color: #ffc32af8;
-        }
-    }
-}
-
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "Arial Black Italic";
-}
-
-span.table-platforms {
-    color: #e7a600;
 }
 
 /* #endregion */
+
 
 /* #region 100% CHECKLIST */
-.progress-wrapper {
-    & .progress-bar-bg {
-        & .progress-bar-fill {
-            background: linear-gradient(90deg, #ffcc00, #ffeeab);
-        }
-    }
-}
-
-.checklist-container {
-    & article {
-        & .section-header {
-            & .section-check-all {
-                &.complete {
-                    color: #e5f503;
-
-                    & svg {
-                        stroke: #ffe23f;
-                        filter: drop-shadow(0 0 3px #fbda1f);
-                    }
-                }
-            }
-        }
-
-        & .checklist-list-wrapper {
-            & ul {
-                & li {
-                    &.completed {
-                        background: rgba(255, 200, 0, 0.06);
-                        border-color: rgba(255, 180, 0, 0.25);
-                    }
-
-                    & .checklist-row {
-                        & label {
-                            & input {
-                                &:checked {
-                                    &+span {
-                                        background: #ffcc00;
-                                        border-color: #ffcc00;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #endregion */
 
@@ -192,25 +62,7 @@ span.table-platforms {
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-details.mod {
-    border: 1px solid #3d5a9e;
-    background: linear-gradient(135deg, #0f1729 0%, #1a2332 100%);
-}
 
-.mod-text h4 {
-    font-family: "Arial Black Italic";
-    color: #ffffff;
-}
-
-.mod-text p {
-    color: #e8e8e8;
-}
-
-details.mod[open] {
-    border: 2px solid #3b82f6;
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-    background: linear-gradient(135deg, #0f1729 0%, #1e2a3d 100%);
-}
 
 details.mod summary img {
     clip-path: polygon(50% 0%,
@@ -228,60 +80,10 @@ details.mod summary img {
     background: radial-gradient(circle 70px at top left, #5b8ab8, #3d5f9e);
 }
 
-.mod-actions a {
-    color: #ffffff;
-    border: 1px solid rgba(59, 130, 246, 0.4);
-}
-
-.mod-actions a:hover {
-    border: 1px solid rgba(59, 130, 246, 0.8);
-    background-color: rgba(59, 130, 246, 0.15);
-}
-
-.mod-actions a.active {
-    border: 2px solid #60d4ff;
-    box-shadow: 0 10px 20px 0 rgba(99, 102, 241, 0.5);
-    background-color: rgba(59, 130, 246, 0.6);
-}
-
-.mod-actions span {
-    color: #93c5fd;
-}
-
-.mod-features {
-    border-top: 1px solid rgba(59, 130, 246, 0.4);
-}
-
-.tab-content h5 {
-    color: #fbbf24;
-}
-
-.tab-content[data-content="info"] li {
-    color: #f0f0f0;
-}
-
-.tab-content[data-content="info"] li::before {
-    color: #60d4ff;
-    text-shadow: 0 0 5px rgb(188, 234, 250);
-}
-
-.tab-content a {
-    border: 1px solid #60d4ff;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.4) 0%, rgba(99, 102, 241, 0.4) 100%);
-    color: #ffffff;
-}
-
-.tab-content a:hover {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(99, 102, 241, 0.6) 100%);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
-}
 
 /* #endregion */
 
 /* #region LOGROS */
-.achievement-selector button {
-    background: #ffdead;
-}
 
 /* #endregion */
 
@@ -291,57 +93,10 @@ details.mod summary img {
 
 /* #region RADIO */
 
-.radio-container {
-    & .radio-grid {
-        border: 1px solid rgba(131, 148, 255, 0.3);
-        background: linear-gradient(to right, rgba(30, 11, 240, 0.3), rgba(73, 58, 237, 0.4), rgba(30, 11, 240, 0.3));
-    }
-}
-
-#radioInfo {
-
-    & #radioDJ,
-    & #radioGenre {
-        & p {
-            color: #dfdfff;
-        }
-    }
-}
-
-footer {
-    & .footer-left {
-        & .footer-album {
-            & img {
-                border: 3px solid #c8c4ff;
-                background: linear-gradient(135deg, rgb(169, 189, 255), rgb(149, 151, 255) 60%);
-            }
-        }
-    }
-}
-
 /* #endregion */
 
 /* #region TRUCOS */
 
-.platform-selector {
-    & button {
-        &.active {
-            background-color: rgba(125, 125, 255, 0.5);
-            color: #f2f2f2
-        }
-    }
-}
-
-#cheatsContainer {
-    & section {
-        border-color: rgba(239, 240, 166, 0.65);
-        background: linear-gradient(225deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
-
-        &:nth-of-type(even) {
-            background: linear-gradient(45deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
-        }
-    }
-}
 
 /* #endregion */
 

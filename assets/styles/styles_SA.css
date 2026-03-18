@@ -8,14 +8,23 @@
 /* #endregion */
 
 /* #region GENERAL */
+:root {
+    --font-title: "Bank Gothic";
+    --block-color: #213f10e6;
+    --block-text: #f4f4f4;
+    --block-shadow: #1b5705fa;
+    --block-border: #0da419;
+    --title-color: #e69a04;
+    --accent-color: #32ae26;
+}
 
 ::selection {
-    background: #9acd32;
+    background: var(--accent-color);
     color: #1a2a1a;
 }
 
 ::-moz-selection {
-    background: #9acd32;
+    background: var(--accent-color);
     color: #1a2a1a;
 }
 
@@ -39,107 +48,23 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradient(90deg, #4bf73b, #b475efd9);
-}
-
-.block,
-#radioInfo {
-    background: #213f10e6;
-    color: #f4f4f4;
-    box-shadow: inset 0 0 20px 10px #164404fa;
-    border: 5px solid #0da419;
-}
-
-
-.text-container {
-    justify-content: left;
-    align-items: left;
-}
-
 
 .text-container {
     & h2 {
-        font-family: "Bank Gothic";
-        color: #e69a04;
         text-shadow: 2px 2px #000;
     }
-
-    & .characters-container {
-
-        & .characters-header {
-
-            &::before,
-            &::after {
-                background: linear-gradient(90deg, transparent, #fdd04a, transparent);
-
-            }
-        }
-
-        & .characters-list {
-            & article {
-                &:hover {
-                    outline-color: #c2d138 !important;
-                }
-
-                & .character-text {
-                    & span {
-                        color: #92e073;
-                    }
-                }
-            }
-        }
-    }
 }
 
-#rightContent {
-    & .right-content-nav {
-        & .right-content-links {
-            & a {
-                font-family: "Bank Gothic";
-
-                &.active {
-                    color: #32ae26;
-                    background: #71d07432;
-
-                    &::before {
-                        background-color: #32ae26;
-                    }
-                }
-
-                &:active {
-                    background: #76d0715c;
-
-                    &::before {
-                        background-color: #32ae26;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
 .ficha-tecnica {
-    border-color: #4bf73bd2 !important;
-    background-color: #30be2370;
-
-    & table {
-        & tr {
-            border-color: #4bf73bd2;
-        }
-    }
+    background-color: color-mix(in srgb, var(--accent-color) 35%, transparent);
 }
 
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "Bank Gothic";
-}
 
 span.table-platforms {
-    color: #e69a04;
     text-shadow: 2px 2px #000;
 }
 
@@ -149,7 +74,7 @@ span.table-platforms {
 .progress-wrapper {
     & .progress-bar-bg {
         & .progress-bar-fill {
-            background: linear-gradient(90deg, #b5ffad, #c3ffb4);
+            background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--title-color) 85%, var(--accent-color) 90%));
         }
     }
 }
@@ -159,69 +84,19 @@ span.table-platforms {
         & .section-header {
             & .section-check-all {
                 &.complete {
-                    color: #228733;
-
                     & svg {
-                        stroke: #77d787;
-                        filter: drop-shadow(0 0 3px #1cdb0b);
+                        stroke: color-mix(in srgb, var(--title-color) 35%, var(--accent-color) 90%);
                     }
                 }
             }
         }
 
-        & .checklist-list-wrapper {
-            & ul {
-                & li {
-                    &.completed {
-                        background: rgba(13, 255, 0, 0.06);
-                        border-color: rgba(0, 255, 60, 0.25);
-                    }
-
-                    & .checklist-row {
-                        & label {
-                            & input {
-                                &:checked {
-                                    &+span {
-                                        background: #62ff00;
-                                        border-color: #59ff00;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-
-details.mod {
-    border: 1px solid #7fbf3f;
-    background: linear-gradient(135deg,
-            #1c351c 0%,
-            #0b140b 100%);
-}
-
-.mod-text h4 {
-    font-family: "Bank Gothic";
-    color: #ffffff;
-}
-
-.mod-text p {
-    color: #d4d4d4;
-}
-
-details.mod[open] {
-    border: 2px solid #b6ff3b;
-    box-shadow: 0 0 35px rgba(182, 255, 59, 0.6);
-    background: linear-gradient(135deg,
-            #203a20 0%,
-            #2e4a2e 100%);
-}
 
 details.mod summary img {
     border-radius: 50%;
@@ -230,63 +105,26 @@ details.mod summary img {
             #4a7a28);
 }
 
-.mod-actions a {
-    color: #ffffff;
-    border: 1px solid rgba(154, 205, 50, 0.4);
-}
+.mods-container {
+    & details {
+        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 20%, transparent) 50%, color-mix(in srgb, var(--accent-color) 55%, transparent) 95%);
 
-.mod-actions a:hover {
-    border: 1px solid rgba(154, 205, 50, 0.8);
-    background-color: rgba(154, 205, 50, 0.15);
-}
-
-.mod-actions a.active {
-    border: 2px solid #9acd32;
-    box-shadow: 0 10px 20px 0 rgba(154, 205, 50, 0.5);
-    background-color: rgba(107, 142, 35, 0.5);
-}
-
-.mod-actions span {
-    color: #cddc39;
-}
-
-.mod-features {
-    border-top: 1px solid rgba(154, 205, 50, 0.4);
-}
-
-.tab-content h5 {
-    color: #ffb84d;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-}
-
-.tab-content[data-content="info"] li {
-    color: #f0f0f0;
-}
-
-.tab-content[data-content="info"] li::before {
-    color: #9acd32;
-    text-shadow: 0 0 12px rgba(154, 205, 50, 0.7);
-}
-
-.tab-content a {
-    border: 1px solid #9acd32;
-    background: linear-gradient(135deg, rgba(107, 142, 35, 0.4) 0%, rgba(85, 107, 47, 0.4) 100%);
-    color: #ffffff;
-}
-
-.tab-content a:hover {
-    background: linear-gradient(135deg, rgba(107, 142, 35, 0.6) 0%, rgba(85, 107, 47, 0.6) 100%);
-    box-shadow: 0 4px 15px rgba(154, 205, 50, 0.5);
+        & summary {
+            & .mod-actions {
+                & span {
+                    color: color-mix(in srgb, var(--title-color) 80%, transparent);
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
 
 /* #region LOGROS  */
 
-.achievement-selector button {
-    background: #d2ffad;
-}
+
 
 /* #endregion */
 
@@ -298,23 +136,12 @@ details.mod summary img {
     }
 }
 
-#radioInfo {
-
-    & #radioDJ,
-    & #radioGenre {
-
-        & p {
-            color: #cdffc6;
-        }
-    }
-}
-
 footer {
     & .footer-left {
         & .footer-album {
             & img {
-                border: 3px solid #e69a04;
-                background: #000000
+                border: 3px solid var(--title-color);
+                background: #050505
             }
         }
     }
@@ -324,26 +151,7 @@ footer {
 
 /* #region TRUCOS */
 
-.platform-selector {
-    & button {
-        &.active {
-            background-color: rgba(177, 255, 125, 0.3);
-            border-color: #0c0c0c3e;
-            color: rgb(170, 244, 120);
-        }
-    }
-}
 
-#cheatsContainer {
-    & section {
-        border-color: rgba(251, 255, 5, 0.6);
-        background: linear-gradient(225deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
-
-        &:nth-of-type(even) {
-            background: linear-gradient(45deg, rgba(125, 125, 255, 0.5), rgba(7, 5, 68, 0.5));
-        }
-    }
-}
 
 /* #endregion */
 

@@ -8,6 +8,15 @@
 /* #endregion */
 
 /* #region GENERAL */
+:root {
+    --font-title: "Chalet";
+    --block-color: #036512c3;
+    --block-text: #f4f4f4;
+    --block-shadow: #37ab408e;
+    --block-border: #96fbc3af;
+    --title-color: #5db6e5;
+    --accent-color: #97fac0;
+}
 
 ::selection {
     background: #bcf19a;
@@ -19,9 +28,6 @@
     color: #1a2a1a;
 }
 
-body {
-    color: #f2f2f2;
-}
 
 body::before {
     background-image: url("../images/main/background_V.webp");
@@ -38,111 +44,17 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradient(90deg, #a3bd7c, #b475efd9);
-}
-
-.block,
-#radioInfo {
-    background: #036512c3;
-    box-shadow: inset 0 0 10px 10px #37ab408e;
-    border: 5px solid #96fbc3af;
-}
-
-
-
-.text-container {
-    justify-content: left;
-    align-items: left;
-}
-
-
 .text-container {
     & h2 {
-        font-family: "Chalet";
-        color: rgba(93, 182, 229, 255);
-        text-shadow: 2px 2px #000;
+        text-shadow: 3px 3px #000;
     }
 
-    & .characters-container {
-
-        & .characters-header {
-
-            &::before,
-            &::after {
-                background: linear-gradient(90deg, transparent, #97e7f5, transparent);
-
-            }
-        }
-
-        & .characters-list {
-            & article {
-                &:hover {
-                    outline-color: #7becf0 !important;
-                }
-
-                & .character-text {
-                    & span {
-                        color: #dffcd1;
-                    }
-                }
-            }
-        }
-    }
 }
 
-
-#rightContent {
-    & .right-content-nav {
-        & .right-content-links {
-            & a {
-                font-family: "Chalet";
-
-                &.active {
-                    color: #5db5e5;
-                    background: #25a5be32;
-
-                    &::before {
-                        background-color: #5db5e5;
-                    }
-                }
-
-                &:active {
-                    background: #25a5be56;
-
-                    &::before {
-                        background-color: #5db5e5;
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
-.ficha-tecnica {
-    border-color: #d9ff92 !important;
-    background-color: #1c9a595e;
-
-    & table {
-        & tr {
-            border-color: #d9ff92f8;
-        }
-    }
-}
-
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "Chalet";
-    text-shadow: 2px 2px #000;
-
-}
-
-span.table-platforms {
-    color: #5db5e5;
-}
 
 /* #endregion */
 
@@ -160,35 +72,9 @@ span.table-platforms {
         & .section-header {
             & .section-check-all {
                 &.complete {
-                    color: #d6fa88;
-
                     & svg {
-                        stroke: #88fac5;
-                        filter: drop-shadow(0 0 5px #79ffce);
-                    }
-                }
-            }
-        }
-
-        & .checklist-list-wrapper {
-            & ul {
-                & li {
-                    &.completed {
-                        background: rgba(18, 116, 101, 0.422);
-                        border-color: rgba(45, 205, 175, 0.25);
-                    }
-
-                    & .checklist-row {
-                        & label {
-                            & input {
-                                &:checked {
-                                    &+span {
-                                        background: #80d7ff;
-                                        border-color: #83ffff;
-                                    }
-                                }
-                            }
-                        }
+                        stroke: var(--title-color);
+                        filter: drop-shadow(0 0 4px var(--title-color));
                     }
                 }
             }
@@ -199,11 +85,7 @@ span.table-platforms {
 /* #endregion */
 
 /* #region LOGROS */
-.achievement-selector button {
-    background: #5db5e5c2;
-    color: #f2f2f2;
-    text-shadow: 1px 1px #000;
-}
+
 
 /* #endregion */
 
@@ -224,7 +106,6 @@ span.table-platforms {
         position: absolute;
         width: 70px;
         height: 70px;
-
         top: 50%;
         left: 50%;
         margin-top: -35px;
@@ -260,30 +141,9 @@ span.table-platforms {
     }
 }
 
-.radio-image:hover {
-    opacity: 1;
-    filter: saturate(100%);
-    outline: 3px solid #4a6eb3;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.radio-image.selected {
-    outline: 3px solid #4a6eb3;
-    border-radius: 100%;
-    filter: saturate(100%);
-    opacity: 1;
-}
-
 
 #radioInfo {
 
-    & #radioDJ,
-    & #radioGenre {
-        & p {
-            color: #dfffe2;
-        }
-    }
 
     & #playlistSelector {
         display: flex;
@@ -293,35 +153,43 @@ span.table-platforms {
         align-items: center;
 
         & button {
-            border-color: transparent;
+            border: none;
             padding: 1em 2.1em;
             background: #1a2a1a;
             color: #F0F0F0;
             font-family: "Chalet";
             text-transform: uppercase;
             font-size: 0.8em;
+            transition: all 0.2s ease-in;
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+                background: #F0F0F0;
+                color: #1a2a1a;
+            }
 
 
             &.active {
                 background: #F0F0F0;
                 font-weight: 800;
                 color: #1a2a1a;
-                border-top: 5px solid #81B3D0;
+
+                &::after {
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    transform: translateX(0 );
+                    width: 100%;
+                    height: 3px;
+                    content: "";
+                    background: var(--title-color);
+                }
             }
         }
     }
 }
 
-footer {
-    & .footer-left {
-        & .footer-album {
-            & img {
-                border: 3px solid #69e0a8;
-                background: linear-gradient(135deg, rgb(169, 255, 183), rgb(149, 255, 149) 60%);
-            }
-        }
-    }
-}
 
 /* #endregion */
 
@@ -336,7 +204,7 @@ footer {
     }
 
     .radio-wheel {
-        padding-block: 4em;
+        padding-block: 8em;
 
         & .radio-card {
             width: 40px;

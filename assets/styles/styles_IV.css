@@ -8,6 +8,16 @@
 /* #endregion */
 
 /* #region GENERAL */
+:root {
+    --font-title: "Helvetica Neue";
+    --block-color: #090909f6;
+    --block-text: #f4f4f4;
+    --block-shadow: #ececec4b;
+    --block-border: #b8b8b8;
+    --title-color: #e2e2e2;
+    --accent-color: #c7c7c7;
+}
+
 
 ::selection {
     background: #ffffff;
@@ -39,55 +49,10 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradien(90deg, #eaeaea, #b475efd9);
-}
-
-.block,
-#radioInfo {
-    background: #090909f6;
-    color: #f3f3f3;
-    box-shadow: inset 0 0 50px #ececec85;
-    border: 5px solid #b8b8b8;
-}
-
-
-.text-container {
-    justify-content: left;
-    align-items: left;
-}
 
 .text-container {
     & h2 {
-        font-family: "Helvetica Neue";
-        color: #F3F3F3;
         text-shadow: 3px 3px 10px #000000;
-    }
-
-    & .characters-container {
-
-        & .characters-header {
-
-            &::before,
-            &::after {
-                background: linear-gradient(90deg, transparent, #c7c7c7, transparent);
-
-            }
-        }
-
-        & .characters-list {
-            & article {
-                &:hover {
-                    outline-color: #D7A83B !important;
-                }
-
-                & .character-text {
-                    & span {
-                        color: #f1f1e8d7;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -122,167 +87,51 @@ body::before {
 
 /* #region FICHA TÉCNICA */
 
-.ficha-tecnica {
-    border-color: #ffffffd2 !important;
-    background-color: #a1a1a197;
-
-    & table {
-        & tr {
-            border-color: #d6d6d6f8;
-        }
-    }
-}
-
-.ficha-tecnica th,
-.table-platforms {
-    font-family: "Helvetica Neue";
-}
-
-span.table-platforms {
-    color: #ffffff;
-}
-
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.progress-wrapper {
-    & .progress-bar-bg {
-        & .progress-bar-fill {
-            background: linear-gradient(90deg, #ebffe9, #c4c4c4);
-        }
-    }
-}
-
 .checklist-container {
     & article {
         & .section-header {
             & .section-check-all {
                 &.complete {
-                    color: #F2A20F;
-
                     & svg {
-                        stroke: #F2A20F;
-                        filter: drop-shadow(0 0 5px #fbc664);
+                        stroke: #fad91c;
                     }
                 }
             }
         }
 
-        & .checklist-list-wrapper {
-            & ul {
-                & li {
-                    &.completed {
-                        background: rgba(218, 218, 218, 0.06);
-                        border-color: rgba(185, 185, 185, 0.25);
-                    }
-
-                    & .checklist-row {
-                        & label {
-                            & input {
-                                &:checked {
-                                    &+span {
-                                        background: #f1f1f1;
-                                        border-color: #eef0ed;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-details.mod {
-    border: 1px solid #7fbf3f;
-    background: linear-gradient(135deg,
-            #1c351c 0%,
-            #0b140b 100%);
-}
-
-.mod-text h4 {
-    font-family: "Helvetica Neue";
-    color: #ffffff;
-}
-
-.mod-text p {
-    color: #d4d4d4;
-}
-
-details.mod[open] {
-    border: 2px solid #b6ff3b;
-    box-shadow: 0 0 35px rgba(182, 255, 59, 0.6);
-    background: linear-gradient(135deg,
-            #203a20 0%,
-            #2e4a2e 100%);
-}
 
 details.mod summary img {
     border-radius: 50%;
     background: #fff;
 }
 
-.mod-actions a {
-    color: #ffffff;
-    border: 1px solid rgba(154, 205, 50, 0.4);
-}
+.mods-container {
+    & details {
+        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 20%, transparent) 50%, color-mix(in srgb, var(--accent-color) 45%, transparent) 95%);
 
-.mod-actions a:hover {
-    border: 1px solid rgba(154, 205, 50, 0.8);
-    background-color: rgba(154, 205, 50, 0.15);
-}
-
-.mod-actions a.active {
-    border: 2px solid #9acd32;
-    box-shadow: 0 10px 20px 0 rgba(154, 205, 50, 0.5);
-    background-color: rgba(107, 142, 35, 0.5);
-}
-
-.mod-actions span {
-    color: #cddc39;
-}
-
-.mod-features {
-    border-top: 1px solid rgba(154, 205, 50, 0.4);
-}
-
-.tab-content h5 {
-    color: #ffb84d;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-}
-
-.tab-content[data-content="info"] li {
-    color: #f0f0f0;
-}
-
-.tab-content[data-content="info"] li::before {
-    color: #9acd32;
-    text-shadow: 0 0 12px rgba(154, 205, 50, 0.7);
-}
-
-.tab-content a {
-    border: 1px solid #9acd32;
-    background: linear-gradient(135deg, rgba(107, 142, 35, 0.4) 0%, rgba(85, 107, 47, 0.4) 100%);
-    color: #ffffff;
-}
-
-.tab-content a:hover {
-    background: linear-gradient(135deg, rgba(107, 142, 35, 0.6) 0%, rgba(85, 107, 47, 0.6) 100%);
-    box-shadow: 0 4px 15px rgba(154, 205, 50, 0.5);
+        & summary {
+            & .mod-actions {
+                & span {
+                    color: color-mix(in srgb, var(--title-color) 90%, transparent);
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
 
 /* #region LOGROS  */
-.achievement-selector button {
-    background: rgba(229, 228, 228, 0.759);
-}
-
 
 
 .achievement-card:nth-of-type(n + 42) {
@@ -293,57 +142,15 @@ details.mod summary img {
 
 /* #region RADIO */
 
-.radio-container {
-    & .radio-grid {
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        background: linear-gradient(135deg, rgba(255, 250, 250, 0.5), rgba(185, 181, 181, 0.2), rgba(177, 175, 175, 0.5));
-    }
-}
-
-#radioInfo {
-
-    & #radioDJ,
-    & #radioGenre {
-
-        & p {
-            color: #c2c1c1;
-        }
-    }
-
-}
-
-footer {
-    & .footer-left {
-        & .footer-album {
-            & img {
-                border: 3px solid #fef8ff;
-                background: linear-gradient(135deg, rgb(221, 219, 221), rgb(166, 158, 167) 60%);
-            }
-        }
-    }
-}
 
 /* #endregion */
-
 
 /* #region TRUCOS */
 .platform-selector {
     display: none;
 }
 
-#cheatsContainer {
-    margin-top: 1.5em;
-    min-width: 750px;
 
-    & section {
-        border-color: rgba(243, 243, 243, 0.6);
-        background: linear-gradient(225deg, rgba(255, 255, 255, 0.5), rgba(93, 93, 93, 0.5));
-
-        &:nth-of-type(even) {
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(93, 93, 93, 0.5));
-        }
-    }
-}
 
 /* #endregion */
 

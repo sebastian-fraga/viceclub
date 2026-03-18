@@ -7,13 +7,24 @@
 /* #endregion */
 
 /* #region GENERAL */
+
+:root {
+    --font-title: "SF Arborcrest";
+    --block-color: #4c1958bf;
+    --block-text: #f3f3f3;
+    --block-shadow: #fb0dff46;
+    --block-border: #ffa5f7d8;
+    --title-color: #00cce7;
+    --accent-color: #4bc8b7;
+}
+
 ::selection {
-    background: #32a1cd;
+    background: var(--title-color);
     color: #1a2a1a;
 }
 
 ::-moz-selection {
-    background: #32a1cd;
+    background: var(--title-color);
     color: #1a2a1a;
 }
 
@@ -37,157 +48,25 @@ body::before {
     z-index: -1;
 }
 
-#rightContent::before {
-    background: linear-gradient(90deg, #38eeff, #b475ef);
-}
-
-.block,
-#radioInfo {
-    background: rgba(63, 3, 51, 0.75);
-    color: #f2f2f2;
-    box-shadow: inset 0 0 15px 15px rgba(251, 13, 255, 0.15);
-    border: 5px solid #ffa5f7;
-}
-
-
 .text-container {
     & h2 {
-        font-family: "SF Arborcrest";
-        color: #00cce7;
         text-shadow: 3px 3px 10px #000000;
-    }
-
-    & .characters-container {
-
-        & .characters-header {
-
-            &::before,
-            &::after {
-                background: linear-gradient(90deg, transparent, #4bc8b7, transparent);
-
-            }
-        }
-
-        & .characters-list {
-            & article {
-                &:hover {
-                    outline-color: #9beffa !important;
-                }
-
-                & .character-text {
-                    & span {
-                        color: #97f5f5d7;
-                    }
-                }
-            }
-        }
-    }
-}
-
-#rightContent {
-    & .right-content-nav {
-        & .right-content-links {
-            & a {
-                font-family: "SF Arborcrest";
-
-                &.active {
-                    color: #00d4e7;
-                    background: #71b4d032;
-                    text-shadow: 0 0 3px #000;
-
-                    &::before {
-                        background-color: #00d4e7;
-                    }
-                }
-
-                &:active {
-                    background: #71c5d05c;
-
-                    &::before {
-                        background-color: #00d4e7;
-                    }
-                }
-            }
-        }
     }
 }
 
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
-.ficha-tecnica {
-    border-color: #00d4e7d2 !important;
-    background-color: #018e9b97;
-
-    & table {
-        & tr {
-            border-color: #00d4e7a7;
-        }
-    }
-}
-
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "SF Arborcrest";
-    text-align: center;
-}
 
 span.table-platforms {
-    color: #00d4e7;
+    text-shadow: 1px 1px 2px #000000
 }
 
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.progress-wrapper {
-    & .progress-bar-bg {
-        & .progress-bar-fill {
-            background: linear-gradient(90deg, #ffadfc, #e0b4ff);
-        }
-    }
-}
 
-.checklist-container {
-    & article {
 
-        & .section-header {
-            & .section-check-all {
-                &.complete {
-                    color: #ff5ff4;
-
-                    & svg {
-                        stroke: #fda7f7;
-                        filter: drop-shadow(0 0 3px #ff9ef9);
-                    }
-                }
-            }
-        }
-
-        & .checklist-list-wrapper {
-            & ul {
-                & li {
-                    &.completed {
-                        background: rgba(0, 213, 255, 0.06);
-                        border-color: rgba(0, 238, 255, 0.25);
-                    }
-
-                    & .checklist-row {
-                        & label {
-                            & input {
-                                &:checked {
-                                    &+span {
-                                        background: #00a6ff;
-                                        border-color: #00c8ff;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #endregion */
 
@@ -195,20 +74,6 @@ span.table-platforms {
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
-details.mod {
-    border: 1px solid #8b4fa8;
-    background: linear-gradient(135deg, #2d1b3d 0%, #1a0f26 100%);
-}
-
-.mod-text h4 {
-    font-family: "SF Arborcrest";
-}
-
-details.mod[open] {
-    border: 2px solid #a855f7;
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
-    background: linear-gradient(135deg, #2d1b3d 0%, #1f1233 100%);
-}
 
 details.mod summary img {
     clip-path: polygon(50% 0%,
@@ -226,60 +91,24 @@ details.mod summary img {
     background: radial-gradient(circle 50px at center, #60a5d5, #c77ee8);
 }
 
-.mod-actions a {
-    color: #ffffff;
-    border: 1px solid rgba(168, 85, 247, 0.4);
-}
+.mods-container {
+    & details {
+        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 20%, transparent) 50%, color-mix(in srgb, var(--accent-color) 35%, transparent) 95%);
 
-.mod-actions a:hover {
-    border: 1px solid rgba(168, 85, 247, 0.8);
-    background-color: rgba(168, 85, 247, 0.15);
-}
-
-.mod-actions a.active {
-    border: 2px solid #7dd3fc;
-    box-shadow: 0 10px 20px 0 rgba(168, 85, 247, 0.6);
-    background-color: rgba(168, 85, 247, 0.3);
-}
-
-.mod-actions span {
-    color: #7dd3fc;
-}
-
-.mod-features {
-    border-top: 1px solid rgba(168, 85, 247, 0.5);
-}
-
-.tab-content h5 {
-    color: #60d9fa;
-}
-
-.tab-content[data-content="info"] li {
-    color: #f0f0f0;
-}
-
-.tab-content[data-content="info"] li::before {
-    color: #60d9fa;
-    text-shadow: 0 0 10px rgba(96, 217, 250, 0.6);
-}
-
-.tab-content a {
-    border: 1px solid #7dd3fc;
-    background: linear-gradient(135deg, rgba(96, 217, 250, 0.25) 0%, rgba(168, 85, 247, 0.25) 100%);
-    color: #ffffff;
-}
-
-.tab-content a:hover {
-    background: linear-gradient(135deg, rgba(96, 217, 250, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
-    box-shadow: 0 4px 15px rgba(96, 217, 250, 0.4);
+        & summary {
+            & .mod-actions {
+                & span {
+                    color: color-mix(in srgb, var(--accent-color) 85%, transparent 10%);
+                }
+            }
+        }
+    }
 }
 
 /* #endregion */
 
 /* #region LOGROS */
-.achievement-selector button {
-    background: #adf5ff;
-}
+
 
 /* #endregion */
 
@@ -289,61 +118,11 @@ details.mod summary img {
 
 /* #region RADIO */
 
-.radio-container {
-    & .radio-grid {
-        border: 1px solid rgb(131, 238, 255);
-        background: linear-gradient(to right, rgba(82, 186, 255, 0.75), rgba(72, 198, 248, 0.6), rgba(82, 186, 255, 0.75));
-    }
-}
-
-#radioInfo {
-
-    & #radioDJ,
-    & #radioGenre {
-
-        & p {
-            color: rgb(247, 198, 255);
-        }
-    }
-
-}
-
-footer {
-    & .footer-left {
-        & .footer-album {
-            & img {
-                border: 3px solid #fac4ff;
-                background: linear-gradient(135deg, rgb(241, 169, 255), rgb(243, 149, 255) 60%);
-            }
-        }
-    }
-}
-
-
 
 /* #endregion */
 
 /* #region TRUCOS */
 
-.platform-selector {
-    & button {
-        &.active {
-            background-color: rgba(229, 125, 255, 0.5);
-            color: #f2f2f2
-        }
-    }
-}
-
-#cheatsContainer {
-    & section {
-        border-color: rgba(94, 221, 235, 0.6);
-        background: linear-gradient(225deg, rgba(193, 22, 236, 0.5), rgba(255, 99, 239, 0.5));
-
-        &:nth-of-type(even) {
-            background: linear-gradient(45deg, rgba(193, 22, 236, 0.5), rgba(255, 99, 239, 0.5));
-        }
-    }
-}
 
 /* #endregion */
 
