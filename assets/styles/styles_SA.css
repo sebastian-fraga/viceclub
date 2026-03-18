@@ -103,16 +103,17 @@ details.mod summary img {
     background: radial-gradient(circle 70px at top left,
             #d4ff4d,
             #4a7a28);
+    outline: 1px solid #00000013;
 }
 
 .mods-container {
     & details {
-        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 20%, transparent) 50%, color-mix(in srgb, var(--accent-color) 55%, transparent) 95%);
+        background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 45%, transparent) 50%, color-mix(in srgb, var(--block-border) 20%, transparent) 95%);
 
         & summary {
             & .mod-actions {
                 & span {
-                    color: color-mix(in srgb, var(--title-color) 80%, transparent);
+                    color: color-mix(in srgb, var(--title-color) 95%, transparent);
                     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
                 }
             }

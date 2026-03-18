@@ -98,7 +98,7 @@ details.mod summary img {
         & summary {
             & .mod-actions {
                 & span {
-                    color: color-mix(in srgb, var(--accent-color) 85%, transparent 10%);
+                    color: color-mix(in srgb, var(--accent-color) 95%, transparent 5%);
                 }
             }
         }

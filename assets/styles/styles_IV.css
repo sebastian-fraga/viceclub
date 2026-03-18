@@ -142,6 +142,16 @@ details.mod summary img {
 
 /* #region RADIO */
 
+footer {
+    & .footer-left {
+        & .footer-album {
+            & img {
+                border: 3px solid var(--accent-color);
+                background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--block-color) 70%, transparent))
+            }
+        }
+    }
+}
 
 /* #endregion */
 
