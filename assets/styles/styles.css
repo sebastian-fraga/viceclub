@@ -658,6 +658,7 @@ header {
                 border-radius: 0;
                 transition: all 0.15s ease-in-out;
                 font-family: var(--font-title);
+                overflow: hidden;
 
                 & span {
                     font-size: 1.2em;
@@ -669,7 +670,10 @@ header {
                 }
 
                 &:first-of-type {
-                    font-size: 1.6em;
+                    font-size: 1.7em;
+                    justify-content: center;
+                    padding: 0.9em 0;
+                    border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
                 }
 
                 &:not(.active) {
