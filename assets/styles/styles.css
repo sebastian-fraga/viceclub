@@ -665,7 +665,7 @@ header {
 
                 & span:is(a.active) {
                     font-size: 2em;
-                    text-shadow: 0 0 15px var(--accent-color);
+                    text-shadow: 0 0 15px var(--title-color);
                 }
 
                 &:first-of-type {
@@ -682,7 +682,7 @@ header {
                     border-radius: 0;
                     color: var(--title-color);
                     background: color-mix(in srgb, var(--title-color) 10%, transparent 20%);
-                    text-shadow: 0 0 30px var(--accent-color);
+                    text-shadow: 0 0 30px var(--title-color);
 
                     &::before {
                         content: "";
