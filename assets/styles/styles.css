@@ -17,7 +17,8 @@
 
 /* #region GENERAL */
 
-img, a {
+img,
+a {
     -webkit-user-drag: none;
 }
 
@@ -643,7 +644,9 @@ header {
 
 
             & a {
-                display: block;
+                display: flex;
+                align-items: center;
+                gap: 0.6em;
                 text-decoration: none;
                 font-weight: bold;
                 border: none;
@@ -655,6 +658,15 @@ header {
                 border-radius: 0;
                 transition: all 0.15s ease-in-out;
                 font-family: var(--font-title);
+
+                & span {
+                    font-size: 1.2em;
+                }
+
+                & span:is(a.active) {
+                    font-size: 2em;
+                    text-shadow: 0 0 15px var(--accent-color);
+                }
 
                 &:first-of-type {
                     font-size: 1.6em;
@@ -670,6 +682,7 @@ header {
                     border-radius: 0;
                     color: var(--title-color);
                     background: color-mix(in srgb, var(--title-color) 10%, transparent 20%);
+                    text-shadow: 0 0 30px var(--accent-color);
 
                     &::before {
                         content: "";
@@ -716,6 +729,13 @@ header {
                 display: flex;
                 align-items: center;
                 gap: 1em;
+
+
+                & p {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4em;
+                }
 
                 & label {
                     position: relative;
