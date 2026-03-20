@@ -17,6 +17,9 @@
 
 /* #region GENERAL */
 
+img, a {
+    -webkit-user-drag: none;
+}
 
 * {
     margin: 0;
