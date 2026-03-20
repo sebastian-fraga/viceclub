@@ -1910,15 +1910,20 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         background: color-mix(in srgb, var(--accent-color) 85%, transparent);
         font-family: "GTAArtDecoMedium";
         padding: 0.6em 0.8em;
-        opacity: 0.2;
+        opacity: 0.4;
         cursor: pointer;
         display: flex;
         align-items: center;
-        gap: 0.5em;
+        gap: 0.8em;
         border-radius: 6px;
         border: none;
-        transition: scale 0.2s ease-in;
+        transition: all 0.2s ease-in;
         text-transform: uppercase;
+
+        &:hover {
+            background: color-mix(in srgb, var(--accent-color) 95%, transparent);
+            opacity: 0.6;
+        }
 
         &.active {
             opacity: 1;
