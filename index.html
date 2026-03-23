@@ -78,6 +78,23 @@
             </g>
         </svg>
     </div>
+
+    <!--Loader-->
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("container");
+            const header = document.querySelector("header");
+
+            setTimeout(() => {
+                loader.classList.add("hidden");
+                content.style.display = "flex";
+                header.style.display = "flex";
+                setTimeout(() => loader.remove(), 1200);
+            }, 1400);
+        });
+    </script>
+    
     <header style="display: none;">
         <div class="logo-container">
             <img src="assets/images/main/logo.webp" alt="Vice Club Logo">
@@ -305,186 +322,21 @@
         </div>
     </div>
 
-    <!--Loader-->
-    <script>
-        window.addEventListener("load", () => {
-            const loader = document.getElementById("loader");
-            const content = document.getElementById("container");
-            const header = document.querySelector("header");
+    <!--Right Menu-->
+    <script src="./assets/scripts/right-menu.js"></script>
 
-            setTimeout(() => {
-                loader.classList.add("hidden");
-                content.style.display = "flex";
-                header.style.display = "flex";
-                setTimeout(() => loader.remove(), 1200);
-            }, 1400);
-        });
-    </script>
-
-    <!--rightContent-->
-    <script async>
-        document.addEventListener("DOMContentLoaded", function () {
-            const button = document.getElementById("hamburger");
-            const rightContent = document.getElementById("rightContent");
-            const block = document.querySelector(".block");
-
-            button.addEventListener("click", function (event) {
-                event.stopPropagation();
-                rightContent.classList.toggle("show");
-                button.classList.toggle("active");
-                if (block) block.classList.toggle("menu-shift");
-            });
-
-            document.addEventListener("click", function (event) {
-                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-                    rightContent.classList.remove("show");
-                    button.classList.remove("active");
-                    if (block) block.classList.remove("menu-shift");
-                }
-            });
-        });
-    </script>
     <!--News-->
-    <script async>
-        const container = document.getElementById("newsContainer");
-        const btn = document.getElementById("verMas");
-        let noticias = [];
-        let visibleCount = 2;
-        let step = 2;
+    <script src="./assets/scripts/news.js"></script>
 
-        fetch("https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" + Date.now())
-            .then(res => res.json())
-            .then(data => {
-                noticias = data;
-                renderNoticias();
-            });
-
-        function renderNoticias() {
-            container.innerHTML = "";
-
-            noticias.slice(0, visibleCount).forEach(noticia => {
-                const article = document.createElement("article");
-                article.classList.add("news-article");
-                article.innerHTML = `
-            <div class="news-header">
-                <h3>${noticia.title}</h3>
-                <h4>${noticia.date}</h4>
-            </div>
-            <div class="news-content">
-                <p>${noticia.paragraph1}</p>
-                <img src="${noticia.image}" alt="${noticia.title}" class="news-image" loading="lazy" data-footer="${noticia.footerText}">
-                <p>${noticia.paragraph2}</p>
-                <a href="${noticia.link}" target="_blank" rel="noopener" class="news-link">
-                ${noticia.linkText || "Más información"}
-                    <span class="material-symbols-rounded">arrow_outward</span>
-                </a>
-            </div>
-        `;
-                container.appendChild(article);
-            });
-
-            if (visibleCount < noticias.length) {
-                btn.style.display = "flex";
-            } else {
-                btn.style.display = "none";
-            }
-        }
-        btn.addEventListener("click", () => {
-            visibleCount += step;
-            renderNoticias();
-        });
-        const newsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    newsObserver.unobserve(img);
-                }
-            });
-        });
-    </script>
     <!--Overlay-->
     <script src="./assets/scripts/overlay.js"></script>
+
     <!--Facts-->
-    <script async>
-        document.addEventListener("DOMContentLoaded", async () => {
-            try {
-                const res = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t=' + Date.now());
-                const facts = await res.json();
-                const today = new Date();
-                const start = new Date(today.getFullYear(), 0, 0);
-                const diff = today - start;
-                const oneDay = 1000 * 60 * 60 * 24;
-                const dayOfYear = Math.floor(diff / oneDay);
-                const factIndex = dayOfYear % facts.length;
-                const fact = facts[factIndex];
+    <script src="./assets/scripts/facts.js"></script>
 
-                document.querySelector(".fotd-description p").innerHTML = fact.description;
-                document.querySelector(".fotd-image img").src = fact.image;
-                const sourceContainer = document.querySelector(".fotd-source");
-
-                if (fact.source) {
-                    sourceContainer.innerHTML = `
-                <a href="${fact.source}" target="_blank" rel="noopener">Ver fuente
-                    <span class="material-symbols-rounded">info</span>
-                </a>
-            `;
-                } else {
-                    sourceContainer.innerHTML = "";
-                }
-
-            } catch (err) {
-                console.error("Error cargando los datos del día:", err);
-            }
-        });
-
-
-    </script>
     <!--Countdown-->
-    <script>
-        const countDownDate = new Date("Nov 19, 2026 00:00:00").getTime();
+    <script src="./assets/scripts/countdown.js"></script>
 
-        const daysSpan = document.getElementById("days");
-        const hoursSpan = document.getElementById("hours");
-        const minutesSpan = document.getElementById("minutes");
-        const secondsSpan = document.getElementById("seconds");
-
-        function animate(element) {
-            element.classList.remove("pop");
-            void element.offsetWidth;
-            element.classList.add("pop");
-        }
-
-        function updateValue(element, newValue) {
-            if (element.textContent !== newValue.toString()) {
-                element.textContent = newValue;
-                animate(element);
-            }
-        }
-
-        function updateCountdown() {
-            const now = Date.now();
-            const distance = countDownDate - now;
-
-            if (distance < 0) {
-                document.getElementById("countdown").textContent = "LLEGÓ EL DÍA!";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            updateValue(daysSpan, days);
-            updateValue(hoursSpan, hours);
-            updateValue(minutesSpan, minutes);
-            updateValue(secondsSpan, seconds);
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
     <!-- Service Worker -->
     <!-- <script>
         if ("serviceWorker" in navigator) {
@@ -492,6 +344,7 @@
                 .then(() => console.log("Service Worker registrado"));
         }
     </script> -->
+
 </body>
 
 </html>
