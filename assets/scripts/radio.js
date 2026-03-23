@@ -10,6 +10,38 @@ document.addEventListener("DOMContentLoaded", function () {
   let radioData = {};
   let targetTime = null;
 
+  function updateMediaSession(song, radioData) {
+    if (!('mediaSession' in navigator)) return;
+
+    const data = radioData[currentRadio];
+
+
+    const title = song ? song.title : (data?.displayName ?? "Radio");
+    const artist = song ? (song.artist ?? "") : "";
+    const artwork = data?.image ?? "";
+
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: title,
+      artist: artist,
+      artwork: artwork ? [
+        { src: artwork, sizes: "512x512", type: "image/webp" },
+        { src: artwork, sizes: "256x256", type: "image/webp" },
+      ] : []
+    });
+
+    navigator.mediaSession.setActionHandler("previoustrack", () => handleSongChange("prev"));
+    navigator.mediaSession.setActionHandler("nexttrack", () => handleSongChange("next"));
+    navigator.mediaSession.setActionHandler("play", () => {
+      audio.play();
+      playBtn.style.display = "none";
+      playPauseBtn.style.display = "inline";
+    });
+    navigator.mediaSession.setActionHandler("pause", () => {
+      audio.pause();
+      playPauseBtn.style.display = "none";
+      playBtn.style.display = "inline";
+    });
+  }
 
   function getCurrentSongIndex() {
     if (!currentRadio) return -1;
@@ -231,6 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("songTitle").textContent = "Sin información de canciones";
       document.getElementById("artistName").textContent = "";
     }
+    updateMediaSession(null, radioData);
   }
 
   function playRadio(name) {
@@ -257,7 +290,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("songTitle").textContent = "Sin información de canciones";
       document.getElementById("artistName").textContent = "";
     }
+    updateMediaSession(null, radioData);
   }
+
 
   function renderSongList(songs, activeIndex) {
     const radioList = document.getElementById("radioList");
@@ -295,6 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("artistName").textContent = songs[index].artist;
 
     renderSongList(songs, index);
+    updateMediaSession(songs[index], radioData);
   }
 
   const prevSongBtn = document.querySelector(".footer-controls span:nth-child(1)");
@@ -353,6 +389,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const data = radioData[currentRadio];
       const songs = data?._activeSongs ?? data?.songs;
       if (songs) renderSongList(songs, -1);
+      updateMediaSession(null, radioData);
     }
   });
 
@@ -391,6 +428,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("songTitle").textContent = "";
           document.getElementById("artistName").textContent = "";
           document.querySelectorAll("#radioList li").forEach(li => li.classList.remove("active"));
+          updateMediaSession(null, radioData);
         }
       }
     }
