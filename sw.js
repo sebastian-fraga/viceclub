@@ -1,4 +1,4 @@
-const CACHE_NAME = "viceclub-v4";
+const CACHE_NAME = "viceclub-v5";
 
 self.addEventListener("install", event => {
     event.waitUntil(
