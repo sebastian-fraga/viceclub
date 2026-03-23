@@ -105,8 +105,8 @@ body::before {
 
     & .radio-card {
         position: absolute;
-        width: 70px;
-        height: 70px;
+        width: clamp(40px, 8vw, 70px);
+        height: clamp(40px, 8vw, 70px);
         top: 50%;
         left: 50%;
         margin-top: -35px;
@@ -128,8 +128,6 @@ body::before {
                 filter: grayscale(50%);
                 opacity: 0.9;
             }
-
-
         }
 
         &.active {
@@ -180,7 +178,7 @@ body::before {
                     position: absolute;
                     top: -2px;
                     left: 0;
-                    transform: translateX(0 );
+                    transform: translateX(0);
                     width: 100%;
                     height: 3px;
                     content: "";

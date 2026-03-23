@@ -122,8 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (total === 0) return;
 
     const rect = container.getBoundingClientRect();
+    const size = Math.min(rect.width, rect.height);
 
-    const radius = Math.min(rect.width, rect.height) / 2 - 60;
+    const radius = size / 2 - (window.innerWidth < 500 ? 30 : 60);
 
     const step = 360 / total;
     const startAngle = 90;
