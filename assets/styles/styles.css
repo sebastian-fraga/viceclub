@@ -2196,13 +2196,13 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     & .radio-grid {
         border: 1px solid color-mix(in srgb, var(--block-border) 60%, transparent);
-        background: linear-gradient(to right, color-mix(in srgb, var(--block-border) 30%, transparent), color-mix(in srgb, transparent 30%, var(--block-border)));
+        background: linear-gradient(to bottom right, color-mix(in srgb, var(--block-border) 50%, transparent), color-mix(in srgb, transparent 80%, var(--accent-color)));
         margin-block: 3em;
         margin-inline: 1em;
         width: 100%;
         border-radius: 25px;
         padding: 1.5em 2.5em;
-        gap: 2.5em;
+        gap: 3.5em;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -2226,6 +2226,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
                 & img {
                     opacity: 1;
+                    filter: brightness(1.05);
+
                 }
             }
         }
@@ -2236,9 +2238,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             object-fit: contain;
             border-radius: 12px;
             transition: all 0.3s ease;
-            -webkit-user-drag: none;
-            opacity: 0.3;
-            filter: drop-shadow(0 0 5px #000000de);
+            opacity: 0.35;
+            filter: drop-shadow(0 0 5px #000000);
 
             &:hover {
                 opacity: 0.7;
@@ -2284,6 +2285,12 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         font-size: 1.8em;
     }
 
+    & .tracklist-title {
+        font-size: 1.45em;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
     & #radioDJ,
     & #radioGenre {
         display: inline;
@@ -2312,8 +2319,11 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     & ol {
         grid-row: 4 / 5;
         grid-column: 1 / 4;
-        margin: 0;
-        padding-left: 10vw;
+        border-top: 2px solid color-mix(in srgb, var(--block-border) 15%, transparent);
+        padding-top: 0.7em;
+        display: flex;
+        flex-direction: column;
+        margin: 0 5vw;
 
         & li {
             width: max-content;
@@ -2321,6 +2331,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             transition: opacity 0.3s ease;
             margin-bottom: 0.5em;
             font-size: 1.2em;
+            margin-left: 2em;
 
             &.active {
                 opacity: 1;
@@ -3310,6 +3321,7 @@ footer {
         width: 90%;
         gap: 0.8em;
         text-align: start;
+
         & h5 {
             font-size: 1em;
         }
@@ -3324,6 +3336,7 @@ footer {
             line-height: 1.9;
         }
     }
+
     .achievement-content {
         contain-intrinsic-size: 90vw;
 
@@ -3404,18 +3417,15 @@ footer {
 
         & ol {
             display: flex;
-            align-items: stretch;
+            align-items: start;
             flex-direction: column;
             justify-content: space-between;
             text-align: left;
-            gap: 0.2em;
-            margin-top: 1em;
-            padding-left: 0;
+            gap: 0.35em;
+            width: 85%;
 
             & li {
-                overflow-wrap: anywhere;
-                max-width: 25ch;
-                word-break: break-word;
+                max-width: 30ch;
                 font-size: 0.95em;
 
                 &.active {

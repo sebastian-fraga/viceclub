@@ -253,6 +253,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!songs || songs.length === 0) return;
 
+    const title = document.createElement("h4");
+    title.textContent = "Canciones";
+    title.classList.add("tracklist-title");
+
+    radioList.appendChild(title);
+
     songs.forEach((song, i) => {
       const li = document.createElement("li");
 
