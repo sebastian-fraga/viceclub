@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const title = song ? song.title : (data?.displayName ?? "Radio");
-    const artist = song ? (song.artist ?? "") : "";
+    const artist = song ? (song.artist ?? "") : "Vice Club";
     const artwork = data?.image ?? "";
 
     navigator.mediaSession.metadata = new MediaMetadata({
@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     navigator.mediaSession.setActionHandler("previoustrack", () => handleSongChange("prev"));
     navigator.mediaSession.setActionHandler("nexttrack", () => handleSongChange("next"));
+    navigator.mediaSession.setActionHandler("seekbackward", () => seekRelative(-10));
+    navigator.mediaSession.setActionHandler("seekforward", () => seekRelative(10));
     navigator.mediaSession.setActionHandler("play", () => {
       audio.play();
       playBtn.style.display = "none";
