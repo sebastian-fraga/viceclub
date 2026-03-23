@@ -345,90 +345,88 @@ body {
                     height: 1px;
                     display: block;
                     background: linear-gradient(90deg, transparent, var(--title-color), transparent);
+                }
 
+                & h2 {
+                    font-size: 1.8em;
+                    flex-shrink: 0;
+                    white-space: nowrap;
                 }
             }
 
-            & h2 {
-                font-size: 1.8em;
-                flex-shrink: 0;
-                white-space: nowrap;
-            }
-        }
 
-        & .characters-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            & .characters-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
-            gap: 2.5em;
-            margin: 4em 2em;
+                gap: 2.5em;
+                margin: 4em 2em;
 
-            & article {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: end;
-                width: min(250px, 100%);
-                height: 300px;
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                border-radius: 10px;
-                position: relative;
-                overflow: hidden;
-                transition: all 0.2s;
+                & article {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: end;
+                    width: min(250px, 100%);
+                    height: 300px;
+                    border: 1px solid color-mix(in srgb, var(--title-color) 40%, transparent);
+                    border-radius: 10px;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 0.2s;
 
-                & img {
-                    position: absolute;
-                    inset: 0;
-                    z-index: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center top;
-                    display: block;
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
-                    inset: 0;
-                    background: linear-gradient(to top,
-                            rgba(0, 0, 0, 0.95) 0%,
-                            rgba(0, 0, 0, 0.6) 40%,
-                            transparent 70%);
-                    z-index: 1;
-
-                }
-
-
-                &:hover {
-                    box-shadow: 0 0 25px rgb(0, 0, 0);
-                    outline: 2px solid;
-                    transform: scale(1.02) translateY(-3px);
-                    outline-color: var(--title-color);
-                }
-
-
-                & .character-text {
-                    text-align: left;
-                    padding: 1em;
-                    z-index: 1;
-
-                    & p {
-                        margin: 0;
-                        font-family: "GTAArtDecoMedium";
+                    & img {
+                        position: absolute;
+                        inset: 0;
+                        z-index: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center top;
+                        display: block;
                     }
 
-                    & span {
-                        font-size: 0.85em;
-                        color: color-mix(in srgb, var(--title-color) 40%, var(--accent-color) 90%)
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(to top,
+                                rgba(0, 0, 0, 0.95) 0%,
+                                rgba(0, 0, 0, 0.6) 40%,
+                                transparent 70%);
+                        z-index: 1;
+
+                    }
+
+
+                    &:hover {
+                        box-shadow: 0 0 25px rgb(0, 0, 0);
+                        outline: 2px solid;
+                        transform: scale(1.02) translateY(-3px);
+                        outline-color: var(--title-color);
+                    }
+
+
+                    & .character-text {
+                        text-align: left;
+                        padding: 1em;
+                        z-index: 1;
+
+                        & p {
+                            margin: 0;
+                            font-family: "GTAArtDecoMedium";
+                        }
+
+                        & span {
+                            font-size: 0.85em;
+                            color: color-mix(in srgb, var(--title-color) 70%, var(--block-text) 100%)
+                        }
                     }
                 }
             }
         }
     }
 }
-
-
 
 header {
     display: flex;
@@ -625,6 +623,7 @@ header {
 
 
     & .right-content-nav {
+        width: 100%;
         height: calc(100% - 75px);
         display: flex;
         flex-direction: column;

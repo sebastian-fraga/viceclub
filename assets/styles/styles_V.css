@@ -48,13 +48,25 @@ body::before {
     & h2 {
         text-shadow: 3px 3px #000;
     }
-
 }
 
 
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
+.ficha-tecnica {
+    & table {
+        & th {
+            text-shadow: 2px 2px #000;
+        }
+
+        & td {
+            & span {
+                text-shadow: 2px 2px #000;
+            }
+        }
+    }
+}
 
 /* #endregion */
 
