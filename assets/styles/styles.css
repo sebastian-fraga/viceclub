@@ -1929,19 +1929,19 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1em auto 1.6em auto;
-    gap: 0.5em;
+    margin: 2em auto 1.6em auto;
+    gap: 1em;
     background: rgba(250, 250, 250, 0.05);
-    border-radius: 18px;
+    border: 1px solid rgba(250, 250, 250, 0.15);
+    box-shadow: inset 0 0 20px rgba(250, 250, 250, 0.15);
+    border-radius: 24px;
     padding: 1em 1.5em;
-    width: max-content;
+    max-width: 950px;
 
 
     & button {
-        background: color-mix(in srgb, var(--accent-color) 85%, transparent);
         font-family: "GTAArtDecoMedium";
         padding: 0.6em 0.8em;
-        opacity: 0.25;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -1952,13 +1952,23 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         text-transform: uppercase;
 
         &:hover {
-            background: color-mix(in srgb, var(--accent-color) 95%, transparent);
-            opacity: 0.6;
+            background: color-mix(in srgb, var(--block-border) 30%, transparent);
+            outline: 1px solid color-mix(in srgb, var(--block-border) 20%, transparent);
+            color: var(--block-text);
+
+            & img {
+                filter: invert(100%);
+            }
         }
 
         &.active {
-            opacity: 1;
-            transition: opacity 0.15s;
+            background: color-mix(in srgb, var(--block-border) 60%, transparent);
+            outline: 1px solid color-mix(in srgb, var(--block-border) 80%, transparent);
+            color: var(--block-text);
+
+            & img {
+                filter: invert(100%);
+            }
         }
 
         &:active {
@@ -1969,29 +1979,63 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     & img {
         width: 25px;
         pointer-events: none;
+        transition: all 0.2s ease-in;
     }
 }
 
 .achievement-disclaimer {
+    background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    box-shadow: inset 0 0 10px rgba(250, 250, 250, 0.1);
+    max-width: 950px;
+    width: 100%;
+    border-radius: 0 17px 17px 0;
+    padding: 1em 1.5em;
+    margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
+    position: relative;
+    gap: 0.2em;
 
-    & p {
-        font-family: "GTAArtDecoRegular" !important;
-        font-size: 1em !important;
-        text-align: center !important;
-        color: rgb(230, 136, 136);
-        max-width: 160ch !important;
+    &::before {
+        content: "";
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background-color: color-mix(in srgb, var(--accent-color) 90%, transparent);
     }
 
-    & h3 {
-        text-align: center;
+    & h5 {
+        text-align: start;
+        font-size: 1.1em;
+    }
+
+    & p {
+        font-family: "GTAArtDecoRegular";
+        font-size: 1em !important;
+        color: color-mix(in srgb, var(--block-text) 70%, transparent 70%);
+        text-align: start;
+        max-width: 160ch;
+        margin: 0 !important;
+    }
+
+
+
+    & .achievement-warning {
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        color: color-mix(in srgb, var(--accent-color) 85%, var(--block-text) 100%);
     }
 }
 
 .achievement-content {
-    contain-intrinsic-size: 800px;
+    contain-intrinsic-size: 950px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2004,7 +2048,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         padding-bottom: 20px;
         width: 100%;
         margin: 30px auto 0 auto;
-        width: 800px;
+        max-width: 950px;
 
         & .achievement-card {
             background: rgba(0, 0, 0, 0.6);
@@ -2040,11 +2084,12 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                         margin: 0 0 4px 0;
                         font-size: 1.1rem;
                         color: #fff;
+                        text-align: start;
                     }
 
                     & .achievement-description {
                         margin: 0;
-                        text-align: left;
+                        text-align: start;
                         font-size: 0.9rem;
                         color: rgba(255, 255, 255, 0.6);
                     }
@@ -2522,11 +2567,16 @@ footer {
 
 /* #region TRUCOS */
 .platform-selector {
-    margin: 2em 0 1.5em 0;
+    margin: 2em auto 1em auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.7em;
+    background: rgba(250, 250, 250, 0.05);
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 18px;
+    padding: 1em 1.5em;
+    width: max-content;
 
     & button {
         font-size: 1em;
@@ -2764,6 +2814,7 @@ footer {
             text-align: center;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+            padding: 1em;
 
 
             & .text-container {
@@ -3255,6 +3306,24 @@ footer {
         }
     }
 
+    .achievement-disclaimer {
+        width: 90%;
+        gap: 0.8em;
+        text-align: start;
+        & h5 {
+            font-size: 1em;
+        }
+
+        & p {
+            font-size: 0.9em !important;
+            line-height: 1.4 !important;
+        }
+
+        & .achievement-warning {
+            font-size: 0.85em;
+            line-height: 1.9;
+        }
+    }
     .achievement-content {
         contain-intrinsic-size: 90vw;
 

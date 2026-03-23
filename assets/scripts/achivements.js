@@ -25,17 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     fetch(rutaJSON)
-        .then(function (respuesta) {
-            if (!respuesta.ok) throw new Error("No se encontró el archivo JSON");
-            return respuesta.json();
-        })
-        .then(function (datos) {
-            renderizarLogros(datos);
-            configurarBotones();
-        })
-        .catch(function (error) {
-            console.error("Error al cargar los logros:", error);
-        });
+        .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+        .then(datos => renderizarLogros(datos))
+        .catch(error => console.error("Error al cargar los logros:", error))
+        .finally(() => configurarBotones());
 
     function renderizarLogros(datos) {
         const secciones = ["original", "definitive", "socialclub", "iv", "tbogt", "tlad", "enhanced"];
