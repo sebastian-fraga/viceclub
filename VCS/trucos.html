@@ -118,34 +118,14 @@
     </div>
 
     <!-- Sounds -->
-
     <script src="../assets/scripts/sounds.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const button = document.getElementById("hamburger");
-            const rightContent = document.getElementById("rightContent");
-            const block = document.querySelector(".block");
+    <!-- Right Content -->
+    <script src="../assets/scripts/right-menu.js"></script>
 
-            button.addEventListener("click", function (event) {
-                event.stopPropagation();
-                rightContent.classList.toggle("show");
-                button.classList.toggle("active");
-
-                if (block) block.classList.toggle("menu-shift");
-            });
-
-            document.addEventListener("click", function (event) {
-                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-                    rightContent.classList.remove("show");
-                    button.classList.remove("active");
-
-                    if (block) block.classList.remove("menu-shift");
-                }
-            });
-        });
-    </script>
+    <!-- Cheats -->
     <script src="../assets/scripts/cheats.js"></script>
+
 </body>
 
 </html>

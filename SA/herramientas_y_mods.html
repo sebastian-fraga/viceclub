@@ -120,68 +120,16 @@
     <script src="../assets/scripts/sounds.js">
     </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const button = document.getElementById("hamburger");
-            const rightContent = document.getElementById("rightContent");
-            const block = document.querySelector(".block");
+    <!-- Right Content -->
+    <script src="../assets/scripts/right-menu.js"></script>
 
-            button.addEventListener("click", function (event) {
-                event.stopPropagation();
-                rightContent.classList.toggle("show");
-                button.classList.toggle("active");
+    <!-- Mods Selector -->
+    <script src="../assets/scripts/mods-selector.js"></script>
 
-                if (block) block.classList.toggle("menu-shift");
-            });
 
-            document.addEventListener("click", function (event) {
-                if (!rightContent.contains(event.target) && !button.contains(event.target)) {
-                    rightContent.classList.remove("show");
-                    button.classList.remove("active");
-
-                    if (block) block.classList.remove("menu-shift");
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            document.addEventListener('click', function (e) {
-                const link = e.target.closest('.tab-link');
-                if (!link) return;
-
-                e.preventDefault();
-                e.stopPropagation();
-
-                const targetTab = link.getAttribute('data-tab');
-                const parentDetails = link.closest('details');
-
-                if (!parentDetails) return;
-
-                parentDetails.querySelectorAll('.tab-link').forEach(tab => {
-                    tab.classList.remove('active');
-                });
-
-                link.classList.add('active');
-
-                parentDetails.querySelectorAll('.tab-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-
-                const targetContent = parentDetails.querySelector(
-                    `[data-content="${targetTab}"]`
-                );
-
-                if (targetContent) {
-                    targetContent.classList.add('active');
-                }
-            });
-
-        });
-    </script>
-
+    <!-- Mods -->
     <script src="../assets/scripts/mods.js"></script>
+
 </body>
 
 </html>
