@@ -203,12 +203,8 @@ body::before {
     }
 
     .radio-wheel {
-        padding-block: 8em;
+        padding-block: 3em;
 
-        & .radio-card {
-            width: 40px;
-            height: 40px;
-        }
     }
 }
 
