@@ -112,24 +112,35 @@ document.addEventListener("DOMContentLoaded", function () {
     makeDial(120);
   }
 
-  function makeDial(offsetAngle = 0) {
+  function makeDial() {
     if (!window.location.pathname.includes("/V/")) return;
 
-    const items = document.querySelectorAll("#radioGrid .radio-card");
+    const container = document.getElementById("radioGrid");
+    const items = container.querySelectorAll(".radio-card");
     const total = items.length;
-    const step = 360 / total;
 
-    const isMobile = window.innerWidth < 1024;
-    const radius = isMobile ? 180 : 310;
-    const offset = isMobile ? 90 : 90;
+    if (total === 0) return;
+
+    const rect = container.getBoundingClientRect();
+
+    const radius = Math.min(rect.width, rect.height) / 2 - 60;
+
+    const step = 360 / total;
+    const startAngle = 90;
 
     items.forEach((item, index) => {
-      const angle = step * index + offset;
+      const angle = step * index + startAngle;
+
+      item.style.position = "absolute";
+      item.style.left = "50%";
+      item.style.top = "50%";
+
       item.style.transform = `
-        rotate(${angle}deg)
-        translate(${radius}px)
-        rotate(-${angle}deg)
-      `;
+      rotate(${angle}deg)
+      translate(${radius}px)
+      rotate(${-angle}deg)
+    `;
+      window.addEventListener("resize", makeDial);
     });
   }
 
