@@ -132,7 +132,19 @@ details.mod summary img {
 /* #endregion */
 
 /* #region LOGROS  */
+.achievement-selector {
+    & button {
+        &:nth-of-type(2) {
+            background: color-mix(in srgb, #BD3434 85%, transparent);
+            color: #dfdfdf;
+        }
 
+        &:nth-of-type(3) {
+            background: linear-gradient(to right, #F1EF8A, #C8597B, #8DCBE6);
+            color: #000000;
+        }
+    }
+}
 
 .achievement-card:nth-of-type(n + 42) {
     opacity: 0.25;
