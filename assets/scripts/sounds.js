@@ -89,6 +89,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
     });
-    console.log(window.location.pathname);
-    console.log(getSoundsForCurrentPath());
+
 });
