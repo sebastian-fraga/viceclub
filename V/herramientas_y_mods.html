@@ -125,33 +125,10 @@
 
     <!-- Right Content -->
     <script src="../assets/scripts/right-menu.js"></script>
-
-    <script>
-        document.querySelectorAll(".tools").forEach(tool => {
-            const arrow = tool.querySelector(".tools-arrow");
-            const tabs = tool.querySelectorAll(".tools-tabs button");
-            const contents = tool.querySelectorAll(".tools-tab-content");
-
-            tool.querySelector(".tools-header").addEventListener("click", () => {
-                tool.classList.toggle("expanded");
-            });
-
-            tabs.forEach(tab => {
-                tab.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    tabs.forEach(btn => btn.classList.remove("active"));
-                    tab.classList.add("active");
-
-                    const selected = tab.dataset.tab;
-                    contents.forEach(c => {
-                        c.classList.toggle("active", c.dataset.content === selected);
-                    });
-                });
-            });
-
-            tabs[0].click();
-        });
-    </script>
+    
+    <!-- Mods -->
+    <script src="../assets/scripts/mods.js"></script>
+    
 </body>
 
 </html>

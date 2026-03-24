@@ -108,16 +108,32 @@ details.mod summary img {
 
 .mods-container {
     & details {
-        background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 45%, transparent) 50%, color-mix(in srgb, var(--block-border) 20%, transparent) 95%);
+        &[open] {
+            & .mod-expanded {
+                & nav {
+                    & a {
+                        & span {
+                            color: color-mix(in srgb, var(--accent-color) 45%, var(--block-text));
+                        }
 
-        & summary {
-            & .mod-actions {
-                & span {
-                    color: color-mix(in srgb, var(--title-color) 95%, transparent);
-                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+                        &.active {
+                            border: 2px solid color-mix(in srgb, var(--block-border) 45%, transparent);
+                            background: color-mix(in srgb, var(--block-border) 60%, transparent);
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+
+.tab-content[data-content="info"].active .btn-info,
+.tab-content[data-content="download"].active .btn-download {
+    background: color-mix(in srgb, var(--block-border) 80%, transparent);
+
+    & .material-symbols-rounded {
+        color: color-mix(in srgb, var(--accent-color) 40%, var(--block-text));
     }
 }
 
