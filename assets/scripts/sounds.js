@@ -1,5 +1,5 @@
 const DEFAULT_DELAY = 870;
-const BASE_SOUNDS = '../assets/sounds/';
+const BASE_SOUNDS = '../sounds/';
 
 let audioCtx = null;
 const buffers = {};
