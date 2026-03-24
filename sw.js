@@ -26,6 +26,14 @@ self.addEventListener("install", event => {
                 "./assets/images/main/portada_V.webp",
                 "./assets/images/main/background_VI.webp",
                 "./assets/images/main/portada_VI.webp",
+                "./assets/images/main/III.webp",
+                "./assets/images/main/VC.webp",
+                "./assets/images/main/SA.webp",
+                "./assets/images/main/LCS.webp",
+                "./assets/images/main/VCS.webp",
+                "./assets/images/main/IV.webp",
+                "./assets/images/main/V.webp",
+                "./assets/images/main/VI.webp",
             ]);
         })
     );
