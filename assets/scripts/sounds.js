@@ -1,5 +1,5 @@
 const DEFAULT_DELAY = 870;
-const BASE_SOUNDS = '/assets/sounds/';
+const BASE_SOUNDS = '/sounds/';
 
 let audioCtx = null;
 const buffers = {};
@@ -89,5 +89,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
     });
-
+    console.log(window.location.pathname);
+    console.log(getSoundsForCurrentPath());
 });
