@@ -644,14 +644,15 @@ header {
 
             & a {
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
+                width: 100%;
                 gap: 0.6em;
                 text-decoration: none;
                 font-weight: bold;
                 border: none;
                 line-height: 1.2;
                 position: relative;
-                padding: 0.9em 3em 0.9em 1.2em;
+                padding: 0.9em 2em 0.9em 1.2em;
                 font-size: 1.3em;
                 border-radius: 0;
                 transition: all 0.15s ease-in-out;
@@ -661,7 +662,10 @@ header {
                     font-size: 1.2em;
                     white-space: normal;
                     word-break: break-word;
+                }
 
+                & p {
+                    max-width: 25ch;
                 }
 
                 & span:is(a.active) {
@@ -2997,6 +3001,10 @@ footer {
 
                     & a {
                         font-size: 1.25em;
+                    }
+
+                    & p {
+                            max-width: 15ch;
                     }
                 }
             }
