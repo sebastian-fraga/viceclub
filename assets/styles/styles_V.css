@@ -96,6 +96,35 @@ body::before {
 
 /* #endregion */
 
+/* #region HERRAMIENTAS Y MODS */
+.mods-container {
+    & details {
+        &[open] {
+            & .mod-expanded {
+                & nav {
+                    & a {
+                        & span {
+                            color: color-mix(in srgb, var(--accent-color) 85%, var(--block-text));
+                        }
+
+                        &.active {
+                            border: 2px solid color-mix(in srgb, var(--block-border) 95%, transparent);
+                            background: color-mix(in srgb, var(--block-border) 60%, transparent);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+details.mod summary img {
+    border-radius: 30px;
+    background: #ffffff91;
+}
+
+/* #endregion */
+
 /* #region LOGROS */
 
 

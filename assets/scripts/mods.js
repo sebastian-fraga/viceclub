@@ -39,6 +39,7 @@ function renderMods(mods, title) {
     img.alt = `Logo de ${mod.name}`;
     img.loading = "lazy";
 
+
     const textDiv = document.createElement("div");
     textDiv.className = "mod-text";
 
@@ -46,7 +47,7 @@ function renderMods(mods, title) {
     h4.textContent = mod.name;
 
     const desc = document.createElement("p");
-    desc.textContent = mod.description;
+    desc.innerHTML = mod.description;
 
     textDiv.appendChild(h4);
     textDiv.appendChild(desc);
@@ -168,7 +169,7 @@ function renderMods(mods, title) {
 
     mod.download.steps.forEach(s => {
       const li = document.createElement("li");
-      li.textContent = s;
+      li.innerHTML = s;
       ol.appendChild(li);
     });
 
