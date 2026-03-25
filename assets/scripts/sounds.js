@@ -63,31 +63,31 @@ document.addEventListener('DOMContentLoaded', async () => {
         return localStorage.getItem('soundEnabled') === 'true';
     }
 
-    document.querySelectorAll('a').forEach(link => {
+    document.querySelectorAll('#rightContent a').forEach(link => {
 
-        link.addEventListener('click', function (e) {
-            navigating = true;
+            link.addEventListener('click', function (e) {
+                navigating = true;
 
-            if (isSoundEnabled()) playSound('click');
+                if (isSoundEnabled()) playSound('click');
 
-            const href = this.getAttribute('href');
-            if (href && href !== '#') {
-                try {
-                    const url = new URL(href, window.location.href);
-                    if (url.protocol === 'http:' || url.protocol === 'https:') {
-                        e.preventDefault();
-                        setTimeout(() => window.location.href = url.href, delay);
-                    }
-                } catch (err) { }
-            }
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    try {
+                        const url = new URL(href, window.location.href);
+                        if (url.protocol === 'http:' || url.protocol === 'https:') {
+                            e.preventDefault();
+                            setTimeout(() => window.location.href = url.href, delay);
+                        }
+                    } catch (err) { }
+                }
+            });
+
+            link.addEventListener('mouseenter', () => {
+                if (navigating || !isSoundEnabled() || hoverTimeout) return;
+                playSound('hover');
+                hoverTimeout = setTimeout(() => hoverTimeout = null, 100);
+            });
+
         });
-
-        link.addEventListener('mouseenter', () => {
-            if (navigating || !isSoundEnabled() || hoverTimeout) return;
-            playSound('hover');
-            hoverTimeout = setTimeout(() => hoverTimeout = null, 100);
-        });
-
-    });
 
 });
