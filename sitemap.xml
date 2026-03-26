@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<!-- Main -->
   <url>
     <loc>https://viceclub.vercel.app/</loc>
     <lastmod>2026-03-15</lastmod>
     <priority>1.0</priority>
   </url>
 
-<!-- III -->
   <url>
     <loc>https://viceclub.vercel.app/III/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -39,7 +37,6 @@
     <priority>0.8</priority>
   </url>
 
-<!-- VC -->
   <url>
     <loc>https://viceclub.vercel.app/VC/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -70,7 +67,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- SA -->
   <url>
     <loc>https://viceclub.vercel.app/SA/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -101,7 +97,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- LCS -->
   <url>
     <loc>https://viceclub.vercel.app/LCS/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -120,7 +115,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- VCS -->
   <url>
     <loc>https://viceclub.vercel.app/VCS/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -139,7 +133,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- IV -->
   <url>
     <loc>https://viceclub.vercel.app/IV/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -170,7 +163,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- V -->
   <url>
     <loc>https://viceclub.vercel.app/V/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
@@ -201,7 +193,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- VI -->
   <url>
     <loc>https://viceclub.vercel.app/VI/inicio.html</loc>
     <lastmod>2026-03-10</lastmod>
