@@ -64,6 +64,7 @@ body::before {
                 & h2 {
                     background-image: linear-gradient(to bottom, #8fbaf3, #f5a3d5, #ecc598);
                 }
+
                 &::before,
                 &::after {
                     background: linear-gradient(90deg, transparent, #ccbdff, transparent);
@@ -110,6 +111,13 @@ body::before {
                         background-color: #81eaf4;
                     }
                 }
+            }
+        }
+
+        & .right-content-footer {
+            & .footer-settings:first-of-type {
+                opacity: 0.2;
+                cursor: not-allowed !important; 
             }
         }
     }

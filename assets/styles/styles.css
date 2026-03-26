@@ -731,25 +731,34 @@ header {
             border-top: 1px solid rgba(225, 177, 255, 0.2);
             width: 100%;
             flex-direction: column;
-            color: #d1d0d0;
-            padding: 1em;
+            gap: 1.3em;
+            padding-block: 1.5em 2em;
 
             & .footer-settings {
                 display: flex;
                 align-items: center;
-                gap: 1em;
+                gap: 1.3em;
 
-
-                & p {
+                & .settings-text {
                     display: flex;
                     align-items: center;
-                    gap: 0.4em;
+                    gap: 0.7em;
+
+                    & span {
+                        color: #fcfafa;
+                    }
+
+                    & p {
+                        color: #d1d0d0;
+                        font-size: 0.95em;
+                    }
                 }
+
 
                 & label {
                     position: relative;
                     display: inline-block;
-                    width: 50px;
+                    width: 60px;
                     height: 26px;
 
                     & input {
@@ -761,7 +770,7 @@ header {
                             background-color: #8c71d0;
 
                             &::before {
-                                transform: translateX(24px);
+                                transform: translateX(34px);
                             }
                         }
                     }
@@ -788,10 +797,20 @@ header {
                     }
 
                 }
+
+                & button {
+                    padding: 0.4em 1.5em;
+                    border-radius: 5px;
+                    background: #8c71d0;
+                    color: #f2f2f2;
+                    font-weight: 700;
+                    border: 1px solid #f2f2f273;
+                }
             }
         }
     }
 }
+
 
 
 .welcome-wrapper {
@@ -3004,7 +3023,7 @@ footer {
                     }
 
                     & p {
-                            max-width: 15ch;
+                        max-width: 15ch;
                     }
                 }
             }
