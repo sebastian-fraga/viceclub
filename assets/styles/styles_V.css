@@ -29,19 +29,30 @@
 }
 
 
-body::before {
-    background-image: url("../images/main/background_V.webp");
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    transform: scale(1.1);
-    z-index: -1;
+body {
+    &::before {
+        background-image: url("../images/main/background_V.webp");
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        transform: scale(1.1);
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 5%, var(--block-color)));
+    }
 }
 
 .text-container {
