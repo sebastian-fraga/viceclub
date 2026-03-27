@@ -824,7 +824,7 @@ header {
                     background: #8c71d0;
                     color: #f2f2f2;
                     font-weight: 700;
-                    border: 1px solid #f2f2f273;
+                    border: 2px solid #f2f2f286;
                     transition: opacity 0.2s;
 
                     &:hover {
