@@ -324,6 +324,16 @@ body {
                 margin: 1.2em 3em;
                 line-height: 1.5;
             }
+
+            & .mod-paragraph {
+                font-size: 1.3em;
+                margin: 3em auto 1.5em auto;
+                max-width: 80ch;
+                text-wrap: balance;
+                text-align: center;
+                line-height: 1.8;
+                color: color-mix(in srgb, var(--block-text) 85%, transparent);
+            }
         }
 
         & .characters-container {
@@ -2908,7 +2918,14 @@ footer {
 
                 & h2 {
                     line-height: 1.5;
-                    font-size: 1.7em;
+                    font-size: 1.85em;
+                    text-wrap: balance;
+                }
+
+                & .mod-paragraph {
+                    font-size: 1.1em;
+                    max-width: 75ch;
+                    line-height: 2;
                 }
 
             }
