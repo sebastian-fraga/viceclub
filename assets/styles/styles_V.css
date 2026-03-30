@@ -10,12 +10,12 @@
 /* #region GENERAL */
 :root {
     --font-title: "Chalet";
-    --block-color: #036512c3;
-    --block-text: #f4f4f4;
-    --block-shadow: #37ab408e;
-    --block-border: #96fbc3af;
-    --title-color: #5db6e5;
-    --accent-color: #97fac0;
+    --block-color: rgba(31, 36, 32, 0.85);
+    --block-text: #eaeaea;
+    --block-shadow: rgba(4, 102, 69, 0.24);
+    --block-border: rgb(42, 105, 76);
+    --title-color: rgba(93, 182, 229, 255);
+    --accent-color: #6bd1b8bd;
 }
 
 ::selection {
@@ -52,6 +52,16 @@ body {
         width: 100%;
         height: 80px;
         background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 5%, var(--block-color)));
+    }
+
+    & .block {
+        background: linear-gradient(135deg,
+                #060807 0%,
+                #16241a 40%,
+                #050706 100%);
+
+        backdrop-filter: blur(6px);
+
     }
 }
 
@@ -195,7 +205,6 @@ details.mod summary img {
 
 #radioInfo {
 
-
     & #playlistSelector {
         display: flex;
         gap: 1em 0.3em;
@@ -206,7 +215,7 @@ details.mod summary img {
         & button {
             border: none;
             padding: 1em 2.1em;
-            background: #1a2a1a;
+            background: #000000;
             color: #F0F0F0;
             font-family: "Chalet";
             text-transform: uppercase;

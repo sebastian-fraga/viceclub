@@ -84,7 +84,7 @@ body {
             bottom: 0;
             width: 100%;
             height: 80px;
-            background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--main-word-color) 65%, transparent));
+            background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--secondary-header-gradient) 85%, transparent));
         }
 
         ::selection {
