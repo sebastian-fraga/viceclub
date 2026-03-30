@@ -42,8 +42,10 @@ a {
 
 body {
     font-family: "GTAArtDecoRegular";
-    padding-bottom: 10vh;
+    padding-bottom: 7vh;
     -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: column;
 
 
     &::-webkit-scrollbar {
@@ -60,6 +62,8 @@ body {
     }
 
     &.index {
+        flex: 1;
+
         &::before {
             background-image: url("../images/main/background.webp");
             content: "";
@@ -164,7 +168,7 @@ body {
         }
 
         & .block {
-
+            flex: 1;
             flex-direction: column;
             background: linear-gradient(180deg,
                     rgba(141, 117, 239, 0.664),
@@ -314,6 +318,7 @@ body {
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         align-items: flex-start;
+        overflow: hidden;
 
         & .text-container {
             min-width: 0 !important;
@@ -444,6 +449,16 @@ body {
                 }
             }
         }
+    }
+
+    & footer {
+        margin: 0 auto;
+        width: 100%;
+        color: color-mix(in srgb, var(--accent-color) 25%, var(--block-text));
+        opacity: 1;
+        text-align: center;
+        padding-block: 0.5em;
+        text-shadow: 1px 1px 4px #000;
     }
 }
 
@@ -1035,7 +1050,7 @@ header {
     padding: 15px 20px;
     border-radius: 20px;
     z-index: 10;
-    box-shadow: 0 50px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 50px 25px 20px rgba(0, 0, 0, 0.1);
 
     & h2 {
         position: relative;
@@ -2430,7 +2445,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 
-footer {
+.radio-footer {
     display: none;
     align-items: center;
     grid-template-columns: 1fr auto 1fr;
@@ -3514,7 +3529,7 @@ footer {
         }
     }
 
-    footer {
+    .radio-footer {
         padding-bottom: 1em;
         display: none;
         gap: 0;

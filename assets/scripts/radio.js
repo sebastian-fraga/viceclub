@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const footer = document.querySelector("footer");
+  const footer = document.querySelector(".radio-footer");
   const radioInfo = document.getElementById("radioInfo");
   const radioTitle = document.getElementById("radioTitle");
   const radioGrid = document.getElementById("radioGrid");
@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateRadioDirect(radioKey) {
     const data = radioData[radioKey];
     if (!data) return;
+    if (!footer) return
 
     radioInfo.classList.add("active");
     footer.classList.add("active");
