@@ -63,6 +63,7 @@ body {
 
     &.index {
         flex: 1;
+        overflow: hidden;
 
         &::before {
             background-image: url("../images/main/background.webp");
@@ -93,6 +94,7 @@ body {
         }
 
         & #loader {
+            overflow: hidden;
             position: fixed;
             top: 0;
             left: 0;
