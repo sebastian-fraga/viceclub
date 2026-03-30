@@ -118,7 +118,7 @@ body {
 
             & svg {
 
-                filter: drop-shadow(0 0 40px #fd92d493) drop-shadow(0 0 20px #9992fd93) drop-shadow(0 0 10px #9299fd93);
+                filter: drop-shadow(0 0 25px #fd92d4e0) drop-shadow(0 0 20px #9992fde0) drop-shadow(0 0 25px #e396faab);
 
                 & g {
                     & path {
@@ -2825,7 +2825,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     0%,
     100% {
-        stroke: #ffb0f7;
+        stroke: #ffc7f9;
         opacity: 1;
     }
 
@@ -2843,7 +2843,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     }
 
     14% {
-        stroke: #d4a5ff;
+        stroke: #ffffff;
         opacity: 1;
     }
 }
