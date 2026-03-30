@@ -1526,7 +1526,23 @@ details[open]::details-content {
             background: color-mix(in srgb, var(--accent-color) 25%, transparent);
             border-color: color-mix(in srgb, var(--accent-color) 60%, transparent);
             border-radius: 8px;
-            ;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg,
+                        transparent,
+                        rgba(255, 255, 255, 0.1),
+                        transparent);
+                animation: checklist-shine 0.8s ease-in-out;
+                pointer-events: none;
+            }
         }
 
         & .section-header {
@@ -1734,6 +1750,7 @@ details[open]::details-content {
         object-fit: contain;
     }
 }
+
 
 /* #endregion */
 
@@ -2866,13 +2883,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     }
 }
 
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        transform: translateX(50%) translateY(-5px);
-    }
-}
-
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -2883,6 +2893,17 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         opacity: 0.75;
         transform: translateY(0);
     }
+}
+
+@keyframes checklist-shine {
+    0% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    100% {
+        transform: translateX(200%) skewX(-15deg);
+    }
+
 }
 
 /* #endregion */
