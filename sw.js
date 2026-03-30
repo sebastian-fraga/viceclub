@@ -1,4 +1,5 @@
-const CACHE_NAME = "viceclub-v" + Date.now();
+const CACHE_VERSION = "1.0";
+const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 self.addEventListener("install", event => {
     event.waitUntil(
