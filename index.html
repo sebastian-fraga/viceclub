@@ -88,14 +88,21 @@
 
             setTimeout(() => {
                 loader.classList.add("hidden");
+
                 content.style.display = "flex";
                 header.style.display = "flex";
+
+                requestAnimationFrame(() => {
+                    content.style.opacity = "1";
+                    header.style.opacity = "1";
+                });
+
                 setTimeout(() => loader.remove(), 1200);
             }, 1400);
         });
     </script>
 
-    <header style="display: none;">
+    <header style="opacity: 0;  transition: opacity 0.8s ease;">
         <div class="logo-container">
             <img src="assets/images/main/logo.webp" alt="Vice Club Logo">
             <h1>VICE CLUB</h1>
@@ -108,7 +115,7 @@
             </button>
         </nav>
     </header>
-    <div class="block" id="container" style="display: none;">
+    <div class="block" id="container" style="opacity: 0; transition: opacity 0.8s ease;">
         <div class="welcome-wrapper">
             <h2 class="welcome-title">BIENVENIDO A VICE CLUB</h2>
             <div class="fotd-container">
