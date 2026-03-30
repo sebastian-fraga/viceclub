@@ -165,10 +165,13 @@ function updateSectionProgress(article) {
     badge.textContent = `${done.length} / ${all.length}`;
   }
 
+  const complete = all.length > 0 && done.length === all.length;
+
   if (checkAllBtn) {
-    const complete = all.length > 0 && done.length === all.length;
     checkAllBtn.classList.toggle("complete", complete);
   }
+
+  article.classList.toggle("section-complete", complete);
 }
 
 function buildProgressBar() {

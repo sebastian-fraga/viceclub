@@ -1517,10 +1517,18 @@ details[open]::details-content {
 .checklist-container {
     display: flex;
     flex-direction: column;
-    gap: 0.4em;
+    gap: 0.6em;
     padding: 0.5em 1.5em 2em 1.5em;
 
     & article {
+
+        &:is(.section-complete) {
+            background: color-mix(in srgb, var(--accent-color) 25%, transparent);
+            border-color: color-mix(in srgb, var(--accent-color) 60%, transparent);
+            border-radius: 8px;
+            ;
+        }
+
         & .section-header {
             font-size: 1.3em;
             display: flex;
@@ -1567,7 +1575,7 @@ details[open]::details-content {
                     color: #f2f2f2;
 
                     &.complete {
-                        color: var(--title-color);
+                        opacity: 0.3;
                     }
 
 
@@ -1575,12 +1583,9 @@ details[open]::details-content {
                         opacity: 1;
                     }
 
-
-
                     & svg {
-                        width: 20px;
-                        height: 20px;
-                        filter: drop-shadow(0 0 3px var(--accent-color));
+                        width: 22px;
+                        height: 22px;
                     }
                 }
 
@@ -1645,7 +1650,7 @@ details[open]::details-content {
                         border-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
 
                         & .checklist-title {
-                            opacity: 0.5;
+                            opacity: 0.3;
                             text-decoration: line-through;
                         }
                     }

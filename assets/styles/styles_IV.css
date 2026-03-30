@@ -101,20 +101,7 @@ body {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.checklist-container {
-    & article {
-        & .section-header {
-            & .section-check-all {
-                &.complete {
-                    & svg {
-                        stroke: #fad91c;
-                    }
-                }
-            }
-        }
 
-    }
-}
 
 /* #endregion */
 

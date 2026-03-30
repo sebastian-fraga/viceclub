@@ -78,13 +78,6 @@ body {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.progress-wrapper {
-    & .progress-bar-bg {
-        & .progress-bar-fill {
-            background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--title-color) 85%, var(--block-shadow) 90%));
-        }
-    }
-}
 
 /* #endregion */
 

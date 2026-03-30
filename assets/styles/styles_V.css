@@ -100,20 +100,6 @@ body {
     }
 }
 
-.checklist-container {
-    & article {
-        & .section-header {
-            & .section-check-all {
-                &.complete {
-                    & svg {
-                        stroke: var(--title-color);
-                        filter: drop-shadow(0 0 4px var(--title-color));
-                    }
-                }
-            }
-        }
-    }
-}
 
 /* #endregion */
 

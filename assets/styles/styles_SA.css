@@ -82,28 +82,6 @@ span.table-platforms {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.progress-wrapper {
-    & .progress-bar-bg {
-        & .progress-bar-fill {
-            background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--title-color) 85%, var(--accent-color) 90%));
-        }
-    }
-}
-
-.checklist-container {
-    & article {
-        & .section-header {
-            & .section-check-all {
-                &.complete {
-                    & svg {
-                        stroke: color-mix(in srgb, var(--title-color) 35%, var(--accent-color) 90%);
-                    }
-                }
-            }
-        }
-
-    }
-}
 
 /* #endregion */
 
