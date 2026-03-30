@@ -59,14 +59,13 @@ self.addEventListener("fetch", event => {
     const accept = event.request.headers.get("accept") || "";
     if (accept.includes("text/html")) {
         event.respondWith(
-            caches.match(event.request).then(cached => {
-                const fetchPromise = fetch(event.request).then(response => {
+            fetch(event.request)
+                .then(response => {
                     const clone = response.clone();
                     caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
                     return response;
-                });
-                return cached || fetchPromise;
-            })
+                })
+                .catch(() => caches.match(event.request))
         );
         return;
     }
