@@ -14,5 +14,5 @@ document.addEventListener('click', function (e) {
 document.getElementById('closeBtn').addEventListener('click', () => {
     const overlay = document.getElementById('imageOverlay');
     overlay.classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.style.overflow = 'auto';
 });
