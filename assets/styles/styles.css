@@ -94,7 +94,6 @@ body {
         }
 
         & #loader {
-            overflow: hidden;
             position: fixed;
             top: 0;
             left: 0;
@@ -118,18 +117,20 @@ body {
             }
 
             & svg {
+
+                filter: drop-shadow(0 0 40px #fd92d493) drop-shadow(0 0 20px #9992fd93) drop-shadow(0 0 10px #9299fd93);
+
                 & g {
                     & path {
+                        stroke-width: 0.8;
                         fill: none;
-                        stroke: #ffffff;
-                        stroke-width: 1;
                         stroke-linecap: round;
                         stroke-linejoin: round;
-
+                        vector-effect: non-scaling-stroke;
                         animation: neon-flicker 5.2s infinite;
-                        filter:
-                            drop-shadow(0 0 4px #50e0fa) drop-shadow(0 0 10px #50e0fa) drop-shadow(0 0 22px #50e0fa);
+
                     }
+
 
                 }
             }
@@ -2821,36 +2822,28 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 /* #region ANIMACIONES */
 @keyframes neon-flicker {
-    0% {
+
+    0%,
+    100% {
+        stroke: #ffb0f7;
         opacity: 1;
-        filter:
-            drop-shadow(0 0 4px #c150fa) drop-shadow(0 0 10px #c150fa) drop-shadow(0 0 12px #c150fa);
     }
 
     2% {
         opacity: 0.3;
-        filter: none;
     }
 
     5% {
         opacity: 1;
-        filter:
-            drop-shadow(0 0 6px #c150fa) drop-shadow(0 0 14px #c150fa) drop-shadow(0 0 12px #c150fa);
     }
 
     9% {
         opacity: 0.5;
-        filter:
-            drop-shadow(0 0 3px #c150fa);
+
     }
 
     14% {
-        opacity: 1;
-        filter:
-            drop-shadow(0 0 8px #c150fa) drop-shadow(0 0 18px #c150fa) drop-shadow(0 0 12px #c150fa);
-    }
-
-    100% {
+        stroke: #d4a5ff;
         opacity: 1;
     }
 }
