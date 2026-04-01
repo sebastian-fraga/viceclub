@@ -3653,12 +3653,14 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 @media (min-width: 661px) and (max-width: 900px) {
 
-    .block,
-    #radioInfo {
-        margin: 5em 2em 1em 2em;
+    body {
+        .block,
+        #radioInfo {
+            margin: 5em auto 1em auto;
 
-        .characters-list {
-            grid-template-columns: repeat(2, auto);
+            .characters-list {
+                grid-template-columns: repeat(2, auto);
+            }
         }
     }
 }
@@ -3668,7 +3670,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
         & .block,
         #radioInfo {
-            margin: 6em 1em 1em 8em;
+            padding: 2em;
+            margin: 6em auto 1em auto;
         }
     }
 }

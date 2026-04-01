@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const rutaJSON = "https://viceclub.s3.us-east-1.amazonaws.com/" + juego + "/achievements.json";
     const coloresRarity = {
-        "bronze": { border: "2px solid #ff936170" },
+        "bronze": { border: "2px solid #ffb89770" },
         "silver": { border: "2px solid #B5B5B570" },
-        "gold": { border: "2px solid #e9b14b70" },
-        "platinum": { border: "2px solid #7989bf70" },
+        "gold": { border: "2px solid #f5b33970" },
+        "platinum": { border: "2px solid #7191fa70" },
     }
     const coloresTags = {
         "Perdible": { background: "#6b2a2a", color: "#ff6b6b" },

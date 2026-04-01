@@ -160,10 +160,11 @@ details.mod summary img {
         transition: all 0.2s ease-in-out;
 
         &.active {
-            opacity: 1;
+            opacity: 1 !important;
         }
 
         &:hover {
+            outline: none;
             opacity: 0.3;
         }
 
