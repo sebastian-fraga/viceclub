@@ -56,12 +56,9 @@ body {
 
     & .block {
         background: linear-gradient(135deg,
-                #060807 0%,
-                #16241a 40%,
-                #050706 100%);
-
-        backdrop-filter: blur(6px);
-
+                #060807e3 0%,
+                #16241ae3 40%,
+                #050706e3 100%);
     }
 }
 

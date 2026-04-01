@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const rutaJSON = "https://viceclub.s3.us-east-1.amazonaws.com/" + juego + "/achievements.json";
+    const coloresRarity = {
+        "bronze": { border: "2px solid #ff936170" },
+        "silver": { border: "2px solid #B5B5B570" },
+        "gold": { border: "2px solid #e9b14b70" },
+        "platinum": { border: "2px solid #7989bf70" },
+    }
     const coloresTags = {
         "Perdible": { background: "#6b2a2a", color: "#ff6b6b" },
         "Historia": { background: "#2a4a2a", color: "#6bff6b" },
@@ -40,10 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             datos[seccion].forEach(function (logro) {
                 const tarjeta = document.createElement("div");
-
-
                 tarjeta.className = "achievement-card";
-
+                const estiloRarity = coloresRarity[logro.rarity] || {};
+                Object.assign(tarjeta.style, estiloRarity);
                 tarjeta.innerHTML = "";
                 const fragment = document.createDocumentFragment();
 

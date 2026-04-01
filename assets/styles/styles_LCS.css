@@ -58,6 +58,15 @@ body {
         height: 80px;
         background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 10%, var(--block-color)));
     }
+
+    & .block,
+    #radioInfo {
+        background: linear-gradient(135deg,
+                #2e0a0ae3 0%,
+                #1f0808e3 50%,
+                #3a0e0ee3 100%);
+
+    }
 }
 
 .text-container {

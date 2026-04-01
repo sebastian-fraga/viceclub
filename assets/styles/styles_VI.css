@@ -44,6 +44,15 @@ body {
         background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 50%, transparent));
     }
 
+    & .block,
+    #radioInfo {
+        background: linear-gradient(135deg,
+                #38426bd8 0%,
+                #242852d8 50%,
+                #2a2a5ad8 100%);
+
+    }
+
     & footer {
         color: color-mix(in srgb, var(--accent-color) 25%, var(--block-text));
     }

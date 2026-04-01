@@ -1385,9 +1385,11 @@ details[open]::details-content {
 
 .block,
 #radioInfo {
-    background: var(--block-color);
     color: var(--block-text);
-    box-shadow: inset 0 0 10px 10px var(--block-shadow);
+    box-shadow:
+        inset 0 0 15px 5px color-mix(in srgb, var(--block-border) 40%, transparent),
+        0 4px 24px 0 color-mix(in srgb, var(--block-border) 70%, transparent),
+        0 1px 0 0 var(--block-border);
     border: 5px solid var(--block-border);
 }
 
