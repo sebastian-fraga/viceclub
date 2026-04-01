@@ -343,9 +343,6 @@ span.table-platforms {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(45deg,
-                rgba(112, 70, 170, 0.65) 71%,
-                rgba(12, 29, 184, 0.65) 100%);
         z-index: -1;
     }
 
@@ -353,19 +350,23 @@ span.table-platforms {
         & #timelineContainer {
 
             & .timeline-last-updated {
-                font-size: 0.85em;
+                font-size: 0.7em;
                 font-weight: 100;
             }
 
             & article {
                 padding: 0;
 
+                & .timeline-icon {
+                    font-size: 1em;
+                }
+
                 & p {
-                    font-size: 1.2em;
+                    padding-inline: 0.7em;
+                    font-size: 1.1em;
                     text-wrap: balance;
                     margin: 1em auto;
                     text-align: center;
-                    max-width: 35ch;
                 }
 
                 & h3 {
