@@ -42,14 +42,12 @@ body {
         width: 100%;
         height: 80px;
         background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 50%, transparent));
+        pointer-events: none;
     }
 
     & .block,
     #radioInfo {
-        background: linear-gradient(135deg,
-                #38426bd8 0%,
-                #242852d8 50%,
-                #2a2a5ad8 100%);
+        background: radial-gradient(circle 300px at top left, #36395ce3, #402e69e3);
 
     }
 
@@ -59,10 +57,7 @@ body {
 }
 
 .block {
-    background: linear-gradient(45deg,
-            rgba(112, 70, 170, 0.85) 71%,
-            rgba(12, 29, 184, 0.85) 100%);
-    box-shadow: 0px 0 60px rgba(0, 0, 0, 0.4);
+
     backdrop-filter: brightness(0.7) blur(12px);
     -webkit-backdrop-filter: brightness(0.7) blur(12px);
     border: 5px solid var(--block-border);
@@ -184,14 +179,17 @@ span.table-platforms {
 /* #region LÍNEA DE TIEMPO */
 
 .block.timeline {
+    margin-inline: auto;
+    max-width: 1250px;
+
     & #timelineContainer {
         & .timeline-last-updated {
-            color: #cce2ff;
-            font-weight: bold;
-            font-size: 15px;
+            font-size: 0.75em;
+            color: rgba(200, 190, 255, 0.8);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             text-align: center;
-            margin-top: 0.6em;
-            margin-bottom: 3em;
+            margin-block: 0.5em 3em;
         }
 
         & article {
@@ -199,51 +197,70 @@ span.table-platforms {
             margin: 0 auto 4em auto;
 
             & p {
-                color: #ffffff;
-                margin: 0 0 20px 30px;
+                color: #f3f3f3;
+                margin: 0.5em 0 1em 0;
+                padding-left: 1.5em;
                 text-align: left;
+                position: relative;
                 text-wrap: wrap;
                 font-family: "GTAArtDecoRegular";
                 max-width: 100%;
-                text-indent: 1.7rem;
                 font-size: 1.3rem;
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+                &::before {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    position: absolute;
+                    left: 0;
+                    background-color: #9277e9;
+                }
 
                 & .timeline-icon {
                     color: #60d9fa;
                     filter: drop-shadow(0 0 5px rgba(96, 217, 250, 0.6));
+                    margin-right: 0.4em;
+                    vertical-align: middle;
                 }
 
                 &+p {
-                    margin-bottom: 30px;
+                    margin-top: -0.5em;
+                    font-size: 1.15em;
+                    color: #d9d9f8;
+
+                    &::before {
+                        background-color: #9277e9b7;
+                    }
                 }
+
             }
 
             & h3 {
                 text-align: left;
-                font-size: 25px;
-                background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
+                font-size: 1.3em;
+                background-image: linear-gradient(to bottom, #61a6ff, #a19bff);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 font-weight: 600;
+                background-size: 100% 90%;
+
             }
 
             & h4 {
                 text-align: left;
-                background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: 900;
-                font-size: 17px;
+                color: #91c1ffd5;
+                font-weight: 100;
+                font-size: 0.9em;
             }
 
             & img {
                 align-items: center;
-                max-width: 60vw;
+                max-width: 40vw;
                 display: block;
-                max-height: 55vh;
+                max-height: 45vh;
                 height: auto;
-                margin: 10px auto 50px auto;
+                margin: 25px auto 50px auto;
                 border-radius: 20px;
                 border: 3px solid #d6aaff;
                 cursor: pointer;
@@ -274,13 +291,13 @@ span.table-platforms {
             }
         }
 
+
         & .timeline-divider {
             height: 2px;
             border-radius: 1em;
             width: 100%;
-            background: linear-gradient(to right, #ff96ff, #60c6e8, #d5a9f5);
-            margin-bottom: 1em;
-            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+            background: linear-gradient(90deg, transparent, #ff9ecf, #79b3ff, transparent);
+            margin-bottom: 2em;
         }
     }
 }
@@ -345,7 +362,6 @@ span.table-platforms {
 
                 & p {
                     font-size: 1.2em;
-                    text-indent: 0;
                     text-wrap: balance;
                     margin: 1em auto;
                     text-align: center;
