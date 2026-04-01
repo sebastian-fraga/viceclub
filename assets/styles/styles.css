@@ -3536,6 +3536,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             width: 85%;
 
             & li {
+                user-select: none;
                 max-width: 30ch;
                 font-size: 0.95em;
 
