@@ -150,8 +150,8 @@ details.mod summary img {
 
     & .radio-card {
         position: absolute;
-        width: clamp(40px, 8vw, 70px);
-        height: clamp(40px, 8vw, 70px);
+        width: clamp(40px, 6vw, 75px);
+        height: clamp(40px, 6vw, 75px);
         top: 50%;
         left: 50%;
         margin-top: -35px;
@@ -248,7 +248,6 @@ details.mod summary img {
 
     .radio-wheel {
         padding-block: 3em;
-
     }
 }
 
