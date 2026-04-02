@@ -544,7 +544,7 @@ header {
         background-color: #76b1e8;
         cursor: pointer;
         filter: drop-shadow(1px 1px 20px #75e1e1);
-        transition: background-color, transform 0.3s ease;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease;
         margin-right: 30px;
 
         &:hover {
@@ -2584,19 +2584,38 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             flex-direction: column;
             gap: 0.3em;
             text-align: left;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
 
             & #artistName {
                 color: #e0e0e0;
                 font-size: 14px;
+
             }
 
             & #songTitle {
                 color: #ffffff;
                 font-size: 16px;
                 font-family: "GTAArtDecoMedium";
+
+            }
+
+            & #artistName,
+            & #songTitle {
+                max-width: none;
+                overflow: hidden;
+                white-space: nowrap;
+                display: block;
+                position: relative;
+
+                @media (max-width: 900px) {
+                    max-width: 150px;
+                }
+
+                &.marquee {
+                    & span {
+                        display: inline-block;
+                        animation: marquee 12s linear infinite;
+                    }
+                }
             }
         }
     }
@@ -2965,8 +2984,31 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     100% {
         transform: translateX(200%) skewX(-15deg);
     }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(var(--marquee-distance));
+    }
+
+    50% {
+        transform: translateX(var(--marquee-distance));
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 
 }
+
 
 /* #endregion */
 
@@ -3734,6 +3776,18 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             }
         }
     }
+
+    .radio-footer {
+        &.active {
+            display: flex;
+            justify-content: center;
+        }
+
+        & .footer-left,
+        & .footer-right {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: 900px) and (max-width: 1600px) {
@@ -3745,6 +3799,11 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             padding: 2em;
             margin: 6em 0 1em 0;
         }
+    }
+
+    #artistName,
+    #songTitle {
+        max-width: 150px !important;
     }
 }
 

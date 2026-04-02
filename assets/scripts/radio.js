@@ -324,18 +324,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  function checkMarquee(el) {
+    el.classList.remove('marquee');
+    el.innerHTML = el.textContent;
+
+    setTimeout(() => {
+      if (window.innerWidth <= 1400 && el.scrollWidth > el.clientWidth) {
+        const overflow = el.scrollWidth - el.clientWidth;
+        el.innerHTML = `<span>${el.textContent}</span>`;
+        el.classList.add('marquee');
+        el.style.setProperty('--marquee-distance', `-${overflow}px`);
+      }
+    }, 0);
+  }
+
   function updateActiveSong(index) {
     const data = radioData[currentRadio];
     const songs = data?._activeSongs ?? data?.songs;
     if (!songs || !songs[index]) return;
 
-    document.getElementById("songTitle").textContent = songs[index].title;
-    document.getElementById("artistName").textContent = songs[index].artist;
+    const songTitleEl = document.getElementById("songTitle");
+    const artistNameEl = document.getElementById("artistName");
+
+    songTitleEl.textContent = songs[index].title;
+    artistNameEl.textContent = songs[index].artist;
+
+    songTitleEl.classList.remove('marquee');
+    artistNameEl.classList.remove('marquee');
+    checkMarquee(songTitleEl);
+    checkMarquee(artistNameEl);
 
     renderSongList(songs, index);
     updateMediaSession(songs[index], radioData);
   }
 
+  let resizeTimeout;
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+      const songTitleEl = document.getElementById("songTitle");
+      const artistNameEl = document.getElementById("artistName");
+
+      if (songTitleEl) checkMarquee(songTitleEl);
+      if (artistNameEl) checkMarquee(artistNameEl);
+    }, 150);
+  });
+  
   const prevSongBtn = document.querySelector(".footer-controls span:nth-child(1)");
   const playPauseBtn = document.querySelector(".footer-pause");
   const playBtn = document.querySelector(".footer-play");
