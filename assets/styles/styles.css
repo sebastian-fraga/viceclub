@@ -3279,8 +3279,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         }
     }
 
-
-
     /* #endregion */
 
     /* #region INICIO */
@@ -3654,6 +3652,13 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 @media (min-width: 661px) and (max-width: 900px) {
 
     body {
+        & .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
         .block,
         #radioInfo {
             margin: 5em auto 1em auto;
