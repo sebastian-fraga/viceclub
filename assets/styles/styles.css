@@ -3652,6 +3652,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 @media (min-width: 661px) and (max-width: 900px) {
 
     body {
+        max-width: 100vw;
+
         & .block {
             display: flex;
             flex-direction: column;
@@ -3659,9 +3661,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             justify-content: flex-start;
         }
 
-        .block,
-        #radioInfo {
-            margin: 5em auto 1em auto;
+        & .block,
+        & #radioInfo {
+            margin: 5em 0 1em 0;
 
             .characters-list {
                 grid-template-columns: repeat(2, auto);
@@ -3672,11 +3674,12 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 @media (min-width: 900px) and (max-width: 1600px) {
     body {
+        max-width: 100vw;
 
         & .block,
         #radioInfo {
             padding: 2em;
-            margin: 6em auto 1em auto;
+            margin: 6em 0 1em 0;
         }
     }
 }
