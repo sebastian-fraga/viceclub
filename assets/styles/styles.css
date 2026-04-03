@@ -3219,7 +3219,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             justify-content: flex-start;
             width: 100%;
             right: -250dvw;
-            height: 100dvh;
+            height: 100svh;
 
             & .right-content-nav {
                 flex: 1;
