@@ -53,7 +53,8 @@ body {
         background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--block-border) 30%, var(--block-color)));
     }
 
-    & .block, #radioInfo {
+    & .block,
+    #radioInfo {
         background: linear-gradient(135deg,
                 #011428e3 0%,
                 #010b1ee3 45%,

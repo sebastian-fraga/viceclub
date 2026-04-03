@@ -1,5 +1,5 @@
 const DEFAULT_DELAY = 870;
-const BASE_SOUNDS = '/assets/sounds/';
+const BASE_SOUNDS = "/assets/sounds/";
 
 let audioCtx = null;
 const buffers = {};
@@ -26,7 +26,8 @@ function playSound(name) {
 }
 
 function getSoundsForCurrentPath() {
-    const folder = window.location.pathname.split('/').filter(Boolean)[0] ?? 'default';
+    const folder =
+        window.location.pathname.split("/").filter(Boolean)[0] ?? "default";
 
     return {
         click: `${BASE_SOUNDS}select_${folder}.wav`,
@@ -34,64 +35,63 @@ function getSoundsForCurrentPath() {
     };
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-
+document.addEventListener("DOMContentLoaded", async () => {
     const { click: clickUrl, hover: hoverUrl } = getSoundsForCurrentPath();
 
     await Promise.all([
-        loadSound('click', clickUrl),
-        loadSound('hover', hoverUrl),
+        loadSound("click", clickUrl),
+        loadSound("hover", hoverUrl),
     ]);
 
-    const soundToggle = document.getElementById('soundToggle');
+    const soundToggle = document.getElementById("soundToggle");
     const delay = window.SOUND_DELAY ?? DEFAULT_DELAY;
     let navigating = false;
     let hoverTimeout = null;
 
-    if (localStorage.getItem('soundEnabled') === null) {
-        localStorage.setItem('soundEnabled', 'true');
+    if (localStorage.getItem("soundEnabled") === null) {
+        localStorage.setItem("soundEnabled", "true");
     }
 
     if (soundToggle) {
-        soundToggle.checked = localStorage.getItem('soundEnabled') === 'true';
-        soundToggle.addEventListener('change', () => {
-            localStorage.setItem('soundEnabled', soundToggle.checked);
+        soundToggle.checked = localStorage.getItem("soundEnabled") === "true";
+        soundToggle.addEventListener("change", () => {
+            localStorage.setItem("soundEnabled", soundToggle.checked);
         });
     }
 
     function isSoundEnabled() {
-        return localStorage.getItem('soundEnabled') === 'true';
+        return localStorage.getItem("soundEnabled") === "true";
     }
 
-    document.querySelectorAll('#rightContent a').forEach(link => {
-
-        link.addEventListener('click', function (e) {
+    document.querySelectorAll("#rightContent a").forEach((link) => {
+        link.addEventListener("click", function (e) {
             navigating = true;
 
-            if (isSoundEnabled()) playSound('click');
+            if (isSoundEnabled()) playSound("click");
 
-            const href = this.getAttribute('href');
-            if (href && href !== '#') {
+            const href = this.getAttribute("href");
+            if (href && href !== "#") {
                 try {
                     const url = new URL(href, window.location.href);
-                    if (url.protocol === 'http:' || url.protocol === 'https:') {
+                    if (url.protocol === "http:" || url.protocol === "https:") {
                         e.preventDefault();
-                        setTimeout(() => window.location.href = url.href, delay);
+                        setTimeout(
+                            () => (window.location.href = url.href),
+                            delay,
+                        );
                     }
-                } catch (err) { }
+                } catch (err) {}
             }
         });
 
-        const hasHover = window.matchMedia('(hover: hover)').matches;
+        const hasHover = window.matchMedia("(hover: hover)").matches;
 
         if (hasHover) {
-            link.addEventListener('mouseenter', () => {
+            link.addEventListener("mouseenter", () => {
                 if (navigating || !isSoundEnabled() || hoverTimeout) return;
-                playSound('hover');
-                hoverTimeout = setTimeout(() => hoverTimeout = null, 100);
+                playSound("hover");
+                hoverTimeout = setTimeout(() => (hoverTimeout = null), 100);
             });
         }
-
     });
-
 });

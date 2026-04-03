@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const res = await fetch('https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t=' + Date.now());
+        const res = await fetch(
+            "https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t=" +
+                Date.now(),
+        );
         const facts = await res.json();
         const today = new Date();
         const start = new Date(today.getFullYear(), 0, 0);
@@ -10,7 +13,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const factIndex = dayOfYear % facts.length;
         const fact = facts[factIndex];
 
-        document.querySelector(".fotd-description p").innerHTML = fact.description;
+        document.querySelector(".fotd-description p").innerHTML =
+            fact.description;
         document.querySelector(".fotd-image img").src = fact.image;
         const sourceContainer = document.querySelector(".fotd-source");
 
@@ -19,7 +23,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             sourceContainer.innerHTML = "";
         }
-
     } catch (err) {
         console.error("Error cargando los datos del día:", err);
     }

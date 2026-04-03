@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.querySelector('.footer-settings button');
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector(".footer-settings button");
     if (!btn) return;
 
     btn.innerHTML = `
@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <span class="material-symbols-rounded arrow">arrow_drop_down</span>
     `;
 
-    const menu = document.createElement('div');
-    menu.className = 'lang-menu';
+    const menu = document.createElement("div");
+    menu.className = "lang-menu";
     menu.innerHTML = `
         <div class="lang-option selected" data-lang="ES">
             <img src="https://cdn.jsdelivr.net/gh/HatScripts/circle-flags@2.7.0/flags/es.svg" width="20" height="20"> Español <span class="check">✓</span>
@@ -27,35 +27,37 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     `;
 
-    btn.parentElement.style.position = 'relative';
+    btn.parentElement.style.position = "relative";
     btn.parentElement.appendChild(menu);
 
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        menu.classList.toggle('visible');
-        btn.classList.toggle('open');
+        menu.classList.toggle("visible");
+        btn.classList.toggle("open");
     });
 
-    menu.querySelectorAll('.lang-option').forEach(opt => {
-        opt.addEventListener('click', () => {
-            menu.querySelectorAll('.lang-option').forEach(o => o.classList.remove('selected'));
-            opt.classList.add('selected');
+    menu.querySelectorAll(".lang-option").forEach((opt) => {
+        opt.addEventListener("click", () => {
+            menu.querySelectorAll(".lang-option").forEach((o) =>
+                o.classList.remove("selected"),
+            );
+            opt.classList.add("selected");
 
             const code = opt.dataset.lang;
-            const flagSrc = opt.querySelector('img').src;
+            const flagSrc = opt.querySelector("img").src;
 
-            btn.querySelector('.lang-btn-content').innerHTML = `
+            btn.querySelector(".lang-btn-content").innerHTML = `
                 <img src="${flagSrc}" width="20" height="20">
                 ${code}
             `;
 
-            menu.classList.remove('visible');
-            btn.classList.remove('open');
+            menu.classList.remove("visible");
+            btn.classList.remove("open");
         });
     });
 
-    document.addEventListener('click', () => {
-        menu.classList.remove('visible');
-        btn.classList.remove('open');
+    document.addEventListener("click", () => {
+        menu.classList.remove("visible");
+        btn.classList.remove("open");
     });
 });

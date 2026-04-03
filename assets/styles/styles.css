@@ -1,16 +1,16 @@
 /* #region FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 @font-face {
     font-family: "GTAArtDecoRegular";
     src: url("../fonts/GTAArtDecoRegular.ttf");
-    font-display: swap
+    font-display: swap;
 }
 
 @font-face {
     font-family: "GTAArtDecoMedium";
     src: url("../fonts/GTAArtDecoMedium.ttf");
-    font-display: swap
+    font-display: swap;
 }
 
 /* #endregion */
@@ -46,7 +46,6 @@ body {
     -webkit-tap-highlight-color: transparent;
     display: flex;
     flex-direction: column;
-
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -85,7 +84,9 @@ body {
             bottom: 0;
             width: 100%;
             height: 80px;
-            background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--secondary-header-gradient) 85%, transparent));
+            background: linear-gradient(to bottom,
+                    transparent,
+                    color-mix(in srgb, var(--secondary-header-gradient) 85%, transparent));
             pointer-events: none;
         }
 
@@ -110,7 +111,9 @@ body {
             align-items: center;
             justify-content: center;
             z-index: 100;
-            transition: opacity 1.2s ease-out, visibility 1.2s ease-out;
+            transition:
+                opacity 1.2s ease-out,
+                visibility 1.2s ease-out;
 
             &.hidden {
                 opacity: 0;
@@ -118,7 +121,6 @@ body {
             }
 
             & svg {
-
                 filter: drop-shadow(0 0 25px #fd92d4e0) drop-shadow(0 0 20px #9992fde0) drop-shadow(0 0 25px #e396faab);
 
                 & g {
@@ -129,16 +131,12 @@ body {
                         stroke-linejoin: round;
                         vector-effect: non-scaling-stroke;
                         animation: neon-flicker 5.2s infinite;
-
                     }
-
-
                 }
             }
         }
 
         & #rightContent {
-
             display: flex;
             flex-direction: column;
             justify-content: start;
@@ -146,7 +144,6 @@ body {
             height: 100vh;
             padding-block: 1em;
             border-left: 2px solid #bba3f3;
-
 
             & a {
                 border: none;
@@ -186,7 +183,6 @@ body {
             box-shadow: 0px 0 250px #6e77f962;
             position: relative;
             z-index: 1000;
-
 
             &::before {
                 content: "";
@@ -245,7 +241,6 @@ body {
                     margin: 0.3em;
                     padding: 1em 2em;
 
-
                     & h4 {
                         font-family: "GTAArtDecoMedium";
                         color: #0c0c0c;
@@ -260,8 +255,6 @@ body {
                         color: #1b1b1b;
                     }
 
-
-
                     & a {
                         color: #006aeb;
                         text-shadow: 0 0 8px rgba(114, 161, 250, 0.5);
@@ -274,14 +267,9 @@ body {
                             text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
                             color: #fbbf24;
                         }
-
                     }
                 }
             }
-
-
-
-
 
             &[open] summary {
                 color: #070707;
@@ -367,15 +355,17 @@ body {
                 text-align: center;
                 margin-inline: 3em;
 
-
                 &::before,
                 &::after {
-                    content: '';
+                    content: "";
                     flex: 1;
                     transform: translateY(13px);
                     height: 1px;
                     display: block;
-                    background: linear-gradient(90deg, transparent, var(--title-color), transparent);
+                    background: linear-gradient(90deg,
+                            transparent,
+                            var(--title-color),
+                            transparent);
                 }
 
                 & h2 {
@@ -384,7 +374,6 @@ body {
                     white-space: nowrap;
                 }
             }
-
 
             & .characters-list {
                 display: grid;
@@ -418,7 +407,7 @@ body {
                     }
 
                     &::before {
-                        content: '';
+                        content: "";
                         position: absolute;
                         inset: 0;
                         background: linear-gradient(to top,
@@ -426,9 +415,7 @@ body {
                                 rgba(0, 0, 0, 0.6) 40%,
                                 transparent 70%);
                         z-index: 1;
-
                     }
-
 
                     &:hover {
                         box-shadow: 0 0 25px rgb(0, 0, 0);
@@ -436,7 +423,6 @@ body {
                         transform: scale(1.02) translateY(-3px);
                         outline-color: var(--title-color);
                     }
-
 
                     & .character-text {
                         text-align: left;
@@ -450,7 +436,9 @@ body {
 
                         & span {
                             font-size: 0.85em;
-                            color: color-mix(in srgb, var(--title-color) 70%, var(--block-text) 100%)
+                            color: color-mix(in srgb,
+                                    var(--title-color) 70%,
+                                    var(--block-text) 100%);
                         }
                     }
                 }
@@ -475,7 +463,10 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 3.4em;
-    background: linear-gradient(to right, var(--main-header-gradient), var(--secondary-header-gradient), var(--main-header-gradient));
+    background: linear-gradient(to right,
+            var(--main-header-gradient),
+            var(--secondary-header-gradient),
+            var(--main-header-gradient));
     backdrop-filter: blur(10px);
     padding: 0.6em 0;
     position: fixed;
@@ -532,7 +523,7 @@ header {
             }
 
             &:active {
-                transform: translateY(-2px)
+                transform: translateY(-2px);
             }
         }
     }
@@ -544,7 +535,9 @@ header {
         background-color: #76b1e8;
         cursor: pointer;
         filter: drop-shadow(1px 1px 20px #75e1e1);
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+        transition:
+            background-color 0.3s ease-in-out,
+            transform 0.3s ease;
         margin-right: 30px;
 
         &:hover {
@@ -553,7 +546,7 @@ header {
         }
 
         &:active {
-            background-color: #25649fc9
+            background-color: #25649fc9;
         }
 
         &.active {
@@ -601,7 +594,7 @@ header {
     background: #0b011fcd;
     transition: all 0.35s ease-in-out;
     backdrop-filter: blur(25px);
-    border-left: 2px solid #8B71CF;
+    border-left: 2px solid #8b71cf;
     z-index: 10000;
     box-shadow: inset 0 -120px 60px rgba(248, 170, 255, 0.2);
 
@@ -624,7 +617,7 @@ header {
             margin: 0;
             width: 70px;
             height: 70px;
-            border: 1px solid #8E71D0;
+            border: 1px solid #8e71d0;
             background-color: #8e71d02e;
             border-radius: 12px;
             transition: all 0.15s ease-out;
@@ -658,10 +651,8 @@ header {
                     filter: grayscale(100%);
                 }
             }
-
         }
     }
-
 
     & .right-content-nav {
         width: 100%;
@@ -672,7 +663,6 @@ header {
         align-items: center;
         overflow: hidden;
 
-
         & .right-content-links {
             display: flex;
             flex-direction: column;
@@ -680,8 +670,6 @@ header {
             align-items: start;
             gap: 0;
             width: 100%;
-
-
 
             & a {
                 display: flex;
@@ -731,7 +719,9 @@ header {
                 &.active {
                     border-radius: 0;
                     color: var(--title-color);
-                    background: color-mix(in srgb, var(--title-color) 10%, transparent 20%);
+                    background: color-mix(in srgb,
+                            var(--title-color) 10%,
+                            transparent 20%);
                     text-shadow: 0 0 30px var(--title-color);
 
                     &::before {
@@ -746,12 +736,16 @@ header {
                 }
 
                 &:hover {
-                    background: color-mix(in srgb, var(--title-color) 5%, transparent 20%);
+                    background: color-mix(in srgb,
+                            var(--title-color) 5%,
+                            transparent 20%);
                 }
 
                 &:active {
                     opacity: 1;
-                    background: color-mix(in srgb, var(--title-color) 10%, transparent 20%);
+                    background: color-mix(in srgb,
+                            var(--title-color) 10%,
+                            transparent 20%);
 
                     &::before {
                         content: "";
@@ -797,7 +791,6 @@ header {
                     }
                 }
 
-
                 & label {
                     position: relative;
                     display: inline-block;
@@ -842,7 +835,6 @@ header {
                             transition: 0.3s;
                         }
                     }
-
                 }
 
                 & button {
@@ -919,7 +911,6 @@ header {
                             height: 20px;
                             border-radius: 50%;
                             object-fit: cover;
-
                         }
 
                         & .check {
@@ -969,7 +960,10 @@ header {
             text-align: left;
             margin: 0 1em 0 2.5em;
             color: #2a2a2a;
-            background-image: linear-gradient(45deg, #000000, #061719 50%, #000000 100%);
+            background-image: linear-gradient(45deg,
+                    #000000,
+                    #061719 50%,
+                    #000000 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -984,7 +978,10 @@ header {
     & .fotd-container {
         grid-area: fotd;
         align-self: start;
-        background-image: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+        background-image: linear-gradient(-225deg,
+                #5271c4 0%,
+                #b19fff 48%,
+                #eca1fe 100%);
         margin: 1em 1.5em;
         padding: 20px 25px;
         border: 1px solid #0000005e;
@@ -1030,7 +1027,6 @@ header {
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             }
         }
-
     }
 }
 
@@ -1054,7 +1050,10 @@ header {
 
     &::before {
         content: "";
-        background: radial-gradient(circle at top left, rgba(209, 48, 249, 0.25), rgba(48, 82, 249, 0.25)),
+        background:
+            radial-gradient(circle at top left,
+                rgba(209, 48, 249, 0.25),
+                rgba(48, 82, 249, 0.25)),
             url("../images/main/countdown.webp");
         width: 100%;
         height: 100%;
@@ -1063,7 +1062,7 @@ header {
         inset: 0;
         background-size: cover;
         border-radius: 35px;
-        background-position: 0 0
+        background-position: 0 0;
     }
 
     & .countdown-header {
@@ -1071,7 +1070,10 @@ header {
             line-height: 1.6;
             font-size: 2.2em;
             font-weight: 100;
-            background: linear-gradient(to right, rgb(101, 111, 255), rgb(255, 138, 232), rgb(255, 154, 107));
+            background: linear-gradient(to right,
+                    rgb(101, 111, 255),
+                    rgb(255, 138, 232),
+                    rgb(255, 154, 107));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1116,7 +1118,10 @@ header {
 
 .news {
     position: relative;
-    background-image: linear-gradient(-225deg, #5270c461 0%, #b19fff61 48%, #ECA1FE61 100%);
+    background-image: linear-gradient(-225deg,
+            #5270c461 0%,
+            #b19fff61 48%,
+            #eca1fe61 100%);
     margin: 12em 0 5em 0;
     padding: 15px 20px;
     border-radius: 20px;
@@ -1241,7 +1246,9 @@ header {
                 color: #ffffff;
                 font-family: "GTAArtDecoMedium";
                 text-transform: uppercase;
-                transition: background 0.2s ease-out, scale 0.2s ease-out;
+                transition:
+                    background 0.2s ease-out,
+                    scale 0.2s ease-out;
 
                 & .material-symbols-rounded {
                     font-size: 1.3rem;
@@ -1273,13 +1280,15 @@ header {
         margin: 30px auto;
         text-align: center;
         text-decoration: none;
-        background: #4E7EBB;
+        background: #4e7ebb;
         border-radius: 15px;
         border: 3px solid #0000003b;
         color: #f3f3f3ea;
         font-family: "GTAArtDecoMedium";
         text-transform: uppercase;
-        transition: background 0.2s ease-out, scale 0.2s ease-out;
+        transition:
+            background 0.2s ease-out,
+            scale 0.2s ease-out;
         cursor: pointer;
 
         & .material-symbols-rounded {
@@ -1300,7 +1309,6 @@ header {
         &:active {
             background: #173861;
             scale: 0.95;
-
         }
     }
 }
@@ -1315,7 +1323,6 @@ details::details-content {
 details[open]::details-content {
     block-size: auto;
 }
-
 
 #imageOverlay {
     position: fixed;
@@ -1348,7 +1355,9 @@ details[open]::details-content {
         display: inline-block;
         transform: scale(0.5);
         opacity: 0;
-        transition: transform 0.4s ease, opacity 0.4s ease;
+        transition:
+            transform 0.4s ease,
+            opacity 0.4s ease;
 
         &::after {
             content: "";
@@ -1369,7 +1378,6 @@ details[open]::details-content {
             border-radius: 4px;
             box-shadow: 0 0 20px #060606;
         }
-
 
         & .overlay-footer {
             display: flex;
@@ -1402,7 +1410,9 @@ details[open]::details-content {
         text-shadow: 0px 0px 20px #e2b5f6;
         cursor: pointer;
         z-index: 100000;
-        transition: transform 0.1s ease-out, color 0.05s ease-out;
+        transition:
+            transform 0.1s ease-out,
+            color 0.05s ease-out;
 
         &:hover {
             color: #f7dbff;
@@ -1413,8 +1423,6 @@ details[open]::details-content {
             color: #e8a6fd;
         }
     }
-
-
 }
 
 .timeline-image,
@@ -1447,7 +1455,6 @@ details[open]::details-content {
     }
 }
 
-
 .block,
 #radioInfo {
     color: var(--block-text);
@@ -1468,7 +1475,9 @@ details[open]::details-content {
     border-radius: 0 25px 25px 0;
     max-width: 740px;
     width: 100%;
-    border-color: color-mix(in srgb, var(--title-color) 10%, var(--accent-color) 90%);
+    border-color: color-mix(in srgb,
+            var(--title-color) 10%,
+            var(--accent-color) 90%);
     background-color: color-mix(in srgb, var(--title-color), transparent 60%);
 
     & table {
@@ -1478,7 +1487,6 @@ details[open]::details-content {
         border-spacing: 0;
         border-collapse: collapse;
         margin: 0 auto;
-
 
         & tr {
             border: 1px solid;
@@ -1510,7 +1518,6 @@ details[open]::details-content {
                 font-weight: bold;
                 color: var(--title-color);
             }
-
         }
 
         & th {
@@ -1524,7 +1531,6 @@ details[open]::details-content {
                 display: block;
             }
         }
-
     }
 }
 
@@ -1571,7 +1577,9 @@ details[open]::details-content {
             height: 100%;
             border-radius: 4px;
             transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            background: linear-gradient(90deg, var(--title-color), var(--accent-color));
+            background: linear-gradient(90deg,
+                    var(--title-color),
+                    var(--accent-color));
         }
     }
 
@@ -1591,7 +1599,6 @@ details[open]::details-content {
     padding: 0.5em 1.5em 2em 1.5em;
 
     & article {
-
         &:is(.section-complete) {
             background: color-mix(in srgb, var(--accent-color) 25%, transparent);
             border-color: color-mix(in srgb, var(--accent-color) 60%, transparent);
@@ -1664,7 +1671,6 @@ details[open]::details-content {
                         opacity: 0.3;
                     }
 
-
                     &:hover {
                         opacity: 1;
                     }
@@ -1701,9 +1707,8 @@ details[open]::details-content {
                 & ul {
                     transform: scaleY(0.95);
                     opacity: 0;
-                    pointer-events: none
+                    pointer-events: none;
                 }
-
             }
 
             & ul {
@@ -1715,16 +1720,19 @@ details[open]::details-content {
                 gap: 6px;
                 min-height: 0;
                 transform-origin: top;
-                transition: transform 0.22s ease, opacity 0.2s ease;
+                transition:
+                    transform 0.22s ease,
+                    opacity 0.2s ease;
                 will-change: transform, opacity;
-
 
                 & li {
                     background: rgba(255, 255, 255, 0.04);
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 8px;
                     overflow: hidden;
-                    transition: background 0.2s, border-color 0.2s;
+                    transition:
+                        background 0.2s,
+                        border-color 0.2s;
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.07);
@@ -1732,8 +1740,12 @@ details[open]::details-content {
                     }
 
                     &.completed {
-                        background: color-mix(in srgb, var(--accent-color) 10%, transparent);
-                        border-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
+                        background: color-mix(in srgb,
+                                var(--accent-color) 10%,
+                                transparent);
+                        border-color: color-mix(in srgb,
+                                var(--accent-color) 30%,
+                                transparent);
 
                         & .checklist-title {
                             opacity: 0.3;
@@ -1761,7 +1773,9 @@ details[open]::details-content {
                                 &:checked {
                                     &+span {
                                         background: var(--accent-color);
-                                        border-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+                                        border-color: color-mix(in srgb,
+                                                var(--accent-color) 70%,
+                                                transparent);
 
                                         &::after {
                                             content: "";
@@ -1785,7 +1799,9 @@ details[open]::details-content {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                transition: background 0.2s, border-color 0.2s;
+                                transition:
+                                    background 0.2s,
+                                    border-color 0.2s;
                                 flex-shrink: 0;
                             }
                         }
@@ -1821,7 +1837,6 @@ details[open]::details-content {
     }
 }
 
-
 /* #endregion */
 
 /* #region HERRAMIENTAS Y MODS */
@@ -1835,12 +1850,15 @@ details[open]::details-content {
 
     &::before,
     &::after {
-        content: '';
+        content: "";
         flex: 1;
         height: 2px;
         display: block;
-        background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--block-text) 20%, transparent), transparent);
-        width: 400px
+        background: linear-gradient(90deg,
+                transparent,
+                color-mix(in srgb, var(--block-text) 20%, transparent),
+                transparent);
+        width: 400px;
     }
 
     & h3 {
@@ -1872,8 +1890,9 @@ details[open]::details-content {
         min-height: 120px;
         contain: layout paint;
         border: 1px solid color-mix(in srgb, var(--block-border) 45%, transparent);
-        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 20%, transparent) 50%, color-mix(in srgb, var(--accent-color) 15%, transparent) 95%);
-
+        background: linear-gradient(135deg,
+                color-mix(in srgb, var(--block-border) 20%, transparent) 50%,
+                color-mix(in srgb, var(--accent-color) 15%, transparent) 95%);
 
         & summary {
             display: grid;
@@ -1886,7 +1905,9 @@ details[open]::details-content {
                 width: 100px;
                 height: 100px;
                 object-fit: contain;
-                transition: width 0.3s ease-out, height 0.3s ease-out;
+                transition:
+                    width 0.3s ease-out,
+                    height 0.3s ease-out;
                 display: block;
             }
 
@@ -1922,7 +1943,6 @@ details[open]::details-content {
                     line-height: 1.3;
                 }
             }
-
         }
 
         & .mod-expanded {
@@ -1950,7 +1970,6 @@ details[open]::details-content {
                 gap: 1em;
                 background: color-mix(in srgb, var(--block-color) 25%, transparent);
 
-
                 & nav {
                     display: flex;
                     justify-content: center;
@@ -1967,19 +1986,28 @@ details[open]::details-content {
                         opacity: 0.5;
                         color: var(--block-text);
                         border-radius: 12px;
-                        background: color-mix(in srgb, var(--block-border) 20%, transparent);
+                        background: color-mix(in srgb,
+                                var(--block-border) 20%,
+                                transparent);
                         outline: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
                         padding: 0.2em 0.7em;
-                        transition: background 0.15s ease-in, outline 0.2s ease-in-out, opacity 0.2s ease-in;
+                        transition:
+                            background 0.15s ease-in,
+                            outline 0.2s ease-in-out,
+                            opacity 0.2s ease-in;
 
                         &:hover {
-                            background: color-mix(in srgb, var(--block-border) 30%, transparent);
+                            background: color-mix(in srgb,
+                                    var(--block-border) 30%,
+                                    transparent);
                             outline: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
-                            opacity: 0.75
+                            opacity: 0.75;
                         }
 
                         &.active {
-                            background: color-mix(in srgb, var(--block-border) 90%, transparent);
+                            background: color-mix(in srgb,
+                                    var(--block-border) 90%,
+                                    transparent);
                             border: 2px solid color-mix(in srgb, var(--block-border) 95%, transparent);
                             box-shadow: 0 0 20px 5px var(--block-shadow);
                             opacity: 1;
@@ -2015,7 +2043,9 @@ details[open]::details-content {
                                 flex-direction: column;
                                 max-width: 50ch;
                                 gap: 1.2em;
-                                color: color-mix(in srgb, var(--block-text) 80%, var(--block-border));
+                                color: color-mix(in srgb,
+                                        var(--block-text) 80%,
+                                        var(--block-border));
                                 margin-inline: 3em;
                                 list-style-type: none;
 
@@ -2023,7 +2053,7 @@ details[open]::details-content {
                                     line-height: 1.5;
 
                                     &::before {
-                                        content: '✓';
+                                        content: "✓";
                                         padding-right: 0.5em;
                                         color: var(--accent-color);
                                         text-shadow: var(--accent-color) 0 0 10px;
@@ -2031,7 +2061,9 @@ details[open]::details-content {
                                     }
 
                                     & code {
-                                        background: color-mix(in srgb, var(--accent-color) 20%, transparent);
+                                        background: color-mix(in srgb,
+                                                var(--accent-color) 20%,
+                                                transparent);
                                         padding: 0.3em 0.6em;
                                         border-radius: 8px;
                                     }
@@ -2108,11 +2140,9 @@ details[open]::details-content {
     }
 }
 
-
 details.mod:hover summary>.material-symbols-rounded.arrow {
     opacity: 1;
 }
-
 
 /* #endregion */
 
@@ -2129,7 +2159,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     border-radius: 24px;
     padding: 1em 1.5em;
     max-width: 950px;
-
 
     & button {
         font-family: "GTAArtDecoMedium";
@@ -2214,8 +2243,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         max-width: 160ch;
         margin: 0 !important;
     }
-
-
 
     & .achievement-warning {
         font-size: 0.9em;
@@ -2320,7 +2347,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         color: rgba(255, 255, 255, 0.7);
         font-size: 0.85rem;
         cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease;
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
         text-align: left;
 
         &:hover {
@@ -2344,7 +2373,10 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         color: rgba(255, 255, 255, 0.75) !important;
         font-size: 0.88rem !important;
         line-height: 1.5 !important;
-        transition: max-height 0.25s ease, opacity 0.3s ease, padding 0.2s ease !important;
+        transition:
+            max-height 0.25s ease,
+            opacity 0.3s ease,
+            padding 0.2s ease !important;
     }
 }
 
@@ -2368,7 +2400,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     width: 100%;
     border-radius: 10px;
     border: 2px solid var(--main-word-color);
-
 }
 
 .leaflet-attribution-flag {
@@ -2379,7 +2410,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 /* #region RADIO */
 
-
 .radio-container {
     display: flex;
     align-items: center;
@@ -2388,7 +2418,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     & .radio-grid {
         border: 1px solid color-mix(in srgb, var(--block-border) 60%, transparent);
-        background: linear-gradient(to bottom right, color-mix(in srgb, var(--block-border) 50%, transparent), color-mix(in srgb, transparent 80%, var(--accent-color)));
+        background: linear-gradient(to bottom right,
+                color-mix(in srgb, var(--block-border) 50%, transparent),
+                color-mix(in srgb, transparent 80%, var(--accent-color)));
         margin-block: 3em;
         margin-inline: 1em;
         width: 100%;
@@ -2409,7 +2441,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             align-items: center;
             flex-shrink: 0;
 
-
             &.active {
                 transform: scale(1.15);
                 transform-origin: center;
@@ -2419,7 +2450,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 & img {
                     opacity: 1;
                     filter: brightness(1.05);
-
                 }
             }
         }
@@ -2454,7 +2484,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     color: #f2f2f2;
     border-radius: 30px;
     z-index: 3;
-    transition: transform 0.5s ease, opacity 0.3s linear;
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s linear;
 
     &.active {
         transform: translateY(0);
@@ -2495,7 +2527,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
         & p {
             font-family: "GTAArtDecoMedium";
-            color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%)
+            color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
         }
     }
 
@@ -2539,7 +2571,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     }
 }
 
-
 .radio-footer {
     display: none;
     align-items: center;
@@ -2547,7 +2578,10 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     justify-items: space-between;
     padding: 10px 15px;
     font-size: 14px;
-    background: linear-gradient(to right, #8d75efd1 10%, #b475efce 50%, #8d75efd1 90%);
+    background: linear-gradient(to right,
+            #8d75efd1 10%,
+            #b475efce 50%,
+            #8d75efd1 90%);
     border-top: 3px solid #833fc3d9;
     backdrop-filter: blur(12px);
     position: fixed;
@@ -2558,7 +2592,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     z-index: 1000;
 
     &.active {
-        display: grid
+        display: grid;
     }
 
     & .footer-left {
@@ -2567,15 +2601,15 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         gap: 20px;
 
         & .footer-album {
-
-
             & img {
                 width: 75px;
                 height: 75px;
                 object-fit: contain;
                 border-radius: 10px;
                 border: 3px solid color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%);
-                background: linear-gradient(310deg, color-mix(in srgb, var(--block-text) 30%, var(--block-border) 70%), color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%));
+                background: linear-gradient(310deg,
+                        color-mix(in srgb, var(--block-text) 30%, var(--block-border) 70%),
+                        color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%));
             }
         }
 
@@ -2588,14 +2622,12 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             & #artistName {
                 color: #e0e0e0;
                 font-size: 14px;
-
             }
 
             & #songTitle {
                 color: #ffffff;
                 font-size: 16px;
                 font-family: "GTAArtDecoMedium";
-
             }
 
             & #artistName,
@@ -2640,7 +2672,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 color: #d0f2f8;
                 font-size: 54px;
                 text-shadow: 2px 2px 3px #0000005e;
-
             }
 
             & span {
@@ -2648,8 +2679,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 color: #cbeef8;
                 text-shadow: 2px 2px 3px #0000005e;
                 transition: all 0.2s ease-in-out;
-
-
 
                 &:hover {
                     cursor: pointer;
@@ -2660,7 +2689,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                     transform: scale(0.99);
                     color: #e7c1fe;
                 }
-
             }
         }
 
@@ -2682,19 +2710,22 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 transition: background 0.3s ease-out;
 
                 &:hover {
-                    background: linear-gradient(to right, rgba(192, 192, 192, 0.3)), transparent;
+                    background:
+                        linear-gradient(to right, rgba(192, 192, 192, 0.3)), transparent;
                 }
 
                 & #currentBar {
                     width: 15%;
                     height: 100%;
-                    background: linear-gradient(to right, rgb(233, 128, 247), rgb(245, 151, 255));
+                    background: linear-gradient(to right,
+                            rgb(233, 128, 247),
+                            rgb(245, 151, 255));
                     transition: all 0.3s ease-out;
                     border-radius: 25px;
                     position: relative;
 
                     &::after {
-                        content: '';
+                        content: "";
                         position: absolute;
                         right: -5px;
                         top: 50%;
@@ -2704,7 +2735,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                         background: #fff;
                         border-radius: 50%;
                         z-index: 100;
-
                     }
 
                     &:hover {
@@ -2718,7 +2748,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 font-size: 1.1em;
                 width: 55px;
                 text-align: center;
-
             }
         }
     }
@@ -2764,7 +2793,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 border-radius: 50%;
                 cursor: pointer;
                 margin-top: -3px;
-
             }
 
             input[type="range"]::-moz-range-thumb {
@@ -2783,7 +2811,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         }
     }
 }
-
 
 /* #endregion */
 
@@ -2831,12 +2858,16 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     & section {
         margin: 1em 0;
         border: 2px solid color-mix(in srgb, var(--block-border) 60%, transparent);
-        background: linear-gradient(135deg, color-mix(in srgb, var(--block-border) 40%, transparent), var(--block-color));
+        background: linear-gradient(135deg,
+                color-mix(in srgb, var(--block-border) 40%, transparent),
+                var(--block-color));
         padding: 2em 2.5em 0 2.5em;
         border-radius: 20px;
 
         &:nth-of-type(even) {
-            background: linear-gradient(5deg, color-mix(in srgb, var(--block-border) 40%, transparent), var(--block-color));
+            background: linear-gradient(5deg,
+                    color-mix(in srgb, var(--block-border) 40%, transparent),
+                    var(--block-color));
         }
 
         & h3 {
@@ -2856,7 +2887,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 &:last-of-type {
                     border-bottom: none;
                 }
-
 
                 & h4 {
                     font-size: 1.1em;
@@ -2925,7 +2955,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     9% {
         opacity: 0.5;
-
     }
 
     14% {
@@ -3006,9 +3035,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     100% {
         transform: translateX(0);
     }
-
 }
-
 
 /* #endregion */
 
@@ -3057,13 +3084,11 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             -webkit-backdrop-filter: blur(12px);
             padding: 1em;
 
-
             & .text-container {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
 
                 & p {
                     line-height: 1.9;
@@ -3084,7 +3109,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                     max-width: 75ch;
                     line-height: 2;
                 }
-
             }
 
             & .characters-container {
@@ -3122,7 +3146,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                             & span {
                                 font-size: 0.8em;
                             }
-
                         }
                     }
                 }
@@ -3168,7 +3191,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 font-size: 1.3em;
 
                 & .faq-section {
-
                     & h3 {
                         margin: 1em auto 0.3em auto;
                     }
@@ -3190,9 +3212,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                         }
                     }
                 }
-
-
-
             }
         }
 
@@ -3206,7 +3225,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 flex: 1;
 
                 & .right-content-links {
-
                     & a {
                         font-size: 1.25em;
                     }
@@ -3219,7 +3237,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
             & .right-content-logos {
                 gap: 0.4em;
-
             }
         }
 
@@ -3283,18 +3300,15 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         justify-content: center;
 
         &::before {
-            background:
-                url("../images/main/countdown.webp");
+            background: url("../images/main/countdown.webp");
             border-radius: 20px;
         }
 
         & .countdown-header {
-
             & h2 {
                 line-height: 1.3;
                 font-size: 1.7em;
             }
-
         }
 
         #countdown {
@@ -3334,7 +3348,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             margin: 2em auto;
             padding: 50px 30px;
             border-radius: 20px;
-
 
             & .news-header {
                 flex-direction: column;
@@ -3389,7 +3402,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     /* #region INICIO */
 
-
     /* #endregion */
 
     /* #region FICHA TÉCNICA */
@@ -3438,7 +3450,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
         &::before,
         &::after {
-            width: 20vw
+            width: 20vw;
         }
     }
 
@@ -3504,7 +3516,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                                 & .mod-author {
                                     & p {
                                         font-size: 0.95em;
-                                        line-height: 1.25
+                                        line-height: 1.25;
                                     }
 
                                     & .btn-info,
@@ -3586,13 +3598,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             scroll-snap-type: x mandatory;
             flex-wrap: nowrap;
 
-
             & .radio-card {
-
-
                 &.active {
-
-
                     & img {
                         width: 90px;
                     }
@@ -3615,7 +3622,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         text-align: center;
         overflow: hidden;
 
-
         &.active {
             transform: translateY(0);
             opacity: 1;
@@ -3631,7 +3637,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         & h3 {
             font-size: 1.5em;
         }
-
 
         & ol {
             display: flex;
@@ -3667,10 +3672,8 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         gap: 0;
         justify-content: center;
 
-
         &.active {
             display: flex;
-
         }
 
         & .footer-left {
@@ -3678,8 +3681,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         }
 
         & .footer-center {
-
-
             & .footer-controls {
                 width: 100%;
             }
@@ -3694,7 +3695,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         }
 
         & .footer-right {
-            display: none
+            display: none;
         }
     }
 
@@ -3756,7 +3757,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 @media (min-width: 661px) and (max-width: 900px) {
-
     body {
         max-width: 100vw;
 

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const rutaActual = window.location.pathname;
     const carpetas = ["III", "VC", "SA", "IV", "V"];
     let juego = null;
@@ -15,32 +14,48 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    const rutaJSON = "https://viceclub.s3.us-east-1.amazonaws.com/" + juego + "/achievements.json";
+    const rutaJSON =
+        "https://viceclub.s3.us-east-1.amazonaws.com/" +
+        juego +
+        "/achievements.json";
     const coloresRarity = {
-        "bronze": { border: "2px solid #ffb89770" },
-        "silver": { border: "2px solid #B5B5B570" },
-        "gold": { border: "2px solid #f5b33970" },
-        "platinum": { border: "2px solid #7191fa70" },
-    }
+        bronze: { border: "2px solid #ffb89770" },
+        silver: { border: "2px solid #B5B5B570" },
+        gold: { border: "2px solid #f5b33970" },
+        platinum: { border: "2px solid #7191fa70" },
+    };
     const coloresTags = {
-        "Perdible": { background: "#6b2a2a", color: "#ff6b6b" },
-        "Historia": { background: "#2a4a2a", color: "#6bff6b" },
-        "Coleccionable": { background: "#858126", color: "#e4ff6b" },
-        "Paciencia": { background: "#2a3a5a", color: "#6ba3ff" },
-        "Online": { background: "#B1261A", color: "#fafafa" }
+        Perdible: { background: "#6b2a2a", color: "#ff6b6b" },
+        Historia: { background: "#2a4a2a", color: "#6bff6b" },
+        Coleccionable: { background: "#858126", color: "#e4ff6b" },
+        Paciencia: { background: "#2a3a5a", color: "#6ba3ff" },
+        Online: { background: "#B1261A", color: "#fafafa" },
     };
 
     fetch(rutaJSON)
-        .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-        .then(datos => renderizarLogros(datos))
-        .catch(error => console.error("Error al cargar los logros:", error))
+        .then((r) => {
+            if (!r.ok) throw new Error();
+            return r.json();
+        })
+        .then((datos) => renderizarLogros(datos))
+        .catch((error) => console.error("Error al cargar los logros:", error))
         .finally(() => configurarBotones());
 
     function renderizarLogros(datos) {
-        const secciones = ["original", "definitive", "socialclub", "iv", "tbogt", "tlad", "enhanced"];
+        const secciones = [
+            "original",
+            "definitive",
+            "socialclub",
+            "iv",
+            "tbogt",
+            "tlad",
+            "enhanced",
+        ];
 
         secciones.forEach(function (seccion) {
-            const contenedor = document.querySelector("#" + seccion + " .achievement-list");
+            const contenedor = document.querySelector(
+                "#" + seccion + " .achievement-list",
+            );
 
             if (!contenedor || !datos[seccion]) return;
 
@@ -84,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const tagContainer = document.createElement("div");
                 tagContainer.className = "achievement-tag-container";
 
-                (logro.tags || []).forEach(tag => {
+                (logro.tags || []).forEach((tag) => {
                     const estilo = coloresTags[tag] || {};
 
                     const span = document.createElement("span");
@@ -137,26 +152,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
     function configurarBotones() {
-        const botones = document.querySelectorAll(".achievement-selector button");
+        const botones = document.querySelectorAll(
+            ".achievement-selector button",
+        );
 
         botones.forEach(function (boton) {
             boton.addEventListener("click", function () {
-
                 const seccionObjetivo = this.getAttribute("data-seccion");
                 if (!seccionObjetivo) return;
 
-
-                document.querySelectorAll(".achievement-content").forEach(function (contenido) {
-                    contenido.style.display = "none";
-                });
+                document
+                    .querySelectorAll(".achievement-content")
+                    .forEach(function (contenido) {
+                        contenido.style.display = "none";
+                    });
 
                 botones.forEach(function (btn) {
                     btn.classList.remove("active");
                 });
 
-                document.getElementById(seccionObjetivo).style.display = "block";
+                document.getElementById(seccionObjetivo).style.display =
+                    "block";
                 this.classList.add("active");
             });
         });
@@ -169,7 +186,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const textoContainer = botonToggle.parentElement;
         const texto = textoContainer.querySelector(".achievement-guide-text");
         const icono = botonToggle.querySelector(".achievement-toggle-icon");
-        const estaAbierto = botonToggle.getAttribute("aria-expanded") === "true";
+        const estaAbierto =
+            botonToggle.getAttribute("aria-expanded") === "true";
 
         if (estaAbierto) {
             texto.style.maxHeight = "0";

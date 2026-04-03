@@ -4,9 +4,12 @@ let noticias = [];
 let visibleCount = 2;
 let step = 2;
 
-fetch("https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" + Date.now())
-    .then(res => res.json())
-    .then(data => {
+fetch(
+    "https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" +
+        Date.now(),
+)
+    .then((res) => res.json())
+    .then((data) => {
         noticias = data;
         renderNoticias();
     });
@@ -14,7 +17,7 @@ fetch("https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" + Date.no
 function renderNoticias() {
     container.innerHTML = "";
 
-    noticias.slice(0, visibleCount).forEach(noticia => {
+    noticias.slice(0, visibleCount).forEach((noticia) => {
         const article = document.createElement("article");
         article.classList.add("news-article");
         article.innerHTML = `
@@ -46,7 +49,7 @@ btn.addEventListener("click", () => {
     renderNoticias();
 });
 const newsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
             const img = entry.target;
             img.src = img.dataset.src;

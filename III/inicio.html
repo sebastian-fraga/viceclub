@@ -1,339 +1,435 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="../assets/images/main/logo.webp"
+            type="image/webp"
+        />
+        <link rel="stylesheet" href="../assets/styles/styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+        <link rel="stylesheet" href="../assets/styles/styles_III.css" />
+        <link rel="canonical" href="https://viceclub.vercel.app/III/inicio" />
+        <meta
+            name="description"
+            content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
+        />
+        <meta property="og:site_name" content="Vice Club" />
+        <meta property="og:title" content="GTA III | Vice Club" />
+        <meta
+            property="og:description"
+            content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
+        />
+        <meta
+            property="og:image"
+            content="https://viceclub.vercel.app/assets/images/main/og.webp"
+        />
+        <meta
+            property="og:url"
+            content="https://viceclub.vercel.app/III/inicio"
+        />
+        <meta property="og:type" content="article" />
+        <title>GTA III | Vice Club</title>
+    </head>
 
-    <link rel="stylesheet" href="../assets/styles/styles_III.css">
-    <link rel="canonical" href="https://viceclub.vercel.app/III/inicio">
-    <meta name="description"
-        content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club.">
-    <meta property="og:site_name" content="Vice Club">
-    <meta property="og:title" content="GTA III | Vice Club">
-    <meta property="og:description"
-        content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club.">
-    <meta property="og:image" content="https://viceclub.vercel.app/assets/images/main/og.webp">
-    <meta property="og:url" content="https://viceclub.vercel.app/III/inicio">
-    <meta property="og:type" content="article">
-    <title>GTA III | Vice Club</title>
-</head>
+    <body class="gta-3">
+        <header>
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img
+                        src="../assets/images/main/logo.webp"
+                        alt="Vice Club Logo"
+                    />
+                </a>
+                <h1>VICE CLUB</h1>
+            </div>
+            <nav>
+                <button id="hamburger" aria-label="Abrir menú">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+        </header>
+        <div class="block" id="container">
+            <div class="text-container">
+                <h2>Grand Theft Auto III</h2>
+                <p>
+                    <span style="font-weight: bold; color: rgb(231, 183, 61)"
+                        >Grand Theft Auto III</span
+                    >
+                    es un videojuego de acción y sandbox de mundo abierto
+                    desarrollado por DMA Design (actualmente Rockstar North) y
+                    distribuido por Rockstar Games lanzado el 23 de octubre de
+                    2001. Es el primer Grand Theft Auto con vista en tercera
+                    persona y en 3D, sentando un precendente en la saga.
+                </p>
 
-<body class="gta-3">
-    <header>
-        <div class="logo-container">
-            <a href="../index.html">
-                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-            </a>
-            <h1>VICE CLUB</h1>
-        </div>
-        <nav>
-            <button id="hamburger" aria-label="Abrir menú">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-        </nav>
-    </header>
-    <div class="block" id="container">
-        <div class="text-container">
-            <h2>Grand Theft Auto III</h2>
-            <p><span style="font-weight: bold; color: rgb(231, 183, 61);">Grand Theft Auto III</span> es un
-                videojuego
-                de acción y sandbox de mundo abierto desarrollado por DMA Design (actualmente Rockstar North) y
-                distribuido por Rockstar Games lanzado el 23 de octubre de 2001. Es el primer Grand Theft Auto con
-                vista
-                en tercera persona y en 3D, sentando un precendente en la saga.</p>
+                <p>
+                    El juego transcurre en Liberty City, una ciudad ficticia
+                    parodia de Nueva York. Cuenta con 3 islas principales:
+                    Portland, Staunton Island y Shoreside Vale, las cuales se
+                    irán desbloqueando a medida que se avance en la historia.
+                </p>
 
-            <p>El juego transcurre en Liberty City, una ciudad ficticia parodia de Nueva York. Cuenta con 3 islas
-                principales: Portland, Staunton Island y Shoreside Vale, las cuales se irán desbloqueando a medida
-                que
-                se avance en la historia.</p>
-
-            <p>El jugador tomará el control de Claude, un hombre que fue arrestrado por un robo al Liberty City Bank,
-                donde
-                fue
-                traicionado por su pareja en ese momento, Catalina, disparándole en su hombro en la escena del
-                delito.
-                Claude deberá hacer misiones con contactos de la mafia Leone, escalando entre distintas pandillas,
-                organizaciones y bandas. La historia cuenta con un total de 50 misiones.</p>
-            <div class="characters-container">
-                <div class="characters-header">
-                    <h2>Personajes</h2>
+                <p>
+                    El jugador tomará el control de Claude, un hombre que fue
+                    arrestrado por un robo al Liberty City Bank, donde fue
+                    traicionado por su pareja en ese momento, Catalina,
+                    disparándole en su hombro en la escena del delito. Claude
+                    deberá hacer misiones con contactos de la mafia Leone,
+                    escalando entre distintas pandillas, organizaciones y
+                    bandas. La historia cuenta con un total de 50 misiones.
+                </p>
+                <div class="characters-container">
+                    <div class="characters-header">
+                        <h2>Personajes</h2>
+                    </div>
+                    <div class="characters-list">
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/claude.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>Claude</p>
+                                <span>Protagonista</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/catalina.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>Catalina</p>
+                                <span>Antagonista principal</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/8ball.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>8-Ball</p>
+                                <span>Aliado de Claude</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/salvatore.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>Salvatore Leone</p>
+                                <span>Don de la familia Leone</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/maria.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>María Latore</p>
+                                <span>Esposa de Salvatore</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/burro.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>El Burro</p>
+                                <span>Jefe de los Diablos</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/ray.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>Ray Machowski</p>
+                                <span>Policía corrupto</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img
+                                src="../assets/images/characters/III/donald.webp"
+                                alt=""
+                            />
+                            <div class="character-text">
+                                <p>Donald Love</p>
+                                <span>Político y magnate</span>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-                <div class="characters-list">
-                    <article>
-                        <img src="../assets/images/characters/III/claude.webp" alt="">
-                        <div class="character-text">
-                            <p>Claude</p>
-                            <span>Protagonista</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/catalina.webp" alt="">
-                        <div class="character-text">
-                            <p>Catalina</p>
-                            <span>Antagonista principal</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/8ball.webp" alt="">
-                        <div class="character-text">
-                            <p>8-Ball</p>
-                            <span>Aliado de Claude</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/salvatore.webp" alt="">
-                        <div class="character-text">
-                            <p>Salvatore Leone</p>
-                            <span>Don de la familia Leone</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/maria.webp" alt="">
-                        <div class="character-text">
-                            <p>María Latore</p>
-                            <span>Esposa de Salvatore</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/burro.webp" alt="">
-                        <div class="character-text">
-                            <p>El Burro</p>
-                            <span>Jefe de los Diablos</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/ray.webp" alt="">
-                        <div class="character-text">
-                            <p>Ray Machowski</p>
-                            <span>Policía corrupto</span>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="../assets/images/characters/III/donald.webp" alt="">
-                        <div class="character-text">
-                            <p>Donald Love</p>
-                            <span>Político y magnate</span>
-                        </div>
-                    </article>
-                </div>
+            </div>
+
+            <div class="ficha-tecnica">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="portada">
+                                <img
+                                    src="../assets/images/main/portada_III.webp"
+                                    alt="Portada de GTA III"
+                                />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>DESARROLLADOR</th>
+                            <td>DMA Design</td>
+                        </tr>
+                        <tr>
+                            <th>DISTRIBUIDOR</th>
+                            <td>Rockstar Games</td>
+                        </tr>
+                        <tr>
+                            <th>PRODUCTOR</th>
+                            <td>Leslie Benzies</td>
+                        </tr>
+                        <tr>
+                            <th>GUIONISTAS</th>
+                            <td>
+                                <ul>
+                                    <li>Dan Houser</li>
+                                    <li>James Worrall</li>
+                                    <li>Paul Kurowski</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PLATAFORMAS</th>
+                            <td>
+                                <ul>
+                                    <li>PlayStation 2</li>
+                                    <li>Xbox</li>
+                                    <li>Microsoft Windows</li>
+                                    <li>macOS</li>
+                                    <li>Android</li>
+                                    <li>iOS</li>
+                                    <li>Amazon Fire OS</li>
+                                    <li>PlayStation 4</li>
+                                    <li>PlayStation 5</li>
+                                    <li>Xbox Series X/S</li>
+                                    <li>Nintendo Switch</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>FECHA DE LANZAMIENTO</th>
+                            <td>
+                                <span class="table-platforms"
+                                    >PlayStation 2</span
+                                ><br />
+                                23 de octubre de 2001 (NA)<br />
+                                26 de octubre de 2001 (EU)<br /><br />
+
+                                <span class="table-platforms"
+                                    >Microsoft Windows</span
+                                ><br />
+                                21 de mayo de 2002 (NA)<br />
+                                24 de mayo de 2002 (EU)<br /><br />
+
+                                <span class="table-platforms">Xbox</span><br />
+                                4 de noviembre de 2003 (NA)<br />
+                                2 de enero de 2004 (EU)<br /><br />
+
+                                <span class="table-platforms">macOS</span><br />
+                                12 de noviembre de 2010<br /><br />
+
+                                <span class="table-platforms"
+                                    >Android<br />iOS</span
+                                ><br />
+                                15 de diciembre de 2011 (10th)<br /><br />
+
+                                <span class="table-platforms"
+                                    >Amazon Fire OS</span
+                                ><br />
+                                15 de mayo de 2014 (10th)<br /><br />
+
+                                <span class="table-platforms"
+                                    >PlayStation 4, PlayStation 5 <br />Xbox
+                                    One, Xbox Series X/S <br />Microsoft Windows
+                                    <br />Nintendo Switch
+                                </span>
+                                <br />
+                                11 de noviembre de 2021 (DE)<br /><br />
+
+                                <span class="table-platforms"
+                                    >Android<br />iOS</span
+                                ><br />
+                                14 de diciembre de 2023 (DE)<br /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>MOTOR GRÁFICO</th>
+                            <td>
+                                <ul>
+                                    <li>RenderWare</li>
+                                    <li>Unreal Engine (DE)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>VENTAS</th>
+                            <td>14.5 millones de copias (marzo de 2008)</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div class="ficha-tecnica">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2" class="portada">
-                            <img src="../assets/images/main/portada_III.webp" alt="Portada de GTA III">
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>DESARROLLADOR</th>
-                        <td>DMA Design</td>
-                    </tr>
-                    <tr>
-                        <th>DISTRIBUIDOR</th>
-                        <td>Rockstar Games</td>
-                    </tr>
-                    <tr>
-                        <th>PRODUCTOR</th>
-                        <td>Leslie Benzies</td>
-                    </tr>
-                    <tr>
-                        <th>GUIONISTAS</th>
-                        <td>
-                            <ul>
-                                <li>Dan Houser</li>
-                                <li>James Worrall</li>
-                                <li>Paul Kurowski</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>PLATAFORMAS</th>
-                        <td>
-                            <ul>
-                                <li>PlayStation 2</li>
-                                <li>Xbox</li>
-                                <li>Microsoft Windows</li>
-                                <li>macOS</li>
-                                <li>Android</li>
-                                <li>iOS</li>
-                                <li>Amazon Fire OS</li>
-                                <li>PlayStation 4</li>
-                                <li>PlayStation 5</li>
-                                <li>Xbox Series X/S</li>
-                                <li>Nintendo Switch</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>FECHA DE LANZAMIENTO</th>
-                        <td>
-                            <span class="table-platforms">PlayStation 2</span><br>
-                            23 de octubre de 2001 (NA)<br>
-                            26 de octubre de 2001 (EU)<br><br>
-
-                            <span class="table-platforms">Microsoft Windows</span><br>
-                            21 de mayo de 2002 (NA)<br>
-                            24 de mayo de 2002 (EU)<br><br>
-
-                            <span class="table-platforms">Xbox</span><br>
-                            4 de noviembre de 2003 (NA)<br>
-                            2 de enero de 2004 (EU)<br><br>
-
-                            <span class="table-platforms">macOS</span><br>
-                            12 de noviembre de 2010<br><br>
-
-                            <span class="table-platforms">Android<br>iOS</span><br>
-                            15 de diciembre de 2011 (10th)<br><br>
-
-                            <span class="table-platforms">Amazon Fire OS</span><br>
-                            15 de mayo de 2014 (10th)<br><br>
-
-                            <span class="table-platforms">PlayStation 4, PlayStation 5 <br>Xbox One, Xbox Series X/S
-                                <br>Microsoft Windows
-                                <br>Nintendo Switch
-                            </span>
-                            <br>
-                            11 de noviembre de 2021 (DE)<br><br>
-
-                            <span class="table-platforms">Android<br>iOS</span><br>
-                            14 de diciembre de 2023 (DE)<br><br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>MOTOR GRÁFICO</th>
-                        <td>
-                            <ul>
-                                <li>RenderWare</li>
-                                <li>Unreal Engine (DE)</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>VENTAS</th>
-                        <td>14.5 millones de copias (marzo de 2008)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-
-    </div>
-
-
-
-    <footer>
-        © 2026 - Vice Club
-    </footer>
-    <div id="rightContent">
-        <div class="right-content-logos">
-            <a href="#" class="active">
-                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" loading="lazy" class="active">
-            </a>
-            <a href="../VC/inicio.html">
-                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" loading="lazy">
-            </a>
-            <a href="../SA/inicio.html">
-                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" loading="lazy">
-            </a>
-            <a href="../LCS/inicio.html">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" loading="lazy">
-            </a>
-            <a href="../VCS/inicio.html">
-                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" loading="lazy">
-            </a>
-            <a href="../IV/inicio.html">
-                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" loading="lazy">
-            </a>
-            <a href="../V/inicio.html">
-                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" loading="lazy">
-            </a>
-            <a href="../VI/inicio.html">
-                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" loading="lazy">
-            </a>
-        </div>
-
-        <nav class="right-content-nav">
-            <div class="right-content-links">
+        <footer>© 2026 - Vice Club</footer>
+        <div id="rightContent">
+            <div class="right-content-logos">
                 <a href="#" class="active">
-                    <span class="material-symbols-rounded">home</span>
-                    <p>INICIO</p>
+                    <img
+                        src="../assets/images/main/III.webp"
+                        alt="Logo de GTA 3"
+                        loading="lazy"
+                        class="active"
+                    />
                 </a>
-                <a href="100.html">
-                    <span class="material-symbols-rounded">checklist</span>
-                    <p>100%</p>
+                <a href="../VC/inicio.html">
+                    <img
+                        src="../assets/images/main/VC.webp"
+                        alt="Logo de GTA Vice City"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="artworks.html">
-                    <span class="material-symbols-rounded">art_track</span>
-                    <p>ARTWORKS</p>
+                <a href="../SA/inicio.html">
+                    <img
+                        src="../assets/images/main/SA.webp"
+                        alt="Logo de GTA San Andreas"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="herramientas_y_mods.html">
-                    <span class="material-symbols-rounded">build</span>
-                    <p>HERRAMIENTAS Y MODS</p>
+                <a href="../LCS/inicio.html">
+                    <img
+                        src="../assets/images/main/LCS.webp"
+                        alt="Logo de GTA Liberty City Stories"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="logros.html">
-                    <span class="material-symbols-rounded">trophy</span>
-                    <p>LOGROS</p>
+                <a href="../VCS/inicio.html">
+                    <img
+                        src="../assets/images/main/VCS.webp"
+                        alt="Logo de GTA Vice City Stories"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="mapa.html">
-                    <span class="material-symbols-rounded">map</span>
-                    <p>MAPA</p>
+                <a href="../IV/inicio.html">
+                    <img
+                        src="../assets/images/main/IV.webp"
+                        alt="Logo de GTA 4"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="radio.html">
-                    <span class="material-symbols-rounded">radio</span>
-                    <p>RADIO</p>
+                <a href="../V/inicio.html">
+                    <img
+                        src="../assets/images/main/V.webp"
+                        alt="Logo de GTA 5"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="trucos.html">
-                    <span class="material-symbols-rounded">videogame_asset</span>
-                    <p>TRUCOS</p>
+                <a href="../VI/inicio.html">
+                    <img
+                        src="../assets/images/main/VI.webp"
+                        alt="Logo de GTA 6"
+                        loading="lazy"
+                    />
                 </a>
             </div>
-            <div class="right-content-footer">
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">volume_up</span>
-                        <p>Sonido</p>
-                    </div>
-                    <label>
-                        <input type="checkbox" id="soundToggle">
-                        <span></span>
-                    </label>
+
+            <nav class="right-content-nav">
+                <div class="right-content-links">
+                    <a href="#" class="active">
+                        <span class="material-symbols-rounded">home</span>
+                        <p>INICIO</p>
+                    </a>
+                    <a href="100.html">
+                        <span class="material-symbols-rounded">checklist</span>
+                        <p>100%</p>
+                    </a>
+                    <a href="artworks.html">
+                        <span class="material-symbols-rounded">art_track</span>
+                        <p>ARTWORKS</p>
+                    </a>
+                    <a href="herramientas_y_mods.html">
+                        <span class="material-symbols-rounded">build</span>
+                        <p>HERRAMIENTAS Y MODS</p>
+                    </a>
+                    <a href="logros.html">
+                        <span class="material-symbols-rounded">trophy</span>
+                        <p>LOGROS</p>
+                    </a>
+                    <a href="mapa.html">
+                        <span class="material-symbols-rounded">map</span>
+                        <p>MAPA</p>
+                    </a>
+                    <a href="radio.html">
+                        <span class="material-symbols-rounded">radio</span>
+                        <p>RADIO</p>
+                    </a>
+                    <a href="trucos.html">
+                        <span class="material-symbols-rounded"
+                            >videogame_asset</span
+                        >
+                        <p>TRUCOS</p>
+                    </a>
                 </div>
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">language</span>
-                        <p>Idioma</p>
+                <div class="right-content-footer">
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded"
+                                >volume_up</span
+                            >
+                            <p>Sonido</p>
+                        </div>
+                        <label>
+                            <input type="checkbox" id="soundToggle" />
+                            <span></span>
+                        </label>
                     </div>
-                    <button>
-                        ES
-                        <span class="material-symbols-rounded">arrow_drop_down</span>
-                    </button>
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded"
+                                >language</span
+                            >
+                            <p>Idioma</p>
+                        </div>
+                        <button>
+                            ES
+                            <span class="material-symbols-rounded"
+                                >arrow_drop_down</span
+                            >
+                        </button>
+                    </div>
                 </div>
+            </nav>
+        </div>
 
-            </div>
-        </nav>
-    </div>
+        <!-- Sounds -->
+        <script src="../assets/scripts/sounds.js"></script>
 
-    <!-- Sounds -->
-    <script src="../assets/scripts/sounds.js"></script>
+        <!-- Language Selector  -->
+        <script src="../assets/scripts/language-selector.js"></script>
 
-    <!-- Language Selector  -->
-    <script src="../assets/scripts/language-selector.js"></script>
-
-    <!-- Right Content -->
-    <script src="../assets/scripts/right-menu.js"></script>
-
-</body>
-
+        <!-- Right Content -->
+        <script src="../assets/scripts/right-menu.js"></script>
+    </body>
 </html>

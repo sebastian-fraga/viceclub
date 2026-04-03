@@ -1,194 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="../assets/images/main/logo.webp"
+            type="image/webp"
+        />
+        <link rel="stylesheet" href="../assets/styles/styles.css" />
+        <link rel="stylesheet" href="../assets/styles/styles_LCS.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+        />
+        <link rel="canonical" href="https://viceclub.vercel.app/LCS/radio" />
+        <meta
+            name="description"
+            content="Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club"
+        />
+        <meta property="og:site_name" content="Vice Club" />
+        <meta property="og:title" content="GTA LCS Radios | Vice Club" />
+        <meta
+            property="og:description"
+            content="Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club."
+        />
+        <meta
+            property="og:image"
+            content="https://viceclub.vercel.app/assets/images/main/og.webp"
+        />
+        <meta
+            property="og:url"
+            content="https://viceclub.vercel.app/LCS/radio"
+        />
+        <meta property="og:type" content="music.playlist" />
+        <title>GTA LCS Radios | Vice Club</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/main/logo.webp" type="image/webp">
-    <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link rel="stylesheet" href="../assets/styles/styles_LCS.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <link rel="canonical" href="https://viceclub.vercel.app/LCS/radio">
-    <meta name="description"
-        content="Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club">
-    <meta property="og:site_name" content="Vice Club">
-    <meta property="og:title" content="GTA LCS Radios | Vice Club">
-    <meta property="og:description"
-        content="Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club.">
-    <meta property="og:image" content="https://viceclub.vercel.app/assets/images/main/og.webp">
-    <meta property="og:url" content="https://viceclub.vercel.app/LCS/radio">
-    <meta property="og:type" content="music.playlist">
-    <title>GTA LCS Radios | Vice Club</title>
-</head>
-
-<body class="gta-lcs">
-    <header>
-        <div class="logo-container">
-            <a href="../index.html">
-                <img src="../assets/images/main/logo.webp" alt="Vice Club Logo">
-            </a>
-            <h1>VICE CLUB</h1>
-        </div>
-        <nav>
-            <button id="hamburger" aria-label="Abrir menú">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-        </nav>
-    </header>
-
-    <div class="block" id="container" style="display: block;">
-        <div class="text-container">
-            <h2>Radios de Grand Theft Auto: Liberty City Stories</h2>
-            <div class="radio-container">
-                <div id="radioGrid" class="radio-grid"></div>
+    <body class="gta-lcs">
+        <header>
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img
+                        src="../assets/images/main/logo.webp"
+                        alt="Vice Club Logo"
+                    />
+                </a>
+                <h1>VICE CLUB</h1>
             </div>
-        </div>
-    </div>
+            <nav>
+                <button id="hamburger" aria-label="Abrir menú">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </nav>
+        </header>
 
-    <div id="radioInfo" class="radio-info">
-        <img src="" alt="" id="radioImage">
-        <h3 id="radioTitle"></h3>
-        <p id="radioDJ"></p>
-        <p id="radioGenre"></p>
-        <ol id="radioList">
-        </ol>
-    </div>
-
-    <div class="radio-footer">
-        <div class="footer-left">
-            <div class="footer-album">
-                <img id="albumArt">
-            </div>
-            <div class="footer-text">
-                <p id="songTitle">Canción</p>
-                <p id="artistName">Artista</p>
-            </div>
-        </div>
-        <div class="footer-center">
-            <div class="footer-controls">
-                <span class="material-symbols-rounded">skip_previous</span>
-                <span class="material-symbols-rounded footer-pause">pause_circle</span>
-                <span class="material-symbols-rounded footer-play" style="display: none;">play_circle</span>
-                <span class="material-symbols-rounded">skip_next</span>
-            </div>
-            <div class="footer-timer">
-                <p id="currentTime">0:00</p>
-                <div id="bar">
-                    <div id="currentBar"></div>
+        <div class="block" id="container" style="display: block">
+            <div class="text-container">
+                <h2>Radios de Grand Theft Auto: Liberty City Stories</h2>
+                <div class="radio-container">
+                    <div id="radioGrid" class="radio-grid"></div>
                 </div>
-                <p id="totalTime">0:00</p>
             </div>
         </div>
-        <div class="footer-right">
-            <div class="footer-volume">
-                <span class="material-symbols-rounded">volume_up</span>
-                <input type="range" min="0" max="100" value="100">
+
+        <div id="radioInfo" class="radio-info">
+            <img src="" alt="" id="radioImage" />
+            <h3 id="radioTitle"></h3>
+            <p id="radioDJ"></p>
+            <p id="radioGenre"></p>
+            <ol id="radioList"></ol>
+        </div>
+
+        <div class="radio-footer">
+            <div class="footer-left">
+                <div class="footer-album">
+                    <img id="albumArt" />
+                </div>
+                <div class="footer-text">
+                    <p id="songTitle">Canción</p>
+                    <p id="artistName">Artista</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-controls">
+                    <span class="material-symbols-rounded">skip_previous</span>
+                    <span class="material-symbols-rounded footer-pause"
+                        >pause_circle</span
+                    >
+                    <span
+                        class="material-symbols-rounded footer-play"
+                        style="display: none"
+                        >play_circle</span
+                    >
+                    <span class="material-symbols-rounded">skip_next</span>
+                </div>
+                <div class="footer-timer">
+                    <p id="currentTime">0:00</p>
+                    <div id="bar">
+                        <div id="currentBar"></div>
+                    </div>
+                    <p id="totalTime">0:00</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-volume">
+                    <span class="material-symbols-rounded">volume_up</span>
+                    <input type="range" min="0" max="100" value="100" />
+                </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        © 2026 - Vice Club
-    </footer>
-    <div id="rightContent">
-        <div class="right-content-logos">
-            <a href="../III/radio.html">
-                <img src="../assets/images/main/III.webp" alt="Logo de GTA 3" loading="lazy">
-            </a>
-            <a href="../VC/radio.html">
-                <img src="../assets/images/main/VC.webp" alt="Logo de GTA Vice City" loading="lazy">
-            </a>
-            <a href="../SA/radio.html">
-                <img src="../assets/images/main/SA.webp" alt="Logo de GTA San Andreas" loading="lazy">
-            </a>
-            <a href="#" class="active">
-                <img src="../assets/images/main/LCS.webp" alt="Logo de GTA Liberty City Stories" loading="lazy"
-                    class="active">
-            </a>
-            <a href="../VCS/radio.html">
-                <img src="../assets/images/main/VCS.webp" alt="Logo de GTA Vice City Stories" loading="lazy">
-            </a>
-            <a href="../IV/radio.html">
-                <img src="../assets/images/main/IV.webp" alt="Logo de GTA 4" loading="lazy">
-            </a>
-            <a href="../V/radio.html">
-                <img src="../assets/images/main/V.webp" alt="Logo de GTA 5" loading="lazy">
-            </a>
-            <a href="../VI/inicio.html">
-                <img src="../assets/images/main/VI.webp" alt="Logo de GTA 6" loading="lazy">
-            </a>
-        </div>
-
-        <nav class="right-content-nav">
-            <div class="right-content-links">
-                <a href="inicio.html">
-                    <span class="material-symbols-rounded">home</span>
-                    <p>INICIO</p>
+        <footer>© 2026 - Vice Club</footer>
+        <div id="rightContent">
+            <div class="right-content-logos">
+                <a href="../III/radio.html">
+                    <img
+                        src="../assets/images/main/III.webp"
+                        alt="Logo de GTA 3"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="100.html">
-                    <span class="material-symbols-rounded">checklist</span>
-                    <p>100%</p>
+                <a href="../VC/radio.html">
+                    <img
+                        src="../assets/images/main/VC.webp"
+                        alt="Logo de GTA Vice City"
+                        loading="lazy"
+                    />
                 </a>
-                <a href="artworks.html">
-                    <span class="material-symbols-rounded">art_track</span>
-                    <p>ARTWORKS</p>
-                </a>
-                <a href="mapa.html">
-                    <span class="material-symbols-rounded">map</span>
-                    <p>MAPA</p>
+                <a href="../SA/radio.html">
+                    <img
+                        src="../assets/images/main/SA.webp"
+                        alt="Logo de GTA San Andreas"
+                        loading="lazy"
+                    />
                 </a>
                 <a href="#" class="active">
-                    <span class="material-symbols-rounded">radio</span>
-                    <p>RADIO</p>
+                    <img
+                        src="../assets/images/main/LCS.webp"
+                        alt="Logo de GTA Liberty City Stories"
+                        loading="lazy"
+                        class="active"
+                    />
                 </a>
-                <a href="trucos.html">
-                    <span class="material-symbols-rounded">videogame_asset</span>
-                    <p>TRUCOS</p>
+                <a href="../VCS/radio.html">
+                    <img
+                        src="../assets/images/main/VCS.webp"
+                        alt="Logo de GTA Vice City Stories"
+                        loading="lazy"
+                    />
+                </a>
+                <a href="../IV/radio.html">
+                    <img
+                        src="../assets/images/main/IV.webp"
+                        alt="Logo de GTA 4"
+                        loading="lazy"
+                    />
+                </a>
+                <a href="../V/radio.html">
+                    <img
+                        src="../assets/images/main/V.webp"
+                        alt="Logo de GTA 5"
+                        loading="lazy"
+                    />
+                </a>
+                <a href="../VI/inicio.html">
+                    <img
+                        src="../assets/images/main/VI.webp"
+                        alt="Logo de GTA 6"
+                        loading="lazy"
+                    />
                 </a>
             </div>
-            <div class="right-content-footer">
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">volume_up</span>
-                        <p>Sonido</p>
-                    </div>
-                    <label>
-                        <input type="checkbox" id="soundToggle">
-                        <span></span>
-                    </label>
+
+            <nav class="right-content-nav">
+                <div class="right-content-links">
+                    <a href="inicio.html">
+                        <span class="material-symbols-rounded">home</span>
+                        <p>INICIO</p>
+                    </a>
+                    <a href="100.html">
+                        <span class="material-symbols-rounded">checklist</span>
+                        <p>100%</p>
+                    </a>
+                    <a href="artworks.html">
+                        <span class="material-symbols-rounded">art_track</span>
+                        <p>ARTWORKS</p>
+                    </a>
+                    <a href="mapa.html">
+                        <span class="material-symbols-rounded">map</span>
+                        <p>MAPA</p>
+                    </a>
+                    <a href="#" class="active">
+                        <span class="material-symbols-rounded">radio</span>
+                        <p>RADIO</p>
+                    </a>
+                    <a href="trucos.html">
+                        <span class="material-symbols-rounded"
+                            >videogame_asset</span
+                        >
+                        <p>TRUCOS</p>
+                    </a>
                 </div>
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">language</span>
-                        <p>Idioma</p>
+                <div class="right-content-footer">
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded"
+                                >volume_up</span
+                            >
+                            <p>Sonido</p>
+                        </div>
+                        <label>
+                            <input type="checkbox" id="soundToggle" />
+                            <span></span>
+                        </label>
                     </div>
-                    <button>
-                        ES
-                        <span class="material-symbols-rounded">arrow_drop_down</span>
-                    </button>
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded"
+                                >language</span
+                            >
+                            <p>Idioma</p>
+                        </div>
+                        <button>
+                            ES
+                            <span class="material-symbols-rounded"
+                                >arrow_drop_down</span
+                            >
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
+            </nav>
+        </div>
 
-    <!-- Sounds -->
-    <script>
-        window.SOUND_DELAY = 200;
-    </script>
-    <script src="../assets/scripts/sounds.js"></script>
+        <!-- Sounds -->
+        <script>
+            window.SOUND_DELAY = 200;
+        </script>
+        <script src="../assets/scripts/sounds.js"></script>
 
-    <!-- Language Selector  -->
-    <script src="../assets/scripts/language-selector.js"></script>
+        <!-- Language Selector  -->
+        <script src="../assets/scripts/language-selector.js"></script>
 
-    <!-- Radio -->
-    <script src="../assets/scripts/radio.js"></script>
+        <!-- Radio -->
+        <script src="../assets/scripts/radio.js"></script>
 
-    <!-- Right Content -->
-    <script src="../assets/scripts/right-menu.js"></script>
-
-</body>
-
+        <!-- Right Content -->
+        <script src="../assets/scripts/right-menu.js"></script>
+    </body>
 </html>

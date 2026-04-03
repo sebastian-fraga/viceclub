@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         event.stopPropagation();
         rightContent.classList.toggle("show");
         button.classList.toggle("active");
-
     });
 
     document.addEventListener("click", function (event) {
-        if (!rightContent.contains(event.target) && !button.contains(event.target)) {
+        if (
+            !rightContent.contains(event.target) &&
+            !button.contains(event.target)
+        ) {
             rightContent.classList.remove("show");
             button.classList.remove("active");
         }
