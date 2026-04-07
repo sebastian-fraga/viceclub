@@ -2449,7 +2449,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
                 & img {
                     opacity: 1;
-                    filter: brightness(1.05) drop-shadow(2px 2px 1px #000000);;
+                    filter: brightness(1.05) drop-shadow(2px 2px 1px #000000);
                 }
             }
         }
@@ -2601,15 +2601,20 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         gap: 20px;
 
         & .footer-album {
+            border-radius: 10px;
+            border: 3px solid color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%);
+            background: linear-gradient(310deg,
+                    color-mix(in srgb, var(--block-text) 30%, var(--block-border) 70%),
+                    color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%));
+
+            overflow: hidden;
+
             & img {
                 width: 75px;
                 height: 75px;
                 object-fit: contain;
-                border-radius: 10px;
-                border: 3px solid color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%);
-                background: linear-gradient(310deg,
-                        color-mix(in srgb, var(--block-text) 30%, var(--block-border) 70%),
-                        color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%));
+                filter: drop-shadow(1px 1px 0 rgb(0, 0, 0));
+
             }
         }
 
