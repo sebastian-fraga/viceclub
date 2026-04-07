@@ -327,20 +327,26 @@ document.addEventListener("DOMContentLoaded", function () {
         const title = document.createElement("h4");
         title.textContent = "Canciones";
         title.classList.add("tracklist-title");
-
         radioList.appendChild(title);
 
         songs.forEach((song, i) => {
             const li = document.createElement("li");
-
-            li.textContent = song.artist
-                ? `${song.artist} — ${song.title}`
-                : song.title;
-
             if (i === activeIndex) li.classList.add("active");
 
-            li.addEventListener("click", () => seekTo(Number(song.start)));
+            li.innerHTML = `
+                <span class="tl-num">${i + 1}</span>
+                
+                <span class="tl-play material-symbols-rounded">
+                    play_arrow
+                </span>
+                
+                <div class="tl-info">
+                    <div class="tl-title">${song.title ?? ""}</div>
+                    ${song.artist ? `<div class="tl-artist">${song.artist}</div>` : ""}
+                </div>
+            `;
 
+            li.addEventListener("click", () => seekTo(Number(song.start)));
             radioList.appendChild(li);
         });
     }
