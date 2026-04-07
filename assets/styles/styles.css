@@ -2573,8 +2573,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
             &.active {
                 opacity: 1;
-                font-weight: 500;
-                font-size: 1em;
+                font-size: 1.08em;
                 background: color-mix(in srgb, var(--block-border) 12%, transparent);
                 border-color: color-mix(in srgb, var(--block-border) 25%, transparent);
 
