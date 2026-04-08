@@ -9,6 +9,17 @@ document.addEventListener("DOMContentLoaded", function () {
     let radioData = {};
     let targetTime = null;
 
+    function safePlay() {
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.catch((err) => {
+                if (err.name !== "AbortError") {
+                    console.error("Error al reproducir:", err);
+                }
+            });
+        }
+    }
+
     function updateMediaSession(song, radioData) {
         if (!("mediaSession" in navigator)) return;
 
@@ -23,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
             artist: artist,
             artwork: artwork
                 ? [
-                      { src: artwork, sizes: "512x512", type: "image/webp" },
-                      { src: artwork, sizes: "256x256", type: "image/webp" },
-                  ]
+                    { src: artwork, sizes: "512x512", type: "image/webp" },
+                    { src: artwork, sizes: "256x256", type: "image/webp" },
+                ]
                 : [],
         });
 
@@ -42,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             seekRelative(10),
         );
         navigator.mediaSession.setActionHandler("play", () => {
-            audio.play();
+            safePlay();
             playBtn.style.display = "none";
             playPauseBtn.style.display = "inline";
         });
@@ -183,10 +194,10 @@ document.addEventListener("DOMContentLoaded", function () {
             item.style.top = "50%";
 
             item.style.transform = `
-      rotate(${angle}deg)
-      translate(${radius}px)
-      rotate(${-angle}deg)
-    `;
+                rotate(${angle}deg)
+                translate(${radius}px)
+                rotate(${-angle}deg)
+            `;
             window.addEventListener("resize", makeDial);
         });
     }
@@ -212,10 +223,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectorHTML = data.playlists
                 .map(
                     (playlist, i) => `
-        <button class="playlist-btn${i === 0 ? " active" : ""}" data-index="${i}">
-          ${playlist.name}
-        </button>
-      `,
+                        <button class="playlist-btn${i === 0 ? " active" : ""}" data-index="${i}">
+                            ${playlist.name}
+                        </button>
+                    `,
                 )
                 .join("");
 
@@ -273,7 +284,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (playlist.audio) {
             audio.src = `${playlist.audio}?v=${Date.now()}`;
-            audio.play();
+
+            audio.oncanplay = () => {
+                safePlay();
+                audio.oncanplay = null;
+            };
+
             playPauseBtn.style.display = "inline";
             playBtn.style.display = "none";
         }
@@ -299,7 +315,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         audio.src = `${data.audio}?v=${Date.now()}`;
-        audio.play();
+
+        audio.oncanplay = () => {
+            safePlay();
+            audio.oncanplay = null;
+        };
 
         playPauseBtn.style.display = "inline";
         playBtn.style.display = "none";
@@ -420,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     playBtn.addEventListener("click", () => {
-        audio.play();
+        safePlay();
         playBtn.style.display = "none";
         playPauseBtn.style.display = "inline";
     });
@@ -570,8 +590,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 index !== -1
                     ? songs[(index - 1 + songs.length) % songs.length]
                     : [...songs]
-                          .reverse()
-                          .find((s) => Number(s.end) < audio.currentTime);
+                        .reverse()
+                        .find((s) => Number(s.end) < audio.currentTime);
             if (prev) seekTo(Number(prev.start));
         }
     }
@@ -611,9 +631,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 100;
 
             volumeSlider.style.background = `
-      linear-gradient(to right,  #e39dff ${value}%,
-        rgba(192,192,192,0.3) ${value}%
-        )`;
+                linear-gradient(to right,  #e39dff ${value}%, 
+                rgba(192,192,192,0.3) ${value}%
+                )
+            `;
             volumeSlider.style.transition = "background 0.1s linear";
         }
 

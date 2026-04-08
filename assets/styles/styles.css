@@ -141,9 +141,9 @@ body {
             flex-direction: column;
             justify-content: start;
             align-items: center;
-            height: 100vh;
+            height: 100svh;
             padding-block: 1em;
-            border-left: 2px solid #bba3f3;
+            border-left: 2px solid #ffffffc7;
 
             & a {
                 border: none;
@@ -224,7 +224,7 @@ body {
                     margin-block: 1.4em 0.3em;
                     font-size: 1.3em;
                     width: max-content;
-                    color: #252258;
+                    color: #0f0e29;
                     border-bottom: 3px solid;
                     border-image: linear-gradient(to right, #455eec, #d049ee);
                     border-image-slice: 1;
@@ -239,7 +239,7 @@ body {
                     border: 1px solid #0000003b;
                     border-radius: 18px;
                     margin: 0.3em;
-                    padding: 1em 2em;
+                    padding: 1em 2em 1em 1em;
 
                     & h4 {
                         font-family: "GTAArtDecoMedium";
@@ -256,16 +256,13 @@ body {
                     }
 
                     & a {
-                        color: #006aeb;
-                        text-shadow: 0 0 8px rgba(114, 161, 250, 0.5);
-                        text-decoration: none;
+                        color: #1c0bb6;
                         transition: all 0.15s ease-out;
                         display: inline-block;
 
                         &:hover {
                             cursor: pointer;
-                            text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
-                            color: #fbbf24;
+                            color: #ffca44;
                         }
                     }
                 }
@@ -924,6 +921,8 @@ header {
     }
 }
 
+
+
 .welcome-wrapper {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -938,10 +937,9 @@ header {
         font-family: "Alfa Slab One";
         line-height: 0.9;
         font-size: 2.9em;
-        width: 100%;
         margin: 1.5em auto 0 auto;
         -webkit-text-stroke: 2px #00000082;
-        background: linear-gradient(to right, #0e72ed, #ff8bae);
+        background: linear-gradient(to right, #0e72edf6, #ff8baef6);
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -1878,7 +1876,6 @@ details[open]::details-content {
     width: 100%;
     align-items: center;
     gap: 1.5em;
-    margin: 0 auto 2em 0;
 
     & details {
         display: flex;
@@ -3191,9 +3188,11 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 }
 
                 & .mod-paragraph {
+                    text-align: start;
                     font-size: 1.1em;
-                    max-width: 75ch;
-                    line-height: 2;
+                    max-width: 33ch;
+                    margin-inline: 1.3em;
+                    line-height: 1.8;
                 }
             }
 
@@ -3258,7 +3257,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
             & #rightContent {
                 max-width: 25vw;
-                gap: 0.4em;
+                gap: 0.35em;
 
                 & a {
                     &:first-of-type {
@@ -3266,7 +3265,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                     }
 
                     & img {
-                        width: 80px;
+                        width: 75px;
                         height: auto;
                     }
                 }
