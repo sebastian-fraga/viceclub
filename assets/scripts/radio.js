@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el.innerHTML = el.textContent;
 
         setTimeout(() => {
-            if (window.innerWidth <= 1400 && el.scrollWidth > el.clientWidth) {
+            if (window.innerWidth <= 1980 && el.scrollWidth > el.clientWidth) {
                 const overflow = el.scrollWidth - el.clientWidth;
                 el.innerHTML = `<span>${el.textContent}</span>`;
                 el.classList.add("marquee");

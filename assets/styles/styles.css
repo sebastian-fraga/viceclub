@@ -2711,6 +2711,10 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                     max-width: 150px;
                 }
 
+                @media (min-width: 1200px) {
+                    max-width: 450px;
+                }
+
                 &.marquee {
                     & span {
                         display: inline-block;
