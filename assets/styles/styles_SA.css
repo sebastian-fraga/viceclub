@@ -148,14 +148,61 @@ details.mod summary img {
 .radio-container {
     & .radio-grid {
         background: linear-gradient(135deg, rgb(0, 0, 0), rgba(0, 0, 0, 1));
+        gap: 2em;
     }
 }
 
-footer {
+#radioInfo {
+
+    & #playlistSelector {
+        margin-bottom: 1em;
+        gap: 0 1em;
+
+        & button {
+            text-align: start;
+            transform: scaleY(0.9);
+            padding: 0.2em 0.4em 0.2em 0;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            background: none;
+            font-weight: bolder;
+            color: #4E5C6D;
+            position: relative;
+
+            &:hover {
+                color: #B1CEF1;
+            }
+
+            &.active {
+                font-weight: 800;
+                color: #B1CEF1;
+                padding-left: 1.7em;
+
+
+                &::before {
+                    content: '';
+                    left: 0;
+                    position: absolute;
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("../images/radios/SA/arrow.webp");
+                    background-size: cover;
+                    background-position: center;
+
+                }
+            }
+
+
+        }
+    }
+}
+
+.radio-footer {
     & .footer-left {
         & .footer-album {
             & img {
-                border: 3px solid var(--title-color);
+                padding: 0;
                 background: #050505
             }
         }
@@ -177,6 +224,13 @@ footer {
     body {
         &::before {
             background-image: url("../images/main/background_SA-mobile.webp");
+        }
+    }
+
+    #radioInfo {
+        & #playlistSelector {
+            font-size: 0.9em;
+            flex-direction: column;
         }
     }
 }

@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
             artist: artist,
             artwork: artwork
                 ? [
-                    { src: artwork, sizes: "512x512", type: "image/webp" },
-                    { src: artwork, sizes: "256x256", type: "image/webp" },
-                ]
+                      { src: artwork, sizes: "512x512", type: "image/webp" },
+                      { src: artwork, sizes: "256x256", type: "image/webp" },
+                  ]
                 : [],
         });
 
@@ -296,8 +296,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (data._activeSongs.length > 0) {
             renderSongList(data._activeSongs, -1);
-            document.getElementById("songTitle").textContent = "";
-            document.getElementById("artistName").textContent = "";
+
+            const firstIndex = getCurrentSongIndex();
+            if (firstIndex !== -1) {
+                lastSongIndex = firstIndex;
+                updateActiveSong(firstIndex);
+            } else {
+                document.getElementById("songTitle").textContent = "";
+                document.getElementById("artistName").textContent = "";
+            }
         } else {
             document.getElementById("songTitle").textContent =
                 "Sin información de canciones";
@@ -328,8 +335,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (songs && songs.length > 0) {
             renderSongList(songs, -1);
-            document.getElementById("songTitle").textContent = "";
-            document.getElementById("artistName").textContent = "";
+
+            const firstIndex = getCurrentSongIndex();
+            if (firstIndex !== -1) {
+                lastSongIndex = firstIndex;
+                updateActiveSong(firstIndex);
+            } else {
+                document.getElementById("songTitle").textContent = "";
+                document.getElementById("artistName").textContent = "";
+            }
         } else {
             document.getElementById("songTitle").textContent =
                 "Sin información de canciones";
@@ -590,8 +604,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 index !== -1
                     ? songs[(index - 1 + songs.length) % songs.length]
                     : [...songs]
-                        .reverse()
-                        .find((s) => Number(s.end) < audio.currentTime);
+                          .reverse()
+                          .find((s) => Number(s.end) < audio.currentTime);
             if (prev) seekTo(Number(prev.start));
         }
     }

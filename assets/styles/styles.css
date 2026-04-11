@@ -2485,6 +2485,22 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         transform 0.5s ease,
         opacity 0.3s linear;
 
+    & #playlistSelector {
+        display: flex;
+        gap: 1em 0.3em;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+
+        & button {
+            border: none;
+            transition: all 0.2s ease-in;
+            cursor: pointer;
+            position: relative;
+            font-family: var(--font-title);
+        }
+    }
+
     &.active {
         transform: translateY(0);
         opacity: 1;

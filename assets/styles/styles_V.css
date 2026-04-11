@@ -190,23 +190,15 @@ details.mod summary img {
 #radioInfo {
 
     & #playlistSelector {
-        display: flex;
-        gap: 1em 0.3em;
-        flex-wrap: wrap;
-        justify-content: start;
-        align-items: center;
 
         & button {
-            border: none;
             padding: 1em 2.1em;
             background: #000000;
             color: #F0F0F0;
             font-family: "Chalet";
             text-transform: uppercase;
             font-size: 0.8em;
-            transition: all 0.2s ease-in;
-            cursor: pointer;
-            position: relative;
+            
 
             &:hover {
                 background: #F0F0F0;
