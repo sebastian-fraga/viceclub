@@ -93,7 +93,30 @@ body {
 
 /* #region RADIO */
 
+#radioInfo {
 
+    & #playlistSelector {
+        margin-bottom: 1em;
+        gap: 0 2em;
+
+        & button {
+            color: #6EAAC0;
+            font-size: 1.3em;
+            background: none;
+            text-shadow: 2px 2px 1px #000;
+
+            &:hover {
+                color: #E8F0F3;
+            }
+
+            &.active {
+                color: #E8F0F3;
+            }
+
+
+        }
+    }
+}
 
 
 /* #endregion */

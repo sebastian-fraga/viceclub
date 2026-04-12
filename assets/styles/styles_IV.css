@@ -184,13 +184,24 @@ details.mod summary img {
 /* #endregion */
 
 /* #region RADIO */
+.radio-container {
+    & .radio-grid {
+        gap: 0.3em 0.1em;
 
-footer {
+        & img {
+            width: 120px;
+            aspect-ratio: 1;
+            object-position: center;
+        }
+    }
+}
+
+.radio-footer {
     & .footer-left {
         & .footer-album {
             & img {
-                border: 3px solid var(--accent-color);
-                background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--block-color) 70%, transparent))
+                object-fit: contain;
+                object-position: center;
             }
         }
     }
@@ -202,10 +213,8 @@ footer {
         gap: 1em;
 
         & button {
-            padding: 0;
             background: none;
             color: #F0F0F0;
-            font-family: "Helvetica Neue";
             font-size: 1.2em;
             font-weight: 100;
 

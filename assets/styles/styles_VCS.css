@@ -98,6 +98,34 @@ body {
 
 /* #region RADIO */
 
+#radioInfo {
+
+    & #playlistSelector {
+        margin-bottom: 1em;
+        gap: 0 1em;
+
+        & button {
+            text-align: start;
+            padding: 0.2em 0.4em 0.2em 0;
+            font-size: 1.3em;
+            background: none;
+            color: #7BD4C9;
+            text-transform: uppercase;
+            text-shadow: 2px 4px 0 #000;
+
+            &:hover {
+                color: #d9d292c4;
+            }
+
+            &.active {
+                font-weight: 800;
+                color: #D9D292;
+            }
+
+
+        }
+    }
+}
 
 /* #endregion */
 
