@@ -198,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 translate(${radius}px)
                 rotate(${-angle}deg)
             `;
-            window.addEventListener("resize", makeDial);
         });
+        window.addEventListener("resize", makeDial);
     }
 
     function updateRadioDirect(radioKey) {

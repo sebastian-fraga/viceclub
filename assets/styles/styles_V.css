@@ -162,7 +162,7 @@ details.mod summary img {
         & img {
             width: 100%;
             height: 100%;
-            opacity: 0.5;
+            opacity: 0.4;
             filter: grayscale(700%);
             object-fit: contain;
             padding: 2px;
