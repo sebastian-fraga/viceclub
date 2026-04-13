@@ -499,8 +499,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const formatTime = (time) => {
+        const hours = Math.floor(time / 3600);
+        const minutes = Math.floor((time % 3600) / 60);
+        const seconds = Math.floor(time % 60);
+        if (hours > 0) {
+            return `${hours}:${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        } else {
+            return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        }
+    };
+
     audio.addEventListener("timeupdate", () => {
-        if (isSeeking) return;
+        if (isSeeking || isDraggingBar) return;
 
         const totalTime = audio.duration;
         const currentTime = audio.currentTime;
@@ -508,17 +519,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isNaN(totalTime)) {
             const progress = (currentTime / totalTime) * 100;
             progressBar.style.width = `${progress}%`;
-
-            const formatTime = (time) => {
-                const hours = Math.floor(time / 3600);
-                const minutes = Math.floor((time % 3600) / 60);
-                const seconds = Math.floor(time % 60);
-                if (hours > 0) {
-                    return `${hours}:${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-                } else {
-                    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-                }
-            };
 
             currentTimeDisplay.textContent = formatTime(currentTime);
             totalTimeDisplay.textContent = formatTime(totalTime);
@@ -575,11 +575,66 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === "ArrowLeft") seekRelative(-5);
     });
 
-    fullProgressBar.addEventListener("click", (e) => {
+    let isDraggingBar = false;
+
+    function getSeekTime(clientX) {
+        const rect = fullProgressBar.getBoundingClientRect();
+        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        return (x / rect.width) * audio.duration;
+    }
+
+    function updateBarVisual(clientX) {
+        const rect = fullProgressBar.getBoundingClientRect();
+        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        const pct = (x / rect.width) * 100;
+        progressBar.style.width = `${pct}%`;
+
+        const previewTime = (x / rect.width) * audio.duration;
+        if (!isNaN(previewTime)) {
+            currentTimeDisplay.textContent = formatTime(previewTime);
+        }
+    }
+
+    fullProgressBar.addEventListener("mousedown", (e) => {
         e.stopPropagation();
-        const width = fullProgressBar.clientWidth;
-        const clickX = e.offsetX;
-        seekTo((clickX / width) * audio.duration);
+        isDraggingBar = true;
+        updateBarVisual(e.clientX);
+    });
+
+    fullProgressBar.addEventListener(
+        "touchstart",
+        (e) => {
+            e.stopPropagation();
+            isDraggingBar = true;
+            updateBarVisual(e.touches[0].clientX);
+        },
+        { passive: true },
+    );
+
+    document.addEventListener("mousemove", (e) => {
+        if (!isDraggingBar) return;
+        updateBarVisual(e.clientX);
+    });
+
+    document.addEventListener(
+        "touchmove",
+        (e) => {
+            if (!isDraggingBar) return;
+            updateBarVisual(e.touches[0].clientX);
+        },
+        { passive: true },
+    );
+
+    document.addEventListener("mouseup", (e) => {
+        if (!isDraggingBar) return;
+        isDraggingBar = false;
+        seekTo(getSeekTime(e.clientX));
+    });
+
+    document.addEventListener("touchend", (e) => {
+        if (!isDraggingBar) return;
+        isDraggingBar = false;
+        seekTo(getSeekTime(e.changedTouches[0].clientX));
     });
 
     function handleSongChange(direction) {

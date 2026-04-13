@@ -2653,6 +2653,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 .radio-footer {
+    user-select: none;
     display: none;
     align-items: center;
     grid-template-columns: 1fr auto 1fr;
