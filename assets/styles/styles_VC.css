@@ -150,6 +150,11 @@ details.mod summary img {
 /* #endregion */
 
 /* #region MAPA */
+.map-wrapper {
+    & .map-container {
+        background-color: #99caff;
+    }   
+}
 
 /* #endregion */
 
@@ -166,6 +171,7 @@ details.mod summary img {
         transform: skew(20deg);
     }
 }
+
 /* #endregion */
 
 /* #region TRUCOS */
@@ -184,12 +190,12 @@ details.mod summary img {
     }
 
     #radioGrid {
-    transform: none;
-
-    & .radio-card {
         transform: none;
+
+        & .radio-card {
+            transform: none;
+        }
     }
-}
 }
 
 /* #endregion */

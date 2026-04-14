@@ -96,6 +96,15 @@ body {
 
 /* #endregion */
 
+/* #region MAPA */
+.map-wrapper {
+    & .map-container {
+        background-color: #9abde5;
+    }
+}
+
+/* #endregion */
+
 /* #region RADIO */
 
 #radioInfo {

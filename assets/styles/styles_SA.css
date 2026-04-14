@@ -143,6 +143,15 @@ details.mod summary img {
 
 /* #endregion */
 
+/* #region MAPA */
+.map-wrapper {
+    & .map-container {
+        background-color: #7A8AAC;
+    }
+}
+
+/* #endregion */
+
 /* #region RADIO */
 
 .radio-container {

@@ -79,8 +79,47 @@
         <div class="block" id="container">
             <div class="text-container">
                 <h2>Mapa Interactivo de Grand Theft Auto IV</h2>
-                <div class="map-container">
-                    <img src="../assets/images/maps/IV.webp" alt="" />
+                <div class="map-wrapper">
+                    <aside>
+                        <div id="map-toolbar">
+                            <div class="aside-header">
+                                <h3>GTA IV</h3>
+                                <span>Mapa</span>
+                            </div>
+                            <div id="layer-buttons"></div>
+                            <div class="toolbar-buttons">
+                                <button id="btn-export">
+                                    <span class="material-symbols-rounded"
+                                        >download</span
+                                    >
+                                    Exportar progreso
+                                </button>
+
+                                <button id="btn-import">
+                                    <span class="material-symbols-rounded"
+                                        >upload</span
+                                    >
+                                    Importar datos
+                                </button>
+                            </div>
+
+                            <div class="toolbar-footer">
+                                <button id="btn-reset">
+                                    <span class="material-symbols-rounded"
+                                        >restart_alt</span
+                                    >
+                                    Reiniciar progreso
+                                </button>
+                            </div>
+                            <input
+                                type="file"
+                                id="input-import"
+                                accept=".json"
+                                hidden
+                            />
+                        </div>
+                    </aside>
+                    <div class="map-container" id="map"></div>
                 </div>
             </div>
         </div>
@@ -215,6 +254,15 @@
             </nav>
         </div>
 
+        <!-- <div id="ctx-menu">
+            <div class="ctx-header">Menú contextual</div>
+            <div class="ctx-coords" id="ctx-coords-display">
+                lat: — · lng: —
+            </div>
+            <div class="ctx-sep"></div>
+            <div id="ctx-dynamic-markers"></div>
+        </div> -->
+
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>
 
@@ -223,5 +271,13 @@
 
         <!-- Right Content -->
         <script src="../assets/scripts/right-menu.js"></script>
+
+        <!-- Map -->
+        <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+        <script>
+            const GAME_ID = "IV";
+            const CONFIG_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${GAME_ID}/map.json`;
+        </script>
+        <script src="../assets/scripts/map.js"></script>
     </body>
 </html>

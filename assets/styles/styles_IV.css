@@ -245,6 +245,14 @@ details.mod summary img {
 
 /* #endregion */
 
+/* #region MAPA */
+.map-wrapper {
+    & .map-container {
+        background-color: #747474;
+    }
+}
+/* #endregion */
+
 /* #region TRUCOS */
 .platform-selector {
     display: none;
