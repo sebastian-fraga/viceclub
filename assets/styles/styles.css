@@ -2653,16 +2653,16 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             &.open {
                 transform: translateY(0);
             }
-        }
 
-        aside::before {
-            content: '';
-            display: block;
-            width: 32px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 99px;
-            margin: 8px auto 0;
+            &::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 99px;
+                margin: 8px auto 0;
+            }
         }
 
         & .map-container {

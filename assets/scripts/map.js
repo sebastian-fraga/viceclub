@@ -7,7 +7,7 @@
         console.error("No se pudo cargar la config del mapa:", e);
         return;
     }
-
+    const toolbar = document.querySelector("#map-toolbar");
     const aside = document.querySelector("aside");
 
     let startY = 0;
@@ -18,6 +18,7 @@
     aside.addEventListener("mousedown", startDrag);
 
     function startDrag(e) {
+        if (toolbar.scrollTop > 0) return;
         isDragging = true;
         startY = e.touches ? e.touches[0].clientY : e.clientY;
 
@@ -387,72 +388,128 @@
         if (e.key === "Escape") ctxMenu.classList.remove("visible");
     });
 
-    document.getElementById("btn-export").addEventListener("click", () => {
-        const finalJSON = {
-            game: CONFIG.game || GAME_ID,
-            storageKey: STORAGE_KEY,
-            map: CONFIG.map,
-            markerTypes: CONFIG.markerTypes,
-            markers: [...baseMarkers, ...customMarkers].sort(
-                sortMarkersForExport,
-            ),
-            progress,
-        };
+    const btnExportProgress = document.getElementById("btn-export-progress");
+    const btnImport = document.getElementById("btn-import");
+    const btnExportDebug = document.getElementById("btn-export-debug");
+    const inputImport = document.getElementById("input-import");
+    const btnReset = document.getElementById("btn-reset");
+    
+    if (btnExportProgress) {
+        btnExportProgress.addEventListener("click", () => {
+            const data = {
+                game: GAME_ID,
+                storageKey: STORAGE_KEY,
+                progress,
+                customMarkers,
+            };
 
-        const blob = new Blob([JSON.stringify(finalJSON, null, 2)], {
-            type: "application/json",
+            const blob = new Blob([JSON.stringify(data, null, 2)], {
+                type: "application/json",
+            });
+
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = `viceclub_progress_${GAME_ID}.json`;
+            a.click();
+
+            URL.revokeObjectURL(a.href);
+        });
+    }
+
+    if (btnImport && inputImport) {
+        btnImport.addEventListener("click", () => {
+            inputImport.click();
         });
 
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = `viceclub_${GAME_ID}.json`;
-        a.click();
+        inputImport.addEventListener("change", function () {
+            const file = this.files[0];
+            if (!file) return;
 
-        URL.revokeObjectURL(a.href);
-    });
+            const reader = new FileReader();
 
-    const inputImport = document.getElementById("input-import");
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
 
-    document.getElementById("btn-import").addEventListener("click", () => {
-        inputImport.click();
-    });
+                    if (data.game !== GAME_ID) {
+                        alert("Este archivo no corresponde a este mapa");
+                        return;
+                    }
 
-    inputImport.addEventListener("change", function () {
-        const file = this.files[0];
-        if (!file) return;
+                    if (data.progress) {
+                        progress = {
+                            ...progress,
+                            ...data.progress,
+                        };
+                        saveProgress(progress);
+                    }
 
-        const reader = new FileReader();
+                    if (Array.isArray(data.customMarkers)) {
+                        const existingIds = new Set(
+                            customMarkers.map((m) => m.id),
+                        );
 
-        reader.onload = (e) => {
-            try {
-                const data = JSON.parse(e.target.result);
+                        data.customMarkers.forEach((m) => {
+                            if (!existingIds.has(m.id)) {
+                                customMarkers.push(m);
+                            }
+                        });
 
-                if (data.progress) {
-                    progress = data.progress;
-                    saveProgress(progress);
-                }
+                        saveCustomMarkers(customMarkers);
+                    }
 
-                if (Array.isArray(data.markers)) {
-                    customMarkers = data.markers;
-                    saveCustomMarkers(customMarkers);
                     rebuildAllMarkers();
+                } catch (err) {
+                    console.error("JSON inválido", err);
                 }
-            } catch {
-                console.error("JSON inválido");
-            }
-        };
+            };
 
-        reader.readAsText(file);
-        this.value = "";
-    });
+            reader.readAsText(file);
+            this.value = "";
+        });
+    }
 
-    document.getElementById("btn-reset").addEventListener("click", () => {
-        if (!confirm(`¿Resetear todo el progreso del mapa de GTA ${GAME_ID}?`))
-            return;
-        progress = {};
-        saveProgress(progress);
-        location.reload();
-    });
+    if (btnReset) {
+        btnReset.addEventListener("click", () => {
+            if (
+                !confirm(
+                    `¿Resetear todo el progreso del mapa de GTA ${GAME_ID}?`,
+                )
+            )
+                return;
+
+            localStorage.removeItem(STORAGE_KEY);
+            localStorage.removeItem(STORAGE_CUSTOM_KEY);
+
+            location.reload();
+        });
+    }
+    
+    if (btnExportDebug) {
+        btnExportDebug.addEventListener("click", () => {
+            const finalJSON = {
+                game: CONFIG.game || GAME_ID,
+                storageKey: STORAGE_KEY,
+                map: CONFIG.map,
+                markerTypes: CONFIG.markerTypes,
+                markers: [...baseMarkers, ...customMarkers].sort(
+                    sortMarkersForExport,
+                ),
+                progress,
+            };
+
+            const blob = new Blob([JSON.stringify(finalJSON, null, 2)], {
+                type: "application/json",
+            });
+
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = `viceclub_${GAME_ID}.json`;
+            a.click();
+
+            URL.revokeObjectURL(a.href);
+        });
+    }
 
     rebuildAllMarkers();
 })();
