@@ -107,7 +107,9 @@ details.mod summary img {
 /* #endregion */
 
 /* #region MAPA */
-
+.map-wrapper {
+    background: linear-gradient(135deg, rgba(25, 2, 88, 0.685) 1%, rgb(0, 0, 0));
+}
 /* #endregion */
 
 /* #region RADIO */

@@ -8,6 +8,54 @@
         return;
     }
 
+    const aside = document.querySelector("aside");
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    aside.addEventListener("touchstart", startDrag);
+    aside.addEventListener("mousedown", startDrag);
+
+    function startDrag(e) {
+        isDragging = true;
+        startY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        document.addEventListener("touchmove", onDrag);
+        document.addEventListener("mousemove", onDrag);
+
+        document.addEventListener("touchend", endDrag);
+        document.addEventListener("mouseup", endDrag);
+    }
+
+    function onDrag(e) {
+        if (!isDragging) return;
+
+        currentY = e.touches ? e.touches[0].clientY : e.clientY;
+        const delta = currentY - startY;
+
+        if (delta > 0) {
+            aside.style.transform = `translateY(${delta}px)`;
+        }
+    }
+
+    function endDrag() {
+        isDragging = false;
+
+        if (currentY - startY > 100) {
+            aside.classList.remove("open");
+        } else {
+            aside.classList.add("open");
+        }
+
+        aside.style.transform = "";
+
+        document.removeEventListener("touchmove", onDrag);
+        document.removeEventListener("mousemove", onDrag);
+        document.removeEventListener("touchend", endDrag);
+        document.removeEventListener("mouseup", endDrag);
+    }
+
     let baseMarkers = Array.isArray(CONFIG.markers) ? [...CONFIG.markers] : [];
 
     const { map: mapCfg, markerTypes: MARKER_TYPES, storageKey } = CONFIG;

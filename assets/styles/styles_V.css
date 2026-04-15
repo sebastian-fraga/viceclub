@@ -137,6 +137,8 @@ details.mod summary img {
 
 /* #region MAPA */
 .map-wrapper {
+    background: linear-gradient(135deg, rgba(3, 39, 36, 0.685) 5%, rgb(0, 0, 0));
+
     & .map-container {
         background-color: #0fa8d2;
     }

@@ -90,6 +90,11 @@ body {
 
 /* #endregion */
 
+/* #region MAPA */
+.map-wrapper {
+    background: linear-gradient(135deg, rgba(49, 0, 0, 0.685), rgb(0, 0, 0));
+}
+/* #endregion */
 
 /* #region RADIO */
 

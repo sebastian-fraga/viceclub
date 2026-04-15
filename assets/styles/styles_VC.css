@@ -151,9 +151,11 @@ details.mod summary img {
 
 /* #region MAPA */
 .map-wrapper {
+    background: linear-gradient(135deg, rgba(41, 2, 51, 0.685) 5%, rgb(0, 0, 0));
+
     & .map-container {
         background-color: #99caff;
-    }   
+    }
 }
 
 /* #endregion */

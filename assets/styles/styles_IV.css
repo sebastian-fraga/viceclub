@@ -247,10 +247,13 @@ details.mod summary img {
 
 /* #region MAPA */
 .map-wrapper {
+    background: linear-gradient(135deg, rgba(36, 34, 35, 0.685) 5%, rgb(0, 0, 0));
+
     & .map-container {
         background-color: #747474;
     }
 }
+
 /* #endregion */
 
 /* #region TRUCOS */

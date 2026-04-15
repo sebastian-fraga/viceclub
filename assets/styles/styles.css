@@ -2397,7 +2397,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     padding-right: 1.5em;
     margin-inline: auto;
     margin-top: 1em;
-    background: linear-gradient(135deg, rgba(25, 2, 88, 0.685), rgb(0, 0, 0));
+
     border-radius: 40px;
 
     & aside {
@@ -2408,9 +2408,12 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         border-radius: 40px 0 0 40px;
 
         & #map-toolbar {
-            flex: 1;
+            height: 100%;
             overflow-y: auto;
             scrollbar-width: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             &::-webkit-scrollbar {
                 display: none;
@@ -2419,21 +2422,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             & .aside-header {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 8px;
                 padding: 20px 16px 16px;
                 border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
-
-                & .aside-header-icon {
-                    width: 34px;
-                    height: 34px;
-                    border-radius: 10px;
-                    background: rgba(255, 255, 255, 0.06);
-                    border: 0.5px solid rgba(255, 255, 255, 0.12);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: rgba(255, 255, 255, 0.5);
-                }
 
                 & h3 {
                     font-size: 14px;
@@ -2442,8 +2433,9 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 }
 
                 & span {
-                    font-size: 12px;
-                    color: rgba(255, 255, 255, 0.4);
+                    font-size: 1.2em;
+                    color: var(--accent-color);
+                    opacity: 0.7;
                     margin-top: 1px;
                 }
             }
@@ -2553,73 +2545,76 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 }
             }
 
-            & .toolbar-buttons {
-                padding: 8px;
-                border-top: 0.5px solid rgba(255, 255, 255, 0.08);
-                display: flex;
-                flex-direction: column;
-                gap: 2px;
-
-                & button {
+            & .toolbar-text {
+                & .toolbar-buttons {
+                    padding: 8px;
+                    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
                     display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 8px 10px;
-                    border-radius: 10px;
-                    border: none;
-                    background: transparent;
-                    cursor: pointer;
-                    color: rgba(255, 255, 255, 0.45);
-                    font-size: 13px;
-                    width: 100%;
-                    transition: background 0.15s, color 0.15s;
-                    text-align: left;
+                    flex-direction: column;
+                    gap: 2px;
 
-                    & .material-symbols-rounded {
-                        font-size: 18px;
-                        flex-shrink: 0;
+                    & button {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        border-radius: 10px;
+                        border: none;
+                        background: transparent;
+                        cursor: pointer;
+                        color: rgba(255, 255, 255, 0.45);
+                        font-size: 13px;
+                        width: 100%;
+                        transition: background 0.15s, color 0.15s;
+                        text-align: left;
+
+                        & .material-symbols-rounded {
+                            font-size: 18px;
+                            flex-shrink: 0;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.06);
+                            color: rgba(255, 255, 255, 0.85);
+                        }
                     }
+                }
 
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.06);
-                        color: rgba(255, 255, 255, 0.85);
+                & .toolbar-footer {
+                    padding: 8px;
+                    border-top: 0.5px solid rgba(255, 255, 255, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+
+                    & button {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        border-radius: 10px;
+                        border: none;
+                        background: transparent;
+                        cursor: pointer;
+                        color: rgba(247, 122, 122, 0.45);
+                        font-size: 13px;
+                        width: 100%;
+                        transition: background 0.15s, color 0.15s;
+                        text-align: left;
+
+                        & .material-symbols-rounded {
+                            font-size: 18px;
+                            flex-shrink: 0;
+                        }
+
+                        &:hover {
+                            background: rgba(255, 49, 49, 0.06);
+                            color: rgba(255, 46, 46, 0.85);
+                        }
                     }
                 }
             }
 
-            & .toolbar-footer {
-                padding: 8px;
-                border-top: 0.5px solid rgba(255, 255, 255, 0.08);
-                display: flex;
-                flex-direction: column;
-                gap: 2px;
-
-                & button {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 8px 10px;
-                    border-radius: 10px;
-                    border: none;
-                    background: transparent;
-                    cursor: pointer;
-                    color: rgba(247, 122, 122, 0.45);
-                    font-size: 13px;
-                    width: 100%;
-                    transition: background 0.15s, color 0.15s;
-                    text-align: left;
-
-                    & .material-symbols-rounded {
-                        font-size: 18px;
-                        flex-shrink: 0;
-                    }
-
-                    &:hover {
-                        background: rgba(255, 49, 49, 0.06);
-                        color: rgba(255, 46, 46, 0.85);
-                    }
-                }
-            }
         }
     }
 
@@ -2633,10 +2628,55 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         background: #000;
         border-radius: 0 40px 40px 0;
     }
+
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding-right: 0;
+        border-radius: 0;
+
+        & aside {
+            z-index: 100000;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: color-mix(in srgb, var(--block-color) 90%, transparent);
+            backdrop-filter: blur(12px);
+            border-radius: 20px 20px 0 0;
+            border-right: none;
+            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+
+            transform: translateY(calc(100% - 56px));
+            transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+
+            &.open {
+                transform: translateY(0);
+            }
+        }
+
+        aside::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 99px;
+            margin: 8px auto 0;
+        }
+
+        & .map-container {
+            height: 90svh;
+            margin-block: 0;
+            border-radius: 0;
+        }
+    }
+
 }
 
-.leaflet-attribution-flag {
-    display: none !important;
+.leaflet-attribution-flag,
+.leaflet-control-attribution {
+    display: none;
 }
 
 #ctx-menu {
@@ -2712,28 +2752,34 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 .marker {
+    --marker-color: #378ADD;
+
+    position: relative;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+
     background: var(--marker-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px var(--marker-color);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
     transition: 0.2s;
 
     &:hover {
-        transform: scale(1.2);
-        box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+        transform: rotate(-45deg) scale(1.2);
+        box-shadow: 3px 8px 16px rgba(0, 0, 0, 0.35);
     }
 
     &:active {
-        transform: scale(1.05);
+        transform: rotate(-45deg) scale(1.05);
     }
 
     & img {
-        width: 40px;
-        height: 40px;
+        transform: rotate(45deg);
+        width: 34px;
+        height: 34px;
         filter: brightness(0) invert(1);
         object-fit: contain;
         display: block;
@@ -2744,18 +2790,15 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     &.done {
         opacity: 0.38;
         filter: grayscale(1);
-        transform: scale(0.88);
+        transform: rotate(-45deg) scale(0.88);
 
         &:hover {
             opacity: 0.65;
-            transform: scale(1.0);
+            transform: rotate(-45deg) scale(1.0);
             filter: grayscale(0.4);
         }
     }
 }
-
-
-
 
 /* #endregion */
 

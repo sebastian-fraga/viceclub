@@ -82,35 +82,43 @@
                 <div class="map-wrapper">
                     <aside>
                         <div id="map-toolbar">
-                            <div class="aside-header">
-                                <h3>GTA V</h3>
-                                <span>Mapa</span>
-                            </div>
-                            <div id="layer-buttons"></div>
-                            <div class="toolbar-buttons">
-                                <button id="btn-export">
+                            <div class="toolbar-top">
+                                <div class="aside-header">
                                     <span class="material-symbols-rounded"
-                                        >download</span
+                                        >map</span
                                     >
-                                    Exportar progreso
-                                </button>
-
-                                <button id="btn-import">
-                                    <span class="material-symbols-rounded"
-                                        >upload</span
-                                    >
-                                    Importar datos
-                                </button>
+                                    <h3>GTA V</h3>
+                                </div>
+                                <div id="layer-buttons"></div>
                             </div>
 
-                            <div class="toolbar-footer">
-                                <button id="btn-reset">
-                                    <span class="material-symbols-rounded"
-                                        >restart_alt</span
-                                    >
-                                    Reiniciar progreso
-                                </button>
+                            <div class="toolbar-text">
+                                <div class="toolbar-buttons">
+                                    <button id="btn-export">
+                                        <span class="material-symbols-rounded"
+                                            >download</span
+                                        >
+                                        Exportar progreso
+                                    </button>
+
+                                    <button id="btn-import">
+                                        <span class="material-symbols-rounded"
+                                            >upload</span
+                                        >
+                                        Importar datos
+                                    </button>
+                                </div>
+
+                                <div class="toolbar-footer">
+                                    <button id="btn-reset">
+                                        <span class="material-symbols-rounded"
+                                            >restart_alt</span
+                                        >
+                                        Reiniciar progreso
+                                    </button>
+                                </div>
                             </div>
+
                             <input
                                 type="file"
                                 id="input-import"
@@ -274,7 +282,7 @@
 
         <!-- Right Content -->
         <script src="../assets/scripts/right-menu.js"></script>
-        
+
         <!-- Map -->
         <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
         <script>
