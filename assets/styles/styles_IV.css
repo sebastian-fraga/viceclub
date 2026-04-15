@@ -29,9 +29,8 @@
     color: #1a2a1a;
 }
 
-html,
-*:hover {
-    cursor: url("../cursors/IV.cur"), auto !important;
+* {
+    cursor: url("../cursors/IV.cur") 0 0, auto !important;
 }
 
 body {

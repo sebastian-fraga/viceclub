@@ -393,7 +393,7 @@
     const btnExportDebug = document.getElementById("btn-export-debug");
     const inputImport = document.getElementById("input-import");
     const btnReset = document.getElementById("btn-reset");
-    
+
     if (btnExportProgress) {
         btnExportProgress.addEventListener("click", () => {
             const data = {
@@ -471,20 +471,64 @@
 
     if (btnReset) {
         btnReset.addEventListener("click", () => {
-            if (
-                !confirm(
-                    `¿Resetear todo el progreso del mapa de GTA ${GAME_ID}?`,
-                )
-            )
-                return;
-
-            localStorage.removeItem(STORAGE_KEY);
-            localStorage.removeItem(STORAGE_CUSTOM_KEY);
-
-            location.reload();
+            createConfirmDialog({
+                text: `¿Resetear todo el progreso del mapa de GTA ${GAME_ID}?`,
+                onConfirm: () => {
+                    localStorage.removeItem(STORAGE_KEY);
+                    localStorage.removeItem(STORAGE_CUSTOM_KEY);
+                    location.reload();
+                },
+            });
         });
     }
-    
+
+    function createConfirmDialog({ text, onConfirm }) {
+        const dialog = document.createElement("dialog");
+        dialog.classList.add("reset-dialog");
+
+        dialog.innerHTML = `
+        <form method="dialog" class="dialog-content">
+            <h3>Confirmar acción</h3>
+            <p>${text}</p>
+
+            <div class="dialog-actions">
+                <button value="cancel">Cancelar</button>
+                <button id="confirm-btn" value="confirm">Confirmar</button>
+            </div>
+        </form>
+    `;
+
+        document.body.appendChild(dialog);
+
+        const confirmBtn = dialog.querySelector("#confirm-btn");
+
+        confirmBtn.addEventListener("click", () => {
+            onConfirm();
+            dialog.close();
+            dialog.remove();
+        });
+
+        dialog.addEventListener("close", () => {
+            dialog.remove();
+        });
+
+        dialog.addEventListener("click", (e) => {
+            const rect = dialog.getBoundingClientRect();
+
+            const clickedInDialog =
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom;
+
+            if (!clickedInDialog) {
+                dialog.close("cancel");
+            }
+        });
+
+        dialog.showModal();
+    }
+
     if (btnExportDebug) {
         btnExportDebug.addEventListener("click", () => {
             const finalJSON = {

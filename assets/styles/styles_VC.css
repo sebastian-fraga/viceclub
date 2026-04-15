@@ -28,9 +28,8 @@
     color: #1a2a1a;
 }
 
-html,
-*:hover {
-    cursor: url("../cursors/III.cur"), auto !important;
+* {
+    cursor: url("../cursors/III.cur") 0 0, auto !important;
 }
 
 body {

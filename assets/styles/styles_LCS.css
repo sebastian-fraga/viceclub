@@ -29,9 +29,8 @@
     --accent-color: #fdabab;
 }
 
-html,
-*:hover {
-    cursor: url("../cursors/III.cur"), auto !important;
+* {
+    cursor: url("../cursors/III.cur") 0 0, auto !important;
 }
 
 body {
@@ -94,6 +93,7 @@ body {
 .map-wrapper {
     background: linear-gradient(135deg, rgba(49, 0, 0, 0.685), rgb(0, 0, 0));
 }
+
 /* #endregion */
 
 /* #region RADIO */

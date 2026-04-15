@@ -2390,6 +2390,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
 /* #region MAPA */
 .map-wrapper {
+    user-select: none;
     display: grid;
     grid-template-columns: 280px auto;
     gap: 0;
@@ -2797,6 +2798,76 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
             transform: rotate(-45deg) scale(1.0);
             filter: grayscale(0.4);
         }
+    }
+}
+
+body:has(.reset-dialog[open]) {
+    overflow-y: hidden;
+}
+
+.reset-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.25s ease-in-out;
+    max-width: 400px;
+    max-height: 300px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 12px;
+    background: radial-gradient(circle at top left, var(--block-color), color-mix(in srgb, var(--block-color) 80%, transparent));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    color: var(--block-text);
+    border: 1px solid var(--block-border);
+    backdrop-filter: blur(5px);
+
+    & h3 {
+        margin-bottom: 12px;
+        font-size: 1.25em;
+        font-weight: 600;
+
+    }
+
+    & p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+
+    & .dialog-actions {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+
+        & button {
+            border-radius: 10px;
+            padding: 6px 14px;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+
+            &:nth-of-type(2) {
+                background: linear-gradient(145deg, #ff3b3b, #c40000);
+                color: white;
+                border: none;
+            }
+
+            &:hover {
+                filter: brightness(0.7);
+            }
+
+            &:active {
+                scale: 0.95;
+            }
+
+        }
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
     }
 }
 
@@ -3500,6 +3571,18 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
     100% {
         transform: translateX(200%) skewX(-15deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
