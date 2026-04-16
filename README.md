@@ -1,7 +1,7 @@
 ![Vice Club Logo](/assets/images/main/banner.png "This is the Vice Club logo.")
 
 <p align="center">
-  <a href="https://viceclub.vercel.app/index.html">
+  <a href="https://viceclub.app/index.html">
    <img src="https://img.shields.io/badge/🔗_VISIT_WEBSITE-FF0080?style=plastic&logoColor=white" />
   </a>
 </p>
