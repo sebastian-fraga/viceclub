@@ -30,6 +30,19 @@
         <meta property="og:url" content="https://viceclub.app/VCS/inicio" />
         <meta property="og:type" content="article" />
         <title>GTA VCS | Vice Club</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA VCS | Vice Club",
+                "url": "https://viceclub.app/VCS/inicio",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-vcs">
@@ -41,7 +54,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -51,9 +64,9 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container main">
-                <h2>Grand Theft Auto: Vice City Stories</h2>
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Grand Theft Auto: Vice City Stories</h1>
                 <p>
                     <span style="font-weight: bold; color: rgb(225, 151, 242)"
                         >Grand Theft Auto: Vice City Stories</span
@@ -70,7 +83,7 @@
                     Vance y su intento por construir un imperio criminal por
                     toda la ciudad junto a su hermano Lance.
                 </p>
-                <div class="characters-container">
+                <section class="characters-container">
                     <div class="characters-header">
                         <h2>Personajes</h2>
                     </div>
@@ -196,9 +209,9 @@
                             </div>
                         </article>
                     </div>
-                </div>
-            </div>
-            <div class="ficha-tecnica">
+                </section>
+            </section>
+            <aside class="ficha-tecnica">
                 <table>
                     <thead>
                         <tr>
@@ -272,11 +285,11 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </aside>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/inicio.html">
                     <img
@@ -337,7 +350,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="#" class="active">
                         <span class="material-symbols-rounded">home</span>
@@ -394,8 +407,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script>

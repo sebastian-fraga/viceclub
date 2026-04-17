@@ -30,6 +30,19 @@
         <meta property="og:url" content="https://viceclub.app/LCS/inicio" />
         <meta property="og:type" content="article" />
         <title>GTA LCS | Vice Club</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA LCS | Vice Club",
+                "url": "https://viceclub.app/LCS/inicio",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-lcs">
@@ -41,7 +54,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -51,9 +64,9 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container main">
-                <h2>Grand Theft Auto: Liberty City Stories</h2>
+        <main class="block" id="container">
+            <section class="text-container main">
+                <h1>Grand Theft Auto: Liberty City Stories</h1>
                 <p>
                     <span style="font-weight: bold; color: #f29997"
                         >Grand Theft Auto: Liberty City Stories</span
@@ -78,7 +91,7 @@
                     Partidas a muerte y diversos modos de equipos. También,
                     habían más de 40 personajes para elegir
                 </p>
-                <div class="characters-container">
+                <section class="characters-container">
                     <div class="characters-header">
                         <h2>Personajes</h2>
                     </div>
@@ -210,10 +223,10 @@
                             </div>
                         </article>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div class="ficha-tecnica">
+            <aside class="ficha-tecnica">
                 <table>
                     <thead>
                         <tr>
@@ -302,11 +315,11 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </aside>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/inicio.html">
                     <img
@@ -367,7 +380,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="#" class="active">
                         <span class="material-symbols-rounded">home</span>
@@ -424,8 +437,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script>

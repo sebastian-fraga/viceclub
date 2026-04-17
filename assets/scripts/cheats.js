@@ -179,17 +179,22 @@ function initPlatformSelector() {
     buttons.forEach((btn) => {
         if (btn.dataset.platform === currentPlatform) {
             btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true"); 
+        } else {
+            btn.setAttribute("aria-selected", "false");
         }
 
         btn.addEventListener("click", () => {
-            buttons.forEach((b) => b.classList.remove("active"));
+            buttons.forEach((b) => {
+                b.classList.remove("active");
+                b.setAttribute("aria-selected", "false");
+            });
 
             btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
 
             currentPlatform = btn.dataset.platform;
-
             localStorage.setItem(PLATFORM_STORAGE_KEY, currentPlatform);
-
             renderCheats();
         });
     });

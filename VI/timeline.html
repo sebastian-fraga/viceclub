@@ -14,29 +14,26 @@
         <link rel="canonical" href="https://viceclub.app/VI/timeline" />
         <meta
             name="description"
-            content="Línea de tiempo de GTA VI con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
+            content="Línea de tiempo de GTA 6 con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
         />
         <meta property="og:site_name" content="Vice Club" />
         <meta
             property="og:title"
-            content="Linea de tiempo de GTA VI – Lista completa de filtraciones e información | Vice Club
+            content="Linea de tiempo de GTA 6 – Lista completa de filtraciones e información | Vice Club
 "
         />
         <meta
             property="og:description"
-            content="Línea de tiempo de GTA VI con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
+            content="Línea de tiempo de GTA 6 con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
         />
         <meta
             property="og:image"
             content="https://viceclub.app/assets/images/main/og.webp"
         />
-        <meta
-            property="og:url"
-            content="https://viceclub.app/VI/timeline"
-        />
+        <meta property="og:url" content="https://viceclub.app/VI/timeline" />
         <meta property="og:type" content="article" />
         <title>
-            Linea de tiempo de GTA VI – Lista completa de filtraciones e
+            Linea de tiempo de GTA 6 – Lista completa de filtraciones e
             información | Vice Club
         </title>
     </head>
@@ -50,7 +47,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -68,7 +65,8 @@
         </div>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/inicio.html">
                     <img
@@ -129,7 +127,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="inicio.html">
                         <span class="material-symbols-rounded">home</span>
@@ -168,20 +166,22 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
-
-        <div id="imageOverlay">
-            <span class="material-symbols-rounded close-btn" id="closeBtn">
-                close_small
-            </span>
-            <div class="image-wrapper">
-                <img src="" alt="Imagen ampliada" id="overlayImg" />
-                <div class="overlay-footer">
-                    <p id="overlayFooterText"></p>
-                </div>
             </div>
-        </div>
+        </nav>
+
+        <dialog id="imageOverlay" class="">
+            <button
+                class="material-symbols-rounded close-btn"
+                id="closeBtn"
+                aria-label="Cerrar"
+            >
+                close_small
+            </button>
+            <figure class="image-wrapper">
+                <img src="" alt="Imagen ampliada" id="overlayImg" />
+                <figcaption id="overlayFooterText"></figcaption>
+            </figure>
+        </dialog>
 
         <!-- Language Selector  -->
         <script src="../assets/scripts/language-selector.js"></script>

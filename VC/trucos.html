@@ -33,6 +33,42 @@
         <meta property="og:url" content="https://viceclub.app/VC/trucos" />
         <meta property="og:type" content="article" />
         <title>GTA VC Trucos | Lista Completa | Vice Club</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA VC Trucos | Lista Completa | Vice Club",
+                "url": "https://viceclub.app/VC/trucos",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                },
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Vice Club",
+                            "item": "https://viceclub.app"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "GTA VC | Vice Club",
+                            "item": "https://viceclub.app/VC/inicio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "GTA VC Trucos | Lista Completa | Vice Club",
+                            "item": "https://viceclub.app/VC/trucos"
+                        }
+                    ]
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-vc">
@@ -44,7 +80,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -54,28 +90,50 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container">
-                <h2>Trucos de Grand Theft Auto: Vice City</h2>
-                <div class="platform-selector">
-                    <button data-platform="ps" class="platform-btn">
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Trucos de Grand Theft Auto: Vice City</h1>
+                <nav class="platform-selector">
+                    <button
+                        data-platform="ps"
+                        class="platform-btn"
+                        role="tab"
+                        aria-selected="true"
+                    >
                         PlayStation
                     </button>
-                    <button data-platform="xbox" class="platform-btn">
+                    <button
+                        data-platform="xbox"
+                        class="platform-btn"
+                        role="tab"
+                        aria-selected="false"
+                    >
                         Xbox
                     </button>
-                    <button data-platform="switch" class="platform-btn">
+                    <button
+                        data-platform="switch"
+                        class="platform-btn"
+                        role="tab"
+                        aria-selected="false"
+                    >
                         Nintendo Switch
                     </button>
-                    <button data-platform="pc" class="platform-btn">PC</button>
-                </div>
+                    <button
+                        data-platform="pc"
+                        class="platform-btn"
+                        role="tab"
+                        aria-selected="false"
+                    >
+                        PC
+                    </button>
+                </nav>
 
-                <div id="cheatsContainer"></div>
-            </div>
-        </div>
+                <div id="cheatsContainer" role="tabpanel"></div>
+            </section>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/trucos.html">
                     <img
@@ -136,7 +194,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="inicio.html">
                         <span class="material-symbols-rounded">home</span>
@@ -201,8 +259,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>

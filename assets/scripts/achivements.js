@@ -170,11 +170,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 botones.forEach(function (btn) {
                     btn.classList.remove("active");
+                    btn.setAttribute("aria-selected", "false");
                 });
 
                 document.getElementById(seccionObjetivo).style.display =
                     "block";
                 this.classList.add("active");
+                this.setAttribute("aria-selected", "true");
             });
         });
     }

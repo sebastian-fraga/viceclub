@@ -51,7 +51,46 @@
         />
         <meta property="og:url" content="https://viceclub.app/VC/mapa" />
         <meta property="og:type" content="article" />
-        <title>Mapa Interactivo de GTA Vice City – Todos los Coleccionables | Vice Club</title>
+        <title>
+            Mapa Interactivo de GTA Vice City – Todos los Coleccionables | Vice
+            Club
+        </title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Mapa Interactivo de GTA VC – Todos los Coleccionables | Vice Club",
+                "url": "https://viceclub.app/VC/mapa",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                },
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Vice Club",
+                            "item": "https://viceclub.app"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "GTA VC | Vice Club",
+                            "item": "https://viceclub.app/VC/inicio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Mapa Interactivo de GTA VC – Todos los Coleccionables | Vice Club",
+                            "item": "https://viceclub.app/VC/mapa"
+                        }
+                    ]
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-vc">
@@ -63,7 +102,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -73,9 +112,9 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container">
-                <h2>Mapa Interactivo de Grand Theft Auto: Vice City</h2>
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Mapa Interactivo de Grand Theft Auto: Vice City</h1>
 
                 <div class="map-wrapper">
                     <aside>
@@ -132,14 +171,14 @@
                             />
                         </div>
                     </aside>
-                    <div class="map-container" id="map"></div>
+                    <figure class="map-container" id="map"></figure>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
 
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/mapa.html">
                     <img
@@ -200,7 +239,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="inicio.html">
                         <span class="material-symbols-rounded">home</span>
@@ -265,17 +304,17 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
-        <div id="ctx-menu">
+        <!-- <div id="ctx-menu">
             <div class="ctx-header">Menú contextual</div>
             <div class="ctx-coords" id="ctx-coords-display">
                 lat: — · lng: —
             </div>
             <div class="ctx-sep"></div>
             <div id="ctx-dynamic-markers"></div>
-        </div>
+        </div> -->
 
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>

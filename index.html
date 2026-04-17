@@ -6,7 +6,7 @@
 
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
-        
+
         <link rel="stylesheet" href="assets/styles/styles.css" />
         <link rel="manifest" href="manifest.json" />
         <link rel="canonical" href="https://viceclub.app/" />
@@ -37,6 +37,14 @@
         <meta property="og:type" content="website" />
 
         <title>Vice Club | La página definitiva de la saga GTA</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Vice Club",
+                "url": "https://viceclub.app"
+            }
+        </script>
     </head>
 
     <body class="index">
@@ -253,7 +261,7 @@
         <header style="opacity: 0; transition: opacity 0.8s ease">
             <div class="logo-container">
                 <img src="assets/images/main/logo.webp" alt="Vice Club Logo" />
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -263,13 +271,14 @@
                 </button>
             </nav>
         </header>
-        <div
+
+        <main
             class="block"
             id="container"
             style="opacity: 0; transition: opacity 0.8s ease"
         >
-            <div class="welcome-wrapper">
-                <h2 class="welcome-title">BIENVENIDO A VICE CLUB</h2>
+            <section class="welcome-wrapper">
+                <h1 class="welcome-title">BIENVENIDO A VICE CLUB</h1>
                 <div class="fotd-container">
                     <div class="fotd-title">
                         <h2>DATO DEL DÍA</h2>
@@ -282,7 +291,7 @@
                         <span class="fotd-source"></span>
                     </div>
                 </div>
-                <section class="welcome-text">
+                <div class="welcome-text">
                     <p class="index-text">
                         Aquí podrás encontrar todo lo que buscas sobre los
                         juegos de la saga GTA: <span>Información</span>,
@@ -299,52 +308,122 @@
                         favoritos (o incluso instalarla como una aplicación
                         independiente!)
                     </p>
-                </section>
-            </div>
-            <main>
-                <section class="countdown-wrapper">
-                    <div class="countdown-header">
-                        <h2>Lanzamiento de Grand Theft Auto VI</h2>
+                </div>
+            </section>
+
+            <section class="countdown-wrapper">
+                <div class="countdown-header">
+                    <h2>Lanzamiento de Grand Theft Auto VI</h2>
+                </div>
+                <div id="countdown">
+                    <div class="time-box">
+                        <span id="days">0</span>
+                        <p>DÍAS</p>
+                        <div class="time-separator">:</div>
                     </div>
-                    <div id="countdown">
-                        <div class="time-box">
-                            <span id="days">0</span>
-                            <p>DÍAS</p>
-                            <div class="time-separator">:</div>
-                        </div>
 
-                        <div class="time-box">
-                            <span id="hours">0</span>
-                            <p>HORAS</p>
-                            <div class="time-separator">:</div>
-                        </div>
-
-                        <div class="time-box">
-                            <span id="minutes">0</span>
-                            <p>MINUTOS</p>
-                            <div class="time-separator">:</div>
-                        </div>
-
-                        <div class="time-box">
-                            <span id="seconds">0</span>
-                            <p>SEGUNDOS</p>
-                        </div>
+                    <div class="time-box">
+                        <span id="hours">0</span>
+                        <p>HORAS</p>
+                        <div class="time-separator">:</div>
                     </div>
-                </section>
 
-                <section class="news">
-                    <h2>ÚLTIMAS NOTICIAS</h2>
-                    <div id="newsContainer"></div>
-                    <button id="verMas" aria-label="Cargar más noticias">
-                        CARGAR MÁS NOTICIAS
-                        <span class="material-symbols-rounded"
-                            >expand_more</span
-                        >
-                    </button>
-                </section>
+                    <div class="time-box">
+                        <span id="minutes">0</span>
+                        <p>MINUTOS</p>
+                        <div class="time-separator">:</div>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">0</span>
+                        <p>SEGUNDOS</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="logo-carousel">
+                <h2>Explora Vice Club</h2>
+                <div class="carousel-wrapper">
+                    <a href="./III/inicio.html">
+                        <img
+                            src="assets/images/main/III.webp"
+                            alt="Logo de GTA 3"
+                            loading="lazy"
+                        />
+                        <span>GTA III</span>
+                    </a>
+                    <a href="./VC/inicio.html">
+                        <img
+                            src="assets/images/main/VC.webp"
+                            alt="Logo de GTA Vice City"
+                            loading="lazy"
+                        />
+                        <span>GTA Vice City</span>
+                    </a>
+                    <a href="./SA/inicio.html">
+                        <img
+                            src="assets/images/main/SA.webp"
+                            alt="Logo de GTA San Andreas"
+                            loading="lazy"
+                        />
+                        <span>GTA San Andreas</span>
+                    </a>
+                    <a href="./LCS/inicio.html">
+                        <img
+                            src="assets/images/main/LCS.webp"
+                            alt="Logo de GTA Liberty City Stories"
+                            loading="lazy"
+                        />
+                        <span>GTA Liberty City Stories</span>
+                    </a>
+                    <a href="./VCS/inicio.html">
+                        <img
+                            src="assets/images/main/VCS.webp"
+                            alt="Logo de GTA Vice City Stories"
+                            loading="lazy"
+                        />
+                        <span>GTA Vice City Stories</span>
+                    </a>
+                    <a href="./IV/inicio.html">
+                        <img
+                            src="assets/images/main/IV.webp"
+                            alt="Logo de GTA 4"
+                            loading="lazy"
+                        />
+                        <span>GTA IV</span>
+                    </a>
+                    <a href="./V/inicio.html">
+                        <img
+                            src="assets/images/main/V.webp"
+                            alt="Logo de GTA 5"
+                            loading="lazy"
+                        />
+                        <span>GTA V</span>
+                    </a>
+                    <a href="./VI/inicio.html">
+                        <img
+                            src="assets/images/main/VI.webp"
+                            alt="Logo de GTA 6"
+                            loading="lazy"
+                        />
+                        <span>GTA VI</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="news">
+                <h2>ÚLTIMAS NOTICIAS</h2>
+                <div id="newsContainer"></div>
+                <button id="verMas" aria-label="Cargar más noticias">
+                    CARGAR MÁS NOTICIAS
+                    <span class="material-symbols-rounded">expand_more</span>
+                </button>
+            </section>
+
+            <section class="faq">
                 <details>
                     <summary>PREGUNTAS FRECUENTES</summary>
-                    <div class="faq-section">
+                    <article>
                         <h3>SOBRE VICE CLUB</h3>
                         <div class="faq-question">
                             <h4>¿Qué puedo encontrar en Vice Club?</h4>
@@ -403,8 +482,8 @@
                                 >.
                             </p>
                         </div>
-                    </div>
-                    <div class="faq-section">
+                    </article>
+                    <article>
                         <h3>SOBRE MÍ</h3>
 
                         <div class="faq-question">
@@ -442,48 +521,49 @@
                                 ambientación (GTA Vice City)
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </details>
-                <section class="support">
-                    <p>
-                        Vice Club es un proyecto 100% gratuito, hecho con mucho
-                        amor por toda la saga. Si te gusta y deseas apoyar el
-                        desarrollo, podés invitarme un café:
-                    </p>
-                    <div class="support-buttons">
-                        <article>
-                            <a
-                                href="https://cafecito.app/sebastianfraga"
-                                rel="noopener"
-                                target="_blank"
-                                ><img
-                                    srcset="
-                                        https://cdn.cafecito.app/imgs/buttons/button_3.png       1x,
-                                        https://cdn.cafecito.app/imgs/buttons/button_3_2x.png    2x,
-                                        https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x
-                                    "
-                                    src="https://cdn.cafecito.app/imgs/buttons/button_3.png"
-                                    alt="Invitame un café en cafecito.app"
-                            /></a>
-                        </article>
-                        <article>
-                            <script
-                                type="text/javascript"
-                                src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
-                            ></script>
-                            <script type="text/javascript">
-                                kofiwidget2.init(
-                                    "Apóyame en Ko-fi",
-                                    "#72a4f2",
-                                    "T6T71RM9WX",
-                                );
-                                kofiwidget2.draw();
-                            </script>
-                        </article>
-                    </div>
-                </section>
-            </main>
-        </div>
+            </section>
+
+            <section class="support">
+                <p>
+                    Vice Club es un proyecto 100% gratuito, hecho con mucho amor
+                    por toda la saga. Si te gusta y deseas apoyar el desarrollo,
+                    podés invitarme un café:
+                </p>
+                <div class="support-buttons">
+                    <article>
+                        <a
+                            href="https://cafecito.app/sebastianfraga"
+                            rel="noopener"
+                            target="_blank"
+                            ><img
+                                srcset="
+                                    https://cdn.cafecito.app/imgs/buttons/button_3.png       1x,
+                                    https://cdn.cafecito.app/imgs/buttons/button_3_2x.png    2x,
+                                    https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x
+                                "
+                                src="https://cdn.cafecito.app/imgs/buttons/button_3.png"
+                                alt="Invitame un café en cafecito.app"
+                        /></a>
+                    </article>
+                    <article>
+                        <script
+                            type="text/javascript"
+                            src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
+                        ></script>
+                        <script type="text/javascript">
+                            kofiwidget2.init(
+                                "Apóyame en Ko-fi",
+                                "#72a4f2",
+                                "T6T71RM9WX",
+                            );
+                            kofiwidget2.draw();
+                        </script>
+                    </article>
+                </div>
+            </section>
+        </main>
 
         <footer style="color: #f2f2f2; text-shadow: 1px 1px 5px #000">
             © 2026 - Vice Club
@@ -556,17 +636,19 @@
             </a>
         </nav>
 
-        <div id="imageOverlay">
-            <span class="material-symbols-rounded close-btn" id="closeBtn">
+        <dialog id="imageOverlay" class="">
+            <button
+                class="material-symbols-rounded close-btn"
+                id="closeBtn"
+                aria-label="Cerrar"
+            >
                 close_small
-            </span>
-            <div class="image-wrapper">
+            </button>
+            <figure class="image-wrapper">
                 <img src="" alt="Imagen ampliada" id="overlayImg" />
-                <div class="overlay-footer">
-                    <p id="overlayFooterText"></p>
-                </div>
-            </div>
-        </div>
+                <figcaption id="overlayFooterText"></figcaption>
+            </figure>
+        </dialog>
 
         <!--Right Menu-->
         <script src="./assets/scripts/right-menu.js"></script>

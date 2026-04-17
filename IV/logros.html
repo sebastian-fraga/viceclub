@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://viceclub.app/IV/logros" />
         <meta
             name="description"
-            content="Guía completa de logros y trofeos de GTA IV, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony"
+            content="Guía completa de logros y trofeos de GTA 4, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony"
         />
         <meta property="og:site_name" content="Vice Club" />
         <meta
@@ -24,7 +24,7 @@
         />
         <meta
             property="og:description"
-            content="Guía completa de logros y trofeos de GTA IV, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony"
+            content="Guía completa de logros y trofeos de GTA 4, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony"
         />
         <meta
             property="og:image"
@@ -35,6 +35,42 @@
         <title>
             GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club
         </title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club",
+                "url": "https://viceclub.app/IV/logros",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                },
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Vice Club",
+                            "item": "https://viceclub.app"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "GTA IV | Vice Club",
+                            "item": "https://viceclub.app/IV/inicio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club",
+                            "item": "https://viceclub.app/IV/logros"
+                        }
+                    ]
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-4">
@@ -46,7 +82,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -56,16 +92,38 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container">
-                <h2>Logros de Grand Theft Auto IV</h2>
-                <div class="achievement-selector">
-                    <button class="active" data-seccion="iv">IV</button>
-                    <button data-seccion="tlad">The Lost and Damned</button>
-                    <button data-seccion="tbogt">The Ballad of Gay Tony</button>
-                </div>
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Logros de Grand Theft Auto IV</h1>
+                <nav class="achievement-selector" role="tablist">
+                    <button
+                        class="active"
+                        data-seccion="iv"
+                        aria-controls="iv"
+                        aria-selected="true"
+                        role="tab"
+                    >
+                        IV
+                    </button>
+                    <button
+                        data-seccion="tlad"
+                        aria-controls="tlad"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        The Lost and Damned
+                    </button>
+                    <button
+                        data-seccion="tbogt"
+                        aria-controls="tbogt"
+                        aria-selected="false"
+                        role="tab"
+                    >
+                        The Ballad of Gay Tony
+                    </button>
+                </nav>
 
-                <div id="iv" class="achievement-content">
+                <article id="iv" class="achievement-content" role="tabpanel">
                     <div class="achievement-disclaimer">
                         <div class="achievement-warning">
                             <span class="material-symbols-rounded"
@@ -90,28 +148,30 @@
                         </div>
                     </div>
                     <div class="achievement-list"></div>
-                </div>
+                </article>
 
-                <div
+                <article
                     id="tlad"
                     class="achievement-content"
                     style="display: none"
+                    role="tabpanel"
                 >
                     <div class="achievement-list"></div>
-                </div>
+                </article>
 
-                <div
+                <article
                     id="tbogt"
                     class="achievement-content"
                     style="display: none"
+                    role="tabpanel"
                 >
                     <div class="achievement-list"></div>
-                </div>
-            </div>
-        </div>
+                </article>
+            </section>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/logros.html">
                     <img
@@ -172,7 +232,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="inicio.html">
                         <span class="material-symbols-rounded">home</span>
@@ -237,8 +297,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>

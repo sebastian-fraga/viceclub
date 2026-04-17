@@ -15,13 +15,13 @@
         <link rel="canonical" href="https://viceclub.app/III/inicio" />
         <meta
             name="description"
-            content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
+            content="Todo sobre GTA 3: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
         />
         <meta property="og:site_name" content="Vice Club" />
         <meta property="og:title" content="GTA III | Vice Club" />
         <meta
             property="og:description"
-            content="Todo sobre GTA III: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
+            content="Todo sobre GTA 3: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club."
         />
         <meta
             property="og:image"
@@ -30,6 +30,19 @@
         <meta property="og:url" content="https://viceclub.app/III/inicio" />
         <meta property="og:type" content="article" />
         <title>GTA III | Vice Club</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA III | Vice Club",
+                "url": "https://viceclub.app/III/inicio",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-3">
@@ -41,7 +54,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -51,9 +64,10 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container">
-                <h2>Grand Theft Auto III</h2>
+
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Grand Theft Auto III</h1>
                 <p>
                     <span style="font-weight: bold; color: rgb(231, 183, 61)"
                         >Grand Theft Auto III</span
@@ -81,7 +95,7 @@
                     escalando entre distintas pandillas, organizaciones y
                     bandas. La historia cuenta con un total de 50 misiones.
                 </p>
-                <div class="characters-container">
+                <section class="characters-container">
                     <div class="characters-header">
                         <h2>Personajes</h2>
                     </div>
@@ -167,10 +181,10 @@
                             </div>
                         </article>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div class="ficha-tecnica">
+            <aside class="ficha-tecnica">
                 <table>
                     <thead>
                         <tr>
@@ -284,11 +298,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </aside>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="#" class="active">
                     <img
@@ -349,7 +364,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="#" class="active">
                         <span class="material-symbols-rounded">home</span>
@@ -414,8 +429,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>

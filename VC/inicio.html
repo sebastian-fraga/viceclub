@@ -30,6 +30,19 @@
         <meta property="og:url" content="https://viceclub.app/VC/inicio" />
         <meta property="og:type" content="article" />
         <title>GTA VC | Vice Club</title>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "GTA VC | Vice Club",
+                "url": "https://viceclub.app/VC/inicio",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-vc">
@@ -41,7 +54,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -51,9 +64,9 @@
                 </button>
             </nav>
         </header>
-        <div class="block" id="container">
-            <div class="text-container main">
-                <h2>Grand Theft Auto: Vice City</h2>
+        <main class="block" id="container">
+            <section class="text-container">
+                <h1>Grand Theft Auto: Vice City</h1>
                 <p>
                     <span style="font-weight: bold; color: #13ebffef"
                         >Grand Theft Auto: Vice City</span
@@ -78,7 +91,7 @@
                     criminal de Vice City.
                 </p>
 
-                <div class="characters-container">
+                <section class="characters-container">
                     <div class="characters-header">
                         <h2>Personajes</h2>
                     </div>
@@ -207,10 +220,10 @@
                             </div>
                         </article>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
 
-            <div class="ficha-tecnica">
+            <aside class="ficha-tecnica">
                 <table>
                     <thead>
                         <tr>
@@ -325,11 +338,11 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </aside>
+        </main>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/inicio.html">
                     <img
@@ -390,7 +403,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="#" class="active">
                         <span class="material-symbols-rounded">home</span>
@@ -455,8 +468,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script src="../assets/scripts/sounds.js"></script>

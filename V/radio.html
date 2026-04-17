@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://viceclub.app/V/radio" />
         <meta
             name="description"
-            content="Radios de GTA V. Escucha todas las emisoras de Grand Theft Auto V en Vice Club"
+            content="Radios de GTA 5. Escucha todas las emisoras de Grand Theft Auto V en Vice Club"
         />
         <meta property="og:site_name" content="Vice Club" />
         <meta
@@ -24,7 +24,7 @@
         />
         <meta
             property="og:description"
-            content="Radios de GTA V. Escucha todas las emisoras de Grand Theft Auto V en Vice Club."
+            content="Radios de GTA 5. Escucha todas las emisoras de Grand Theft Auto V en Vice Club."
         />
         <meta
             property="og:image"
@@ -35,6 +35,43 @@
         <title>
             Radios de GTA V – Todas las Estaciones y Canciones | Vice Club
         </title>
+        
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
+                "url": "https://viceclub.app/V/radio",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": "Vice Club",
+                    "url": "https://viceclub.app"
+                },
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Vice Club",
+                            "item": "https://viceclub.app"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "GTA V | Vice Club",
+                            "item": "https://viceclub.app/V/inicio"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
+                            "item": "https://viceclub.app/V/radio"
+                        }
+                    ]
+                }
+            }
+        </script>
     </head>
 
     <body class="gta-5">
@@ -46,7 +83,7 @@
                         alt="Vice Club Logo"
                     />
                 </a>
-                <h1>VICE CLUB</h1>
+                <span>VICE CLUB</span>
             </div>
             <nav>
                 <button id="hamburger" aria-label="Abrir menú">
@@ -57,24 +94,24 @@
             </nav>
         </header>
 
-        <div class="block" id="container" style="display: block">
-            <div class="text-container">
-                <h2>Radios de Grand Theft Auto V</h2>
+        <main class="block" id="container" style="display: block">
+            <section class="text-container">
+                <h1>Radios de Grand Theft Auto V</h1>
                 <div class="radio-container">
                     <div class="radio-wheel" id="radioGrid"></div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
-        <div id="radioInfo" class="radio-info">
+        <aside id="radioInfo" class="radio-info" role="region">
             <img src="" alt="" id="radioImage" />
             <h3 id="radioTitle"></h3>
             <div id="radioDJ"></div>
             <div id="radioGenre"></div>
             <ol id="radioList"></ol>
-        </div>
+        </aside>
 
-        <div class="radio-footer">
+        <section class="radio-footer" aria-label="Reproductor de radio">
             <div class="footer-left">
                 <div class="footer-album">
                     <img id="albumArt" />
@@ -111,10 +148,10 @@
                     <input type="range" min="0" max="100" value="100" />
                 </div>
             </div>
-        </div>
+        </section>
 
         <footer>© 2026 - Vice Club</footer>
-        <div id="rightContent">
+        <nav id="rightContent">
             <div class="right-content-logos">
                 <a href="../III/radio.html">
                     <img
@@ -175,7 +212,7 @@
                 </a>
             </div>
 
-            <nav class="right-content-nav">
+            <div class="right-content-nav">
                 <div class="right-content-links">
                     <a href="inicio.html">
                         <span class="material-symbols-rounded">home</span>
@@ -240,8 +277,8 @@
                         </button>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
 
         <!-- Sounds -->
         <script>

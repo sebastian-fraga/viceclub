@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<!-- INDEX -->
   <url>
     <loc>https://viceclub.app/</loc>
     <lastmod>2026-03-30</lastmod>
@@ -8,6 +9,7 @@
     <changefreq>weekly</changefreq>
   </url>
 
+<!-- III -->
   <url>
     <loc>https://viceclub.app/III/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -43,6 +45,7 @@
     <changefreq>weekly</changefreq>
   </url>
 
+<!-- VC -->
   <url>
     <loc>https://viceclub.app/VC/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -77,7 +80,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- SA -->
   <url>
     <loc>https://viceclub.app/SA/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -112,7 +115,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- LCS -->
   <url>
     <loc>https://viceclub.app/LCS/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -133,7 +136,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- VCS -->
   <url>
     <loc>https://viceclub.app/VCS/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -154,7 +157,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- IV -->
   <url>
     <loc>https://viceclub.app/IV/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -189,7 +192,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- V -->
   <url>
     <loc>https://viceclub.app/V/inicio</loc>
     <lastmod>2026-03-29</lastmod>
@@ -224,7 +227,7 @@
     <priority>0.6</priority>
     <changefreq>weekly</changefreq>
   </url>
-
+<!-- VI -->
   <url>
     <loc>https://viceclub.app/VI/inicio</loc>
     <lastmod>2026-03-29</lastmod>
