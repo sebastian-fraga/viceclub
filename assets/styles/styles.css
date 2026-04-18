@@ -3094,11 +3094,43 @@ body:has(.reset-dialog[open]) {
 
     & #radioDJ {
         grid-row: 2 / 3;
+
+        & .dj-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+
+            & p {
+                font-weight: 100;
+                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                font-size: 0.95em;
+                color: var(--block-color);
+                padding: 5px 12px;
+                border-radius: 25px;
+                width: max-content;
+            }
+        }
     }
 
     & #radioGenre {
         grid-row: 3 / 4;
         margin-bottom: 1em;
+
+        & .genre-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+
+            & p {
+                font-weight: 100;
+                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                font-size: 0.95em;
+                color: var(--block-color);
+                padding: 5px 12px;
+                border-radius: 25px;
+                width: max-content;
+            }
+        }
     }
 
     & ol {

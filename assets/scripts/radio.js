@@ -202,6 +202,28 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("resize", makeDial);
     }
 
+    function renderDJ(dj) {
+        if (!dj) return "";
+        const djs = Array.isArray(dj) ? dj : [dj];
+        return `
+        <span>Conducido por:</span>
+        <div class="dj-tags">
+            ${djs.map((d) => `<p>${d}</p>`).join("")}
+        </div>
+    `;
+    }
+
+    function renderGenre(genre) {
+        if (!genre) return "";
+        const genres = Array.isArray(genre) ? genre : [genre];
+        return `
+        <span>Género:</span>
+        <div class="genre-tags">
+            ${genres.map((g) => `<p>${g}</p>`).join("")}
+        </div>
+    `;
+    }
+
     function updateRadioDirect(radioKey) {
         const data = radioData[radioKey];
         if (!data) return;
@@ -250,12 +272,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         playRadio(radioKey);
-        document.getElementById("radioDJ").innerHTML = data.dj
-            ? `<span>Conducido por:</span> <p>${data.dj}</p>`
-            : "";
-        document.getElementById("radioGenre").innerHTML = data.genre
-            ? `<span>Género:</span> <p>${data.genre}</p>`
-            : "";
+        document.getElementById("radioDJ").innerHTML = renderDJ(data.dj);
+
+        document.getElementById("radioGenre").innerHTML = renderGenre(
+            data.genre,
+        );
     }
 
     function updateRadioReproductor(radioKey, playlistIndex) {
@@ -274,13 +295,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (playlist.dj) {
             const djInfo = document.createElement("div");
-            djInfo.innerHTML = `<span>Conducido por:</span> <p>${playlist.dj}</p>`;
+            djInfo.innerHTML = renderDJ(playlist.dj);
             djEl.appendChild(djInfo);
         }
 
-        genreEl.innerHTML = playlist.genre
-            ? `<span>Género:</span> <p>${playlist.genre}</p>`
-            : "";
+        genreEl.innerHTML = renderGenre(playlist.genre);
 
         if (playlist.audio) {
             audio.src = `${playlist.audio}?v=${Date.now()}`;
