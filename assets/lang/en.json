@@ -1,0 +1,23 @@
+{
+    "rightcontent": {
+        "inicio": "HOME",
+        "artworks": "ARTWORKS",
+        "mods": "TOOLS AND MODS",
+        "logros": "ACHIEVEMENTS",
+        "mapa": "MAP",
+        "radio": "RADIO",
+        "trucos": "CHEATS",
+        "sonido": "Sound",
+        "idioma": "Language"
+    },
+    "ficha": {
+        "developer": "Developer",
+        "publisher": "Publisher",
+        "producer": "Producer",
+        "writers": "Writers",
+        "platforms": "Platforms",
+        "date": "Release date",
+        "engine": "Game engine",
+        "sales": "Sales"
+    }
+}

@@ -70,6 +70,14 @@ body .text-container {
 
 /* #endregion */
 
+/* #region FICHA TÉCNICA */
+    .ficha-tecnica {
+        & th {
+            text-transform: uppercase;
+        }
+    }
+/* #endregion */
+
 
 /* #region 100% CHECKLIST */
 

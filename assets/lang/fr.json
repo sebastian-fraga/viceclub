@@ -1,0 +1,23 @@
+{
+    "rightcontent": {
+        "inicio": "ACCUEIL",
+        "artworks": "ARTWORKS",
+        "mods": "OUTILS ET MODS",
+        "logros": "SUCCÈS",
+        "mapa": "CARTE",
+        "radio": "RADIO",
+        "trucos": "ASTUCES",
+        "sonido": "Son",
+        "idioma": "Langue"
+    },
+    "ficha": {
+        "developer": "Développeur",
+        "publisher": "Éditeur",
+        "producer": "Producteur",
+        "writers": "Scénaristes",
+        "platforms": "Plateformes",
+        "date": "Date de sortie",
+        "engine": "Moteur de jeu",
+        "sales": "Ventes"
+    }
+}

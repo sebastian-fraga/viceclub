@@ -1,0 +1,23 @@
+{
+    "rightcontent": {
+        "inicio": "INÍCIO",
+        "artworks": "ARTWORKS",
+        "mods": "FERRAMENTAS E MODS",
+        "logros": "CONQUISTAS",
+        "mapa": "MAPA",
+        "radio": "RÁDIO",
+        "trucos": "TRUQUES",
+        "sonido": "Som",
+        "idioma": "Idioma"
+    },
+    "ficha": {
+        "developer": "Desenvolvedora",
+        "publisher": "Publicadora",
+        "producer": "Produtor",
+        "writers": "Roteiristas",
+        "platforms": "Plataformas",
+        "date": "Data de lançamento",
+        "engine": "Motor de jogo",
+        "sales": "Vendas"
+    }
+}

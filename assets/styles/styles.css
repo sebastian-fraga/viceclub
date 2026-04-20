@@ -1072,7 +1072,7 @@ header {
     top: 75px;
     right: -75vw;
     height: 100vh;
-    min-width: 13vw;
+    min-width: 15vw;
     background: #0b011fcd;
     transition: all 0.35s ease-in-out;
     backdrop-filter: blur(25px);
