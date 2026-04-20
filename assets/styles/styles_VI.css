@@ -4,9 +4,11 @@ html {
 }
 
 :root {
+    --font-title: "GTAArtDecoRegular";
     --accent-color: #afbcfc;
     --block-border: #c9ecef;
     --block-text: #f4f4f4;
+    --title-color: #95e1ff;
 }
 
 ::selection {
@@ -47,8 +49,7 @@ body {
 
     & .block,
     #radioInfo {
-        background: radial-gradient(circle 300px at top left, #36395ce3, #402e69e3);
-
+        background: linear-gradient(to bottom, #36395c, #402e69);
     }
 
     & footer {
@@ -57,15 +58,8 @@ body {
 }
 
 .block {
-    backdrop-filter: brightness(0.7) blur(12px);
-    -webkit-backdrop-filter: brightness(0.7) blur(12px);
-    border: 5px solid var(--block-border);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
 
     & .text-container {
-        color: var(--block-text);
 
         & h1 {
             font-family: "GTAArtDecoMedium";
@@ -92,19 +86,7 @@ body {
                 }
             }
 
-            & .characters-list {
-                & article {
-                    &:hover {
-                        outline-color: #8cafd6 !important;
-                    }
 
-                    & .character-text {
-                        & span {
-                            color: #b6c3fdd7;
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -112,41 +94,17 @@ body {
 
 #rightContent {
     & .right-content-nav {
-        & .right-content-links {
-            & a {
-                font-family: "GTAArtDecoRegular";
-
-                &.active {
-                    color: #81eaf4;
-                    background: #3ecce932;
-
-                    &::before {
-                        background-color: #81eaf4;
-                    }
-                }
-
-                &:active {
-                    background: #3ecce956;
-
-                    &::before {
-                        background-color: #81eaf4;
-                    }
-                }
-            }
-        }
-
         & .right-content-footer {
             & .footer-settings:first-of-type {
                 opacity: 0.2;
                 cursor: not-allowed !important;
+
+                & label {
+                    cursor: inherit;
+                }
             }
         }
     }
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 
 /* #endregion */
@@ -164,14 +122,7 @@ body {
     }
 }
 
-.ficha-tecnica th,
-span.table-platforms {
-    font-family: "GTAArtDecoRegular";
-}
 
-span.table-platforms {
-    color: #acdaf3;
-}
 
 /* #endregion */
 

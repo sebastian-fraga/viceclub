@@ -1,0 +1,666 @@
+{
+    "III": [
+        {
+            "id": "claude",
+            "name": "Claude",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/III/claude.webp"
+        },
+        {
+            "id": "catalina",
+            "name": "Catalina",
+            "role": "Antagonista principal",
+            "image": "../assets/images/characters/III/catalina.webp"
+        },
+        {
+            "id": "8ball",
+            "name": "8-Ball",
+            "role": "Aliado de Claude",
+            "image": "../assets/images/characters/III/8ball.webp"
+        },
+        {
+            "id": "salvatore",
+            "name": "Salvatore Leone",
+            "role": "Don de la Familia Leone",
+            "image": "../assets/images/characters/III/salvatore.webp"
+        },
+        {
+            "id": "maria",
+            "name": "María Latore",
+            "role": "Esposa de Salvatore",
+            "image": "../assets/images/characters/III/maria.webp"
+        },
+        {
+            "id": "burro",
+            "name": "El Burro",
+            "role": "Jefe de los Diablos",
+            "image": "../assets/images/characters/III/burro.webp"
+        },
+        {
+            "id": "ray",
+            "name": "Ray Machowski",
+            "role": "Policía corrupto",
+            "image": "../assets/images/characters/III/ray.webp"
+        },
+        {
+            "id": "donald",
+            "name": "Donald Love",
+            "role": "Político y magnate",
+            "image": "../assets/images/characters/III/donald.webp"
+        }
+    ],
+    "VC": [
+        {
+            "id": "tommy",
+            "name": "Tommy Vercetti",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/VC/tommy.webp"
+        },
+        {
+            "id": "sonny",
+            "name": "Sonny Forelli",
+            "role": "Antagonista principal",
+            "image": "../assets/images/characters/VC/sonny.webp"
+        },
+        {
+            "id": "ken",
+            "name": "Ken Rosenberg",
+            "role": "Abogado",
+            "image": "../assets/images/characters/VC/ken.webp"
+        },
+        {
+            "id": "lance",
+            "name": "Lance Vance",
+            "role": "Mano derecha de Tommy",
+            "image": "../assets/images/characters/VC/lance.webp"
+        },
+        {
+            "id": "diaz",
+            "name": "Ricardo Diaz",
+            "role": "Narcotraficante en Vice City",
+            "image": "../assets/images/characters/VC/diaz.webp"
+        },
+        {
+            "id": "cortez",
+            "name": "Coronel Cortez",
+            "role": "Jefe de la organización criminal Cortez",
+            "image": "../assets/images/characters/VC/cortez.webp"
+        },
+        {
+            "id": "kent",
+            "name": "Kent Paul",
+            "role": "Informante en Vice City",
+            "image": "../assets/images/characters/VC/kent.webp"
+        },
+        {
+            "id": "avery",
+            "name": "Avery Carrington",
+            "role": "Contratista",
+            "image": "../assets/images/characters/VC/avery.webp"
+        },
+        {
+            "id": "poulet",
+            "name": "Avery Carrington",
+            "role": "Contratista",
+            "image": "../assets/images/characters/VC/poulet.webp"
+        },
+        {
+            "id": "umberto",
+            "name": "Umberto Robina",
+            "role": "Jefe de la banda cubana",
+            "image": "../assets/images/characters/VC/umberto.webp"
+        },
+        {
+            "id": "phil",
+            "name": "Phil Cassidy",
+            "role": "Traficante de armas",
+            "image": "../assets/images/characters/VC/phil.webp"
+        },
+        {
+            "id": "mercedes",
+            "name": "Mercedes",
+            "role": "Hija del Coronel",
+            "image": "../assets/images/characters/VC/mercedes.webp"
+        }
+    ],
+    "SA": [
+        {
+            "id": "cj",
+            "name": "Carl Johnson",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/SA/cj.webp"
+        },
+        {
+            "id": "sweet",
+            "name": "Sweet Johnson",
+            "role": "Líder de Grove Street Families",
+            "image": "../assets/images/characters/SA/sweet.webp"
+        },
+        {
+            "id": "smoke",
+            "name": "Big Smoke",
+            "role": "Miembro de Grove Street",
+            "image": "../assets/images/characters/SA/smoke.webp"
+        },
+        {
+            "id": "ryder",
+            "name": "Ryder",
+            "role": "Miembro de Grove Street",
+            "image": "../assets/images/characters/SA/ryder.webp"
+        },
+        {
+            "id": "ogloc",
+            "name": "OG Loc",
+            "role": "Miembro secundario de Grove Street",
+            "image": "../assets/images/characters/SA/ogloc.webp"
+        },
+        {
+            "id": "kendl",
+            "name": "Kendl Johnson",
+            "role": "Hermana de CJ y Sweet",
+            "image": "../assets/images/characters/SA/kendl.webp"
+        },
+        {
+            "id": "cesar",
+            "name": "Cesar Vialpando",
+            "role": "Líder de Varrios Los Aztecas",
+            "image": "../assets/images/characters/SA/cesar.webp"
+        },
+        {
+            "id": "denise",
+            "name": "Denise Robinson",
+            "role": "Novia de CJ",
+            "image": "../assets/images/characters/SA/denise.webp"
+        },
+        {
+            "id": "tenpenny",
+            "name": "Frank Tenpenny",
+            "role": "Antagonista principal",
+            "image": "../assets/images/characters/SA/tenpenny.webp"
+        },
+        {
+            "id": "pulaski",
+            "name": "Eddie Pulaski",
+            "role": "Antagonista secundario",
+            "image": "../assets/images/characters/SA/pulaski.webp"
+        },
+        {
+            "id": "truth",
+            "name": "The Truth",
+            "role": "Hippie conspiranóico",
+            "image": "../assets/images/characters/SA/truth.webp"
+        },
+        {
+            "id": "woozie",
+            "name": "Wu Zi Mu",
+            "role": "Líder de las Tríadas",
+            "image": "../assets/images/characters/SA/woozie.webp"
+        },
+        {
+            "id": "jizzy",
+            "name": "Jizzy B",
+            "role": "Miembro del Loco Syndicate",
+            "image": "../assets/images/characters/SA/jizzy.webp"
+        },
+        {
+            "id": "tbone",
+            "name": "T-Bone Méndez",
+            "role": "Miembro del Loco Syndicate",
+            "image": "../assets/images/characters/SA/tbone.webp"
+        },
+        {
+            "id": "toreno",
+            "name": "Mike Toreno",
+            "role": "Ex-miembro del Loco Syndicate, agente del gobierno",
+            "image": "../assets/images/characters/SA/toreno.webp"
+        },
+        {
+            "id": "madddogg",
+            "name": "Madd Dogg",
+            "role": "Artista musical",
+            "image": "../assets/images/characters/SA/madddogg.webp"
+        }
+    ],
+    "LCS": [
+        {
+            "id": "toni",
+            "name": "Toni Cipriani",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/LCS/toni.webp"
+        },
+        {
+            "id": "salvatore_lcs",
+            "name": "Salvatore Leone",
+            "role": "Don de la Familia Leone",
+            "image": "../assets/images/characters/LCS/salvatore.webp"
+        },
+        {
+            "id": "vincenzo",
+            "name": "Vincenzo",
+            "role": "Miembro de la Familia Leone",
+            "image": "../assets/images/characters/LCS/vincenzo.webp"
+        },
+        {
+            "id": "jd",
+            "name": "JD O'Toole",
+            "role": "Asociado de la Familia Sindacco",
+            "image": "../assets/images/characters/LCS/jd.webp"
+        },
+        {
+            "id": "torini",
+            "name": "Massimo Torini",
+            "role": "Alto rango de la Mafia Siciliana, antagonista",
+            "image": "../assets/images/characters/LCS/torini.webp"
+        },
+        {
+            "id": "maria",
+            "name": "Maria Latore",
+            "role": "Esposa de Salvatore",
+            "image": "../assets/images/characters/LCS/maria.webp"
+        },
+        {
+            "id": "donald_lcs",
+            "name": "Donald Love",
+            "role": "Empresario, candidato a alcalde de Liberty City",
+            "image": "../assets/images/characters/LCS/donald.webp"
+        },
+        {
+            "id": "paulie",
+            "name": "Paulie Sindacco",
+            "role": "Don de la Familia Sindacco",
+            "image": "../assets/images/characters/LCS/paulie.webp"
+        },
+        {
+            "id": "leon",
+            "name": "Leon McAffrey",
+            "role": "Policía corrupto",
+            "image": "../assets/images/characters/LCS/leon.webp"
+        },
+        {
+            "id": "ned",
+            "name": "Ned Burner",
+            "role": "Periodista del Liberty Tree",
+            "image": "../assets/images/characters/LCS/ned.webp"
+        },
+        {
+            "id": "kazuki",
+            "name": "Kazuki Kasen",
+            "role": "Waka-Gashira de los Yakuza",
+            "image": "../assets/images/characters/LCS/kazuki.webp"
+        },
+        {
+            "id": "toshiko",
+            "name": "Toshiko Kasen",
+            "role": "Esposa de Kazuki Kasen",
+            "image": "../assets/images/characters/LCS/toshiko.webp"
+        }
+    ],
+    "VCS": [
+        {
+            "id": "victor",
+            "name": "Victor Vance",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/VCS/victor.webp"
+        },
+        {
+            "id": "martinez",
+            "name": "Sargento Martinez",
+            "role": "Antagonista principal",
+            "image": "../assets/images/characters/VCS/martinez.webp"
+        },
+        {
+            "id": "phil_vcs",
+            "name": "Phil Cassidy",
+            "role": "Traficante de armas, amigo de Vic",
+            "image": "../assets/images/characters/VCS/phil.webp"
+        },
+        {
+            "id": "louise",
+            "name": "Louise Cassidy-Williams",
+            "role": "Hermana de Phil",
+            "image": "../assets/images/characters/VCS/louise.webp"
+        },
+        {
+            "id": "lance_vcs",
+            "name": "Lance Vance",
+            "role": "Hermano de Vic",
+            "image": "../assets/images/characters/VCS/lance.webp"
+        },
+        {
+            "id": "umberto_vcs",
+            "name": "Umberto Robina",
+            "role": "Líder de los cubanos (Cabrones)",
+            "image": "../assets/images/characters/VCS/umberto.webp"
+        },
+        {
+            "id": "bryan",
+            "name": "Bryan Forbes",
+            "role": "Agente encubierto",
+            "image": "../assets/images/characters/VCS/bryan.webp"
+        },
+        {
+            "id": "mendez",
+            "name": "Hermanos Mendez",
+            "role": "Traficantes de drogas en Vice City",
+            "image": "../assets/images/characters/VCS/mendez.webp"
+        },
+        {
+            "id": "reni",
+            "name": "Reni Wassulmaier",
+            "role": "Directora de cine",
+            "image": "../assets/images/characters/VCS/reni.webp"
+        },
+        {
+            "id": "gonzalez",
+            "name": "Gonzalez",
+            "role": "Mano derecha del Coronel Cortez",
+            "image": "../assets/images/characters/VCS/gonzalez.webp"
+        },
+        {
+            "id": "diaz_vcs",
+            "name": "Ricardo Diaz",
+            "role": "Traficante de drogas colombiano",
+            "image": "../assets/images/characters/VCS/diaz.webp"
+        },
+        {
+            "id": "collins",
+            "name": "Phil Collins",
+            "role": "Artista musical",
+            "image": "../assets/images/characters/VCS/collins.webp"
+        }
+    ],
+    "IV": [
+        {
+            "id": "niko",
+            "name": "Niko Bellic",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/IV/niko.webp"
+        },
+        {
+            "id": "roman",
+            "name": "Roman Bellic",
+            "role": "Primo de Niko",
+            "image": "../assets/images/characters/IV/roman.webp"
+        },
+        {
+            "id": "mallorie",
+            "name": "Mallorie",
+            "role": "Pareja de Roman",
+            "image": "../assets/images/characters/IV/mallorie.webp"
+        },
+        {
+            "id": "vlad",
+            "name": "Vlad Glebov",
+            "role": "Prestamista, antagonista",
+            "image": "../assets/images/characters/IV/vlad.webp"
+        },
+        {
+            "id": "faustin",
+            "name": "Mikhail Faustin",
+            "role": "Jefe de la mafia rusa en Liberty City",
+            "image": "../assets/images/characters/IV/faustin.webp"
+        },
+        {
+            "id": "dimitri",
+            "name": "Dimitri Rascalov",
+            "role": "Mano derecha de Faustin, antagonista",
+            "image": "../assets/images/characters/IV/dimitri.webp"
+        },
+        {
+            "id": "jacob",
+            "name": "Little Jacob",
+            "role": "Miembro de la banda jamaiquina, amigo de Niko",
+            "image": "../assets/images/characters/IV/jacob.webp"
+        },
+        {
+            "id": "brucie",
+            "name": "Brucie Kibbutz",
+            "role": "Amigo de Niko",
+            "image": "../assets/images/characters/IV/brucie.webp"
+        },
+        {
+            "id": "elizabeta",
+            "name": "Elizabeta Torres",
+            "role": "Traficante de drogas en Liberty City",
+            "image": "../assets/images/characters/IV/elizabeta.webp"
+        },
+        {
+            "id": "packie",
+            "name": "Patrick McReary",
+            "role": "Miembro de la familia McReary, amigo de Niko",
+            "image": "../assets/images/characters/IV/packie.webp"
+        },
+        {
+            "id": "gerry",
+            "name": "Gerald McReary",
+            "role": "Miembro de la familia McReary",
+            "image": "../assets/images/characters/IV/gerry.webp"
+        },
+        {
+            "id": "derrick",
+            "name": "Derrick McReary",
+            "role": "Miembro de la familia McReary",
+            "image": "../assets/images/characters/IV/derrick.webp"
+        },
+        {
+            "id": "francis",
+            "name": "Francis McReary",
+            "role": "Miembro de la familia McReary, policía corrupto",
+            "image": "../assets/images/characters/IV/francis.webp"
+        },
+        {
+            "id": "playboy",
+            "name": "Playboy X",
+            "role": "Traficante de crack en Liberty City",
+            "image": "../assets/images/characters/IV/playboy.webp"
+        },
+        {
+            "id": "dwayne",
+            "name": "Dwayne Forge",
+            "role": "Socio de Playboy X, amigo de Niko",
+            "image": "../assets/images/characters/IV/dwayne.webp"
+        },
+        {
+            "id": "bernie",
+            "name": "Bernie Crane",
+            "role": "Ex-compañero de Niko en la guerra",
+            "image": "../assets/images/characters/IV/bernie.webp"
+        },
+        {
+            "id": "darko",
+            "name": "Darko Brevic",
+            "role": "Ex-compañero de Niko en la guerra, antagonista",
+            "image": "../assets/images/characters/IV/darko.webp"
+        },
+        {
+            "id": "ray",
+            "name": "Ray Boccino",
+            "role": "Capo de la Familia Pegorino",
+            "image": "../assets/images/characters/IV/ray.webp"
+        },
+        {
+            "id": "phil_iv",
+            "name": "Phil Bell",
+            "role": "Asociado de la Familia Pegorino",
+            "image": "../assets/images/characters/IV/phil.webp"
+        },
+        {
+            "id": "pegorino",
+            "name": "Jimmy Pegorino",
+            "role": "Don de la Familia Pegorino, antagonista",
+            "image": "../assets/images/characters/IV/pegorino.webp"
+        }
+    ],
+    "V": [
+        {
+            "id": "michael",
+            "name": "Michael de Santa",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/V/michael.webp"
+        },
+        {
+            "id": "franklin",
+            "name": "Franklin Clinton",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/V/franklin.webp"
+        },
+        {
+            "id": "trevor",
+            "name": "Trevor Philips",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/V/trevor.webp"
+        },
+        {
+            "id": "lester",
+            "name": "Lester Crest",
+            "role": "Viejo amigo de Michael y Trevor",
+            "image": "../assets/images/characters/V/lester.webp"
+        },
+        {
+            "id": "brad",
+            "name": "Brad Snider",
+            "role": "Viejo amigo de Michael y Trevor",
+            "image": "../assets/images/characters/V/brad.webp"
+        },
+        {
+            "id": "lamar",
+            "name": "Lamar Davis",
+            "role": "Amigo de Franklin, miembro de Grove Street Families",
+            "image": "../assets/images/characters/V/lamar.webp"
+        },
+        {
+            "id": "dave",
+            "name": "Dave Norton",
+            "role": "Agente del FIB, amigo de Michael",
+            "image": "../assets/images/characters/V/dave.webp"
+        },
+        {
+            "id": "steve",
+            "name": "Steve Haines",
+            "role": "Agente corrupto del FIB",
+            "image": "../assets/images/characters/V/steve.webp"
+        },
+        {
+            "id": "devin",
+            "name": "Devin Weston",
+            "role": "Empresario multimillonario, antagonista",
+            "image": "../assets/images/characters/V/devin.webp"
+        },
+        {
+            "id": "stretch",
+            "name": "Stretch",
+            "role": "Miembro de Grove Street Families, antagonista",
+            "image": "../assets/images/characters/V/stretch.webp"
+        },
+        {
+            "id": "wei",
+            "name": "Wei Cheng",
+            "role": "Líder de las Tríadas, antagonista",
+            "image": "../assets/images/characters/V/wei.webp"
+        },
+        {
+            "id": "amanda",
+            "name": "Amanda de Santa",
+            "role": "Esposa de Michael",
+            "image": "../assets/images/characters/V/amanda.webp"
+        },
+        {
+            "id": "jimmy",
+            "name": "Jimmy de Santa",
+            "role": "Hijo de Michael",
+            "image": "../assets/images/characters/V/jimmy.webp"
+        },
+        {
+            "id": "tracey",
+            "name": "Tracey de Santa",
+            "role": "Hija de Michael",
+            "image": "../assets/images/characters/V/tracey.webp"
+        },
+        {
+            "id": "martin",
+            "name": "Martin Madrazo",
+            "role": "Jefe del Cártel de Madrazo",
+            "image": "../assets/images/characters/V/martin.webp"
+        },
+        {
+            "id": "patricia",
+            "name": "Patricia Madrazo",
+            "role": "Esposa de Martin Madrazo",
+            "image": "../assets/images/characters/V/patricia.webp"
+        },
+        {
+            "id": "ron",
+            "name": "Ron Jakowski",
+            "role": "Amigo y socio de Trevor",
+            "image": "../assets/images/characters/V/ron.webp"
+        },
+        {
+            "id": "wade",
+            "name": "Wade Hebert",
+            "role": "Amigo de Trevor",
+            "image": "../assets/images/characters/V/wade.webp"
+        },
+        {
+            "id": "solomon",
+            "name": "Solomon Richards",
+            "role": "Productor de películas en Vinewood",
+            "image": "../assets/images/characters/V/solomon.webp"
+        },
+        {
+            "id": "molly",
+            "name": "Molly Schultz",
+            "role": "Asistente de Devin Weston",
+            "image": "../assets/images/characters/V/molly.webp"
+        }
+    ],
+    "VI": [
+        {
+            "id": "jason",
+            "name": "Jason Duval",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/VI/jason.webp"
+        },
+        {
+            "id": "lucia",
+            "name": "Lucia Caminos",
+            "role": "Protagonista",
+            "image": "../assets/images/characters/VI/lucia.webp"
+        },
+        {
+            "id": "brian",
+            "name": "Brian Heder",
+            "role": "Traficante de drogas en Leonida",
+            "image": "../assets/images/characters/VI/brian.webp"
+        },
+        {
+            "id": "cal",
+            "name": "Cal Hampton",
+            "role": "Amigo de Jason",
+            "image": "../assets/images/characters/VI/cal.webp"
+        },
+        {
+            "id": "boobie",
+            "name": "Boobie Ike",
+            "role": "Productor musical, dueño del Jack of Hearts",
+            "image": "../assets/images/characters/VI/boobie.webp"
+        },
+        {
+            "id": "dre",
+            "name": "Dre'Quan Priest",
+            "role": "Artista musical",
+            "image": "../assets/images/characters/VI/dre.webp"
+        },
+        {
+            "id": "dimez",
+            "name": "Real Dimez",
+            "role": "Dúo musical",
+            "image": "../assets/images/characters/VI/dimez.webp"
+        },
+        {
+            "id": "raul",
+            "name": "Raul Bautista",
+            "role": "Ladrón de bancos experimentado",
+            "image": "../assets/images/characters/VI/raul.webp"
+        }
+    ]
+}

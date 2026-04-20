@@ -144,6 +144,14 @@ body {
             height: 100svh;
             padding-block: 1em;
             border-left: 2px solid #ffffffc7;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
 
             & a {
                 border: none;
@@ -161,8 +169,9 @@ body {
                 }
 
                 & img {
-                    width: 110px;
-                    height: 110px;
+                    width: clamp(60px, 9svh, 110px);
+                    height: clamp(60px, 9svh, 110px);
+
                 }
 
                 & span {
@@ -403,7 +412,7 @@ body {
                 flex-direction: column;
 
                 & h2 {
-                    font-size: 2em;
+                    font-size: clamp(1.3em, 4vw, 2em);
                     margin-left: 1.5em;
                     font-family: "GTAArtDecoMedium";
                 }
@@ -413,19 +422,19 @@ body {
                     flex-wrap: wrap;
                     justify-content: center;
                     align-items: center;
-                    gap: 50px;
+                    gap: clamp(20px, 1vw, 50px);
                     background: linear-gradient(135deg, rgba(58, 37, 55, 0.2), rgba(58, 37, 55, 0.4));
                     backdrop-filter: blur(1px);
                     border: 2px solid rgba(0, 0, 0, 0.2);
-                    width: 90%;
+                    width: 95%;
                     margin: 1em auto 0 auto;
                     border-radius: 24px;
-                    padding: 1em 0.2em;
+                    padding: clamp(0.8em, 2vw, 1.5em);
 
                     & a {
                         text-decoration: none;
                         display: grid;
-                        grid-template-rows: 110px 50px;
+                        grid-template-rows: auto auto;
                         align-items: center;
                         justify-items: center;
                         padding: 0.3em;
@@ -434,8 +443,8 @@ body {
 
 
                         & img {
-                            height: 110px;
-                            width: 110px;
+                            height: clamp(65px, 15vw, 110px);
+                            width: clamp(65px, 15vw, 110px);
                             transition: all 0.2s ease;
                         }
 
@@ -1005,6 +1014,12 @@ header {
             background-color 0.3s ease-in-out,
             transform 0.3s ease;
         margin-right: 30px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        touch-action: manipulation;
 
         &:hover {
             background-color: #448ed4;
@@ -1048,6 +1063,7 @@ header {
 }
 
 #rightContent {
+    overflow: hidden;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -1056,7 +1072,7 @@ header {
     top: 75px;
     right: -75vw;
     height: 100vh;
-    min-width: 10vw;
+    min-width: 13vw;
     background: #0b011fcd;
     transition: all 0.35s ease-in-out;
     backdrop-filter: blur(25px);
@@ -1069,6 +1085,9 @@ header {
     }
 
     & .right-content-logos {
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: none;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -1077,7 +1096,7 @@ header {
         height: 100%;
         border-left: 1px solid #8c71cf29;
         background-color: rgba(0, 0, 0, 0.2);
-        padding: 0 0.5em 0 1em;
+        padding: 0 0.8em 0 1em;
 
         & a {
             margin: 0;
@@ -4520,7 +4539,6 @@ body:has(.reset-dialog[open]) {
 
         & .block,
         #radioInfo {
-            padding: 2em;
             margin: 6em 0 1em 0;
         }
     }
