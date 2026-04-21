@@ -3121,11 +3121,10 @@ body:has(.reset-dialog[open]) {
             margin-top: 5px;
 
             & p {
-                font-weight: 100;
                 background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
                 font-size: 0.95em;
                 color: var(--block-color);
-                padding: 5px 12px;
+                padding: 5px 14px;
                 border-radius: 25px;
                 width: max-content;
             }
@@ -3143,11 +3142,10 @@ body:has(.reset-dialog[open]) {
             margin-top: 5px;
 
             & p {
-                font-weight: 100;
                 background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
                 font-size: 0.95em;
                 color: var(--block-color);
-                padding: 5px 12px;
+                padding: 5px 14px;
                 border-radius: 25px;
                 width: max-content;
             }
