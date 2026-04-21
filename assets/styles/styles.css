@@ -3116,8 +3116,10 @@ body:has(.reset-dialog[open]) {
 
         & .dj-tags {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 5px;
+            justify-content: center;
 
             & p {
                 font-weight: 100;
@@ -3137,8 +3139,10 @@ body:has(.reset-dialog[open]) {
 
         & .genre-tags {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
             margin-top: 5px;
+            justify-content: center;
 
             & p {
                 font-weight: 100;
@@ -4362,6 +4366,10 @@ body:has(.reset-dialog[open]) {
         padding-top: 2em;
         text-align: center;
         overflow: hidden;
+
+        & #playlistSelector {
+            justify-content: center;
+        }
 
         &.active {
             transform: translateY(0);
