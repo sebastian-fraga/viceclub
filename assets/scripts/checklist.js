@@ -16,6 +16,23 @@ async function renderChecklistFromJSON() {
         return;
     }
 
+    const container = document.querySelector(".checklist-container");
+    if (container) {
+        container.innerHTML = Array(1)
+            .fill(
+                `
+            <div class="skeleton-entry checklist-skeleton">
+                <div class="skeleton skeleton-date"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+            </div>
+        `,
+            )
+            .join("");
+    }
+
     const rutaJSON =
         "https://viceclub.s3.us-east-1.amazonaws.com/" +
         juego +
@@ -24,7 +41,6 @@ async function renderChecklistFromJSON() {
     try {
         const response = await fetch(rutaJSON);
         const data = await response.json();
-        const container = document.querySelector(".checklist-container");
 
         if (!container) {
             console.error("No se encontró .checklist-container");

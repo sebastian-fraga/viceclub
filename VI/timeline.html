@@ -57,9 +57,10 @@
                 </button>
             </nav>
         </header>
-        <div class="block timeline">
-            <div class="text-container" id="timelineContainer"></div>
-        </div>
+
+        <main class="block" id="container">
+            <section class="text-container" id="timelineContainer"></section>
+        </main>
         <div class="timeline-arrow" id="arrowButton">
             <span class="material-symbols-rounded">south</span>
         </div>
@@ -189,93 +190,10 @@
         <!-- Right Content -->
         <script src="../assets/scripts/right-menu.js"></script>
 
-        <script>
-            async function loadTimeline() {
-                try {
-                    const response = await fetch(
-                        "https://viceclub.s3.us-east-1.amazonaws.com/VI/timeline.json?t=" +
-                            Date.now(),
-                    );
-                    const data = await response.json();
-                    const container =
-                        document.getElementById("timelineContainer");
+        <!-- Timeline -->
+        <script src="../assets/scripts/timeline.js"></script>
 
-                    let lastYear = null;
-
-                    container.innerHTML = `
-                    <h1>${data.title}</h1>
-                    <div class="timeline-last-updated">${data.lastUpdated}</div>
-                `;
-
-                    data.entries.forEach((entry) => {
-                        const [day, month, year] = entry.date.split("/");
-
-                        if (lastYear && lastYear !== year) {
-                            const divider = document.createElement("div");
-                            divider.classList.add("timeline-divider");
-                            container.appendChild(divider);
-                        }
-                        lastYear = year;
-
-                        if (entry.events && Array.isArray(entry.events)) {
-                            entry.events.forEach((ev, i) => {
-                                const article =
-                                    document.createElement("article");
-
-                                article.innerHTML = `
-                            ${i === 0 ? `<h3 class="timeline-date">${entry.date}</h3>` : ""}
-                            <h4 class="timeline-time">${ev.time}</h4>
-                            <p>
-                                <span class="material-symbols-rounded timeline-icon">
-                                timeline
-                                </span>
-                                ${ev.text}
-                            </p>
-                            ${ev.image ? `<img src="${ev.image}" class="news-image" loading="lazy" data-footer="${ev.footerText || ""}">` : ""}
-                        `;
-                                container.appendChild(article);
-                            });
-                        } else {
-                            const article = document.createElement("article");
-                            article.innerHTML = `
-                    <h3 class="timeline-date">${entry.date}</h3>
-                    <h4 class="timeline-time">${entry.time}</h4>
-                    <p>
-                        <span class="material-symbols-rounded timeline-icon">
-                        timeline
-                        </span>
-                        ${entry.text}
-                    </p>
-                        ${entry.image ? `<img src="${entry.image}" class="news-image" loading="lazy" data-footer="${entry.footerText || ""}">` : ""}
-                `;
-                            container.appendChild(article);
-                        }
-                    });
-                } catch (error) {
-                    console.error("Error al cargar el JSON:", error);
-                }
-            }
-            loadTimeline().then(() => {
-                const arrowButton = document.getElementById("arrowButton");
-                const articles = document.querySelectorAll("article");
-                const lastArticle = articles[articles.length - 1];
-
-                arrowButton.addEventListener("click", () => {
-                    lastArticle.scrollIntoView();
-                });
-
-                window.addEventListener("scroll", () => {
-                    const currentScroll = window.scrollY;
-                    const lastArticleTop = lastArticle.offsetTop;
-
-                    if (currentScroll >= lastArticleTop - 700) {
-                        arrowButton.classList.add("hidden");
-                    } else {
-                        arrowButton.classList.remove("hidden");
-                    }
-                });
-            });
-        </script>
+        <!--Overlay-->
         <script src="../assets/scripts/overlay.js"></script>
     </body>
 </html>

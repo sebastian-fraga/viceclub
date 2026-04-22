@@ -3752,6 +3752,58 @@ body:has(.reset-dialog[open]) {
     }
 }
 
+@keyframes shimmer {
+    0% {
+        background-position: -1250px 0;
+    }
+
+    100% {
+        background-position: 1250px 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.03) 25%,
+            rgba(255, 255, 255, 0.08) 50%,
+            rgba(255, 255, 255, 0.03) 75%);
+    background-size: 1250px 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 6px;
+}
+
+.skeleton-entry {
+    padding: 0 3em;
+    margin-bottom: 4em;
+}
+
+.skeleton-date {
+    height: 1.2em;
+    width: 120px;
+    margin-bottom: 0.5em;
+}
+
+.skeleton-time {
+    height: 0.9em;
+    width: 60px;
+    margin-bottom: 0.8em;
+}
+
+.skeleton-text {
+    height: 1em;
+    width: 90%;
+    margin-bottom: 0.4em;
+}
+
+.skeleton-text.short {
+    width: 60%;
+}
+
+.checklist-skeleton {
+    margin-top: 2em;
+}
+
+
 /* #endregion */
 
 /* #region MEDIA QUERIES */
