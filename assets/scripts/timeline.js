@@ -2,7 +2,7 @@ async function loadTimeline() {
     const container = document.getElementById("timelineContainer");
 
     container.innerHTML = `
-    <div id="timeline-loader">
+    <div id="timelineLoader">
         ${Array(5)
             .fill(
                 `

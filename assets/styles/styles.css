@@ -3004,6 +3004,11 @@ body:has(.reset-dialog[open]) {
             align-items: center;
             flex-shrink: 0;
 
+            &.skeleton {
+                width: 100px;
+                height: 90px;
+            }
+
             &.active {
                 transform: scale(1.15);
                 transform-origin: center;
@@ -3034,6 +3039,7 @@ body:has(.reset-dialog[open]) {
 }
 
 #radioInfo {
+    display: none;
     backdrop-filter: blur(12px);
     transform: translateY(100%);
     opacity: 0;
@@ -3071,7 +3077,6 @@ body:has(.reset-dialog[open]) {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
-        display: grid;
     }
 
     & img {
@@ -3771,7 +3776,6 @@ body:has(.reset-dialog[open]) {
     animation: shimmer 1.5s infinite;
     border-radius: 6px;
 }
-
 .skeleton-entry {
     padding: 0 3em;
     margin-bottom: 4em;
@@ -4392,6 +4396,8 @@ body:has(.reset-dialog[open]) {
             flex-wrap: nowrap;
 
             & .radio-card {
+
+                
                 &.active {
                     & img {
                         width: 90px;
@@ -4406,7 +4412,7 @@ body:has(.reset-dialog[open]) {
     }
 
     #radioInfo {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         padding-bottom: 7em;
         border-radius: 10px;

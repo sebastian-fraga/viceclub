@@ -134,7 +134,7 @@ body.timeline {
         margin-inline: auto;
         max-width: 1250px;
 
-        & #timeline-loader {
+        & #timelineLoader {
             min-width: 65vw;
             min-height: 90vh;
             display: flex;
@@ -312,7 +312,16 @@ body.timeline {
 
     body.timeline {
         & main {
+
+            & #timelineLoader {
+                min-width: 90vw;
+            }
+
             & #timelineContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: stretch;
 
                 & .timeline-last-updated {
                     font-size: 0.7em;

@@ -98,13 +98,27 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        const savedCount =
+            parseInt(localStorage.getItem(`radioCount_${juego}`)) || 1;
+
+        radioGrid.innerHTML = Array(savedCount)
+            .fill(`<div class="radio-card skeleton"></div>`)
+            .join("");
+
+        if (juego === "V") makeDial();
+
         const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json`;
 
         try {
             const response = await fetch(rutaJSON);
             radioData = await response.json();
+
+            const count = Object.values(radioData).filter(
+                (r) => r?.audio || r?.playlists,
+            ).length;
+            localStorage.setItem(`radioCount_${juego}`, count);
+
             renderRadioGrid();
-            console.log("Radios cargadas para:", juego);
         } catch (error) {
             console.error("Error cargando radios:", error);
         }
@@ -137,6 +151,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentRadio = null;
                 footer.classList.remove("active");
                 radioInfo.classList.remove("active");
+                radioInfo.addEventListener(
+                    "transitionend",
+                    () => {
+                        radioInfo.style.display = "none";
+                    },
+                    { once: true },
+                );
+
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                radioInfo.scrollTop = 0;
             });
 
             radioGrid.appendChild(offCard);
@@ -161,6 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 currentRadio = radioKey;
                 updateRadioDirect(radioKey);
+                window.scrollTo({ top: 0, behavior: "smooth" });
             });
 
             radioGrid.appendChild(card);
@@ -229,7 +254,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!data) return;
         if (!footer) return;
 
-        radioInfo.classList.add("active");
+        radioInfo.style.display = "grid";
+        requestAnimationFrame(() => radioInfo.classList.add("active"));
+
         footer.classList.add("active");
 
         radioTitle.textContent = data.displayName;
