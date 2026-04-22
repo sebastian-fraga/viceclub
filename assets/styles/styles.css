@@ -965,14 +965,14 @@ header {
             margin: 0;
             padding: 0;
             line-height: 0;
-            transition: transform 0.2s ease filter 0.1s ease;
+            transition: all 0.2s ease-in-out;
 
             &:active {
                 transform: scale(0.9);
             }
 
             &:hover {
-                filter: brightness(0.9);
+                filter: brightness(0.7);
             }
         }
 
