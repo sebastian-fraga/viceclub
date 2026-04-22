@@ -3364,7 +3364,7 @@ body:has(.reset-dialog[open]) {
             & .footer-pause,
             & .footer-play {
                 color: #d0f2f8;
-                font-size: 54px;
+                font-size: 64px;
                 text-shadow: 2px 2px 3px #0000005e;
             }
 
@@ -3776,6 +3776,7 @@ body:has(.reset-dialog[open]) {
     animation: shimmer 1.5s infinite;
     border-radius: 6px;
 }
+
 .skeleton-entry {
     padding: 0 3em;
     margin-bottom: 4em;
@@ -3806,6 +3807,12 @@ body:has(.reset-dialog[open]) {
 .checklist-skeleton {
     margin-top: 2em;
 }
+
+.achievement-skeleton {
+    margin-bottom: 20px;
+}
+
+
 
 
 /* #endregion */
@@ -4397,7 +4404,7 @@ body:has(.reset-dialog[open]) {
 
             & .radio-card {
 
-                
+
                 &.active {
                     & img {
                         width: 90px;

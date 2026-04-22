@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const rutaActual = window.location.pathname;
     const carpetas = ["III", "VC", "SA", "IV", "V"];
+    const secciones = [
+        "original",
+        "definitive",
+        "socialclub",
+        "iv",
+        "tbogt",
+        "tlad",
+        "enhanced",
+    ];
     let juego = null;
 
     carpetas.forEach(function (carpeta) {
@@ -18,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://viceclub.s3.us-east-1.amazonaws.com/" +
         juego +
         "/achievements.json";
+
     const coloresRarity = {
         bronze: { border: "2px solid #ffb89770" },
         silver: { border: "2px solid #B5B5B570" },
         gold: { border: "2px solid #f5b33970" },
         platinum: { border: "2px solid #7191fa70" },
     };
+
     const coloresTags = {
         Perdible: { background: "#6b2a2a", color: "#ff6b6b" },
         Historia: { background: "#2a4a2a", color: "#6bff6b" },
@@ -31,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
         Paciencia: { background: "#2a3a5a", color: "#6ba3ff" },
         Online: { background: "#B1261A", color: "#fafafa" },
     };
+
+    mostrarSkeletons();
 
     fetch(rutaJSON)
         .then((r) => {
@@ -41,17 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((error) => console.error("Error al cargar los logros:", error))
         .finally(() => configurarBotones());
 
-    function renderizarLogros(datos) {
-        const secciones = [
-            "original",
-            "definitive",
-            "socialclub",
-            "iv",
-            "tbogt",
-            "tlad",
-            "enhanced",
-        ];
+    function mostrarSkeletons() {
+        const skeletonHTML = Array(5)
+            .fill(
+                `
+            <div class="skeleton-entry achievement-skeleton">
+                <div class="skeleton skeleton-date"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+            </div>
+        `,
+            )
+            .join("");
 
+        secciones.forEach((seccion) => {
+            const contenedor = document.querySelector(
+                `#${seccion} .achievement-list`,
+            );
+            if (contenedor) contenedor.innerHTML = skeletonHTML;
+        });
+    }
+
+    function renderizarLogros(datos) {
         secciones.forEach(function (seccion) {
             const contenedor = document.querySelector(
                 "#" + seccion + " .achievement-list",
@@ -59,10 +85,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!contenedor || !datos[seccion]) return;
 
+            contenedor.innerHTML = "";
+
             datos[seccion].forEach(function (logro) {
                 const tarjeta = document.createElement("div");
                 tarjeta.className = "achievement-card";
                 const estiloRarity = coloresRarity[logro.rarity] || {};
+
+                if (logro.rarity === "platinum") {
+                    estiloRarity.margin = "0 0 30px 0";
+                }
+
                 Object.assign(tarjeta.style, estiloRarity);
                 tarjeta.innerHTML = "";
                 const fragment = document.createDocumentFragment();
