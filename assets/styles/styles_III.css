@@ -71,11 +71,12 @@ body .text-container {
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
-    .ficha-tecnica {
-        & th {
-            text-transform: uppercase;
-        }
+.ficha-tecnica {
+    & th {
+        text-transform: uppercase;
     }
+}
+
 /* #endregion */
 
 
@@ -117,6 +118,7 @@ details.mod summary img {
 .map-wrapper {
     background: linear-gradient(135deg, rgba(25, 2, 88, 0.685) 1%, rgb(0, 0, 0));
 }
+
 /* #endregion */
 
 /* #region RADIO */
