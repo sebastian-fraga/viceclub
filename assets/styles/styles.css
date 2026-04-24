@@ -1176,9 +1176,10 @@ header {
                 font-family: var(--font-title);
 
                 & span {
-                    font-size: 1.2em;
+                    font-size: 1.15em;
                     white-space: normal;
                     word-break: break-word;
+                    font-variation-settings: 'FILL' 1;
                 }
 
                 & p {
@@ -3586,8 +3587,12 @@ body:has(.reset-dialog[open]) {
         &:focus {
             outline: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
 
-            &+span {
+            &+.search-icon {
                 opacity: 1;
+            }
+
+            &~.help-icon {
+                opacity: 0.7;
             }
 
             &::placeholder {
@@ -3598,13 +3603,105 @@ body:has(.reset-dialog[open]) {
 
     & span {
         position: absolute;
-        left: 12px;
         top: 50%;
         transform: translateY(-50%);
         pointer-events: none;
+        transition: opacity 0.35s ease;
+    }
+
+    & .search-icon {
+        left: 12px;
         color: var(--accent-color);
         opacity: 0.4;
-        transition: opacity 0.35s ease;
+    }
+
+    & .help-icon {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        line-height: 1;
+        font-size: 24px;
+        right: 12px;
+        font-variation-settings: 'FILL' 0;
+        color: color-mix(in srgb, var(--block-text) 30%, transparent);
+        pointer-events: auto;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: color-mix(in srgb, var(--block-text) 90%, transparent);
+        }
+    }
+
+    & .tooltip {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: fixed;
+        background: var(--block-color);
+        color: var(--block-text);
+        line-height: 1.5;
+        font-family: "GTAArtDecoRegular";
+        padding: 16px 12px;
+        border-radius: 12px;
+        border: 1.5px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+        pointer-events: none;
+        backdrop-filter: blur(12px);
+        height: auto;
+        width: clamp(260px, 40vw, 420px);
+        min-width: unset;
+        min-height: 40px;
+        margin-top: 1em;
+        opacity: 0;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        & .tooltip-text {
+            font-size: 1em;
+            margin: 0;
+            text-wrap: pretty;
+            line-height: 1.3;
+
+            &:last-of-type {
+                margin-top: 15px;
+                font-style: italic;
+                font-size: 0.85em;
+                opacity: 0.9;
+
+                & code {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        & code {
+            background: var(--accent-color);
+            color: var(--block-color);
+            font-weight: 900;
+            border-radius: 25px;
+            padding: 3px 10px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: var(--arrow-x);
+            transform: translateX(-50%) rotate(45deg);
+            width: 10px;
+            height: 10px;
+            background: var(--block-color);
+            border-left: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
+            border-top: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
+            transform: rotate(45deg);
+        }
     }
 }
 
@@ -4627,6 +4724,16 @@ body:has(.reset-dialog[open]) {
 
     .cheats-search {
         width: fit-content;
+
+        & .tooltip {
+            max-width: 350px;
+
+            & .tooltip-text {
+                &:last-of-type {
+                    margin-top: 2em;
+                }
+            }
+        }
     }
 
     #cheatsContainer {

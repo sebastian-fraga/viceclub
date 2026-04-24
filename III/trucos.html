@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../assets/styles/styles.css" />
         <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0"
         />
 
         <link rel="stylesheet" href="../assets/styles/styles_III.css" />
@@ -149,7 +149,20 @@
                         placeholder="Buscar trucos..."
                         autocomplete="off"
                     />
-                    <span class="material-symbols-rounded">search</span>
+                    <span class="material-symbols-rounded search-icon"
+                        >search</span
+                    >
+
+                    <span class="material-symbols-rounded help-icon">
+                        help
+                    </span>
+                    <aside class="tooltip">
+                        <p class="tooltip-text">
+                            Puedes filtrar por secciones con la expresión
+                            <code>section:[nombre]</code>
+                        </p>
+                        <p class="tooltip-text">Por ejemplo: <code>section:vehiculos rhino</code></p>
+                    </aside>
                 </div>
 
                 <div id="cheatsContainer" role="tabpanel"></div>

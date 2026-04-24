@@ -1,5 +1,6 @@
 const PLATFORM_STORAGE_KEY = "viceclub_selected_platform";
 let currentPlatform = localStorage.getItem(PLATFORM_STORAGE_KEY) || "ps";
+
 let cheats = [];
 
 const juegos = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
@@ -81,7 +82,6 @@ function mostrarSkeletons() {
         .join("");
 
     container.innerHTML = skeletonHTML;
-    debugger;
 }
 
 async function loadCheats() {
@@ -120,31 +120,128 @@ function getAvailablePlatforms(cheatsObject) {
     return Array.from(platforms);
 }
 
-function filterCheats(query) {
+const tooltip = document.querySelector(".tooltip");
+const helpIcon = document.querySelector(".help-icon");
+
+function hasVisibleCheats() {
     const items = document.querySelectorAll(".cheat-item");
-    const q = query.toLowerCase().trim();
+    if (items.length === 0) return true;
+    return Array.from(items).some((item) => item.style.display !== "none");
+}
+
+function showTooltip() {
+    if (!tooltip || !helpIcon) return;
+    if (!hasVisibleCheats()) return;
+
+    tooltip.style.display = "block";
+    tooltip.style.visibility = "hidden";
+
+    const rect = helpIcon.getBoundingClientRect();
+    const container = document.querySelector(".cheats-search");
+
+    const containerRect = container
+        ? container.getBoundingClientRect()
+        : { left: 0, top: 0 };
+
+    const tooltipRect = tooltip.getBoundingClientRect();
+
+    const left =
+        rect.left - containerRect.left + rect.width / 2 - tooltipRect.width / 2;
+
+    const arrowOffset = rect.left + rect.width / 2 - tooltipRect.left;
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.setProperty("--arrow-x", `${arrowOffset}px`);
+
+    tooltip.style.visibility = "visible";
+    tooltip.classList.add("visible");
+}
+
+function hideTooltip() {
+    if (!tooltip) return;
+    tooltip.classList.remove("visible");
+    tooltip.style.display = "none";
+}
+
+if (helpIcon) {
+    helpIcon.addEventListener("mouseenter", showTooltip);
+    helpIcon.addEventListener("mouseleave", hideTooltip);
+}
+
+function parseQuery(raw) {
+    const sections = [];
+    const words = [];
+
+    const regex = /(?:section|s|cat):(?:"([^"]+)"|(\S+))|(\S+)/gi;
+    let match;
+    let hasMatch = false;
+
+    function normalize(str) {
+        return str
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    while ((match = regex.exec(raw.toLowerCase())) !== null) {
+        hasMatch = true;
+        if (match[1] !== undefined) {
+            sections.push(match[1]);
+        } else if (match[2] !== undefined) {
+            sections.push(match[2]);
+        } else {
+            words.push(match[3]);
+        }
+    }
+
+    if (!hasMatch) {
+        tooltip.style.display = "none";
+    }
+
+    return { sections, words };
+}
+
+function filterCheats(query) {
+    const { sections, words } = parseQuery(query);
+    const items = document.querySelectorAll(".cheat-item");
+
+    let visibleCount = 0;
 
     items.forEach((item) => {
         const title = item
             .querySelector(".cheat-title")
             .textContent.toLowerCase();
-        item.style.display = !q || title.includes(q) ? "" : "none";
+
+        const matchesWords = words.every((w) => title.includes(w));
+        item.style.display = matchesWords ? "" : "none";
+
+        if (matchesWords) visibleCount++;
     });
 
     document.querySelectorAll(".cheat-category").forEach((section) => {
+        const categoryKey = section.dataset.category;
+
+        const matchesSection =
+            sections.length === 0 ||
+            sections.some((s) => categoryKey.includes(s));
+
+        if (!matchesSection) {
+            section.style.display = "none";
+            return;
+        }
+
         const visibles = [...section.querySelectorAll(".cheat-item")].filter(
             (i) => i.style.display !== "none",
         );
 
-        section
-            .querySelectorAll(".cheat-item")
-            .forEach((i) => i.classList.remove("last-visible"));
-        if (visibles.length > 0) {
-            visibles[visibles.length - 1].classList.add("last-visible");
-        }
-
         section.style.display = visibles.length > 0 ? "" : "none";
     });
+
+    if (visibleCount === 0) {
+        tooltip.style.visibility = "hidden";
+        tooltip.style.display = "none";
+        tooltip.classList.remove("visible");
+    }
 }
 
 function renderCheats() {
@@ -157,6 +254,10 @@ function renderCheats() {
     Object.entries(cheats).forEach(([category, cheatsInCategory]) => {
         const section = document.createElement("section");
         section.className = "cheat-category";
+        section.dataset.category = category
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
 
         const header = document.createElement("div");
         header.className = "category-header";
@@ -254,8 +355,9 @@ function initPlatformSelector() {
 
             const searchInput = document.getElementById("searchInput");
             if (searchInput) searchInput.value = "";
-
             renderCheats();
+            if (searchInput)
+                setTimeout(() => filterCheats(searchInput.value), 0);
         });
     });
 }
