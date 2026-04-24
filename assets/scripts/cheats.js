@@ -6,46 +6,46 @@ const juegos = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
 
 const BUTTON_ICONS = {
     ps: {
-        R1: "R1.webp",
-        R2: "R2.webp",
-        L1: "L1.webp",
-        L2: "L2.webp",
-        UP: "UP.webp",
-        DOWN: "DOWN.webp",
-        LEFT: "LEFT.webp",
-        RIGHT: "RIGHT.webp",
-        CIRCLE: "CIRCLE.webp",
-        CROSS: "CROSS.webp",
-        SQUARE: "SQUARE.webp",
-        TRIANGLE: "TRIANGLE.webp",
+        R1: { icon: "R1.webp", bg: "#1b2a5585" },
+        R2: { icon: "R2.webp", bg: "#1b2a5585" },
+        L1: { icon: "L1.webp", bg: "#1b2a5585" },
+        L2: { icon: "L2.webp", bg: "#1b2a5585" },
+        UP: { icon: "UP.webp", bg: "#1b2a5585" },
+        DOWN: { icon: "DOWN.webp", bg: "#1b2a5585" },
+        LEFT: { icon: "LEFT.webp", bg: "#1b2a5585" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#1b2a5585" },
+        CIRCLE: { icon: "CIRCLE.webp", bg: "#1b2a5585" },
+        CROSS: { icon: "CROSS.webp", bg: "#1b2a5585" },
+        SQUARE: { icon: "SQUARE.webp", bg: "#1b2a5585" },
+        TRIANGLE: { icon: "TRIANGLE.webp", bg: "#1b2a5585" },
     },
     xbox: {
-        RB: "RB.webp",
-        RT: "RT.webp",
-        LB: "LB.webp",
-        LT: "LT.webp",
-        UP: "UP.webp",
-        DOWN: "DOWN.webp",
-        LEFT: "LEFT.webp",
-        RIGHT: "RIGHT.webp",
-        B: "B.webp",
-        A: "A.webp",
-        X: "X.webp",
-        Y: "Y.webp",
+        RB: { icon: "RB.webp", bg: "#204723c4" },
+        RT: { icon: "RT.webp", bg: "#204723c4" },
+        LB: { icon: "LB.webp", bg: "#204723c4" },
+        LT: { icon: "LT.webp", bg: "#204723c4" },
+        UP: { icon: "UP.webp", bg: "#204723c4" },
+        DOWN: { icon: "DOWN.webp", bg: "#204723c4" },
+        LEFT: { icon: "LEFT.webp", bg: "#204723c4" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#204723c4" },
+        A: { icon: "A.webp", bg: "#204723c4" },
+        B: { icon: "B.webp", bg: "#204723c4" },
+        X: { icon: "X.webp", bg: "#204723c4" },
+        Y: { icon: "Y.webp", bg: "#204723c4" },
     },
     switch: {
-        ZL: "ZL.webp",
-        ZR: "ZR.webp",
-        L: "L.webp",
-        R: "R.webp",
-        UP: "UP.webp",
-        DOWN: "DOWN.webp",
-        LEFT: "LEFT.webp",
-        RIGHT: "RIGHT.webp",
-        B: "B.webp",
-        A: "A.webp",
-        X: "X.webp",
-        Y: "Y.webp",
+        ZL: { icon: "ZL.webp", bg: "#463636c4" },
+        ZR: { icon: "ZR.webp", bg: "#463636c4" },
+        L: { icon: "L.webp", bg: "#463636c4" },
+        R: { icon: "R.webp", bg: "#463636c4" },
+        UP: { icon: "UP.webp", bg: "#463636c4" },
+        DOWN: { icon: "DOWN.webp", bg: "#463636c4" },
+        LEFT: { icon: "LEFT.webp", bg: "#463636c4" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#463636c4" },
+        A: { icon: "A.webp", bg: "#463636c4" },
+        B: { icon: "B.webp", bg: "#463636c4" },
+        X: { icon: "X.webp", bg: "#463636c4" },
+        Y: { icon: "Y.webp", bg: "#463636c4" },
     },
 };
 
@@ -60,6 +60,28 @@ function detectarJuego() {
     });
 
     return juegoDetectado;
+}
+
+function mostrarSkeletons() {
+    const container = document.getElementById("cheatsContainer");
+    if (!container) return;
+
+    const skeletonHTML = Array(4)
+        .fill(
+            `
+        <div class="skeleton-entry cheat-skeleton">
+                <div class="skeleton skeleton-date"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+            </div>
+    `,
+        )
+        .join("");
+
+    container.innerHTML = skeletonHTML;
+    debugger;
 }
 
 async function loadCheats() {
@@ -98,6 +120,33 @@ function getAvailablePlatforms(cheatsObject) {
     return Array.from(platforms);
 }
 
+function filterCheats(query) {
+    const items = document.querySelectorAll(".cheat-item");
+    const q = query.toLowerCase().trim();
+
+    items.forEach((item) => {
+        const title = item
+            .querySelector(".cheat-title")
+            .textContent.toLowerCase();
+        item.style.display = !q || title.includes(q) ? "" : "none";
+    });
+
+    document.querySelectorAll(".cheat-category").forEach((section) => {
+        const visibles = [...section.querySelectorAll(".cheat-item")].filter(
+            (i) => i.style.display !== "none",
+        );
+
+        section
+            .querySelectorAll(".cheat-item")
+            .forEach((i) => i.classList.remove("last-visible"));
+        if (visibles.length > 0) {
+            visibles[visibles.length - 1].classList.add("last-visible");
+        }
+
+        section.style.display = visibles.length > 0 ? "" : "none";
+    });
+}
+
 function renderCheats() {
     const container = document.getElementById("cheatsContainer");
     if (!container) return;
@@ -109,6 +158,8 @@ function renderCheats() {
         const section = document.createElement("section");
         section.className = "cheat-category";
 
+        const header = document.createElement("div");
+        header.className = "category-header";
         const title = document.createElement("h3");
         title.className = "category-title";
         title.textContent = category;
@@ -138,9 +189,9 @@ function renderCheats() {
                 cheatCode.appendChild(span);
             } else {
                 code.forEach((btn) => {
-                    const icon = BUTTON_ICONS[currentPlatform]?.[btn];
+                    const btnData = BUTTON_ICONS[currentPlatform]?.[btn];
 
-                    if (!icon) {
+                    if (!btnData) {
                         const span = document.createElement("span");
                         span.className = "btn-text";
                         span.textContent = btn;
@@ -149,7 +200,8 @@ function renderCheats() {
                     }
 
                     const img = document.createElement("img");
-                    img.src = `../assets/images/cheats/${currentPlatform}/${icon}`;
+                    img.src = `../assets/images/cheats/${currentPlatform}/${btnData.icon}`;
+                    img.style.background = btnData.bg;
                     img.className = "btn-icon";
                     img.alt = btn;
                     img.loading = "lazy";
@@ -165,12 +217,14 @@ function renderCheats() {
 
         if (list.children.length === 0) return;
 
-        section.appendChild(title);
+        header.appendChild(title);
+        section.appendChild(header);
         section.appendChild(list);
         fragment.appendChild(section);
     });
 
     container.appendChild(fragment);
+    filterCheats(document.getElementById("searchInput")?.value || "");
 }
 
 function initPlatformSelector() {
@@ -179,12 +233,14 @@ function initPlatformSelector() {
     buttons.forEach((btn) => {
         if (btn.dataset.platform === currentPlatform) {
             btn.classList.add("active");
-            btn.setAttribute("aria-selected", "true"); 
+            btn.setAttribute("aria-selected", "true");
         } else {
             btn.setAttribute("aria-selected", "false");
         }
 
         btn.addEventListener("click", () => {
+            if (btn.dataset.platform === currentPlatform) return;
+
             buttons.forEach((b) => {
                 b.classList.remove("active");
                 b.setAttribute("aria-selected", "false");
@@ -195,12 +251,17 @@ function initPlatformSelector() {
 
             currentPlatform = btn.dataset.platform;
             localStorage.setItem(PLATFORM_STORAGE_KEY, currentPlatform);
+
+            const searchInput = document.getElementById("searchInput");
+            if (searchInput) searchInput.value = "";
+
             renderCheats();
         });
     });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+    mostrarSkeletons();
     const cheatsObject = await loadCheats();
 
     const availablePlatforms = getAvailablePlatforms(cheatsObject);
@@ -217,4 +278,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     renderCheats();
+    document
+        .getElementById("searchInput")
+        ?.addEventListener("input", (e) => filterCheats(e.target.value));
 });

@@ -3516,14 +3516,17 @@ body:has(.reset-dialog[open]) {
     gap: 0.7em;
     background: rgba(250, 250, 250, 0.05);
     border: 1px solid rgba(250, 250, 250, 0.1);
-    border-radius: 18px;
+    border-radius: 15px;
     padding: 1em 1.5em;
     width: max-content;
 
     & button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         font-size: 1em;
-        padding: 0.5em 1em;
-        border-radius: 10px;
+        padding: 6px 15px;
+        border-radius: 12px;
         border: none;
         font-weight: 600;
         transition: all 0.2s ease-out;
@@ -3532,42 +3535,108 @@ body:has(.reset-dialog[open]) {
             background: color-mix(in srgb, var(--block-border) 30%, transparent);
             outline: 1px solid color-mix(in srgb, var(--block-border) 20%, transparent);
             color: var(--block-text);
+
+            & img {
+                filter: invert(1);
+            }
         }
 
         &.active {
             background: color-mix(in srgb, var(--block-border) 60%, transparent);
             outline: 1px solid color-mix(in srgb, var(--block-border) 80%, transparent);
             color: var(--block-text);
+
+            & img {
+                filter: invert(1);
+            }
+        }
+
+        & img {
+            width: 25px;
         }
     }
 }
 
+.cheats-search {
+    position: relative;
+    max-width: 80%;
+    margin: 1em auto;
+
+
+    & #searchInput {
+        box-sizing: border-box;
+        display: block;
+        border-radius: 12px;
+        width: 100%;
+        padding-block: 5px;
+        padding-left: 38px;
+        height: 40px;
+        border-color: transparent;
+        color: var(--block-text);
+        font-family: "GTAArtDecoMedium";
+        font-size: 0.9em;
+        background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
+        transition: color 0.35s ease;
+
+        &::placeholder {
+            color: color-mix(in srgb, var(--block-text) 70%, transparent);
+
+        }
+
+        &:focus {
+            outline: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+
+            &+span {
+                opacity: 1;
+            }
+
+            &::placeholder {
+                color: color-mix(in srgb, var(--block-text) 90%, transparent);
+            }
+        }
+    }
+
+    & span {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: var(--accent-color);
+        opacity: 0.4;
+        transition: opacity 0.35s ease;
+    }
+}
+
+
 #cheatsContainer {
     display: flex;
     flex-direction: column;
-    padding: 1em 10em;
+    justify-content: center;
     gap: 1.5em;
 
     & section {
-        margin: 1em 0;
+        width: 100%;
+        max-width: 80%;
+        margin: 1em auto;
         border: 2px solid color-mix(in srgb, var(--block-border) 60%, transparent);
-        background: linear-gradient(135deg,
-                color-mix(in srgb, var(--block-border) 40%, transparent),
-                var(--block-color));
-        padding: 2em 2.5em 0 2.5em;
         border-radius: 20px;
+        background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
 
-        &:nth-of-type(even) {
-            background: linear-gradient(5deg,
-                    color-mix(in srgb, var(--block-border) 40%, transparent),
-                    var(--block-color));
+        & .category-header {
+            border-radius: 18px 18px 0 0;
+            padding-bottom: 1em;
+            background: color-mix(in srgb, var(--block-color) 60%, var(--block-border));
+
+            & h3 {
+                color: var(--accent-color);
+                padding: 0.5em 0 0.1em 0.9em;
+                font-size: 1.4em;
+                font-family: "GTAArtDecoMedium";
+                text-shadow: 2px 2px #000000bf;
+            }
         }
 
-        & h3 {
-            font-size: 1.6em;
-            font-family: "GTAArtDecoMedium";
-            text-shadow: 2px 2px #000000bf;
-        }
 
         & .category-list {
             margin-block: 1em 0;
@@ -3581,16 +3650,22 @@ body:has(.reset-dialog[open]) {
                     border-bottom: none;
                 }
 
+                &.last-visible {
+                    border-bottom: none;
+                }
+
                 & h4 {
                     font-size: 1.1em;
                     margin-left: 15px;
+                    font-weight: 100;
                 }
 
                 & .cheat-code {
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     margin: 0.5em 0 0.6em 1em;
-                    gap: 0.4em;
+                    gap: 10px;
 
                     & .pc-code {
                         display: inline-block;
@@ -3616,15 +3691,20 @@ body:has(.reset-dialog[open]) {
                             cursor: default;
                         }
                     }
+
+                    & img {
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: 15px;
+                        width: 50px;
+                        height: auto;
+                        padding: 5px;
+                    }
                 }
             }
         }
     }
 
-    & img {
-        width: 55px;
-        height: auto;
-    }
+
 }
 
 /* #endregion */
@@ -3809,6 +3889,13 @@ body:has(.reset-dialog[open]) {
 
 .achievement-skeleton {
     margin-bottom: 20px;
+}
+
+.cheat-skeleton {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 75%;
+    margin-top: 2em;
 }
 
 
@@ -4521,25 +4608,34 @@ body:has(.reset-dialog[open]) {
 
     /* #region TRUCOS */
     .platform-selector {
-        margin: 2em 0;
+        margin: 2em auto;
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        width: 60%;
+        flex-wrap: wrap;
+        width: 70%;
         max-width: 300px;
-        gap: 0.5em;
+        gap: 0.8em;
 
         & button {
+            display: flex;
+            justify-content: start;
             height: 45px;
             border-radius: 15px;
         }
     }
 
+    .cheats-search {
+        width: fit-content;
+    }
+
     #cheatsContainer {
-        padding: 1em 2em;
+        width: 100%;
 
         & section {
-            padding: 1em;
+            padding: 0;
+
+            max-width: 95%;
 
             & h3 {
                 font-size: 1.7em;

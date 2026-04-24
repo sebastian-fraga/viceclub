@@ -93,40 +93,16 @@
         <main class="block" id="container">
             <section class="text-container">
                 <h1>Trucos de Grand Theft Auto: Liberty City Stories</h1>
-                <nav class="platform-selector">
-                    <button
-                        data-platform="ps"
-                        class="platform-btn"
-                        role="tab"
-                        aria-selected="true"
-                    >
-                        PlayStation
-                    </button>
-                    <button
-                        data-platform="xbox"
-                        class="platform-btn"
-                        role="tab"
-                        aria-selected="false"
-                    >
-                        Xbox
-                    </button>
-                    <button
-                        data-platform="switch"
-                        class="platform-btn"
-                        role="tab"
-                        aria-selected="false"
-                    >
-                        Nintendo Switch
-                    </button>
-                    <button
-                        data-platform="pc"
-                        class="platform-btn"
-                        role="tab"
-                        aria-selected="false"
-                    >
-                        PC
-                    </button>
-                </nav>
+
+                <div class="cheats-search">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Buscar trucos..."
+                        autocomplete="off"
+                    />
+                    <span class="material-symbols-rounded">search</span>
+                </div>
 
                 <div id="cheatsContainer" role="tabpanel"></div>
             </section>
