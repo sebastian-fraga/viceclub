@@ -178,42 +178,50 @@ function normalize(str) {
 function parseQuery(raw) {
     const sections = [];
     const words = [];
+    const cheatCodes = [];
 
-    const regex = /(?:section|s|cat):(?:"([^"]+)"|(\S+))|(\S+)/gi;
+    const regex =
+        /(?:section|s|cat):(?:"([^"]+)"|(\S+))|(?:cheat|c):(?:"([^"]+)"|(\S+))|(\S+)/gi;
     let match;
     let hasMatch = false;
 
     while ((match = regex.exec(raw.toLowerCase())) !== null) {
         hasMatch = true;
-        if (match[1] !== undefined) {
-            sections.push(match[1]);
-        } else if (match[2] !== undefined) {
-            sections.push(match[2]);
-        } else {
-            words.push(match[3]);
-        }
+        if (match[1] !== undefined) sections.push(match[1]);
+        else if (match[2] !== undefined) sections.push(match[2]);
+        else if (match[3] !== undefined) cheatCodes.push(match[3]);
+        else if (match[4] !== undefined) cheatCodes.push(match[4]);
+        else words.push(match[5]);
     }
 
-    if (!hasMatch) {
-        tooltip.style.display = "none";
-    }
+    if (!hasMatch) tooltip.style.display = "none";
 
-    return { sections, words };
+    return { sections, words, cheatCodes };
 }
 
 function filterCheats(query) {
-    const { sections, words } = parseQuery(query);
+    const { sections, words, cheatCodes } = parseQuery(query);
     const items = document.querySelectorAll(".cheat-item");
 
     let visibleCount = 0;
 
     items.forEach((item) => {
         const title = normalize(item.querySelector(".cheat-title").textContent);
-
         const matchesWords = words.every((w) => title.includes(normalize(w)));
-        item.style.display = matchesWords ? "" : "none";
 
-        if (matchesWords) visibleCount++;
+        let matchesCheats = true;
+        if (cheatCodes.length > 0) {
+            const pcTexts = [...item.querySelectorAll(".pc-code")]
+                .map((el) => normalize(el.textContent))
+                .join(" ");
+            matchesCheats = cheatCodes.every((c) =>
+                pcTexts.includes(normalize(c)),
+            );
+        }
+
+        const visible = matchesWords && matchesCheats;
+        item.style.display = visible ? "" : "none";
+        if (visible) visibleCount++;
     });
 
     document.querySelectorAll(".cheat-category").forEach((section) => {

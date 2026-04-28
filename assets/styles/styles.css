@@ -3641,11 +3641,10 @@ body:has(.reset-dialog[open]) {
         justify-content: space-between;
         flex-wrap: wrap;
         position: fixed;
-        background: var(--block-color);
+        background: color-mix(in srgb, var(--block-color) 85%, transparent);
         color: var(--block-text);
         line-height: 1.5;
         font-family: "GTAArtDecoRegular";
-        padding: 16px 12px;
         border-radius: 12px;
         border: 1.5px solid color-mix(in srgb, var(--block-border) 30%, transparent);
         pointer-events: none;
@@ -3657,36 +3656,84 @@ body:has(.reset-dialog[open]) {
         margin-top: 1em;
         opacity: 0;
         transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 100;
 
         &.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
+        & h3 {
+            text-transform: uppercase;
+            margin: 0 auto 10px auto;
+            color: color-mix(in srgb, var(--block-text) 70%, var(--accent-color));
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 5px 12px;
+        }
+
         & .tooltip-text {
-            font-size: 1em;
+            font-size: 0.95em;
             margin: 0;
             text-wrap: pretty;
             line-height: 1.3;
-
-            &:last-of-type {
-                margin-top: 15px;
-                font-style: italic;
-                font-size: 0.85em;
-                opacity: 0.9;
-
-                & code {
-                    margin-left: 6px;
-                }
-            }
+            padding-left: 15px;
         }
 
-        & code {
-            background: var(--accent-color);
-            color: var(--block-color);
-            font-weight: 900;
-            border-radius: 25px;
-            padding: 3px 10px;
+        & ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 5px 0 10px 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+            &.pc {
+                border-bottom: none;
+                & li {
+                    & code {
+                        background: color-mix(in srgb, var(--title-color) 10%, transparent);
+                        color: color-mix(in srgb, var(--title-color) 95%, transparent);
+                        border: 1px solid color-mix(in srgb, var(--title-color) 40%, transparent);
+                    }
+
+                }
+            }
+
+            & li {
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                gap: 0.25em;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    transform: translateX(-200%);
+                    color: inherit;
+                    font-size: 0.8em;
+                }
+
+                & code {
+                    background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+                    color: color-mix(in srgb, var(--accent-color) 95%, transparent);
+                    border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+                    font-weight: 900;
+                    border-radius: 6px;
+                    padding: 3px 6px;
+                }
+
+                & span {
+                    position: relative;
+                    transform: none;
+                    font-size: 1.1em;
+                    opacity: 0.9;
+                }
+
+
+            }
         }
 
         &::before {
@@ -3792,8 +3839,8 @@ body:has(.reset-dialog[open]) {
                             cursor: default;
                         }
 
-                        
-                    } 
+
+                    }
 
                     & img {
                         border: 1px solid rgba(255, 255, 255, 0.05);
@@ -4733,12 +4780,6 @@ body:has(.reset-dialog[open]) {
 
         & .tooltip {
             max-width: 350px;
-
-            & .tooltip-text {
-                &:last-of-type {
-                    margin-top: 2em;
-                }
-            }
         }
     }
 
@@ -4761,7 +4802,7 @@ body:has(.reset-dialog[open]) {
                     margin-block: 0;
 
                     & h4 {
-                        font-size: 1.3em;
+                        font-size: 1.15em;
                         margin-bottom: 0.5em;
                         color: #dbdada;
                     }
