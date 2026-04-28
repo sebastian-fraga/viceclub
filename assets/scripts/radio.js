@@ -119,6 +119,31 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem(`radioCount_${juego}`, count);
 
             renderRadioGrid();
+
+            const hash = window.location.hash.slice(1);
+            if (hash && hash.includes("@")) {
+                const [radioKey, time] = hash.split("@");
+                if (radioData[radioKey]) {
+                    const card = [
+                        ...document.querySelectorAll(".radio-card"),
+                    ].find((c) => c.dataset.radioKey === radioKey);
+                    if (card) {
+                        card.click();
+                        audio.addEventListener(
+                            "canplay",
+                            () => {
+                                seekTo(Number(time));
+                            },
+                            { once: true },
+                        );
+                    }
+                }
+            } else if (hash && radioData[hash]) {
+                const card = [...document.querySelectorAll(".radio-card")].find(
+                    (c) => c.dataset.radioKey === hash,
+                );
+                if (card) card.click();
+            }
         } catch (error) {
             console.error("Error cargando radios:", error);
         }
@@ -172,6 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const card = document.createElement("div");
             card.classList.add("radio-card");
             card.innerHTML = `<img src="${radio.image}" alt="${radio.displayName}">`;
+            card.dataset.radioKey = radioKey;
 
             card.addEventListener("click", () => {
                 document
@@ -250,6 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateRadioDirect(radioKey) {
+        history.replaceState(null, "", `#${radioKey}`);
         const data = radioData[radioKey];
         if (!data) return;
         if (!footer) return;
@@ -449,6 +476,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = radioData[currentRadio];
         const songs = data?._activeSongs ?? data?.songs;
         if (!songs || !songs[index]) return;
+
+        history.replaceState(
+            null,
+            "",
+            `#${currentRadio}@${Math.floor(songs[index].start)}`,
+        );
 
         const songTitleEl = document.getElementById("songTitle");
         const artistNameEl = document.getElementById("artistName");
