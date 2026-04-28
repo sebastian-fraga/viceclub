@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (card) {
                         card.click();
                         audio.addEventListener(
-                            "canplay",
+                            "loadedmetadata",
                             () => {
                                 seekTo(Number(time));
                             },
@@ -542,6 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let isSeeking = false;
 
     function seekTo(time) {
+        if (!isFinite(audio.duration) || !isFinite(time)) return;
         isSeeking = true;
         targetTime = time;
 
