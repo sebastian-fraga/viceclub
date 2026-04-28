@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", function () {
         playBtn.style.display = "inline";
     });
 
-    const debugMode = true;
+    const debugMode = window.location.hostname === "localhost";
 
     if (debugMode) {
         document.addEventListener("click", () => {
