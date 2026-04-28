@@ -927,7 +927,7 @@ body {
         margin: 0 auto;
         width: 100%;
         color: color-mix(in srgb, var(--accent-color) 25%, var(--block-text));
-        opacity: 1;
+        opacity: 0.8;
         text-align: center;
         padding-block: 0.5em;
         text-shadow: 1px 1px 4px #000;
@@ -3736,11 +3736,10 @@ body:has(.reset-dialog[open]) {
 
 
         & .category-list {
-            margin-block: 1em 0;
 
             & .cheat-item {
+
                 padding: 12px 0;
-                margin-block: 1em 0.7em;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
                 &:last-of-type {
@@ -3764,6 +3763,10 @@ body:has(.reset-dialog[open]) {
                     margin: 0.5em 0 0.6em 1em;
                     gap: 10px;
 
+                    & .pc-code-sep {
+                        opacity: 0.7;
+                    }
+
                     & .pc-code {
                         display: inline-block;
                         padding: 4px 12px;
@@ -3778,7 +3781,8 @@ body:has(.reset-dialog[open]) {
                             0 3px 0 #888,
                             0 5px 8px rgba(0, 0, 0, 0.3);
                         font-family: monospace;
-                        transition: 0.15s;
+                        transition: all 0.15s;
+
 
                         &:hover {
                             transform: translateY(2px);
@@ -3787,7 +3791,9 @@ body:has(.reset-dialog[open]) {
                                 0 2px 4px rgba(0, 0, 0, 0.2);
                             cursor: default;
                         }
-                    }
+
+                        
+                    } 
 
                     & img {
                         border: 1px solid rgba(255, 255, 255, 0.05);

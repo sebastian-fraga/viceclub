@@ -168,6 +168,13 @@ if (helpIcon) {
     helpIcon.addEventListener("mouseleave", hideTooltip);
 }
 
+function normalize(str) {
+    return str
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
 function parseQuery(raw) {
     const sections = [];
     const words = [];
@@ -175,13 +182,6 @@ function parseQuery(raw) {
     const regex = /(?:section|s|cat):(?:"([^"]+)"|(\S+))|(\S+)/gi;
     let match;
     let hasMatch = false;
-
-    function normalize(str) {
-        return str
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/[\u0300-\u036f]/g, "");
-    }
 
     while ((match = regex.exec(raw.toLowerCase())) !== null) {
         hasMatch = true;
@@ -208,11 +208,9 @@ function filterCheats(query) {
     let visibleCount = 0;
 
     items.forEach((item) => {
-        const title = item
-            .querySelector(".cheat-title")
-            .textContent.toLowerCase();
+        const title = normalize(item.querySelector(".cheat-title").textContent);
 
-        const matchesWords = words.every((w) => title.includes(w));
+        const matchesWords = words.every((w) => title.includes(normalize(w)));
         item.style.display = matchesWords ? "" : "none";
 
         if (matchesWords) visibleCount++;
@@ -242,6 +240,28 @@ function filterCheats(query) {
         tooltip.style.display = "none";
         tooltip.classList.remove("visible");
     }
+
+    document.querySelectorAll(".cheat-category").forEach((section) => {
+        if (section.style.display === "none") return;
+
+        const visibleItems = [
+            ...section.querySelectorAll(".cheat-item"),
+        ].filter((i) => i.style.display !== "none");
+
+        section.querySelectorAll(".cheat-item").forEach((item) => {
+            item.style.borderRadius = "";
+            item.style.background = "";
+        });
+
+        visibleItems.forEach((item, index) => {
+            if (index % 2 === 0) {
+                item.style.background =
+                    "color-mix(in srgb, var(--block-color) 90%, var(--block-border))";
+            }
+        });
+        const last = visibleItems.at(-1);
+        if (last) last.style.borderRadius = "0 0 25px 25px";
+    });
 }
 
 function renderCheats() {
@@ -269,7 +289,7 @@ function renderCheats() {
         list.className = "category-list";
 
         cheatsInCategory.forEach((cheat) => {
-            const code = cheat.codes[currentPlatform];
+            const code = cheat.codes?.[currentPlatform];
             if (!code) return;
 
             const cheatItem = document.createElement("div");
@@ -284,10 +304,18 @@ function renderCheats() {
             cheatCode.className = "cheat-code";
 
             if (currentPlatform === "pc") {
-                const span = document.createElement("span");
-                span.className = "pc-code";
-                span.textContent = code[0];
-                cheatCode.appendChild(span);
+                code.forEach((text, i) => {
+                    if (i > 0) {
+                        const sep = document.createElement("span");
+                        sep.className = "pc-code-sep";
+                        sep.textContent = "/";
+                        cheatCode.appendChild(sep);
+                    }
+                    const span = document.createElement("span");
+                    span.className = "pc-code";
+                    span.textContent = text;
+                    cheatCode.appendChild(span);
+                });
             } else {
                 code.forEach((btn) => {
                     const btnData = BUTTON_ICONS[currentPlatform]?.[btn];
