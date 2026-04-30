@@ -627,16 +627,6 @@ document.addEventListener("DOMContentLoaded", function () {
         playBtn.style.display = "inline";
     });
 
-    const debugMode = window.location.hostname === "localhost";
-
-    if (debugMode) {
-        document.addEventListener("click", () => {
-            const seconds = Math.round(audio.currentTime * 100) / 100 - 0.35;
-            navigator.clipboard.writeText(seconds.toString());
-            console.log("Tiempo copiado:", seconds);
-        });
-    }
-
     function seekRelative(seconds) {
         if (isSeeking) return;
         const newTime = Math.max(
@@ -653,6 +643,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (e.key === "ArrowRight") seekRelative(5);
         if (e.key === "ArrowLeft") seekRelative(-5);
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (!audio.duration) return;
+        if (isSeeking) return;
+        if (e.repeat) return;
+
+        if (e.code === "Space") {
+            e.preventDefault();
+
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.style.display = "inline";
+                playBtn.style.display = "none";
+            } else {
+                audio.pause();
+                playPauseBtn.style.display = "none";
+                playBtn.style.display = "inline";
+            }
+        }
     });
 
     let isDraggingBar = false;
@@ -752,26 +762,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const volumeSlider = document.querySelector(".footer-volume input");
     const volumeIcon = document.querySelector(".footer-volume span");
+    let lastVolume = volumeSlider.value;
 
     if (volumeSlider) {
         const savedVolume = localStorage.getItem("volume");
         if (savedVolume !== null) {
             audio.volume = savedVolume / 100;
             volumeSlider.value = savedVolume;
-            if (savedVolume == 0) volumeIcon.textContent = "volume_off";
-            else if (savedVolume < 50) volumeIcon.textContent = "volume_down";
-            else volumeIcon.textContent = "volume_up";
+
+            updateIcon(savedVolume);
         }
 
         volumeSlider.addEventListener("input", () => {
             const vol = volumeSlider.value;
             audio.volume = vol / 100;
             localStorage.setItem("volume", vol);
+            if (vol > 0) lastVolume = vol;
 
+            updateIcon(vol);
+        });
+
+        function toggleMute() {
+            if (audio.volume > 0) {
+                lastVolume = volumeSlider.value;
+
+                audio.volume = 0;
+                volumeSlider.value = 0;
+                localStorage.setItem("volume", 0);
+
+                updateIcon(0);
+            } else {
+                audio.volume = lastVolume / 100;
+                volumeSlider.value = lastVolume;
+                localStorage.setItem("volume", lastVolume);
+
+                updateIcon(lastVolume);
+            }
+
+            updateRange();
+        }
+
+        volumeIcon.addEventListener("click", toggleMute);
+
+        document.addEventListener("keydown", (e) => {
+            if (e.code === "KeyM") {
+                toggleMute();
+            }
+        });
+
+        function updateIcon(vol) {
             if (vol == 0) volumeIcon.textContent = "volume_off";
             else if (vol < 50) volumeIcon.textContent = "volume_down";
             else volumeIcon.textContent = "volume_up";
-        });
+        }
 
         function updateRange() {
             const value =
@@ -789,5 +832,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         volumeSlider.addEventListener("input", updateRange);
         updateRange();
+    }
+
+    const debugMode = window.location.hostname === "localhost";
+
+    if (debugMode) {
+        document.addEventListener("click", () => {
+            const seconds = Math.round(audio.currentTime * 100) / 100 - 0.35;
+            navigator.clipboard.writeText(seconds.toString());
+            console.log("Tiempo copiado:", seconds);
+        });
     }
 });
