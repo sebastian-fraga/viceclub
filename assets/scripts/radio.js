@@ -631,7 +631,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (debugMode) {
         document.addEventListener("click", () => {
-            const seconds = Math.floor(audio.currentTime);
+            const seconds = Math.round(audio.currentTime * 100) / 100 - 0.35;
             navigator.clipboard.writeText(seconds.toString());
             console.log("Tiempo copiado:", seconds);
         });
