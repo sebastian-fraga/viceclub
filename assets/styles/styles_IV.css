@@ -110,9 +110,11 @@ body {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.checklist-tabs {
+.card-selector {
     display: flex;
+    width: 95%;
     gap: 12px;
+    margin-inline: auto;
     margin-block: 20px 10px;
 
     & button {
@@ -150,25 +152,29 @@ body {
             &:hover {
                 opacity: 0.8;
                 filter: brightness(1);
+
+                & .tab-card {
+                    outline: 1px solid color-mix(in srgb, var(--outline-card) 50%, transparent);
+                }
             }
         }
 
         &.active {
             & .tab-card {
+                outline: 2px solid var(--outline-card);
                 transform: scale(1.02);
             }
         }
 
-        &[data-game="iv"] {
+        &[data-game="iv"],
+        &[data-seccion="iv"] {
+            --outline-card: #fdfdfd;
 
             & .tab-overlay {
                 background: linear-gradient(to top left, #000, transparent);
             }
 
             &.active {
-                & .tab-card {
-                    outline: 2px solid #fff;
-                }
 
                 & .tab-overlay {
                     background: linear-gradient(to top, #bbbbbb46, transparent);
@@ -176,15 +182,15 @@ body {
             }
         }
 
-        &[data-game="tlad"] {
+        &[data-game="tlad"],
+        &[data-seccion="tlad"] {
+            --outline-card: #f8746f;
+
             & .tab-overlay {
                 background: linear-gradient(to top left, #000, transparent);
             }
 
             &.active {
-                & .tab-card {
-                    outline: 2px solid #f8746f;
-                }
 
                 & .tab-overlay {
                     background: linear-gradient(to top, #f7242446, transparent);
@@ -192,16 +198,15 @@ body {
             }
         }
 
-        &[data-game="tbogt"] {
+        &[data-game="tbogt"],
+        &[data-seccion="tbogt"] {
+            --outline-card: #f075e0;
 
             & .tab-overlay {
                 background: linear-gradient(to top left, #000, transparent);
             }
 
             &.active {
-                & .tab-card {
-                    outline: 2px solid #f075e0;
-                }
 
                 & .tab-overlay {
                     background: linear-gradient(to top, #f075e046, transparent);
@@ -265,31 +270,6 @@ details.mod summary img {
 /* #endregion */
 
 /* #region LOGROS  */
-.achievement-selector {
-    & button {
-        opacity: 0.5;
-        transition: all 0.2s ease-in-out;
-
-        &.active {
-            opacity: 1 !important;
-        }
-
-        &:hover {
-            outline: none;
-            opacity: 0.3;
-        }
-
-        &:nth-of-type(2) {
-            background: color-mix(in srgb, #BD3434 85%, transparent);
-            color: #dfdfdf;
-        }
-
-        &:nth-of-type(3) {
-            background: linear-gradient(to right, #F1EF8A, #C8597B, #8DCBE6);
-            color: #000000;
-        }
-    }
-}
 
 
 /* #endregion */
@@ -394,7 +374,7 @@ details.mod summary img {
 }
 
 @media (max-width: 900px) {
-    .checklist-tabs {
+    .card-selector {
         flex-direction: column;
     }
 }

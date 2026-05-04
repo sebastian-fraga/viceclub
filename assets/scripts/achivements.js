@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "definitive",
         "socialclub",
         "iv",
-        "tbogt",
         "tlad",
+        "tbogt",
         "enhanced",
     ];
     let juego = null;
@@ -50,12 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!r.ok) throw new Error();
             return r.json();
         })
-        .then((datos) => renderizarLogros(datos))
-        .catch((error) => console.error("Error al cargar los logros:", error))
-        .finally(() => configurarBotones());
+        .then((datos) => {
+            renderizarLogros(datos);
+            configurarBotones(datos);
+        })
+
+        .catch((error) => console.error("Error al cargar los logros:", error));
 
     function mostrarSkeletons() {
-        const skeletonHTML = Array(5)
+        const disclaimer = document.querySelector(".achievement-disclaimer");
+        if (disclaimer) disclaimer.style.display = "none";
+
+        const selector = document.querySelector(".card-selector");
+        if (selector) selector.style.display = "none";
+
+        const skeletonHTML = Array(4)
             .fill(
                 `
             <div class="skeleton-entry achievement-skeleton">
@@ -183,13 +192,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 contenedor.appendChild(tarjeta);
             });
         });
+        const disclaimer = document.querySelector(".achievement-disclaimer");
+        if (disclaimer) {
+            const tabInicial =
+                localStorage.getItem(`achievements_tab_${juego}`) || "iv";
+            disclaimer.style.display = tabInicial === "iv" ? "" : "none";
+        }
     }
 
-    function configurarBotones() {
+    function configurarBotones(datos) {
+        if (juego === "IV") {
+            renderizarSelectorVisual(datos);
+            return;
+        }
+
         const botones = document.querySelectorAll(
             ".achievement-selector button",
         );
-
         botones.forEach(function (boton) {
             boton.addEventListener("click", function () {
                 const seccionObjetivo = this.getAttribute("data-seccion");
@@ -212,6 +231,82 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.setAttribute("aria-selected", "true");
             });
         });
+    }
+
+    function renderizarSelectorVisual(datos) {
+        const selector = document.querySelector(".card-selector");
+        if (!selector) return;
+
+        const tabsDisponibles = secciones.filter(
+            (s) => datos[s] && datos[s].length > 0,
+        );
+
+        selector.innerHTML = "";
+
+        tabsDisponibles.forEach((tabId, i) => {
+            const btn = document.createElement("button");
+            btn.className = "checklist-tab-btn" + (i === 0 ? " active" : "");
+            btn.dataset.seccion = tabId;
+            btn.innerHTML = `
+            <div class="tab-card">
+                <img src="/assets/images/main/card_${tabId}.webp" alt="${tabId}">
+                <div class="tab-overlay"></div>
+            </div>
+        `;
+
+            btn.addEventListener("click", function () {
+                document
+                    .querySelectorAll(".achievement-content")
+                    .forEach((c) => {
+                        c.style.display = "none";
+                    });
+
+                selector.querySelectorAll(".checklist-tab-btn").forEach((b) => {
+                    b.classList.remove("active");
+                });
+
+                document.getElementById(tabId).style.display = "block";
+                this.classList.add("active");
+
+                localStorage.setItem(`achievements_tab_${juego}`, tabId);
+
+                const disclaimer = document.querySelector(
+                    ".achievement-disclaimer",
+                );
+                if (disclaimer)
+                    disclaimer.style.display = tabId === "iv" ? "" : "none";
+            });
+
+            selector.appendChild(btn);
+        });
+
+        if (tabsDisponibles.length > 0) {
+            const tabGuardada = localStorage.getItem(
+                `achievements_tab_${juego}`,
+            );
+            const tabInicial = tabsDisponibles.includes(tabGuardada)
+                ? tabGuardada
+                : tabsDisponibles[0];
+
+            const btnInicial = selector.querySelector(
+                `[data-seccion="${tabInicial}"]`,
+            );
+            if (btnInicial) {
+                selector
+                    .querySelectorAll(".checklist-tab-btn")
+                    .forEach((b) => b.classList.remove("active"));
+                btnInicial.classList.add("active");
+            }
+
+            document.querySelectorAll(".achievement-content").forEach((c) => {
+                c.style.display = "none";
+            });
+            document.getElementById(tabInicial).style.display = "block";
+
+            document.getElementById(tabInicial).style.display = "block";
+        }
+
+        if (selector) selector.style.display = "flex";
     }
 
     document.addEventListener("click", function (event) {

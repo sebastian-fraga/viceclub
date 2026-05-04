@@ -2417,25 +2417,16 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
     box-shadow: inset 0 0 10px rgba(250, 250, 250, 0.1);
     max-width: 950px;
     width: 100%;
-    border-radius: 0 17px 17px 0;
+    border-radius: 16px;
     padding: 1em 1.5em;
-    margin: 0 auto;
+    margin: 2em auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: stretch;
     position: relative;
     gap: 0.2em;
-
-    &::before {
-        content: "";
-        width: 3px;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        background-color: color-mix(in srgb, var(--accent-color) 90%, transparent);
-    }
 
     & h5 {
         text-align: start;
@@ -2494,7 +2485,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                 gap: 16px;
                 padding: 16px;
 
-                & .achievement-img {
+                & img {
                     width: 64px;
                     height: 64px;
                     object-fit: contain;
@@ -2506,14 +2497,14 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                     flex-direction: column;
                     align-items: start;
 
-                    & .achievement-name {
+                    & h3 {
                         margin: 0 0 4px 0;
                         font-size: 1.1rem;
                         color: #fff;
                         text-align: start;
                     }
 
-                    & .achievement-description {
+                    & p {
                         margin: 0;
                         text-align: start;
                         font-size: 0.9rem;
@@ -2527,7 +2518,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
                         margin-top: 12px;
                         margin-bottom: 4px;
 
-                        & .achievement-tag {
+                        & span {
                             font-size: 0.75rem;
                             padding: 0.4em 1.2em;
                             border-radius: 12px;
@@ -2543,7 +2534,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 .achievement-card-guide {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    & .achievement-toggle {
+    & button {
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -2570,7 +2561,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
         }
     }
 
-    & .achievement-guide-text {
+    & p {
         max-width: max-content !important;
         max-height: 0;
         opacity: 0;

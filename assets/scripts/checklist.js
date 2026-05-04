@@ -62,14 +62,14 @@ async function renderChecklistFromJSON() {
 
 function renderTabLayout(container, juego, tabs) {
     const tabBar = document.createElement("div");
-    tabBar.className = "checklist-tabs";
+    tabBar.className = "card-selector";
 
     tabs.forEach((tab, i) => {
         const btn = document.createElement("button");
         btn.className = "checklist-tab-btn" + (i === 0 ? " active" : "");
         btn.innerHTML = `
     <div class="tab-card">
-        <img src="/assets/images/checklist/IV/${tab.id}.webp" alt="${tab.label}">
+        <img src="/assets/images/main/card_${tab.id}.webp" alt="${tab.label}">
         <div class="tab-overlay"></div>
     </div>
 `;
