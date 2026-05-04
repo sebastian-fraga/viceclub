@@ -102,6 +102,7 @@ body {
     }
 }
 
+
 /* #endregion */
 
 /* #region FICHA TÉCNICA */
@@ -109,7 +110,118 @@ body {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
+.checklist-tabs {
+    display: flex;
+    gap: 12px;
+    margin-block: 20px 10px;
 
+    & button {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        flex: 1;
+        transition: all 0.2s ease-in-out;
+
+        & .tab-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 150px;
+            transition: 0.25s ease;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & .tab-overlay {
+                position: absolute;
+                inset: 0;
+                transition: 0.25s;
+            }
+        }
+
+        &:not(.active) {
+            opacity: 0.4;
+            filter: brightness(0.8);
+
+            &:hover {
+                opacity: 0.8;
+                filter: brightness(1);
+            }
+        }
+
+        &.active {
+            & .tab-card {
+                transform: scale(1.02);
+            }
+        }
+
+        &[data-game="iv"] {
+
+            & .tab-overlay {
+                background: linear-gradient(to top left, #000, transparent);
+            }
+
+            &.active {
+                & .tab-card {
+                    outline: 2px solid #fff;
+                }
+
+                & .tab-overlay {
+                    background: linear-gradient(to top, #bbbbbb46, transparent);
+                }
+            }
+        }
+
+        &[data-game="tlad"] {
+            & .tab-overlay {
+                background: linear-gradient(to top left, #000, transparent);
+            }
+
+            &.active {
+                & .tab-card {
+                    outline: 2px solid #f8746f;
+                }
+
+                & .tab-overlay {
+                    background: linear-gradient(to top, #f7242446, transparent);
+                }
+            }
+        }
+
+        &[data-game="tbogt"] {
+
+            & .tab-overlay {
+                background: linear-gradient(to top left, #000, transparent);
+            }
+
+            &.active {
+                & .tab-card {
+                    outline: 2px solid #f075e0;
+                }
+
+                & .tab-overlay {
+                    background: linear-gradient(to top, #f075e046, transparent);
+                }
+            }
+        }
+    }
+}
+
+.checklist-container[data-active-game="iv"] .progress-bar-fill {
+    background: linear-gradient(to right, var(--accent-color), var(--block-text));
+}
+
+.checklist-container[data-active-game="tlad"] .progress-bar-fill {
+    background: linear-gradient(to right, #B7352F, #e2645b);
+}
+
+.checklist-container[data-active-game="tbogt"] .progress-bar-fill {
+    background: linear-gradient(to right, #E8E887, #D06A92, #75C0DE);
+}
 
 /* #endregion */
 
@@ -276,6 +388,14 @@ details.mod summary img {
 
     #cheatsContainer {
         min-width: 250px;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    .checklist-tabs {
+        flex-direction: column;
     }
 }
 

@@ -910,12 +910,16 @@ body {
 
             & .mod-paragraph {
                 font-size: 1.3em;
-                margin: 3em auto 1.5em auto;
+                margin: 2em auto 1.5em auto;
                 max-width: 80ch;
                 text-wrap: balance;
                 text-align: center;
                 line-height: 1.8;
                 color: color-mix(in srgb, var(--block-text) 85%, transparent);
+
+                & b {
+                    color: var(--accent-color);
+                }
             }
         }
 
@@ -1795,10 +1799,11 @@ details[open]::details-content {
 .checklist-container {
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 1em;
     padding: 0.5em 1.5em 2em 1.5em;
 
     & article {
+        margin-bottom: 5px;
         &:is(.section-complete) {
             background: color-mix(in srgb, var(--accent-color) 25%, transparent);
             border-color: color-mix(in srgb, var(--accent-color) 60%, transparent);
@@ -1930,9 +1935,14 @@ details[open]::details-content {
                     border: 1px solid rgba(255, 255, 255, 0.08);
                     border-radius: 8px;
                     overflow: hidden;
+                    padding-left: 1em;
                     transition:
                         background 0.2s,
                         border-color 0.2s;
+                    
+                        &:last-of-type {
+                            margin-bottom: 10px;
+                        }
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.07);
@@ -2016,7 +2026,8 @@ details[open]::details-content {
                             gap: 2px;
 
                             & span {
-                                font-size: 1em;
+                                color: #d4d4d4;
+                                font-size: 0.9em;
                                 text-align: start;
                                 font-weight: 300;
                                 transition: opacity 0.2s;
@@ -2041,36 +2052,6 @@ details[open]::details-content {
 
 /* #region HERRAMIENTAS Y MODS */
 
-.mod-title-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-    margin-block: 3em 0;
-
-    &::before,
-    &::after {
-        content: "";
-        flex: 1;
-        height: 2px;
-        display: block;
-        background: linear-gradient(90deg,
-                transparent,
-                color-mix(in srgb, var(--block-text) 20%, transparent),
-                transparent);
-        width: 400px;
-    }
-
-    & h3 {
-        font-size: 1.5em;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        flex-shrink: 0;
-        white-space: nowrap;
-        color: var(--text-color);
-    }
-}
-
 .mods-container {
     display: flex;
     flex-direction: column;
@@ -2078,20 +2059,47 @@ details[open]::details-content {
     width: 100%;
     align-items: center;
     gap: 1.5em;
+    padding-bottom: 1em;
+
+    & .mod-group {
+        width: 90%;
+        max-width: 800px;
+        border-radius: 25px;
+        border: 1px solid color-mix(in srgb, var(--block-border) 45%, transparent);
+        overflow: hidden;
+        background: linear-gradient(135deg,
+                color-mix(in srgb, var(--block-border) 20%, transparent) 50%,
+                color-mix(in srgb, var(--accent-color) 15%, transparent) 95%);
+
+        & .mod-title-header {
+            margin-block: 0;
+            padding: 1em 1.5em;
+            border-bottom: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+
+            & h3 {
+                font-size: 1.5em;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                flex-shrink: 0;
+                white-space: nowrap;
+                color: var(--text-color);
+            }
+        }
+    }
 
     & details {
         display: flex;
         flex-direction: column;
         align-items: stretch;
-        border-radius: 25px;
         width: 100%;
-        max-width: 700px;
         min-height: 120px;
         contain: layout paint;
-        border: 1px solid color-mix(in srgb, var(--block-border) 45%, transparent);
-        background: linear-gradient(135deg,
-                color-mix(in srgb, var(--block-border) 20%, transparent) 50%,
-                color-mix(in srgb, var(--accent-color) 15%, transparent) 95%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
 
         & summary {
             display: grid;
@@ -2112,7 +2120,7 @@ details[open]::details-content {
 
             & .material-symbols-rounded.arrow {
                 position: absolute;
-                top: 15px;
+                top: 25px;
                 right: 25px;
                 color: #f3f3f3;
                 transition: all 0.15s ease-in-out;
@@ -2149,7 +2157,7 @@ details[open]::details-content {
         }
 
         &[open] {
-            border: 2px solid color-mix(in srgb, var(--block-border) 85%, transparent);
+            border-bottom: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
 
             & .material-symbols-rounded.arrow {
                 transform: rotate(180deg);

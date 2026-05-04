@@ -1,12 +1,40 @@
 const container = document.getElementById("modsContainer");
 const game = container.dataset.game;
 
+function mostrarSkeletons() {
+    const skeletonGroup = `
+        <div class="mod-group">
+            <div class="mod-title-header skeleton-text" style="border-bottom: none">
+                <div class="skeleton skeleton-title"></div>
+            </div>
+            ${Array(5)
+                .fill(
+                    `
+               <div class="skeleton-entry">
+                <div class="skeleton skeleton-date"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+            </div>
+            `,
+                )
+                .join("")}
+        </div>
+    `;
+    container.innerHTML = skeletonGroup + skeletonGroup;
+}
+
 const MODS_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${game}/mods/mods.json?t=${Date.now()}`;
 
 document.addEventListener("DOMContentLoaded", async () => {
+    mostrarSkeletons();
+
     try {
         const res = await fetch(MODS_URL);
         const data = await res.json();
+
+        container.innerHTML = "";
 
         renderMods(data.mods, "ESENCIALES");
         renderMods(data.recommended, "RECOMENDADOS");
@@ -16,6 +44,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function renderMods(mods, title) {
+    const group = document.createElement("article");
+    group.className = "mod-group";
+
     const heading = document.createElement("div");
     heading.className = "mod-title-header";
 
@@ -23,7 +54,7 @@ function renderMods(mods, title) {
     h3.textContent = title;
 
     heading.appendChild(h3);
-    container.appendChild(heading);
+    group.appendChild(heading);
 
     mods.forEach((mod) => {
         const details = document.createElement("details");
@@ -89,7 +120,7 @@ function renderMods(mods, title) {
 
         expanded.appendChild(nav);
 
-        const section = document.createElement("section");
+        const section = document.createElement("div");
         section.className = "mod-features";
 
         const authorDiv = document.createElement("div");
@@ -241,5 +272,9 @@ function renderMods(mods, title) {
                 });
             });
         });
+
+        group.appendChild(details);
     });
+
+    container.appendChild(group);
 }
