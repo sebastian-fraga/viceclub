@@ -374,121 +374,221 @@
             "id": "niko",
             "name": "Niko Bellic",
             "role": "Protagonista",
-            "image": "../assets/images/characters/IV/niko.webp"
+            "image": "../assets/images/characters/IV/niko.webp",
+            "age": 30,
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "The Cousins Bellic",
+            "quote": "En la guerra éramos jóvenes y estúpidos... nos engañaron para matarnos entre nosotros."
         },
         {
             "id": "roman",
             "name": "Roman Bellic",
             "role": "Primo de Niko",
-            "image": "../assets/images/characters/IV/roman.webp"
+            "image": "../assets/images/characters/IV/roman.webp",
+            "age": 31,
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "The Cousins Bellic",
+            "quote": "¿Te pones sentimental tras matar a la gente?"
         },
         {
             "id": "mallorie",
-            "name": "Mallorie",
+            "name": "Mallorie Bardas",
             "role": "Pareja de Roman",
-            "image": "../assets/images/characters/IV/mallorie.webp"
+            "image": "../assets/images/characters/IV/mallorie.webp",
+            "age": 29,
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "It's Your Call",
+            "quote": "Espero que no seas tan mentiroso como tu primo."
         },
         {
             "id": "vlad",
             "name": "Vlad Glebov",
             "role": "Prestamista, antagonista",
-            "image": "../assets/images/characters/IV/vlad.webp"
+            "image": "../assets/images/characters/IV/vlad.webp",
+            "age": 41,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "It's Your Call",
+            "quote": "Deberías perder algunos kilos... O esta hermosa dama te dejará."
         },
         {
             "id": "faustin",
             "name": "Mikhail Faustin",
             "role": "Jefe de la mafia rusa en Liberty City",
-            "image": "../assets/images/characters/IV/faustin.webp"
+            "image": "../assets/images/characters/IV/faustin.webp",
+            "age": 45,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Crime and Punishment",
+            "quote": "Que le den al dinero."
         },
         {
             "id": "dimitri",
             "name": "Dimitri Rascalov",
             "role": "Mano derecha de Faustin, antagonista",
-            "image": "../assets/images/characters/IV/dimitri.webp"
+            "image": "../assets/images/characters/IV/dimitri.webp",
+            "age": 39,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Crime and Punishment",
+            "quote": "Si hay algo que he aprendido, es que debes obedecer las reglas del juego. Podemos elegir el juego, Niko Bellic, pero no cambiar las reglas"
         },
         {
             "id": "jacob",
             "name": "Little Jacob",
             "role": "Miembro de la banda jamaiquina, amigo de Niko",
-            "image": "../assets/images/characters/IV/jacob.webp"
+            "image": "../assets/images/characters/IV/jacob.webp",
+            "age": 27,
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Jamaican Heat",
+            "quote": "El mundo te puede joder... hacerte creer que ciertas cosas valen cuando lo que importa es que amanezca, que te lo pases bien y te eches unas risas."
         },
         {
             "id": "brucie",
             "name": "Brucie Kibbutz",
             "role": "Amigo de Niko",
-            "image": "../assets/images/characters/IV/brucie.webp"
+            "image": "../assets/images/characters/IV/brucie.webp",
+            "age": 32,
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Logging On",
+            "quote": "Tío, eres frío. ¡Ni has pestañeado! Me encanta eso. ¡Me encanta!"
         },
         {
             "id": "elizabeta",
             "name": "Elizabeta Torres",
             "role": "Traficante de drogas en Liberty City",
-            "image": "../assets/images/characters/IV/elizabeta.webp"
+            "image": "../assets/images/characters/IV/elizabeta.webp",
+            "age": 31,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Luck of the Irish",
+            "quote": "Rodéate de cocaína y te saldrán capullos por todas partes... "
         },
         {
             "id": "packie",
             "name": "Patrick McReary",
             "role": "Miembro de la familia McReary, amigo de Niko",
-            "image": "../assets/images/characters/IV/packie.webp"
+            "image": "../assets/images/characters/IV/packie.webp",
+            "age": 29,
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Luck of the Irish",
+            "quote": "Hay riesgo de morir lenta y dolorosamente... y hablamos de mucho, mucho dinero"
         },
         {
             "id": "gerry",
             "name": "Gerald McReary",
             "role": "Miembro de la familia McReary",
-            "image": "../assets/images/characters/IV/gerry.webp"
+            "image": "../assets/images/characters/IV/gerry.webp",
+            "age": 35,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Three Leaf Clover",
+            "quote": "¿Divertido? Demasiado divertido... Ése siempre ha sido el problema de esta familia."
         },
         {
             "id": "derrick",
             "name": "Derrick McReary",
             "role": "Miembro de la familia McReary",
-            "image": "../assets/images/characters/IV/derrick.webp"
+            "image": "../assets/images/characters/IV/derrick.webp",
+            "age": 52,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Three Leaf Clover",
+            "quote": "Fui a una situación lleno de optimismo, lleno de ingenuidad... y me quemé. Mírame... quemado como heroína en una puta cuchara"
         },
         {
             "id": "francis",
             "name": "Francis McReary",
             "role": "Miembro de la familia McReary, policía corrupto",
-            "image": "../assets/images/characters/IV/francis.webp"
+            "image": "../assets/images/characters/IV/francis.webp",
+            "age": 48,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Street Sweeper",
+            "quote": "Si alguien dijera que eres un asesino inmigrante recién llegado con más pelotas que sesos... diría que tiene razón"
         },
         {
             "id": "playboy",
             "name": "Playboy X",
             "role": "Traficante de crack en Liberty City",
-            "image": "../assets/images/characters/IV/playboy.webp"
+            "image": "../assets/images/characters/IV/playboy.webp",
+            "age": 25,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Blow Your Cover",
+            "quote": "Ya me conoces, hago lo que hago para que luego pueda hacer el bien en esta ciudad"
         },
         {
             "id": "dwayne",
             "name": "Dwayne Forge",
             "role": "Socio de Playboy X, amigo de Niko",
-            "image": "../assets/images/characters/IV/dwayne.webp"
+            "image": "../assets/images/characters/IV/dwayne.webp",
+            "age": 35,
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Deconstruction for Beginners",
+            "quote": "A veces me dan ganas de acabar con todo. Simplemente... Buum. Pero todavía no he llegado a eso... Todavía no."
         },
         {
             "id": "bernie",
             "name": "Bernie Crane",
             "role": "Ex-compañero de Niko en la guerra",
-            "image": "../assets/images/characters/IV/bernie.webp"
+            "image": "../assets/images/characters/IV/bernie.webp",
+            "age": 30,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Weekend at Florian's",
+            "quote": "Vine a este país para ser yo... para alejarme de la ira de capullos machistas de mente estrecha..."
         },
         {
             "id": "darko",
             "name": "Darko Brevic",
             "role": "Ex-compañero de Niko en la guerra, antagonista",
-            "image": "../assets/images/characters/IV/darko.webp"
+            "image": "../assets/images/characters/IV/darko.webp",
+            "age": "?",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "That Special Someone",
+            "quote": "¿Cuánto cobras tú por matar a alguien?"
         },
         {
             "id": "ray",
             "name": "Ray Boccino",
             "role": "Capo de la Familia Pegorino",
-            "image": "../assets/images/characters/IV/ray.webp"
+            "image": "../assets/images/characters/IV/ray.webp",
+            "age": 32,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Harboring a Grudge",
+            "quote": "Esta ciudad se puede volver realmente aterradora si no tienes amigos. Recuérdalo"
         },
         {
             "id": "phil_iv",
             "name": "Phil Bell",
             "role": "Asociado de la Familia Pegorino",
-            "image": "../assets/images/characters/IV/phil.webp"
+            "image": "../assets/images/characters/IV/phil.webp",
+            "age": 41,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "No Way on the Subway",
+            "quote": "¿Qué te parece el béisbol, eh? Genial, tío, simplemente genial"
         },
         {
             "id": "pegorino",
             "name": "Jimmy Pegorino",
             "role": "Don de la Familia Pegorino, antagonista",
-            "image": "../assets/images/characters/IV/pegorino.webp"
+            "image": "../assets/images/characters/IV/pegorino.webp",
+            "age": 51,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Pegorino's Pride",
+            "quote": "Todo el mundo jode a todo el mundo."
         }
     ],
     "V": [

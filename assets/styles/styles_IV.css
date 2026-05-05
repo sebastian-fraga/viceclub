@@ -102,14 +102,6 @@ body {
     }
 }
 
-
-/* #endregion */
-
-/* #region FICHA TÉCNICA */
-
-/* #endregion */
-
-/* #region 100% CHECKLIST */
 .card-selector {
     display: flex;
     width: 95%;
@@ -130,7 +122,7 @@ body {
             border-radius: 12px;
             overflow: hidden;
             height: 150px;
-            transition: 0.25s ease;
+            transition: all 0.25s ease-in-out;
 
             & img {
                 width: 100%;
@@ -216,6 +208,13 @@ body {
     }
 }
 
+/* #endregion */
+
+/* #region FICHA TÉCNICA */
+
+/* #endregion */
+
+/* #region 100% CHECKLIST */
 .checklist-container[data-active-game="iv"] .progress-bar-fill {
     background: linear-gradient(to right, var(--accent-color), var(--block-text));
 }
@@ -351,8 +350,6 @@ details.mod summary img {
 .platform-selector {
     display: none;
 }
-
-
 
 /* #endregion */
 
