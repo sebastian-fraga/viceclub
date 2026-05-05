@@ -4,49 +4,89 @@
             "id": "claude",
             "name": "Claude",
             "role": "Protagonista",
-            "image": "../assets/images/characters/III/claude.webp"
+            "image": "../assets/images/characters/III/claude.webp",
+            "age": 29,
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Introducción",
+            "quote": "..."
         },
         {
             "id": "catalina",
             "name": "Catalina",
             "role": "Antagonista principal",
-            "image": "../assets/images/characters/III/catalina.webp"
+            "image": "../assets/images/characters/III/catalina.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Introducción",
+            "quote": "Perdón, cariño. Soy una chica ambiciosa ¿y tú?, eres tiempo perdido."
         },
         {
             "id": "8ball",
             "name": "8-Ball",
             "role": "Aliado de Claude",
-            "image": "../assets/images/characters/III/8ball.webp"
+            "image": "../assets/images/characters/III/8ball.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Dáme libertad",
+            "quote": "Mis manos están hechas un desastre así que será mejor que conduzcas tú, hermano."
         },
         {
             "id": "salvatore",
             "name": "Salvatore Leone",
             "role": "Don de la Familia Leone",
-            "image": "../assets/images/characters/III/salvatore.webp"
+            "image": "../assets/images/characters/III/salvatore.webp",
+            "age": 66,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Salvatore ha convocado una reunión",
+            "quote": "No veo más que cosas buenas para ti, hijo mío..."
         },
         {
             "id": "maria",
             "name": "María Latore",
             "role": "Esposa de Salvatore",
-            "image": "../assets/images/characters/III/maria.webp"
+            "image": "../assets/images/characters/III/maria.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Carabina",
+            "quote": "Creo que te amo..."
         },
         {
-            "id": "burro",
-            "name": "El Burro",
-            "role": "Jefe de los Diablos",
-            "image": "../assets/images/characters/III/burro.webp"
+            "id": "asuka",
+            "name": "Asuka Kasen",
+            "role": "Colíder de los Yakuza",
+            "image": "../assets/images/characters/III/asuka.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Últimos deseos",
+            "quote": "Eres un asesino eficaz. Eso me gusta en un hombre."
         },
         {
             "id": "ray",
             "name": "Ray Machowski",
             "role": "Policía corrupto",
-            "image": "../assets/images/characters/III/ray.webp"
+            "image": "../assets/images/characters/III/ray.webp",
+            "age": 43,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Día de paga para Ray",
+            "quote": "Ya sé lo que estás pensando, otro policía corrupto. Bueno, éste es un mundo corrupto."
         },
         {
             "id": "donald",
             "name": "Donald Love",
             "role": "Político y magnate",
-            "image": "../assets/images/characters/III/donald.webp"
+            "image": "../assets/images/characters/III/donald.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "El liberador",
+            "quote": "La experiencia me ha enseñado que un hombre como tú puede ser muy leal por el precio correcto, pero los grupos de hombres se hacen ambiciosos."
         }
     ],
     "VC": [
@@ -718,49 +758,83 @@
             "id": "jason",
             "name": "Jason Duval",
             "role": "Protagonista",
-            "image": "../assets/images/characters/VI/jason.webp"
+            "image": "../assets/images/characters/VI/jason.webp",
+            "age": "?",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "lucia",
             "name": "Lucia Caminos",
             "role": "Protagonista",
-            "image": "../assets/images/characters/VI/lucia.webp"
+            "image": "../assets/images/characters/VI/lucia.webp",
+            "age": "?",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "brian",
             "name": "Brian Heder",
             "role": "Traficante de drogas en Leonida",
-            "image": "../assets/images/characters/VI/brian.webp"
+            "image": "../assets/images/characters/VI/brian.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "cal",
             "name": "Cal Hampton",
             "role": "Amigo de Jason",
-            "image": "../assets/images/characters/VI/cal.webp"
+            "image": "../assets/images/characters/VI/cal.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "boobie",
             "name": "Boobie Ike",
             "role": "Productor musical, dueño del Jack of Hearts",
-            "image": "../assets/images/characters/VI/boobie.webp"
+            "image": "../assets/images/characters/VI/boobie.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "dre",
             "name": "Dre'Quan Priest",
             "role": "Artista musical",
-            "image": "../assets/images/characters/VI/dre.webp"
+            "image": "../assets/images/characters/VI/dre.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "dimez",
             "name": "Real Dimez",
             "role": "Dúo musical",
-            "image": "../assets/images/characters/VI/dimez.webp"
+            "image": "../assets/images/characters/VI/dimez.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         },
         {
             "id": "raul",
             "name": "Raul Bautista",
             "role": "Ladrón de bancos experimentado",
-            "image": "../assets/images/characters/VI/raul.webp"
+            "image": "../assets/images/characters/VI/raul.webp",
+            "age": "?",
+            "statusLabel": "?",
+            "firstAppearance": "?",
+            "quote": "?"
         }
     ]
 }
