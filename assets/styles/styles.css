@@ -3687,6 +3687,19 @@ body:has(.reset-dialog[open]) {
                 text-shadow: 2px 2px 3px #0000005e;
                 font-size: 1.7em;
                 color: #f2f2f2;
+                transition: all 0.15s ease;
+
+                &:active {
+                    filter: brightness(0.8);
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &[data-state="muted"] {
+                    opacity: 0.5;
+                }
             }
 
             & input[type="range"] {

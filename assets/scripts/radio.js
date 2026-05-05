@@ -122,7 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const hash = window.location.hash.slice(1);
             if (hash && hash.includes("@")) {
-                const [radioKey, time] = hash.split("@");
+                const parts = hash.split("@");
+                const radioKey = parts[0];
+
+                // ¿Tiene playlist? → #key@playlistIndex@time
+                const hasPlaylist = parts.length === 3;
+                const playlistIndex = hasPlaylist ? Number(parts[1]) : 0;
+                const time = hasPlaylist ? Number(parts[2]) : Number(parts[1]);
+
                 if (radioData[radioKey]) {
                     const card = [
                         ...document.querySelectorAll(".radio-card"),
@@ -132,7 +139,35 @@ document.addEventListener("DOMContentLoaded", function () {
                         audio.addEventListener(
                             "loadedmetadata",
                             () => {
-                                seekTo(Number(time));
+                                // Si hay playlists, seleccionar la correcta primero
+                                if (
+                                    hasPlaylist &&
+                                    radioData[radioKey].playlists
+                                ) {
+                                    const btn =
+                                        document.querySelectorAll(
+                                            ".playlist-btn",
+                                        )[playlistIndex];
+                                    if (btn) {
+                                        document
+                                            .querySelectorAll(".playlist-btn")
+                                            .forEach((b) =>
+                                                b.classList.remove("active"),
+                                            );
+                                        btn.classList.add("active");
+                                        updateRadioReproductor(
+                                            radioKey,
+                                            playlistIndex,
+                                        );
+                                    }
+                                    audio.addEventListener(
+                                        "loadedmetadata",
+                                        () => seekTo(time),
+                                        { once: true },
+                                    );
+                                } else {
+                                    seekTo(time);
+                                }
                             },
                             { once: true },
                         );
@@ -477,11 +512,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const songs = data?._activeSongs ?? data?.songs;
         if (!songs || !songs[index]) return;
 
-        history.replaceState(
-            null,
-            "",
-            `#${currentRadio}@${Math.floor(songs[index].start)}`,
-        );
+        const playlistIndex = data.playlists
+            ? [...document.querySelectorAll(".playlist-btn")].findIndex((b) =>
+                  b.classList.contains("active"),
+              )
+            : -1;
+
+        const hashSuffix =
+            playlistIndex !== -1
+                ? `@${playlistIndex}@${Math.floor(songs[index].start)}`
+                : `@${Math.floor(songs[index].start)}`;
+
+        history.replaceState(null, "", `#${currentRadio}${hashSuffix}`);
 
         const songTitleEl = document.getElementById("songTitle");
         const artistNameEl = document.getElementById("artistName");
@@ -811,9 +853,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function updateIcon(vol) {
-            if (vol == 0) volumeIcon.textContent = "volume_off";
-            else if (vol < 50) volumeIcon.textContent = "volume_down";
-            else volumeIcon.textContent = "volume_up";
+            if (vol == 0) {
+                volumeIcon.textContent = "volume_off";
+                volumeIcon.dataset.state = "muted";
+            } else if (vol < 50) {
+                volumeIcon.textContent = "volume_down";
+                volumeIcon.dataset.state = "low";
+            } else {
+                volumeIcon.textContent = "volume_up";
+                volumeIcon.dataset.state = "high";
+            }
         }
 
         function updateRange() {
