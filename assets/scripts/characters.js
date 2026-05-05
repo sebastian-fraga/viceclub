@@ -24,7 +24,25 @@ async function loadCharacters() {
                     </div>
                 </div>
                 <div class="card-back">
-                    <p class="char-name">${char.name}</p>
+                    <p class="char-name">
+                        ${char.name}
+                        <span class="char-flags">
+                        ${[]
+                            .concat(
+                                char.nationalities ?? char.nationality ?? [],
+                            )
+                            .filter(
+                                (code) =>
+                                    code && code.toLowerCase() !== "unknown",
+                            )
+                            .map(
+                                (code) =>
+                                    `<img class="char-flag" src="https://flagcdn.com/20x15/${code.toLowerCase()}.png" alt="${code}" />`,
+                            )
+                            .join("")}
+                        </span>
+                    </p>
+
                     <div class="back-row">
                         <span class="back-label">Estado</span>
                             <span class="back-value status-${char.status}">${char.statusLabel}</span>

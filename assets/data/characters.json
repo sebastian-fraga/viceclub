@@ -9,7 +9,8 @@
             "status": "main",
             "statusLabel": "Protagonista",
             "firstAppearance": "Introducción",
-            "quote": "..."
+            "quote": "...",
+            "nationalities": ["us"]
         },
         {
             "id": "catalina",
@@ -20,7 +21,8 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Introducción",
-            "quote": "Perdón, cariño. Soy una chica ambiciosa ¿y tú?, eres tiempo perdido."
+            "quote": "Perdón, cariño. Soy una chica ambiciosa ¿y tú?, eres tiempo perdido.",
+            "nationalities": ["co", "do"]
         },
         {
             "id": "8ball",
@@ -31,7 +33,8 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Dáme libertad",
-            "quote": "Mis manos están hechas un desastre así que será mejor que conduzcas tú, hermano."
+            "quote": "Mis manos están hechas un desastre así que será mejor que conduzcas tú, hermano.",
+            "nationalities": ["us"]
         },
         {
             "id": "salvatore",
@@ -42,7 +45,8 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Salvatore ha convocado una reunión",
-            "quote": "No veo más que cosas buenas para ti, hijo mío..."
+            "quote": "No veo más que cosas buenas para ti, hijo mío...",
+            "nationalities": ["it", "us"]
         },
         {
             "id": "maria",
@@ -53,7 +57,8 @@
             "status": "ally",
             "statusLabel": "Aliada",
             "firstAppearance": "Carabina",
-            "quote": "Creo que te amo..."
+            "quote": "Creo que te amo...",
+            "nationalities": ["us", "it"]
         },
         {
             "id": "asuka",
@@ -64,7 +69,8 @@
             "status": "ally",
             "statusLabel": "Aliada",
             "firstAppearance": "Últimos deseos",
-            "quote": "Eres un asesino eficaz. Eso me gusta en un hombre."
+            "quote": "Eres un asesino eficaz. Eso me gusta en un hombre.",
+            "nationalities": ["jp"]
         },
         {
             "id": "ray",
@@ -75,7 +81,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "Día de paga para Ray",
-            "quote": "Ya sé lo que estás pensando, otro policía corrupto. Bueno, éste es un mundo corrupto."
+            "quote": "Ya sé lo que estás pensando, otro policía corrupto. Bueno, éste es un mundo corrupto.",
+            "nationalities": ["us"]
         },
         {
             "id": "donald",
@@ -86,7 +93,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "El liberador",
-            "quote": "La experiencia me ha enseñado que un hombre como tú puede ser muy leal por el precio correcto, pero los grupos de hombres se hacen ambiciosos."
+            "quote": "La experiencia me ha enseñado que un hombre como tú puede ser muy leal por el precio correcto, pero los grupos de hombres se hacen ambiciosos.",
+            "nationalities": ["us"]
         }
     ],
     "VC": [
@@ -94,73 +102,110 @@
             "id": "tommy",
             "name": "Tommy Vercetti",
             "role": "Protagonista",
-            "image": "../assets/images/characters/VC/tommy.webp"
+            "image": "../assets/images/characters/VC/tommy.webp",
+            "age": "35",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Al principio...",
+            "quote": "Dumb Florida morons.",
+            "nationalities": ["us"]
         },
         {
             "id": "sonny",
             "name": "Sonny Forelli",
             "role": "Antagonista principal",
-            "image": "../assets/images/characters/VC/sonny.webp"
+            "image": "../assets/images/characters/VC/sonny.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Al principio...",
+            "quote": "Tommy Vercetti... Mierda. No pensé que le fueran a soltar nunca.",
+            "nationalities": ["it", "us"]
         },
         {
             "id": "ken",
             "name": "Ken Rosenberg",
             "role": "Abogado",
-            "image": "../assets/images/characters/VC/ken.webp"
+            "image": "../assets/images/characters/VC/ken.webp",
+            "age": 33,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Al principio...",
+            "quote": "¡Tommy Vercetti es un hombre inocente!",
+            "nationalities": ["us"]
         },
         {
             "id": "lance",
             "name": "Lance Vance",
             "role": "Mano derecha de Tommy",
-            "image": "../assets/images/characters/VC/lance.webp"
+            "image": "../assets/images/characters/VC/lance.webp",
+            "age": 32,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Al principio...",
+            "quote": "Tal y como yo lo veo... somos dos hombres en una ciudad extraña. Necesitamos cubrirnos las espaldas mutuamente.",
+            "nationalities": ["us", "do"]
         },
         {
             "id": "diaz",
             "name": "Ricardo Diaz",
             "role": "Narcotraficante en Vice City",
-            "image": "../assets/images/characters/VC/diaz.webp"
+            "image": "../assets/images/characters/VC/diaz.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "La fiesta",
+            "quote": "¿Estos haitianos creen que pueden enfrentarse a RICARDO DIAZ?",
+            "nationalities": ["cu"]
         },
         {
             "id": "cortez",
             "name": "Coronel Cortez",
             "role": "Jefe de la organización criminal Cortez",
-            "image": "../assets/images/characters/VC/cortez.webp"
+            "image": "../assets/images/characters/VC/cortez.webp",
+            "nationalities": ["unknown"]
         },
         {
             "id": "kent",
             "name": "Kent Paul",
             "role": "Informante en Vice City",
-            "image": "../assets/images/characters/VC/kent.webp"
+            "image": "../assets/images/characters/VC/kent.webp",
+            "nationalities": ["gb"]
         },
         {
             "id": "avery",
             "name": "Avery Carrington",
             "role": "Contratista",
-            "image": "../assets/images/characters/VC/avery.webp"
+            "image": "../assets/images/characters/VC/avery.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "poulet",
-            "name": "Avery Carrington",
-            "role": "Contratista",
-            "image": "../assets/images/characters/VC/poulet.webp"
+            "name": "Tía Poulet",
+            "role": "Líder de la banda haitiana",
+            "image": "../assets/images/characters/VC/poulet.webp",
+            "nationalities": ["ht"]
         },
         {
             "id": "umberto",
             "name": "Umberto Robina",
             "role": "Jefe de la banda cubana",
-            "image": "../assets/images/characters/VC/umberto.webp"
+            "image": "../assets/images/characters/VC/umberto.webp",
+            "nationalities": ["cu"]
         },
         {
             "id": "phil",
             "name": "Phil Cassidy",
             "role": "Traficante de armas",
-            "image": "../assets/images/characters/VC/phil.webp"
+            "image": "../assets/images/characters/VC/phil.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "mercedes",
             "name": "Mercedes",
             "role": "Hija del Coronel",
-            "image": "../assets/images/characters/VC/mercedes.webp"
+            "image": "../assets/images/characters/VC/mercedes.webp",
+            "nationalities": ["unknown"]
         }
     ],
     "SA": [
@@ -168,97 +213,113 @@
             "id": "cj",
             "name": "Carl Johnson",
             "role": "Protagonista",
-            "image": "../assets/images/characters/SA/cj.webp"
+            "image": "../assets/images/characters/SA/cj.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "sweet",
             "name": "Sweet Johnson",
             "role": "Líder de Grove Street Families",
-            "image": "../assets/images/characters/SA/sweet.webp"
+            "image": "../assets/images/characters/SA/sweet.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "smoke",
             "name": "Big Smoke",
             "role": "Miembro de Grove Street",
-            "image": "../assets/images/characters/SA/smoke.webp"
+            "image": "../assets/images/characters/SA/smoke.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "ryder",
             "name": "Ryder",
             "role": "Miembro de Grove Street",
-            "image": "../assets/images/characters/SA/ryder.webp"
+            "image": "../assets/images/characters/SA/ryder.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "ogloc",
             "name": "OG Loc",
             "role": "Miembro secundario de Grove Street",
-            "image": "../assets/images/characters/SA/ogloc.webp"
+            "image": "../assets/images/characters/SA/ogloc.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "kendl",
             "name": "Kendl Johnson",
             "role": "Hermana de CJ y Sweet",
-            "image": "../assets/images/characters/SA/kendl.webp"
+            "image": "../assets/images/characters/SA/kendl.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "cesar",
             "name": "Cesar Vialpando",
             "role": "Líder de Varrios Los Aztecas",
-            "image": "../assets/images/characters/SA/cesar.webp"
+            "image": "../assets/images/characters/SA/cesar.webp",
+            "nationalities": ["mx"]
         },
         {
             "id": "denise",
             "name": "Denise Robinson",
             "role": "Novia de CJ",
-            "image": "../assets/images/characters/SA/denise.webp"
+            "image": "../assets/images/characters/SA/denise.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "tenpenny",
             "name": "Frank Tenpenny",
             "role": "Antagonista principal",
-            "image": "../assets/images/characters/SA/tenpenny.webp"
+            "image": "../assets/images/characters/SA/tenpenny.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "pulaski",
             "name": "Eddie Pulaski",
             "role": "Antagonista secundario",
-            "image": "../assets/images/characters/SA/pulaski.webp"
+            "image": "../assets/images/characters/SA/pulaski.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "truth",
             "name": "The Truth",
             "role": "Hippie conspiranóico",
-            "image": "../assets/images/characters/SA/truth.webp"
+            "image": "../assets/images/characters/SA/truth.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "woozie",
             "name": "Wu Zi Mu",
             "role": "Líder de las Tríadas",
-            "image": "../assets/images/characters/SA/woozie.webp"
+            "image": "../assets/images/characters/SA/woozie.webp",
+            "nationalities": ["cn"]
         },
         {
             "id": "jizzy",
             "name": "Jizzy B",
             "role": "Miembro del Loco Syndicate",
-            "image": "../assets/images/characters/SA/jizzy.webp"
+            "image": "../assets/images/characters/SA/jizzy.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "tbone",
             "name": "T-Bone Méndez",
             "role": "Miembro del Loco Syndicate",
-            "image": "../assets/images/characters/SA/tbone.webp"
+            "image": "../assets/images/characters/SA/tbone.webp",
+            "nationalities": ["mx"]
         },
         {
             "id": "toreno",
             "name": "Mike Toreno",
             "role": "Ex-miembro del Loco Syndicate, agente del gobierno",
-            "image": "../assets/images/characters/SA/toreno.webp"
+            "image": "../assets/images/characters/SA/toreno.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "madddogg",
             "name": "Madd Dogg",
             "role": "Artista musical",
-            "image": "../assets/images/characters/SA/madddogg.webp"
+            "image": "../assets/images/characters/SA/madddogg.webp",
+            "nationalities": ["us"]
         }
     ],
     "LCS": [
@@ -266,73 +327,85 @@
             "id": "toni",
             "name": "Toni Cipriani",
             "role": "Protagonista",
-            "image": "../assets/images/characters/LCS/toni.webp"
+            "image": "../assets/images/characters/LCS/toni.webp",
+            "nationalities": ["us", "it"]
         },
         {
             "id": "salvatore_lcs",
             "name": "Salvatore Leone",
             "role": "Don de la Familia Leone",
-            "image": "../assets/images/characters/LCS/salvatore.webp"
+            "image": "../assets/images/characters/LCS/salvatore.webp",
+            "nationalities": ["it"]
         },
         {
             "id": "vincenzo",
             "name": "Vincenzo",
             "role": "Miembro de la Familia Leone",
-            "image": "../assets/images/characters/LCS/vincenzo.webp"
+            "image": "../assets/images/characters/LCS/vincenzo.webp",
+            "nationalities": ["us", "it"]
         },
         {
             "id": "jd",
             "name": "JD O'Toole",
             "role": "Asociado de la Familia Sindacco",
-            "image": "../assets/images/characters/LCS/jd.webp"
+            "image": "../assets/images/characters/LCS/jd.webp",
+            "nationalities": ["us", "ie"]
         },
         {
             "id": "torini",
             "name": "Massimo Torini",
             "role": "Alto rango de la Mafia Siciliana, antagonista",
-            "image": "../assets/images/characters/LCS/torini.webp"
+            "image": "../assets/images/characters/LCS/torini.webp",
+            "nationalities": ["it"]
         },
         {
             "id": "maria",
             "name": "Maria Latore",
             "role": "Esposa de Salvatore",
-            "image": "../assets/images/characters/LCS/maria.webp"
+            "image": "../assets/images/characters/LCS/maria.webp",
+            "nationalities": ["us", "it"]
         },
         {
             "id": "donald_lcs",
             "name": "Donald Love",
             "role": "Empresario, candidato a alcalde de Liberty City",
-            "image": "../assets/images/characters/LCS/donald.webp"
+            "image": "../assets/images/characters/LCS/donald.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "paulie",
             "name": "Paulie Sindacco",
             "role": "Don de la Familia Sindacco",
-            "image": "../assets/images/characters/LCS/paulie.webp"
+            "image": "../assets/images/characters/LCS/paulie.webp",
+            "nationalities": ["us", "it"]
         },
         {
             "id": "leon",
             "name": "Leon McAffrey",
             "role": "Policía corrupto",
-            "image": "../assets/images/characters/LCS/leon.webp"
+            "image": "../assets/images/characters/LCS/leon.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "ned",
             "name": "Ned Burner",
             "role": "Periodista del Liberty Tree",
-            "image": "../assets/images/characters/LCS/ned.webp"
+            "image": "../assets/images/characters/LCS/ned.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "kazuki",
             "name": "Kazuki Kasen",
             "role": "Waka-Gashira de los Yakuza",
-            "image": "../assets/images/characters/LCS/kazuki.webp"
+            "image": "../assets/images/characters/LCS/kazuki.webp",
+            "nationalities": ["jp"]
         },
         {
             "id": "toshiko",
             "name": "Toshiko Kasen",
             "role": "Esposa de Kazuki Kasen",
-            "image": "../assets/images/characters/LCS/toshiko.webp"
+            "image": "../assets/images/characters/LCS/toshiko.webp",
+            "nationalities": ["jp"]
         }
     ],
     "VCS": [
@@ -340,73 +413,85 @@
             "id": "victor",
             "name": "Victor Vance",
             "role": "Protagonista",
-            "image": "../assets/images/characters/VCS/victor.webp"
+            "image": "../assets/images/characters/VCS/victor.webp",
+            "nationalities": ["do", "us"]
         },
         {
             "id": "martinez",
             "name": "Sargento Martinez",
             "role": "Antagonista principal",
-            "image": "../assets/images/characters/VCS/martinez.webp"
+            "image": "../assets/images/characters/VCS/martinez.webp",
+            "nationalities": ["mx", "us"]
         },
         {
             "id": "phil_vcs",
             "name": "Phil Cassidy",
             "role": "Traficante de armas, amigo de Vic",
-            "image": "../assets/images/characters/VCS/phil.webp"
+            "image": "../assets/images/characters/VCS/phil.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "louise",
             "name": "Louise Cassidy-Williams",
             "role": "Hermana de Phil",
-            "image": "../assets/images/characters/VCS/louise.webp"
+            "image": "../assets/images/characters/VCS/louise.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "lance_vcs",
             "name": "Lance Vance",
             "role": "Hermano de Vic",
-            "image": "../assets/images/characters/VCS/lance.webp"
+            "image": "../assets/images/characters/VCS/lance.webp",
+            "nationalities": ["us", "do"]
         },
         {
             "id": "umberto_vcs",
             "name": "Umberto Robina",
             "role": "Líder de los cubanos (Cabrones)",
-            "image": "../assets/images/characters/VCS/umberto.webp"
+            "image": "../assets/images/characters/VCS/umberto.webp",
+            "nationalities": ["cu"]
         },
         {
             "id": "bryan",
             "name": "Bryan Forbes",
             "role": "Agente encubierto",
-            "image": "../assets/images/characters/VCS/bryan.webp"
+            "image": "../assets/images/characters/VCS/bryan.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "mendez",
             "name": "Hermanos Mendez",
             "role": "Traficantes de drogas en Vice City",
-            "image": "../assets/images/characters/VCS/mendez.webp"
+            "image": "../assets/images/characters/VCS/mendez.webp",
+            "nationalities": ["bo"]
         },
         {
             "id": "reni",
             "name": "Reni Wassulmaier",
             "role": "Directora de cine",
-            "image": "../assets/images/characters/VCS/reni.webp"
+            "image": "../assets/images/characters/VCS/reni.webp",
+            "nationalities": ["de"]
         },
         {
             "id": "gonzalez",
             "name": "Gonzalez",
             "role": "Mano derecha del Coronel Cortez",
-            "image": "../assets/images/characters/VCS/gonzalez.webp"
+            "image": "../assets/images/characters/VCS/gonzalez.webp",
+            "nationalities": ["co"]
         },
         {
             "id": "diaz_vcs",
             "name": "Ricardo Diaz",
             "role": "Traficante de drogas colombiano",
-            "image": "../assets/images/characters/VCS/diaz.webp"
+            "image": "../assets/images/characters/VCS/diaz.webp",
+            "nationalities": ["cu"]
         },
         {
             "id": "collins",
             "name": "Phil Collins",
             "role": "Artista musical",
-            "image": "../assets/images/characters/VCS/collins.webp"
+            "image": "../assets/images/characters/VCS/collins.webp",
+            "nationalities": ["gb"]
         }
     ],
     "IV": [
@@ -419,7 +504,8 @@
             "status": "main",
             "statusLabel": "Protagonista",
             "firstAppearance": "The Cousins Bellic",
-            "quote": "En la guerra éramos jóvenes y estúpidos... nos engañaron para matarnos entre nosotros."
+            "quote": "En la guerra éramos jóvenes y estúpidos... nos engañaron para matarnos entre nosotros.",
+            "nationalities": ["rs"]
         },
         {
             "id": "roman",
@@ -430,7 +516,8 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "The Cousins Bellic",
-            "quote": "¿Te pones sentimental tras matar a la gente?"
+            "quote": "¿Te pones sentimental tras matar a la gente?",
+            "nationalities": ["rs"]
         },
         {
             "id": "mallorie",
@@ -441,7 +528,8 @@
             "status": "ally",
             "statusLabel": "Aliada",
             "firstAppearance": "It's Your Call",
-            "quote": "Espero que no seas tan mentiroso como tu primo."
+            "quote": "Espero que no seas tan mentiroso como tu primo.",
+            "nationalities": ["us", "pr"]
         },
         {
             "id": "vlad",
@@ -452,7 +540,8 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "It's Your Call",
-            "quote": "Deberías perder algunos kilos... O esta hermosa dama te dejará."
+            "quote": "Deberías perder algunos kilos... O esta hermosa dama te dejará.",
+            "nationalities": ["ru"]
         },
         {
             "id": "faustin",
@@ -463,7 +552,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "Crime and Punishment",
-            "quote": "Que le den al dinero."
+            "quote": "Que le den al dinero.",
+            "nationalities": ["ru"]
         },
         {
             "id": "dimitri",
@@ -474,7 +564,8 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Crime and Punishment",
-            "quote": "Si hay algo que he aprendido, es que debes obedecer las reglas del juego. Podemos elegir el juego, Niko Bellic, pero no cambiar las reglas"
+            "quote": "Si hay algo que he aprendido, es que debes obedecer las reglas del juego. Podemos elegir el juego, Niko Bellic, pero no cambiar las reglas",
+            "nationalities": ["ru"]
         },
         {
             "id": "jacob",
@@ -485,7 +576,8 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Jamaican Heat",
-            "quote": "El mundo te puede joder... hacerte creer que ciertas cosas valen cuando lo que importa es que amanezca, que te lo pases bien y te eches unas risas."
+            "quote": "El mundo te puede joder... hacerte creer que ciertas cosas valen cuando lo que importa es que amanezca, que te lo pases bien y te eches unas risas.",
+            "nationalities": ["jm"]
         },
         {
             "id": "brucie",
@@ -496,7 +588,8 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Logging On",
-            "quote": "Tío, eres frío. ¡Ni has pestañeado! Me encanta eso. ¡Me encanta!"
+            "quote": "Tío, eres frío. ¡Ni has pestañeado! Me encanta eso. ¡Me encanta!",
+            "nationalities": ["us", "il"]
         },
         {
             "id": "elizabeta",
@@ -507,7 +600,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "Luck of the Irish",
-            "quote": "Rodéate de cocaína y te saldrán capullos por todas partes... "
+            "quote": "Rodéate de cocaína y te saldrán capullos por todas partes... ",
+            "nationalities": ["pr"]
         },
         {
             "id": "packie",
@@ -518,7 +612,8 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Luck of the Irish",
-            "quote": "Hay riesgo de morir lenta y dolorosamente... y hablamos de mucho, mucho dinero"
+            "quote": "Hay riesgo de morir lenta y dolorosamente... y hablamos de mucho, mucho dinero",
+            "nationalities": ["ie"]
         },
         {
             "id": "gerry",
@@ -529,7 +624,8 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Three Leaf Clover",
-            "quote": "¿Divertido? Demasiado divertido... Ése siempre ha sido el problema de esta familia."
+            "quote": "¿Divertido? Demasiado divertido... Ése siempre ha sido el problema de esta familia.",
+            "nationalities": ["ie"]
         },
         {
             "id": "derrick",
@@ -540,7 +636,8 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Three Leaf Clover",
-            "quote": "Fui a una situación lleno de optimismo, lleno de ingenuidad... y me quemé. Mírame... quemado como heroína en una puta cuchara"
+            "quote": "Fui a una situación lleno de optimismo, lleno de ingenuidad... y me quemé. Mírame... quemado como heroína en una puta cuchara",
+            "nationalities": ["ie"]
         },
         {
             "id": "francis",
@@ -551,7 +648,8 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Street Sweeper",
-            "quote": "Si alguien dijera que eres un asesino inmigrante recién llegado con más pelotas que sesos... diría que tiene razón"
+            "quote": "Si alguien dijera que eres un asesino inmigrante recién llegado con más pelotas que sesos... diría que tiene razón",
+            "nationalities": ["ie"]
         },
         {
             "id": "playboy",
@@ -562,7 +660,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "Blow Your Cover",
-            "quote": "Ya me conoces, hago lo que hago para que luego pueda hacer el bien en esta ciudad"
+            "quote": "Ya me conoces, hago lo que hago para que luego pueda hacer el bien en esta ciudad",
+            "nationalities": ["us"]
         },
         {
             "id": "dwayne",
@@ -573,7 +672,8 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Deconstruction for Beginners",
-            "quote": "A veces me dan ganas de acabar con todo. Simplemente... Buum. Pero todavía no he llegado a eso... Todavía no."
+            "quote": "A veces me dan ganas de acabar con todo. Simplemente... Buum. Pero todavía no he llegado a eso... Todavía no.",
+            "nationalities": ["us"]
         },
         {
             "id": "bernie",
@@ -584,18 +684,20 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Weekend at Florian's",
-            "quote": "Vine a este país para ser yo... para alejarme de la ira de capullos machistas de mente estrecha..."
+            "quote": "Vine a este país para ser yo... para alejarme de la ira de capullos machistas de mente estrecha...",
+            "nationalities": ["rs"]
         },
         {
             "id": "darko",
             "name": "Darko Brevic",
             "role": "Ex-compañero de Niko en la guerra, antagonista",
             "image": "../assets/images/characters/IV/darko.webp",
-            "age": "?",
+            "age": "Desconocida",
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "That Special Someone",
-            "quote": "¿Cuánto cobras tú por matar a alguien?"
+            "quote": "¿Cuánto cobras tú por matar a alguien?",
+            "nationalities": ["rs"]
         },
         {
             "id": "ray",
@@ -606,7 +708,8 @@
             "status": "neutral",
             "statusLabel": "Neutral",
             "firstAppearance": "Harboring a Grudge",
-            "quote": "Esta ciudad se puede volver realmente aterradora si no tienes amigos. Recuérdalo"
+            "quote": "Esta ciudad se puede volver realmente aterradora si no tienes amigos. Recuérdalo",
+            "nationalities": ["it", "us"]
         },
         {
             "id": "phil_iv",
@@ -617,7 +720,8 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "No Way on the Subway",
-            "quote": "¿Qué te parece el béisbol, eh? Genial, tío, simplemente genial"
+            "quote": "¿Qué te parece el béisbol, eh? Genial, tío, simplemente genial",
+            "nationalities": ["ie", "it", "us"]
         },
         {
             "id": "pegorino",
@@ -628,7 +732,8 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Pegorino's Pride",
-            "quote": "Todo el mundo jode a todo el mundo."
+            "quote": "Todo el mundo jode a todo el mundo.",
+            "nationalities": ["it", "us"]
         }
     ],
     "V": [
@@ -636,121 +741,141 @@
             "id": "michael",
             "name": "Michael de Santa",
             "role": "Protagonista",
-            "image": "../assets/images/characters/V/michael.webp"
+            "image": "../assets/images/characters/V/michael.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "franklin",
             "name": "Franklin Clinton",
             "role": "Protagonista",
-            "image": "../assets/images/characters/V/franklin.webp"
+            "image": "../assets/images/characters/V/franklin.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "trevor",
             "name": "Trevor Philips",
             "role": "Protagonista",
-            "image": "../assets/images/characters/V/trevor.webp"
+            "image": "../assets/images/characters/V/trevor.webp",
+            "nationalities": ["ca"]
         },
         {
             "id": "lester",
             "name": "Lester Crest",
             "role": "Viejo amigo de Michael y Trevor",
-            "image": "../assets/images/characters/V/lester.webp"
+            "image": "../assets/images/characters/V/lester.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "brad",
             "name": "Brad Snider",
             "role": "Viejo amigo de Michael y Trevor",
-            "image": "../assets/images/characters/V/brad.webp"
+            "image": "../assets/images/characters/V/brad.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "lamar",
             "name": "Lamar Davis",
             "role": "Amigo de Franklin, miembro de Grove Street Families",
-            "image": "../assets/images/characters/V/lamar.webp"
+            "image": "../assets/images/characters/V/lamar.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "dave",
             "name": "Dave Norton",
             "role": "Agente del FIB, amigo de Michael",
-            "image": "../assets/images/characters/V/dave.webp"
+            "image": "../assets/images/characters/V/dave.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "steve",
             "name": "Steve Haines",
             "role": "Agente corrupto del FIB",
-            "image": "../assets/images/characters/V/steve.webp"
+            "image": "../assets/images/characters/V/steve.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "devin",
             "name": "Devin Weston",
             "role": "Empresario multimillonario, antagonista",
-            "image": "../assets/images/characters/V/devin.webp"
+            "image": "../assets/images/characters/V/devin.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "stretch",
             "name": "Stretch",
             "role": "Miembro de Grove Street Families, antagonista",
-            "image": "../assets/images/characters/V/stretch.webp"
+            "image": "../assets/images/characters/V/stretch.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "wei",
             "name": "Wei Cheng",
             "role": "Líder de las Tríadas, antagonista",
-            "image": "../assets/images/characters/V/wei.webp"
+            "image": "../assets/images/characters/V/wei.webp",
+            "nationalities": ["cn"]
         },
         {
             "id": "amanda",
             "name": "Amanda de Santa",
             "role": "Esposa de Michael",
-            "image": "../assets/images/characters/V/amanda.webp"
+            "image": "../assets/images/characters/V/amanda.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "jimmy",
             "name": "Jimmy de Santa",
             "role": "Hijo de Michael",
-            "image": "../assets/images/characters/V/jimmy.webp"
+            "image": "../assets/images/characters/V/jimmy.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "tracey",
             "name": "Tracey de Santa",
             "role": "Hija de Michael",
-            "image": "../assets/images/characters/V/tracey.webp"
+            "image": "../assets/images/characters/V/tracey.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "martin",
             "name": "Martin Madrazo",
             "role": "Jefe del Cártel de Madrazo",
-            "image": "../assets/images/characters/V/martin.webp"
+            "image": "../assets/images/characters/V/martin.webp",
+            "nationalities": ["mx"]
         },
         {
             "id": "patricia",
             "name": "Patricia Madrazo",
             "role": "Esposa de Martin Madrazo",
-            "image": "../assets/images/characters/V/patricia.webp"
+            "image": "../assets/images/characters/V/patricia.webp",
+            "nationalities": ["mx"]
         },
         {
             "id": "ron",
             "name": "Ron Jakowski",
             "role": "Amigo y socio de Trevor",
-            "image": "../assets/images/characters/V/ron.webp"
+            "image": "../assets/images/characters/V/ron.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "wade",
             "name": "Wade Hebert",
             "role": "Amigo de Trevor",
-            "image": "../assets/images/characters/V/wade.webp"
+            "image": "../assets/images/characters/V/wade.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "solomon",
             "name": "Solomon Richards",
             "role": "Productor de películas en Vinewood",
-            "image": "../assets/images/characters/V/solomon.webp"
+            "image": "../assets/images/characters/V/solomon.webp",
+            "nationalities": ["us"]
         },
         {
             "id": "molly",
             "name": "Molly Schultz",
             "role": "Asistente de Devin Weston",
-            "image": "../assets/images/characters/V/molly.webp"
+            "image": "../assets/images/characters/V/molly.webp",
+            "nationalities": ["al", "il"]
         }
     ],
     "VI": [

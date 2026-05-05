@@ -1066,6 +1066,9 @@ body {
                             gap: 12px;
 
                             & p {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
                                 margin: 0;
                                 font-size: 18px;
                                 font-weight: 600;
@@ -1073,6 +1076,19 @@ body {
                                 border-bottom: 1px solid rgba(200, 160, 255, 0.25);
                                 padding-bottom: 8px;
                                 margin-bottom: 2px;
+
+                                & .char-flags {
+                                    display: flex;
+                                    gap: 4px;
+                                    align-items: center;
+
+
+                                    & img {
+                                        width: 20px;
+                                        height: auto;
+                                        object-fit: cover;
+                                    }
+                                }
                             }
 
                             & .back-row {
@@ -4692,6 +4708,7 @@ body:has(.reset-dialog[open]) {
         width: 100%;
         gap: 0.9em;
     }
+
     .progress-count {
         text-align: start;
     }
