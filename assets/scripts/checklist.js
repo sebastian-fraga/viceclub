@@ -34,6 +34,7 @@ async function renderChecklistFromJSON() {
     }
 
     showSkeleton(container);
+    debugger
 
     const rutaJSON =
         "https://viceclub.s3.us-east-1.amazonaws.com/" +

@@ -34,19 +34,14 @@
 }
 
 body {
-    &::before {
-        background-image: url("../images/main/background_LCS.webp");
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-image: url("../images/main/background_LCS.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
+    @media (min-width: 768px) {
         background-attachment: fixed;
-        transform: scale(1.1);
-        z-index: -1;
     }
 
     &::after {
@@ -132,8 +127,6 @@ body {
     display: none;
 }
 
-
-
 /* #endregion */
 
 /* #region MEDIA QUERIES  */
@@ -141,9 +134,8 @@ body {
 @media (max-width: 1350px) {
 
     body {
-        &::before {
-            background-image: url("../images/main/background_LCS-mobile.webp");
-        }
+        background-image: url("../images/main/background_LCS-mobile.webp");
+
     }
 }
 

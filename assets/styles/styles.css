@@ -46,6 +46,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     display: flex;
     flex-direction: column;
+    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
         width: 6px;
@@ -63,19 +64,14 @@ body {
     &.index {
         flex: 1;
         overflow: hidden;
+        background-image: url("../images/main/background.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
 
-        &::before {
-            background-image: url("../images/main/background.webp");
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
+        @media (min-width: 768px) {
             background-attachment: fixed;
-            z-index: -1;
         }
 
         &::after {
@@ -888,6 +884,11 @@ body {
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         align-items: flex-start;
+        transform: translateZ(0);
+        isolation: isolate;
+        contain: layout style;
+        content-visibility: auto;
+        contain-intrinsic-size: 0 500px;
 
         & .text-container {
             min-width: 0 !important;
@@ -1850,11 +1851,10 @@ details[open]::details-content {
 
 .progress-wrapper {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     gap: 12px;
     margin: 16px 0 24px;
-    padding: 0.5em 1.5em 0 1.5em;
-    flex-wrap: wrap;
 
     & .progress-label {
         display: flex;
@@ -4242,6 +4242,7 @@ body:has(.reset-dialog[open]) {
 
 .checklist-skeleton {
     margin-top: 2em;
+    padding: 0;
 }
 
 .achievement-skeleton {
@@ -4407,9 +4408,8 @@ body:has(.reset-dialog[open]) {
 
     body {
         &.index {
-            &::before {
-                background-image: url("../images/main/background-mobile.webp");
-            }
+            background-image: url("../images/main/background-mobile.webp");
+
 
             & .block {
                 box-shadow: 0px -60px 10px #00cc9c71;
@@ -4689,7 +4689,11 @@ body:has(.reset-dialog[open]) {
     }
 
     .checklist-container {
+        width: 100%;
         gap: 0.9em;
+    }
+    .progress-count {
+        text-align: start;
     }
 
     /* #endregion */
