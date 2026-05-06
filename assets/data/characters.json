@@ -103,7 +103,7 @@
             "name": "Tommy Vercetti",
             "role": "Protagonista",
             "image": "../assets/images/characters/VC/tommy.webp",
-            "age": "35",
+            "age": 35,
             "status": "main",
             "statusLabel": "Protagonista",
             "firstAppearance": "Al principio...",
@@ -163,6 +163,11 @@
             "name": "Coronel Cortez",
             "role": "Jefe de la organización criminal Cortez",
             "image": "../assets/images/characters/VC/cortez.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "La fiesta",
+            "quote": "",
             "nationalities": ["unknown"]
         },
         {
@@ -170,6 +175,11 @@
             "name": "Kent Paul",
             "role": "Informante en Vice City",
             "image": "../assets/images/characters/VC/kent.webp",
+            "age": 21,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "La fiesta",
+            "quote": "",
             "nationalities": ["gb"]
         },
         {
@@ -177,6 +187,11 @@
             "name": "Avery Carrington",
             "role": "Contratista",
             "image": "../assets/images/characters/VC/avery.webp",
+            "age": 51,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "La fiesta",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -184,6 +199,11 @@
             "name": "Tía Poulet",
             "role": "Líder de la banda haitiana",
             "image": "../assets/images/characters/VC/poulet.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Poción mágica",
+            "quote": "",
             "nationalities": ["ht"]
         },
         {
@@ -191,6 +211,11 @@
             "name": "Umberto Robina",
             "role": "Jefe de la banda cubana",
             "image": "../assets/images/characters/VC/umberto.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "El desafío del barco trucado",
+            "quote": "",
             "nationalities": ["cu"]
         },
         {
@@ -198,6 +223,11 @@
             "name": "Phil Cassidy",
             "role": "Traficante de armas",
             "image": "../assets/images/characters/VC/phil.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "El tirador",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -205,6 +235,11 @@
             "name": "Mercedes",
             "role": "Hija del Coronel",
             "image": "../assets/images/characters/VC/mercedes.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "La fiesta",
+            "quote": "",
             "nationalities": ["unknown"]
         }
     ],
@@ -214,6 +249,11 @@
             "name": "Carl Johnson",
             "role": "Protagonista",
             "image": "../assets/images/characters/SA/cj.webp",
+            "age": "Desconocida",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "In the Beginning",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -221,6 +261,11 @@
             "name": "Sweet Johnson",
             "role": "Líder de Grove Street Families",
             "image": "../assets/images/characters/SA/sweet.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Sweet & Kendl",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -228,6 +273,11 @@
             "name": "Big Smoke",
             "role": "Miembro de Grove Street",
             "image": "../assets/images/characters/SA/smoke.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Big Smoke",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -235,6 +285,11 @@
             "name": "Ryder",
             "role": "Miembro de Grove Street",
             "image": "../assets/images/characters/SA/ryder.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Sweet & Kendl",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -242,6 +297,11 @@
             "name": "OG Loc",
             "role": "Miembro secundario de Grove Street",
             "image": "../assets/images/characters/SA/ogloc.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "OG Loc",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -249,6 +309,11 @@
             "name": "Kendl Johnson",
             "role": "Hermana de CJ y Sweet",
             "image": "../assets/images/characters/SA/kendl.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Sweet & Kendl",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -256,6 +321,11 @@
             "name": "Cesar Vialpando",
             "role": "Líder de Varrios Los Aztecas",
             "image": "../assets/images/characters/SA/cesar.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Cesar Vialpando",
+            "quote": "",
             "nationalities": ["mx"]
         },
         {
@@ -263,6 +333,11 @@
             "name": "Denise Robinson",
             "role": "Novia de CJ",
             "image": "../assets/images/characters/SA/denise.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Pareja",
+            "firstAppearance": "Burning Desire",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -270,6 +345,11 @@
             "name": "Frank Tenpenny",
             "role": "Antagonista principal",
             "image": "../assets/images/characters/SA/tenpenny.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "In the Beginning",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -277,13 +357,23 @@
             "name": "Eddie Pulaski",
             "role": "Antagonista secundario",
             "image": "../assets/images/characters/SA/pulaski.webp",
-            "nationalities": ["us"]
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "In the Beginning",
+            "quote": "",
+            "nationalities": ["us", "pl"]
         },
         {
             "id": "truth",
             "name": "The Truth",
             "role": "Hippie conspiranóico",
             "image": "../assets/images/characters/SA/truth.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Body Harvest",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -291,13 +381,23 @@
             "name": "Wu Zi Mu",
             "role": "Líder de las Tríadas",
             "image": "../assets/images/characters/SA/woozie.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Wu Zi Mu",
+            "quote": "",
             "nationalities": ["cn"]
         },
         {
             "id": "jizzy",
-            "name": "Jizzy B",
+            "name": "Jizzy B.",
             "role": "Miembro del Loco Syndicate",
             "image": "../assets/images/characters/SA/jizzy.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Photo Opportunity",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -305,6 +405,11 @@
             "name": "T-Bone Méndez",
             "role": "Miembro del Loco Syndicate",
             "image": "../assets/images/characters/SA/tbone.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Photo Opportunity",
+            "quote": "",
             "nationalities": ["mx"]
         },
         {
@@ -312,6 +417,11 @@
             "name": "Mike Toreno",
             "role": "Ex-miembro del Loco Syndicate, agente del gobierno",
             "image": "../assets/images/characters/SA/toreno.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Photo Opportunity",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -319,6 +429,11 @@
             "name": "Madd Dogg",
             "role": "Artista musical",
             "image": "../assets/images/characters/SA/madddogg.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Madd Dogg",
+            "quote": "",
             "nationalities": ["us"]
         }
     ],
@@ -328,6 +443,10 @@
             "name": "Toni Cipriani",
             "role": "Protagonista",
             "image": "../assets/images/characters/LCS/toni.webp",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Introduction",
+            "quote": "",
             "nationalities": ["us", "it"]
         },
         {
@@ -335,6 +454,11 @@
             "name": "Salvatore Leone",
             "role": "Don de la Familia Leone",
             "image": "../assets/images/characters/LCS/salvatore.webp",
+            "age": 63,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Introduction",
+            "quote": "",
             "nationalities": ["it"]
         },
         {
@@ -342,6 +466,11 @@
             "name": "Vincenzo",
             "role": "Miembro de la Familia Leone",
             "image": "../assets/images/characters/LCS/vincenzo.webp",
+            "age": 38,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Introduction",
+            "quote": "",
             "nationalities": ["us", "it"]
         },
         {
@@ -349,6 +478,11 @@
             "name": "JD O'Toole",
             "role": "Asociado de la Familia Sindacco",
             "image": "../assets/images/characters/LCS/jd.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Bone Voyeur!",
+            "quote": "",
             "nationalities": ["us", "ie"]
         },
         {
@@ -356,6 +490,11 @@
             "name": "Massimo Torini",
             "role": "Alto rango de la Mafia Siciliana, antagonista",
             "image": "../assets/images/characters/LCS/torini.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Calm Before the Storm",
+            "quote": "",
             "nationalities": ["it"]
         },
         {
@@ -363,6 +502,11 @@
             "name": "Maria Latore",
             "role": "Esposa de Salvatore",
             "image": "../assets/images/characters/LCS/maria.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Ho Selecta!",
+            "quote": "",
             "nationalities": ["us", "it"]
         },
         {
@@ -370,6 +514,11 @@
             "name": "Donald Love",
             "role": "Empresario, candidato a alcalde de Liberty City",
             "image": "../assets/images/characters/LCS/donald.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "The Morgue Party Candidate",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -377,6 +526,11 @@
             "name": "Paulie Sindacco",
             "role": "Don de la Familia Sindacco",
             "image": "../assets/images/characters/LCS/paulie.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Taking the Peace",
+            "quote": "",
             "nationalities": ["us", "it"]
         },
         {
@@ -384,6 +538,11 @@
             "name": "Leon McAffrey",
             "role": "Policía corrupto",
             "image": "../assets/images/characters/LCS/leon.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Sayonara Sindaccos",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -391,20 +550,35 @@
             "name": "Ned Burner",
             "role": "Periodista del Liberty Tree",
             "image": "../assets/images/characters/LCS/ned.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "L.C. Confidential",
+            "quote": "",
             "nationalities": ["us"]
-        },
-        {
-            "id": "kazuki",
-            "name": "Kazuki Kasen",
-            "role": "Waka-Gashira de los Yakuza",
-            "image": "../assets/images/characters/LCS/kazuki.webp",
-            "nationalities": ["jp"]
         },
         {
             "id": "toshiko",
             "name": "Toshiko Kasen",
             "role": "Esposa de Kazuki Kasen",
             "image": "../assets/images/characters/LCS/toshiko.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "More Deadly Than the Male",
+            "quote": "",
+            "nationalities": ["jp"]
+        },
+        {
+            "id": "kazuki",
+            "name": "Kazuki Kasen",
+            "role": "Waka-Gashira de los Yakuza",
+            "image": "../assets/images/characters/LCS/kazuki.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Cash in Kazuki's Chips",
+            "quote": "",
             "nationalities": ["jp"]
         }
     ],
@@ -414,6 +588,11 @@
             "name": "Victor Vance",
             "role": "Protagonista",
             "image": "../assets/images/characters/VCS/victor.webp",
+            "age": 28,
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Soldado",
+            "quote": "",
             "nationalities": ["do", "us"]
         },
         {
@@ -421,6 +600,11 @@
             "name": "Sargento Martinez",
             "role": "Antagonista principal",
             "image": "../assets/images/characters/VCS/martinez.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Soldado",
+            "quote": "",
             "nationalities": ["mx", "us"]
         },
         {
@@ -428,6 +612,11 @@
             "name": "Phil Cassidy",
             "role": "Traficante de armas, amigo de Vic",
             "image": "../assets/images/characters/VCS/phil.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Limpiando la casa",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -435,6 +624,11 @@
             "name": "Louise Cassidy-Williams",
             "role": "Hermana de Phil",
             "image": "../assets/images/characters/VCS/louise.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Paliza",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -442,6 +636,11 @@
             "name": "Lance Vance",
             "role": "Hermano de Vic",
             "image": "../assets/images/characters/VCS/lance.webp",
+            "age": 30,
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Baile sobre ruedas",
+            "quote": "",
             "nationalities": ["us", "do"]
         },
         {
@@ -449,13 +648,23 @@
             "name": "Umberto Robina",
             "role": "Líder de los cubanos (Cabrones)",
             "image": "../assets/images/characters/VCS/umberto.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Bonito paquete",
+            "quote": "",
             "nationalities": ["cu"]
         },
         {
             "id": "bryan",
             "name": "Bryan Forbes",
-            "role": "Agente encubierto",
+            "role": "Agente encubierto de la DEA",
             "image": "../assets/images/characters/VCS/bryan.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Dinero gratis",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -463,6 +672,11 @@
             "name": "Hermanos Mendez",
             "role": "Traficantes de drogas en Vice City",
             "image": "../assets/images/characters/VCS/mendez.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonistas",
+            "firstAppearance": "Mira al pajarito",
+            "quote": "",
             "nationalities": ["bo"]
         },
         {
@@ -470,6 +684,11 @@
             "name": "Reni Wassulmaier",
             "role": "Directora de cine",
             "image": "../assets/images/characters/VCS/reni.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Rodando en coche",
+            "quote": "",
             "nationalities": ["de"]
         },
         {
@@ -477,6 +696,11 @@
             "name": "Gonzalez",
             "role": "Mano derecha del Coronel Cortez",
             "image": "../assets/images/characters/VCS/gonzalez.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "La coca del \"Colonel\"",
+            "quote": "",
             "nationalities": ["co"]
         },
         {
@@ -484,6 +708,11 @@
             "name": "Ricardo Diaz",
             "role": "Traficante de drogas colombiano",
             "image": "../assets/images/characters/VCS/diaz.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Mete cizaña",
+            "quote": "",
             "nationalities": ["cu"]
         },
         {
@@ -491,6 +720,11 @@
             "name": "Phil Collins",
             "role": "Artista musical",
             "image": "../assets/images/characters/VCS/collins.webp",
+            "age": 33,
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Kill Phil",
+            "quote": "",
             "nationalities": ["gb"]
         }
     ],
@@ -742,6 +976,11 @@
             "name": "Michael de Santa",
             "role": "Protagonista",
             "image": "../assets/images/characters/V/michael.webp",
+            "age": 45,
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Prólogo",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -749,6 +988,11 @@
             "name": "Franklin Clinton",
             "role": "Protagonista",
             "image": "../assets/images/characters/V/franklin.webp",
+            "age": 25,
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Franklin y Lamar",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -756,6 +1000,11 @@
             "name": "Trevor Philips",
             "role": "Protagonista",
             "image": "../assets/images/characters/V/trevor.webp",
+            "age": "Desconocida",
+            "status": "main",
+            "statusLabel": "Protagonista",
+            "firstAppearance": "Prólogo",
+            "quote": "",
             "nationalities": ["ca"]
         },
         {
@@ -763,6 +1012,11 @@
             "name": "Lester Crest",
             "role": "Viejo amigo de Michael y Trevor",
             "image": "../assets/images/characters/V/lester.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Solicitud de amistad",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -770,6 +1024,11 @@
             "name": "Brad Snider",
             "role": "Viejo amigo de Michael y Trevor",
             "image": "../assets/images/characters/V/brad.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Prólogo",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -777,6 +1036,11 @@
             "name": "Lamar Davis",
             "role": "Amigo de Franklin, miembro de Grove Street Families",
             "image": "../assets/images/characters/V/lamar.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Franklin y Lamar",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -784,6 +1048,11 @@
             "name": "Dave Norton",
             "role": "Agente del FIB, amigo de Michael",
             "image": "../assets/images/characters/V/dave.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Prólogo",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -791,6 +1060,11 @@
             "name": "Steve Haines",
             "role": "Agente corrupto del FIB",
             "image": "../assets/images/characters/V/steve.webp",
+            "age": 38,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Tres son multitud",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -798,6 +1072,11 @@
             "name": "Devin Weston",
             "role": "Empresario multimillonario, antagonista",
             "image": "../assets/images/characters/V/devin.webp",
+            "age": 51,
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "De libro",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -805,6 +1084,11 @@
             "name": "Stretch",
             "role": "Miembro de Grove Street Families, antagonista",
             "image": "../assets/images/characters/V/stretch.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Stretch el largo",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -812,6 +1096,11 @@
             "name": "Wei Cheng",
             "role": "Líder de las Tríadas, antagonista",
             "image": "../assets/images/characters/V/wei.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Carne fresca",
+            "quote": "",
             "nationalities": ["cn"]
         },
         {
@@ -819,6 +1108,11 @@
             "name": "Amanda de Santa",
             "role": "Esposa de Michael",
             "image": "../assets/images/characters/V/amanda.webp",
+            "age": 43,
+            "status": "ally",
+            "statusLabel": "Pareja",
+            "firstAppearance": "Prólogo",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -826,6 +1120,11 @@
             "name": "Jimmy de Santa",
             "role": "Hijo de Michael",
             "image": "../assets/images/characters/V/jimmy.webp",
+            "age": 20,
+            "status": "ally",
+            "statusLabel": "Familia",
+            "firstAppearance": "Franklin y Lamar",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -833,6 +1132,11 @@
             "name": "Tracey de Santa",
             "role": "Hija de Michael",
             "image": "../assets/images/characters/V/tracey.webp",
+            "age": 22,
+            "status": "ally",
+            "statusLabel": "Familia",
+            "firstAppearance": "Complicaciones",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -840,6 +1144,11 @@
             "name": "Martin Madrazo",
             "role": "Jefe del Cártel de Madrazo",
             "image": "../assets/images/characters/V/martin.webp",
+            "age": "Desconocida",
+            "status": "neutral",
+            "statusLabel": "Neutral",
+            "firstAppearance": "Asesoramiento matrimonial",
+            "quote": "",
             "nationalities": ["mx"]
         },
         {
@@ -847,6 +1156,11 @@
             "name": "Patricia Madrazo",
             "role": "Esposa de Martin Madrazo",
             "image": "../assets/images/characters/V/patricia.webp",
+            "age": 57,
+            "status": "ally",
+            "statusLabel": "Aliada",
+            "firstAppearance": "Caída libre",
+            "quote": "",
             "nationalities": ["mx"]
         },
         {
@@ -854,6 +1168,11 @@
             "name": "Ron Jakowski",
             "role": "Amigo y socio de Trevor",
             "image": "../assets/images/characters/V/ron.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Sr. Philips",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -861,6 +1180,11 @@
             "name": "Wade Hebert",
             "role": "Amigo de Trevor",
             "image": "../assets/images/characters/V/wade.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Amigo",
+            "firstAppearance": "Sr. Philips",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -868,6 +1192,11 @@
             "name": "Solomon Richards",
             "role": "Productor de películas en Vinewood",
             "image": "../assets/images/characters/V/solomon.webp",
+            "age": "Desconocida",
+            "status": "ally",
+            "statusLabel": "Aliado",
+            "firstAppearance": "Sr. Richards",
+            "quote": "",
             "nationalities": ["us"]
         },
         {
@@ -875,6 +1204,11 @@
             "name": "Molly Schultz",
             "role": "Asistente de Devin Weston",
             "image": "../assets/images/characters/V/molly.webp",
+            "age": "Desconocida",
+            "status": "enemy",
+            "statusLabel": "Antagonista",
+            "firstAppearance": "Me enfrenté a la ley...",
+            "quote": "",
             "nationalities": ["al", "il"]
         }
     ],
