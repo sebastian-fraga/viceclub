@@ -5195,26 +5195,13 @@ body:has(.reset-dialog[open]) {
     /* #endregion */
 
     /* #region TRUCOS */
-    .platform-selector {
-        margin: 2em auto;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        flex-wrap: wrap;
-        width: 70%;
-        max-width: 300px;
-        gap: 0.8em;
 
-        & button {
-            display: flex;
-            justify-content: start;
-            height: 45px;
-            border-radius: 15px;
-        }
+    .platform-selector {
+        gap: 0.2em;
     }
 
+
     .cheats-search {
-        width: fit-content;
 
         & .tooltip {
             max-width: 350px;
@@ -5229,8 +5216,11 @@ body:has(.reset-dialog[open]) {
 
             max-width: 95%;
 
-            & h3 {
-                font-size: 1.7em;
+            .category-header {
+                & h3 {
+                    font-size: 1.5em;
+                    padding: 0.5em 0.9em 0.1em 0.9em;
+                }
             }
 
             & .category-list {
@@ -5249,6 +5239,15 @@ body:has(.reset-dialog[open]) {
                         flex-wrap: wrap;
                         justify-content: center;
                         max-width: 50ch;
+                    }
+
+                    & .cheat-note {
+                        justify-content: center;
+
+                        & .cheat-note-text {
+                            padding-left: 10px;
+                            text-align: start;
+                        }
                     }
                 }
             }
