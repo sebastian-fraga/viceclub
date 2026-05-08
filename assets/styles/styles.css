@@ -878,7 +878,7 @@ body {
         grid-template-columns: 1fr minmax(0, auto);
         justify-content: center;
         margin: 6em clamp(1rem, 6vw, 8rem) 1em;
-        border-radius: 30px;
+        border-radius: 20px;
         position: relative;
         z-index: 1000;
         backdrop-filter: blur(12px);
@@ -3278,7 +3278,7 @@ body:has(.reset-dialog[open]) {
     margin: 2em clamp(1rem, 6vw, 8rem) 1em;
     padding: 15px;
     color: #f2f2f2;
-    border-radius: 30px;
+    border-radius: 20px;
     z-index: 3;
     transition:
         transform 0.5s ease,
@@ -3746,58 +3746,228 @@ body:has(.reset-dialog[open]) {
 
 /* #region TRUCOS */
 .platform-selector {
-    margin: 2em auto 1em auto;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 0.7em;
-    background: rgba(250, 250, 250, 0.05);
-    border: 1px solid rgba(250, 250, 250, 0.1);
-    border-radius: 15px;
-    padding: 1em 1.5em;
-    width: max-content;
+    align-items: flex-start;
+    gap: 1.5em;
+    margin: 30px auto;
 
-    & button {
+
+    & .platform-family {
+        position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 10px;
-        font-size: 1em;
-        padding: 6px 15px;
-        border-radius: 12px;
-        border: none;
-        font-weight: 600;
-        transition: all 0.2s ease-out;
+        justify-content: center;
 
-        &:hover {
-            background: color-mix(in srgb, var(--block-border) 30%, transparent);
-            outline: 1px solid color-mix(in srgb, var(--block-border) 20%, transparent);
+        & button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            min-height: 40px;
+            height: 140px;
+            border: none;
+            background: none;
+            padding: 0;
+            border-radius: 12px;
             color: var(--block-text);
+            margin-block: 1em 0.5em;
+            outline: 1px solid;
+            opacity: 0.45;
+            transition: all 0.2s ease-in-out;
 
-            & img {
-                filter: invert(1);
+            &[data-family="ps"],
+            &[data-platform^="ps"] {
+                --platform-color: #4A6DAE;
+                --platform-glow: rgba(112, 167, 245, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(2, 37, 87, 0.4), rgba(75, 148, 250, 0.35));
+
+            }
+
+            &[data-family="xbox"],
+            &[data-platform^="xbox"] {
+                --platform-color: #8AB957;
+                --platform-glow: rgba(75, 250, 127, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(2, 87, 40, 0.4), rgba(75, 250, 127, 0.35));
+
+            }
+
+            &[data-family="switch"] {
+                --platform-color: #C92D26;
+                --platform-glow: rgba(250, 75, 75, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(87, 2, 2, 0.4), rgba(250, 75, 75, 0.35));
+
+            }
+
+            &[data-family="pc"] {
+                --platform-color: #9e9e9e;
+                --platform-glow: rgba(224, 224, 224, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(40, 40, 50, 0.4), rgba(200, 200, 220, 0.35));
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &.active {
+                scale: 1.03;
+                opacity: 1;
+                outline-width: 3px;
+                box-shadow: 0 0 25px 10px var(--platform-glow);
+
+                & img {
+                    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+                }
+
+                & span {
+                    font-size: 1.4em;
+                    font-weight: 800;
+                }
+            }
+
+            & .platform-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                border-radius: 12px;
+                transition: all 0.25s ease-in-out;
+
+                & img {
+                    width: 72px;
+                    height: 72px;
+                    object-fit: contain;
+                }
+
+                & span {
+                    font-size: 1.3em;
+                    font-family: "GTAArtDecoRegular";
+                }
             }
         }
 
-        &.active {
-            background: color-mix(in srgb, var(--block-border) 60%, transparent);
-            outline: 1px solid color-mix(in srgb, var(--block-border) 80%, transparent);
-            color: var(--block-text);
+        & .platform-subconsoles {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.2s ease;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
 
-            & img {
-                filter: invert(1);
+
+            &.visible {
+                grid-template-rows: 1fr;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &[data-count="2"] {
+                & .subconsoles-inner {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            &[data-count="3"] {
+                & .subconsoles-inner {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            & .subconsoles-inner {
+                display: grid;
+                gap: 15px;
+                padding-top: 6px;
+                min-height: 0;
+
+                & button {
+                    max-height: 64px;
+                    width: auto;
+                    min-width: 0;
+                    outline: 1px solid var(--platform-color);
+                    opacity: 0.3;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    border-radius: 8px;
+
+
+                    &:is(.active) {
+                        opacity: 1;
+                        outline-width: 2px;
+
+                    }
+
+                    &:hover:not(.active) {
+                        opacity: 0.7;
+                    }
+
+                    & img {
+                        max-width: 64px;
+                        max-height: 64px;
+                    }
+
+                    &[data-definitive] {
+                        position: relative;
+                        padding-right: 15px;
+
+                        &::after {
+                            content: "DE";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 9px;
+                            font-size: 0.75em;
+                            opacity: 0.9;
+                            color: gold;
+                            line-height: 1;
+                            font-family: "GTAArtDecoMedium";
+                            transition: all 0.15s;
+                        }
+
+                        &:hover {
+                            &::before {
+                                content: "Edición Definitiva";
+                                font-family: "GTAArtDecoRegular";
+                                position: absolute;
+                                bottom: calc(100% + 7px);
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: #000;
+                                color: gold;
+                                font-size: 0.9em;
+                                padding: 4px 8px;
+                                border-radius: 5px;
+                                white-space: nowrap;
+                                border: 1px solid gold;
+                                z-index: 10;
+                                pointer-events: none;
+                            }
+
+                            &::after {
+                                text-shadow: 0 0 1px gold;
+                                scale: 1.1;
+                            }
+                        }
+                    }
+                }
+
             }
         }
 
-        & img {
-            width: 25px;
-        }
     }
+
 }
+
 
 .cheats-search {
     position: relative;
     max-width: 80%;
-    margin: 1em auto;
+    margin: 1em auto 0.25em auto;
 
 
     & #searchInput {
@@ -3903,9 +4073,8 @@ body:has(.reset-dialog[open]) {
             text-transform: uppercase;
             margin: 0 auto 10px auto;
             color: color-mix(in srgb, var(--block-text) 70%, var(--accent-color));
-            letter-spacing: 1px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 5px 12px;
+            padding: 12px 18px;
         }
 
         & .tooltip-text {
@@ -4040,6 +4209,33 @@ body:has(.reset-dialog[open]) {
                     font-weight: 100;
                 }
 
+                & .cheat-note {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3em;
+                    padding: 0.4em 0 0.2em 1.2em;
+
+                    & .cheat-note-icon {
+                        font-variation-settings: 'FILL' 1;
+                        font-size: 0.95em;
+                        vertical-align: middle;
+                        line-height: 1;
+                    }
+
+                    &.cheat-note--info .cheat-note-icon {
+                        color: #5b9bd5;
+                    }
+
+                    &.cheat-note--warning .cheat-note-icon {
+                        color: #f0a500;
+                    }
+
+                    & .cheat-note-text {
+                        color: color-mix(in srgb, var(--block-border) 25%, #fff);
+                        font-size: 0.8em;
+                    }
+                }
+
                 & .cheat-code {
                     display: flex;
                     flex-wrap: wrap;
@@ -4054,7 +4250,7 @@ body:has(.reset-dialog[open]) {
                     & .pc-code {
                         display: inline-block;
                         padding: 4px 12px;
-                        font-size: 1.1rem;
+                        font-size: 0.95em;
                         font-weight: 600;
                         letter-spacing: 1.5px;
                         background: linear-gradient(180deg, #ffffff, #e0e0e0);
@@ -4064,7 +4260,7 @@ body:has(.reset-dialog[open]) {
                         box-shadow:
                             0 3px 0 #888,
                             0 5px 8px rgba(0, 0, 0, 0.3);
-                        font-family: monospace;
+                        font-family: "Verdana";
                         transition: all 0.15s;
 
 

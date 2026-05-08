@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 29" width="134" height="29">
+	<defs>
+		<image  width="18" height="22" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAWAQMAAAD3kV4CAAAAAXNSR0IB2cksfwAAAAZQTFRF////Ojo6n5u08wAAAAJ0Uk5T/wDltzBKAAAAUUlEQVR4nGPkf8/ECMLs35kYmX8zMTL+hWCGf0yMHGVNYMxjdIiRT+ARIx/DJ0b+/0BcXsXIv9mOkX+jAyP/RQVG/ocCjPwvOSD4LQvjf4aDAO9KF9fB7+XaAAAAAElFTkSuQmCC"/>
+		<image  width="20" height="22" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWAQMAAAD6jy5FAAAAAXNSR0IB2cksfwAAAAZQTFRFOjo6////dD8D9AAAAAJ0Uk5TAP9bkSK1AAAASklEQVR4nGNk/87EyP+BkdH+QCOj3cmdjDXtdxl/cN5n/CDwgfGBAgwXoOEPYPkPAg8YKzrvA/XsZbS/sJFR/kEjI/97JkbmrxwAFIAjR7oB2TAAAAAASUVORK5CYII="/>
+		<image  width="15" height="21" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAVAQMAAACjVSb0AAAAAXNSR0IB2cksfwAAAAZQTFRF////Ojo6n5u08wAAAAJ0Uk5T/wDltzBKAAAAGklEQVR4nGNkYGCEIPn76IiBCYowpUCyIF0AfVoNAn6LRgMAAAAASUVORK5CYII="/>
+		<image  width="20" height="22" id="img4" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWAQMAAAD6jy5FAAAAAXNSR0IB2cksfwAAAAZQTFRFEHwQ////yjTHFwAAAAJ0Uk5TAP9bkSK1AAAATUlEQVR4nGOs6LzPWNN+l9Hm+F5GuZeVjPwMHxn5JyQysk9PYmT+ycLI+J0DjBk+CIBpkBj7dyawPEit/IdCsD6QfpBZPzjfMzIwMAAA48obp6vPGgkAAAAASUVORK5CYII="/>
+		<image  width="21" height="22" id="img5" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWAQMAAAAVTUV7AAAAAXNSR0IB2cksfwAAAAZQTFRFEHwQ////yjTHFwAAAAJ0Uk5TAP9bkSK1AAAAQElEQVR4nGPk/8DIyP/hIBA/ZOT7fJ+R79MHIC6A4g9gsfqGh4z/GUD4I5D/HipXAcVQdT9fgs3g/9DIyMDAAABcliPnnKMChQAAAABJRU5ErkJggg=="/>
+		<image  width="20" height="22" id="img6" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWAQMAAAD6jy5FAAAAAXNSR0IB2cksfwAAAAZQTFRFEHwQ////yjTHFwAAAAJ0Uk5TAP9bkSK1AAAAPElEQVR4nGNk/87EyP+BkVH+QSOj3cmdjDXtdxkrOu8zfhD4AMYPFAqwYpg8SC1Ij/2FjWAzQGYxfucAAOyQIneHGzdVAAAAAElFTkSuQmCC"/>
+		<image  width="20" height="21" id="img7" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVAQMAAAB8G1zrAAAAAXNSR0IB2cksfwAAAAZQTFRFEHwQ////yjTHFwAAAAJ0Uk5TAP9bkSK1AAAASUlEQVR4nGOs6LzPWNN+l9Hm+F5GuZeVjPwMHxn5JyQysk9PYmT+ycLI+J0DjBk+CIBpkBj7dyawPEit/IdCsD6QfpBZPzjfAwB1Lhum/71ZzQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="polygon8" href="#img1" x="98" y="4"/>
+	<use id="path10-1" href="#img2" x="77" y="4"/>
+	<use id="polygon12" href="#img3" x="118" y="4"/>
+	<use id="polygon14" href="#img4" x="54" y="4"/>
+	<use id="path16-7" href="#img5" x="16" y="4"/>
+	<use id="path18" href="#img6" x="37" y="4"/>
+	<use id="polygon20" href="#img7" x="0" y="4"/>
+</svg>

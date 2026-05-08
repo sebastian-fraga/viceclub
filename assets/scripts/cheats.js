@@ -1,12 +1,54 @@
 const PLATFORM_STORAGE_KEY = "viceclub_selected_platform";
-let currentPlatform = localStorage.getItem(PLATFORM_STORAGE_KEY) || "ps";
 
-let cheats = [];
-
-const juegos = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
+const FAMILY_NAMES = {
+    ps: "PlayStation",
+    xbox: "Xbox",
+    switch: "Nintendo Switch",
+    pc: "PC",
+};
 
 const BUTTON_ICONS = {
-    ps: {
+    ps2: {
+        R1: { icon: "R1.webp", bg: "#1b2a5585" },
+        R2: { icon: "R2.webp", bg: "#1b2a5585" },
+        L1: { icon: "L1.webp", bg: "#1b2a5585" },
+        L2: { icon: "L2.webp", bg: "#1b2a5585" },
+        UP: { icon: "UP.webp", bg: "#1b2a5585" },
+        DOWN: { icon: "DOWN.webp", bg: "#1b2a5585" },
+        LEFT: { icon: "LEFT.webp", bg: "#1b2a5585" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#1b2a5585" },
+        CIRCLE: { icon: "CIRCLE.webp", bg: "#1b2a5585" },
+        CROSS: { icon: "CROSS.webp", bg: "#1b2a5585" },
+        SQUARE: { icon: "SQUARE.webp", bg: "#1b2a5585" },
+        TRIANGLE: { icon: "TRIANGLE.webp", bg: "#1b2a5585" },
+    },
+    psp: {
+        R: { icon: "R.webp", bg: "#1b2a5585" },
+        L: { icon: "L.webp", bg: "#1b2a5585" },
+        UP: { icon: "UP.webp", bg: "#1b2a5585" },
+        DOWN: { icon: "DOWN.webp", bg: "#1b2a5585" },
+        LEFT: { icon: "LEFT.webp", bg: "#1b2a5585" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#1b2a5585" },
+        CIRCLE: { icon: "CIRCLE.webp", bg: "#1b2a5585" },
+        CROSS: { icon: "CROSS.webp", bg: "#1b2a5585" },
+        SQUARE: { icon: "SQUARE.webp", bg: "#1b2a5585" },
+        TRIANGLE: { icon: "TRIANGLE.webp", bg: "#1b2a5585" },
+    },
+    ps3: {
+        R1: { icon: "R1.webp", bg: "#1b2a5585" },
+        R2: { icon: "R2.webp", bg: "#1b2a5585" },
+        L1: { icon: "L1.webp", bg: "#1b2a5585" },
+        L2: { icon: "L2.webp", bg: "#1b2a5585" },
+        UP: { icon: "UP.webp", bg: "#1b2a5585" },
+        DOWN: { icon: "DOWN.webp", bg: "#1b2a5585" },
+        LEFT: { icon: "LEFT.webp", bg: "#1b2a5585" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#1b2a5585" },
+        CIRCLE: { icon: "CIRCLE.webp", bg: "#1b2a5585" },
+        CROSS: { icon: "CROSS.webp", bg: "#1b2a5585" },
+        SQUARE: { icon: "SQUARE.webp", bg: "#1b2a5585" },
+        TRIANGLE: { icon: "TRIANGLE.webp", bg: "#1b2a5585" },
+    },
+    ps4: {
         R1: { icon: "R1.webp", bg: "#1b2a5585" },
         R2: { icon: "R2.webp", bg: "#1b2a5585" },
         L1: { icon: "L1.webp", bg: "#1b2a5585" },
@@ -21,6 +63,20 @@ const BUTTON_ICONS = {
         TRIANGLE: { icon: "TRIANGLE.webp", bg: "#1b2a5585" },
     },
     xbox: {
+        BLACK: { icon: "BLACK.webp", bg: "#204723c4" },
+        RT: { icon: "RT.webp", bg: "#204723c4" },
+        WHITE: { icon: "WHITE.webp", bg: "#204723c4" },
+        LT: { icon: "LT.webp", bg: "#204723c4" },
+        UP: { icon: "UP.webp", bg: "#204723c4" },
+        DOWN: { icon: "DOWN.webp", bg: "#204723c4" },
+        LEFT: { icon: "LEFT.webp", bg: "#204723c4" },
+        RIGHT: { icon: "RIGHT.webp", bg: "#204723c4" },
+        A: { icon: "A.webp", bg: "#204723c4" },
+        B: { icon: "B.webp", bg: "#204723c4" },
+        X: { icon: "X.webp", bg: "#204723c4" },
+        Y: { icon: "Y.webp", bg: "#204723c4" },
+    },
+    xboxone: {
         RB: { icon: "RB.webp", bg: "#204723c4" },
         RT: { icon: "RT.webp", bg: "#204723c4" },
         LB: { icon: "LB.webp", bg: "#204723c4" },
@@ -49,6 +105,66 @@ const BUTTON_ICONS = {
         Y: { icon: "Y.webp", bg: "#463636c4" },
     },
 };
+
+const PLATFORM_FAMILIES = {
+    ps2: {
+        family: "ps",
+        name: "PS2",
+        icon: "ps2.svg",
+        familyIcon: "playstation.svg",
+    },
+    psp: {
+        family: "ps",
+        name: "PSP",
+        icon: "psp.svg",
+        familyIcon: "playstation.svg",
+    },
+    ps3: {
+        family: "ps",
+        name: "PS3",
+        icon: "ps3.svg",
+        familyIcon: "playstation.svg",
+    },
+    ps4: {
+        family: "ps",
+        name: "PS4",
+        icon: "ps4.svg",
+        familyIcon: "playstation.svg",
+    },
+    xbox: {
+        family: "xbox",
+        name: "Xbox",
+        icon: "xbox_console.svg",
+        familyIcon: "xbox.svg",
+    },
+    xbox360: {
+        family: "xbox",
+        name: "Xbox 360",
+        icon: "xbox360.svg",
+        familyIcon: "xbox.svg",
+    },
+    xboxone: {
+        family: "xbox",
+        name: "Xbox One",
+        icon: "xboxone.svg",
+        familyIcon: "xbox.svg",
+    },
+    switch: {
+        family: "switch",
+        name: "Switch",
+        icon: "switch_console.svg",
+        familyIcon: "switch.svg",
+    },
+    pc: { family: "pc", name: "PC", icon: "pc.svg", familyIcon: "pc.svg" },
+};
+
+const juegos = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
+
+const storedPlatform = localStorage.getItem(PLATFORM_STORAGE_KEY);
+let currentPlatform =
+    storedPlatform && PLATFORM_FAMILIES[storedPlatform] ? storedPlatform : null;
+
+let cheats = [];
 
 function detectarJuego() {
     const ruta = window.location.pathname;
@@ -105,19 +221,15 @@ async function loadCheats() {
 }
 
 function getAvailablePlatforms(cheatsObject) {
-    const platforms = new Set();
-
-    Object.values(cheatsObject).forEach((categoryArray) => {
-        categoryArray.forEach((cheat) => {
-            if (!cheat.codes) return;
-
-            Object.keys(cheat.codes).forEach((platform) => {
-                platforms.add(platform);
-            });
-        });
-    });
-
-    return Array.from(platforms);
+    const keys = new Set();
+    Object.values(cheatsObject).forEach((arr) =>
+        arr.forEach(
+            (cheat) =>
+                cheat.codes &&
+                Object.keys(cheat.codes).forEach((k) => keys.add(k)),
+        ),
+    );
+    return Array.from(keys);
 }
 
 const tooltip = document.querySelector(".tooltip");
@@ -311,7 +423,7 @@ function renderCheats() {
             const cheatCode = document.createElement("div");
             cheatCode.className = "cheat-code";
 
-            if (currentPlatform === "pc") {
+            if (PLATFORM_FAMILIES[currentPlatform]?.family === "pc") {
                 code.forEach((text, i) => {
                     if (i > 0) {
                         const sep = document.createElement("span");
@@ -326,7 +438,10 @@ function renderCheats() {
                 });
             } else {
                 code.forEach((btn) => {
-                    const btnData = BUTTON_ICONS[currentPlatform]?.[btn];
+                    const family = PLATFORM_FAMILIES[currentPlatform]?.family;
+                    const btnData =
+                        BUTTON_ICONS[currentPlatform]?.[btn] ??
+                        BUTTON_ICONS[family]?.[btn];
 
                     if (!btnData) {
                         const span = document.createElement("span");
@@ -337,7 +452,7 @@ function renderCheats() {
                     }
 
                     const img = document.createElement("img");
-                    img.src = `../assets/images/cheats/${currentPlatform}/${btnData.icon}`;
+                    img.src = `../assets/images/cheats/${family}/${currentPlatform}/${btnData.icon}`;
                     img.style.background = btnData.bg;
                     img.className = "btn-icon";
                     img.alt = btn;
@@ -349,6 +464,35 @@ function renderCheats() {
 
             cheatItem.appendChild(cheatTitle);
             cheatItem.appendChild(cheatCode);
+
+            const note =
+                (Array.isArray(cheat.platformNotes)
+                    ? cheat.platformNotes.find((n) =>
+                          n.platforms.includes(currentPlatform),
+                      )?.note
+                    : cheat.platformNotes?.[currentPlatform]) ??
+                cheat.note ??
+                null;
+
+            const noteType = cheat.noteType ?? "info";
+
+            if (note) {
+                const noteEl = document.createElement("div");
+                noteEl.className = `cheat-note cheat-note--${noteType}`;
+
+                const icon = document.createElement("span");
+                icon.className = "material-symbols-rounded cheat-note-icon";
+                icon.textContent = noteType === "warning" ? "warning" : "info";
+
+                const text = document.createElement("span");
+                text.className = "cheat-note-text";
+                text.textContent = note;
+
+                noteEl.appendChild(icon);
+                noteEl.appendChild(text);
+                cheatItem.appendChild(noteEl);
+            }
+
             list.appendChild(cheatItem);
         });
 
@@ -398,21 +542,151 @@ function initPlatformSelector() {
     });
 }
 
+function renderPlatformSelector(platformKeys, definitivePlatforms = []) {
+    const selector = document.querySelector(".platform-selector");
+    if (!selector) return;
+    selector.innerHTML = "";
+
+    const families = {};
+    platformKeys.forEach((key) => {
+        const data = PLATFORM_FAMILIES[key];
+        if (!data) return;
+        if (!families[data.family]) families[data.family] = [];
+        families[data.family].push(key);
+    });
+
+    Object.entries(families).forEach(([family, keys]) => {
+        const firstKey = keys.find((k) => k === currentPlatform) || keys[0];
+        const data = PLATFORM_FAMILIES[firstKey];
+
+        const familyWrapper = document.createElement("div");
+        familyWrapper.className = "platform-family";
+        const button = document.createElement("button");
+        button.className =
+            "platform-btn" + (keys.includes(currentPlatform) ? " active" : "");
+        button.dataset.platform = firstKey;
+        button.dataset.family = family;
+
+        button.innerHTML = `
+    <div class="platform-card">
+        <img src="../assets/images/platforms/${data.familyIcon}" alt="">
+        <span>${FAMILY_NAMES[family] ?? family}</span>
+    </div>
+`;
+
+        button.addEventListener("click", (e) => {
+            if (e.target.classList.contains("subconsole-icon")) return;
+            if (keys.includes(currentPlatform)) return;
+
+            button.dataset.platform = keys[0];
+            switchPlatform(keys[0]);
+        });
+
+        familyWrapper.appendChild(button);
+
+        if (keys.length > 1) {
+            const subContainer = document.createElement("div");
+            subContainer.className = "platform-subconsoles";
+            subContainer.dataset.count = keys.length;
+
+            if (keys.includes(currentPlatform)) {
+                subContainer.classList.add("visible");
+            }
+
+            const subInner = document.createElement("div");
+            subInner.className = "subconsoles-inner";
+
+            keys.forEach((k) => {
+                const subBtn = document.createElement("button");
+
+                subBtn.className =
+                    "subconsole-btn" + (k === currentPlatform ? " active" : "");
+
+                subBtn.dataset.platform = k;
+
+                if (definitivePlatforms.includes(k)) {
+                    subBtn.dataset.definitive = true;
+                }
+
+                const img = document.createElement("img");
+
+                img.src = `../assets/images/platforms/${PLATFORM_FAMILIES[k].icon}`;
+                img.alt = PLATFORM_FAMILIES[k].name;
+                img.className = "subconsole-icon";
+
+                subBtn.appendChild(img);
+
+                subBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+
+                    if (k === currentPlatform) return;
+
+                    switchPlatform(k);
+                });
+
+                subInner.appendChild(subBtn);
+            });
+
+            subContainer.appendChild(subInner);
+            familyWrapper.appendChild(subContainer);
+        }
+
+        selector.appendChild(familyWrapper);
+    });
+}
+
+function switchPlatform(key) {
+    currentPlatform = key;
+    localStorage.setItem(PLATFORM_STORAGE_KEY, key);
+
+    document.querySelectorAll(".platform-family").forEach((wrapper) => {
+        const familyBtn = wrapper.querySelector(".platform-btn");
+        const subBtns = [...wrapper.querySelectorAll(".subconsole-btn")];
+
+        let isActive;
+
+        if (subBtns.length > 0) {
+            const familyKeys = subBtns.map((btn) => btn.dataset.platform);
+            isActive = familyKeys.includes(key);
+        } else {
+            isActive = familyBtn?.dataset.platform === key;
+        }
+
+        familyBtn?.classList.toggle("active", isActive);
+        if (isActive && subBtns.length > 0) familyBtn.dataset.platform = key;
+
+        const subContainer = wrapper.querySelector(".platform-subconsoles");
+        if (subContainer) {
+            subContainer.classList.toggle("visible", isActive);
+        }
+
+        subBtns.forEach((btn) => {
+            btn.classList.toggle("active", btn.dataset.platform === key);
+        });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) searchInput.value = "";
+    renderCheats();
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     mostrarSkeletons();
     const cheatsObject = await loadCheats();
+    const definitivePlatforms = cheatsObject.definitivePlatforms ?? [];
+    cheats = cheatsObject;
 
     const availablePlatforms = getAvailablePlatforms(cheatsObject);
 
-    cheats = cheatsObject;
+    if (!currentPlatform || !availablePlatforms.includes(currentPlatform)) {
+        currentPlatform = availablePlatforms[0];
+    }
 
     if (availablePlatforms.length === 1) {
-        currentPlatform = availablePlatforms[0];
-
         const selector = document.querySelector(".platform-selector");
         if (selector) selector.style.display = "none";
     } else {
-        initPlatformSelector();
+        renderPlatformSelector(availablePlatforms, definitivePlatforms);
     }
 
     renderCheats();

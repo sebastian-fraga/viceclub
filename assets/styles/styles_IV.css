@@ -35,14 +35,14 @@
 
 body {
     background-image: url("../images/main/background_IV.webp");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 
-        @media (min-width: 768px) {
-            background-attachment: fixed;
-        }
+    @media (min-width: 768px) {
+        background-attachment: fixed;
+    }
 
     &::after {
         content: "";
@@ -214,17 +214,41 @@ body {
 /* #endregion */
 
 /* #region 100% CHECKLIST */
-.checklist-container[data-active-game="iv"] .progress-bar-fill {
-    background: linear-gradient(to right, var(--accent-color), var(--block-text));
+
+.checklist-container {
+    & article {
+        margin-bottom: 20px;
+    }
 }
 
-.checklist-container[data-active-game="tlad"] .progress-bar-fill {
-    background: linear-gradient(to right, #B7352F, #e2645b);
+.checklist-container[data-active-game="iv"] {
+    & .progress-bar-fill {
+        background: linear-gradient(to right, var(--accent-color), var(--block-text));
+    }
 }
 
-.checklist-container[data-active-game="tbogt"] .progress-bar-fill {
-    background: linear-gradient(to right, #E8E887, #D06A92, #75C0DE);
+.checklist-container[data-active-game="tlad"] {
+
+    & .progress-bar-fill {
+        background: linear-gradient(to right, #B7352F, #e2645b);
+    }
+
+    & article:is(.section-complete) {
+        background: linear-gradient(to bottom right, rgba(253, 121, 121, 0.4), rgba(230, 34, 34, 0.4));
+    }
 }
+
+.checklist-container[data-active-game="tbogt"] {
+
+    & .progress-bar-fill {
+        background: linear-gradient(to right, #E8E887, #D06A92, #75C0DE);
+    }
+
+    & article:is(.section-complete) {
+        background: linear-gradient(to bottom right, rgba(232, 232, 135, 0.4),rgba(208, 106, 147, 0.4), rgba(117, 192, 222, 0.5));
+    }
+}
+
 
 /* #endregion */
 
