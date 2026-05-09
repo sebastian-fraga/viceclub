@@ -221,25 +221,31 @@ body.timeline {
                     font-size: 0.9em;
                 }
 
-                & img {
-                    align-items: center;
-                    max-width: 40vw;
-                    display: block;
-                    max-height: 45vh;
-                    height: auto;
-                    margin: 25px auto 50px auto;
+                & .timeline-image {
+                    display: flex;
+                    justify-content: center;
+                    width: fit-content;
                     border-radius: 20px;
-                    border: 3px solid #d6aaff;
-                    cursor: pointer;
-                    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.4);
-                    transition: all 0.3s ease;
+                    margin: 25px auto 50px auto;
 
-                    &:hover {
-                        border-color: #c084fc;
-                        box-shadow: 0 12px 35px rgba(168, 85, 247, 0.6);
-                        transform: scale(1.02);
+                    & img {
+                        max-width: 40vw;
+                        max-height: 45vh;
+                        height: auto;
+                        border-radius: 12px;
+                        border: 3px solid #d6aaff !important;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            border-color: #c084fc;
+                            box-shadow: 0 12px 35px rgba(168, 85, 247, 0.6);
+                            transform: scale(1.02);
+                        }
                     }
                 }
+
+
 
                 & a {
                     text-decoration: none;

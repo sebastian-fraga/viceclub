@@ -1680,49 +1680,61 @@ details[open]::details-content {
 
     & figure {
         position: relative;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         transform: scale(0.5);
         opacity: 0;
         transition:
             transform 0.4s ease,
             opacity 0.4s ease;
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 30%;
-            background: linear-gradient(to top, #000000, transparent);
-            border-radius: 0 0 4px 4px;
-            pointer-events: none;
+        & .image-wrapper {
+            position: relative;
+            border-radius: 4px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 50%;
+                background: linear-gradient(to top, rgba(140, 108, 204, 0.2), transparent);
+                pointer-events: none;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                border: 2px solid rgba(255, 255, 255, 0.15);
+                border-radius: 12px;
+                pointer-events: none;
+            }
+
+            & img {
+                display: block;
+                max-width: 85vw;
+                max-height: 75vh;
+                border-radius: 12px;
+                z-index: 1000;
+            }
         }
 
-        & img {
-            display: block;
-            max-width: 85vw;
-            max-height: 85vh;
-            border-radius: 4px;
-            box-shadow: 0 0 20px #060606;
-        }
+
 
         & figcaption {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 70px;
-            z-index: 1000000;
-            color: #f2f2f269;
+            margin-top: 4em;
+            width: 95%;
+            color: rgba(242, 242, 242, 0.7);
             text-align: center;
             text-wrap: balance;
             font-size: clamp(12px, 0.85em, 25px);
             font-style: italic;
-            padding-bottom: 0.5em;
         }
     }
 
@@ -1800,7 +1812,7 @@ details[open]::details-content {
 .ficha-tecnica {
     box-sizing: border-box;
     border: 3px solid;
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 16px 16px 0;
     max-width: 740px;
     width: 100%;
     border-color: color-mix(in srgb,
