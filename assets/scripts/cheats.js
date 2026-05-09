@@ -352,6 +352,9 @@ function filterCheats(query) {
             (i) => i.style.display !== "none",
         );
 
+        const badge = section.querySelector(".category-count");
+        if (badge) badge.textContent = visibles.length;
+
         section.style.display = visibles.length > 0 ? "" : "none";
     });
 
@@ -368,6 +371,9 @@ function filterCheats(query) {
             ...section.querySelectorAll(".cheat-item"),
         ].filter((i) => i.style.display !== "none");
 
+        const badge = section.querySelector(".category-count");
+        if (badge) badge.textContent = visibleItems.length;
+
         section.querySelectorAll(".cheat-item").forEach((item) => {
             item.style.borderRadius = "";
             item.style.background = "";
@@ -382,6 +388,27 @@ function filterCheats(query) {
         const last = visibleItems.at(-1);
         if (last) last.style.borderRadius = "0 0 25px 25px";
     });
+
+    let emptyMsg = document.getElementById("cheats-empty");
+
+    if (visibleCount === 0) {
+        tooltip.style.visibility = "hidden";
+        tooltip.style.display = "none";
+        tooltip.classList.remove("visible");
+
+        if (!emptyMsg) {
+            emptyMsg = document.createElement("div");
+            emptyMsg.id = "cheats-empty";
+            document.getElementById("cheatsContainer").appendChild(emptyMsg);
+        }
+
+        emptyMsg.innerHTML = `
+        <span class="material-symbols-rounded">search_off</span>
+        <p>No se encontraron trucos para <strong>"${query}"</strong></p>
+    `;
+    } else {
+        emptyMsg?.remove();
+    }
 }
 
 function renderCheats() {
@@ -401,9 +428,17 @@ function renderCheats() {
 
         const header = document.createElement("div");
         header.className = "category-header";
+
         const title = document.createElement("h3");
         title.className = "category-title";
         title.textContent = category;
+
+        const count = cheatsInCategory.filter(
+            (c) => c.codes?.[currentPlatform],
+        ).length;
+        const badge = document.createElement("span");
+        badge.className = "category-count";
+        badge.textContent = count;
 
         const list = document.createElement("div");
         list.className = "category-list";
@@ -499,6 +534,7 @@ function renderCheats() {
         if (list.children.length === 0) return;
 
         header.appendChild(title);
+        header.appendChild(badge);
         section.appendChild(header);
         section.appendChild(list);
         fragment.appendChild(section);
@@ -674,6 +710,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     mostrarSkeletons();
     const cheatsObject = await loadCheats();
     const definitivePlatforms = cheatsObject.definitivePlatforms ?? [];
+    delete cheatsObject.definitivePlatforms;
     cheats = cheatsObject;
 
     const availablePlatforms = getAvailablePlatforms(cheatsObject);
