@@ -267,26 +267,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const rect = container.getBoundingClientRect();
         const size = Math.min(rect.width, rect.height);
 
-        const radius = size / 2 - (window.innerWidth < 500 ? 30 : 60);
+        const cardSize = parseFloat(getComputedStyle(items[0]).width);
+        const minRadius = (total * cardSize) / (2 * Math.PI);
+        const naturalRadius = size / 2 - (window.innerWidth < 500 ? 30 : 60);
+        const radius = Math.max(minRadius, naturalRadius);
 
         const step = 360 / total;
         const startAngle = 90;
 
         items.forEach((item, index) => {
             const angle = step * index + startAngle;
-
-            item.style.position = "absolute";
-            item.style.left = "50%";
-            item.style.top = "50%";
-
             item.style.transform = `
-                rotate(${angle}deg)
-                translate(${radius}px)
-                rotate(${-angle}deg)
-            `;
+            rotate(${angle}deg)
+            translate(${radius}px)
+            rotate(${-angle}deg)
+        `;
         });
-        window.addEventListener("resize", makeDial);
     }
+
+    window.addEventListener("resize", makeDial);
 
     function renderDJ(dj) {
         if (!dj) return "";
