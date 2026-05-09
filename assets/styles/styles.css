@@ -1335,10 +1335,10 @@ header {
             border: 1px solid #8e71d0;
             background-color: #8e71d02e;
             border-radius: 12px;
-            transition: all 0.15s ease-out;
+            transition: border 0.15s ease-out, background-color 0.15s ease-out;
             padding: 0.2em;
 
-            &:hover {
+            &:hover:not(.active) {
                 outline: 1px solid #8e71d0cb;
                 background-color: #8e71d01e !important;
             }
@@ -1451,7 +1451,7 @@ header {
                     }
                 }
 
-                &:hover {
+                &:hover:not(.active) {
                     background: color-mix(in srgb,
                             var(--title-color) 5%,
                             transparent 20%);
@@ -4505,7 +4505,6 @@ body:has(.reset-dialog[open]) {
     header {
         justify-content: center;
         gap: 3em;
-        height: 3.5em;
 
         & .logo-container {
             gap: 25px;
