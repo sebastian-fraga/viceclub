@@ -500,33 +500,44 @@ function renderCheats() {
             cheatItem.appendChild(cheatTitle);
             cheatItem.appendChild(cheatCode);
 
-            const note =
-                (Array.isArray(cheat.platformNotes)
-                    ? cheat.platformNotes.find((n) =>
-                          n.platforms.includes(currentPlatform),
-                      )?.note
-                    : cheat.platformNotes?.[currentPlatform]) ??
-                cheat.note ??
-                null;
+            const platformNote = Array.isArray(cheat.platformNotes)
+                ? cheat.platformNotes.find((n) =>
+                      n.platforms.includes(currentPlatform),
+                  )
+                : null;
 
-            const noteType = cheat.noteType ?? "info";
+            const notes =
+                platformNote?.notes ??
+                (platformNote?.note
+                    ? [
+                          {
+                              text: platformNote.note,
+                              type: platformNote.noteType ?? "info",
+                          },
+                      ]
+                    : null) ??
+                cheat.notes ??
+                (cheat.note
+                    ? [{ text: cheat.note, type: cheat.noteType ?? "info" }]
+                    : null) ??
+                [];
 
-            if (note) {
+            notes.forEach(({ text, type = "info" }) => {
                 const noteEl = document.createElement("div");
-                noteEl.className = `cheat-note cheat-note--${noteType}`;
+                noteEl.className = `cheat-note cheat-note--${type}`;
 
                 const icon = document.createElement("span");
                 icon.className = "material-symbols-rounded cheat-note-icon";
-                icon.textContent = noteType === "warning" ? "warning" : "info";
+                icon.textContent = type === "warning" ? "warning" : "info";
 
-                const text = document.createElement("span");
-                text.className = "cheat-note-text";
-                text.textContent = note;
+                const textEl = document.createElement("span");
+                textEl.className = "cheat-note-text";
+                textEl.innerHTML = text;
 
                 noteEl.appendChild(icon);
-                noteEl.appendChild(text);
+                noteEl.appendChild(textEl);
                 cheatItem.appendChild(noteEl);
-            }
+            });
 
             list.appendChild(cheatItem);
         });
