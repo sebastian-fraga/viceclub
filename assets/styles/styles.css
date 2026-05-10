@@ -1711,9 +1711,18 @@ details[open]::details-content {
                 left: 0;
                 right: 0;
                 height: 100%;
-                border: 2px solid rgba(255, 255, 255, 0.15);
+                padding: 6px;
+                backdrop-filter: blur(12px) brightness(0.8) saturate(1.2);
+                -webkit-backdrop-filter: blur(12px) brightness(0.8) saturate(1.2);
+                mask:
+                    linear-gradient(#fff 0 0) content-box,
+                    linear-gradient(#fff 0 0);
+
+                mask-composite: exclude;
+                -webkit-mask-composite: xor;
                 border-radius: 12px;
                 pointer-events: none;
+                box-sizing: border-box;
             }
 
             & img {

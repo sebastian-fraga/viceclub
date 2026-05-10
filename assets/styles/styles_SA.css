@@ -218,8 +218,15 @@ details.mod summary img {
 
 /* #region TRUCOS */
 
+.category-header {
+    & h3 {
+        color: color-mix(in srgb, var(--accent-color) 60%, #fff) !important;
+    }
 
-
+    & span {
+        background: color-mix(in srgb, var(--accent-color) 60%, #fff) !important;
+    }
+}
 /* #endregion */
 
 /* #region MEDIA QUERIES  */
