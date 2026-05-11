@@ -2498,62 +2498,6 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 /* #endregion */
 
 /* #region LOGROS */
-.achievement-selector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2em auto 1.6em auto;
-    gap: 1em;
-    background: rgba(250, 250, 250, 0.05);
-    border: 1px solid rgba(250, 250, 250, 0.15);
-    box-shadow: inset 0 0 20px rgba(250, 250, 250, 0.15);
-    border-radius: 24px;
-    padding: 1em 1.5em;
-    max-width: 950px;
-
-    & button {
-        font-family: "GTAArtDecoMedium";
-        padding: 0.6em 0.8em;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.8em;
-        border-radius: 12px;
-        border: none;
-        transition: all 0.2s ease-in;
-        text-transform: uppercase;
-
-        &:hover {
-            background: color-mix(in srgb, var(--block-border) 30%, transparent);
-            outline: 1px solid color-mix(in srgb, var(--block-border) 20%, transparent);
-            color: var(--block-text);
-
-            & img {
-                filter: invert(100%);
-            }
-        }
-
-        &.active {
-            background: color-mix(in srgb, var(--block-border) 60%, transparent);
-            outline: 1px solid color-mix(in srgb, var(--block-border) 80%, transparent);
-            color: var(--block-text);
-
-            & img {
-                filter: invert(100%);
-            }
-        }
-
-        &:active {
-            scale: 0.9;
-        }
-    }
-
-    & img {
-        width: 25px;
-        pointer-events: none;
-        transition: all 0.2s ease-in;
-    }
-}
 
 .achievement-disclaimer {
     background: color-mix(in srgb, var(--accent-color) 10%, transparent);
@@ -2727,7 +2671,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 .achievement-toggle[aria-expanded="true"]+.achievement-guide-text {
-    padding: 12px 16px 16px !important;
+    padding: 12px 16px 32px !important;
 }
 
 /* #endregion */
@@ -5066,17 +5010,6 @@ body:has(.reset-dialog[open]) {
     /* #endregion */
 
     /* #region LOGROS */
-    .achievement-selector {
-        margin: 2em 0;
-        flex-direction: column;
-        gap: 1em;
-
-        & button {
-            height: 3em;
-            width: 100%;
-            justify-content: center;
-        }
-    }
 
     .achievement-disclaimer {
         width: 90%;
@@ -5252,7 +5185,7 @@ body:has(.reset-dialog[open]) {
 
 
     .cheats-search {
-        width: 97vw;
+        width: 90vw;
 
         & .tooltip {
             max-width: 350px;
