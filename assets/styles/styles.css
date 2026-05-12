@@ -4209,6 +4209,19 @@ body:has(.reset-dialog[open]) {
                     & .cheat-note-text {
                         color: color-mix(in srgb, var(--block-border) 25%, #fff);
                         font-size: 0.8em;
+
+                        & a {
+                            color: color-mix(in srgb, var(--block-border) 55%, #fff);
+                            font-weight: 900;
+                            transition: all 0.15s ease;
+
+                            &:hover {
+                                filter: brightness(1.1);
+                            }
+                            &:active {
+                                filter: brightness(0.85);
+                            }
+                        }
                     }
                 }
 
