@@ -514,27 +514,28 @@ function renderCheats() {
             cheatItem.appendChild(cheatTitle);
             cheatItem.appendChild(cheatCode);
 
-            const platformNote = Array.isArray(cheat.platformNotes)
-                ? cheat.platformNotes.find((n) =>
-                      n.platforms.includes(currentPlatform),
-                  )
-                : null;
+            const platformNotes = Array.isArray(cheat.platformNotes)
+                ? cheat.platformNotes
+                      .filter(
+                          (n) =>
+                              Array.isArray(n.platforms) &&
+                              n.platforms.includes(currentPlatform),
+                      )
+                      .flatMap(
+                          (n) =>
+                              n.notes ?? [
+                                  { text: n.note, type: n.noteType ?? "info" },
+                              ],
+                      )
+                : [];
 
-            const notes =
-                platformNote?.notes ??
-                (platformNote?.note
-                    ? [
-                          {
-                              text: platformNote.note,
-                              type: platformNote.noteType ?? "info",
-                          },
-                      ]
-                    : null) ??
+            const globalNotes =
                 cheat.notes ??
                 (cheat.note
                     ? [{ text: cheat.note, type: cheat.noteType ?? "info" }]
-                    : null) ??
-                [];
+                    : []);
+
+            const notes = [...platformNotes, ...globalNotes];
 
             notes.forEach(({ text, type = "info" }) => {
                 const noteEl = document.createElement("div");
