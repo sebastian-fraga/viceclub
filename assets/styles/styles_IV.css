@@ -81,7 +81,7 @@ body.home {
             --accent-color: #fc3737;
             position: relative;
 
-            &:after {
+            &::after {
                 content: "";
                 height: 2px;
                 background: linear-gradient(to left, var(--accent-color), transparent);
@@ -102,7 +102,7 @@ body.home {
             --accent-color: #4cd5f7;
             position: relative;
 
-            &:after {
+            &::after {
                 content: "";
                 height: 2px;
                 background: linear-gradient(to left, var(--accent-color), transparent);
@@ -456,7 +456,9 @@ details.mod summary img {
 
     body.home {
         & .text-container {
-            border-top: none;
+            &::after {
+                display: none;
+            }
         }
     }
 
