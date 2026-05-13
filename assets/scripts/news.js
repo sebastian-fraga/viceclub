@@ -1,5 +1,5 @@
 const container = document.getElementById("newsContainer");
-const btn = document.getElementById("verMas");
+const btn = document.getElementById("loadNews");
 let noticias = [];
 let visibleCount = 2;
 let step = 2;
