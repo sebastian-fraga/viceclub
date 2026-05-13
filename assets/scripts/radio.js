@@ -620,6 +620,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    audio.addEventListener("loadstart", () => {
+        prevSongBtn.classList.add("disabled");
+        playBtn.classList.add("disabled");
+        playPauseBtn.classList.add("disabled");
+        nextSongBtn.classList.add("disabled");
+    });
+
+    audio.addEventListener("canplay", () => {
+        prevSongBtn.classList.remove("disabled");
+        playBtn.classList.remove("disabled");
+        playPauseBtn.classList.remove("disabled");
+        nextSongBtn.classList.remove("disabled");
+    });
+
     const formatTime = (time) => {
         const hours = Math.floor(time / 3600);
         const minutes = Math.floor((time % 3600) / 60);

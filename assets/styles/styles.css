@@ -3574,6 +3574,12 @@ body:has(.reset-dialog[open]) {
                     transform: scale(0.99);
                     color: #e7c1fe;
                 }
+
+                &.disabled {
+                    pointer-events: none;
+                    opacity: 0.4;
+                }
+
             }
         }
 
