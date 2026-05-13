@@ -1422,7 +1422,7 @@ header {
                     font-size: 1.7em;
                     justify-content: center;
                     padding: 0.9em 0;
-                    border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 25%, transparent);
+                    border-bottom: 1px solid rgba(225, 177, 255, 0.3);
                     width: 100%;
                 }
 
@@ -1455,6 +1455,7 @@ header {
                     background: color-mix(in srgb,
                             var(--title-color) 5%,
                             transparent 20%);
+                    color: color-mix(in srgb, var(--title-color) 50%, #fff);
                 }
 
                 &:active {
@@ -4218,6 +4219,7 @@ body:has(.reset-dialog[open]) {
                             &:hover {
                                 filter: brightness(1.1);
                             }
+
                             &:active {
                                 filter: brightness(0.85);
                             }
