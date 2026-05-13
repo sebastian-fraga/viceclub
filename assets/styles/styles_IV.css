@@ -63,6 +63,65 @@ body {
     }
 }
 
+body.home {
+    & .text-container {
+        margin-bottom: 8em;
+        padding-top: 25px;
+
+
+        &:nth-of-type(1) {
+            border-top: none;
+            padding-top: 0;
+
+
+        }
+
+        &:nth-of-type(2) {
+            --title-color: #fd9c9cd3;
+            --accent-color: #fc3737;
+            position: relative;
+
+            &:after {
+                content: "";
+                height: 2px;
+                background: linear-gradient(to left, var(--accent-color), transparent);
+                width: 100%;
+                position: absolute;
+                top: 0;
+            }
+
+            &+.ficha-tecnica {
+                --accent-color: #fc3737c0;
+                background-color: color-mix(in srgb, rgba(243, 47, 47, 0.4), transparent 60%);
+            }
+
+        }
+
+        &:nth-of-type(3) {
+            --title-color: #FF99BF;
+            --accent-color: #4cd5f7;
+            position: relative;
+
+            &:after {
+                content: "";
+                height: 2px;
+                background: linear-gradient(to left, var(--accent-color), transparent);
+                width: 100%;
+                position: absolute;
+                top: 0;
+            }
+
+            &+.ficha-tecnica {
+                --accent-color: #4cd5f7;
+                background: linear-gradient(135deg, #f1ec87b6, #C8477Ab6, #42A2B2b6);
+            }
+        }
+
+        &.dlc {
+            font-size: 0.85em;
+        }
+    }
+}
 
 .text-container {
     & h1 {
@@ -245,7 +304,7 @@ body {
     }
 
     & article:is(.section-complete) {
-        background: linear-gradient(to bottom right, rgba(232, 232, 135, 0.4),rgba(208, 106, 147, 0.4), rgba(117, 192, 222, 0.5));
+        background: linear-gradient(to bottom right, rgba(232, 232, 135, 0.4), rgba(208, 106, 147, 0.4), rgba(117, 192, 222, 0.5));
     }
 }
 
@@ -394,9 +453,17 @@ details.mod summary img {
 }
 
 @media (max-width: 900px) {
+
+    body.home {
+        & .text-container {
+            border-top: none;
+        }
+    }
+
     .card-selector {
         flex-direction: column;
     }
 }
+
 
 /* #endregion */

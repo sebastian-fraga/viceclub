@@ -69,16 +69,9 @@ body {
 
 /* #region FICHA TÉCNICA */
 .ficha-tecnica {
-    & table {
-        & th {
-            text-shadow: 2px 2px #000;
-        }
-
-        & td {
-            & span {
-                text-shadow: 2px 2px #000;
-            }
-        }
+    & th,
+    & .platform {
+        text-shadow: 2px 2px #000;
     }
 }
 
