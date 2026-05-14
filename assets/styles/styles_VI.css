@@ -1,7 +1,4 @@
 /* #region GENERAL */
-html {
-    scroll-behavior: smooth;
-}
 
 :root {
     --font-title: "GTAArtDecoRegular";
@@ -9,6 +6,7 @@ html {
     --block-border: #c9ecef;
     --block-text: #f4f4f4;
     --title-color: #95e1ff;
+    --block-color: #402e69;
 }
 
 ::selection {
