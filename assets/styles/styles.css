@@ -4927,18 +4927,21 @@ body:has(.reset-dialog[open]) {
         }
 
         & footer {
-            padding: 0;
             padding-top: 1.5em;
+            padding-inline: 3em;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 85px 5px 10px 5px;
             border-radius: 6px;
             border-width: 5px;
-            gap: 24px;
+            gap: 36px;
 
             &::before {
                 background-position: 50% 50%;
+                opacity: 0.05;
+                filter: blur(2px);
+                background-size: contain;
             }
 
             & .footer-left {
@@ -4961,9 +4964,15 @@ body:has(.reset-dialog[open]) {
             & .footer-center {
                 padding: 0;
 
+
+
                 & ul {
                     margin-block: 1em;
                     gap: 15px;
+
+                    & a {
+                        opacity: 1 !important;
+                    }
                 }
             }
 
@@ -4972,13 +4981,20 @@ body:has(.reset-dialog[open]) {
                 align-items: center;
 
                 & span {
-                    text-align: center;
+                    text-align: left;
                 }
             }
 
             & .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
+                padding: 0;
+
+                & .footer-button {
+                    & a {
+                        width: 100%;
+                    }
+                }
             }
 
         }
