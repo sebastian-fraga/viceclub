@@ -98,10 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const savedCount =
-            parseInt(localStorage.getItem(`radioCount_${juego}`)) || 1;
-
-        radioGrid.innerHTML = Array(savedCount)
+        const radioCountMap = {
+            III: 9,
+            VC: 9,
+            SA: 11,
+            LCS: 10,
+            VCS: 9,
+            IV: 22,
+            V: 27,
+        };
+        const skeletonCount = radioCountMap[juego] ?? 1;
+        radioGrid.innerHTML = Array(skeletonCount)
             .fill(`<div class="radio-card skeleton"></div>`)
             .join("");
 
@@ -116,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const count = Object.values(radioData).filter(
                 (r) => r?.audio || r?.playlists,
             ).length;
-            localStorage.setItem(`radioCount_${juego}`, count);
 
             renderRadioGrid();
 
