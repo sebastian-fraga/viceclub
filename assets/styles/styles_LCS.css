@@ -34,7 +34,7 @@
 }
 
 body {
-    background-image: url("../images/main/background_LCS.webp");
+    background-image: url("/assets/images/main/backgrounds/background_LCS.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -131,7 +131,7 @@ body {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("../images/main/background_LCS-mobile.webp");
+        background-image: url("/assets/images/main/backgrounds/background_LCS-mobile.webp");
 
     }
 }

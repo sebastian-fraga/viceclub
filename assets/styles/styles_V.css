@@ -30,7 +30,7 @@
 
 
 body {
-    background-image: url("../images/main/background_V.webp");
+    background-image: url("/assets/images/main/backgrounds/background_V.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -238,7 +238,7 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("../images/main/background_V-mobile.webp");
+        background-image: url("/assets/images/main/backgrounds/background_V-mobile.webp");
 
     }
 

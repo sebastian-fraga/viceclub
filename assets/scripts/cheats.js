@@ -501,7 +501,7 @@ function renderCheats() {
                     }
 
                     const img = document.createElement("img");
-                    img.src = `../assets/images/cheats/${family}/${currentPlatform}/${btnData.icon}`;
+                    img.src = `/assets/images/icons/buttons/${family}/${currentPlatform}/${btnData.icon}`;
                     img.style.background = btnData.bg;
                     img.className = "btn-icon";
                     img.alt = btn;
@@ -631,7 +631,7 @@ function renderPlatformSelector(platformKeys, definitivePlatforms = []) {
 
         button.innerHTML = `
     <div class="platform-card">
-        <img src="../assets/images/platforms/${data.familyIcon}" alt="">
+        <img src="/assets/images/icons/platforms/${data.familyIcon}" alt="">
         <span>${FAMILY_NAMES[family] ?? family}</span>
     </div>
 `;
@@ -672,7 +672,7 @@ function renderPlatformSelector(platformKeys, definitivePlatforms = []) {
 
                 const img = document.createElement("img");
 
-                img.src = `../assets/images/platforms/${PLATFORM_FAMILIES[k].icon}`;
+                img.src = `/assets/images/icons/platforms/${PLATFORM_FAMILIES[k].icon}`;
                 img.alt = PLATFORM_FAMILIES[k].name;
                 img.className = "subconsole-icon";
 

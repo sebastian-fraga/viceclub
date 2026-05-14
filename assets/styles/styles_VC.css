@@ -33,7 +33,7 @@
 }
 
 body {
-    background-image: url("../images/main/background_VC.webp");
+    background-image: url("/assets/images/main/backgrounds/background_VC.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -185,7 +185,7 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("../images/main/background_VC-mobile.webp");
+        background-image: url("/assets/images/main/backgrounds/background_VC-mobile.webp");
 
     }
 

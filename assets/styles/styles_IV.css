@@ -34,7 +34,7 @@
 }
 
 body {
-    background-image: url("../images/main/background_IV.webp");
+    background-image: url("/assets/images/main/backgrounds/background_IV.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -441,7 +441,7 @@ details.mod summary img {
 
     body {
         &::before {
-            background-image: url("../images/main/background_IV-mobile.webp");
+            background-image: url("/assets/images/main/backgrounds/background_IV-mobile.webp");
         }
     }
 

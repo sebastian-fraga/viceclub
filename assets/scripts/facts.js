@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const logoImg = document.querySelector(".fotd-header img");
         if (fact.game) {
-            logoImg.src = `/assets/images/main/${fact.game}.webp`;
+            logoImg.src = `/assets/images/icons/games/logos/${fact.game}.webp`;
             logoImg.alt = `Logo GTA ${fact.game}`;
         } else {
             logoImg.style.display = "none";

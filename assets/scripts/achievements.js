@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             button.innerHTML = `
             <div class="platform-card">
-                <img src="/assets/images/platforms/${config.icon}" alt="${config.label}">
+                <img src="/assets/images/icons/games/combination_mark/${config.icon}" alt="${config.label}">
                 <span>${config.label}</span>
             </div>
         `;

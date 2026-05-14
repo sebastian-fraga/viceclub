@@ -70,7 +70,7 @@ function renderTabLayout(container, juego, tabs) {
         btn.className = "checklist-tab-btn" + (i === 0 ? " active" : "");
         btn.innerHTML = `
     <div class="tab-card">
-        <img src="/assets/images/main/card_${tab.id}.webp" alt="${tab.label}">
+        <img src="/assets/images/main/cards/card_${tab.id}.webp" alt="${tab.label}">
         <div class="tab-overlay"></div>
     </div>
 `;
@@ -132,7 +132,7 @@ function renderPanel(panel, juego, sections, tabId) {
 
         if (section.icon) {
             const img = document.createElement("img");
-            img.src = `/assets/images/checklist/${juego}/${section.icon}.webp`;
+            img.src = `/assets/images/icons/blips/${juego}/${section.icon}.webp`;
             img.className = "checklist-icon";
             img.alt = "Icono de sección";
             img.loading = "lazy";
@@ -189,7 +189,7 @@ function renderPanel(panel, juego, sections, tabId) {
 
                     if (entry.icon) {
                         const icon = document.createElement("img");
-                        icon.src = `/assets/images/checklist/${juego}/${entry.icon}.webp`;
+                        icon.src = `/assets/images/icons/blips/${juego}/${entry.icon}.webp`;
                         icon.className = "checklist-icon";
                         icon.alt = "";
                         icon.loading = "lazy";
@@ -202,7 +202,7 @@ function renderPanel(panel, juego, sections, tabId) {
             } else {
                 if (item.icon) {
                     const icon = document.createElement("img");
-                    icon.src = `/assets/images/checklist/${juego}/${item.icon}.webp`;
+                    icon.src = `/assets/images/icons/blips/${juego}/${item.icon}.webp`;
                     icon.className = "checklist-icon";
                     icon.alt = "";
                     icon.loading = "lazy";

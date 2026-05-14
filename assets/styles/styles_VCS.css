@@ -34,7 +34,7 @@
 }
 
 body {
-    background-image: url("../images/main/background_VCS.webp");
+    background-image: url("/assets/images/main/backgrounds/background_VCS.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -143,7 +143,7 @@ body {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("../images/main/background_VCS-mobile.webp");
+        background-image: url("/assets/images/main/backgrounds/background_VCS-mobile.webp");
     }
 }
 

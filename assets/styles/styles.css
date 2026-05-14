@@ -69,7 +69,7 @@ body {
     &.index {
         flex: 1;
         overflow: hidden;
-        background-image: url("../images/main/background.webp");
+        background-image: url("/assets/images/main/backgrounds/background.webp");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -444,7 +444,7 @@ body {
                         radial-gradient(circle at top left,
                             rgba(209, 48, 249, 0.25),
                             rgba(48, 82, 249, 0.25)),
-                        url("../images/main/countdown.webp");
+                        url("/assets/images/main/countdown.webp");
                     width: 100%;
                     height: 100%;
                     z-index: -1;
@@ -3442,6 +3442,17 @@ body:has(.reset-dialog[open]) {
 
 /* #region RADIO */
 
+#songTitle.skeleton,
+#artistName.skeleton {
+    width: 120px;
+    height: 0.9em;
+    border-radius: 4px;
+}
+
+#artistName.skeleton {
+    width: 80px;
+}
+
 .radio-container {
     display: flex;
     align-items: center;
@@ -5006,7 +5017,7 @@ body:has(.reset-dialog[open]) {
 
     body {
         &.index {
-            background-image: url("../images/main/background-mobile.webp");
+            background-image: url("/assets/images/main/backgrounds/background-mobile.webp");
 
 
             & .block {
@@ -5082,7 +5093,7 @@ body:has(.reset-dialog[open]) {
                     justify-content: center;
 
                     &::before {
-                        background: url("../images/main/countdown.webp");
+                        background: url("/assets/images/main/countdown.webp");
                         border-radius: 45px;
                     }
 
