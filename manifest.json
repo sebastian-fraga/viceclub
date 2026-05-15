@@ -1,13 +1,13 @@
 {
     "name": "Vice Club",
     "short_name": "Vice Club",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#A28BE2",
     "theme_color": "#806fcd",
     "icons": [
         {
-            "src": "./assets/images/app/viceclub.png",
+            "src": "/assets/images/app/viceclub.png",
             "sizes": "626x626",
             "type": "image/webp",
             "purpose": "any maskable"
