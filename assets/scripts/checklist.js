@@ -34,7 +34,7 @@ async function renderChecklistFromJSON() {
     }
 
     showSkeleton(container);
-    debugger
+    debugger;
 
     const rutaJSON =
         "https://viceclub.s3.us-east-1.amazonaws.com/" +
@@ -75,7 +75,7 @@ function renderTabLayout(container, juego, tabs) {
     </div>
 `;
         btn.dataset.index = i;
-        btn.dataset.game = tab.id; 
+        btn.dataset.game = tab.id;
         tabBar.appendChild(btn);
     });
 
@@ -271,6 +271,7 @@ function updateProgress(panel) {
     if (fill) fill.style.width = pct + "%";
     if (pctEl) pctEl.textContent = pct + "%";
     if (countEl) countEl.textContent = `${count} / ${total}`;
+    if (rawPct === 100) launchConfetti();
 }
 
 function initSections(panel) {
@@ -459,6 +460,35 @@ function showSkeleton(container) {
             )
             .join("")}
     `;
+}
+
+function launchConfetti() {
+    const end = Date.now() + 500;
+    const colors = ["#8d75ef", "#4d9eff", "b475ef"];
+
+    (function frame() {
+        confetti({
+            particleCount: 7,
+            angle: 80,
+            spread: 55,
+            origin: { x: 0, y: 0.8 },
+            colors: colors,
+            zIndex: 9999,
+        });
+
+        confetti({
+            particleCount: 7,
+            angle: 100,
+            spread: 55,
+            origin: { x: 1, y: 0.8 },
+            colors: colors,
+            zIndex: 9999,
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    })();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
