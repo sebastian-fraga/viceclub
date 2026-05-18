@@ -54,16 +54,16 @@ body {
     min-height: 100dvh;
 
     &::-webkit-scrollbar {
-        width: 6px;
+        width: 9px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #7f63ec, #b475ef, #7f63ec);
+        background: linear-gradient(to bottom, #7c3aed, #a855f7);
         border-radius: 10px;
     }
 
     &::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.881);
+        background: rgba(30, 15, 60, 0.85)
     }
 
     &.index {
