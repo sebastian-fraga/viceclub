@@ -791,43 +791,72 @@ body {
                         font-size: 1.1em;
                     }
 
-                    & article {
+                    & h3 {
+                        margin-block: 1.4em 0.4em;
+                        padding-bottom: 0.05em;
+                        font-size: 1.2em;
+                        letter-spacing: 2px;
+                        width: max-content;
+                        color: #060422dc;
+                        text-align: left;
                         display: flex;
-                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
 
-                        & h3 {
-                            margin-block: 1.4em 0.3em;
-                            font-size: 1.3em;
-                            width: max-content;
-                            color: #0f0e29;
-                            border-bottom: 3px solid;
-                            border-image: linear-gradient(to right, #455eec, #d049ee);
-                            border-image-slice: 1;
-                            text-align: left;
+                    }
+
+                    & .faq-section {
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(320px, 1fr));
+                        gap: 22px 36px;
+                        align-items: stretch;
+
+
+                        &:first-of-type {
+                            margin-bottom: 52px;
                         }
 
-                        & .faq-question {
+                        & article {
                             display: flex;
                             flex-direction: column;
                             align-items: start;
-                            background: linear-gradient(135deg, #fdb6f959, #e974df83);
-                            border: 1px solid #0000003b;
-                            border-radius: 18px;
-                            margin: 0.3em;
-                            padding: 1em 2em 1em 1em;
+                            justify-content: flex-start;
+                            border: 1px solid rgba(0, 0, 0, 0.15);
+                            border-radius: 12px;
+                            padding: 25px 35px;
+                            background:
+                                linear-gradient(to bottom,
+                                    rgba(255, 255, 255, 0.25),
+                                    rgba(214, 96, 255, 0.4));
+                            backdrop-filter: blur(14px);
+                            -webkit-backdrop-filter: blur(14px);
+                            width: 100%;
+                            transition: 0.25s ease;
+
+                            &:hover {
+                                cursor: default;
+                                transform: translateY(-2px);
+                            }
+
+
+                            &:last-of-type {
+                                grid-column: -1/1;
+                            }
+
 
                             & h4 {
                                 font-family: "GTAArtDecoMedium";
-                                color: #0c0c0c;
-                                margin-bottom: 0.3em;
+                                color: #000000;
+                                margin-bottom: 1em;
                             }
 
                             & p {
-                                max-width: 120ch;
-                                font-size: 0.75em;
-                                line-height: 1.45;
-                                margin-left: 1.4em;
-                                color: #1b1b1b;
+                                padding-bottom: 6px;
+                                font-size: 0.7em;
+                                text-wrap: pretty;
+                                line-height: 1.7;
+                                color: #000000;
+                                letter-spacing: 0.3px;
                             }
 
                             & a {
@@ -842,6 +871,8 @@ body {
                             }
                         }
                     }
+
+
 
                     &[open] summary {
                         color: #070707;
@@ -5213,25 +5244,30 @@ body:has(.reset-dialog[open]) {
                         padding: 0;
                         font-size: 1.3em;
 
-                        & article {
-                            & h3 {
-                                margin: 1em auto 0.3em auto;
-                            }
+                        & h3 {
+                            margin: 1em auto 0.3em auto;
+                        }
 
-                            & .faq-question {
+                        & .faq-section {
+                            margin-top: 12px;
+                            display: flex;
+                            flex-direction: column;
+
+                            & article {
+                                padding: 10px;
                                 & h4 {
-                                    text-wrap: balance;
-                                    max-width: 18ch;
+                                    text-wrap: pretty;
+                                    max-width: 40ch;
                                     margin: 0.9em auto 0.2em auto;
-                                    font-size: 1.2em;
+                                    font-size: 1.15em;
                                 }
 
                                 & p {
-                                    font-size: 0.85em;
-                                    text-wrap: balance;
+                                    font-size: 0.8em;
+                                    text-wrap: pretty;
                                     margin: 10px auto 25px auto;
                                     line-height: 1.7;
-                                    max-width: 55ch;
+                                    max-width: 50ch;
                                 }
                             }
                         }
