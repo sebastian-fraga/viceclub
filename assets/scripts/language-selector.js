@@ -108,3 +108,12 @@ document.addEventListener("DOMContentLoaded", async function () {
         opt.classList.toggle("selected", opt.dataset.lang === savedLang);
     });
 });
+
+if (
+    location.hostname === "localhost" ||
+    localStorage.getItem("vc_debug") === "true"
+) {
+    const s = document.createElement("script");
+    s.src = "/assets/scripts/debug-menu.js";
+    document.head.appendChild(s);
+}

@@ -56,6 +56,15 @@ self.addEventListener("activate", (event) => {
     self.clients.claim();
 });
 
+self.addEventListener("message", async (event) => {
+    if (event.data?.type === "GET_VERSION") {
+        event.source?.postMessage({
+            type: "CACHE_VERSION",
+            version: CACHE_VERSION,
+        });
+    }
+});
+
 self.addEventListener("fetch", (event) => {
     const url = new URL(event.request.url);
 
