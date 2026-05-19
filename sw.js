@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1.4.1";
+const CACHE_VERSION = "1.4.2";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 self.addEventListener("install", (event) => {
@@ -95,7 +95,17 @@ self.addEventListener("fetch", (event) => {
 
     if (url.pathname.endsWith(".json")) {
         event.respondWith(
-            fetch(event.request).catch(() => caches.match(event.request)),
+            fetch(event.request).catch(async () => {
+                const cached = await caches.match(event.request);
+
+                return (
+                    cached ||
+                    new Response("JSON offline", {
+                        status: 503,
+                        statusText: "Offline",
+                    })
+                );
+            }),
         );
         return;
     }
@@ -103,21 +113,31 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
         caches.match(event.request).then((cached) => {
             if (cached) return cached;
-            return fetch(event.request).then((response) => {
-                if (
-                    !response ||
-                    response.status !== 200 ||
-                    response.type !== "basic"
-                ) {
-                    return response;
-                }
 
-                const clone = response.clone();
-                caches
-                    .open(CACHE_NAME)
-                    .then((cache) => cache.put(event.request, clone));
-                return response;
-            });
+            return fetch(event.request)
+                .then((response) => {
+                    if (
+                        !response ||
+                        response.status !== 200 ||
+                        response.type !== "basic"
+                    ) {
+                        return response;
+                    }
+
+                    const clone = response.clone();
+
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(event.request, clone);
+                    });
+
+                    return response;
+                })
+                .catch(() => {
+                    return new Response("Offline", {
+                        status: 503,
+                        statusText: "Offline",
+                    });
+                });
         }),
     );
 });
