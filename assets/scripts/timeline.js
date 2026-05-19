@@ -45,12 +45,13 @@ async function loadTimeline() {
             if (entry.events && Array.isArray(entry.events)) {
                 entry.events.forEach((ev, i) => {
                     const article = document.createElement("article");
+                    const icon = ev.icon || "timeline";
                     article.innerHTML = `
                         ${i === 0 ? `<h3 class="timeline-date">${entry.date}</h3>` : ""}
                         ${ev.time ? `<h4 class="timeline-time">${ev.time}</h4>` : ""}
                         <p>
-                            <span class="material-symbols-rounded timeline-icon">
-                            timeline
+                            <span class="material-symbols-rounded timeline-icon timeline-icon--${icon}">
+                            ${icon}
                             </span>
                             ${ev.text}
                         </p>
@@ -68,13 +69,14 @@ async function loadTimeline() {
                     container.appendChild(article);
                 });
             } else {
+                const icon = entry.icon || "timeline";
                 const article = document.createElement("article");
                 article.innerHTML = `
                     <h3 class="timeline-date">${entry.date}</h3>
                     ${entry.time ? `<h4 class="timeline-time">${entry.time}</h4>` : ""}
                     <p>
-                        <span class="material-symbols-rounded timeline-icon">
-                        timeline
+                        <span class="material-symbols-rounded timeline-icon timeline-icon--${icon}">
+                        ${icon}
                         </span>
                         ${entry.text}
                     </p>
