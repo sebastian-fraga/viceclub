@@ -28,7 +28,7 @@
     color: #1a2a1a;
 }
 
-* {
+body.custom-cursor * {
     cursor: url("../cursors/III.cur") 0 0, auto !important;
 }
 

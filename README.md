@@ -1,4 +1,4 @@
-![Vice Club Logo](/assets/images/app/banner.png "This is the Vice Club logo.")
+![Vice Club Logo](./public/assets/images/app/banner.png "This is the Vice Club logo.")
 
 <p align="center">
   <a href="https://www.viceclub.app/index.html">

@@ -88,7 +88,9 @@ body {
 #rightContent {
     & .right-content-nav {
         & .right-content-footer {
-            & .footer-settings:first-of-type {
+
+            & .footer-settings:nth-of-type(1),
+            & .footer-settings:nth-of-type(2) {
                 opacity: 0.2;
                 cursor: not-allowed !important;
 
@@ -189,30 +191,37 @@ body.timeline {
                             color: #60d9fa;
                             filter: drop-shadow(0 0 5px rgba(96, 217, 250, 0.6));
                         }
+
                         &.timeline-icon--verified {
                             color: #60a8fa;
                             filter: drop-shadow(0 0 5px rgba(96, 145, 250, 0.4));
                         }
+
                         &.timeline-icon--campaign {
                             color: #84fa60;
                             filter: drop-shadow(0 0 5px rgba(96, 250, 109, 0.4));
                         }
+
                         &.timeline-icon--warning {
                             color: #f0a500;
                             filter: drop-shadow(0 0 5px rgba(250, 196, 96, 0.4));
                         }
+
                         &.timeline-icon--trophy {
                             color: #f0fd3b;
                             filter: drop-shadow(0 0 5px rgba(250, 227, 96, 0.4));
                         }
+
                         &.timeline-icon--schedule {
                             color: #827ae9;
                             filter: drop-shadow(0 0 5px rgba(121, 127, 212, 0.4));
                         }
+
                         &.timeline-icon--play_circle {
-                            color: #e97a7a ;
+                            color: #e97a7a;
                             filter: drop-shadow(0 0 5px rgba(212, 121, 121, 0.4));
                         }
+
                         &.timeline-icon--newspaper {
                             color: #efeff7;
                             filter: drop-shadow(0 0 5px rgba(252, 252, 255, 0.4));

@@ -23,7 +23,7 @@
     --accent-color: #f5cf70;
 }
 
-* {
+body.custom-cursor * {
     cursor: url("../cursors/III.cur") 0 0, auto !important;
 }
 

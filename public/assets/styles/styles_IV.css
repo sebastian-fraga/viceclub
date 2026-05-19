@@ -29,7 +29,7 @@
     color: #1a2a1a;
 }
 
-* {
+body.custom-cursor * {
     cursor: url("../cursors/IV.cur") 0 0, auto !important;
 }
 

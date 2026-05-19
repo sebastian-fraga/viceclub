@@ -2,181 +2,202 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  return [
-    { params: { game: "III" } },
-    { params: { game: "VC" } },
-    { params: { game: "SA" } },
-    { params: { game: "LCS" } },
-    { params: { game: "VCS" } },
-    { params: { game: "IV" } },
-    { params: { game: "V" } },
-  ];
+    return [
+        { params: { game: "III" } },
+        { params: { game: "VC" } },
+        { params: { game: "SA" } },
+        { params: { game: "LCS" } },
+        { params: { game: "VCS" } },
+        { params: { game: "IV" } },
+        { params: { game: "V" } },
+    ];
 }
 
 const { game } = Astro.params;
 
 const metadata = {
-  III: {
-    title: "Mapa Interactivo de GTA III – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA III: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto III.",
-    bodyClass: "gta-3",
-    heading: "Mapa Interactivo de Grand Theft Auto III",
-    toolbarGameId: "GTA III",
-    soundDelay: null,
-  },
-  VC: {
-    title: "Mapa Interactivo de GTA Vice City – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA VC: Todos los coleccionables, ubicaciones y saltos únicos por todo Vice City en Grand Theft Auto: Vice City.",
-    bodyClass: "gta-vc",
-    heading: "Mapa Interactivo de Grand Theft Auto: Vice City",
-    toolbarGameId: "GTA:VC",
-    soundDelay: null,
-  },
-  SA: {
-    title: "Mapa Interactivo de GTA San Andreas – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA San Andreas: Todos los coleccionables, herraduras, ostras, fotos y saltos únicos por todo San Andreas en Grand Theft Auto: San Andreas.",
-    bodyClass: "gta-sa",
-    heading: "Mapa Interactivo de Grand Theft Auto: San Andreas",
-    toolbarGameId: "GTA SA",
-    soundDelay: 200,
-  },
-  LCS: {
-    title: "Mapa Interactivo de GTA Liberty City Stories – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA LCS: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto: Liberty City Stories.",
-    bodyClass: "gta-lcs",
-    heading: "Mapa Interactivo de Grand Theft Auto: Liberty City Stories",
-    toolbarGameId: "GTA:LCS",
-    soundDelay: 200,
-  },
-  VCS: {
-    title: "Mapa Interactivo de GTA Vice City Stories – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA Vice City Stories: Todos los coleccionables, globos rojos y saltos únicos por todo Vice City en Grand Theft Auto: Vice City Stories.",
-    bodyClass: "gta-vcs",
-    heading: "Mapa Interactivo de Grand Theft Auto: Vice City Stories",
-    toolbarGameId: "GTA:VCS",
-    soundDelay: null,
-  },
-  IV: {
-    title: "Mapa Interactivo de GTA IV – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA IV: Todos los coleccionables, ubicaciones, palomas y saltos únicos por todo Liberty City en Grand Theft Auto IV.",
-    bodyClass: "gta-4",
-    heading: "Mapa Interactivo de Grand Theft Auto IV",
-    toolbarGameId: "GTA IV",
-    soundDelay: null,
-  },
-  V: {
-    title: "Mapa Interactivo de GTA V – Todos los Coleccionables | Vice Club",
-    description: "Mapa interactivo de GTA V: Todos los coleccionables, partes de nave, fragmentos de carta y acrobacias por todo Los Santos en Grand Theft Auto V.",
-    bodyClass: "gta-5",
-    heading: "Mapa Interactivo de Grand Theft Auto V",
-    toolbarGameId: "GTA V",
-    soundDelay: 400,
-  }
+    III: {
+        title: "Mapa Interactivo de GTA III – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA III: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto III.",
+        bodyClass: "gta-3",
+        heading: "Mapa Interactivo de Grand Theft Auto III",
+        toolbarGameId: "GTA III",
+        soundDelay: null,
+    },
+    VC: {
+        title: "Mapa Interactivo de GTA Vice City – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA VC: Todos los coleccionables, ubicaciones y saltos únicos por todo Vice City en Grand Theft Auto: Vice City.",
+        bodyClass: "gta-vc",
+        heading: "Mapa Interactivo de Grand Theft Auto: Vice City",
+        toolbarGameId: "GTA:VC",
+        soundDelay: null,
+    },
+    SA: {
+        title: "Mapa Interactivo de GTA San Andreas – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA San Andreas: Todos los coleccionables, herraduras, ostras, fotos y saltos únicos por todo San Andreas en Grand Theft Auto: San Andreas.",
+        bodyClass: "gta-sa",
+        heading: "Mapa Interactivo de Grand Theft Auto: San Andreas",
+        toolbarGameId: "GTA SA",
+        soundDelay: 200,
+    },
+    LCS: {
+        title: "Mapa Interactivo de GTA Liberty City Stories – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA LCS: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto: Liberty City Stories.",
+        bodyClass: "gta-lcs",
+        heading: "Mapa Interactivo de Grand Theft Auto: Liberty City Stories",
+        toolbarGameId: "GTA:LCS",
+        soundDelay: 200,
+    },
+    VCS: {
+        title: "Mapa Interactivo de GTA Vice City Stories – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA Vice City Stories: Todos los coleccionables, globos rojos y saltos únicos por todo Vice City en Grand Theft Auto: Vice City Stories.",
+        bodyClass: "gta-vcs",
+        heading: "Mapa Interactivo de Grand Theft Auto: Vice City Stories",
+        toolbarGameId: "GTA:VCS",
+        soundDelay: null,
+    },
+    IV: {
+        title: "Mapa Interactivo de GTA IV – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA IV: Todos los coleccionables, ubicaciones, palomas y saltos únicos por todo Liberty City en Grand Theft Auto IV.",
+        bodyClass: "gta-4",
+        heading: "Mapa Interactivo de Grand Theft Auto IV",
+        toolbarGameId: "GTA IV",
+        soundDelay: null,
+    },
+    V: {
+        title: "Mapa Interactivo de GTA V – Todos los Coleccionables | Vice Club",
+        description:
+            "Mapa interactivo de GTA V: Todos los coleccionables, partes de nave, fragmentos de carta y acrobacias por todo Los Santos en Grand Theft Auto V.",
+        bodyClass: "gta-5",
+        heading: "Mapa Interactivo de Grand Theft Auto V",
+        toolbarGameId: "GTA V",
+        soundDelay: 400,
+    },
 };
 
 const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-  title={meta.title}
-  description={meta.description}
-  canonical={`https://www.viceclub.app/${game}/mapa`}
-  bodyClass={meta.bodyClass}
-  game={game}
-  section="mapa"
+    title={meta.title}
+    description={meta.description}
+    canonical={`https://www.viceclub.app/${game}/mapa`}
+    bodyClass={meta.bodyClass}
+    game={game}
+    section="mapa"
 >
-  <fragment slot="head">
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <script
-      is:inline
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
-    />
-  </fragment>
+    <fragment slot="head">
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <script
+            is:inline
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
+        />
+    </fragment>
 
-  <main class="block" id="container">
-    <section class="text-container">
-      <h1>{meta.heading}</h1>
+    <main class="block" id="container">
+        <section class="text-container">
+            <h1>{meta.heading}</h1>
 
-      <div class="map-wrapper">
-        <aside>
-          <div id="map-toolbar">
-            <div class="toolbar-top">
-              <div class="aside-header">
-                <span class="material-symbols-rounded">map</span>
-                <h3>{meta.toolbarGameId}</h3>
-              </div>
-              <div id="layer-buttons"></div>
+            <div class="map-wrapper">
+                <aside>
+                    <div id="map-toolbar">
+                        <div class="toolbar-top">
+                            <div class="aside-header">
+                                <span class="material-symbols-rounded">map</span
+                                >
+                                <h3>{meta.toolbarGameId}</h3>
+                            </div>
+                            <div id="layer-buttons"></div>
+                        </div>
+
+                        <div class="toolbar-text">
+                            <div class="toolbar-buttons">
+                                <button id="btn-export-progress">
+                                    <span class="material-symbols-rounded"
+                                        >download</span
+                                    >
+                                    Exportar progreso
+                                </button>
+
+                                <button id="btn-export-debug">
+                                    <span class="material-symbols-rounded"
+                                        >download</span
+                                    >
+                                    Exportar JSON (debug)
+                                </button>
+
+                                <button id="btn-import">
+                                    <span class="material-symbols-rounded"
+                                        >upload</span
+                                    >
+                                    Importar datos
+                                </button>
+                            </div>
+
+                            <div class="toolbar-footer">
+                                <button id="btn-reset">
+                                    <span class="material-symbols-rounded"
+                                        >restart_alt</span
+                                    >
+                                    Reiniciar progreso
+                                </button>
+                            </div>
+                        </div>
+
+                        <input
+                            type="file"
+                            id="input-import"
+                            accept=".json"
+                            hidden
+                        />
+                    </div>
+                </aside>
+                <figure class="map-container" id="map"></figure>
             </div>
+        </section>
+    </main>
 
-            <div class="toolbar-text">
-              <div class="toolbar-buttons">
-                <button id="btn-export-progress">
-                  <span class="material-symbols-rounded">download</span>
-                  Exportar progreso
-                </button>
+    <fragment slot="scripts">
+        {
+            meta.soundDelay !== null ? (
+                <script is:inline define:vars={{ delay: meta.soundDelay }}>
+                    window.SOUND_DELAY = delay;
+                </script>
+            ) : null
+        }
+        <!-- Right Content settings -->
+        <script is:inline src="/assets/scripts/cursor.js"></script>
+        <script is:inline src="/assets/scripts/sounds.js"></script>
 
-                <button id="btn-export-debug">
-                  <span class="material-symbols-rounded">download</span>
-                  Exportar JSON (debug)
-                </button>
-
-                <button id="btn-import">
-                  <span class="material-symbols-rounded">upload</span>
-                  Importar datos
-                </button>
-              </div>
-
-              <div class="toolbar-footer">
-                <button id="btn-reset">
-                  <span class="material-symbols-rounded">restart_alt</span>
-                  Reiniciar progreso
-                </button>
-              </div>
-            </div>
-
-            <input
-              type="file"
-              id="input-import"
-              accept=".json"
-              hidden
-            />
-          </div>
-        </aside>
-        <figure class="map-container" id="map"></figure>
-      </div>
-    </section>
-  </main>
-
-  <fragment slot="scripts">
-    {meta.soundDelay !== null ? (
-      <script is:inline define:vars={{ delay: meta.soundDelay }}>
-        window.SOUND_DELAY = delay;
-      </script>
-    ) : null}
-    <!-- Sounds -->
-    <script is:inline src="/assets/scripts/sounds.js"></script>
-
-    <!-- Map Leaflet MarkerCluster -->
-    <script is:inline src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-    <script is:inline define:vars={{ gameId: game }}>
-      window.GAME_ID = gameId;
-      window.CONFIG_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${gameId}/map.json`;
-    </script>
-    <script is:inline src="/assets/scripts/map.js"></script>
-  </fragment>
+        <!-- Map -->
+        <script
+            is:inline
+            src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"
+        ></script>
+        <script is:inline define:vars={{ gameId: game }}>
+            window.GAME_ID = gameId;
+            window.CONFIG_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${gameId}/map.json`;
+        </script>
+        <script is:inline src="/assets/scripts/map.js"></script>
+    </fragment>
 </BaseLayout>

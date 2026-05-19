@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelectorAll("#rightContent a").forEach((link) => {
         link.addEventListener("click", function (e) {
-            // Permitir abrir en nueva pestaña (Ctrl/Cmd/Shift click o click central)
             if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) {
                 return;
             }

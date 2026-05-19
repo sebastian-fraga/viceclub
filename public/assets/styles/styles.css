@@ -1777,10 +1777,15 @@ header {
             box-shadow: 0 0 40px rgba(225, 177, 255, 0.05) inset;
 
             & .footer-settings {
-                display: flex;
-                justify-content: space-between;
-                gap: 1em;
+                display: grid;
+                grid-template-columns: 1fr auto;
                 align-items: center;
+                width: 100%;
+                max-width: 280px;
+                padding-inline: 0.8em;
+                gap: 1em;
+
+
 
                 & .settings-text {
                     display: flex;
@@ -1789,6 +1794,8 @@ header {
 
                     & span {
                         color: #fcfafa;
+                        opacity: 0.85;
+
                     }
 
                     & p {
@@ -1874,6 +1881,13 @@ header {
                         align-items: center;
                         gap: 0.7em;
                     }
+                }
+
+                & label,
+                & button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
                 & .lang-menu {
@@ -5255,6 +5269,7 @@ body:has(.reset-dialog[open]) {
 
                             & article {
                                 padding: 10px;
+
                                 & h4 {
                                     text-wrap: pretty;
                                     max-width: 40ch;
@@ -5778,6 +5793,12 @@ body:has(.reset-dialog[open]) {
     #artistName,
     #songTitle {
         max-width: 150px !important;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cursor-setting {
+        display: none !important;
     }
 }
 
