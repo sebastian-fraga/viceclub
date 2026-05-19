@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { game: "III" } },
+    { params: { game: "VC" } },
+    { params: { game: "SA" } },
+    { params: { game: "LCS" } },
+    { params: { game: "VCS" } },
+    { params: { game: "IV" } },
+    { params: { game: "V" } },
+  ];
+}
+
+const { game } = Astro.params;
+
+const metadata = {
+  III: {
+    title: "GTA III Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA 3: Trucos para las versiones de PlayStation, Xbox, Nintendo Switch y PC.",
+    bodyClass: "gta-3",
+    heading: "Trucos de Grand Theft Auto III"
+  },
+  VC: {
+    title: "GTA VC Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA VC: Trucos para las versiones de PlayStation, Xbox y PC.",
+    bodyClass: "gta-vc",
+    heading: "Trucos de Grand Theft Auto: Vice City"
+  },
+  SA: {
+    title: "GTA SA Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA SA: Trucos para las versiones de PlayStation, Xbox, Nintendo Switch y PC.",
+    bodyClass: "gta-sa",
+    heading: "Trucos de Grand Theft Auto: San Andreas"
+  },
+  LCS: {
+    title: "GTA LCS Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA LCS: Trucos para las versiones de PlayStation y PC.",
+    bodyClass: "gta-lcs",
+    heading: "Trucos de Grand Theft Auto: Liberty City Stories"
+  },
+  VCS: {
+    title: "GTA VCS Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA VCS: Trucos para las versiones de PlayStation y PC.",
+    bodyClass: "gta-vcs",
+    heading: "Trucos de Grand Theft Auto: Vice City Stories"
+  },
+  IV: {
+    title: "GTA IV Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA 4: Trucos para las versiones de PlayStation, Xbox y PC.",
+    bodyClass: "gta-4",
+    heading: "Trucos de Grand Theft Auto IV"
+  },
+  V: {
+    title: "GTA V Trucos | Lista Completa | Vice Club",
+    description: "Todos los trucos para GTA 5: Trucos para las versiones de PlayStation, Xbox y PC.",
+    bodyClass: "gta-5",
+    heading: "Trucos de Grand Theft Auto V"
+  }
+};
+
+const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://www.viceclub.app/${game}/trucos`}
+  bodyClass={meta.bodyClass}
+  game={game}
+  section="trucos"
+>
+  <main class="block" id="container">
+    <section class="text-container">
+      <h1>{meta.heading}</h1>
+      <nav class="platform-selector" role="tablist"></nav>
+
+      <div class="cheats-search">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar trucos..."
+          autocomplete="off"
+          maxlength="38"
+        />
+        <span class="material-symbols-rounded search-icon">search</span>
+
+        <span class="material-symbols-rounded help-icon">help</span>
+        <aside class="tooltip">
+          <h3>Filtros de búsqueda</h3>
+          <p class="tooltip-text">Por sección</p>
+          <ul>
+            <li>
+              <code>section:</code>
+              <span>+</span>
+              <code>[nombre]</code>
+            </li>
+            <li>
+              <code>s:</code>
+              <span>+</span>
+              <code>[nombre]</code>
+            </li>
+          </ul>
+
+          <p class="tooltip-text">Por truco (PC)</p>
+          <ul class="pc">
+            <li>
+              <code>cheat:</code>
+              <span>+</span>
+              <code>[truco]</code>
+            </li>
+            <li>
+              <code>c:</code>
+              <span>+</span>
+              <code>[truco]</code>
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+      <div id="cheatsContainer" role="tabpanel"></div>
+    </section>
+  </main>
+
+  <fragment slot="scripts">
+    <!-- Sounds -->
+    <script is:inline src="/assets/scripts/sounds.js"></script>
+    <!-- Cheats -->
+    <script is:inline src="/assets/scripts/cheats.js"></script>
+  </fragment>
+</BaseLayout>

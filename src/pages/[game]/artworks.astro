@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { game: "III" } },
+    { params: { game: "VC" } },
+    { params: { game: "SA" } },
+    { params: { game: "LCS" } },
+    { params: { game: "VCS" } },
+    { params: { game: "IV" } },
+    { params: { game: "V" } },
+  ];
+}
+
+const { game } = Astro.params;
+
+const metadata = {
+  III: {
+    title: "Artworks de GTA III | Vice Club",
+    description: "Todos los artworks de GTA III. Artworks de Claude, personajes secundarios, bandas y más en Grand Theft Auto III.",
+    bodyClass: "gta-3"
+  },
+  VC: {
+    title: "Artworks de GTA VC | Vice Club",
+    description: "Todos los artworks de GTA VC. Artworks de Tommy, personajes secundarios, bandas y más en Grand Theft Auto: Vice City.",
+    bodyClass: "gta-vc"
+  },
+  SA: {
+    title: "Artworks de GTA SA | Vice Club",
+    description: "Todos los artworks de GTA SA. Artworks de CJ, personajes secundarios, bandas y más en Grand Theft Auto: San Andreas.",
+    bodyClass: "gta-sa"
+  },
+  LCS: {
+    title: "Artworks de GTA LCS | Vice Club",
+    description: "Todos los artworks de GTA LCS. Artworks de Toni Cipriani, personajes secundarios, bandas y más en Grand Theft Auto: Liberty City Stories.",
+    bodyClass: "gta-lcs"
+  },
+  VCS: {
+    title: "Artworks de GTA VCS | Vice Club",
+    description: "Todos los artworks de GTA VCS. Artworks de Victor Vance, personajes secundarios, bandas y más en Grand Theft Auto: Vice City Stories.",
+    bodyClass: "gta-vcs"
+  },
+  IV: {
+    title: "Artworks de GTA IV | Vice Club",
+    description: "Todos los artworks de GTA IV. Artworks de Niko Bellic, personajes secundarios, bandas y más en Grand Theft Auto IV.",
+    bodyClass: "gta-4"
+  },
+  V: {
+    title: "Artworks de GTA V | Vice Club",
+    description: "Todos los artworks de GTA V. Artworks de Michael, Franklin, Trevor, personajes secundarios y más en Grand Theft Auto V.",
+    bodyClass: "gta-5"
+  }
+};
+
+const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://www.viceclub.app/${game}/artworks`}
+  bodyClass={meta.bodyClass}
+  game={game}
+  section="artworks"
+>
+  <div class="wip">
+    <p>EN CONSTRUCCIÓN</p>
+  </div>
+  <div class="block" id="container">
+    <div class="text-container"></div>
+  </div>
+
+  <fragment slot="scripts">
+    <!-- Sounds -->
+    <script is:inline src="/assets/scripts/sounds.js"></script>
+  </fragment>
+</BaseLayout>

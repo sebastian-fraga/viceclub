@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { game: "III" } },
+    { params: { game: "VC" } },
+    { params: { game: "SA" } },
+    { params: { game: "IV" } },
+    { params: { game: "V" } },
+  ];
+}
+
+const { game } = Astro.params;
+
+const metadata = {
+  III: {
+    title: "Mods y Herramientas de GTA III | Vice Club",
+    description: "Explora herramientas y mods para la versión de PC de GTA 3. Lista de mods esenciales, fixes, y modificaciones que mejoran tu jugabilidad en Grand Theft Auto III.",
+    bodyClass: "gta-3",
+    heading: "Herramientas y Mods para Grand Theft Auto III",
+    paragraph: "Si deseas tener la mejor experiencia al jugar a <b>Grand Theft Auto III</b> en PC, es recomendable usar algunos mods esenciales. Aquí encontrarás las herramientas imprescindibles para corregir errores, mejorar la compatibilidad y optimizar el rendimiento, entre otras cosas",
+    soundDelay: null,
+  },
+  VC: {
+    title: "Mods y Herramientas de GTA Vice City | Vice Club",
+    description: "Explora herramientas y mods para la versión de PC de GTA VC. Lista de mods esenciales, fixes, y modificaciones que mejoran tu jugabilidad en Grand Theft Auto: Vice City.",
+    bodyClass: "gta-vc",
+    heading: "Herramientas y Mods para Grand Theft Auto: Vice City",
+    paragraph: "Si deseas tener la mejor experiencia al jugar a <b>Grand Theft Auto: Vice City</b> en PC, es recomendable usar algunos mods esenciales. Aquí encontrarás las herramientas imprescindibles para corregir errores, mejorar la compatibilidad y optimizar el rendimiento, entre otras cosas",
+    soundDelay: null,
+  },
+  SA: {
+    title: "Mods y Herramientas de GTA San Andreas | Vice Club",
+    description: "Explora herramientas y mods para la versión de PC de GTA SA. Lista de mods esenciales, fixes, y modificaciones que mejoran tu jugabilidad en Grand Theft Auto: San Andreas.",
+    bodyClass: "gta-sa",
+    heading: "Herramientas y Mods para Grand Theft Auto: San Andreas",
+    paragraph: "Si deseas tener la mejor experiencia al jugar a <b>Grand Theft Auto: San Andreas</b> en PC, es recomendable usar algunos mods esenciales. Aquí encontrarás las herramientas imprescindibles para corregir errores, mejorar la compatibilidad y optimizar el rendimiento, entre otras cosas",
+    soundDelay: 200,
+  },
+  IV: {
+    title: "Mods y Herramientas de GTA IV | Vice Club",
+    description: "Explora herramientas y mods para la versión de PC de GTA 4. Lista de mods esenciales, fixes, y modificaciones que mejoran tu jugabilidad en Grand Theft Auto IV.",
+    bodyClass: "gta-4",
+    heading: "Herramientas y Mods para Grand Theft Auto IV",
+    paragraph: "Si deseas tener la mejor experiencia al jugar a <b>Grand Theft Auto IV</b> en PC, es recomendable usar algunos mods esenciales. Aquí encontrarás las herramientas imprescindibles para corregir errores, mejorar la compatibilidad y optimizar el rendimiento, entre otras cosas",
+    soundDelay: null,
+  },
+  V: {
+    title: "Mods y Herramientas de GTA V | Vice Club",
+    description: "Explora herramientas y mods para la versión de PC de GTA 5. Lista de mods esenciales, fixes, y modificaciones que mejoran tu jugabilidad en Grand Theft Auto V.",
+    bodyClass: "gta-5",
+    heading: "Herramientas y Mods para Grand Theft Auto V",
+    paragraph: "Si deseas tener la mejor experiencia al jugar a <b>Grand Theft Auto V</b> en PC, es recomendable usar algunos mods esenciales. Aquí encontrarás las herramientas imprescindibles para corregir errores, mejorar la compatibilidad y optimizar el rendimiento, entre otras cosas",
+    soundDelay: 400,
+  }
+};
+
+const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://www.viceclub.app/${game}/herramientas_y_mods`}
+  bodyClass={meta.bodyClass}
+  game={game}
+  section="herramientas_y_mods"
+>
+  <main class="block" id="container">
+    <section class="text-container">
+      <h1>{meta.heading}</h1>
+      <p class="mod-paragraph" set:html={meta.paragraph}></p>
+      <div
+        class="mods-container"
+        id="modsContainer"
+        data-game={game}
+      ></div>
+    </section>
+  </main>
+
+  <fragment slot="scripts">
+    {meta.soundDelay !== null ? (
+      <script is:inline define:vars={{ delay: meta.soundDelay }}>
+        window.SOUND_DELAY = delay;
+      </script>
+    ) : null}
+    <!-- Sounds -->
+    <script is:inline src="/assets/scripts/sounds.js"></script>
+    <!-- Mods -->
+    <script is:inline src="/assets/scripts/mods.js"></script>
+  </fragment>
+</BaseLayout>

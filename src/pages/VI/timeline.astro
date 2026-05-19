@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Linea de tiempo de GTA 6 – Lista completa de filtraciones e información | Vice Club"
+  description="Línea de tiempo de GTA 6 con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
+  canonical="https://www.viceclub.app/VI/timeline"
+  bodyClass="gta-vi timeline"
+  game="VI"
+  section="timeline"
+>
+    <main class="block" id="container">
+        <section class="text-container" id="timelineContainer"></section>
+    </main>
+    
+    <div class="timeline-arrow" id="arrowButton">
+        <span class="material-symbols-rounded">south</span>
+    </div>
+
+    <dialog id="imageOverlay" slot="overlay">
+        <button
+            class="material-symbols-rounded close-btn"
+            id="closeBtn"
+            aria-label="Cerrar"
+        >
+            close_small
+        </button>
+        <figure>
+            <div class="image-wrapper">
+                <img src="" alt="Imagen ampliada" id="overlayImg" />
+            </div>
+            <figcaption id="overlayFooterText"></figcaption>
+        </figure>
+    </dialog>
+
+    <fragment slot="scripts">
+        <!-- Timeline -->
+        <script is:inline src="/assets/scripts/timeline.js"></script>
+        <!-- Overlay -->
+        <script is:inline src="/assets/scripts/overlay.js"></script>
+    </fragment>
+</BaseLayout>

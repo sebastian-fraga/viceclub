@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import III_inicio from "../../components/games/III_inicio.astro";
+import VC_inicio from "../../components/games/VC_inicio.astro";
+import SA_inicio from "../../components/games/SA_inicio.astro";
+import LCS_inicio from "../../components/games/LCS_inicio.astro";
+import VCS_inicio from "../../components/games/VCS_inicio.astro";
+import IV_inicio from "../../components/games/IV_inicio.astro";
+import V_inicio from "../../components/games/V_inicio.astro";
+import VI_inicio from "../../components/games/VI_inicio.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { game: "III" } },
+    { params: { game: "VC" } },
+    { params: { game: "SA" } },
+    { params: { game: "LCS" } },
+    { params: { game: "VCS" } },
+    { params: { game: "IV" } },
+    { params: { game: "V" } },
+    { params: { game: "VI" } },
+  ];
+}
+
+const { game } = Astro.params;
+
+const metadata = {
+  III: {
+    title: "GTA III | Vice Club",
+    description: "Todo sobre GTA 3: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto III en Vice Club.",
+    bodyClass: "gta-3"
+  },
+  VC: {
+    title: "GTA Vice City | Vice Club",
+    description: "Todo sobre GTA VC: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto: Vice City en Vice Club.",
+    bodyClass: "gta-vc"
+  },
+  SA: {
+    title: "GTA San Andreas | Vice Club",
+    description: "Todo sobre GTA SA: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto: San Andreas en Vice Club.",
+    bodyClass: "gta-sa"
+  },
+  LCS: {
+    title: "GTA Liberty City Stories | Vice Club",
+    description: "Todo sobre GTA LCS: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto: Liberty City Stories en Vice Club.",
+    bodyClass: "gta-lcs"
+  },
+  VCS: {
+    title: "GTA Vice City Stories | Vice Club",
+    description: "Todo sobre GTA VCS: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto: Vice City Stories en Vice Club.",
+    bodyClass: "gta-vcs"
+  },
+  IV: {
+    title: "GTA IV | Vice Club",
+    description: "Todo sobre GTA 4: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto IV en Vice Club.",
+    bodyClass: "gta-iv home"
+  },
+  V: {
+    title: "GTA V | Vice Club",
+    description: "Todo sobre GTA 5: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto V en Vice Club.",
+    bodyClass: "gta-5"
+  },
+  VI: {
+    title: "GTA VI | Vice Club",
+    description: "Todo sobre GTA 6: checklist para el 100%, mapa interactivo, trucos, mods y más herramientas para Grand Theft Auto VI en Vice Club.",
+    bodyClass: "gta-vi"
+  }
+};
+
+const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://www.viceclub.app/${game}/inicio`}
+  bodyClass={meta.bodyClass}
+  game={game}
+  section="inicio"
+>
+  <main class="block" id="container">
+    {game === "III" && <III_inicio />}
+    {game === "VC" && <VC_inicio />}
+    {game === "SA" && <SA_inicio />}
+    {game === "LCS" && <LCS_inicio />}
+    {game === "VCS" && <VCS_inicio />}
+    {game === "IV" && <IV_inicio />}
+    {game === "V" && <V_inicio />}
+    {game === "VI" && <VI_inicio />}
+  </main>
+
+  <fragment slot="scripts">
+    <!-- Sounds -->
+    <script is:inline src="/assets/scripts/sounds.js"></script>
+    <!-- Characters -->
+    <script is:inline src="/assets/scripts/characters.js"></script>
+  </fragment>
+</BaseLayout>

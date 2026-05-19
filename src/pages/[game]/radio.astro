@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { game: "III" } },
+    { params: { game: "VC" } },
+    { params: { game: "SA" } },
+    { params: { game: "LCS" } },
+    { params: { game: "VCS" } },
+    { params: { game: "IV" } },
+    { params: { game: "V" } },
+  ];
+}
+
+const { game } = Astro.params;
+
+const metadata = {
+  III: {
+    title: "Radios de GTA III – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA 3. Escucha todas las emisoras de Grand Theft Auto III en Vice Club",
+    bodyClass: "gta-3",
+    heading: "Radios de Grand Theft Auto III",
+    soundDelay: null,
+  },
+  VC: {
+    title: "Radios de GTA Vice City – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA VC. Escucha todas las emisoras de Grand Theft Auto: Vice City en Vice Club",
+    bodyClass: "gta-vc",
+    heading: "Radios de Grand Theft Auto: Vice City",
+    soundDelay: null,
+  },
+  SA: {
+    title: "Radios de GTA San Andreas – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA SA. Escucha todas las emisoras de Grand Theft Auto: San Andreas en Vice Club",
+    bodyClass: "gta-sa",
+    heading: "Radios de Grand Theft Auto: San Andreas",
+    soundDelay: 200,
+  },
+  LCS: {
+    title: "Radios de GTA Liberty City Stories – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club",
+    bodyClass: "gta-lcs",
+    heading: "Radios de Grand Theft Auto: Liberty City Stories",
+    soundDelay: 200,
+  },
+  VCS: {
+    title: "Radios de GTA Vice City Stories – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA VCS. Escucha todas las emisoras de Grand Theft Auto: Vice City Stories en Vice Club",
+    bodyClass: "gta-vcs",
+    heading: "Radios de Grand Theft Auto: Vice City Stories",
+    soundDelay: null,
+  },
+  IV: {
+    title: "Radios de GTA IV – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA 4. Escucha todas las emisoras de Grand Theft Auto IV y sus expansiones en Vice Club",
+    bodyClass: "gta-4",
+    heading: "Radios de Grand Theft Auto IV",
+    soundDelay: null,
+  },
+  V: {
+    title: "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
+    description: "Radios de GTA 5. Escucha todas las emisoras de Grand Theft Auto V en Vice Club",
+    bodyClass: "gta-5",
+    heading: "Radios de Grand Theft Auto V",
+    soundDelay: 400,
+  }
+};
+
+const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonical={`https://www.viceclub.app/${game}/radio`}
+  bodyClass={meta.bodyClass}
+  game={game}
+  section="radio"
+>
+  <main class="block" id="container" style="display: block;">
+    <section class="text-container">
+      <h1>{meta.heading}</h1>
+      <div class="radio-container">
+        <div id="radioGrid" class={game === "V" ? "radio-wheel" : "radio-grid"}></div>
+      </div>
+    </section>
+  </main>
+
+  <aside id="radioInfo" class="radio-info" role="region">
+    <img src="" alt="" id="radioImage" />
+    <h3 id="radioTitle"></h3>
+    <div id="radioDJ"></div>
+    <div id="radioGenre"></div>
+    <ol id="radioList"></ol>
+  </aside>
+
+  <section class="radio-footer" aria-label="Reproductor de radio">
+    <div class="footer-left">
+      <div class="footer-album">
+        <img id="albumArt" alt="" />
+      </div>
+      <div class="footer-text">
+        <p id="songTitle">Canción</p>
+        <p id="artistName">Artista</p>
+      </div>
+    </div>
+    <div class="footer-center">
+      <div class="footer-controls">
+        <span class="material-symbols-rounded">skip_previous</span>
+        <span class="material-symbols-rounded footer-pause">pause_circle</span>
+        <span class="material-symbols-rounded footer-play" style="display: none;">play_circle</span>
+        <span class="material-symbols-rounded">skip_next</span>
+      </div>
+      <div class="footer-timer">
+        <p id="currentTime">0:00</p>
+        <div id="bar">
+          <div id="currentBar"></div>
+        </div>
+        <p id="totalTime">0:00</p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-volume">
+        <span class="material-symbols-rounded">volume_up</span>
+        <input type="range" min="0" max="100" value="100" />
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="scripts">
+    {meta.soundDelay !== null ? (
+      <script is:inline define:vars={{ delay: meta.soundDelay }}>
+        window.SOUND_DELAY = delay;
+      </script>
+    ) : null}
+    <!-- Sounds -->
+    <script is:inline src="/assets/scripts/sounds.js"></script>
+    <!-- Radio -->
+    <script is:inline src="/assets/scripts/radio.js"></script>
+  </fragment>
+</BaseLayout>
