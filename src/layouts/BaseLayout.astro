@@ -51,6 +51,26 @@ const {
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
         />
 
+        {
+            isIndex && (
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/assets/images/main/backgrounds/background.webp"
+                />
+            )
+        }
+
+        {
+            game && (
+                <link
+                    rel="preload"
+                    as="image"
+                    href={`/assets/images/main/backgrounds/background_${game}.webp`}
+                />
+            )
+        }
+
         <meta name="description" content={description} />
 
         <meta property="og:site_name" content="Vice Club" />
