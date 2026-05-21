@@ -303,24 +303,21 @@ body {
                     & .fotd-image {
                         width: 100%;
                         height: 160px;
-                        overflow: hidden;
                         aspect-ratio: 5 / 4;
                         display: block;
-                        background: linear-gradient(to bottom, #000000ee, transparent);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
                         & img {
                             width: 100%;
                             height: 100%;
                             object-position: center;
                             object-fit: cover;
-                            mask-image: linear-gradient(to bottom, #ffffff 80%, transparent 100%);
-
                         }
                     }
 
                     & .fotd-description {
                         position: relative;
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
                         & p {
                             font-family: "GTAArtDecoRegular";
@@ -341,25 +338,33 @@ body {
                         justify-content: center;
                         flex-wrap: wrap;
                         gap: 1em;
+                        background: rgba(0, 0, 0, 0.06);
+                        backdrop-filter: brightness(0.97);
+                        border-radius: 0 0 25px 25px;
+
 
                         & a,
                         .fotd-map-btn {
 
                             & span {
-                                color: #802bc5;
+                                color: #4e6ed8;
+                                transition: all 0.2s ease;
                             }
 
                             display: flex;
                             align-items: center;
                             gap: 6px;
-                            font-weight: 800;
-                            color: #802bc5;
+                            font-weight: 200;
+                            color: #2b61c5;
                             transition: all 0.2s ease;
                             user-select: none;
 
                             &:hover {
                                 color: #9c3deb;
-                                text-shadow: 0 0 2px rgba(73, 103, 236, 0.555);
+
+                                & span {
+                                    color: #9c3deb;
+                                }
                             }
                         }
 
