@@ -4,12 +4,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (saved) return saved;
         return "ES";
 
-        /*
-    const browserLang = navigator.language?.slice(0, 2).toUpperCase();
+        const browserLang = navigator.language?.slice(0, 2).toUpperCase();
 
-    const supported = ["ES", "EN", "FR", "PT"];
-    return supported.includes(browserLang) ? browserLang : "ES";
-    */
+        const supported = ["ES", "EN", "FR", "PT"];
+        return supported.includes(browserLang) ? browserLang : "ES";
     }
 
     const btn = document.querySelector(".footer-settings button");
