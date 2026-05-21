@@ -45,5 +45,61 @@
         "bottom": {
             "backtotop": "Back to top"
         }
+    },
+    "checklist": {
+        "III": {
+            "heading": "100% Checklist for Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "100% Checklist for Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "100% Checklist for Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "100% Checklist for Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "100% Checklist for Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "100% Checklist for Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "100% Checklist for Grand Theft Auto V"
+        }
+    },
+    "trucos": {
+        "III": {
+            "heading": "Cheats for Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Cheats for Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Cheats for Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Cheats for Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Cheats for Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Cheats for Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Cheats for Grand Theft Auto V"
+        },
+        "search_placeholder": "Search for cheats...",
+        "tooltip": {
+            "title": "Search filters",
+            "by_section": "By section:",
+            "by_cheat": "By cheat (PC):",
+            "code": {
+                "name": "name",
+                "cheat": "cheat"
+            }
+        }
     }
 }

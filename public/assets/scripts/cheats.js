@@ -236,13 +236,16 @@ async function loadCheats() {
 
 function getAvailablePlatforms(cheatsObject) {
     const keys = new Set();
-    Object.values(cheatsObject).forEach((arr) =>
+    Object.entries(cheatsObject).forEach(([key, data]) => {
+        if (key === "category" || key === "definitivePlatforms") return;
+        const arr = data.cheats ?? data;
+        if (!Array.isArray(arr)) return;
         arr.forEach(
             (cheat) =>
                 cheat.codes &&
                 Object.keys(cheat.codes).forEach((k) => keys.add(k)),
-        ),
-    );
+        );
+    });
     return Array.from(keys);
 }
 
@@ -428,16 +431,26 @@ function filterCheats(query) {
 function renderCheats() {
     const container = document.getElementById("cheatsContainer");
     if (!container) return;
+    const lang = localStorage.getItem("lang") ?? "ES";
 
     container.innerHTML = "";
     const fragment = document.createDocumentFragment();
 
     let cheatIndex = 0;
 
-    Object.entries(cheats).forEach(([category, cheatsInCategory]) => {
+    Object.entries(cheats).forEach(([key, data]) => {
+        if (key === "category" || key === "definitivePlatforms") return;
+
+        const cheatsInCategory = Array.isArray(data)
+            ? data
+            : (data.cheats ?? []);
+        const categoryName = Array.isArray(data)
+            ? key
+            : (data.category?.[lang] ?? data.category?.ES ?? key);
+
         const section = document.createElement("section");
         section.className = "cheat-category";
-        section.dataset.category = category
+        section.dataset.category = categoryName
             .toLowerCase()
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "");
@@ -447,7 +460,7 @@ function renderCheats() {
 
         const title = document.createElement("h3");
         title.className = "category-title";
-        title.textContent = category;
+        title.textContent = categoryName;
 
         const count = cheatsInCategory.filter(
             (c) => c.codes?.[currentPlatform],
@@ -470,6 +483,9 @@ function renderCheats() {
             const cheatTitle = document.createElement("h4");
             cheatTitle.className = "cheat-title";
             cheatTitle.textContent = cheat.title;
+
+            cheatTitle.textContent =
+                cheat.title?.[lang] ?? cheat.title?.ES ?? cheat.title;
 
             const cheatCode = document.createElement("div");
             cheatCode.className = "cheat-code";
@@ -528,7 +544,10 @@ function renderCheats() {
                       .flatMap(
                           (n) =>
                               n.notes ?? [
-                                  { text: n.note, type: n.noteType ?? "info" },
+                                  {
+                                      text: n.note?.[lang] ?? n.note,
+                                      type: n.noteType ?? "info",
+                                  },
                               ],
                       )
                 : [];
@@ -536,12 +555,22 @@ function renderCheats() {
             const globalNotes =
                 cheat.notes ??
                 (cheat.note
-                    ? [{ text: cheat.note, type: cheat.noteType ?? "info" }]
+                    ? [
+                          {
+                              text:
+                                  cheat.note?.[lang] ??
+                                  cheat.note?.ES ??
+                                  cheat.note,
+                              type: cheat.noteType ?? "info",
+                          },
+                      ]
                     : []);
 
             const notes = [...platformNotes, ...globalNotes];
 
             notes.forEach(({ text, type = "info" }) => {
+                const resolvedText = text?.[lang] ?? text?.ES ?? text;
+
                 const noteEl = document.createElement("div");
                 noteEl.className = `cheat-note cheat-note--${type}`;
 
@@ -551,7 +580,7 @@ function renderCheats() {
 
                 const textEl = document.createElement("span");
                 textEl.className = "cheat-note-text";
-                textEl.innerHTML = text;
+                textEl.innerHTML = resolvedText;
 
                 noteEl.appendChild(icon);
                 noteEl.appendChild(textEl);

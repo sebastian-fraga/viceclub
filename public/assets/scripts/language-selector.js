@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     function detectLang() {
         const saved = localStorage.getItem("lang");
         if (saved) return saved;
-        return "ES";
 
         const browserLang = navigator.language?.slice(0, 2).toUpperCase();
-
         const supported = ["ES", "EN", "FR", "PT"];
         return supported.includes(browserLang) ? browserLang : "ES";
     }
@@ -26,6 +24,26 @@ document.addEventListener("DOMContentLoaded", async function () {
                 .reduce((obj, k) => obj?.[k], translations);
             if (value) el.textContent = value;
         });
+
+        const game = window.location.pathname.split("/")[1];
+        const section = window.location.pathname.split("/")[2];
+        const sectionKey = section === "100" ? "checklist" : section;
+
+        const heading = translations?.[sectionKey]?.[game]?.heading;
+        if (heading) document.querySelector("h1").textContent = heading;
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+            const key = el.dataset.i18nPlaceholder;
+            const value = key
+                .split(".")
+                .reduce((obj, k) => obj?.[k], translations);
+            if (value) el.placeholder = value;
+        });
+
+        // cheats
+        if (typeof renderCheats === "function") {
+            renderCheats();
+        }
     }
 
     async function changeLang(lang) {

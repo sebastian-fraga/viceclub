@@ -2,89 +2,99 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  return [
-    { params: { game: "III" } },
-    { params: { game: "VC" } },
-    { params: { game: "SA" } },
-    { params: { game: "LCS" } },
-    { params: { game: "VCS" } },
-    { params: { game: "IV" } },
-    { params: { game: "V" } },
-  ];
+    return [
+        { params: { game: "III" } },
+        { params: { game: "VC" } },
+        { params: { game: "SA" } },
+        { params: { game: "LCS" } },
+        { params: { game: "VCS" } },
+        { params: { game: "IV" } },
+        { params: { game: "V" } },
+    ];
 }
 
 const { game } = Astro.params;
 
 const metadata = {
-  III: {
-    title: "GTA III Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA 3. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto III.",
-    bodyClass: "gta-3",
-    heading: "Lista para el 100% de Grand Theft Auto III"
-  },
-  VC: {
-    title: "GTA VC Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA VC. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City.",
-    bodyClass: "gta-vc",
-    heading: "Lista para el 100% de Grand Theft Auto: Vice City"
-  },
-  SA: {
-    title: "GTA SA Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA SA. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: San Andreas.",
-    bodyClass: "gta-sa",
-    heading: "Lista para el 100% de Grand Theft Auto: San Andreas"
-  },
-  LCS: {
-    title: "GTA LCS Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA LCS. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Liberty City Stories.",
-    bodyClass: "gta-lcs",
-    heading: "Lista para el 100% de Grand Theft Auto: Liberty City Stories"
-  },
-  VCS: {
-    title: "GTA VCS Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA VCS. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City Stories.",
-    bodyClass: "gta-vcs",
-    heading: "Lista para el 100% de Grand Theft Auto: Vice City Stories"
-  },
-  IV: {
-    title: "GTA IV Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA 4. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto IV.",
-    bodyClass: "gta-4",
-    heading: "Lista para el 100% de Grand Theft Auto IV"
-  },
-  V: {
-    title: "GTA V Checklist para el 100% | Vice Club",
-    description: "Checklist completo para lograr el 100% en GTA 5. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto V.",
-    bodyClass: "gta-5",
-    heading: "Lista para el 100% de Grand Theft Auto V"
-  }
+    III: {
+        title: "GTA III Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA 3. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto III.",
+        bodyClass: "gta-3",
+        heading: "Lista para el 100% de Grand Theft Auto III",
+    },
+    VC: {
+        title: "GTA VC Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA VC. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City.",
+        bodyClass: "gta-vc",
+        heading: "Lista para el 100% de Grand Theft Auto: Vice City",
+    },
+    SA: {
+        title: "GTA SA Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA SA. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: San Andreas.",
+        bodyClass: "gta-sa",
+        heading: "Lista para el 100% de Grand Theft Auto: San Andreas",
+    },
+    LCS: {
+        title: "GTA LCS Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA LCS. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Liberty City Stories.",
+        bodyClass: "gta-lcs",
+        heading: "Lista para el 100% de Grand Theft Auto: Liberty City Stories",
+    },
+    VCS: {
+        title: "GTA VCS Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA VCS. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City Stories.",
+        bodyClass: "gta-vcs",
+        heading: "Lista para el 100% de Grand Theft Auto: Vice City Stories",
+    },
+    IV: {
+        title: "GTA IV Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA 4. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto IV.",
+        bodyClass: "gta-4",
+        heading: "Lista para el 100% de Grand Theft Auto IV",
+    },
+    V: {
+        title: "GTA V Checklist para el 100% | Vice Club",
+        description:
+            "Checklist completo para lograr el 100% en GTA 5. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto V.",
+        bodyClass: "gta-5",
+        heading: "Lista para el 100% de Grand Theft Auto V",
+    },
 };
 
 const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-  title={meta.title}
-  description={meta.description}
-  canonical={`https://www.viceclub.app/${game}/100`}
-  bodyClass={meta.bodyClass}
-  game={game}
-  section="100"
+    title={meta.title}
+    description={meta.description}
+    canonical={`https://www.viceclub.app/${game}/100`}
+    bodyClass={meta.bodyClass}
+    game={game}
+    section="100"
 >
-  <main class="block" id="container">
-    <section class="text-container">
-      <h1>{meta.heading}</h1>
-      <div class="checklist-percentage"></div>
-      <div class="checklist-container"></div>
-    </section>
-  </main>
+    <main class="block" id="container">
+        <section class="text-container">
+            <h1>{meta.heading}</h1>
+            <div class="checklist-percentage"></div>
+            <div class="checklist-container"></div>
+        </section>
+    </main>
 
-  <fragment slot="scripts">
-    <!-- Right Content settings -->
-    <script is:inline src="/assets/scripts/cursor.js"></script>
-    <script is:inline src="/assets/scripts/sounds.js"></script>
-    <!-- Checklist -->
-    <script is:inline src="/assets/scripts/checklist.js"></script>
-    <script is:inline src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.0.2/tsparticles.confetti.bundle.min.js"></script>
-  </fragment>
+    <fragment slot="scripts">
+        <!-- Right Content settings -->
+        <script is:inline src="/assets/scripts/cursor.js"></script>
+        <script is:inline src="/assets/scripts/sounds.js"></script>
+        <!-- Checklist -->
+        <script is:inline src="/assets/scripts/checklist.js"></script>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.0.2/tsparticles.confetti.bundle.min.js"
+        ></script>
+    </fragment>
 </BaseLayout>

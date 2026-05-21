@@ -88,6 +88,7 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
                     type="text"
                     id="searchInput"
                     placeholder="Buscar trucos..."
+                    data-i18n-placeholder="trucos.search_placeholder"
                     autocomplete="off"
                     maxlength="38"
                 />
@@ -95,32 +96,44 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 
                 <span class="material-symbols-rounded help-icon">help</span>
                 <aside class="tooltip">
-                    <h3>Filtros de búsqueda</h3>
-                    <p class="tooltip-text">Por sección</p>
+                    <h3 data-i18n="trucos.tooltip.title">
+                        Filtros de búsqueda
+                    </h3>
+                    <p
+                        class="tooltip-text"
+                        data-i18n="trucos.tooltip.by_section"
+                    >
+                        Por sección
+                    </p>
                     <ul>
                         <li>
                             <code>section:</code>
                             <span>+</span>
-                            <code>[nombre]</code>
+                            <code data-i18n="trucos.tooltip.code.name">[nombre]</code>
                         </li>
                         <li>
                             <code>s:</code>
                             <span>+</span>
-                            <code>[nombre]</code>
+                            <code data-i18n="trucos.tooltip.code.name">[nombre]</code>
                         </li>
                     </ul>
 
-                    <p class="tooltip-text">Por truco (PC)</p>
+                    <p
+                        class="tooltip-text pc"
+                        data-i18n="trucos.tooltip.by_cheat"
+                    >
+                        Por truco (PC)
+                    </p>
                     <ul class="pc">
                         <li>
                             <code>cheat:</code>
                             <span>+</span>
-                            <code>[truco]</code>
+                            <code data-i18n="trucos.tooltip.code.cheat">[truco]</code>
                         </li>
                         <li>
                             <code>c:</code>
                             <span>+</span>
-                            <code>[truco]</code>
+                            <code data-i18n="trucos.tooltip.code.cheat">[truco]</code>
                         </li>
                     </ul>
                 </aside>
