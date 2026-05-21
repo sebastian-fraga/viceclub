@@ -89,9 +89,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const url = new URL(href, window.location.href);
                     if (url.protocol === "http:" || url.protocol === "https:") {
                         e.preventDefault();
+                        const effectiveDelay = isSoundEnabled() ? delay : 0;
                         setTimeout(
                             () => (window.location.href = url.href),
-                            delay,
+                            effectiveDelay,
                         );
                     }
                 } catch (err) {}
@@ -109,4 +110,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
-
