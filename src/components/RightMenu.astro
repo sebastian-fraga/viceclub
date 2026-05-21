@@ -91,7 +91,7 @@ const activeSections = SECTIONS_METADATA.filter(sec =>
                     return (
                         <a href={isActive ? "#" : `/${game}/${sec.id}`} class={isActive ? "active" : undefined}>
                             <span class="material-symbols-rounded">{sec.icon}</span>
-                            <p>{sec.label}</p>
+                            <p data-i18n={`rightmenu.label.${sec.id}`}>{sec.label}</p>
                         </a>
                     );
                 })}
@@ -100,7 +100,7 @@ const activeSections = SECTIONS_METADATA.filter(sec =>
                 <div class="footer-settings cursor-setting">
                     <div class="settings-text">
                         <span class="material-symbols-rounded">arrow_selector_tool</span>
-                        <p>Cursor personalizado</p>
+                        <p data-i18n="rightmenu.settings.cursor">Cursor personalizado</p>
                     </div>
                     <label>
                         <input type="checkbox" id="cursorToggle" disabled={game === "VI" ? true : undefined} />
@@ -110,7 +110,7 @@ const activeSections = SECTIONS_METADATA.filter(sec =>
                 <div class="footer-settings">
                     <div class="settings-text">
                         <span class="material-symbols-rounded">volume_up</span>
-                        <p>Sonido</p>
+                        <p data-i18n="rightmenu.settings.sound">Sonido</p>
                     </div>
                     <label>
                         <input type="checkbox" id="soundToggle" disabled={game === "VI" ? true : undefined} />
@@ -120,7 +120,7 @@ const activeSections = SECTIONS_METADATA.filter(sec =>
                 <div class="footer-settings">
                     <div class="settings-text">
                         <span class="material-symbols-rounded">language</span>
-                        <p>Idioma</p>
+                        <p data-i18n="rightmenu.settings.language">Idioma</p>
                     </div>
                     <button>
                         ES

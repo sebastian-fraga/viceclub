@@ -1,23 +1,26 @@
 ---
 interface Props {
-  game?: string;
-  isIndex?: boolean;
+    game?: string;
+    isIndex?: boolean;
 }
 
 const { game = "", isIndex = false } = Astro.props;
 
 const navGames = [
-  { id: "VI", name: "GTA VI" },
-  { id: "V", name: "GTA V" },
-  { id: "IV", name: "GTA IV" },
-  { id: "VCS", name: "GTA Vice City Stories" },
-  { id: "LCS", name: "GTA Liberty City Stories" },
-  { id: "SA", name: "GTA San Andreas" },
-  { id: "VC", name: "GTA Vice City" },
-  { id: "III", name: "GTA III" }
+    { id: "VI", name: "GTA VI" },
+    { id: "V", name: "GTA V" },
+    { id: "IV", name: "GTA IV" },
+    { id: "VCS", name: "GTA Vice City Stories" },
+    { id: "LCS", name: "GTA Liberty City Stories" },
+    { id: "SA", name: "GTA San Andreas" },
+    { id: "VC", name: "GTA Vice City" },
+    { id: "III", name: "GTA III" },
 ];
 ---
-<footer style={isIndex ? "opacity: 0; transition: opacity 0.8s ease" : undefined}>
+
+<footer
+    style={isIndex ? "opacity: 0; transition: opacity 0.8s ease" : undefined}
+>
     <div class="footer-left">
         <div class="footer-logo">
             <a href="/">
@@ -30,9 +33,9 @@ const navGames = [
             </a>
         </div>
         <div class="footer-left-text">
-            <p>
-                El sitio web ideal si eres un fanático de la saga Grand
-                Theft Auto.
+            <p data-i18n="footer.left.motto">
+                El sitio web ideal si eres un fanático de la saga Grand Theft
+                Auto.
             </p>
         </div>
         <div class="footer-icons">
@@ -55,31 +58,40 @@ const navGames = [
     <div class="footer-center">
         <div class="footer-title">
             <span class="material-symbols-rounded">explore</span>
-            <p>NAVEGACIÓN</p>
+            <p data-i18n="footer.center.title">NAVEGACIÓN</p>
         </div>
         <ul>
-            {navGames.map((g) => (
-                <li>
-                    <a class={game === g.id ? "active" : undefined} href={`/${g.id}/inicio`}>
-                        {g.name}
-                    </a>
-                </li>
-            ))}
+            {
+                navGames.map((g) => (
+                    <li>
+                        <a
+                            class={game === g.id ? "active" : undefined}
+                            href={`/${g.id}/inicio`}
+                        >
+                            {g.name}
+                        </a>
+                    </li>
+                ))
+            }
         </ul>
     </div>
     <div class="footer-right">
         <div class="footer-title">
             <span class="material-symbols-rounded">policy</span>
-            <p>AVISO LEGAL</p>
+            <p data-i18n="footer.right.title">AVISO LEGAL</p>
         </div>
         <div class="footer-text">
-            <span>Vice Club es un sitio de fans independiente</span>
-            <span style="font-weight: 800"
+            <span data-i18n="footer.right.legal.first"
+                >Vice Club es un sitio de fans independiente</span
+            >
+            <span data-i18n="footer.right.legal.second"
                 >No está afiliado con Rockstar Games ni con Take-Two
                 Interactive.</span
             >
-            <span>Las marcas GTA y Grand Theft Auto son marcas
-                registradas de sus respectivos propietarios</span>
+            <span style="font-weight: 800" data-i18n="footer.right.legal.third"
+                >Las marcas GTA y Grand Theft Auto son marcas registradas de sus
+                respectivos propietarios</span
+            >
         </div>
     </div>
     <div class="footer-bottom">
@@ -97,7 +109,7 @@ const navGames = [
                 <span class="material-symbols-rounded">
                     keyboard_double_arrow_up
                 </span>
-                <span>VOLVER ARRIBA</span>
+                <span data-i18n="footer.bottom.backtotop">VOLVER ARRIBA</span>
             </a>
         </div>
     </div>

@@ -1,23 +1,49 @@
 {
-    "rightcontent": {
-        "inicio": "INICIO",
-        "artworks": "ARTWORKS",
-        "mods": "HERRAMIENTAS Y MODS",
-        "logros": "LOGROS",
-        "mapa": "MAPA",
-        "radio": "RADIO",
-        "trucos": "TRUCOS",
-        "sonido": "Sonido",
-        "idioma": "Idioma"
+    "rightmenu": {
+        "label": {
+            "inicio": "INICIO",
+            "artworks": "Artworks",
+            "herramientas_y_mods": "Herramientas y mods",
+            "logros": "Logros",
+            "mapa": "Mapa",
+            "radio": "Radio",
+            "trucos": "Trucos",
+            "timeline": "Línea de tiempo"
+        },
+        "settings": {
+            "cursor": "Cursor personalizado",
+            "sound": "Sonido",
+            "language": "Idioma"
+        }
     },
     "ficha": {
         "developer": "Desarrollador",
+        "developers": "Desarrolladores",
         "publisher": "Distribuidor",
         "producer": "Productor",
-        "writers": "Escritores",
+        "writers": "Guionistas",
         "platforms": "Plataformas",
         "date": "Fecha de lanzamiento",
         "engine": "Motor gráfico",
         "sales": "Ventas"
+    },
+    "footer": {
+        "left": {
+            "motto": "El sitio web definitivo para los fanáticos de la saga GTA."
+        },
+        "center": {
+            "title": "Navegación"
+        },
+        "right": {
+            "title": "Aviso legal",
+            "legal": {
+                "first": "Vice Club es un sitio web independiente.",
+                "second": "Las marcas GTA y Grand Theft Auto son marcas registradas de sus respectivos propietarios.",
+                "third": "No está afiliado con Rockstar Games ni con Take-Two Interactive."
+            }
+        },
+        "bottom": {
+            "backtotop": "Volver arriba"
+        }
     }
 }

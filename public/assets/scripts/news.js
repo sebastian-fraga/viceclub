@@ -1,7 +1,7 @@
 const container = document.getElementById("newsContainer");
 const btn = document.getElementById("loadNews");
 
-let noticias = [];
+let news = [];
 let visibleCount = 2;
 let step = 2;
 
@@ -11,14 +11,14 @@ fetch(
 )
     .then((res) => res.json())
     .then((data) => {
-        noticias = data;
-        renderNoticias();
+        news = data;
+        renderNews();
     });
 
-function renderNoticias(previousCount = step) {
+function renderNews(previousCount = step) {
     container.innerHTML = "";
 
-    noticias.slice(0, visibleCount).forEach((noticia, index) => {
+    news.slice(0, visibleCount).forEach((news, index) => {
         const article = document.createElement("article");
         article.classList.add("news-article");
 
@@ -27,15 +27,15 @@ function renderNoticias(previousCount = step) {
 
         article.innerHTML = `
             <div class="news-header">
-                <h3>${noticia.title}</h3>
-                <h4>${noticia.date}</h4>
+                <h3>${news.title}</h3>
+                <h4>${news.date}</h4>
             </div>
             <div class="news-content">
-                <p>${noticia.paragraph1}</p>
-                <img src="${noticia.image}" alt="${noticia.title}" class="news-image" loading="${loadingStrategy}" data-footer="${noticia.footerText}">
-                <p>${noticia.paragraph2}</p>
-                <a href="${noticia.link}" target="_blank" rel="noopener" class="news-link">
-                ${noticia.linkText || "Más información"}
+                <p>${news.paragraph1}</p>
+                <img src="${news.image}" alt="${news.title}" class="news-image" loading="${loadingStrategy}" data-footer="${news.footerText}">
+                <p>${news.paragraph2}</p>
+                <a href="${news.link}" target="_blank" rel="noopener" class="news-link">
+                ${news.linkText || "Más información"}
                     <span class="material-symbols-rounded">arrow_outward</span>
                 </a>
             </div>
@@ -49,7 +49,7 @@ function renderNoticias(previousCount = step) {
         }
     });
 
-    if (visibleCount < noticias.length) {
+    if (visibleCount < news.length) {
         btn.style.display = "flex";
     } else {
         btn.style.display = "none";
@@ -58,7 +58,7 @@ function renderNoticias(previousCount = step) {
 btn.addEventListener("click", () => {
     const previousCount = visibleCount;
     visibleCount += step;
-    renderNoticias(previousCount);
+    renderNews(previousCount);
 });
 const newsObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

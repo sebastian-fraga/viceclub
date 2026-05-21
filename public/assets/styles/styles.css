@@ -2194,7 +2194,9 @@ footer {
             font-size: 19px;
             text-wrap: pretty;
             text-align: center;
+            text-transform: uppercase;
             font-family: var(--font-title);
+            padding-inline: 1.3em;
 
             & img {
                 width: 80%;

@@ -1,0 +1,131 @@
+---
+interface DateEntry {
+    platforms: string[];
+    dates: string[];
+}
+
+interface Props {
+    game: string;
+    title: string;
+    developers: string[];
+    publisher: string;
+    producer: string;
+    writers: string[];
+    platforms: string[];
+    dates: DateEntry[];
+    engines: string[];
+    sales?: string;
+}
+
+const {
+    game,
+    title,
+    developers,
+    publisher,
+    producer,
+    writers,
+    platforms,
+    dates,
+    engines,
+    sales,
+} = Astro.props;
+---
+
+<aside class="ficha-tecnica">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" class="portada">
+                    <img
+                        src={`/assets/images/main/boxarts/portada_${game}.webp`}
+                        alt={`Portada de ${title}`}
+                    />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th
+                    data-i18n={developers.length > 1
+                        ? "ficha.developers"
+                        : "ficha.developer"}
+                >
+                    {
+                        developers.length > 1
+                            ? "DESARROLLADORES"
+                            : "DESARROLLADOR"
+                    }
+                </th>
+                <td>
+                    {
+                        developers.length > 1
+                            ? developers.map((d, i) => (
+                                  <>
+                                      {d}
+                                      {i < developers.length - 1 && <br />}
+                                  </>
+                              ))
+                            : developers[0]
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.publisher">DISTRIBUIDOR</th>
+                <td>{publisher}</td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.producer">PRODUCTOR</th>
+                <td>{producer}</td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.writers">GUIONISTAS</th>
+                <td>
+                    <ul>
+                        {writers.map((w) => <li>{w}</li>)}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.platforms">PLATAFORMAS</th>
+                <td>
+                    <ul>
+                        {platforms.map((p) => <li>{p}</li>)}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.date">FECHA DE LANZAMIENTO</th>
+                <td>
+                    {
+                        dates.map((entry) => (
+                            <div class="platform-entry">
+                                {entry.platforms.map((p) => (
+                                    <span class="platform">{p}</span>
+                                ))}
+                                {entry.dates.map((d) => (
+                                    <span>{d}</span>
+                                ))}
+                            </div>
+                        ))
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th data-i18n="ficha.engine">MOTOR GRÁFICO</th>
+                <td>
+                    <ul>
+                        {engines.map((e) => <li>{e}</li>)}
+                    </ul>
+                </td>
+            </tr>
+            {
+                sales && (
+                    <tr>
+                        <th data-i18n="ficha.sales">VENTAS</th>
+                        <td>{sales}</td>
+                    </tr>
+                )
+            }
+        </tbody>
+    </table>
+</aside>

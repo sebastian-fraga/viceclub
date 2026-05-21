@@ -1,20 +1,23 @@
+---
+import FichaTecnica from "../FichaTecnica.astro";
+---
+
 <section class="text-container">
     <h1>Grand Theft Auto: Vice City Stories</h1>
     <p>
         <span style="font-weight: bold; color: rgb(225, 151, 242)"
             >Grand Theft Auto: Vice City Stories</span
         >
-        es un videojuego de acción y sandbox de mundo abierto
-        desarrollado por Rockstar Leeds y distribuido por Rockstar
-        Games, lanzado el 31 de octubre de 2006 para PlayStation
-        Portable y el 5 de marzo de 2007 para PlayStation 2.
+        es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar
+        Leeds y distribuido por Rockstar Games, lanzado el 31 de octubre de 2006 para
+        PlayStation Portable y el 5 de marzo de 2007 para PlayStation 2.
     </p>
 
     <p>
-        El juego transcurre dos años antes de los sucesos de Grand
-        Theft Auto: Vice City, y nos cuenta la historia de Victor
-        Vance y su intento por construir un imperio criminal por
-        toda la ciudad junto a su hermano Lance.
+        El juego transcurre dos años antes de los sucesos de Grand Theft Auto:
+        Vice City, y nos cuenta la historia de Victor Vance y su intento por
+        construir un imperio criminal por toda la ciudad junto a su hermano
+        Lance.
     </p>
     <div class="characters-container">
         <div class="characters-header">
@@ -24,79 +27,28 @@
     </div>
 </section>
 
-<aside class="ficha-tecnica">
-    <table>
-        <thead>
-            <tr>
-                <th colspan="2" class="portada">
-                    <img
-                        src="/assets/images/main/boxarts/portada_VCS.webp"
-                        alt="Portada de GTA VCS"
-                    />
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>DESARROLLADORES</th>
-                <td>Rockstar North<br />Rockstar Leeds</td>
-            </tr>
-            <tr>
-                <th>DISTRIBUIDOR</th>
-                <td>Rockstar Games</td>
-            </tr>
-            <tr>
-                <th>PRODUCTOR</th>
-                <td>Leslie Benzies</td>
-            </tr>
-            <tr>
-                <th>GUIONISTAS</th>
-                <td>
-                    <ul>
-                        <li>Dan Houser</li>
-                        <li>David Bland</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>PLATAFORMAS</th>
-                <td>
-                    <ul>
-                        <li>PlayStation Portable</li>
-                        <li>PlayStation 2</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>FECHA DE LANZAMIENTO</th>
-                <td>
-                    <div class="platform-entry">
-                        <span class="platform"
-                            >PlayStation Portable</span
-                        >
-                        <span>31 de octubre de 2006 (NA)</span>
-                        <span>3 de noviembre de 2006 (EU)</span>
-                        <span>10 de noviembre de 2006 (AU)</span>
-                    </div>
-                    <div class="platform-entry">
-                        <span class="platform">PlayStation 2</span>
-                        <span>5 de marzo de 2007 (NA)</span>
-                        <span>9 de marzo de 2007 (EU)</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>MOTOR GRÁFICO</th>
-                <td>
-                    <ul>
-                        <li>Rockstar Leeds 3D Engine</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <th>VENTAS</th>
-                <td>6 millones de copias (marzo de 2017)</td>
-            </tr>
-        </tbody>
-    </table>
-</aside>
+<FichaTecnica
+    game="VCS"
+    title="GTA Vice City Stories"
+    developers={["Rockstar North", "Rockstar Leeds"]}
+    publisher="Rockstar Games"
+    producer="Leslie Benzies"
+    writers={["Dan Houser", "David Bland"]}
+    platforms={["PlayStation Portable", "PlayStation 2"]}
+    dates={[
+        {
+            platforms: ["PlayStation Portable"],
+            dates: [
+                "31 de octubre de 2006 (NA)",
+                "3 de noviembre de 2006 (EU)",
+                "10 de noviembre de 2006 (AU)",
+            ],
+        },
+        {
+            platforms: ["PlayStation 2"],
+            dates: ["5 de marzo de 2007 (NA)", "9 de marzo de 2007 (EU)"],
+        },
+    ]}
+    engines={["Rockstar Leeds 3D Engine"]}
+    sales="6 millones de copias (marzo de 2017)"
+/>

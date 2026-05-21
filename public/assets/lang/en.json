@@ -1,17 +1,24 @@
 {
-    "rightcontent": {
-        "inicio": "HOME",
-        "artworks": "ARTWORKS",
-        "mods": "TOOLS AND MODS",
-        "logros": "ACHIEVEMENTS",
-        "mapa": "MAP",
-        "radio": "RADIO",
-        "trucos": "CHEATS",
-        "sonido": "Sound",
-        "idioma": "Language"
+    "rightmenu": {
+        "label": {
+            "inicio": "HOME",
+            "artworks": "Artworks",
+            "herramientas_y_mods": "Tools and Mods",
+            "logros": "Achievements",
+            "mapa": "Map",
+            "radio": "Radio",
+            "trucos": "Cheats",
+            "timeline": "Timeline"
+        },
+        "settings": {
+            "cursor": "Custom cursor",
+            "sound": "Sound",
+            "language": "Language"
+        }
     },
     "ficha": {
         "developer": "Developer",
+        "developers": "Developers",
         "publisher": "Publisher",
         "producer": "Producer",
         "writers": "Writers",
@@ -19,5 +26,24 @@
         "date": "Release date",
         "engine": "Game engine",
         "sales": "Sales"
+    },
+    "footer": {
+        "left": {
+            "motto": "The go-to website for Grand Theft Auto fans."
+        },
+        "center": {
+            "title": "Navigation"
+        },
+        "right": {
+            "title": "Legal disclaimer",
+            "legal": {
+                "first": "Vice Club is an independent website.",
+                "second": "The GTA and Grand Theft Auto trademarks are registered trademarks of their respective owners.",
+                "third": "Not affiliated with Rockstar Games or Take-Two Interactive."
+            }
+        },
+        "bottom": {
+            "backtotop": "Back to top"
+        }
     }
 }

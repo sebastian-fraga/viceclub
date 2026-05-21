@@ -432,6 +432,8 @@ function renderCheats() {
     container.innerHTML = "";
     const fragment = document.createDocumentFragment();
 
+    let cheatIndex = 0;
+
     Object.entries(cheats).forEach(([category, cheatsInCategory]) => {
         const section = document.createElement("section");
         section.className = "cheat-category";
@@ -505,11 +507,13 @@ function renderCheats() {
                     img.style.background = btnData.bg;
                     img.className = "btn-icon";
                     img.alt = btn;
-                    img.loading = "lazy";
+                    img.loading = cheatIndex < 6 ? "eager" : "lazy";
 
                     cheatCode.appendChild(img);
                 });
             }
+
+            cheatIndex++;
 
             cheatItem.appendChild(cheatTitle);
             cheatItem.appendChild(cheatCode);
