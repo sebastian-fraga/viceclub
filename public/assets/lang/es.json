@@ -69,6 +69,34 @@
             "heading": "Lista del 100% para Grand Theft Auto V"
         }
     },
+    "radio": {
+        "info": {
+            "host": "Conducido por:",
+            "genre": "Género:",
+            "tracklist": "Lista de canciones"
+        },
+        "III": {
+            "heading": "Radios de Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Radios de Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Radios de Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Radios de Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Radios de Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Radios de Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Radios de Grand Theft Auto V"
+        }
+    },
     "trucos": {
         "definitive_edition": "Edición Definitiva",
         "III": {

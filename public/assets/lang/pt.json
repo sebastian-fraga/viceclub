@@ -69,6 +69,34 @@
             "heading": "Lista 100% para Grand Theft Auto V"
         }
     },
+    "radio": {
+        "info": {
+            "host": "Apresentado por:",
+            "genre": "Gênero:",
+            "tracklist": "Lista de músicas"
+        },
+        "III": {
+            "heading": "Rádios de Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Rádios de Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Rádios de Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Rádios de Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Rádios de Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Rádios de Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Rádios de Grand Theft Auto V"
+        }
+    },
     "trucos": {
         "definitive_edition": "Edição Definitiva",
         "III": { "heading": "Trapaças de Grand Theft Auto III" },

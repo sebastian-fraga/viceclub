@@ -69,6 +69,34 @@
             "heading": "100% Checklist for Grand Theft Auto V"
         }
     },
+    "radio": {
+        "info": {
+            "host": "Hosted by:",
+            "genre": "Genre:",
+            "tracklist": "Tracklist"
+        },
+        "III": {
+            "heading": "Radios for Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Radios for Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Radios for Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Radios for Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Radios for Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Radios for Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Radios for Grand Theft Auto V"
+        }
+    },  
     "trucos": {
         "definitive_edition": "Definitive Edition",
         "III": {

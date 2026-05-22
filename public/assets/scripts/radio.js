@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!dj) return "";
         const djs = Array.isArray(dj) ? dj : [dj];
         return `
-        <span>Conducido por:</span>
+        <span data-i18n="radio.info.host">Conducido por:</span>
         <div class="dj-tags">
             ${djs.map((d) => `<p>${d}</p>`).join("")}
         </div>
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!genre) return "";
         const genres = Array.isArray(genre) ? genre : [genre];
         return `
-        <span>Género:</span>
+        <span data-i18n="radio.info.genre">Género:</span>
         <div class="genre-tags">
             ${genres.map((g) => `<p>${g}</p>`).join("")}
         </div>
@@ -473,6 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const title = document.createElement("h4");
         title.textContent = "Canciones";
+        title.dataset.i18n = "radio.info.tracklist";
         title.classList.add("tracklist-title");
         radioList.appendChild(title);
 
