@@ -4242,7 +4242,7 @@ body:has(.reset-dialog[open]) {
 
                         &:hover {
                             &::before {
-                                content: "Edición Definitiva";
+                                content: attr(data-tooltip);
                                 font-family: "GTAArtDecoRegular";
                                 position: absolute;
                                 bottom: calc(100% + 7px);

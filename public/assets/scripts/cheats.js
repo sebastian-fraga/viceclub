@@ -701,6 +701,10 @@ function renderPlatformSelector(platformKeys, definitivePlatforms = []) {
 
                 if (definitivePlatforms.includes(k)) {
                     subBtn.dataset.definitive = true;
+
+                    subBtn.dataset.tooltip =
+                        window.translations?.trucos?.definitive_edition ??
+                        "Edición Definitiva";
                 }
 
                 const img = document.createElement("img");
