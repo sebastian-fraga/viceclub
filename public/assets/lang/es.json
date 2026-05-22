@@ -68,5 +68,38 @@
         "V": {
             "heading": "Lista del 100% para Grand Theft Auto V"
         }
+    },
+    "trucos": {
+        "III": {
+            "heading": "Trucos de Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Trucos de Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Trucos de Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Trucos de Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Trucos de Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Trucos de Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Trucos de Grand Theft Auto V"
+        },
+        "search_placeholder": "Buscar trucos...",
+        "tooltip": {
+            "title": "Filtros de búsqueda",
+            "by_section": "Por sección:",
+            "by_cheat": "Por truco (PC):",
+            "code": {
+                "name": "nombre",
+                "cheat": "truco"
+            }
+        }
     }
 }

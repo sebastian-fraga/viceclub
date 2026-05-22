@@ -68,5 +68,24 @@
         "V": {
             "heading": "Liste 100% pour Grand Theft Auto V"
         }
+    },
+    "trucos": {
+        "III": { "heading": "Codes de Grand Theft Auto III" },
+        "VC": { "heading": "Codes de Grand Theft Auto: Vice City" },
+        "SA": { "heading": "Codes de Grand Theft Auto: San Andreas" },
+        "LCS": { "heading": "Codes de Grand Theft Auto: Liberty City Stories" },
+        "VCS": { "heading": "Codes de Grand Theft Auto: Vice City Stories" },
+        "IV": { "heading": "Codes de Grand Theft Auto IV" },
+        "V": { "heading": "Codes de Grand Theft Auto V" },
+        "search_placeholder": "Rechercher des codes...",
+        "tooltip": {
+            "title": "Filtres de recherche",
+            "by_section": "Par section:",
+            "by_cheat": "Par code (PC):",
+            "code": {
+                "name": "nom",
+                "cheat": "code"
+            }
+        }
     }
 }

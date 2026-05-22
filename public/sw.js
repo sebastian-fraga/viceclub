@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1.4.5";
+const CACHE_VERSION = "1.4.6";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 self.addEventListener("install", (event) => {
@@ -35,6 +35,10 @@ self.addEventListener("install", (event) => {
                 "/assets/images/main/backgrounds/background_VI.webp",
                 "/assets/images/main/boxarts/portada_VI.webp",
                 "/assets/images/icons/games/logos/VI.webp",
+                "/assets/lang/es.json",
+                "/assets/lang/en.json",
+                "/assets/lang/fr.json",
+                "/assets/lang/pt.json",
             ]);
         }),
     );
@@ -93,18 +97,20 @@ self.addEventListener("fetch", (event) => {
         return;
     }
 
-    if (url.pathname.endsWith(".json")) {
+    if (url.pathname.startsWith("/assets/lang/")) {
+        event.respondWith(
+            caches
+                .match(event.request)
+                .then((cached) => cached || fetch(event.request)),
+        );
+        return;
+    }
+
+    if (url.pathname.endsWith(".json") || url.hostname.includes("s3")) {
         event.respondWith(
             fetch(event.request).catch(async () => {
                 const cached = await caches.match(event.request);
-
-                return (
-                    cached ||
-                    new Response("JSON offline", {
-                        status: 503,
-                        statusText: "Offline",
-                    })
-                );
+                return cached || new Response("JSON offline", { status: 503 });
             }),
         );
         return;
