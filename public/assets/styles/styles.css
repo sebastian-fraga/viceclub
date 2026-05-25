@@ -4,14 +4,26 @@
 @font-face {
     font-family: "GTAArtDecoRegular";
     src: url("../fonts/GTAArtDecoRegular.ttf");
+    font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
     font-family: "GTAArtDecoMedium";
     src: url("../fonts/GTAArtDecoMedium.ttf");
+    font-weight: 700;
     font-display: swap;
 }
+
+.material-symbols-rounded {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+    &.unfilled {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+}
+
+
 
 /* #endregion */
 
@@ -588,14 +600,14 @@ body {
             }
 
             & .news {
+                display: flex;
+                flex-direction: column;
+                margin-inline: auto;
                 position: relative;
-                background-image: linear-gradient(-225deg,
-                        #5270c461 0%,
-                        #b19fff61 48%,
-                        #eca1fe61 100%);
                 padding: 15px 20px;
                 border-radius: 20px;
                 z-index: 10;
+                background: rgba(231, 231, 231, 0.3);
                 box-shadow: 0 50px 25px 20px rgba(0, 0, 0, 0.1);
 
                 & h2 {
@@ -612,173 +624,237 @@ body {
                     opacity: 0.85;
                 }
 
-                & .news-article {
-                    background: #ffffff5e;
-                    border-radius: 15px;
-                    padding: 35px 20px;
-                    margin: 0 1em 85px 1em;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                    transition: transform 0.2s ease;
+                & article {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    margin-bottom: 70px;
 
-                    &:nth-child(odd) {
-                        background: #fafbfb61;
+                    &:last-of-type {
+                        margin-bottom: 10px;
                     }
 
                     & .news-header {
                         display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-bottom: 35px;
-                        padding-bottom: 25px;
-                        border-bottom: 2px solid rgba(141, 117, 239, 0.2);
+                        flex-direction: column;
+                        gap: 10px;
+                        padding-left: 25px;
+                        position: relative;
 
-                        & h3 {
-                            font-size: 2.3em;
-                            font-family: "GTAArtDecoMedium";
-                            text-align: left;
+                        &::before {
+                            content: "";
+                            background: rgb(238, 183, 249);
+                            box-shadow: 2px 2px 1px rgb(175, 119, 186);
+                            width: 5px;
+                            height: 40%;
+                            position: absolute;
+                            top: 0;
+                            left: 5px;
                         }
 
-                        & h4 {
-                            margin: 0;
-                            text-align: right;
-                            font-style: italic;
-                            color: #506cc9;
-                            font-family: "GTAArtDecoMedium";
-                            font-size: 1.1rem;
-                            font-weight: 500;
+                        & h3 {
+                            font-size: clamp(20px, 3vw, 32px);
+                        }
+
+                        & p {
+                            font-size: clamp(14px, 1.85vw, 20px);
+                            font-weight: 100;
+                            color: #353535
+                        }
+
+                        & .news-header-info {
                             display: flex;
                             align-items: center;
-                            gap: 8px;
-                            flex-shrink: 0;
+                            gap: 18px;
+
+                            & h4 {
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                                font-size: clamp(12px, 1.5vw, 14px);
+                                font-weight: 100;
+                                color: #333333;
+
+                                & span {
+                                    color: #111111;
+                                    font-size: 16px;
+                                }
+                            }
                         }
                     }
 
                     & .news-content {
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
-                        text-align: left;
+                        align-items: start;
+                        margin-top: 20px;
 
                         & p {
-                            margin: 1.8em auto;
-                            line-height: 1.7;
-                            font-size: 1.3em;
-                            color: #2a2a2a;
-                            width: 100%;
-                            text-align: center;
-                            text-wrap: balance;
+                            max-width: 90ch;
+                            text-wrap: pretty;
+                            line-height: 1.8;
                         }
 
-                        & b {
-                            color: #030027;
-                            font-weight: 600;
+                        & .last-paragraph {
+                            margin-block: 20px;
                         }
 
-                        & i {
-                            display: block;
-                            background: #ffffff43;
-                            border-left: 4px solid #8d75ef;
-                            padding: 20px 25px;
-                            margin: 50px auto 15px auto;
-                            width: 70%;
-                            font-style: italic;
-                            border-radius: 9px;
-                            font-size: 0.9em;
-                            line-height: 1.6;
-                        }
-
-                        & img {
-                            width: 85%;
-                            max-height: 420px;
-                            object-fit: cover;
-                            margin: 0 auto;
-                            border-radius: 15px;
-                            object-position: top;
-                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                            display: block;
-                            transition: all 0.3s ease;
-                            border: 3px solid rgba(91, 50, 255, 0.6);
-                        }
-
-                        & a {
+                        & .news-image-wrapper {
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 5px;
-                            width: fit-content;
-                            padding: 15px 30px;
                             margin: 30px auto;
-                            text-align: center;
-                            text-decoration: none;
-                            background: linear-gradient(90deg, #03ade5, #bd1bbd);
-                            border-radius: 20px;
-                            color: #ffffff;
-                            font-family: "GTAArtDecoMedium";
-                            text-transform: uppercase;
-                            transition:
-                                background 0.2s ease-out,
-                                scale 0.2s ease-out;
+                            max-width: 100%;
+                            flex-direction: column;
+                            border-radius: 14px;
+                            border: 1px solid #0000009e;
+                            outline: 1px transparent;
+                            box-shadow: 0 0 30px #00000049;
 
-                            & .material-symbols-rounded {
-                                font-size: 1.3rem;
-                                color: #ffffffea;
-                                transition: scale 0.2s ease-out;
+                            &:has(img:hover) {
+                                outline: 1px solid #00000089;
                             }
 
-                            &:hover {
-                                background: linear-gradient(90deg, #02759c, #811081);
-                                scale: 1.05;
+                            & .news-image-footer {
+                                display: flex;
+                                align-items: center;
+                                gap: 6px;
+                                padding: 3px 9px;
+                                color: #444444;
+                                background: color-mix(in srgb, #ffffffba 70%, #fdaafc);
+                                border-top: 1px solid #00000044;
+                                border-radius: 0 0 12px 12px;
+
+
+                                & span {
+                                    font-size: 1em;
+                                    color: #222222;
+                                }
+
+                                & p {
+                                    font-size: 0.8em;
+                                    font-style: italic;
+                                }
+
+
+                            }
+
+                            & img {
+                                object-fit: cover;
+                                max-height: 400px;
+                                width: 100%;
+                                border-radius: 12px 12px 0 0;
+                            }
+
+
+
+                        }
+
+                        & .news-link {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            margin-inline: auto;
+                            border-radius: 5px;
+                            color: inherit;
+                            background: color-mix(in srgb, #ffffffba 70%, #fdaafc);
+                            border: 1px solid #000000ee;
+                            text-decoration: none;
+                            padding: 9px 12px;
+                            box-shadow: 0 0 30px #00000021;
+                            transition: all 0.15s ease;
+                            font-size: 0.9em;
+
+                            & span {
+                                font-size: 0.85em;
+                            }
+                        }
+
+                        & .divider {
+                            margin-block: 20px;
+                            height: 1px;
+                            width: 100%;
+                            background: #00000024;
+                        }
+
+                        & .news-share {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 12px;
+
+                            & p {
+                                font-size: 0.75em;
+                                color: #222222;
+                            }
+
+                            & button {
+                                display: flex;
+                                align-items: center;
+                                background: color-mix(in srgb, #ffffffba 70%, #fdaafc);
+                                padding: 9px 12px;
+                                border-radius: 4px;
+                                border: 1px solid #000000ee;
+                                box-shadow: 0 0 30px #00000021;
+                                gap: 5px;
+                                font-family: "GTAArtDecoRegular";
+                                transition: all 0.15s ease;
+                                height: 36px;
+
+                                & .button-text {
+                                    font-size: 0.9em;
+                                }
 
                                 & .material-symbols-rounded {
-                                    scale: 1.2;
+                                    font-size: 16px;
                                 }
+
+                                & .x {
+                                    width: 16px;
+                                    height: 16px;
+                                    display: inline-block;
+                                    background-color: currentColor;
+                                    -webkit-mask: url('/assets/images/icons/social/x.svg') no-repeat center;
+                                    mask: url('/assets/images/icons/social/x.svg') no-repeat center;
+                                    -webkit-mask-size: contain;
+                                    mask-size: contain;
+                                }
+                            }
+                        }
+
+                        & .news-link:hover,
+                        & .news-share button:hover {
+                            background: rgb(255, 190, 255);
+                            cursor: pointer;
+                            color: rgb(240, 91, 248);
+                            border-color: #00000054;
+                            box-shadow: 0 0 10px rgb(255, 190, 255, 0.3);
+
+                            & span,
+                            & .button-text {
+                                color: rgb(240, 91, 248);
                             }
                         }
                     }
                 }
 
-                & button {
+                & #loadNews {
                     display: flex;
-                    justify-content: center;
                     align-items: center;
-                    gap: 10px;
-                    font-size: 1.5em;
-                    width: 30%;
-                    height: 60px;
-                    padding: 15px 10px;
-                    margin: 30px auto;
-                    text-align: center;
-                    text-decoration: none;
-                    background: #4e7ebb;
-                    border-radius: 15px;
-                    border: 3px solid #0000003b;
-                    color: #f3f3f3ea;
-                    font-family: "GTAArtDecoMedium";
-                    text-transform: uppercase;
-                    transition:
-                        background 0.2s ease-out,
-                        scale 0.2s ease-out;
+                    width: fit-content;
+                    padding: 6px 12px;
+                    margin: 20px auto 10px auto;
+                    border-radius: 4px;
+                    border: 1px solid #0000009e;
+                    background: rgb(173, 156, 240);
+                    font-weight: 900;
+                    font-family: "GTAArtDecoRegular";
                     cursor: pointer;
-
-                    & .material-symbols-rounded {
-                        font-size: 1.3em;
-                        color: #f3f3f3ea;
-                        transition: scale 0.2s ease-out;
-                    }
+                    transition: all 0.15s ease;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 
                     &:hover {
-                        background: #3875c4;
-                        scale: 1.02;
-
-                        & .material-symbols-rounded {
-                            scale: 1.4;
-                        }
-                    }
-
-                    &:active {
-                        background: #173861;
-                        scale: 0.95;
+                        color: #fff;
+                        background: rgb(124, 109, 188);
+                        scale: 1.03;
                     }
                 }
             }
@@ -1314,17 +1390,34 @@ body {
                     align-items: center;
                     justify-content: center;
                     transition: background 0.2s, border-color 0.2s;
+                    color: #fff;
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.18);
                         border-color: rgba(255, 255, 255, 0.4);
                     }
 
-                    & img {
+                    & .footer-icon {
+                        display: inline-block;
                         width: 32px;
                         height: 32px;
-                        padding: 0;
+                        background-color: currentColor;
+
+                        &.x {
+                            -webkit-mask: url('/assets/images/icons/social/x.svg') no-repeat center;
+                            mask: url('/assets/images/icons/social/x.svg') no-repeat center;
+                            -webkit-mask-size: contain;
+                            mask-size: contain;
+                        }
+
+                        &.github {
+                            -webkit-mask: url('/assets/images/icons/social/github.svg') no-repeat center;
+                            mask: url('/assets/images/icons/social/github.svg') no-repeat center;
+                            -webkit-mask-size: contain;
+                            mask-size: contain;
+                        }
                     }
+
                 }
             }
 
@@ -1700,7 +1793,6 @@ header {
                     font-size: 1.15em;
                     white-space: normal;
                     word-break: break-word;
-                    font-variation-settings: 'FILL' 1;
                 }
 
                 & p {
@@ -2096,7 +2188,7 @@ details[open]::details-content {
 .timeline-image:hover,
 .news-image:hover {
     cursor: pointer;
-    filter: brightness(0.9);
+    filter: brightness(0.85);
 }
 
 .wip {
@@ -4341,7 +4433,6 @@ body:has(.reset-dialog[open]) {
         line-height: 1;
         font-size: 24px;
         right: 12px;
-        font-variation-settings: 'FILL' 0;
         color: color-mix(in srgb, var(--block-text) 30%, transparent);
         pointer-events: auto;
         transition: color 0.2s ease;
@@ -4539,7 +4630,6 @@ body:has(.reset-dialog[open]) {
                     padding: 0.4em 0 0.2em 1.2em;
 
                     & .cheat-note-icon {
-                        font-variation-settings: 'FILL' 1;
                         font-size: 0.95em;
                         vertical-align: middle;
                         line-height: 1;
@@ -5198,7 +5288,7 @@ body:has(.reset-dialog[open]) {
 
                 & .news {
                     margin: 3em auto 5em auto;
-                    border-radius: 45px;
+                    border-radius: 20px;
                     padding: 1.5em 0;
 
                     & h2 {
@@ -5206,58 +5296,32 @@ body:has(.reset-dialog[open]) {
                         line-height: 1.2;
                     }
 
-                    & .news-article {
-                        margin: 2em auto;
-                        padding: 50px 30px;
-                        border-radius: 20px;
+                    & article {
+                        padding: 20px;
+                        text-align: left;
+                        margin-bottom: 40px;
 
                         & .news-header {
-                            flex-direction: column;
-
-                            & h3 {
-                                font-size: 2em;
-                                text-align: center;
-                                text-wrap: balance;
-                                margin-bottom: 0.5em;
-                            }
-
-                            & h4 {
-                                text-align: center;
+                            &::before {
+                                height: 100%;
                             }
                         }
 
                         & .news-content {
-                            & p {
-                                font-size: 1.15em;
-                                text-align: left;
-                                line-height: 1.9;
-                                max-width: 30ch;
+
+                            & .news-share {
+                                margin-inline: auto;
+
+                                & button {
+                                    & .button-text {
+                                        display: none;
+                                    }
+                                }
                             }
 
-                            & i {
-                                width: 85%;
-                                margin: 1.5em auto;
-                                text-align: center;
-                                line-height: 1.7;
-                                color: #201f20;
-                                font-size: 0.8em;
-                            }
-
-                            & img {
-                                width: 100%;
-                                min-height: 300px;
-                            }
-
-                            & a {
-                                border: 2px solid rgba(26, 26, 26, 0.5);
-                            }
                         }
                     }
 
-                    & button {
-                        width: auto;
-                        font-size: 1.2em;
-                    }
                 }
 
                 & .faq {

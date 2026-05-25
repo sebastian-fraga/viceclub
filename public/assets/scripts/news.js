@@ -15,10 +15,42 @@ fetch(
         renderNews();
     });
 
+function getArticleUrl(slug) {
+    return `https://viceclub.app?news=${slug}`;
+}
+
+function shareOnX(title, slug) {
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(getArticleUrl(id))}`;
+    window.open(url, "_blank", "noopener");
+}
+
+function copyLink(slug, title, btn) {
+    const text = `${title}\n${getArticleUrl(slug)}`;
+    navigator.clipboard.writeText(text).then(() => {
+        const icon = btn.querySelector("span.material-symbols-rounded");
+        icon.textContent = "check";
+        btn.childNodes[btn.childNodes.length - 1].textContent = " Copiado";
+        setTimeout(() => {
+            icon.textContent = "content_copy";
+            btn.childNodes[btn.childNodes.length - 1].textContent =
+                " Copiar enlace";
+        }, 1500);
+    });
+}
+
+function shareNative(title, slug) {
+    if (navigator.share) {
+        navigator.share({
+            title: title,
+            url: getArticleUrl(slug),
+        });
+    }
+}
+
 function renderNews(previousCount = step) {
     container.innerHTML = "";
 
-    news.slice(0, visibleCount).forEach((news, index) => {
+    news.slice(0, visibleCount).forEach((item, index) => {
         const article = document.createElement("article");
         article.classList.add("news-article");
 
@@ -27,20 +59,66 @@ function renderNews(previousCount = step) {
 
         article.innerHTML = `
             <div class="news-header">
-                <h3>${news.title}</h3>
-                <h4>${news.date}</h4>
+                <h3>${item.title}</h3>
+                <p>${item.subtitle}</p>
+                <div class="news-header-info">
+                    <h4>
+                        <span class="material-symbols-rounded unfilled">person</span>
+                        ${item.author}
+                    </h4>
+                    <h4>
+                        <span class="material-symbols-rounded unfilled">calendar_today</span>
+                        ${item.date}
+                    </h4>
+                </div>
             </div>
             <div class="news-content">
-                <p>${news.paragraph1}</p>
-                <img src="${news.image}" alt="${news.title}" class="news-image" loading="${loadingStrategy}" data-footer="${news.footerText}">
-                <p>${news.paragraph2}</p>
-                <a href="${news.link}" target="_blank" rel="noopener" class="news-link">
-                ${news.linkText || "Más información"}
-                    <span class="material-symbols-rounded">arrow_outward</span>
+                <p>${item.paragraph1}</p>
+                <div class="news-image-wrapper">
+                    <img src="${item.image}" class="news-image" alt="${item.title}" loading="${loadingStrategy}" data-footer="${item.footerText}">
+                    <div class="news-image-footer">
+                        <span class="material-symbols-rounded unfilled">photo_camera</span>
+                        <p>${item.footerText}</p>
+                    </div>
+                </div>
+                <p>${item.paragraph2}</p>
+                ${item.paragraph3 ? `<p class="last-paragraph">${item.paragraph3}</p>` : ""}
+                <a href="${item.link}" target="_blank" rel="noopener" class="news-link">
+                    <span class="material-symbols-rounded">open_in_new</span>
+                    ${item.linkText || "Más información"}
                 </a>
+                <div class="divider"></div>
+                <div class="news-share">
+                    <p>Compartir:</p>
+                    <button class="share-btn btn-x">
+                        <span class="x"></span>
+                    </button>
+                    <button class="share-btn btn-copy">
+                        <span class="material-symbols-rounded unfilled">content_copy</span>
+                        <p class="button-text">Copiar enlace</p>
+                    </button>
+                    <button class="share-btn btn-share">
+                        <span class="material-symbols-rounded unfilled">share</span>
+                        <p class="button-text">Más</p>
+                    </button>
+                </div>
             </div>
         `;
         container.appendChild(article);
+
+        article
+            .querySelector(".btn-x")
+            .addEventListener("click", () => shareOnX(item.title, item.slug));
+        article
+            .querySelector(".btn-copy")
+            .addEventListener("click", (e) =>
+                copyLink(item.slug, item.title, e.currentTarget),
+            );
+        article
+            .querySelector(".btn-share")
+            .addEventListener("click", () =>
+                shareNative(item.title, item.slug),
+            );
 
         if (isNew) {
             const img = article.querySelector("img");
@@ -49,23 +127,11 @@ function renderNews(previousCount = step) {
         }
     });
 
-    if (visibleCount < news.length) {
-        btn.style.display = "flex";
-    } else {
-        btn.style.display = "none";
-    }
+    btn.style.display = visibleCount < news.length ? "flex" : "none";
 }
+
 btn.addEventListener("click", () => {
     const previousCount = visibleCount;
     visibleCount += step;
     renderNews(previousCount);
-});
-const newsObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            newsObserver.unobserve(img);
-        }
-    });
 });
