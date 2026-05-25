@@ -41,7 +41,13 @@ function scrollToNews() {
     }
 
     const articles = document.querySelectorAll(".news-article");
-    articles[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = articles[index];
+    if (!target) return;
+
+    const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+    const top =
+        target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+    window.scrollTo({ top, behavior: "smooth" });
 }
 
 function getArticleUrl(slug) {
