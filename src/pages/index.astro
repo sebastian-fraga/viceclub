@@ -331,8 +331,7 @@ import Loader from "../components/Loader.astro";
         <!-- Loader -->
         <script is:inline>
             window.addEventListener("load", () => {
-                const isLocalhost =
-                    location.hostname === "localhost";
+                const isLocalhost = location.hostname === "localhost";
 
                 const loader = document.getElementById("loader");
                 const content = document.getElementById("container");
@@ -370,6 +369,7 @@ import Loader from "../components/Loader.astro";
                     });
 
                     setTimeout(() => loader.remove(), 1200);
+
                 }, 1400);
             });
         </script>

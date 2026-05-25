@@ -13,6 +13,18 @@ fetch(
     .then((data) => {
         news = data;
         renderNews();
+        const isLocalhost = location.hostname === "localhost";
+        if (isLocalhost) {
+            scrollToNews();
+        } else {
+            window.addEventListener(
+                "newsReady",
+                () => {
+                    setTimeout(scrollToNews, 1200);
+                },
+                { once: true },
+            );
+        }
     });
 
 function scrollToNews() {
@@ -34,6 +46,7 @@ function scrollToNews() {
 
 function getArticleUrl(slug) {
     return `https://viceclub.app?news=${slug}`;
+    // return `http://localhost:4321/?news=${slug}`;
 }
 
 function shareOnX(title, slug) {
