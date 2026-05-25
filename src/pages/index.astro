@@ -368,10 +368,9 @@ import Loader from "../components/Loader.astro";
                         footer.style.opacity = "1";
                     });
 
-                    setTimeout(() => {
-                        loader.remove();
-                        window.dispatchEvent(new CustomEvent("newsReady"));
-                    }, 1200);
+                    window.dispatchEvent(new CustomEvent("newsReady"));
+
+                    setTimeout(() => loader.remove(), 1200);
                 }, 1400);
             });
         </script>
