@@ -732,7 +732,6 @@ body {
                                 & p {
                                     font-size: 0.8em;
                                     font-style: italic;
-                                    line-height: 1.3;
                                 }
 
 
@@ -5310,6 +5309,15 @@ body:has(.reset-dialog[open]) {
                         }
 
                         & .news-content {
+
+                            & .news-image-wrapper {
+                                & .news-image-footer {
+                                    padding: 8px 20px;
+                                    & p {
+                                        line-height: 1.3;
+                                    }
+                                }
+                            }
 
                             & .news-share {
                                 margin-inline: auto;
