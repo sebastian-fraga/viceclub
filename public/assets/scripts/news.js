@@ -15,12 +15,29 @@ fetch(
         renderNews();
     });
 
+function scrollToNews() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("news");
+    if (!slug) return;
+
+    const index = news.findIndex((n) => n.slug === slug);
+    if (index === -1) return;
+
+    if (index >= visibleCount) {
+        visibleCount = index + 1;
+        renderNews();
+    }
+
+    const articles = document.querySelectorAll(".news-article");
+    articles[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function getArticleUrl(slug) {
     return `https://viceclub.app?news=${slug}`;
 }
 
 function shareOnX(title, slug) {
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(getArticleUrl(id))}`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(getArticleUrl(slug))}`;
     window.open(url, "_blank", "noopener");
 }
 
@@ -28,13 +45,15 @@ function copyLink(slug, title, btn) {
     const text = `${title}\n${getArticleUrl(slug)}`;
     navigator.clipboard.writeText(text).then(() => {
         const icon = btn.querySelector("span.material-symbols-rounded");
+        const label = btn.querySelector(".button-text");
+
         icon.textContent = "check";
-        btn.childNodes[btn.childNodes.length - 1].textContent = " Copiado";
+        if (label) label.textContent = "Copiado";
+
         setTimeout(() => {
             icon.textContent = "content_copy";
-            btn.childNodes[btn.childNodes.length - 1].textContent =
-                " Copiar enlace";
-        }, 1500);
+            if (label) label.textContent = "Copiar enlace";
+        }, 900);
     });
 }
 
