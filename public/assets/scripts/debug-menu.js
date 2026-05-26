@@ -1,20 +1,25 @@
-navigator.serviceWorker?.addEventListener("message", (e) => {
-    if (e.data?.type === "CACHE_VERSION") {
-        localStorage.setItem("sw_version", e.data.version);
+(() => {
+    if (typeof window === "undefined") return;
+
+    if (window.__VC_DEBUG_MENU_INITIALIZED__) return;
+    window.__VC_DEBUG_MENU_INITIALIZED__ = true;
+
+    navigator.serviceWorker?.addEventListener("message", (e) => {
+        if (e.data?.type === "CACHE_VERSION") {
+            localStorage.setItem("sw_version", e.data.version);
+        }
+    });
+
+    const DEBUG_ENABLED = location.hostname === "localhost";
+
+    if (DEBUG_ENABLED) {
+        document.addEventListener("DOMContentLoaded", () => initDebugMenu());
     }
-});
 
-const DEBUG_ENABLED = location.hostname === "localhost";
-
-if (DEBUG_ENABLED) {
-    document.addEventListener("DOMContentLoaded", () => initDebugMenu());
-}
-
-async function initDebugMenu() {
-    try {
-
-        const style = document.createElement("style");
-        style.textContent = `
+    async function initDebugMenu() {
+        try {
+            const style = document.createElement("style");
+            style.textContent = `
             #vc-debug-menu {
                 position: fixed; z-index: 99999;
                 background: rgba(26, 26, 46, 0.93); color: #e0e0e0;
@@ -56,13 +61,13 @@ async function initDebugMenu() {
             #vc-debug-menu .dm-row .val.err  { background: #2a0f0f; color: #e24b4a; }
             #vc-debug-menu .dm-row .val.warn { background: #2a200f; color: #ef9f27; }
         `;
-        document.head.appendChild(style);
+            document.head.appendChild(style);
 
-        const menu = document.createElement("div");
-        menu.id = "vc-debug-menu";
-        document.body.appendChild(menu);
+            const menu = document.createElement("div");
+            menu.id = "vc-debug-menu";
+            document.body.appendChild(menu);
 
-        const panelStyles = `
+            const panelStyles = `
             position: fixed; z-index: 99999;
             background: rgba(26, 26, 46, 0.93);
             border: 1px solid #333;
@@ -73,47 +78,46 @@ async function initDebugMenu() {
             backdrop-filter: blur(5px);
         `;
 
-        const lsPanel = document.createElement("div");
-        lsPanel.id = "vc-ls-panel";
-        lsPanel.style.cssText = panelStyles;
-        document.body.appendChild(lsPanel);
+            const lsPanel = document.createElement("div");
+            lsPanel.id = "vc-ls-panel";
+            lsPanel.style.cssText = panelStyles;
+            document.body.appendChild(lsPanel);
 
-        const cachePanel = document.createElement("div");
-        cachePanel.id = "vc-cache-panel";
-        cachePanel.style.cssText = panelStyles;
-        document.body.appendChild(cachePanel);
+            const cachePanel = document.createElement("div");
+            cachePanel.id = "vc-cache-panel";
+            cachePanel.style.cssText = panelStyles;
+            document.body.appendChild(cachePanel);
 
-
-        function closeMenu() {
-            menu.style.display = "none";
-            lsPanel.style.display = "none";
-        }
-
-        async function getSwStatus() {
-            if (!("serviceWorker" in navigator))
-                return { active: false, version: "n/a" };
-            const reg = await navigator.serviceWorker.getRegistration();
-            const active = !!reg?.active;
-            const version = localStorage.getItem("sw_version") || "—";
-            return { active, version };
-        }
-
-        async function getCacheCount() {
-            if (!("caches" in window)) return 0;
-            const keys = await caches.keys();
-            let total = 0;
-            for (const key of keys) {
-                const cache = await caches.open(key);
-                const reqs = await cache.keys();
-                total += reqs.length;
+            function closeMenu() {
+                menu.style.display = "none";
+                lsPanel.style.display = "none";
             }
-            return total;
-        }
 
-        async function renderCachePanel() {
-            const cacheNames = await caches.keys();
+            async function getSwStatus() {
+                if (!("serviceWorker" in navigator))
+                    return { active: false, version: "n/a" };
+                const reg = await navigator.serviceWorker.getRegistration();
+                const active = !!reg?.active;
+                const version = localStorage.getItem("sw_version") || "—";
+                return { active, version };
+            }
 
-            let html = `
+            async function getCacheCount() {
+                if (!("caches" in window)) return 0;
+                const keys = await caches.keys();
+                let total = 0;
+                for (const key of keys) {
+                    const cache = await caches.open(key);
+                    const reqs = await cache.keys();
+                    total += reqs.length;
+                }
+                return total;
+            }
+
+            async function renderCachePanel() {
+                const cacheNames = await caches.keys();
+
+                let html = `
                 <div style="background:#0f0f1a; padding:8px 14px;
                             font-size:11px; color:#888;
                             border-bottom:1px solid #333;">
@@ -121,15 +125,15 @@ async function initDebugMenu() {
                 </div>
             `;
 
-            if (cacheNames.length === 0) {
-                html += `<div style="padding:12px 14px; color:#555;">empty</div>`;
-            }
+                if (cacheNames.length === 0) {
+                    html += `<div style="padding:12px 14px; color:#555;">empty</div>`;
+                }
 
-            for (const cacheName of cacheNames) {
-                const cache = await caches.open(cacheName);
-                const requests = await cache.keys();
+                for (const cacheName of cacheNames) {
+                    const cache = await caches.open(cacheName);
+                    const requests = await cache.keys();
 
-                html += `
+                    html += `
                     <div style="border-bottom:1px solid #1e1e30;">
                         <div style="padding:8px 12px; color:#7f77dd; font-size:11px; border-bottom:1px solid #222;">
                             ${cacheName} (${requests.length})
@@ -154,23 +158,23 @@ async function initDebugMenu() {
                             .join("")}
                     </div>
                 `;
+                }
+
+                cachePanel.innerHTML = html;
+
+                cachePanel.querySelectorAll("button").forEach((btn) => {
+                    btn.addEventListener("click", async (e) => {
+                        e.stopPropagation();
+                        const cache = await caches.open(btn.dataset.cache);
+                        await cache.delete(btn.dataset.url);
+                        renderCachePanel();
+                    });
+                });
             }
 
-            cachePanel.innerHTML = html;
-
-            cachePanel.querySelectorAll("button").forEach((btn) => {
-                btn.addEventListener("click", async (e) => {
-                    e.stopPropagation();
-                    const cache = await caches.open(btn.dataset.cache);
-                    await cache.delete(btn.dataset.url);
-                    renderCachePanel();
-                });
-            });
-        }
-
-        function renderLsPanel() {
-            const keys = Object.keys(localStorage);
-            lsPanel.innerHTML = `
+            function renderLsPanel() {
+                const keys = Object.keys(localStorage);
+                lsPanel.innerHTML = `
                 <div style="background:#0f0f1a; padding:8px 14px; font-size:11px; color:#888;
                             border-bottom:1px solid #333; display:flex; justify-content:space-between;">
                     <span>localStorage</span>
@@ -194,26 +198,27 @@ async function initDebugMenu() {
                     .join("")}
             `;
 
-            lsPanel.querySelectorAll("button[data-key]").forEach((btn) => {
-                btn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    localStorage.removeItem(btn.dataset.key);
-                    renderLsPanel();
-                    const toggle = document.querySelector("#vc-ls-toggle .val");
-                    if (toggle)
-                        toggle.textContent =
-                            Object.keys(localStorage).length + " keys";
+                lsPanel.querySelectorAll("button[data-key]").forEach((btn) => {
+                    btn.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        localStorage.removeItem(btn.dataset.key);
+                        renderLsPanel();
+                        const toggle =
+                            document.querySelector("#vc-ls-toggle .val");
+                        if (toggle)
+                            toggle.textContent =
+                                Object.keys(localStorage).length + " keys";
+                    });
                 });
-            });
-        }
+            }
 
-        async function buildMenu() {
-            const sw = await getSwStatus();
-            const cacheCount = await getCacheCount();
-            const lsKeys = Object.keys(localStorage).length;
-            const page = location.pathname.split("/").pop() || "index.html";
+            async function buildMenu() {
+                const sw = await getSwStatus();
+                const cacheCount = await getCacheCount();
+                const lsKeys = Object.keys(localStorage).length;
+                const page = location.pathname.split("/").pop() || "index.html";
 
-            menu.innerHTML = `
+                menu.innerHTML = `
                 <div class="dm-head">
                     <div class="dm-dot"></div>
                     Vice Club — Debug
@@ -248,151 +253,152 @@ async function initDebugMenu() {
                 </div>
             `;
 
-            const header = menu.querySelector(".dm-head");
-            let isDragging = false,
-                offsetX = 0,
-                offsetY = 0;
+                const header = menu.querySelector(".dm-head");
+                let isDragging = false,
+                    offsetX = 0,
+                    offsetY = 0;
 
-            header.addEventListener("mousedown", (e) => {
-                isDragging = true;
-                const rect = menu.getBoundingClientRect();
-                offsetX = e.clientX - rect.left;
-                offsetY = e.clientY - rect.top;
-                document.body.style.userSelect = "none";
-            });
-
-            document.addEventListener("mousemove", (e) => {
-                if (!isDragging) return;
-                menu.style.left = `${e.clientX - offsetX}px`;
-                menu.style.top = `${e.clientY - offsetY}px`;
-            });
-
-            document.addEventListener("mouseup", () => {
-                isDragging = false;
-                document.body.style.userSelect = "";
-            });
-
-            document
-                .getElementById("vc-open-prod")
-                ?.addEventListener("click", () => {
-                    window.open(
-                        "https://viceclub.app" +
-                            location.pathname +
-                            location.search +
-                            location.hash,
-                        "_blank",
-                    );
-                    closeMenu();
-                });
-
-            document
-                .getElementById("vc-clear-cache")
-                ?.addEventListener("click", async () => {
-                    const keys = await caches.keys();
-                    await Promise.all(keys.map((k) => caches.delete(k)));
-                    alert(`Cache cleared (${keys.length} stores)`);
-                    closeMenu();
-                });
-
-            document
-                .getElementById("vc-hard-reload")
-                ?.addEventListener("click", () => {
-                    location.reload(true);
-                });
-
-            document
-                .getElementById("vc-copy-state")
-                ?.addEventListener("click", () => {
-                    const state = {
-                        page,
-                        url: location.href,
-                        sw,
-                        cacheCount,
-                        lsKeys,
-                        localStorage: { ...localStorage },
-                    };
-                    navigator.clipboard.writeText(
-                        JSON.stringify(state, null, 2),
-                    );
-                    closeMenu();
-                });
-
-            document
-                .getElementById("vc-log-ls")
-                ?.addEventListener("click", () => {
-                    console.table(
-                        Object.fromEntries(
-                            Object.keys(localStorage).map((k) => [
-                                k,
-                                localStorage.getItem(k),
-                            ]),
-                        ),
-                    );
-                    closeMenu();
-                });
-
-            document
-                .getElementById("vc-cache-toggle")
-                ?.addEventListener("click", async (e) => {
-                    e.stopPropagation();
-                    if (cachePanel.style.display === "block") {
-                        cachePanel.style.display = "none";
-                        return;
-                    }
-                    await renderCachePanel();
+                header.addEventListener("mousedown", (e) => {
+                    isDragging = true;
                     const rect = menu.getBoundingClientRect();
-                    cachePanel.style.left = `${rect.right + 8}px`;
-                    cachePanel.style.top = `${rect.top}px`;
-                    cachePanel.style.display = "block";
+                    offsetX = e.clientX - rect.left;
+                    offsetY = e.clientY - rect.top;
+                    document.body.style.userSelect = "none";
                 });
 
-            document
-                .getElementById("vc-ls-toggle")
-                ?.addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    if (lsPanel.style.display === "block") {
-                        lsPanel.style.display = "none";
-                        return;
-                    }
-                    renderLsPanel();
-                    const rect = menu.getBoundingClientRect();
-                    lsPanel.style.left = `${rect.right + 8}px`;
-                    lsPanel.style.top = `${rect.top}px`;
-                    lsPanel.style.display = "block";
+                document.addEventListener("mousemove", (e) => {
+                    if (!isDragging) return;
+                    menu.style.left = `${e.clientX - offsetX}px`;
+                    menu.style.top = `${e.clientY - offsetY}px`;
                 });
+
+                document.addEventListener("mouseup", () => {
+                    isDragging = false;
+                    document.body.style.userSelect = "";
+                });
+
+                document
+                    .getElementById("vc-open-prod")
+                    ?.addEventListener("click", () => {
+                        window.open(
+                            "https://viceclub.app" +
+                                location.pathname +
+                                location.search +
+                                location.hash,
+                            "_blank",
+                        );
+                        closeMenu();
+                    });
+
+                document
+                    .getElementById("vc-clear-cache")
+                    ?.addEventListener("click", async () => {
+                        const keys = await caches.keys();
+                        await Promise.all(keys.map((k) => caches.delete(k)));
+                        alert(`Cache cleared (${keys.length} stores)`);
+                        closeMenu();
+                    });
+
+                document
+                    .getElementById("vc-hard-reload")
+                    ?.addEventListener("click", () => {
+                        location.reload(true);
+                    });
+
+                document
+                    .getElementById("vc-copy-state")
+                    ?.addEventListener("click", () => {
+                        const state = {
+                            page,
+                            url: location.href,
+                            sw,
+                            cacheCount,
+                            lsKeys,
+                            localStorage: { ...localStorage },
+                        };
+                        navigator.clipboard.writeText(
+                            JSON.stringify(state, null, 2),
+                        );
+                        closeMenu();
+                    });
+
+                document
+                    .getElementById("vc-log-ls")
+                    ?.addEventListener("click", () => {
+                        console.table(
+                            Object.fromEntries(
+                                Object.keys(localStorage).map((k) => [
+                                    k,
+                                    localStorage.getItem(k),
+                                ]),
+                            ),
+                        );
+                        closeMenu();
+                    });
+
+                document
+                    .getElementById("vc-cache-toggle")
+                    ?.addEventListener("click", async (e) => {
+                        e.stopPropagation();
+                        if (cachePanel.style.display === "block") {
+                            cachePanel.style.display = "none";
+                            return;
+                        }
+                        await renderCachePanel();
+                        const rect = menu.getBoundingClientRect();
+                        cachePanel.style.left = `${rect.right + 8}px`;
+                        cachePanel.style.top = `${rect.top}px`;
+                        cachePanel.style.display = "block";
+                    });
+
+                document
+                    .getElementById("vc-ls-toggle")
+                    ?.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        if (lsPanel.style.display === "block") {
+                            lsPanel.style.display = "none";
+                            return;
+                        }
+                        renderLsPanel();
+                        const rect = menu.getBoundingClientRect();
+                        lsPanel.style.left = `${rect.right + 8}px`;
+                        lsPanel.style.top = `${rect.top}px`;
+                        lsPanel.style.display = "block";
+                    });
+            }
+
+            menu.addEventListener("click", (e) => e.stopPropagation());
+            lsPanel.addEventListener("click", (e) => e.stopPropagation());
+
+            navigator.serviceWorker.ready.then(() => {
+                navigator.serviceWorker.controller?.postMessage({
+                    type: "GET_VERSION",
+                });
+            });
+
+            let menuJustOpened = false;
+
+            document.addEventListener("keydown", async (e) => {
+                if (e.altKey && e.key === "a") {
+                    e.preventDefault();
+                    await buildMenu();
+                    menu.style.left = "20px";
+                    menu.style.top = "120px";
+                    menu.style.display = "block";
+                    menuJustOpened = true;
+                }
+                if (e.key === "Escape") closeMenu();
+            });
+
+            document.addEventListener("click", () => {
+                if (menuJustOpened) {
+                    menuJustOpened = false;
+                    return;
+                }
+                closeMenu();
+            });
+        } catch (e) {
+            console.error("initDebugMenu error:", e);
         }
-
-        menu.addEventListener("click", (e) => e.stopPropagation());
-        lsPanel.addEventListener("click", (e) => e.stopPropagation());
-
-        navigator.serviceWorker.ready.then(() => {
-            navigator.serviceWorker.controller?.postMessage({
-                type: "GET_VERSION",
-            });
-        });
-
-        let menuJustOpened = false;
-
-        document.addEventListener("keydown", async (e) => {
-            if (e.altKey && e.key === "a") {
-                e.preventDefault();
-                await buildMenu();
-                menu.style.left = "20px";
-                menu.style.top = "120px";
-                menu.style.display = "block";
-                menuJustOpened = true;
-            }
-            if (e.key === "Escape") closeMenu();
-        });
-
-        document.addEventListener("click", () => {
-            if (menuJustOpened) {
-                menuJustOpened = false;
-                return;
-            }
-            closeMenu();
-        });
-    } catch (e) {
-        console.error("initDebugMenu error:", e);
     }
-}
+})();

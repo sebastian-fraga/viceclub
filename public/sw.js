@@ -1,46 +1,62 @@
-const CACHE_VERSION = "1.4.9";
+const CACHE_VERSION = "1.5.0";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
+const assets = [
+    "/",
+    "/index.html",
+    "/assets/styles/styles.css",
+    "/assets/fonts/GTAArtDecoMedium.ttf",
+    "/assets/fonts/GTAArtDecoRegular.ttf",
+    "/assets/images/main/backgrounds/background.webp",
+    "/assets/images/main/backgrounds/background_III.webp",
+    "/assets/images/main/boxarts/portada_III.webp",
+    "/assets/images/icons/games/logos/III.webp",
+    "/assets/images/main/backgrounds/background_VC.webp",
+    "/assets/images/main/boxarts/portada_VC.webp",
+    "/assets/images/icons/games/logos/VC.webp",
+    "/assets/images/main/backgrounds/background_SA.webp",
+    "/assets/images/main/boxarts/portada_SA.webp",
+    "/assets/images/icons/games/logos/SA.webp",
+    "/assets/images/main/backgrounds/background_LCS.webp",
+    "/assets/images/main/boxarts/portada_LCS.webp",
+    "/assets/images/icons/games/logos/LCS.webp",
+    "/assets/images/main/backgrounds/background_VCS.webp",
+    "/assets/images/main/boxarts/portada_VCS.webp",
+    "/assets/images/icons/games/logos/VCS.webp",
+    "/assets/images/main/backgrounds/background_IV.webp",
+    "/assets/images/main/boxarts/portada_IV.webp",
+    "/assets/images/icons/games/logos/IV.webp",
+    "/assets/images/main/backgrounds/background_V.webp",
+    "/assets/images/main/boxarts/portada_V.webp",
+    "/assets/images/icons/games/logos/V.webp",
+    "/assets/images/main/backgrounds/background_VI.webp",
+    "/assets/images/main/boxarts/portada_VI.webp",
+    "/assets/images/icons/games/logos/VI.webp",
+    "/assets/lang/es.json",
+    "/assets/lang/en.json",
+    "/assets/lang/fr.json",
+    "/assets/lang/pt.json",
+];
 
 self.addEventListener("install", (event) => {
+    console.log("[SW] installing");
+
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll([
-                "/",
-                "/index.html",
-                "/assets/styles/styles.css",
-                "/assets/fonts/GTAArtDecoMedium.ttf",
-                "/assets/fonts/GTAArtDecoRegular.ttf",
-                "/assets/images/main/backgrounds/background.webp",
-                "/assets/images/main/backgrounds/background_III.webp",
-                "/assets/images/main/boxarts/portada_III.webp",
-                "/assets/images/icons/games/logos/III.webp",
-                "/assets/images/main/backgrounds/background_VC.webp",
-                "/assets/images/main/boxarts/portada_VC.webp",
-                "/assets/images/icons/games/logos/VC.webp",
-                "/assets/images/main/backgrounds/background_SA.webp",
-                "/assets/images/main/boxarts/portada_SA.webp",
-                "/assets/images/icons/games/logos/SA.webp",
-                "/assets/images/main/backgrounds/background_LCS.webp",
-                "/assets/images/main/boxarts/portada_LCS.webp",
-                "/assets/images/icons/games/logos/LCS.webp",
-                "/assets/images/main/backgrounds/background_VCS.webp",
-                "/assets/images/main/boxarts/portada_VCS.webp",
-                "/assets/images/icons/games/logos/VCS.webp",
-                "/assets/images/main/backgrounds/background_IV.webp",
-                "/assets/images/main/boxarts/portada_IV.webp",
-                "/assets/images/icons/games/logos/IV.webp",
-                "/assets/images/main/backgrounds/background_V.webp",
-                "/assets/images/main/boxarts/portada_V.webp",
-                "/assets/images/icons/games/logos/V.webp",
-                "/assets/images/main/backgrounds/background_VI.webp",
-                "/assets/images/main/boxarts/portada_VI.webp",
-                "/assets/images/icons/games/logos/VI.webp",
-                "/assets/lang/es.json",
-                "/assets/lang/en.json",
-                "/assets/lang/fr.json",
-                "/assets/lang/pt.json",
-            ]);
-        }),
+        (async () => {
+            try {
+                const cache = await caches.open(CACHE_NAME);
+
+                for (const asset of assets) {
+                    try {
+                        await cache.add(asset);
+                        console.log("[SW] OK", asset);
+                    } catch (e) {
+                        console.error("[SW] FAIL", asset, e);
+                    }
+                }
+            } catch (e) {
+                console.error("[SW] INSTALL ERROR", e);
+            }
+        })(),
     );
     self.skipWaiting();
 });

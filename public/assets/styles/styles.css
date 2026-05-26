@@ -192,6 +192,175 @@ body {
                     left: -999999px;
                 }
             }
+
+            & .footer-settings {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+
+
+                & .settings-text {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7em;
+
+                    & span {
+                        color: #fcfafa;
+                        opacity: 0.85;
+
+                    }
+
+                    & p {
+                        color: #d1d0d0;
+                        font-size: 0.95em;
+                    }
+                }
+
+                & label {
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 26px;
+                    transition: opacity 0.2s;
+
+                    &:hover {
+                        opacity: 0.85;
+                    }
+
+                    & input {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+
+                        &:checked+span {
+                            background-color: #8c71d0;
+
+                            &::before {
+                                transform: translateX(34px);
+                            }
+                        }
+                    }
+
+                    & span {
+                        position: absolute;
+                        inset: 0;
+                        background-color: #ccccccb7;
+                        border-radius: 50px;
+                        transition: all 0.3s;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 20px;
+                            width: 20px;
+                            left: 3px;
+                            top: 3px;
+                            background-color: white;
+                            border-radius: 50%;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                & button {
+                    font-size: 0.85em;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3em;
+                    padding: 0.4em 0.5em 0.4em 0.7em;
+                    border-radius: 8px;
+                    background: #8c71d0;
+                    color: #f2f2f2;
+                    font-weight: 700;
+                    border: 2px solid #f2f2f286;
+                    transition: opacity 0.2s;
+
+                    &:hover {
+                        opacity: 0.85;
+                    }
+
+                    &.open>.material-symbols-rounded {
+                        transform: rotate(180deg);
+                    }
+
+                    & .material-symbols-rounded {
+                        display: inline-block;
+                        transition: transform 0.2s;
+                    }
+
+                    & .lang-btn-content {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.7em;
+                    }
+                }
+
+                & label,
+                & button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                & .lang-menu {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #fff;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 8px;
+                    min-width: 140px;
+                    z-index: 100;
+
+                    &.visible {
+                        display: block;
+                    }
+
+                    & .lang-option {
+                        padding: 9px 14px;
+                        cursor: pointer;
+                        font-size: 13px;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        &:first-of-type {
+                            border-radius: 8px 8px 0 0;
+                        }
+                        &:last-of-type {
+                            border-radius: 0 0 8px 8px;
+                        }
+
+                        &:hover {
+                            background: #f5f5f5;
+                        }
+
+                        &.selected {
+                            font-weight: 500;
+                            color: #1a73e8;
+
+                            & .check {
+                                opacity: 1;
+                            }
+                        }
+
+                        & img {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+
+                        & .check {
+                            margin-left: auto;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
         }
 
         & .block {
@@ -5139,18 +5308,24 @@ body:has(.reset-dialog[open]) {
             }
 
             & #rightContent {
-                max-width: 25vw;
-                gap: 0.35em;
+                padding-inline: 25px;
+                max-width: 65vw;
+                height: 100dvh;
+                gap: 0.15em;
 
                 & a {
                     &:first-of-type {
-                        margin-top: 0.5em;
+                        margin-top: 0.15em;
                     }
 
                     & img {
-                        width: 75px;
+                        width: 65px;
                         height: auto;
                     }
+                }
+
+                & .footer-settings {
+                    flex: 0;
                 }
             }
 
@@ -5749,6 +5924,16 @@ body:has(.reset-dialog[open]) {
             justify-content: flex-start;
         }
 
+        &.index {
+            & #rightContent {
+                padding-inline: 1em;
+
+                & .footer-settings {
+                    flex: 1;
+                }
+            }
+        }
+
         & .block,
         & #radioInfo {
             margin: 5em 0 1em 0;
@@ -5835,6 +6020,16 @@ body:has(.reset-dialog[open]) {
         & #radioInfo,
         & footer {
             margin: 6em 0 1em 0;
+        }
+
+        &.index {
+            & #rightContent {
+                padding-inline: 1em;
+
+                & .footer-settings {
+                    flex: 1;
+                }
+            }
         }
     }
 

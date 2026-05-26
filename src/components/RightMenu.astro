@@ -1,133 +1,231 @@
 ---
 interface Props {
-  isIndex?: boolean;
-  game?: string;
-  section?: string;
+    isIndex?: boolean;
+    game?: string;
+    section?: string;
 }
 
 const { isIndex = false, game = "", section = "" } = Astro.props;
 
 const gamesList = [
-  { id: "III", name: "GTA 3" },
-  { id: "VC", name: "GTA Vice City" },
-  { id: "SA", name: "GTA San Andreas" },
-  { id: "LCS", name: "GTA Liberty City Stories" },
-  { id: "VCS", name: "GTA Vice City Stories" },
-  { id: "IV", name: "GTA 4" },
-  { id: "V", name: "GTA 5" },
-  { id: "VI", name: "GTA 6" }
+    { id: "III", name: "GTA 3" },
+    { id: "VC", name: "GTA Vice City" },
+    { id: "SA", name: "GTA San Andreas" },
+    { id: "LCS", name: "GTA Liberty City Stories" },
+    { id: "VCS", name: "GTA Vice City Stories" },
+    { id: "IV", name: "GTA 4" },
+    { id: "V", name: "GTA 5" },
+    { id: "VI", name: "GTA 6" },
 ];
 
 const GAME_SECTIONS: Record<string, string[]> = {
-  III: ["inicio", "100", "artworks", "herramientas_y_mods", "logros", "mapa", "radio", "trucos"],
-  VC: ["inicio", "100", "artworks", "herramientas_y_mods", "logros", "mapa", "radio", "trucos"],
-  SA: ["inicio", "100", "artworks", "herramientas_y_mods", "logros", "mapa", "radio", "trucos"],
-  LCS: ["inicio", "100", "artworks", "mapa", "radio", "trucos"],
-  VCS: ["inicio", "100", "artworks", "mapa", "radio", "trucos"],
-  IV: ["inicio", "100", "artworks", "herramientas_y_mods", "logros", "mapa", "radio", "trucos"],
-  V: ["inicio", "100", "artworks", "herramientas_y_mods", "logros", "mapa", "radio", "trucos"],
-  VI: ["inicio", "timeline"]
+    III: [
+        "inicio",
+        "100",
+        "artworks",
+        "herramientas_y_mods",
+        "logros",
+        "mapa",
+        "radio",
+        "trucos",
+    ],
+    VC: [
+        "inicio",
+        "100",
+        "artworks",
+        "herramientas_y_mods",
+        "logros",
+        "mapa",
+        "radio",
+        "trucos",
+    ],
+    SA: [
+        "inicio",
+        "100",
+        "artworks",
+        "herramientas_y_mods",
+        "logros",
+        "mapa",
+        "radio",
+        "trucos",
+    ],
+    LCS: ["inicio", "100", "artworks", "mapa", "radio", "trucos"],
+    VCS: ["inicio", "100", "artworks", "mapa", "radio", "trucos"],
+    IV: [
+        "inicio",
+        "100",
+        "artworks",
+        "herramientas_y_mods",
+        "logros",
+        "mapa",
+        "radio",
+        "trucos",
+    ],
+    V: [
+        "inicio",
+        "100",
+        "artworks",
+        "herramientas_y_mods",
+        "logros",
+        "mapa",
+        "radio",
+        "trucos",
+    ],
+    VI: ["inicio", "timeline"],
 };
 
 const SECTIONS_METADATA = [
-  { id: "inicio", label: "INICIO", icon: "home" },
-  { id: "100", label: "100%", icon: "checklist" },
-  { id: "artworks", label: "ARTWORKS", icon: "art_track" },
-  { id: "herramientas_y_mods", label: "HERRAMIENTAS Y MODS", icon: "build" },
-  { id: "logros", label: "LOGROS", icon: "trophy" },
-  { id: "mapa", label: "MAPA", icon: "map" },
-  { id: "radio", label: "RADIO", icon: "radio" },
-  { id: "trucos", label: "TRUCOS", icon: "videogame_asset" },
-  { id: "timeline", label: "LÍNEA DE TIEMPO", icon: "timeline" }
+    { id: "inicio", label: "INICIO", icon: "home" },
+    { id: "100", label: "100%", icon: "checklist" },
+    { id: "artworks", label: "ARTWORKS", icon: "art_track" },
+    { id: "herramientas_y_mods", label: "HERRAMIENTAS Y MODS", icon: "build" },
+    { id: "logros", label: "LOGROS", icon: "trophy" },
+    { id: "mapa", label: "MAPA", icon: "map" },
+    { id: "radio", label: "RADIO", icon: "radio" },
+    { id: "trucos", label: "TRUCOS", icon: "videogame_asset" },
+    { id: "timeline", label: "LÍNEA DE TIEMPO", icon: "timeline" },
 ];
 
 function getHrefForGame(targetGame: string): string {
-  const supported = GAME_SECTIONS[targetGame] || [];
-  if (supported.includes(section)) {
-    return `/${targetGame}/${section}`;
-  }
-  return `/${targetGame}/inicio`;
+    const supported = GAME_SECTIONS[targetGame] || [];
+    if (supported.includes(section)) {
+        return `/${targetGame}/${section}`;
+    }
+    return `/${targetGame}/inicio`;
 }
 
-const activeSections = SECTIONS_METADATA.filter(sec => 
-  GAME_SECTIONS[game]?.includes(sec.id)
+const activeSections = SECTIONS_METADATA.filter((sec) =>
+    GAME_SECTIONS[game]?.includes(sec.id),
 );
 ---
-{isIndex ? (
-    <nav id="rightContent">
-        {gamesList.map((g) => (
-            <a href={`/${g.id}/inicio`}>
-                <img
-                    src={`/assets/images/icons/games/logos/${g.id}.webp`}
-                    alt={`Logo de ${g.name}`}
-                    loading="lazy"
-                />
-                <span>{g.id === "VI" ? "GTA VI" : g.id === "IV" ? "GTA IV" : g.id === "III" ? "GTA III" : g.name}</span>
-            </a>
-        ))}
-    </nav>
-) : (
-    <nav id="rightContent">
-        <div class="right-content-logos">
-            {gamesList.map((g) => {
-                const isActive = game === g.id;
-                return (
-                    <a href={isActive ? "#" : getHrefForGame(g.id)} class={isActive ? "active" : undefined}>
-                        <img
-                            src={`/assets/images/icons/games/logos/${g.id}.webp`}
-                            alt={`Logo de ${g.name}`}
-                            loading="lazy"
-                            class={isActive ? "active" : undefined}
-                        />
-                    </a>
-                );
-            })}
-        </div>
 
-        <div class="right-content-nav">
-            <div class="right-content-links">
-                {activeSections.map((sec) => {
-                    const isActive = section === sec.id;
+{
+    isIndex ? (
+        <nav id="rightContent">
+            {gamesList.map((g) => (
+                <a href={`/${g.id}/inicio`}>
+                    <img
+                        src={`/assets/images/icons/games/logos/${g.id}.webp`}
+                        alt={`Logo de ${g.name}`}
+                        loading="lazy"
+                    />
+                    <span>
+                        {g.id === "VI"
+                            ? "GTA VI"
+                            : g.id === "IV"
+                              ? "GTA IV"
+                              : g.id === "III"
+                                ? "GTA III"
+                                : g.name}
+                    </span>
+                </a>
+            ))}
+            <div class="footer-settings">
+                <div class="settings-text">
+                    <span class="material-symbols-rounded">language</span>
+                    <p data-i18n="rightmenu.settings.language">Idioma</p>
+                </div>
+                <button>
+                    ES
+                    <span class="material-symbols-rounded">
+                        arrow_drop_down
+                    </span>
+                </button>
+            </div>
+        </nav>
+    ) : (
+        <nav id="rightContent">
+            <div class="right-content-logos">
+                {gamesList.map((g) => {
+                    const isActive = game === g.id;
                     return (
-                        <a href={isActive ? "#" : `/${game}/${sec.id}`} class={isActive ? "active" : undefined}>
-                            <span class="material-symbols-rounded">{sec.icon}</span>
-                            <p data-i18n={`rightmenu.label.${sec.id}`}>{sec.label}</p>
+                        <a
+                            href={isActive ? "#" : getHrefForGame(g.id)}
+                            class={isActive ? "active" : undefined}
+                        >
+                            <img
+                                src={`/assets/images/icons/games/logos/${g.id}.webp`}
+                                alt={`Logo de ${g.name}`}
+                                loading="lazy"
+                                class={isActive ? "active" : undefined}
+                            />
                         </a>
                     );
                 })}
             </div>
-            <div class="right-content-footer">
-                <div class="footer-settings cursor-setting">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">arrow_selector_tool</span>
-                        <p data-i18n="rightmenu.settings.cursor">Cursor personalizado</p>
-                    </div>
-                    <label>
-                        <input type="checkbox" id="cursorToggle" disabled={game === "VI" ? true : undefined} />
-                        <span></span>
-                    </label>
+
+            <div class="right-content-nav">
+                <div class="right-content-links">
+                    {activeSections.map((sec) => {
+                        const isActive = section === sec.id;
+                        return (
+                            <a
+                                href={isActive ? "#" : `/${game}/${sec.id}`}
+                                class={isActive ? "active" : undefined}
+                            >
+                                <span class="material-symbols-rounded">
+                                    {sec.icon}
+                                </span>
+                                <p data-i18n={`rightmenu.label.${sec.id}`}>
+                                    {sec.label}
+                                </p>
+                            </a>
+                        );
+                    })}
                 </div>
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">volume_up</span>
-                        <p data-i18n="rightmenu.settings.sound">Sonido</p>
+                <div class="right-content-footer">
+                    <div class="footer-settings cursor-setting">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded">
+                                arrow_selector_tool
+                            </span>
+                            <p data-i18n="rightmenu.settings.cursor">
+                                Cursor personalizado
+                            </p>
+                        </div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="cursorToggle"
+                                disabled={game === "VI" ? true : undefined}
+                            />
+                            <span />
+                        </label>
                     </div>
-                    <label>
-                        <input type="checkbox" id="soundToggle" disabled={game === "VI" ? true : undefined} />
-                        <span></span>
-                    </label>
-                </div>
-                <div class="footer-settings">
-                    <div class="settings-text">
-                        <span class="material-symbols-rounded">language</span>
-                        <p data-i18n="rightmenu.settings.language">Idioma</p>
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded">
+                                volume_up
+                            </span>
+                            <p data-i18n="rightmenu.settings.sound">Sonido</p>
+                        </div>
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="soundToggle"
+                                disabled={game === "VI" ? true : undefined}
+                            />
+                            <span />
+                        </label>
                     </div>
-                    <button>
-                        ES
-                        <span class="material-symbols-rounded">arrow_drop_down</span>
-                    </button>
+                    <div class="footer-settings">
+                        <div class="settings-text">
+                            <span class="material-symbols-rounded">
+                                language
+                            </span>
+                            <p data-i18n="rightmenu.settings.language">
+                                Idioma
+                            </p>
+                        </div>
+                        <button>
+                            ES
+                            <span class="material-symbols-rounded">
+                                arrow_drop_down
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
-)}
+        </nav>
+    )
+}

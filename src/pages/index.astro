@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Loader from "../components/Loader.astro";
+const isProd = import.meta.env.PROD;
 ---
 
 <BaseLayout
@@ -388,11 +389,14 @@ import Loader from "../components/Loader.astro";
         <script is:inline src="/assets/scripts/overlay.js"></script>
 
         <!-- Service Worker -->
-        <script is:inline define:vars={{ isProd: import.meta.env.PROD }}>
-            if (isProd && "serviceWorker" in navigator) {
+        <script>
+            if ("serviceWorker" in navigator) {
+                console.log("Service Worker soportado");
+
                 navigator.serviceWorker
                     .register("/sw.js")
-                    .then(() => console.log("Service Worker registrado"));
+                    .then(() => console.log("Service Worker registrado"))
+                    .catch((err) => console.error("Error de Service Worker", err));
             }
         </script>
     </fragment>
