@@ -18,11 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function safePlay() {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
-            playPromise.catch((err) => {
-                if (err.name !== "AbortError") {
-                    console.error("Error al reproducir:", err);
-                }
-            });
+            playPromise
+                .then(() => {
+                    playBtn.style.display = "none";
+                    playPauseBtn.style.display = "inline";
+                })
+                .catch((err) => {
+                    if (err.name === "NotAllowedError") {
+                        console.warn(
+                            "Autoplay bloqueado por el navegador. Esperando clic del usuario.",
+                        );
+                        playPauseBtn.style.display = "none";
+                        playBtn.style.display = "inline";
+                    } else if (err.name !== "AbortError") {
+                        console.error("Error al reproducir:", err);
+                    }
+                });
         }
     }
 
@@ -60,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         navigator.mediaSession.setActionHandler("play", () => {
             safePlay();
-            playBtn.style.display = "none";
-            playPauseBtn.style.display = "inline";
         });
         navigator.mediaSession.setActionHandler("pause", () => {
             audio.pause();
@@ -412,9 +421,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 safePlay();
                 audio.oncanplay = null;
             };
-
-            playPauseBtn.style.display = "inline";
-            playBtn.style.display = "none";
         }
 
         if (data._activeSongs.length > 0) {
@@ -450,9 +456,6 @@ document.addEventListener("DOMContentLoaded", function () {
             safePlay();
             audio.oncanplay = null;
         };
-
-        playPauseBtn.style.display = "inline";
-        playBtn.style.display = "none";
 
         const songs = data.songs;
 
@@ -593,8 +596,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     playBtn.addEventListener("click", () => {
         safePlay();
-        playBtn.style.display = "none";
-        playPauseBtn.style.display = "inline";
     });
 
     let lastSongIndex = -1;
