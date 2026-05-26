@@ -1019,6 +1019,12 @@ body {
             padding-bottom: 1em;
             border: none;
 
+            & .footer-left {
+                & .footer-logo {
+                    filter: drop-shadow(2px -2px 20px #0000008e)
+                }
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -1360,7 +1366,7 @@ body {
             grid-row: 1;
 
             & .footer-logo {
-                filter: drop-shadow(4px 0 2px #00000059);
+                filter: drop-shadow(2px -2px 20px color-mix(in srgb, var(--accent-color) 40%, transparent));
 
                 & a {
                     width: fit-content;
@@ -3711,6 +3717,7 @@ body:has(.reset-dialog[open]) {
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
+        padding-inline: 1em;
 
         & button {
             border: none;
@@ -3743,8 +3750,8 @@ body:has(.reset-dialog[open]) {
 
     & .tracklist-title {
         font-size: 1.45em;
-        margin-bottom: 15px;
-        letter-spacing: 1px;
+        margin-block: 8px 10px;
+        letter-spacing: 2px;
     }
 
     & #radioDJ,
@@ -3834,6 +3841,10 @@ body:has(.reset-dialog[open]) {
             &:hover {
                 opacity: 0.72;
                 background: color-mix(in srgb, var(--block-border) 8%, transparent);
+            }
+
+            &:last-of-type {
+                margin-bottom: 20px;
             }
 
             &.active {

@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let radioData = {};
     let targetTime = null;
 
+    function refreshTranslations() {
+        if (window.translations && window.applyTranslations) {
+            window.applyTranslations(window.translations);
+        }
+    }
+
     function safePlay() {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
@@ -371,6 +377,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("radioGenre").innerHTML = renderGenre(
             data.genre,
         );
+
+        refreshTranslations();
     }
 
     function updateRadioReproductor(radioKey, playlistIndex) {
@@ -394,6 +402,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         genreEl.innerHTML = renderGenre(playlist.genre);
+
+        refreshTranslations();
 
         if (playlist.audio) {
             audio.src = `${playlist.audio}?v=${Date.now()}`;
@@ -472,10 +482,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!songs || songs.length === 0) return;
 
         const title = document.createElement("h4");
-        title.textContent = "Canciones";
+        title.textContent = "Canciones:";
         title.dataset.i18n = "radio.info.tracklist";
         title.classList.add("tracklist-title");
         radioList.appendChild(title);
+        refreshTranslations();
 
         songs.forEach((song, i) => {
             const li = document.createElement("li");

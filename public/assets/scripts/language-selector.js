@@ -16,12 +16,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         return await res.json();
     }
 
-    function applyTranslations(translations) {
+    window.applyTranslations = function (translations) {
         document.querySelectorAll("[data-i18n]").forEach((el) => {
             const key = el.dataset.i18n;
             const value = key
                 .split(".")
                 .reduce((obj, k) => obj?.[k], translations);
+
             if (value) el.textContent = value;
         });
 
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const sectionKey = section === "100" ? "checklist" : section;
 
         const heading = translations?.[sectionKey]?.[game]?.heading;
+
         if (heading) document.querySelector("h1").textContent = heading;
 
         document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
@@ -37,14 +39,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             const value = key
                 .split(".")
                 .reduce((obj, k) => obj?.[k], translations);
+
             if (value) el.placeholder = value;
         });
 
-        // cheats
         if (typeof renderCheats === "function") {
             renderCheats();
         }
-    }
+    };
 
     async function changeLang(lang) {
         localStorage.setItem("lang", lang);
