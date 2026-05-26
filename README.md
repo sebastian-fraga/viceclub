@@ -1,45 +1,101 @@
-![Vice Club Logo](./public/assets/images/app/banner.png "This is the Vice Club logo.")
+# Vice Club
+
+![Vice Club Logo](./public/assets/images/app/banner.png)
 
 <p align="center">
-  <a href="https://www.viceclub.app/index.html">
-   <img src="https://img.shields.io/badge/🔗_VISIT_WEBSITE-FF0080?style=plastic&logoColor=white" />
+  <a href="https://www.viceclub.app/">
+    <img src="https://img.shields.io/badge/VISIT_WEBSITE-FF0080?style=for-the-badge" alt="Visit Website" />
   </a>
 </p>
 
-## 🛠️ Built With
+---
 
-![HTML5](https://img.shields.io/badge/HTML-E34F26?style=plastic&logo=html5&logoColor=white)
+## About the Project
+
+**Vice Club** is a fan-made website dedicated to preserving and organizing content from the *Grand Theft Auto* series in a clean, immersive, and highly accessible way.
+
+The project aims to recreate the authentic GTA experience directly in the browser — featuring playable radio stations, interactive maps, completion checklists, and richly detailed game information.
+
+Continuously updated and expanded, Vice Club keeps growing with new features and content.
+
+---
+
+## What You'll Find
+
+### Radio Stations
+
+One of the core features of Vice Club.
+
+Listen to the original in-game radio stations with:
+
+- Background playback
+- Detailed song information
+- Genre categorization
+- Talk shows and original segments
+
+---
+
+### Interactive Maps
+
+Carefully designed interactive maps to assist you while playing. They include:
+
+- Collectibles
+- Weapons
+- Properties
+- Points of interest
+
+---
+
+### 100% Completion Checklists
+
+Track your progress toward 100% completion directly in the browser.
+
+Progress is saved automatically in your device, so you can continue exactly where you left off (just don't clear your site data).
+
+---
+
+### Game Information
+
+Each game has its own dedicated section with well-organized content, including:
+
+- Main and supporting characters
+- Quotes
+- Fact sheets and trivia
+
+---
+
+### Cheat Codes
+
+Complete cheat code lists for multiple platforms, with a built-in search function for quick access during gameplay.
+
+---
+
+### Mods & Tools
+
+A curated collection of useful community mods, tools, and resources to enhance the PC experience.
+
+---
+
+## Built With
+
+![Astro](https://img.shields.io/badge/Astro-E34F26?style=plastic&logo=Astro&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=plastic&logo=css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black)
 
-Built completely with vanilla technologies
+Originally started as a vanilla HTML project, Vice Club later transitioned to **Astro** for better scalability. Much of the site still uses vanilla components where possible.
 
-## 🌴 What is Vice Club?
+---
 
-**Vice Club** is the perfect website for anyone who loves the _Grand Theft Auto_ saga.
+## Currently Working On
 
-It receives regular updates, so make sure to check back often!
+I'm currently working across multiple areas of the project. You can check the active development status in the [Issues section](https://github.com/sebastian-fraga/viceclub/issues).
 
-## 🔎 What can I find here?
+---
 
-At Vice Club, you'll find everything related to the main titles of the Grand Theft Auto saga:
+## Disclaimer
 
-- All the **important information** from each game.
+Vice Club is an independent website. 
 
-- Essential **mods and tools** to enhance your gameplay and overall experience.
+*Grand Theft Auto* and *GTA* are registered trademarks of **Rockstar Games** and **Take-Two Interactive**. 
 
-- **Interactive maps** to use while playing, featuring key locations, collectibles, weapons, missions, and important points of interest.
-
-- The complete **list of cheat codes** for every console, with a built-in search feature for quick access.
-
-- Every **in-game radio station**, so you can listen in the background while doing other things, including full details such as song lists and music genres.
-
-- **100% completion checklists** for each game, with the ability to track your progress and have it saved every time you visit the site.
-
-- All official **artworks**
-
-- A **detailed achievement guide list** for those who truly want to complete everything each game has to offer.
-
-## 🔜 Currently working on...
-
-- Completing info on radio stations
+This website is not affiliated with, sponsored by, or associated with either company.
