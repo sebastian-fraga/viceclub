@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1.4.8";
+const CACHE_VERSION = "1.4.9";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 self.addEventListener("install", (event) => {

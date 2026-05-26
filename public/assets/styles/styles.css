@@ -3096,7 +3096,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 
         & .achievement-toggle-icon {
             font-size: 1.2rem;
-            transition: transform 0.3s ease;
+            transition: transform 0.1s ease;
         }
     }
 
@@ -3118,7 +3118,7 @@ details.mod:hover summary>.material-symbols-rounded.arrow {
 }
 
 .achievement-toggle[aria-expanded="true"] .achievement-toggle-icon {
-    transform: rotate(45deg) !important;
+    transform: rotate(90deg) !important;
 }
 
 .achievement-toggle[aria-expanded="true"]+.achievement-guide-text {

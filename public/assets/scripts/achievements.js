@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const rutaActual = window.location.pathname;
-    const carpetas = ["III", "VC", "SA", "IV", "V"];
-    const secciones = [
+    const GAME_FOLDERS = ["III", "VC", "SA", "IV", "V"];
+
+    const SECTIONS = [
         "iii_original",
         "iii_definitive",
         "vc_original",
@@ -28,35 +28,35 @@ document.addEventListener("DOMContentLoaded", function () {
             label: "Edición Definitiva",
             icon: "iii_definitive.webp",
             color: "#B8281B",
-            glow: "rgba(255, 25, 25, 0.1)",
-            bg: "linear-gradient(135deg,rgba(255, 97, 97, 0.35), rgba(173, 52, 22, 0.4))",
+            glow: "rgba(255,25,25,0.1)",
+            bg: "linear-gradient(135deg, rgba(255,97,97,0.35), rgba(173,52,22,0.4))",
         },
         vc_original: {
             label: "Originales",
             icon: "vc_original.webp",
             color: "#DC84B0",
-            glow: "rgba(244, 194, 253, 0.15)",
-            bg: "linear-gradient(135deg, rgba(220, 132, 176, 0.4), rgba(248, 199, 224, 0.35))",
+            glow: "rgba(244,194,253,0.15)",
+            bg: "linear-gradient(135deg, rgba(220,132,176,0.4), rgba(248,199,224,0.35))",
         },
         vc_definitive: {
             label: "Edición Definitiva",
             icon: "vc_definitive.webp",
             color: "#D98EB6",
-            glow: "rgba(244, 194, 253, 0.15)",
-            bg: "linear-gradient(135deg, rgba(217, 142, 182, 0.4), rgba(194, 92, 171, 0.35))",
+            glow: "rgba(244,194,253,0.15)",
+            bg: "linear-gradient(135deg, rgba(217,142,182,0.4), rgba(194,92,171,0.35))",
         },
         sa_original: {
             label: "Originales",
             icon: "sa_original.webp",
             color: "#5fa459",
-            glow: "rgba(72, 178, 27, 0.15)",
-            bg: "linear-gradient(135deg, rgba(49, 77, 50, 0.4), rgba(150, 235, 157, 0.35))",
+            glow: "rgba(72,178,27,0.15)",
+            bg: "linear-gradient(135deg, rgba(49,77,50,0.4), rgba(150,235,157,0.35))",
         },
         sa_definitive: {
             label: "Edición Definitiva",
             icon: "sa_definitive.webp",
             color: "#70bb69",
-            glow: "rgba(117, 189, 85, 0.15)",
+            glow: "rgba(117,189,85,0.15)",
             bg: "linear-gradient(135deg, rgba(70,90,55,0.4), rgba(140,170,95,0.35))",
         },
         socialclub: {
@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
             label: "The Lost and Damned",
             icon: "tlad.webp",
             color: "#f8746f",
-            glow: "rgba(255, 94, 82, 0.1)",
-            bg: "linear-gradient(135deg, rgba(87, 2, 2, 0.4), rgba(250, 75, 75, 0.35))",
+            glow: "rgba(255,94,82,0.1)",
+            bg: "linear-gradient(135deg, rgba(87,2,2,0.4), rgba(250,75,75,0.35))",
         },
         tbogt: {
             label: "The Ballad of Gay Tony",
@@ -98,19 +98,19 @@ document.addEventListener("DOMContentLoaded", function () {
             label: "Versión Enhanced",
             icon: "v_enhanced.webp",
             color: "#a1ff6b",
-            glow: "rgba(147, 255, 107, 0.1)",
-            bg: "linear-gradient(135deg, rgba(47, 87, 2, 0.4), rgba(104, 250, 75, 0.35))",
+            glow: "rgba(147,255,107,0.1)",
+            bg: "linear-gradient(135deg, rgba(47,87,2,0.4), rgba(104,250,75,0.35))",
         },
     };
 
-    const coloresRarity = {
+    const RARITY_STYLES = {
         bronze: { border: "2px solid #ffb89770" },
         silver: { border: "2px solid #B5B5B570" },
         gold: { border: "2px solid #f5b33970" },
         platinum: { border: "2px solid #7191fa70" },
     };
 
-    const coloresTags = {
+    const TAG_STYLES = {
         Perdible: { background: "#6b2a2a", color: "#ff6b6b" },
         Historia: { background: "#2a4a2a", color: "#6bff6b" },
         Coleccionable: { background: "#858126", color: "#e4ff6b" },
@@ -118,217 +118,139 @@ document.addEventListener("DOMContentLoaded", function () {
         Online: { background: "#B1261A", color: "#fafafa" },
     };
 
-    let juego = null;
-    const pathSegments = rutaActual.split("/").filter(Boolean);
+    const currentPath = window.location.pathname;
+    const pathSegments = currentPath.split("/").filter(Boolean);
+    const game = GAME_FOLDERS.find((folder) => pathSegments.includes(folder));
 
-    carpetas.forEach(function (carpeta) {
-        if (pathSegments.includes(carpeta)) {
-            juego = carpeta;
-        }
-    });
-
-    if (!juego) {
-        console.error("No se pudo detectar el juego desde la URL.");
+    if (!game) {
+        console.error("No se puedo encontrar el JSON desde la URL.");
         return;
     }
 
-    const rutaJSON =
-        "https://viceclub.s3.us-east-1.amazonaws.com/" +
-        juego +
-        "/achievements.json";
+    const jsonUrl = `https://viceclub.s3.us-east-1.amazonaws.com/${game}/achievements.json`;
 
-    mostrarSkeletons();
-
-    fetch(rutaJSON)
+    fetch(jsonUrl)
         .then((r) => {
-            if (!r.ok) throw new Error();
+            if (!r.ok) throw new Error("Network response was not ok");
             return r.json();
         })
-        .then((datos) => {
-            renderizarLogros(datos);
-            configurarBotones(datos);
+        .then((data) => {
+            renderAchievements(data);
+            renderTabSelector(data);
         })
+        .catch((error) => console.error("Error loading achievements:", error));
 
-        .catch((error) => console.error("Error al cargar los logros:", error));
+    function createAchievementCard(achievement) {
+        const card = document.createElement("div");
+        card.className = "achievement-card";
 
-    function mostrarSkeletons() {
-        const selector = document.querySelector(".platform-selector");
-        if (selector) selector.style.display = "none";
+        const rarityStyle = { ...(RARITY_STYLES[achievement.rarity] || {}) };
+        if (achievement.rarity === "platinum")
+            rarityStyle.margin = "0 0 30px 0";
+        Object.assign(card.style, rarityStyle);
 
-        const skeletonHTML = Array(4)
-            .fill(
-                `
-        <div class="skeleton-entry achievement-skeleton">
-            <div class="skeleton skeleton-date"></div>
-            <div class="skeleton skeleton-text"></div>
-            <div class="skeleton skeleton-text short"></div>
-            <div class="skeleton skeleton-text"></div>
-            <div class="skeleton skeleton-text short"></div>
-        </div>
-    `,
-            )
-            .join("");
+        const header = document.createElement("div");
+        header.className = "achievement-card-header";
 
-        document.querySelectorAll(".achievement-content").forEach((c) => {
-            c.style.display = "none";
+        const img = document.createElement("img");
+        img.src = achievement.imagen;
+        img.alt = achievement.nombre;
+        img.className = "achievement-img";
+        img.loading = "lazy";
+        img.decoding = "async";
+
+        const info = document.createElement("div");
+        info.className = "achievement-card-info";
+
+        const title = document.createElement("h3");
+        title.className = "achievement-name";
+        title.textContent = achievement.nombre;
+
+        const desc = document.createElement("p");
+        desc.className = "achievement-description";
+        desc.textContent = achievement.descripcion;
+
+        const tagContainer = document.createElement("div");
+        tagContainer.className = "achievement-tag-container";
+
+        (achievement.tags || []).forEach((tag) => {
+            const style = TAG_STYLES[tag] || {};
+            const span = document.createElement("span");
+            span.className = "achievement-tag";
+            span.textContent = tag;
+            span.style.backgroundColor = style.background || "#2a2a3d";
+            span.style.color = style.color || "#b0b0cc";
+            tagContainer.appendChild(span);
         });
 
-        const primero = document.querySelector(".achievement-content");
-        if (primero) {
-            const disclaimer = primero.querySelector(".achievement-disclaimer");
-            if (disclaimer) disclaimer.style.display = "none";
-            const lista = primero.querySelector(".achievement-list");
-            if (lista) lista.innerHTML = skeletonHTML;
-            primero.style.display = "block";
-        }
+        info.append(title, desc, tagContainer);
+        header.append(img, info);
+
+        const guide = document.createElement("div");
+        guide.className = "achievement-card-guide";
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.className = "achievement-toggle";
+        toggleBtn.setAttribute("aria-expanded", "false");
+        toggleBtn.innerHTML = `<span>Guía</span><span class="achievement-toggle-icon material-symbols-rounded">add</span>`;
+
+        const guideText = document.createElement("p");
+        guideText.className = "achievement-guide-text";
+        guideText.textContent = achievement.como_conseguirlo;
+
+        guide.append(toggleBtn, guideText);
+
+        const fragment = document.createDocumentFragment();
+        fragment.append(header, guide);
+        card.appendChild(fragment);
+
+        return card;
     }
 
-    function renderizarLogros(datos) {
-        secciones.forEach(function (seccion) {
-            const contenedor = document.querySelector(
-                "#" + seccion + " .achievement-list",
+    function renderAchievements(data) {
+        SECTIONS.forEach((section) => {
+            const container = document.querySelector(
+                `#${section} .achievement-list`,
             );
+            if (!container || !data[section]) return;
 
-            if (!contenedor || !datos[seccion]) return;
-
-            contenedor.innerHTML = "";
-
-            datos[seccion].forEach(function (logro) {
-                const tarjeta = document.createElement("div");
-                tarjeta.className = "achievement-card";
-                const estiloRarity = coloresRarity[logro.rarity] || {};
-
-                if (logro.rarity === "platinum") {
-                    estiloRarity.margin = "0 0 30px 0";
-                }
-
-                Object.assign(tarjeta.style, estiloRarity);
-                tarjeta.innerHTML = "";
-                const fragment = document.createDocumentFragment();
-
-                // Header
-                const header = document.createElement("div");
-                header.className = "achievement-card-header";
-
-                // Imagen
-                const img = document.createElement("img");
-                img.src = logro.imagen;
-                img.alt = logro.nombre;
-                img.className = "achievement-img";
-                img.loading = "lazy";
-                img.decoding = "async";
-
-                header.appendChild(img);
-
-                // Info container
-                const info = document.createElement("div");
-                info.className = "achievement-card-info";
-
-                // Nombre
-                const h3 = document.createElement("h3");
-                h3.className = "achievement-name";
-                h3.textContent = logro.nombre;
-
-                // Descripción
-                const desc = document.createElement("p");
-                desc.className = "achievement-description";
-                desc.textContent = logro.descripcion;
-
-                // Tags
-                const tagContainer = document.createElement("div");
-                tagContainer.className = "achievement-tag-container";
-
-                (logro.tags || []).forEach((tag) => {
-                    const estilo = coloresTags[tag] || {};
-
-                    const span = document.createElement("span");
-                    span.className = "achievement-tag";
-                    span.textContent = tag;
-
-                    span.style.backgroundColor = estilo.background || "#2a2a3d";
-                    span.style.color = estilo.color || "#b0b0cc";
-
-                    tagContainer.appendChild(span);
-                });
-
-                info.appendChild(h3);
-                info.appendChild(desc);
-                info.appendChild(tagContainer);
-
-                header.appendChild(info);
-
-                const guide = document.createElement("div");
-                guide.className = "achievement-card-guide";
-
-                const button = document.createElement("button");
-                button.className = "achievement-toggle";
-                button.setAttribute("aria-expanded", "false");
-
-                const spanText = document.createElement("span");
-                spanText.textContent = "Guía";
-
-                const spanIcon = document.createElement("span");
-                spanIcon.className = "achievement-toggle-icon";
-                spanIcon.textContent = "+";
-
-                button.appendChild(spanText);
-                button.appendChild(spanIcon);
-
-                const guideText = document.createElement("p");
-                guideText.className = "achievement-guide-text";
-                guideText.textContent = logro.como_conseguirlo;
-
-                guide.appendChild(button);
-                guide.appendChild(guideText);
-
-                fragment.appendChild(header);
-                fragment.appendChild(guide);
-
-                tarjeta.appendChild(fragment);
-
-                contenedor.appendChild(tarjeta);
+            container.innerHTML = "";
+            data[section].forEach((achievement) => {
+                container.appendChild(createAchievementCard(achievement));
             });
         });
+
         document.querySelectorAll(".achievement-content").forEach((content) => {
             const disclaimer = content.querySelector(".achievement-disclaimer");
             if (disclaimer) disclaimer.style.display = "";
         });
     }
 
-    function configurarBotones(datos) {
-        if (["III", "VC", "SA", "IV", "V"].includes(juego)) {
-            renderizarSelectorVisual(datos);
-            return;
-        }
-    }
+    function renderTabSelector(data) {
+        if (!GAME_FOLDERS.includes(game)) return;
 
-    function renderizarSelectorVisual(datos) {
         const selector = document.querySelector(".platform-selector");
         if (!selector) return;
 
-        const tabsDisponibles = secciones.filter(
-            (s) => datos[s] && datos[s].length > 0,
-        );
+        const availableTabs = SECTIONS.filter((s) => data[s]?.length > 0);
 
         selector.innerHTML = "";
 
-        const tabGuardada = localStorage.getItem(`achievements_tab_${juego}`);
-        const tabInicial = tabsDisponibles.includes(tabGuardada)
-            ? tabGuardada
-            : tabsDisponibles[0];
+        const savedTab = localStorage.getItem(`achievements_tab_${game}`);
+        const initialTab = availableTabs.includes(savedTab)
+            ? savedTab
+            : availableTabs[0];
 
-        tabsDisponibles.forEach((tabId) => {
+        availableTabs.forEach((tabId) => {
             const config = ACHIEVEMENT_TABS[tabId];
             if (!config) return;
 
-            const familyWrapper = document.createElement("div");
-            familyWrapper.className = "platform-family";
+            const wrapper = document.createElement("div");
+            wrapper.className = "platform-family";
 
             const button = document.createElement("button");
-            button.className =
-                "platform-btn" + (tabId === tabInicial ? " active" : "");
+            button.className = `platform-btn${tabId === initialTab ? " active" : ""}`;
             button.dataset.platform = tabId;
-
             button.style.setProperty("--platform-color", config.color);
             button.style.setProperty(
                 "--platform-glow",
@@ -336,70 +258,67 @@ document.addEventListener("DOMContentLoaded", function () {
             );
             button.style.background = config.bg;
             button.style.outlineColor = config.color;
-
             button.innerHTML = `
-            <div class="platform-card">
-                <img src="/assets/images/icons/games/combination_mark/${config.icon}" alt="${config.label}">
-                <span>${config.label}</span>
-            </div>
-        `;
+                <div class="platform-card">
+                    <img src="/assets/images/icons/games/combination_mark/${config.icon}" alt="${config.label}">
+                    <span>${config.label}</span>
+                </div>
+            `;
 
-            button.addEventListener("click", () => {
-                selector.querySelectorAll(".platform-btn").forEach((b) => {
-                    b.classList.remove("active");
-                });
+            button.addEventListener("click", () =>
+                activateTab(selector, tabId),
+            );
 
-                document
-                    .querySelectorAll(".achievement-content")
-                    .forEach((c) => {
-                        c.style.display = "none";
-                    });
-
-                button.classList.add("active");
-                const activeContent = document.getElementById(tabId);
-                if (activeContent) {
-                    activeContent.style.display = "block";
-                }
-                localStorage.setItem(`achievements_tab_${juego}`, tabId);
-            });
-
-            familyWrapper.appendChild(button);
-            selector.appendChild(familyWrapper);
+            wrapper.appendChild(button);
+            selector.appendChild(wrapper);
         });
 
-        document.querySelectorAll(".achievement-content").forEach((c) => {
-            c.style.display = "none";
-        });
-
-        const tabInicialEl = document.getElementById(tabInicial);
-        if (tabInicialEl) {
-            tabInicialEl.style.display = "block";
-        }
+        document
+            .querySelectorAll(".achievement-content")
+            .forEach((c) => (c.style.display = "none"));
+        const initialEl = document.getElementById(initialTab);
+        if (initialEl) initialEl.style.display = "block";
         selector.style.display = "flex";
     }
 
-    document.addEventListener("click", function (event) {
-        const botonToggle = event.target.closest(".achievement-toggle");
-        if (!botonToggle) return;
+    function activateTab(selector, tabId) {
+        selector
+            .querySelectorAll(".platform-btn")
+            .forEach((b) => b.classList.remove("active"));
+        document
+            .querySelectorAll(".achievement-content")
+            .forEach((c) => (c.style.display = "none"));
 
-        const textoContainer = botonToggle.parentElement;
-        const texto = textoContainer.querySelector(".achievement-guide-text");
-        const icono = botonToggle.querySelector(".achievement-toggle-icon");
-        const estaAbierto =
-            botonToggle.getAttribute("aria-expanded") === "true";
+        selector
+            .querySelector(`[data-platform="${tabId}"]`)
+            ?.classList.add("active");
 
-        if (estaAbierto) {
-            texto.style.maxHeight = "0";
-            texto.style.opacity = "0";
-            icono.textContent = "+";
-            texto.classList.toggle("open");
-            botonToggle.setAttribute("aria-expanded", "false");
+        const content = document.getElementById(tabId);
+        if (content) content.style.display = "block";
+
+        localStorage.setItem(`achievements_tab_${game}`, tabId);
+    }
+
+    document.addEventListener("click", function (e) {
+        const toggleBtn = e.target.closest(".achievement-toggle");
+        if (!toggleBtn) return;
+
+        const guide = toggleBtn.parentElement;
+        const guideText = guide.querySelector(".achievement-guide-text");
+        const icon = toggleBtn.querySelector(".achievement-toggle-icon");
+        const isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
+        icon.textContent = isOpen ? "add" : "close";
+
+        if (isOpen) {
+            guideText.style.maxHeight = "0";
+            guideText.style.opacity = "0";
+            guideText.classList.remove("open");
+            toggleBtn.setAttribute("aria-expanded", "false");
         } else {
-            texto.style.maxHeight = texto.scrollHeight + "px";
-            texto.style.opacity = "1";
-            icono.textContent = "+";
-            texto.classList.toggle("open");
-            botonToggle.setAttribute("aria-expanded", "true");
+            guideText.style.maxHeight = guideText.scrollHeight + "px";
+            guideText.style.opacity = "1";
+            guideText.classList.add("open");
+            toggleBtn.setAttribute("aria-expanded", "true");
         }
     });
 });
