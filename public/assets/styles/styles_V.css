@@ -158,11 +158,6 @@ details.mod summary img {
         margin-left: calc(clamp(40px, 6vw, 75px) / -2);
         transform-origin: center center;
 
-
-        &.skeleton {
-            border-radius: 50px;
-        }
-
         & img {
             width: 100%;
             height: 100%;

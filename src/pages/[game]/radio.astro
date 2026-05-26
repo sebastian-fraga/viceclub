@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Skeleton from "../../components/Skeleton.astro";
 
 export function getStaticPaths() {
     return [
@@ -12,6 +13,16 @@ export function getStaticPaths() {
         { params: { game: "V" } },
     ];
 }
+
+const radioCountMap: Record<string, number> = {
+    III: 9,
+    VC: 9,
+    SA: 11,
+    LCS: 10,
+    VCS: 9,
+    IV: 22,
+    V: 27,
+};
 
 const { game } = Astro.params;
 
@@ -93,6 +104,11 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
                     id="radioGrid"
                     class={game === "V" ? "radio-wheel" : "radio-grid"}
                 >
+                    <Skeleton
+                        variant="radio"
+                        game={game}
+                        count={radioCountMap[game as string] ?? 1}
+                    />
                 </div>
             </div>
         </section>

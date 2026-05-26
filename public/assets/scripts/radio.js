@@ -1,13 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const footer = document.querySelector(".radio-footer");
-    const radioInfo = document.getElementById("radioInfo");
-    const radioTitle = document.getElementById("radioTitle");
-    const radioGrid = document.getElementById("radioGrid");
+    const elements = {
+        footer: document.querySelector(".radio-footer"),
+        footerText: document.querySelector(".footer-text"),
+
+        radioInfo: document.getElementById("radioInfo"),
+        radioTitle: document.getElementById("radioTitle"),
+        radioGrid: document.getElementById("radioGrid"),
+        radioImage: document.getElementById("radioImage"),
+        radioDJ: document.getElementById("radioDJ"),
+        radioGenre: document.getElementById("radioGenre"),
+        radioList: document.getElementById("radioList"),
+
+        albumArt: document.getElementById("albumArt"),
+        songTitle: document.getElementById("songTitle"),
+        artistName: document.getElementById("artistName"),
+
+        playPauseBtn: document.querySelector(".footer-pause"),
+        playBtn: document.querySelector(".footer-play"),
+        prevSongBtn: document.querySelector(
+            ".footer-controls span:nth-child(1)",
+        ),
+        nextSongBtn: document.querySelector(
+            ".footer-controls span:nth-child(4)",
+        ),
+
+        currentTime: document.getElementById("currentTime"),
+        totalTime: document.getElementById("totalTime"),
+        progressBar: document.getElementById("currentBar"),
+        fullProgressBar: document.getElementById("bar"),
+
+        volumeSlider: document.querySelector(".footer-volume input"),
+        volumeIcon: document.querySelector(".footer-volume span"),
+    };
 
     const audio = new Audio();
-    let currentRadio = null;
-    let radioData = {};
-    let targetTime = null;
+
+    const state = {
+        currentRadio: null,
+        radioData: {},
+        targetTime: null,
+        lastSongIndex: -1,
+        isSeeking: false,
+        isDraggingBar: false,
+    };
+
+    let resizeTimeout;
+    let lastVolume = elements.volumeSlider ? elements.volumeSlider.value : 100;
 
     function refreshTranslations() {
         if (window.translations && window.applyTranslations) {
@@ -15,40 +53,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function safePlay() {
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-            playPromise
-                .then(() => {
-                    playBtn.style.display = "none";
-                    playPauseBtn.style.display = "inline";
-                })
-                .catch((err) => {
-                    if (err.name === "NotAllowedError") {
-                        console.warn(
-                            "Autoplay bloqueado por el navegador. Esperando clic del usuario.",
-                        );
-                        playPauseBtn.style.display = "none";
-                        playBtn.style.display = "inline";
-                    } else if (err.name !== "AbortError") {
-                        console.error("Error al reproducir:", err);
-                    }
-                });
-        }
+    function setFooterLoading(isLoading) {
+        if (!elements.footerText) return;
+        elements.footerText.classList.toggle("loading", isLoading);
     }
 
-    function updateMediaSession(song, radioData) {
+    function setPlayerButtonsDisabled(disabled) {
+        elements.prevSongBtn?.classList.toggle("disabled", disabled);
+        elements.playBtn?.classList.toggle("disabled", disabled);
+        elements.playPauseBtn?.classList.toggle("disabled", disabled);
+        elements.nextSongBtn?.classList.toggle("disabled", disabled);
+    }
+
+    function clearActiveCards() {
+        document
+            .querySelectorAll(".radio-card")
+            .forEach((card) => card.classList.remove("active"));
+    }
+
+    function updateMediaSession(song) {
         if (!("mediaSession" in navigator)) return;
 
-        const data = radioData[currentRadio];
-
+        const data = state.radioData[state.currentRadio];
         const title = song ? song.title : (data?.displayName ?? "Radio");
         const artist = song ? (song.artist ?? "") : "Vice Club";
         const artwork = data?.image ?? "";
 
         navigator.mediaSession.metadata = new MediaMetadata({
-            title: title,
-            artist: artist,
+            title,
+            artist,
             artwork: artwork
                 ? [
                       { src: artwork, sizes: "512x512", type: "image/webp" },
@@ -74,15 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         navigator.mediaSession.setActionHandler("pause", () => {
             audio.pause();
-            playPauseBtn.style.display = "none";
-            playBtn.style.display = "inline";
+            elements.playPauseBtn.style.display = "none";
+            elements.playBtn.style.display = "inline";
         });
     }
 
     function getCurrentSongIndex() {
-        if (!currentRadio) return -1;
+        if (!state.currentRadio) return -1;
 
-        const data = radioData[currentRadio];
+        const data = state.radioData[state.currentRadio];
         const songs = data?._activeSongs ?? data?.songs;
         if (!songs) return -1;
 
@@ -97,189 +130,338 @@ document.addEventListener("DOMContentLoaded", function () {
         return -1;
     }
 
-    async function loadRadioData() {
-        const rutaActual = window.location.pathname;
-        const carpetas = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
-        let juego = null;
+    function checkMarquee(el) {
+        el.classList.remove("marquee");
+        el.innerHTML = el.textContent;
 
-        carpetas.forEach((carpeta) => {
-            if (rutaActual.includes("/" + carpeta + "/")) {
-                juego = carpeta;
+        setTimeout(() => {
+            if (window.innerWidth <= 1980 && el.scrollWidth > el.clientWidth) {
+                const overflow = el.scrollWidth - el.clientWidth;
+                el.innerHTML = `<span>${el.textContent}</span>`;
+                el.classList.add("marquee");
+                el.style.setProperty("--marquee-distance", `-${overflow}px`);
             }
-        });
+        }, 0);
+    }
 
-        if (!juego) {
-            console.error("No se pudo detectar el juego desde la URL.");
-            return;
+    function renderDJ(dj) {
+        if (!dj) return "";
+        const djs = Array.isArray(dj) ? dj : [dj];
+
+        return `
+            <span data-i18n="radio.info.host">Conducido por:</span>
+            <div class="dj-tags">
+                ${djs.map((d) => `<p>${d}</p>`).join("")}
+            </div>
+        `;
+    }
+
+    function renderGenre(genre) {
+        if (!genre) return "";
+        const genres = Array.isArray(genre) ? genre : [genre];
+
+        return `
+            <span data-i18n="radio.info.genre">Género:</span>
+            <div class="genre-tags">
+                ${genres.map((g) => `<p>${g}</p>`).join("")}
+            </div>
+        `;
+    }
+
+    function renderSongList(songs, activeIndex) {
+        elements.radioList.innerHTML = "";
+
+        if (!songs || songs.length === 0) return;
+
+        const title = document.createElement("h4");
+        title.textContent = "Canciones:";
+        title.dataset.i18n = "radio.info.tracklist";
+        title.classList.add("tracklist-title");
+        elements.radioList.appendChild(title);
+
+        refreshTranslations();
+
+        songs.forEach((song, i) => {
+            const li = document.createElement("li");
+            if (i === activeIndex) li.classList.add("active");
+
+            li.innerHTML = `
+                <span class="tl-num">${i + 1}</span>
+                <span class="tl-play material-symbols-rounded">play_arrow</span>
+                <div class="tl-info">
+                    <div class="tl-title">${song.title ?? ""}</div>
+                    ${song.artist ? `<div class="tl-artist">${song.artist}</div>` : ""}
+                </div>
+            `;
+
+            li.addEventListener("click", () => seekTo(Number(song.start)));
+            elements.radioList.appendChild(li);
+        });
+    }
+
+    function formatTime(time) {
+        const hours = Math.floor(time / 3600);
+        const minutes = Math.floor((time % 3600) / 60);
+        const seconds = Math.floor(time % 60);
+
+        if (hours > 0) {
+            return `${hours}:${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
         }
 
-        const radioCountMap = {
-            III: 9,
-            VC: 9,
-            SA: 11,
-            LCS: 10,
-            VCS: 9,
-            IV: 22,
-            V: 27,
-        };
-        const skeletonCount = radioCountMap[juego] ?? 1;
-        radioGrid.innerHTML = Array(skeletonCount)
-            .fill(`<div class="radio-card skeleton"></div>`)
-            .join("");
+        return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    }
 
-        if (juego === "V") makeDial();
+    function updateBarVisual(clientX) {
+        const rect = elements.fullProgressBar.getBoundingClientRect();
+        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        const pct = (x / rect.width) * 100;
 
-        const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json`;
+        elements.progressBar.style.width = `${pct}%`;
 
-        try {
-            const response = await fetch(rutaJSON);
-            radioData = await response.json();
-
-            const count = Object.values(radioData).filter(
-                (r) => r?.audio || r?.playlists,
-            ).length;
-
-            renderRadioGrid();
-
-            const hash = window.location.hash.slice(1);
-            if (hash && hash.includes("@")) {
-                const parts = hash.split("@");
-                const radioKey = parts[0];
-
-                // ¿Tiene playlist? → #key@playlistIndex@time
-                const hasPlaylist = parts.length === 3;
-                const playlistIndex = hasPlaylist ? Number(parts[1]) : 0;
-                const time = hasPlaylist ? Number(parts[2]) : Number(parts[1]);
-
-                if (radioData[radioKey]) {
-                    const card = [
-                        ...document.querySelectorAll(".radio-card"),
-                    ].find((c) => c.dataset.radioKey === radioKey);
-                    if (card) {
-                        card.click();
-                        audio.addEventListener(
-                            "loadedmetadata",
-                            () => {
-                                // Si hay playlists, seleccionar la correcta primero
-                                if (
-                                    hasPlaylist &&
-                                    radioData[radioKey].playlists
-                                ) {
-                                    const btn =
-                                        document.querySelectorAll(
-                                            ".playlist-btn",
-                                        )[playlistIndex];
-                                    if (btn) {
-                                        document
-                                            .querySelectorAll(".playlist-btn")
-                                            .forEach((b) =>
-                                                b.classList.remove("active"),
-                                            );
-                                        btn.classList.add("active");
-                                        updateRadioReproductor(
-                                            radioKey,
-                                            playlistIndex,
-                                        );
-                                    }
-                                    audio.addEventListener(
-                                        "loadedmetadata",
-                                        () => seekTo(time),
-                                        { once: true },
-                                    );
-                                } else {
-                                    seekTo(time);
-                                }
-                            },
-                            { once: true },
-                        );
-                    }
-                }
-            } else if (hash && radioData[hash]) {
-                const card = [...document.querySelectorAll(".radio-card")].find(
-                    (c) => c.dataset.radioKey === hash,
-                );
-                if (card) card.click();
-            }
-        } catch (error) {
-            console.error("Error cargando radios:", error);
+        const previewTime = (x / rect.width) * audio.duration;
+        if (!isNaN(previewTime)) {
+            elements.currentTime.textContent = formatTime(previewTime);
         }
     }
 
-    function renderRadioGrid() {
-        radioGrid.innerHTML = "";
+    function getSeekTime(clientX) {
+        const rect = elements.fullProgressBar.getBoundingClientRect();
+        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+        return (x / rect.width) * audio.duration;
+    }
 
-        const rutaActual = window.location.pathname;
-        const esGTA5 = rutaActual.includes("/V/");
+    function updateIcon(vol) {
+        if (vol == 0) {
+            elements.volumeIcon.textContent = "volume_off";
+            elements.volumeIcon.dataset.state = "muted";
+        } else if (vol < 50) {
+            elements.volumeIcon.textContent = "volume_down";
+            elements.volumeIcon.dataset.state = "low";
+        } else {
+            elements.volumeIcon.textContent = "volume_up";
+            elements.volumeIcon.dataset.state = "high";
+        }
+    }
 
-        if (esGTA5) {
-            const offCard = document.createElement("div");
-            offCard.classList.add("radio-card", "active");
-            offCard.dataset.off = "true";
-            offCard.innerHTML = `<img src="../assets/images/radios/V/off.webp" alt="Apagado">`;
+    function updateRange() {
+        const value =
+            ((elements.volumeSlider.value - elements.volumeSlider.min) /
+                (elements.volumeSlider.max - elements.volumeSlider.min)) *
+            100;
 
-            offCard.addEventListener("click", () => {
-                document
-                    .querySelectorAll(".radio-card")
-                    .forEach((c) => c.classList.remove("active"));
-                offCard.classList.add("active");
+        elements.volumeSlider.style.background = `
+            linear-gradient(to right,  #e39dff ${value}%,
+            rgba(192,192,192,0.3) ${value}%)
+        `;
+        elements.volumeSlider.style.transition = "background 0.1s linear";
+    }
 
-                if (currentRadio && radioData[currentRadio]) {
-                    delete radioData[currentRadio]._activeSongs;
-                }
+    function safePlay() {
+        const playPromise = audio.play();
 
-                audio.pause();
-                audio.src = "";
-                currentRadio = null;
-                footer.classList.remove("active");
-                radioInfo.classList.remove("active");
-                radioInfo.addEventListener(
-                    "transitionend",
-                    () => {
-                        radioInfo.style.display = "none";
-                    },
-                    { once: true },
-                );
+        if (playPromise !== undefined) {
+            playPromise
+                .then(() => {
+                    elements.playBtn.style.display = "none";
+                    elements.playPauseBtn.style.display = "inline";
+                })
+                .catch((err) => {
+                    if (err.name === "NotAllowedError") {
+                        console.warn(
+                            "Autoplay bloqueado por el navegador. Esperando clic del usuario.",
+                        );
+                        elements.playPauseBtn.style.display = "none";
+                        elements.playBtn.style.display = "inline";
+                    } else if (err.name !== "AbortError") {
+                        console.error("Error al reproducir:", err);
+                    }
+                });
+        }
+    }
 
-                window.scrollTo({ top: 0, behavior: "smooth" });
-                radioInfo.scrollTop = 0;
-            });
+    function seekTo(time) {
+        if (!isFinite(audio.duration) || !isFinite(time)) return;
 
-            radioGrid.appendChild(offCard);
+        state.isSeeking = true;
+        state.targetTime = time;
+        state.lastSongIndex = -2;
+
+        elements.songTitle.textContent = "";
+        elements.artistName.textContent = "";
+
+        document
+            .querySelectorAll("#radioList li")
+            .forEach((li) => li.classList.remove("active"));
+
+        audio.currentTime = Math.max(0, Math.min(time, audio.duration));
+    }
+
+    function seekRelative(seconds) {
+        if (state.isSeeking) return;
+
+        const newTime = Math.max(
+            0,
+            Math.min(audio.currentTime + seconds, audio.duration),
+        );
+        seekTo(newTime);
+    }
+
+    function updateActiveSong(index) {
+        const data = state.radioData[state.currentRadio];
+        const songs = data?._activeSongs ?? data?.songs;
+        if (!songs || !songs[index]) return;
+
+        const playlistIndex = data.playlists
+            ? [...document.querySelectorAll(".playlist-btn")].findIndex((b) =>
+                  b.classList.contains("active"),
+              )
+            : -1;
+
+        const hashSuffix =
+            playlistIndex !== -1
+                ? `@${playlistIndex}@${Math.floor(songs[index].start)}`
+                : `@${Math.floor(songs[index].start)}`;
+
+        history.replaceState(null, "", `#${state.currentRadio}${hashSuffix}`);
+
+        elements.songTitle.textContent = songs[index].title;
+        elements.artistName.textContent = songs[index].artist;
+
+        elements.songTitle.classList.remove("marquee");
+        elements.artistName.classList.remove("marquee");
+
+        checkMarquee(elements.songTitle);
+        checkMarquee(elements.artistName);
+
+        renderSongList(songs, index);
+        updateMediaSession(songs[index]);
+    }
+
+    function handleSongChange(direction) {
+        if (!state.currentRadio) return;
+
+        const data = state.radioData[state.currentRadio];
+        const songs = data?._activeSongs ?? data?.songs;
+        if (!songs || songs.length === 0) return;
+
+        const index = getCurrentSongIndex();
+
+        if (direction === "next") {
+            const next =
+                index !== -1
+                    ? songs[(index + 1) % songs.length]
+                    : songs.find((s) => Number(s.start) > audio.currentTime);
+
+            if (next) seekTo(Number(next.start));
         }
 
-        Object.keys(radioData).forEach((radioKey) => {
-            const radio = radioData[radioKey];
-            if (!radio || (!radio.audio && !radio.playlists)) return;
-            const card = document.createElement("div");
-            card.classList.add("radio-card");
-            card.innerHTML = `<img src="${radio.image}" alt="${radio.displayName}">`;
-            card.dataset.radioKey = radioKey;
+        if (direction === "prev") {
+            const prev =
+                index !== -1
+                    ? songs[(index - 1 + songs.length) % songs.length]
+                    : [...songs]
+                          .reverse()
+                          .find((s) => Number(s.end) < audio.currentTime);
 
-            card.addEventListener("click", () => {
-                document
-                    .querySelectorAll(".radio-card")
-                    .forEach((c) => c.classList.remove("active"));
-                card.classList.add("active");
+            if (prev) seekTo(Number(prev.start));
+        }
+    }
 
-                if (currentRadio && radioData[currentRadio]) {
-                    delete radioData[currentRadio]._activeSongs;
-                }
+    function playRadio(name) {
+        const data = state.radioData[name];
 
-                currentRadio = radioKey;
-                updateRadioDirect(radioKey);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            });
+        if (!data || !data.audio) {
+            audio.pause();
+            setFooterLoading(false);
+            return;
+        }
 
-            radioGrid.appendChild(card);
-        });
+        setFooterLoading(true);
 
-        makeDial(120);
+        audio.src = `${data.audio}?v=${Date.now()}`;
+        audio.oncanplay = () => {
+            safePlay();
+            audio.oncanplay = null;
+        };
+
+        const songs = data.songs;
+
+        if (songs && songs.length > 0) {
+            renderSongList(songs, -1);
+
+            const firstIndex = getCurrentSongIndex();
+            if (firstIndex !== -1) {
+                state.lastSongIndex = firstIndex;
+                updateActiveSong(firstIndex);
+            } else {
+                elements.songTitle.textContent = "";
+                elements.artistName.textContent = "";
+            }
+        } else {
+            elements.songTitle.textContent = "Sin información de canciones";
+            elements.artistName.textContent = "";
+        }
+
+        updateMediaSession(null);
+    }
+
+    function updateRadioReproductor(radioKey, playlistIndex) {
+        const data = state.radioData[radioKey];
+        const playlist = data.playlists[playlistIndex];
+        if (!playlist) return;
+
+        data._activeSongs = playlist.songs ?? [];
+
+        const selector = document.getElementById("playlistSelector");
+
+        elements.radioDJ.innerHTML = "";
+        if (selector) elements.radioDJ.appendChild(selector);
+
+        if (playlist.dj) {
+            const djInfo = document.createElement("div");
+            djInfo.innerHTML = renderDJ(playlist.dj);
+            elements.radioDJ.appendChild(djInfo);
+        }
+
+        elements.radioGenre.innerHTML = renderGenre(playlist.genre);
+
+        refreshTranslations();
+
+        if (playlist.audio) {
+            setFooterLoading(true);
+
+            audio.src = `${playlist.audio}?v=${Date.now()}`;
+            audio.oncanplay = () => {
+                safePlay();
+                audio.oncanplay = null;
+            };
+        } else {
+            setFooterLoading(false);
+        }
+
+        if (data._activeSongs.length > 0) {
+            renderSongList(data._activeSongs, -1);
+
+            const firstIndex = getCurrentSongIndex();
+            if (firstIndex !== -1) {
+                state.lastSongIndex = firstIndex;
+                updateActiveSong(firstIndex);
+            } else {
+                elements.songTitle.textContent = "";
+                elements.artistName.textContent = "";
+            }
+        } else {
+            elements.songTitle.textContent = "Sin información de canciones";
+            elements.artistName.textContent = "";
+        }
+
+        updateMediaSession(null);
     }
 
     function makeDial() {
         if (!window.location.pathname.includes("/V/")) return;
 
-        const container = document.getElementById("radioGrid");
+        const container = elements.radioGrid;
         const items = container.querySelectorAll(".radio-card");
         const total = items.length;
 
@@ -299,57 +481,105 @@ document.addEventListener("DOMContentLoaded", function () {
         items.forEach((item, index) => {
             const angle = step * index + startAngle;
             item.style.transform = `
-            rotate(${angle}deg)
-            translate(${radius}px)
-            rotate(${-angle}deg)
-        `;
+                rotate(${angle}deg)
+                translate(${radius}px)
+                rotate(${-angle}deg)
+            `;
         });
     }
 
-    window.addEventListener("resize", makeDial);
+    function renderRadioGrid() {
+        elements.radioGrid.innerHTML = "";
 
-    function renderDJ(dj) {
-        if (!dj) return "";
-        const djs = Array.isArray(dj) ? dj : [dj];
-        return `
-        <span data-i18n="radio.info.host">Conducido por:</span>
-        <div class="dj-tags">
-            ${djs.map((d) => `<p>${d}</p>`).join("")}
-        </div>
-    `;
-    }
+        if (window.location.pathname.includes("/V/")) {
+            const offCard = document.createElement("div");
+            offCard.classList.add("radio-card", "active");
+            offCard.dataset.off = "true";
+            offCard.innerHTML = `<img src="../assets/images/radios/V/off.webp" alt="Apagado">`;
 
-    function renderGenre(genre) {
-        if (!genre) return "";
-        const genres = Array.isArray(genre) ? genre : [genre];
-        return `
-        <span data-i18n="radio.info.genre">Género:</span>
-        <div class="genre-tags">
-            ${genres.map((g) => `<p>${g}</p>`).join("")}
-        </div>
-    `;
+            offCard.addEventListener("click", () => {
+                clearActiveCards();
+                offCard.classList.add("active");
+
+                if (state.currentRadio && state.radioData[state.currentRadio]) {
+                    delete state.radioData[state.currentRadio]._activeSongs;
+                }
+
+                audio.pause();
+                audio.src = "";
+                state.currentRadio = null;
+                setFooterLoading(false);
+
+                elements.footer.classList.remove("active");
+                elements.radioInfo.classList.remove("active");
+                elements.radioInfo.addEventListener(
+                    "transitionend",
+                    () => {
+                        elements.radioInfo.style.display = "none";
+                    },
+                    { once: true },
+                );
+
+                elements.playPauseBtn.style.display = "none";
+                elements.playBtn.style.display = "inline";
+
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                elements.radioInfo.scrollTop = 0;
+            });
+
+            elements.radioGrid.appendChild(offCard);
+        }
+
+        Object.keys(state.radioData).forEach((radioKey) => {
+            const radio = state.radioData[radioKey];
+            if (!radio || (!radio.audio && !radio.playlists)) return;
+
+            const card = document.createElement("div");
+            card.classList.add("radio-card");
+            card.innerHTML = `<img src="${radio.image}" alt="${radio.displayName}">`;
+            card.dataset.radioKey = radioKey;
+
+            card.addEventListener("click", () => {
+                clearActiveCards();
+                card.classList.add("active");
+
+                if (state.currentRadio && state.radioData[state.currentRadio]) {
+                    delete state.radioData[state.currentRadio]._activeSongs;
+                }
+
+                state.currentRadio = radioKey;
+                updateRadioDirect(radioKey);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            elements.radioGrid.appendChild(card);
+        });
+
+        makeDial();
     }
 
     function updateRadioDirect(radioKey) {
         history.replaceState(null, "", `#${radioKey}`);
-        const data = radioData[radioKey];
+
+        const data = state.radioData[radioKey];
         if (!data) return;
-        if (!footer) return;
+        if (!elements.footer) return;
 
-        radioInfo.style.display = "grid";
-        requestAnimationFrame(() => radioInfo.classList.add("active"));
+        setFooterLoading(true);
 
-        footer.classList.add("active");
+        elements.radioInfo.style.display = "grid";
+        requestAnimationFrame(() => elements.radioInfo.classList.add("active"));
+        elements.footer.classList.add("active");
 
-        radioTitle.textContent = data.displayName;
-        document.getElementById("radioImage").src = data.image || "";
-        document.getElementById("albumArt").src = data.image || "";
+        elements.radioTitle.textContent = data.displayName;
+        elements.radioImage.src = data.image || "";
+        elements.albumArt.src = data.image || "";
 
         if (data.playlists) {
             audio.pause();
             audio.src = "";
-            playPauseBtn.style.display = "none";
-            playBtn.style.display = "inline";
+            elements.playPauseBtn.style.display = "none";
+            elements.playBtn.style.display = "inline";
 
             const selectorHTML = data.playlists
                 .map(
@@ -361,9 +591,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 )
                 .join("");
 
-            document.getElementById("radioDJ").innerHTML =
-                `<div id="playlistSelector">${selectorHTML}</div>`;
-            document.getElementById("radioGenre").innerHTML = "";
+            elements.radioDJ.innerHTML = `<div id="playlistSelector">${selectorHTML}</div>`;
+            elements.radioGenre.innerHTML = "";
 
             updateRadioReproductor(radioKey, 0);
 
@@ -372,347 +601,245 @@ document.addEventListener("DOMContentLoaded", function () {
                     document
                         .querySelectorAll(".playlist-btn")
                         .forEach((b) => b.classList.remove("active"));
+
                     btn.classList.add("active");
                     updateRadioReproductor(radioKey, Number(btn.dataset.index));
                 });
             });
 
+            refreshTranslations();
             return;
         }
 
         playRadio(radioKey);
-        document.getElementById("radioDJ").innerHTML = renderDJ(data.dj);
+        elements.radioDJ.innerHTML = renderDJ(data.dj);
+        elements.radioGenre.innerHTML = renderGenre(data.genre);
 
-        document.getElementById("radioGenre").innerHTML = renderGenre(
-            data.genre,
+        refreshTranslations();
+    }
+
+    async function loadRadioData() {
+        const rutaActual = window.location.pathname;
+        const carpetas = ["III", "VC", "SA", "LCS", "VCS", "IV", "V"];
+        const juego = carpetas.find((carpeta) =>
+            rutaActual.includes(`/${carpeta}/`),
         );
 
-        refreshTranslations();
-    }
-
-    function updateRadioReproductor(radioKey, playlistIndex) {
-        const data = radioData[radioKey];
-        const playlist = data.playlists[playlistIndex];
-        if (!playlist) return;
-
-        data._activeSongs = playlist.songs ?? [];
-
-        const djEl = document.getElementById("radioDJ");
-        const genreEl = document.getElementById("radioGenre");
-        const selector = document.getElementById("playlistSelector");
-
-        djEl.innerHTML = "";
-        if (selector) djEl.appendChild(selector);
-
-        if (playlist.dj) {
-            const djInfo = document.createElement("div");
-            djInfo.innerHTML = renderDJ(playlist.dj);
-            djEl.appendChild(djInfo);
-        }
-
-        genreEl.innerHTML = renderGenre(playlist.genre);
-
-        refreshTranslations();
-
-        if (playlist.audio) {
-            audio.src = `${playlist.audio}?v=${Date.now()}`;
-
-            audio.oncanplay = () => {
-                safePlay();
-                audio.oncanplay = null;
-            };
-        }
-
-        if (data._activeSongs.length > 0) {
-            renderSongList(data._activeSongs, -1);
-
-            const firstIndex = getCurrentSongIndex();
-            if (firstIndex !== -1) {
-                lastSongIndex = firstIndex;
-                updateActiveSong(firstIndex);
-            } else {
-                document.getElementById("songTitle").textContent = "";
-                document.getElementById("artistName").textContent = "";
-            }
-        } else {
-            document.getElementById("songTitle").textContent =
-                "Sin información de canciones";
-            document.getElementById("artistName").textContent = "";
-        }
-        updateMediaSession(null, radioData);
-    }
-
-    function playRadio(name) {
-        const data = radioData[name];
-
-        if (!data || !data.audio) {
-            audio.pause();
+        if (!juego) {
+            console.error("No se pudo detectar el juego desde la URL.");
             return;
         }
 
-        audio.src = `${data.audio}?v=${Date.now()}`;
+        if (juego === "V") makeDial();
 
-        audio.oncanplay = () => {
-            safePlay();
-            audio.oncanplay = null;
-        };
+        const rutaJSON = `https://viceclub.s3.us-east-1.amazonaws.com/${juego}/radio.json`;
 
-        const songs = data.songs;
+        try {
+            const response = await fetch(rutaJSON);
+            state.radioData = await response.json();
 
-        if (songs && songs.length > 0) {
-            renderSongList(songs, -1);
+            renderRadioGrid();
 
-            const firstIndex = getCurrentSongIndex();
-            if (firstIndex !== -1) {
-                lastSongIndex = firstIndex;
-                updateActiveSong(firstIndex);
-            } else {
-                document.getElementById("songTitle").textContent = "";
-                document.getElementById("artistName").textContent = "";
+            const hash = window.location.hash.slice(1);
+
+            if (hash && hash.includes("@")) {
+                const parts = hash.split("@");
+                const radioKey = parts[0];
+
+                const hasPlaylist = parts.length === 3;
+                const playlistIndex = hasPlaylist ? Number(parts[1]) : 0;
+                const time = hasPlaylist ? Number(parts[2]) : Number(parts[1]);
+
+                if (state.radioData[radioKey]) {
+                    const card = [
+                        ...document.querySelectorAll(".radio-card"),
+                    ].find((c) => c.dataset.radioKey === radioKey);
+
+                    if (card) {
+                        card.click();
+                        audio.addEventListener(
+                            "loadedmetadata",
+                            () => {
+                                if (
+                                    hasPlaylist &&
+                                    state.radioData[radioKey].playlists
+                                ) {
+                                    const btn =
+                                        document.querySelectorAll(
+                                            ".playlist-btn",
+                                        )[playlistIndex];
+
+                                    if (btn) {
+                                        document
+                                            .querySelectorAll(".playlist-btn")
+                                            .forEach((b) =>
+                                                b.classList.remove("active"),
+                                            );
+                                        btn.classList.add("active");
+                                        updateRadioReproductor(
+                                            radioKey,
+                                            playlistIndex,
+                                        );
+                                    }
+
+                                    audio.addEventListener(
+                                        "loadedmetadata",
+                                        () => seekTo(time),
+                                        { once: true },
+                                    );
+                                } else {
+                                    seekTo(time);
+                                }
+                            },
+                            { once: true },
+                        );
+                    }
+                }
+            } else if (hash && state.radioData[hash]) {
+                const card = [...document.querySelectorAll(".radio-card")].find(
+                    (c) => c.dataset.radioKey === hash,
+                );
+                if (card) card.click();
             }
-        } else {
-            document.getElementById("songTitle").textContent =
-                "Sin información de canciones";
-            document.getElementById("artistName").textContent = "";
+        } catch (error) {
+            console.error("Error cargando radios:", error);
         }
-        updateMediaSession(null, radioData);
-    }
-
-    function renderSongList(songs, activeIndex) {
-        const radioList = document.getElementById("radioList");
-        radioList.innerHTML = "";
-
-        if (!songs || songs.length === 0) return;
-
-        const title = document.createElement("h4");
-        title.textContent = "Canciones:";
-        title.dataset.i18n = "radio.info.tracklist";
-        title.classList.add("tracklist-title");
-        radioList.appendChild(title);
-        refreshTranslations();
-
-        songs.forEach((song, i) => {
-            const li = document.createElement("li");
-            if (i === activeIndex) li.classList.add("active");
-
-            li.innerHTML = `
-                <span class="tl-num">${i + 1}</span>
-                
-                <span class="tl-play material-symbols-rounded">
-                    play_arrow
-                </span>
-                
-                <div class="tl-info">
-                    <div class="tl-title">${song.title ?? ""}</div>
-                    ${song.artist ? `<div class="tl-artist">${song.artist}</div>` : ""}
-                </div>
-            `;
-
-            li.addEventListener("click", () => seekTo(Number(song.start)));
-            radioList.appendChild(li);
-        });
-    }
-
-    function checkMarquee(el) {
-        el.classList.remove("marquee");
-        el.innerHTML = el.textContent;
-
-        setTimeout(() => {
-            if (window.innerWidth <= 1980 && el.scrollWidth > el.clientWidth) {
-                const overflow = el.scrollWidth - el.clientWidth;
-                el.innerHTML = `<span>${el.textContent}</span>`;
-                el.classList.add("marquee");
-                el.style.setProperty("--marquee-distance", `-${overflow}px`);
-            }
-        }, 0);
-    }
-
-    function updateActiveSong(index) {
-        const data = radioData[currentRadio];
-        const songs = data?._activeSongs ?? data?.songs;
-        if (!songs || !songs[index]) return;
-
-        const playlistIndex = data.playlists
-            ? [...document.querySelectorAll(".playlist-btn")].findIndex((b) =>
-                  b.classList.contains("active"),
-              )
-            : -1;
-
-        const hashSuffix =
-            playlistIndex !== -1
-                ? `@${playlistIndex}@${Math.floor(songs[index].start)}`
-                : `@${Math.floor(songs[index].start)}`;
-
-        history.replaceState(null, "", `#${currentRadio}${hashSuffix}`);
-
-        const songTitleEl = document.getElementById("songTitle");
-        const artistNameEl = document.getElementById("artistName");
-
-        songTitleEl.textContent = songs[index].title;
-        artistNameEl.textContent = songs[index].artist;
-
-        songTitleEl.classList.remove("marquee");
-        artistNameEl.classList.remove("marquee");
-        checkMarquee(songTitleEl);
-        checkMarquee(artistNameEl);
-
-        renderSongList(songs, index);
-        updateMediaSession(songs[index], radioData);
-    }
-
-    let resizeTimeout;
-
-    window.addEventListener("resize", () => {
-        clearTimeout(resizeTimeout);
-
-        resizeTimeout = setTimeout(() => {
-            const songTitleEl = document.getElementById("songTitle");
-            const artistNameEl = document.getElementById("artistName");
-
-            if (songTitleEl) checkMarquee(songTitleEl);
-            if (artistNameEl) checkMarquee(artistNameEl);
-        }, 150);
-    });
-
-    const prevSongBtn = document.querySelector(
-        ".footer-controls span:nth-child(1)",
-    );
-    const playPauseBtn = document.querySelector(".footer-pause");
-    const playBtn = document.querySelector(".footer-play");
-    const nextSongBtn = document.querySelector(
-        ".footer-controls span:nth-child(4)",
-    );
-
-    const currentTimeDisplay = document.getElementById("currentTime");
-    const totalTimeDisplay = document.getElementById("totalTime");
-    const progressBar = document.getElementById("currentBar");
-    const fullProgressBar = document.getElementById("bar");
-
-    playPauseBtn.addEventListener("click", () => {
-        audio.pause();
-        playPauseBtn.style.display = "none";
-        playBtn.style.display = "inline";
-    });
-
-    playBtn.addEventListener("click", () => {
-        safePlay();
-    });
-
-    let lastSongIndex = -1;
-    let isSeeking = false;
-
-    function seekTo(time) {
-        if (!isFinite(audio.duration) || !isFinite(time)) return;
-        isSeeking = true;
-        targetTime = time;
-
-        lastSongIndex = -2;
-        document.getElementById("songTitle").textContent = "";
-        document.getElementById("artistName").textContent = "";
-        document
-            .querySelectorAll("#radioList li")
-            .forEach((li) => li.classList.remove("active"));
-
-        audio.currentTime = Math.max(0, Math.min(time, audio.duration));
     }
 
     audio.addEventListener("seeked", () => {
-        isSeeking = false;
+        state.isSeeking = false;
 
-        if (targetTime !== null) {
-            audio.currentTime = targetTime;
-            targetTime = null;
+        if (state.targetTime !== null) {
+            audio.currentTime = state.targetTime;
+            state.targetTime = null;
         }
 
         const activeIndex = getCurrentSongIndex();
-        lastSongIndex = activeIndex;
+        state.lastSongIndex = activeIndex;
 
         if (activeIndex !== -1) {
             updateActiveSong(activeIndex);
         } else {
-            document.getElementById("songTitle").textContent = "";
-            document.getElementById("artistName").textContent = "";
-            const data = radioData[currentRadio];
+            elements.songTitle.textContent = "";
+            elements.artistName.textContent = "";
+
+            const data = state.radioData[state.currentRadio];
             const songs = data?._activeSongs ?? data?.songs;
             if (songs) renderSongList(songs, -1);
-            updateMediaSession(null, radioData);
+
+            updateMediaSession(null);
         }
     });
 
     audio.addEventListener("loadstart", () => {
-        prevSongBtn.classList.add("disabled");
-        playBtn.classList.add("disabled");
-        playPauseBtn.classList.add("disabled");
-        nextSongBtn.classList.add("disabled");
+        setFooterLoading(true);
+        setPlayerButtonsDisabled(true);
     });
 
     audio.addEventListener("canplay", () => {
-        prevSongBtn.classList.remove("disabled");
-        playBtn.classList.remove("disabled");
-        playPauseBtn.classList.remove("disabled");
-        nextSongBtn.classList.remove("disabled");
+        setFooterLoading(false);
+        setPlayerButtonsDisabled(false);
     });
 
-    const formatTime = (time) => {
-        const hours = Math.floor(time / 3600);
-        const minutes = Math.floor((time % 3600) / 60);
-        const seconds = Math.floor(time % 60);
-        if (hours > 0) {
-            return `${hours}:${minutes < 10 ? "0" : ""}${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-        } else {
-            return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-        }
-    };
-
     audio.addEventListener("timeupdate", () => {
-        if (isSeeking || isDraggingBar) return;
+        if (state.isSeeking || state.isDraggingBar) return;
 
         const totalTime = audio.duration;
         const currentTime = audio.currentTime;
 
         if (!isNaN(totalTime)) {
             const progress = (currentTime / totalTime) * 100;
-            progressBar.style.width = `${progress}%`;
+            elements.progressBar.style.width = `${progress}%`;
 
-            currentTimeDisplay.textContent = formatTime(currentTime);
-            totalTimeDisplay.textContent = formatTime(totalTime);
+            elements.currentTime.textContent = formatTime(currentTime);
+            elements.totalTime.textContent = formatTime(totalTime);
 
             const activeIndex = getCurrentSongIndex();
 
-            if (activeIndex !== lastSongIndex) {
-                lastSongIndex = activeIndex;
+            if (activeIndex !== state.lastSongIndex) {
+                state.lastSongIndex = activeIndex;
 
                 if (activeIndex !== -1) {
                     updateActiveSong(activeIndex);
                 } else {
-                    document.getElementById("songTitle").textContent = "";
-                    document.getElementById("artistName").textContent = "";
+                    elements.songTitle.textContent = "";
+                    elements.artistName.textContent = "";
                     document
                         .querySelectorAll("#radioList li")
                         .forEach((li) => li.classList.remove("active"));
-                    updateMediaSession(null, radioData);
+                    updateMediaSession(null);
                 }
             }
         }
     });
 
     audio.addEventListener("ended", () => {
-        playPauseBtn.style.display = "none";
-        playBtn.style.display = "inline";
+        elements.playPauseBtn.style.display = "none";
+        elements.playBtn.style.display = "inline";
     });
 
-    function seekRelative(seconds) {
-        if (isSeeking) return;
-        const newTime = Math.max(
-            0,
-            Math.min(audio.currentTime + seconds, audio.duration),
-        );
-        seekTo(newTime);
-    }
+    elements.playPauseBtn.addEventListener("click", () => {
+        audio.pause();
+        elements.playPauseBtn.style.display = "none";
+        elements.playBtn.style.display = "inline";
+    });
+
+    elements.playBtn.addEventListener("click", () => {
+        safePlay();
+    });
+
+    elements.prevSongBtn.addEventListener("click", () =>
+        handleSongChange("prev"),
+    );
+    elements.nextSongBtn.addEventListener("click", () =>
+        handleSongChange("next"),
+    );
+
+    elements.fullProgressBar.addEventListener("mousedown", (e) => {
+        e.stopPropagation();
+        state.isDraggingBar = true;
+        updateBarVisual(e.clientX);
+    });
+
+    elements.fullProgressBar.addEventListener(
+        "touchstart",
+        (e) => {
+            e.stopPropagation();
+            state.isDraggingBar = true;
+            updateBarVisual(e.touches[0].clientX);
+        },
+        { passive: true },
+    );
+
+    document.addEventListener("mousemove", (e) => {
+        if (!state.isDraggingBar) return;
+        updateBarVisual(e.clientX);
+    });
+
+    document.addEventListener(
+        "touchmove",
+        (e) => {
+            if (!state.isDraggingBar) return;
+            updateBarVisual(e.touches[0].clientX);
+        },
+        { passive: true },
+    );
+
+    document.addEventListener("mouseup", (e) => {
+        if (!state.isDraggingBar) return;
+        state.isDraggingBar = false;
+        seekTo(getSeekTime(e.clientX));
+    });
+
+    document.addEventListener("touchend", (e) => {
+        if (!state.isDraggingBar) return;
+        state.isDraggingBar = false;
+        seekTo(getSeekTime(e.changedTouches[0].clientX));
+    });
 
     document.addEventListener("keydown", (e) => {
         if (!audio.duration) return;
-        if (isSeeking) return;
+        if (state.isSeeking) return;
         if (e.repeat) return;
 
         if (e.key === "ArrowRight") seekRelative(5);
@@ -721,7 +848,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("keydown", (e) => {
         if (!audio.duration) return;
-        if (isSeeking) return;
+        if (state.isSeeking) return;
         if (e.repeat) return;
 
         if (e.code === "Space") {
@@ -729,126 +856,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (audio.paused) {
                 audio.play();
-                playPauseBtn.style.display = "inline";
-                playBtn.style.display = "none";
+                elements.playPauseBtn.style.display = "inline";
+                elements.playBtn.style.display = "none";
             } else {
                 audio.pause();
-                playPauseBtn.style.display = "none";
-                playBtn.style.display = "inline";
+                elements.playPauseBtn.style.display = "none";
+                elements.playBtn.style.display = "inline";
             }
         }
     });
 
-    let isDraggingBar = false;
+    function initVolumeControls() {
+        if (!elements.volumeSlider) return;
 
-    function getSeekTime(clientX) {
-        const rect = fullProgressBar.getBoundingClientRect();
-        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-        return (x / rect.width) * audio.duration;
-    }
-
-    function updateBarVisual(clientX) {
-        const rect = fullProgressBar.getBoundingClientRect();
-        const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
-        const pct = (x / rect.width) * 100;
-        progressBar.style.width = `${pct}%`;
-
-        const previewTime = (x / rect.width) * audio.duration;
-        if (!isNaN(previewTime)) {
-            currentTimeDisplay.textContent = formatTime(previewTime);
-        }
-    }
-
-    fullProgressBar.addEventListener("mousedown", (e) => {
-        e.stopPropagation();
-        isDraggingBar = true;
-        updateBarVisual(e.clientX);
-    });
-
-    fullProgressBar.addEventListener(
-        "touchstart",
-        (e) => {
-            e.stopPropagation();
-            isDraggingBar = true;
-            updateBarVisual(e.touches[0].clientX);
-        },
-        { passive: true },
-    );
-
-    document.addEventListener("mousemove", (e) => {
-        if (!isDraggingBar) return;
-        updateBarVisual(e.clientX);
-    });
-
-    document.addEventListener(
-        "touchmove",
-        (e) => {
-            if (!isDraggingBar) return;
-            updateBarVisual(e.touches[0].clientX);
-        },
-        { passive: true },
-    );
-
-    document.addEventListener("mouseup", (e) => {
-        if (!isDraggingBar) return;
-        isDraggingBar = false;
-        seekTo(getSeekTime(e.clientX));
-    });
-
-    document.addEventListener("touchend", (e) => {
-        if (!isDraggingBar) return;
-        isDraggingBar = false;
-        seekTo(getSeekTime(e.changedTouches[0].clientX));
-    });
-
-    function handleSongChange(direction) {
-        if (!currentRadio) return;
-
-        const data = radioData[currentRadio];
-        const songs = data?._activeSongs ?? data?.songs;
-        if (!songs || songs.length === 0) return;
-
-        const index = getCurrentSongIndex();
-
-        if (direction === "next") {
-            const next =
-                index !== -1
-                    ? songs[(index + 1) % songs.length]
-                    : songs.find((s) => Number(s.start) > audio.currentTime);
-            if (next) seekTo(Number(next.start));
-        }
-
-        if (direction === "prev") {
-            const prev =
-                index !== -1
-                    ? songs[(index - 1 + songs.length) % songs.length]
-                    : [...songs]
-                          .reverse()
-                          .find((s) => Number(s.end) < audio.currentTime);
-            if (prev) seekTo(Number(prev.start));
-        }
-    }
-
-    prevSongBtn.addEventListener("click", () => handleSongChange("prev"));
-    nextSongBtn.addEventListener("click", () => handleSongChange("next"));
-
-    loadRadioData();
-
-    const volumeSlider = document.querySelector(".footer-volume input");
-    const volumeIcon = document.querySelector(".footer-volume span");
-    let lastVolume = volumeSlider.value;
-
-    if (volumeSlider) {
         const savedVolume = localStorage.getItem("volume");
         if (savedVolume !== null) {
             audio.volume = savedVolume / 100;
-            volumeSlider.value = savedVolume;
-
+            elements.volumeSlider.value = savedVolume;
             updateIcon(savedVolume);
         }
 
-        volumeSlider.addEventListener("input", () => {
-            const vol = volumeSlider.value;
+        elements.volumeSlider.addEventListener("input", () => {
+            const vol = elements.volumeSlider.value;
             audio.volume = vol / 100;
             localStorage.setItem("volume", vol);
             if (vol > 0) lastVolume = vol;
@@ -858,25 +887,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function toggleMute() {
             if (audio.volume > 0) {
-                lastVolume = volumeSlider.value;
-
+                lastVolume = elements.volumeSlider.value;
                 audio.volume = 0;
-                volumeSlider.value = 0;
+                elements.volumeSlider.value = 0;
                 localStorage.setItem("volume", 0);
-
                 updateIcon(0);
             } else {
                 audio.volume = lastVolume / 100;
-                volumeSlider.value = lastVolume;
+                elements.volumeSlider.value = lastVolume;
                 localStorage.setItem("volume", lastVolume);
-
                 updateIcon(lastVolume);
             }
 
             updateRange();
         }
 
-        volumeIcon.addEventListener("click", toggleMute);
+        elements.volumeIcon.addEventListener("click", toggleMute);
 
         document.addEventListener("keydown", (e) => {
             if (e.code === "KeyM") {
@@ -884,36 +910,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        function updateIcon(vol) {
-            if (vol == 0) {
-                volumeIcon.textContent = "volume_off";
-                volumeIcon.dataset.state = "muted";
-            } else if (vol < 50) {
-                volumeIcon.textContent = "volume_down";
-                volumeIcon.dataset.state = "low";
-            } else {
-                volumeIcon.textContent = "volume_up";
-                volumeIcon.dataset.state = "high";
-            }
-        }
-
-        function updateRange() {
-            const value =
-                ((volumeSlider.value - volumeSlider.min) /
-                    (volumeSlider.max - volumeSlider.min)) *
-                100;
-
-            volumeSlider.style.background = `
-                linear-gradient(to right,  #e39dff ${value}%, 
-                rgba(192,192,192,0.3) ${value}%
-                )
-            `;
-            volumeSlider.style.transition = "background 0.1s linear";
-        }
-
-        volumeSlider.addEventListener("input", updateRange);
+        elements.volumeSlider.addEventListener("input", updateRange);
         updateRange();
     }
+
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+
+        resizeTimeout = setTimeout(() => {
+            const songTitleEl = elements.songTitle;
+            const artistNameEl = elements.artistName;
+
+            if (songTitleEl) checkMarquee(songTitleEl);
+            if (artistNameEl) checkMarquee(artistNameEl);
+
+            makeDial();
+        }, 150);
+    });
 
     const debugMode = window.location.hostname === "localhost";
 
@@ -924,4 +937,11 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Tiempo copiado:", seconds);
         });
     }
+
+    function init() {
+        initVolumeControls();
+        loadRadioData();
+    }
+
+    init();
 });
