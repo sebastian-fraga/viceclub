@@ -5120,7 +5120,7 @@ body:has(.reset-dialog[open]) {
 
             & .main {
                 align-self: center;
-                height: 12px;
+                height: 8px;
                 grid-column: 2;
                 grid-row: 1 / 3;
                 width: 100%;
