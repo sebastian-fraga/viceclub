@@ -1,5 +1,6 @@
 const CACHE_VERSION = "1.5.0";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
+
 const assets = [
     "/",
     "/index.html",
@@ -58,6 +59,7 @@ self.addEventListener("install", (event) => {
             }
         })(),
     );
+
     self.skipWaiting();
 });
 
@@ -73,10 +75,11 @@ self.addEventListener("activate", (event) => {
                 ),
             ),
     );
+
     self.clients.claim();
 });
 
-self.addEventListener("message", async (event) => {
+self.addEventListener("message", (event) => {
     if (event.data?.type === "GET_VERSION") {
         event.source?.postMessage({
             type: "CACHE_VERSION",
@@ -86,21 +89,30 @@ self.addEventListener("message", async (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-    const url = new URL(event.request.url);
+    const request = event.request;
+    const url = new URL(request.url);
 
-    const accept = event.request.headers.get("accept") || "";
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+        return;
+    }
+
+    const accept = request.headers.get("accept") || "";
+
     if (accept.includes("text/html")) {
         event.respondWith(
-            fetch(event.request)
+            fetch(request)
                 .then((response) => {
                     const clone = response.clone();
-                    caches
-                        .open(CACHE_NAME)
-                        .then((cache) => cache.put(event.request, clone));
+
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(request, clone);
+                    });
+
                     return response;
                 })
                 .catch(async () => {
-                    const cached = await caches.match(event.request);
+                    const cached = await caches.match(request);
+
                     return (
                         cached ||
                         new Response("Offline", {
@@ -110,22 +122,21 @@ self.addEventListener("fetch", (event) => {
                     );
                 }),
         );
+
         return;
     }
 
     if (url.pathname.startsWith("/assets/lang/")) {
         event.respondWith(
-            caches
-                .match(event.request)
-                .then((cached) => cached || fetch(event.request)),
+            caches.match(request).then((cached) => cached || fetch(request)),
         );
         return;
     }
 
     if (url.pathname.endsWith(".json") || url.hostname.includes("s3")) {
         event.respondWith(
-            fetch(event.request).catch(async () => {
-                const cached = await caches.match(event.request);
+            fetch(request).catch(async () => {
+                const cached = await caches.match(request);
                 return cached || new Response("JSON offline", { status: 503 });
             }),
         );
@@ -133,23 +144,19 @@ self.addEventListener("fetch", (event) => {
     }
 
     event.respondWith(
-        caches.match(event.request).then((cached) => {
+        caches.match(request).then((cached) => {
             if (cached) return cached;
 
-            return fetch(event.request)
+            return fetch(request)
                 .then((response) => {
-                    if (
-                        !response ||
-                        response.status !== 200 ||
-                        response.type !== "basic"
-                    ) {
+                    if (!response || response.status !== 200) {
                         return response;
                     }
 
                     const clone = response.clone();
 
                     caches.open(CACHE_NAME).then((cache) => {
-                        cache.put(event.request, clone);
+                        cache.put(request, clone);
                     });
 
                     return response;

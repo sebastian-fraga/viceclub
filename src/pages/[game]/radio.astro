@@ -107,7 +107,7 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
                     <Skeleton
                         variant="radio"
                         game={game}
-                        count={radioCountMap[game as string] ?? 1}
+                        radioCount={radioCountMap[game as string] ?? 1}
                     />
                 </div>
             </div>

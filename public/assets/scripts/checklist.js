@@ -1,4 +1,3 @@
-
 function getStorageKey(tabId = "default") {
     return `viceclub_checklist_${location.pathname}_${tabId}`;
 }
@@ -10,6 +9,7 @@ function loadChecked(tabId) {
         return {};
     }
 }
+
 
 function saveChecked(state, tabId) {
     localStorage.setItem(getStorageKey(tabId), JSON.stringify(state));
@@ -202,7 +202,7 @@ function buildProgressBar(panel) {
     wrapper.className = "progress-wrapper";
     wrapper.innerHTML = `
         <div class="progress-label">
-            <span class="progress-text">Progress</span>
+            <span class="progress-text">Progreso</span>
             <span class="progress-count">0 / ${total}</span>
         </div>
         <div class="progress-bar-bg">
@@ -445,16 +445,66 @@ async function init() {
     }
 
     const container = document.querySelector(".checklist-container");
-    if (!container) {
-        console.error(".checklist-container not found.");
-        return;
+    if (!container) return;
+
+    const gameConfig = {
+        III: { rows: 9, hasTabs: false },
+        VC: { rows: 21, hasTabs: false },
+        SA: { rows: 19, hasTabs: false }, 
+        LCS: { rows: 10, hasTabs: false },
+        VCS: { rows: 15, hasTabs: false },
+        IV: { rows: 10, hasTabs: true, tabCount: 3 },
+        V: { rows: 7, hasTabs: false },
+    };
+
+    const config = gameConfig[game] ?? { rows: 10, hasTabs: false };
+
+    let skeletonHTML = "";
+
+    if (config.hasTabs) {
+        skeletonHTML += `
+            <div class="skeleton-container checklist" aria-hidden="true">
+                <div class="skeleton-card-container">
+                    ${Array.from({ length: config.tabCount || 3 })
+                        .map(
+                            () =>
+                                `<div class="skeleton-base skeleton-card"></div>`,
+                        )
+                        .join("")}
+                </div>
+            </div>
+        `;
     }
+
+    skeletonHTML += `
+        <div class="skeleton-container checklist">
+            <div class="skeleton-checklist-percentage" aria-hidden="true">
+                <div class="left">
+                    <div class="skeleton-base skeleton-text"></div>
+                    <div class="skeleton-base skeleton-text"></div>
+                </div>
+                <div class="main"><div class="skeleton-base"></div></div>
+                <div class="right">
+                    <div class="skeleton-base skeleton-text"></div>
+                </div>
+            </div>
+            ${Array.from({ length: config.rows })
+                .map(
+                    () =>
+                        `<div class="skeleton-base skeleton-checklist-row" aria-hidden="true"></div>`,
+                )
+                .join("")}
+        </div>
+    `;
+
+    container.innerHTML = skeletonHTML;
 
     try {
         const response = await fetch(
             `https://viceclub.s3.us-east-1.amazonaws.com/${game}/checklist.json`,
         );
         const data = await response.json();
+
         container.innerHTML = "";
 
         if (data.tabs && data.tabs.length > 1) {
@@ -462,12 +512,16 @@ async function init() {
         } else {
             const sections = data.sections || data.tabs?.[0].sections;
             const tabId = data.tabs?.[0].id || "default";
+
             renderPanel(container, game, sections, tabId);
             buildProgressBar(container);
             updateProgress(container);
         }
     } catch (error) {
         console.error("Error loading checklist:", error);
+        container.innerHTML = `
+            <p class="error">Error cargando checklist</p>
+        `;
     }
 }
 

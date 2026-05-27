@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Skeleton from "../../components/Skeleton.astro";
 
 export function getStaticPaths() {
     return [
@@ -81,7 +82,6 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
     <main class="block" id="container">
         <section class="text-container">
             <h1>{meta.heading}</h1>
-            <div class="checklist-percentage"></div>
             <div class="checklist-container"></div>
         </section>
     </main>
