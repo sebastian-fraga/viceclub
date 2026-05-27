@@ -1944,10 +1944,6 @@ header {
                 aspect-ratio: 1 / 1;
                 transition: all 0.15s ease-in-out;
 
-                &:active {
-                    filter: drop-shadow(0 0 10px rgba(218, 144, 203, 0.627));
-                }
-
                 &:not(a.active > img) {
                     filter: grayscale(100%);
                 }
