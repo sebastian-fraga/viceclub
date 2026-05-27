@@ -28,6 +28,9 @@
     color: #1a2a1a;
 }
 
+body.custom-cursor * {
+    cursor: url("../cursors/V.png") 0 0, auto !important;
+}
 
 body {
     background-image: url("/assets/images/main/backgrounds/background_V.webp");
