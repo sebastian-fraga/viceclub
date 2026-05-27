@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "Bank Gothic";
-    src: url("../fonts/BankGothic.ttf");
+    src: url("../fonts/BankGothic.woff2") format("woff2");
+    font-display: swap;
 }
 
 /* #endregion */

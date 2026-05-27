@@ -1,7 +1,8 @@
 /* #region FUENTES */
 @font-face {
     font-family: "SF Arborcrest";
-    src: url("../fonts/SF\ Arborcrest.ttf");
+    src: url("../fonts/SFArborcrest.woff2") format("woff2");
+    font-display: swap;
 }
 
 /* #endregion */

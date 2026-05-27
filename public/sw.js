@@ -1,12 +1,12 @@
-const CACHE_VERSION = "1.5.2";
+const CACHE_VERSION = "1.5.3";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 const assets = [
     "/",
     "/index.html",
     "/assets/styles/styles.css",
-    "/assets/fonts/GTAArtDecoMedium.ttf",
-    "/assets/fonts/GTAArtDecoRegular.ttf",
+    "/assets/fonts/GTAArtDecoMedium.woff2",
+    "/assets/fonts/GTAArtDecoRegular.woff2",
     "/assets/images/main/backgrounds/background.webp",
     "/assets/images/main/backgrounds/background_III.webp",
     "/assets/images/main/boxarts/portada_III.webp",

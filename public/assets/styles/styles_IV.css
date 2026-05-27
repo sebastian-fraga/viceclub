@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "Helvetica Neue";
-    src: url("../fonts/HelveticaNeueHeavy.otf");
+    src: url("../fonts/HelveticaNeue.woff2") format("woff2");
+    font-display: swap;
 }
 
 /* #endregion */

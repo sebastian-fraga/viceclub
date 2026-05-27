@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "Geneva";
-    src: url("../fonts/Geneva.ttf");
+    src: url("../fonts/Geneva.woff2") format("woff2");
+    font-display: swap;
 }
 
 /* #endregion */

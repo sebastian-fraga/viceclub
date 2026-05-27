@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "Chalet";
-    src: url("../fonts/Chalet.otf");
+    src: url("../fonts/Chalet.woff2") format("woff2");
+    font-display: swap;
 }
 
 /* #endregion */

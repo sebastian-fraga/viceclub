@@ -1,12 +1,10 @@
 /* #region FUENTES */
 @font-face {
     font-family: "Arial Black Italic";
-    src: url("../fonts/ArialBlackItalic.ttf");
-}
-
-@font-face {
-    font-family: "Pricedown";
-    src: url("../fonts/Pricedown.otf");
+    src: url("../fonts/Arial.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
 }
 
 /* #endregion */

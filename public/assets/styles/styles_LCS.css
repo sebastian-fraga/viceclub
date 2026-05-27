@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "Eurostile";
-    src: url("../fonts/Eurostile\ Bold.ttf");
+    src: url("../fonts/Eurostile.woff2") format("woff2");
+    font-display: swap;
 }
 
 ::selection {
