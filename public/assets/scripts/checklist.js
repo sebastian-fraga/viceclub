@@ -440,7 +440,7 @@ function launchConfetti() {
 async function init() {
     const game = detectGame();
     if (!game) {
-        console.error("Could not detect game from URL.");
+        console.error("No se pudo detectar el juego desde la URL");
         return;
     }
 
@@ -518,10 +518,7 @@ async function init() {
             updateProgress(container);
         }
     } catch (error) {
-        console.error("Error loading checklist:", error);
-        container.innerHTML = `
-            <p class="error">Error cargando checklist</p>
-        `;
+        console.error("Error cargando la checklist:", error);
     }
 }
 
