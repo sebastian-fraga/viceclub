@@ -242,7 +242,7 @@ async function loadCheats() {
     const game = detectGame();
 
     if (!game) {
-        console.error("Could not detect game from URL.");
+        console.error("No se pudo detectar el juego desde la URL.");
         return [];
     }
 
@@ -252,7 +252,7 @@ async function loadCheats() {
         );
         return await response.json();
     } catch (error) {
-        console.error("Error loading cheats.json:", error);
+        console.error("Error cargando cheats.json:", error);
         return [];
     }
 }
@@ -456,12 +456,59 @@ function updateCategoryVisuals(section) {
     if (last) last.style.borderRadius = "0 0 25px 25px";
 }
 
+const SKELETON_CONFIG = {
+    III: { cards: 4, cheatsPerCategory: 8 },
+    VC: { cards: 4, cheatsPerCategory: 10 },
+    SA: { cards: 4, cheatsPerCategory: 24 },
+    LCS: { cards: 1, cheatsPerCategory: 11 },
+    VCS: { cards: 1, cheatsPerCategory: 9 },
+    IV: { cards: 0, cheatsPerCategory: 16 },
+    V: { cards: 3, cheatsPerCategory: 14 },
+};
+
+function renderSkeletons() {
+    const game = detectGame();
+    const config = SKELETON_CONFIG[game] ?? { cards: 3, cheatsPerCategory: 10 };
+
+    const selector = document.querySelector(".platform-selector");
+    if (selector && config.cards > 0) {
+        selector.innerHTML = Array.from({ length: config.cards })
+            .map(
+                () =>
+                    `<div class="skeleton-base" aria-hidden="true" style="width:320px;height:140px;border-radius:12px;"></div>`,
+            )
+            .join("");
+    }
+
+    const container = document.getElementById("cheatsContainer");
+    if (!container) return;
+
+    const items = Array.from({ length: config.cheatsPerCategory })
+        .map(
+            () => `
+            <div class="skeleton-container cheats">
+                <div class="skeleton-cheat-item">
+                    <div class="skeleton-base skeleton-cheat-title"></div>
+                    <div class="skeleton-base skeleton-cheat-code"></div>
+                </div>
+            </div>
+        `,
+        )
+        .join("");
+
+    container.innerHTML = `
+        <section class="skeleton-cheat-category" aria-hidden="true">
+            <div class="skeleton-base skeleton-cheat-header"></div>
+            <div class="skeleton-cheat-list">${items}</div>
+        </section>
+    `;
+}
+
 function renderCheats() {
     const container = document.getElementById("cheatsContainer");
     if (!container) return;
 
     const lang = localStorage.getItem("lang") ?? "ES";
-    container.innerHTML = "";
     const fragment = document.createDocumentFragment();
     let cheatIndex = 0;
 
@@ -509,11 +556,13 @@ function renderCheats() {
         fragment.appendChild(section);
     });
 
+    container.innerHTML = "";
     container.appendChild(fragment);
     filterCheats(document.getElementById("searchInput")?.value || "");
 }
 
 function filterCheats(query) {
+    if (document.querySelectorAll(".cheat-item").length === 0) return;
     const { sections, words, cheatCodes } = parseQuery(query);
     const items = document.querySelectorAll(".cheat-item");
     let visibleCount = 0;
@@ -709,6 +758,7 @@ function renderPlatformSelector(platformKeys, definitivePlatforms = []) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+    renderSkeletons();
     const cheatsObject = await loadCheats();
     const definitivePlatforms = cheatsObject.definitivePlatforms ?? [];
     delete cheatsObject.definitivePlatforms;
@@ -729,7 +779,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     updatePlatformMessage();
     initTooltip();
+    debugger;
     renderCheats();
+
+    const searchInput = document.getElementById("searchInput");
+    searchInput?.removeAttribute("disabled");
+    document.querySelector(".cheats-search")?.classList.remove("loading");
+    searchInput?.addEventListener("input", (e) => filterCheats(e.target.value));
 
     document
         .getElementById("searchInput")

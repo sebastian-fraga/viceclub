@@ -43,7 +43,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (value) el.placeholder = value;
         });
 
-        if (typeof renderCheats === "function") {
+        if (
+            typeof renderCheats === "function" &&
+            Object.keys(cheats).length > 0
+        ) {
             renderCheats();
         }
     };

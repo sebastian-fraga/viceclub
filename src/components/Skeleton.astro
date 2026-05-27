@@ -2,31 +2,30 @@
 interface Props {
     variant:
         | "homeCard"
-        | "checklist"
         | "artworks"
         | "mods"
         | "achievements"
         | "map"
         | "radio"
+        | "cheats-selector"
         | "cheats";
-    checklistCount?: number;
     radioCount?: number;
     game?: string;
 }
 
-const { variant, checklistCount = 1, radioCount = 1, game } = Astro.props;
+const { variant, radioCount = 1, game } = Astro.props;
 ---
 
 {
     (
         <>
-            {variant === "checklist" &&
-                Array.from({ length: checklistCount }).map((_, index) => (
-                    <div class="skeleton-base" aria-hidden="true">
-                        <div class="skeleton-base" />
-                        <div class="skeleton-base" />
-                    </div>
-                ))}
+            {variant === "homeCard" && (
+                <div class="skeleton-card" aria-hidden="true">
+                    <div class="skeleton-base skeleton-image" />
+                    <div class="skeleton-base skeleton-title" />
+                    <div class="skeleton-base skeleton-line" />
+                </div>
+            )}
 
             {variant === "radio" &&
                 Array.from({ length: radioCount }).map((_, index) => {
@@ -56,15 +55,7 @@ const { variant, checklistCount = 1, radioCount = 1, game } = Astro.props;
                         />
                     );
                 })}
-
-            {variant === "homeCard" && (
-                <div class="skeleton-card" aria-hidden="true">
-                    <div class="skeleton-base skeleton-image" />
-                    <div class="skeleton-base skeleton-title" />
-                    <div class="skeleton-base skeleton-line" />
-                </div>
-            )}
+        
         </>
     )
 }
-

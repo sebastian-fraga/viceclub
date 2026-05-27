@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Skeleton from "../../components/Skeleton.astro";
 
 export function getStaticPaths() {
     return [
@@ -81,10 +82,11 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
     <main class="block" id="container">
         <section class="text-container">
             <h1>{meta.heading}</h1>
-            <nav class="platform-selector" role="tablist"></nav>
+            <nav class="platform-selector" role="tablist">
+            </nav>
             <div class="platform-message"></div>
 
-            <div class="cheats-search">
+            <div class="cheats-search loading">
                 <input
                     type="text"
                     id="searchInput"
@@ -92,6 +94,7 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
                     data-i18n-placeholder="trucos.search_placeholder"
                     autocomplete="off"
                     maxlength="38"
+                    disabled
                 />
                 <span class="material-symbols-rounded search-icon">search</span>
 
@@ -140,7 +143,8 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
                 </aside>
             </div>
 
-            <div id="cheatsContainer" role="tabpanel"></div>
+            <div id="cheatsContainer" role="tabpanel">
+            </div>
         </section>
     </main>
 
