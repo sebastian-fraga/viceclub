@@ -4731,20 +4731,6 @@ body:has(.reset-dialog[open]) {
 
             }
         }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -6px;
-            left: var(--arrow-x);
-            transform: translateX(-50%) rotate(45deg);
-            width: 10px;
-            height: 10px;
-            background: var(--block-color);
-            border-left: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
-            border-top: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
-            transform: rotate(45deg);
-        }
     }
 }
 

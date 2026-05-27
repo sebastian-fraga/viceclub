@@ -1,4 +1,3 @@
-
 const PLATFORM_STORAGE_KEY = "viceclub_selected_platform";
 
 const FAMILY_NAMES = {
@@ -278,21 +277,24 @@ function showTooltip(tooltip, helpIcon) {
     tooltip.style.display = "block";
     tooltip.style.visibility = "hidden";
 
-    const rect = helpIcon.getBoundingClientRect();
-    const container = document.querySelector(".cheats-search");
-    const containerRect = container
-        ? container.getBoundingClientRect()
-        : { left: 0, top: 0 };
-    const tooltipRect = tooltip.getBoundingClientRect();
+    requestAnimationFrame(() => {
+        const rect = helpIcon.getBoundingClientRect();
+        const container = document.querySelector(".cheats-search");
+        const containerRect = container
+            ? container.getBoundingClientRect()
+            : { left: 0, top: 0 };
+        const tooltipRect = tooltip.getBoundingClientRect();
 
-    const left =
-        rect.left - containerRect.left + rect.width / 2 - tooltipRect.width / 2;
-    const arrowOffset = rect.left + rect.width / 2 - tooltipRect.left;
+        const left =
+            rect.left -
+            containerRect.left +
+            rect.width / 2 -
+            tooltipRect.width / 2;
 
-    tooltip.style.left = `${left}px`;
-    tooltip.style.setProperty("--arrow-x", `${arrowOffset}px`);
-    tooltip.style.visibility = "visible";
-    tooltip.classList.add("visible");
+        tooltip.style.left = `${left}px`;
+        tooltip.style.visibility = "visible";
+        tooltip.classList.add("visible");
+    });
 }
 
 function hideTooltip(tooltip) {
