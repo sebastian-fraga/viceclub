@@ -20,7 +20,7 @@ fetch(
             window.addEventListener(
                 "newsReady",
                 () => {
-                    setTimeout(scrollToNews, 1200);
+                    setTimeout(scrollToNews, 300);
                 },
                 { once: true },
             );
