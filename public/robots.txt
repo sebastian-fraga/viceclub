@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.viceclub.app/sitemap.xml
+Sitemap: https://www.viceclub.app/sitemap-index.xml
