@@ -230,7 +230,7 @@ details.mod summary img {
 /* #endregion */
 
 /* #region TRUCOS */
-.pc-disclaimer {
+.platform-message {
     display: flex;
     align-items: center;
     margin-inline: auto;
@@ -238,7 +238,6 @@ details.mod summary img {
     gap: 7px;
 
     & span {
-        font-variation-settings: 'FILL' 1;
         color: #5b9bd5;
     }
 
@@ -248,13 +247,14 @@ details.mod summary img {
         font-size: 0.9em !important;
 
         & code {
+            outline: 2px solid #0000005b;
             background: var(--block-text);
             color: #0a0a0a;
             font-weight: 900;
             font-size: 1.25em;
-            padding: 5px 7px;
+            padding: 5px 8px;
             margin-inline: 2px 4px;
-            border-radius: 5px;
+            border-radius: 3px;
         }
     }
 }

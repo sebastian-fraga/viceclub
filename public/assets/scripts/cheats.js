@@ -124,6 +124,13 @@ const BUTTON_ICONS = {
     },
 };
 
+const PLATFORM_MESSAGES = {
+    V: {
+        pc: `<span class="material-symbols-rounded">info</span>
+             <p>Para ingresar los trucos debes abrir la consola apretando la tecla <code>~</code> o <code>&#92;</code></p>`,
+    },
+};
+
 Object.keys(BUTTON_ICONS).forEach((platform) => {
     const family =
         platform.startsWith("ps") || platform === "psp"
@@ -573,6 +580,17 @@ function filterCheats(query) {
     }
 }
 
+function updatePlatformMessage() {
+    const el = document.querySelector(".platform-message");
+    if (!el) return;
+
+    const game = detectGame();
+    const msg = PLATFORM_MESSAGES[game]?.[currentPlatform];
+
+    el.innerHTML = msg ?? "";
+    el.style.display = msg ? "" : "none";
+}
+
 function switchPlatform(key) {
     currentPlatform = key;
     localStorage.setItem(PLATFORM_STORAGE_KEY, key);
@@ -599,6 +617,8 @@ function switchPlatform(key) {
 
     const searchInput = document.getElementById("searchInput");
     if (searchInput) searchInput.value = "";
+
+    updatePlatformMessage();
     renderCheats();
 }
 
@@ -707,6 +727,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderPlatformSelector(availablePlatforms, definitivePlatforms);
     }
 
+    updatePlatformMessage();
     initTooltip();
     renderCheats();
 
