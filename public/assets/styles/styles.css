@@ -1925,7 +1925,7 @@ header {
             padding: 0.2em;
 
             &:hover:not(.active) {
-                outline: 1px solid #8e71d0cb;
+                outline: 1px solid #8e71d07a;
                 background-color: #8e71d01e !important;
             }
 
@@ -1942,12 +1942,21 @@ header {
                 width: 100%;
                 height: auto;
                 aspect-ratio: 1 / 1;
-                transition: all 0.15s ease-in-out;
+                transition: filter 0.15s ease-in-out;
+                filter: grayscale(100%);
 
                 &:not(a.active > img) {
                     filter: grayscale(100%);
                 }
             }
+
+            &:hover img {
+                filter: grayscale(80%) !important;
+            }
+
+            &.active img {
+                filter: grayscale(0%) !important;
+            } 
         }
     }
 
