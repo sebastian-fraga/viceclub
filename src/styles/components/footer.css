@@ -29,7 +29,12 @@ body.index {
         }
 
         & .footer-center a {
-            color: #f7a2fffb;
+            color: #ffffff;
+            opacity: 1 !important;
+
+            &:hover {
+                color: #ffa9fffb
+            }
         }
     }
 }
@@ -40,6 +45,7 @@ footer {
     margin: 12em clamp(1rem, 6vw, 8rem) 0;
     border-radius: 20px 20px 0 0;
     backdrop-filter: blur(12px);
+    gap: 0 30px;
     -webkit-backdrop-filter: blur(12px);
     min-height: calc(100dvh - 80dvh);
     display: grid;
@@ -64,9 +70,15 @@ footer {
         background-image: url("/assets/images/app/logo-outlined.webp");
         background-repeat: no-repeat;
         background-position: 100% 10%;
-        opacity: 0.03;
+        opacity: 0.1;
         inset: 0;
         pointer-events: none;
+
+        @media (max-width:1600px) {
+            background-position: 100% 100%;
+            opacity: 0.05;
+            background-size: contain;
+        }
     }
 
     & .footer-left {
@@ -74,7 +86,6 @@ footer {
         flex-direction: column;
         gap: 1.8em;
         padding-left: 4em;
-        padding-top: 2em;
         grid-row: 1;
 
         & .footer-logo {
@@ -165,23 +176,6 @@ footer {
 
     }
 
-    & .footer-title {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 0.5em;
-
-        & span {
-            font-size: 1.6em;
-        }
-
-        & p {
-            letter-spacing: 2px;
-            font-weight: 900;
-            font-size: 0.95em;
-        }
-    }
-
     & .footer-center {
         display: flex;
         flex-direction: column;
@@ -197,7 +191,7 @@ footer {
             & li {
 
                 &::marker {
-                    color: var(--accent-color);
+                    color: var(--block-border);
                 }
 
                 & a {
@@ -229,7 +223,7 @@ footer {
         flex-direction: column;
         gap: 1.1em;
         padding-right: 4em;
-        padding-top: 2em;
+        padding-top: 30px;
         grid-row: 1;
 
         & .footer-text {
@@ -247,6 +241,26 @@ footer {
         }
     }
 
+    & .footer-title {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 0.5em;
+
+        & span {
+            font-size: 1.6em;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px color-mix(in srgb, var(--accent-color) 80%, transparent)
+        }
+
+        & p {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+            font-size: 0.95em;
+        }
+    }
+
     & .footer-bottom {
         display: flex;
         align-items: center;
@@ -259,7 +273,7 @@ footer {
 
         & .footer-copyright {
             font-size: 0.9em;
-            opacity: 0.4;
+            opacity: 0.8;
         }
 
         & .footer-button {
@@ -269,7 +283,7 @@ footer {
                 font-size: 1.35em;
                 border: 1px solid rgba(255, 255, 255, 0.35);
                 border-radius: 12px;
-                background: rgba(255, 255, 255, 0.08);
+                background: rgba(255, 255, 255, 0.1);
                 color: #fff;
                 text-decoration: none;
                 padding: 9px 32px;
@@ -278,6 +292,7 @@ footer {
                 justify-content: space-between;
                 gap: 12px;
                 transition: background 0.2s, border-color 0.2s;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 
                 &:hover {
                     background: rgba(255, 255, 255, 0.18);
@@ -285,6 +300,26 @@ footer {
                 }
             }
 
+        }
+    }
+
+    & .footer-left,
+    & .footer-center {
+        padding-top: 30px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            width: 2px;
+            height: 100%;
+            background: rgba(255, 255, 255, .15);
+
+            @media (max-width:1600px) {
+                display: none;
+            }
         }
     }
 }
@@ -301,22 +336,15 @@ footer {
         padding-inline: 3em;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         margin: 85px 5px 10px 5px;
         border-radius: 6px;
         border-width: 5px;
         gap: 36px;
 
-        &::before {
-            background-position: 50% 50%;
-            opacity: 0.05;
-            filter: blur(2px);
-            background-size: contain;
-        }
-
         & .footer-left {
             padding: 0;
-            align-items: center;
+            align-self: center;
 
             & .footer-logo {
                 margin-inline: auto;
@@ -326,8 +354,10 @@ footer {
                 text-align: center;
             }
 
-            & .footer-icons a {
-                width: 150px;
+            & .footer-icons {
+                & a {
+                    width: 150px;
+                }
             }
         }
 
@@ -339,16 +369,11 @@ footer {
             & ul {
                 margin-block: 1em;
                 gap: 15px;
-
-                & a {
-                    opacity: 1 !important;
-                }
             }
         }
 
         & .footer-right {
             padding: 0;
-            align-items: center;
 
             & span {
                 text-align: left;
@@ -357,8 +382,11 @@ footer {
 
         & .footer-bottom {
             flex-direction: column;
+            align-self: center;
             gap: 12px;
             padding: 0;
+            margin-top: 1em;
+            padding-bottom: 2em;
 
             & .footer-button {
                 & a {
