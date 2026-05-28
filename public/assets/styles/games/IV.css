@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Helvetica Neue";
-    src: url("../fonts/HelveticaNeue.woff2") format("woff2");
+    src: url("/assets/fonts/HelveticaNeue.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -31,7 +31,7 @@
 }
 
 body.custom-cursor * {
-    cursor: url("../cursors/IV.cur") 0 0, auto !important;
+    cursor: url("/assets/cursors/IV.cur") 0 0, auto !important;
 }
 
 body {
@@ -275,12 +275,6 @@ body.home {
 
 /* #region 100% CHECKLIST */
 
-.checklist-container {
-    & article {
-        margin-bottom: 20px;
-    }
-}
-
 .checklist-container[data-active-game="iv"] {
     & .progress-bar-fill {
         background: linear-gradient(to right, var(--accent-color), var(--block-text));
@@ -348,11 +342,6 @@ details.mod summary img {
         color: color-mix(in srgb, var(--accent-color) 40%, var(--block-text));
     }
 }
-
-/* #endregion */
-
-/* #region LOGROS  */
-
 
 /* #endregion */
 

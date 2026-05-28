@@ -1,20 +1,28 @@
 ---
-import "../styles/components/header.css"
+import "../styles/components/header.css";
 interface Props {
-  isIndex?: boolean;
+    isIndex?: boolean;
 }
 
 const { isIndex = false } = Astro.props;
 ---
-<header style={isIndex ? "opacity: 0; transition: opacity 0.8s ease" : undefined}>
+
+<header
+    style={isIndex ? "opacity: 0; transition: opacity 0.8s ease" : undefined}
+>
     <div class="logo-container">
-        {isIndex ? (
-            <img src="/assets/images/app/logo.webp" alt="Vice Club Logo" />
-        ) : (
-            <a href="/">
+        {
+            isIndex ? (
                 <img src="/assets/images/app/logo.webp" alt="Vice Club Logo" />
-            </a>
-        )}
+            ) : (
+                <a href="/">
+                    <img
+                        src="/assets/images/app/logo.webp"
+                        alt="Vice Club Logo"
+                    />
+                </a>
+            )
+        }
         <span>VICE CLUB</span>
     </div>
     <nav>

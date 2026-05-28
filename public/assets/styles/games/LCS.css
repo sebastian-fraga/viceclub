@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Eurostile";
-    src: url("../fonts/Eurostile.woff2") format("woff2");
+    src: url("/assets/fonts/Eurostile.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -31,7 +31,7 @@
 }
 
 body.custom-cursor * {
-    cursor: url("../cursors/III.cur") 0 0, auto !important;
+    cursor: url("/assets/cursors/III.cur") 0 0, auto !important;
 }
 
 body {

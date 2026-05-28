@@ -1,0 +1,110 @@
+.ficha-tecnica {
+    border: 3px solid;
+    border-radius: 0 16px 16px 0;
+    max-width: 740px;
+    width: 100%;
+    border-color: color-mix(in srgb,
+            var(--title-color) 10%,
+            var(--accent-color) 90%);
+    background-color: color-mix(in srgb, var(--title-color), transparent 60%);
+
+    & table {
+        max-width: 500px;
+        width: 100%;
+        font-size: 15px;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin: 0 auto;
+
+        & tr {
+            border: 1px solid;
+            border-color: var(--accent-color);
+
+            &:last-of-type {
+                border: none;
+            }
+        }
+
+        & img {
+            border-radius: 10px;
+            filter: drop-shadow(0 10px 5px #0000004d);
+            margin: 0 auto 10px;
+        }
+
+        & ul {
+            list-style: none;
+        }
+
+        & td {
+            font-size: 17px;
+            padding: 1em;
+
+            & .platform-entry {
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                gap: 4px;
+                margin-bottom: 1em;
+                line-height: 1.2;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            & span {
+                text-align: start;
+            }
+
+            & .platform {
+                font-family: var(--font-title);
+                font-size: 21px;
+                font-weight: bold;
+                color: var(--title-color);
+            }
+        }
+
+        & th {
+            max-width: 20ch;
+            font-size: 19px;
+            text-wrap: pretty;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: var(--font-title);
+            padding-inline: 1.3em;
+
+            & img {
+                width: 80%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .ficha-tecnica {
+        margin: 0 auto;
+        display: flex;
+        border-radius: 25px;
+        justify-content: center;
+        width: 100%;
+        max-width: 400px;
+
+        & table {
+            & th {
+                font-size: 1em;
+            }
+
+            & td {
+                padding: 0.8em;
+                text-align: left;
+                font-size: 1em;
+
+                & .table-platforms {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

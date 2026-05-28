@@ -61,7 +61,7 @@ footer {
     &::before {
         content: "";
         position: absolute;
-        background-image: url("../images/app/logo-outlined.webp");
+        background-image: url("/assets/images/app/logo-outlined.webp");
         background-repeat: no-repeat;
         background-position: 100% 10%;
         opacity: 0.03;

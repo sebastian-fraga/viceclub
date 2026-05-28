@@ -1,0 +1,709 @@
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+
+    & .radio-grid {
+        border: 1px solid color-mix(in srgb, var(--block-border) 60%, transparent);
+        background: linear-gradient(to bottom right,
+                color-mix(in srgb, var(--block-border) 50%, transparent),
+                color-mix(in srgb, transparent 80%, var(--accent-color)));
+        margin-block: 3em;
+        margin-inline: 1em;
+        width: 100%;
+        border-radius: 25px;
+        padding: 1.5em 2.5em;
+        gap: 3.5em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s ease;
+
+        & .radio-card {
+            transition: transform 0.2s ease;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+
+            &.active {
+                transform: scale(1.15);
+                transform-origin: center;
+                z-index: 1;
+                position: relative;
+
+                & img {
+                    opacity: 1;
+                    filter: brightness(1.05) drop-shadow(2px 2px 1px #000000);
+                }
+            }
+        }
+
+        & img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            opacity: 0.35;
+            filter: drop-shadow(2px 2px 1px #000000);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+#radioInfo {
+    color: var(--block-text);
+    box-shadow:
+        inset 0 0 15px 5px color-mix(in srgb, var(--block-border) 40%, transparent),
+        0 4px 24px 0 color-mix(in srgb, var(--block-border) 70%, transparent),
+        0 1px 0 0 var(--block-border);
+    border: 5px solid var(--block-border);
+    display: none;
+    backdrop-filter: blur(12px);
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 12px 10px;
+    align-items: center;
+    margin: 2em clamp(1rem, 6vw, 8rem) 1em;
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 3;
+    transition:
+        transform 0.5s ease,
+        opacity 0.3s linear;
+
+    & #playlistSelector {
+        display: flex;
+        gap: 1em 0.3em;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        padding-inline: 1em;
+
+        & button {
+            border: none;
+            transition: all 0.2s ease-in;
+            cursor: pointer;
+            position: relative;
+            font-family: var(--font-title);
+        }
+    }
+
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    & img {
+        width: 140px;
+        height: auto;
+        border-radius: 15px;
+        grid-row: 1 / 4;
+        grid-column: 1 / 2;
+    }
+
+    & h3 {
+        grid-row: 1 / 2;
+        grid-column: 2 / 4;
+        font-size: 1.8em;
+    }
+
+    & .tracklist-title {
+        font-size: 1.45em;
+        margin-block: 8px 10px;
+        letter-spacing: 2px;
+    }
+
+    & #radioDJ,
+    & #radioGenre {
+        display: inline;
+        gap: 5px;
+        grid-column: 2 / 3;
+
+        & span {
+            color: #f4eeee;
+            font-weight: 100;
+        }
+
+        & p {
+            font-family: "GTAArtDecoMedium";
+            color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+        }
+    }
+
+    & #radioDJ {
+        grid-row: 2 / 3;
+
+        & .dj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+
+            & p {
+                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                font-size: 0.95em;
+                color: var(--block-color);
+                padding: 5px 14px;
+                border-radius: 25px;
+                width: max-content;
+            }
+        }
+    }
+
+    & #radioGenre {
+        grid-row: 3 / 4;
+        margin-bottom: 1em;
+
+        & .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+
+            & p {
+                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                font-size: 0.95em;
+                color: var(--block-color);
+                padding: 5px 14px;
+                border-radius: 25px;
+                width: max-content;
+            }
+        }
+    }
+
+    & ol {
+        grid-row: 4 / 5;
+        grid-column: 1 / 4;
+        border-top: 1px solid color-mix(in srgb, var(--block-border) 15%, transparent);
+        padding-top: 0.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin: 0 5vw;
+        list-style: none;
+
+
+        & li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            opacity: 0.46;
+            cursor: pointer;
+            transition: opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+            margin-bottom: 0;
+            font-size: 1em;
+            margin-left: 0;
+
+            &:hover {
+                opacity: 0.72;
+                background: color-mix(in srgb, var(--block-border) 8%, transparent);
+            }
+
+            &:last-of-type {
+                margin-bottom: 20px;
+            }
+
+            &.active {
+                opacity: 1;
+                font-size: 1.08em;
+                background: color-mix(in srgb, var(--block-border) 12%, transparent);
+                border-color: color-mix(in srgb, var(--block-border) 25%, transparent);
+
+                & .tl-play {
+                    display: block;
+                    transform: scale(1);
+                    animation: icon-pulse 1.8s ease-in-out infinite;
+
+                }
+
+                & .tl-num {
+                    display: none;
+                }
+            }
+
+            & .tl-num,
+            & .tl-play {
+                width: 20px;
+                flex-shrink: 0;
+                text-align: center;
+            }
+
+            & .tl-play {
+                display: none;
+                font-size: 18px;
+                color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                animation: icon-pulse 1.8s ease-in-out infinite;
+
+            }
+
+            & .tl-num {
+                font-size: 11px;
+                font-weight: 500;
+                color: color-mix(in srgb, var(--block-text) 50%, transparent);
+            }
+
+
+            & .tl-info {
+                flex: 1;
+                min-width: 0;
+            }
+
+            & .tl-title {
+                font-size: 1em;
+                font-weight: inherit;
+                color: #f2f2f2;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.3;
+            }
+
+            & .tl-artist {
+                font-size: 0.8em;
+                color: color-mix(in srgb, #f2f2f2 60%, transparent);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+
+.radio-footer {
+    user-select: none;
+    display: none;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    justify-items: space-between;
+    padding: 10px 15px;
+    font-size: 14px;
+    background: linear-gradient(to right,
+            #8d75efd1 10%,
+            #b475efce 50%,
+            #8d75efd1 90%);
+    border-top: 3px solid #833fc3d9;
+    backdrop-filter: blur(12px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+
+    &.active {
+        display: grid;
+    }
+
+    & .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & .footer-album {
+            border-radius: 10px;
+            border: 3px solid color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%);
+            background: linear-gradient(310deg,
+                    color-mix(in srgb, var(--block-text) 30%, var(--block-border) 70%),
+                    color-mix(in srgb, var(--block-border) 30%, var(--block-text) 70%));
+
+            overflow: hidden;
+
+            & img {
+                width: 75px;
+                height: 75px;
+                object-fit: contain;
+                filter: drop-shadow(1px 1px 0 rgb(0, 0, 0));
+
+            }
+        }
+
+        & .footer-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3em;
+            text-align: left;
+
+            & #artistName {
+                color: #e0e0e0;
+                font-size: 14px;
+            }
+
+            & #songTitle {
+                color: #ffffff;
+                font-size: 16px;
+                font-family: "GTAArtDecoMedium";
+            }
+
+            & #artistName,
+            & #songTitle {
+                max-width: none;
+                overflow: hidden;
+                white-space: nowrap;
+                display: block;
+                position: relative;
+
+                @media (max-width: 900px) {
+                    max-width: 150px;
+                }
+
+                @media (min-width: 1200px) {
+                    max-width: 450px;
+                }
+
+                &.marquee {
+                    & span {
+                        display: inline-block;
+                        animation: marquee 12s linear infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    & .footer-center {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+
+        & .footer-controls {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            transition: all 0.2s ease-in-out;
+            justify-content: center;
+            user-select: none;
+
+            & .footer-pause,
+            & .footer-play {
+                color: #d0f2f8;
+                font-size: 64px;
+                text-shadow: 2px 2px 3px #0000005e;
+            }
+
+            & span {
+                font-size: 42px;
+                color: #cbeef8;
+                text-shadow: 2px 2px 3px #0000005e;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &:active {
+                    transform: scale(0.99);
+                    color: #e7c1fe;
+                }
+
+                &.disabled {
+                    pointer-events: none;
+                    opacity: 0.4;
+                }
+
+            }
+        }
+
+        & .footer-timer {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            width: 450px;
+            color: #ebe9e9;
+            font-family: "GTAArtDecoMedium";
+
+            & #bar {
+                flex: 1;
+                height: 7px;
+                background: rgba(192, 192, 192, 0.2);
+                box-shadow: 0 0 1px #000000;
+                border-radius: 12px;
+                overflow: visible;
+                transition: background 0.3s ease-out;
+
+                &:hover {
+                    background:
+                        linear-gradient(to right, rgba(192, 192, 192, 0.3)), transparent;
+                }
+
+                & #currentBar {
+                    width: 15%;
+                    height: 100%;
+                    background: linear-gradient(to right,
+                            rgb(233, 128, 247),
+                            rgb(245, 151, 255));
+                    transition: all 0.3s ease-out;
+                    border-radius: 25px;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: -5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 13px;
+                        height: 13px;
+                        background: #fff;
+                        border-radius: 50%;
+                        z-index: 100;
+                    }
+
+                    &:hover {
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+
+            & p {
+                text-shadow: 1px 1px 2px #000;
+                font-size: 1.1em;
+                width: 55px;
+                text-align: center;
+            }
+        }
+    }
+
+    & .footer-right {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        & .footer-volume {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            padding-right: 1.5em;
+
+            & span {
+                text-shadow: 2px 2px 3px #0000005e;
+                font-size: 1.7em;
+                color: #f2f2f2;
+                transition: all 0.15s ease;
+
+                &:active {
+                    filter: brightness(0.8);
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                &[data-state="muted"] {
+                    opacity: 0.5;
+                }
+            }
+
+            & input[type="range"] {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 150px;
+                height: 6px;
+                border-radius: 21px;
+                background: rgba(192, 192, 192, 0.2);
+                outline: none;
+            }
+
+            input[type="range"]::-webkit-slider-runnable-track {
+                height: 9px;
+                border-radius: 999px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 13px;
+                height: 13px;
+                background: #ffffff;
+                border-radius: 50%;
+                margin-top: -1.5px;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 13px;
+                height: 13px;
+                background: #ffffff;
+                border-radius: 50%;
+            }
+
+            input[type="range"]::-moz-range-track {
+                height: 7px;
+                border-radius: 12px;
+                background: rgba(192, 192, 192, 0.2);
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .radio-container {
+        overflow: hidden !important;
+
+        & .radio-grid {
+            overflow-x: scroll !important;
+            overflow-y: visible !important;
+            -webkit-overflow-scrolling: touch;
+            gap: 1.8em;
+            border-radius: 40px;
+            padding: 0.5em 2em;
+            margin-inline: 0;
+            margin-block: 2em;
+            display: flex;
+            justify-content: start;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+
+            & .radio-card {
+
+
+                &.active {
+                    & img {
+                        width: 90px;
+                    }
+                }
+            }
+
+            & img {
+                width: 80px;
+            }
+        }
+    }
+
+    #radioInfo {
+        display: flex !important;
+        flex-direction: column;
+        padding-bottom: 7em;
+        border-radius: 10px;
+        margin: 5px 5px 10px 5px;
+        padding-top: 2em;
+        text-align: center;
+        overflow: hidden;
+
+        & .dj-tags,
+        & .genre-tags {
+            justify-content: center !important;
+        }
+
+        & #playlistSelector {
+            justify-content: center;
+        }
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+            display: flex;
+        }
+
+        & img {
+            width: 120px;
+            height: auto;
+        }
+
+        & h3 {
+            font-size: 1.5em;
+        }
+
+        & ol {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            gap: 0.35em;
+            width: 85%;
+
+            & li {
+                user-select: none;
+                font-size: 0.95em;
+                align-items: center;
+                width: 100%;
+                flex-wrap: wrap;
+
+                &.active {
+                    opacity: 1;
+                    font-weight: bold;
+                    font-size: 1em;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .radio-footer {
+        padding-bottom: 1em;
+        display: none;
+        gap: 0;
+        justify-content: center;
+
+        &.active {
+            display: flex;
+        }
+
+        & .footer-left {
+            display: none;
+        }
+
+        & .footer-center {
+            & .footer-controls {
+                width: 100%;
+            }
+
+            & .footer-timer {
+                max-width: 400px;
+
+                & #bar {
+                    height: 10px;
+                }
+            }
+        }
+
+        & .footer-right {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 661px) and (max-width: 900px) {
+    #radioInfo {
+        margin: 5em 0 1em 0;
+    }
+
+    .radio-footer {
+        &.active {
+            display: flex;
+            justify-content: center;
+        }
+
+        & .footer-left,
+        & .footer-right {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1600px) {
+    #radioInfo {
+        margin: 6em 0 1em 0;
+    }
+}

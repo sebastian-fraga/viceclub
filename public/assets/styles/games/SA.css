@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Bank Gothic";
-    src: url("../fonts/BankGothic.woff2") format("woff2");
+    src: url("/assets/fonts/BankGothic.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -30,7 +30,7 @@
 }
 
 body.custom-cursor * {
-    cursor: url("../cursors/SA.cur") 0 0, auto !important;
+    cursor: url("/assets/cursors/SA.cur") 0 0, auto !important;
 }
 
 body {
@@ -192,7 +192,7 @@ details.mod summary img {
                     display: block;
                     width: 30px;
                     height: 30px;
-                    background-image: url("../images/radios/SA/arrow.webp");
+                    background-image: url("/assets/images/radios/SA/arrow.webp");
                     background-size: cover;
                     background-position: center;
 

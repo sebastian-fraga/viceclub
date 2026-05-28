@@ -1,15 +1,11 @@
 /* #region FUENTES */
 @font-face {
     font-family: "Arial Black Italic";
-    src: url("../fonts/Arial.woff2") format("woff2");
+    src: url("/assets/fonts/Arial.woff2") format("woff2");
     font-style: italic;
     font-weight: 900;
     font-display: swap;
 }
-
-/* #endregion */
-
-/* #region GENERAL */
 
 :root {
     --font-title: "Arial Black Italic";
@@ -22,7 +18,7 @@
 }
 
 body.custom-cursor * {
-    cursor: url("../cursors/III.cur") 0 0, auto !important;
+    cursor: url("/assets/cursors/III.cur") 0 0, auto !important;
 }
 
 body {
@@ -54,35 +50,17 @@ body {
     }
 }
 
-
 body .text-container {
     & h1 {
         text-shadow: 3px 3px 10px #000000;
     }
 }
 
-/* #endregion */
-
-/* #region FICHA TÉCNICA */
 .ficha-tecnica {
     & th {
         text-transform: uppercase;
     }
 }
-
-/* #endregion */
-
-
-/* #region 100% CHECKLIST */
-
-/* #endregion */
-
-/* #region ARTWORKS */
-
-/* #endregion */
-
-/* #region HERRAMIENTAS Y MODS */
-
 
 details.mod summary img {
     clip-path: polygon(50% 0%,
@@ -100,31 +78,9 @@ details.mod summary img {
     background: radial-gradient(circle 70px at top left, #5b8ab8, #3d5f9e);
 }
 
-
-/* #endregion */
-
-/* #region LOGROS */
-
-/* #endregion */
-
-/* #region MAPA */
 .map-wrapper {
     background: linear-gradient(135deg, rgba(25, 2, 88, 0.685) 1%, rgb(0, 0, 0));
 }
-
-/* #endregion */
-
-/* #region RADIO */
-
-/* #endregion */
-
-/* #region TRUCOS */
-
-
-/* #endregion */
-
-
-/* #region MEDIA QUERIES  */
 
 @media (max-width: 1350px) {
 
@@ -133,5 +89,3 @@ details.mod summary img {
 
     }
 }
-
-/* #endregion */
