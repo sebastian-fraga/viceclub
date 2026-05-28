@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     function updateBtn(code) {
         btn.querySelector(".lang-btn-content").innerHTML = `
-            <img src="${flags[code]}" width="20" height="20"> ${code}
+            <img src="${flags[code]}" alt="Bandera de ${code}" width="20" height="20"> ${code}
         `;
     }
 
