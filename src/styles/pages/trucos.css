@@ -1,0 +1,664 @@
+.platform-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5em;
+    margin: 30px auto;
+
+
+    & .platform-family {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+            min-height: 40px;
+            height: 140px;
+            border: none;
+            background: none;
+            padding: 0;
+            border-radius: 12px;
+            color: var(--block-text);
+            margin-block: 1em 0.5em;
+            outline: 1px solid;
+            opacity: 0.45;
+            transition: all 0.2s ease-in-out;
+
+            &[data-family="ps"],
+            &[data-platform^="ps"] {
+                --platform-color: #4A6DAE;
+                --platform-glow: rgba(112, 167, 245, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(2, 37, 87, 0.4), rgba(75, 148, 250, 0.35));
+
+            }
+
+            &[data-family="xbox"],
+            &[data-platform^="xbox"] {
+                --platform-color: #8AB957;
+                --platform-glow: rgba(75, 250, 127, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(2, 87, 40, 0.4), rgba(75, 250, 127, 0.35));
+
+            }
+
+            &[data-family="switch"] {
+                --platform-color: #C92D26;
+                --platform-glow: rgba(250, 75, 75, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(87, 2, 2, 0.4), rgba(250, 75, 75, 0.35));
+
+            }
+
+            &[data-family="pc"] {
+                --platform-color: #9e9e9e;
+                --platform-glow: rgba(224, 224, 224, 0.1);
+                outline-color: var(--platform-color);
+                background: linear-gradient(135deg, rgba(40, 40, 50, 0.4), rgba(200, 200, 220, 0.35));
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &.active {
+                scale: 1.03;
+                opacity: 1;
+                outline-width: 3px;
+                box-shadow: 0 0 25px 10px var(--platform-glow);
+
+                & img {
+                    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+                }
+
+                & span {
+                    font-size: 1.4em;
+                    font-weight: 800;
+                }
+            }
+
+            & .platform-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                border-radius: 12px;
+                transition: all 0.25s ease-in-out;
+
+                & img {
+                    width: 72px;
+                    height: 72px;
+                    object-fit: contain;
+                }
+
+                & span {
+                    font-size: 1.3em;
+                    font-family: "GTAArtDecoRegular";
+                }
+            }
+        }
+
+        & .platform-subconsoles {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.2s ease;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+
+
+            &.visible {
+                grid-template-rows: 1fr;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &[data-count="2"] {
+                & .subconsoles-inner {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            &[data-count="3"] {
+                & .subconsoles-inner {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            & .subconsoles-inner {
+                display: grid;
+                gap: 15px;
+                padding-top: 6px;
+                min-height: 0;
+
+                & button {
+                    max-height: 64px;
+                    width: auto;
+                    min-width: 0;
+                    outline: 1px solid var(--platform-color);
+                    opacity: 0.3;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    border-radius: 8px;
+
+
+                    &:is(.active) {
+                        opacity: 1;
+                        outline-width: 2px;
+
+                    }
+
+                    &:hover:not(.active) {
+                        opacity: 0.7;
+                    }
+
+                    & img {
+                        max-width: 64px;
+                        max-height: 64px;
+                    }
+
+                    &[data-definitive] {
+                        position: relative;
+                        padding-right: 15px;
+
+                        &::after {
+                            content: "DE";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 9px;
+                            font-size: 0.75em;
+                            opacity: 0.9;
+                            color: gold;
+                            line-height: 1;
+                            font-family: "GTAArtDecoMedium";
+                            transition: all 0.15s;
+                        }
+
+                        &:hover {
+                            &::before {
+                                content: attr(data-tooltip);
+                                font-family: "GTAArtDecoRegular";
+                                position: absolute;
+                                bottom: calc(100% + 7px);
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: #000;
+                                color: gold;
+                                font-size: 0.9em;
+                                padding: 4px 8px;
+                                border-radius: 5px;
+                                white-space: nowrap;
+                                border: 1px solid gold;
+                                z-index: 10;
+                                pointer-events: none;
+                            }
+
+                            &::after {
+                                text-shadow: 0 0 1px gold;
+                                scale: 1.1;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+
+
+.cheats-search {
+    position: relative;
+    max-width: 80%;
+    margin: 1em auto 0.25em auto;
+
+    &.loading {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            border-radius: 12px;
+            z-index: 2;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0.03) 25%,
+                    rgba(255, 255, 255, 0.08) 50%,
+                    rgba(255, 255, 255, 0.03) 75%);
+            background-size: 1250px 100%;
+            animation: shimmer 1.5s infinite linear;
+        }
+    }
+
+
+    & #searchInput {
+        display: block;
+        border-radius: 12px;
+        width: 100%;
+        padding-block: 5px;
+        padding-left: 38px;
+        height: 40px;
+        border-color: transparent;
+        color: var(--block-text);
+        font-family: "GTAArtDecoMedium";
+        font-size: 0.9em;
+        background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
+        transition: color 0.35s ease;
+
+        &::placeholder {
+            color: color-mix(in srgb, var(--block-text) 70%, transparent);
+
+        }
+
+        &:focus {
+            outline: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+
+            &+.search-icon {
+                opacity: 1;
+            }
+
+            &~.help-icon {
+                opacity: 0.7;
+            }
+
+            &::placeholder {
+                color: color-mix(in srgb, var(--block-text) 90%, transparent);
+            }
+        }
+    }
+
+    & span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+    }
+
+    & .search-icon {
+        left: 12px;
+        color: var(--accent-color);
+        opacity: 0.4;
+    }
+
+    & .help-icon {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        line-height: 1;
+        font-size: 24px;
+        right: 12px;
+        color: color-mix(in srgb, var(--block-text) 30%, transparent);
+        pointer-events: auto;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: color-mix(in srgb, var(--block-text) 90%, transparent);
+        }
+    }
+
+    & .tooltip {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: fixed;
+        background: color-mix(in srgb, var(--block-color) 85%, transparent);
+        color: var(--block-text);
+        line-height: 1.5;
+        font-family: "GTAArtDecoRegular";
+        border-radius: 12px;
+        border: 1.5px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+        pointer-events: none;
+        backdrop-filter: blur(12px);
+        height: auto;
+        width: clamp(260px, 40vw, 420px);
+        min-width: unset;
+        min-height: 40px;
+        margin-top: 1em;
+        opacity: 0;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 100;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        & h3 {
+            text-transform: uppercase;
+            margin: 0 auto 10px auto;
+            color: color-mix(in srgb, var(--block-text) 70%, var(--accent-color));
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 18px;
+        }
+
+        & .tooltip-text {
+            font-size: 0.95em;
+            margin: 0;
+            text-wrap: pretty;
+            line-height: 1.3;
+            padding-left: 15px;
+        }
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 5px;
+            padding: 5px 0 10px 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+            &.pc {
+                border-bottom: none;
+
+                & li {
+                    & code {
+                        background: color-mix(in srgb, var(--title-color) 10%, transparent);
+                        color: color-mix(in srgb, var(--title-color) 95%, transparent);
+                        border: 1px solid color-mix(in srgb, var(--title-color) 40%, transparent);
+                    }
+
+                }
+            }
+
+            & li {
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                gap: 0.25em;
+
+                &::before {
+                    content: '•';
+                    position: absolute;
+                    transform: translateX(-200%);
+                    color: inherit;
+                    font-size: 0.8em;
+                }
+
+                & code {
+                    background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+                    color: color-mix(in srgb, var(--accent-color) 95%, transparent);
+                    border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+                    font-weight: 900;
+                    border-radius: 6px;
+                    padding: 3px 6px;
+                }
+
+                & span {
+                    position: relative;
+                    transform: none;
+                    font-size: 1.1em;
+                    opacity: 0.9;
+                }
+
+
+            }
+        }
+    }
+}
+
+
+#cheatsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+
+    & section {
+        width: 100%;
+        max-width: 80%;
+        margin: 1em auto;
+        border: 2px solid color-mix(in srgb, var(--block-border) 60%, transparent);
+        border-radius: 20px;
+        background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
+
+        & .category-header {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            border-radius: 18px 18px 0 0;
+            padding-bottom: 1em;
+            background: color-mix(in srgb, var(--block-color) 60%, var(--block-border));
+
+            & h3 {
+                color: var(--accent-color);
+                padding: 0.5em 0 0.1em 0.9em;
+                font-size: 1.4em;
+                font-family: "GTAArtDecoMedium";
+                text-shadow: 2px 2px #000000bf;
+            }
+
+            & .category-count {
+                margin-top: 1em;
+                color: #000;
+                font-weight: 900;
+                font-size: 0.85em;
+                background: var(--accent-color);
+                padding: 4px 7px;
+                border-radius: 6px;
+            }
+        }
+
+
+        & .category-list {
+
+            & .cheat-item {
+
+                padding: 12px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+
+                &.last-visible {
+                    border-bottom: none;
+                }
+
+                & h4 {
+                    font-size: 1.1em;
+                    margin-left: 15px;
+                    font-weight: 100;
+                }
+
+                & .cheat-note {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3em;
+                    padding: 0.4em 0 0.2em 1.2em;
+
+                    & .cheat-note-icon {
+                        font-size: 0.95em;
+                        vertical-align: middle;
+                        line-height: 1;
+                    }
+
+                    &.cheat-note--info .cheat-note-icon {
+                        color: #5b9bd5;
+                    }
+
+                    &.cheat-note--warning .cheat-note-icon {
+                        color: #f0a500;
+                    }
+
+                    & .cheat-note-text {
+                        color: color-mix(in srgb, var(--block-border) 25%, #fff);
+                        font-size: 0.8em;
+
+                        & a {
+                            color: color-mix(in srgb, var(--block-border) 55%, #fff);
+                            font-weight: 900;
+                            transition: all 0.15s ease;
+
+                            &:hover {
+                                filter: brightness(1.1);
+                            }
+
+                            &:active {
+                                filter: brightness(0.85);
+                            }
+                        }
+                    }
+                }
+
+                & .cheat-code {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin: 0.5em 0 0.6em 1em;
+                    gap: 10px;
+
+                    & .pc-code-sep {
+                        opacity: 0.7;
+                    }
+
+                    & .pc-code {
+                        display: inline-block;
+                        padding: 4px 12px;
+                        font-size: 0.95em;
+                        font-weight: 600;
+                        letter-spacing: 1.5px;
+                        background: linear-gradient(180deg, #ffffff, #e0e0e0);
+                        color: #111;
+                        border-radius: 6px;
+                        border: 1px solid #999;
+                        box-shadow:
+                            0 3px 0 #888,
+                            0 5px 8px rgba(0, 0, 0, 0.3);
+                        font-family: "Verdana";
+                        transition: all 0.15s;
+
+
+                        &:hover {
+                            transform: translateY(2px);
+                            box-shadow:
+                                0 1px 0 #888,
+                                0 2px 4px rgba(0, 0, 0, 0.2);
+                            cursor: default;
+                        }
+
+
+                    }
+
+                    & img {
+                        border: 1px solid rgba(255, 255, 255, 0.05);
+                        border-radius: 15px;
+                        width: 50px;
+                        height: auto;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    #cheats-empty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 2em;
+        color: var(--text-muted, #aaa);
+        font-size: 1rem;
+        white-space: wrap;
+
+        & .material-symbols-rounded {
+            font-size: 2.5rem;
+            opacity: 0.5;
+        }
+
+        & p {
+            margin: 0;
+            opacity: 0.7;
+        }
+    }
+}
+
+@media (max-width:660px) {
+    .platform-selector {
+        gap: 0.2em;
+    }
+
+
+    .cheats-search {
+        width: 90vw;
+
+        & .tooltip {
+            max-width: 350px;
+        }
+    }
+
+    #cheatsContainer {
+        width: 100%;
+
+        & section {
+            padding: 0;
+
+            max-width: 95%;
+
+            & .category-header {
+                justify-content: center;
+                gap: 15px;
+
+                & h3 {
+                    padding-left: 0;
+                    font-size: 1.5em;
+                }
+            }
+
+            & .category-list {
+                margin-block: 0;
+
+                & .cheat-item {
+                    margin-block: 0;
+
+                    & h4 {
+                        font-size: 1.15em;
+                        margin-bottom: 0.5em;
+                        color: #dbdada;
+                    }
+
+                    & .cheat-code {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        max-width: 50ch;
+                    }
+
+                    & .cheat-note {
+                        justify-content: center;
+
+                        & .cheat-note-text {
+                            padding-left: 10px;
+                            padding-right: 15px;
+                            text-align: start;
+                            line-height: 1.4;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+
+        & img {
+            width: 45px;
+        }
+    }
+}

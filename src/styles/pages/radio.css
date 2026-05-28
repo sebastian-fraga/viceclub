@@ -706,4 +706,9 @@
     #radioInfo {
         margin: 6em 0 1em 0;
     }
+
+    #artistName,
+    #songTitle {
+        max-width: 150px !important;
+    }
 }
