@@ -925,11 +925,12 @@
                 #countdown {
                     background: rgba(13, 13, 13, 0.1);
                     padding: 5px 12px;
-                    border-radius: 5px;
+                    border-radius: 6px;
                     backdrop-filter: blur(2px) brightness(0.8);
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    gap: 20px;
                     width: 100%;
 
                     & .time-box {
@@ -943,8 +944,8 @@
                         }
 
                         & .time-separator {
-                            top: 20%;
-                            font-size: 1.5em;
+                            top: 30%;
+                            font-size: 20px;
                         }
                     }
                 }
