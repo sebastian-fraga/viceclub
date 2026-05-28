@@ -424,7 +424,11 @@ body.index {
                 padding-inline: 0.8em;
                 gap: 1em;
 
-
+                @media (hover: none) and (pointer: coarse) {
+                    &.cursor-setting {
+                        display: none !important;
+                    }
+                }
 
                 & .settings-text {
                     display: flex;
@@ -634,19 +638,7 @@ body.index {
     }
 }
 
-@media (min-width: 661px) and (max-width: 900px) {
-    body.index {
-        & #rightContent {
-            padding-inline: 1em;
-
-            & .footer-settings {
-                flex: 1;
-            }
-        }
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1600px) {
+@media (min-width: 661px) and (max-width: 1600px) {
     body.index {
         & #rightContent {
             padding-inline: 1em;

@@ -2036,10 +2036,6 @@ body:has(.reset-dialog[open]) {
     }
 }
 
-@media (hover: none) and (pointer: coarse) {
-    .cursor-setting {
-        display: none !important;
-    }
-}
+
 
 /* #endregion */
