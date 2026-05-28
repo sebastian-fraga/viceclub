@@ -904,7 +904,6 @@
                 width: 95%;
                 margin: 1em auto 2em auto;
                 border-radius: 12px;
-                padding: 12px 20px;
                 justify-content: space-around;
 
                 &::before {
