@@ -132,8 +132,7 @@ body {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_LCS-mobile.webp");
-
+        background: radial-gradient(circle at top, rgba(255, 100, 100, 0.8), rgba(0, 0, 0));
     }
 }
 

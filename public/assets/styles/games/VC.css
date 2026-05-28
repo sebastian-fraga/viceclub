@@ -186,8 +186,7 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_VC-mobile.webp");
-
+        background: radial-gradient(circle at top, rgba(128, 249, 255, 0.8), rgb(70, 0, 67));
     }
 
     #radioGrid {

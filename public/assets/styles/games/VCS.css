@@ -144,7 +144,7 @@ body {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_VCS-mobile.webp");
+        background: radial-gradient(circle at top, rgba(215, 128, 255, 0.8), rgb(29, 6, 28));
     }
 }
 

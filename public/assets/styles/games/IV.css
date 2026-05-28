@@ -430,10 +430,9 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        &::before {
-            background-image: url("/assets/images/main/backgrounds/background_IV-mobile.webp");
-        }
+        background: radial-gradient(circle at top, rgba(255, 255, 255, 0.8), rgba(117, 117, 117, 0.95));
     }
+
 
     #cheatsContainer {
         min-width: 250px;

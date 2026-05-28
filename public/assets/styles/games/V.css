@@ -270,8 +270,7 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_V-mobile.webp");
-
+        background: radial-gradient(circle at top, rgba(128, 249, 255, 0.8), rgb(0, 70, 11));
     }
 
     .radio-wheel {

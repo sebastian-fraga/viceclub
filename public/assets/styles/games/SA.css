@@ -228,6 +228,7 @@ details.mod summary img {
         background: color-mix(in srgb, var(--accent-color) 60%, #fff) !important;
     }
 }
+
 /* #endregion */
 
 /* #region MEDIA QUERIES  */
@@ -235,8 +236,7 @@ details.mod summary img {
 @media (max-width: 1350px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_SA-mobile.webp");
-
+        background: radial-gradient(circle at top, rgba(152, 255, 100, 0.8), rgb(0, 0, 0));
     }
 
     #radioInfo {

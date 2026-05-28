@@ -848,7 +848,7 @@
 
 @media (max-width:660px) {
     .index {
-        background-image: url("/assets/images/main/backgrounds/background-mobile.webp");
+        background: radial-gradient(circle at top, rgba(85, 150, 229, 0.8), rgba(141, 117, 239, 0.8));
 
 
         & .block {
@@ -860,6 +860,7 @@
                     rgba(141, 117, 239, 0.8));
 
             &::before {
+                padding: 8px;
                 border-radius: 12px;
             }
         }

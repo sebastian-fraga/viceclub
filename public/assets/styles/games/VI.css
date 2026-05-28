@@ -349,8 +349,7 @@ body.timeline {
 @media screen and (max-width: 660px) {
 
     body {
-        background-image: url("/assets/images/main/backgrounds/background_VI-mobile.webp");
-
+        background: radial-gradient(circle at top, rgb(26, 23, 37), rgb(52, 37, 105));
     }
 
     body.timeline {
