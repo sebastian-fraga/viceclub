@@ -17,6 +17,7 @@
     --block-border: rgb(42, 105, 76);
     --title-color: rgba(93, 182, 229, 255);
     --accent-color: #6bd1b8bd;
+    --map-background: #0fa8d2;
 }
 
 ::selection {
@@ -131,10 +132,6 @@ details.mod summary img {
 /* #region MAPA */
 .map-wrapper {
     background: linear-gradient(135deg, rgba(3, 39, 36, 0.685) 5%, rgb(0, 0, 0));
-
-    & .map-container {
-        background-color: #0fa8d2;
-    }
 }
 
 /* #endregion */

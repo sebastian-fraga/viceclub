@@ -8,7 +8,6 @@
     padding-right: 1.5em;
     margin-inline: auto;
     margin-top: 1em;
-
     border-radius: 40px;
 
     & aside {
@@ -236,7 +235,7 @@
         align-items: start;
         width: 100%;
         height: 750px;
-        background: #000;
+        background: var(--map-background);
         border-radius: 0 40px 40px 0;
     }
 

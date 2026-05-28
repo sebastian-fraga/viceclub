@@ -17,6 +17,7 @@
     --block-border: #b8b8b8;
     --title-color: #e2e2e2;
     --accent-color: #c7c7c7;
+    --map-background: #747474;
 }
 
 
@@ -410,10 +411,6 @@ details.mod summary img {
 /* #region MAPA */
 .map-wrapper {
     background: linear-gradient(135deg, rgba(36, 34, 35, 0.685) 5%, rgb(0, 0, 0));
-
-    & .map-container {
-        background-color: #747474;
-    }
 }
 
 /* #endregion */

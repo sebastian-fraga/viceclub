@@ -28,6 +28,7 @@
     --block-border: #db594ae7;
     --title-color: #f29997;
     --accent-color: #fdabab;
+    --map-background: #010101;
 }
 
 body.custom-cursor * {

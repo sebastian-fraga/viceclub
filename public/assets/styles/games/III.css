@@ -15,6 +15,7 @@
     --block-border: #2e9aedcb;
     --title-color: #e7a600;
     --accent-color: #f5cf70;
+    --map-background: #000;
 }
 
 body.custom-cursor * {
