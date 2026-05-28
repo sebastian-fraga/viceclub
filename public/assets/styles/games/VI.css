@@ -1,7 +1,7 @@
 /* #region GENERAL */
 
 :root {
-    --font-title: "GTAArtDecoRegular";
+    --font-title: "GTAArtDeco";
     --accent-color: #afbcfc;
     --block-border: #c9ecef;
     --block-text: #f4f4f4;
@@ -55,9 +55,8 @@ body {
     & .text-container {
 
         & h1 {
-            font-family: "GTAArtDecoMedium";
+            font-weight: 600;
             text-align: center;
-            line-height: 0.9;
             background-image: linear-gradient(to bottom, #79b3ff, #ff95d6, #ffc37f);
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -163,15 +162,11 @@ body.timeline {
                 margin: 1em 0 2.5em 0;
 
                 & p {
-                    color: #f3f3f3;
-                    margin: 0.5em 0 1em 0;
                     padding-left: 1.5em;
                     text-align: left;
                     position: relative;
-                    text-wrap: wrap;
-                    font-family: "GTAArtDecoRegular";
                     max-width: 100%;
-                    font-size: 1.3rem;
+                    font-size: clamp(1rem, 3vw, 1.1rem);
                     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
                     &::before {
@@ -243,11 +238,10 @@ body.timeline {
 
                 & h3 {
                     text-align: left;
-                    font-size: 1.3em;
+                    font-size: clamp(1.4rem, 5vw, 1.4rem);
                     background-image: linear-gradient(to bottom, #61a6ff, #a19bff);
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    font-weight: 600;
                     background-size: 100% 90%;
 
                 }
@@ -255,8 +249,7 @@ body.timeline {
                 & h4 {
                     text-align: left;
                     color: #91c1ffd5;
-                    font-weight: 100;
-                    font-size: 0.9em;
+                    font-size: clamp(0.75rem, 3.5vw, 0.8rem);
                 }
 
                 & .timeline-image {
@@ -379,11 +372,10 @@ body.timeline {
                     }
 
                     & p {
-                        padding-inline: 0.7em;
+                        padding-inline: 0.9em;
                         font-size: 1.1em;
                         text-wrap: balance;
-                        margin: 1em auto 1.3em auto;
-                        text-align: center;
+                        text-align: start;
 
                         &+p {
                             font-size: 0.95em;
@@ -394,12 +386,10 @@ body.timeline {
 
                     & h3 {
                         text-align: center;
-                        font-size: 1.5em;
                     }
 
                     & h4 {
                         text-align: center;
-                        font-size: 1.35em;
                     }
 
                     & img {

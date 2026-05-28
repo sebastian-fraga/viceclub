@@ -294,7 +294,8 @@
     outline: 1px solid color-mix(in srgb, var(--block-border) 70%, var(--block-text));
     padding: 0.5rem 1rem;
     background: color-mix(in srgb, var(--block-border) 80%, transparent);
-    font-family: "GTAArtDecoMedium";
+    font-family: "GTAArtDeco";
+    font-weight: 600;
     transition: all 0.2s;
 
     &:hover {

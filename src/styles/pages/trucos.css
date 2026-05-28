@@ -100,7 +100,7 @@
 
                 & span {
                     font-size: 1.3em;
-                    font-family: "GTAArtDecoRegular";
+                    font-family: "GTAArtDeco";
                 }
             }
         }
@@ -178,14 +178,14 @@
                             opacity: 0.9;
                             color: gold;
                             line-height: 1;
-                            font-family: "GTAArtDecoMedium";
+                            font-family: "GTAArtDeco";
                             transition: all 0.15s;
                         }
 
                         &:hover {
                             &::before {
                                 content: attr(data-tooltip);
-                                font-family: "GTAArtDecoRegular";
+                                font-family: "GTAArtDeco";
                                 position: absolute;
                                 bottom: calc(100% + 7px);
                                 left: 50%;
@@ -251,7 +251,7 @@
         height: 40px;
         border-color: transparent;
         color: var(--block-text);
-        font-family: "GTAArtDecoMedium";
+        font-family: "GTAArtDeco";
         font-size: 0.9em;
         background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
         transition: color 0.35s ease;
@@ -320,7 +320,7 @@
         background: color-mix(in srgb, var(--block-color) 85%, transparent);
         color: var(--block-text);
         line-height: 1.5;
-        font-family: "GTAArtDecoRegular";
+        font-family: "GTAArtDeco";
         border-radius: 12px;
         border: 1.5px solid color-mix(in srgb, var(--block-border) 30%, transparent);
         pointer-events: none;
@@ -441,7 +441,7 @@
                 color: var(--accent-color);
                 padding: 0.5em 0 0.1em 0.9em;
                 font-size: 1.4em;
-                font-family: "GTAArtDecoMedium";
+                font-family: "GTAArtDeco";
                 text-shadow: 2px 2px #000000bf;
             }
 

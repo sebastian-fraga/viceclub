@@ -1,268 +1,441 @@
 ---
-import "../../styles/pages/logros.css"
+import "../../styles/pages/logros.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  return [
-    { params: { game: "III" } },
-    { params: { game: "VC" } },
-    { params: { game: "SA" } },
-    { params: { game: "IV" } },
-    { params: { game: "V" } },
-  ];
+    return [
+        { params: { game: "III" } },
+        { params: { game: "VC" } },
+        { params: { game: "SA" } },
+        { params: { game: "IV" } },
+        { params: { game: "V" } },
+    ];
 }
 
 const { game } = Astro.params;
 
 const metadata = {
-  III: {
-    title: "GTA III Logros y Trofeos | Lista Completa + Guía | Vice Club",
-    description: "Guía completa de logros y trofeos de GTA 3. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto III",
-    bodyClass: "gta-3",
-    heading: "Logros de Grand Theft Auto III",
-    soundDelay: null,
-  },
-  VC: {
-    title: "GTA VC Logros y Trofeos | Lista Completa + Guía | Vice Club",
-    description: "Guía completa de logros y trofeos de GTA VC. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: Vice City",
-    bodyClass: "gta-vc",
-    heading: "Logros de Grand Theft Auto: Vice City",
-    soundDelay: null,
-  },
-  SA: {
-    title: "GTA SA Logros y Trofeos | Lista Completa + Guía | Vice Club",
-    description: "Guía completa de logros y trofeos de GTA SA. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: San Andreas",
-    bodyClass: "gta-sa",
-    heading: "Logros de Grand Theft Auto: San Andreas",
-    soundDelay: 200,
-  },
-  IV: {
-    title: "GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club",
-    description: "Guía completa de logros y trofeos de GTA 4, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony",
-    bodyClass: "gta-4",
-    heading: "Logros de Grand Theft Auto IV",
-    soundDelay: null,
-  },
-  V: {
-    title: "GTA V Logros y Trofeos | Lista Completa + Guía | Vice Club",
-    description: "Guía completa de logros y trofeos de GTA 5. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto V",
-    bodyClass: "gta-5",
-    heading: "Logros de Grand Theft Auto V",
-    soundDelay: 400,
-  }
+    III: {
+        title: "GTA III Logros y Trofeos | Lista Completa + Guía | Vice Club",
+        description:
+            "Guía completa de logros y trofeos de GTA 3. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto III",
+        bodyClass: "gta-3",
+        heading: "Logros de Grand Theft Auto III",
+        soundDelay: null,
+    },
+    VC: {
+        title: "GTA VC Logros y Trofeos | Lista Completa + Guía | Vice Club",
+        description:
+            "Guía completa de logros y trofeos de GTA VC. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: Vice City",
+        bodyClass: "gta-vc",
+        heading: "Logros de Grand Theft Auto: Vice City",
+        soundDelay: null,
+    },
+    SA: {
+        title: "GTA SA Logros y Trofeos | Lista Completa + Guía | Vice Club",
+        description:
+            "Guía completa de logros y trofeos de GTA SA. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: San Andreas",
+        bodyClass: "gta-sa",
+        heading: "Logros de Grand Theft Auto: San Andreas",
+        soundDelay: 200,
+    },
+    IV: {
+        title: "GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club",
+        description:
+            "Guía completa de logros y trofeos de GTA 4, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony",
+        bodyClass: "gta-4",
+        heading: "Logros de Grand Theft Auto IV",
+        soundDelay: null,
+    },
+    V: {
+        title: "GTA V Logros y Trofeos | Lista Completa + Guía | Vice Club",
+        description:
+            "Guía completa de logros y trofeos de GTA 5. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto V",
+        bodyClass: "gta-5",
+        heading: "Logros de Grand Theft Auto V",
+        soundDelay: 400,
+    },
 };
 
 const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-  title={meta.title}
-  description={meta.description}
-  canonical={`https://www.viceclub.app/${game}/logros`}
-  bodyClass={meta.bodyClass}
-  game={game}
-  section="logros"
+    title={meta.title}
+    description={meta.description}
+    canonical={`https://www.viceclub.app/${game}/logros`}
+    bodyClass={meta.bodyClass}
+    game={game}
+    section="logros"
 >
-  <main class="block" id="container">
-    <section class="text-container">
-      <h1>{meta.heading}</h1>
-      <nav class="platform-selector" role="tablist"></nav>
+    <main class="block" id="container">
+        <section class="text-container">
+            <h1>{meta.heading}</h1>
+            <nav class="platform-selector" role="tablist"></nav>
 
-      {game === "III" && (
-        <>
-          <article id="iii_original" class="achievement-content" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros para la versión de PlayStation 4 (Digital)</h5>
-              <p>Esta versión fue retirada de la PlayStation Store el 11 de noviembre de 2021.</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Solo accesible si obtuviste el juego antes de esa fecha</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+            {
+                game === "III" && (
+                    <>
+                        <article
+                            id="iii_original"
+                            class="achievement-content"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros para la versión de PlayStation 4
+                                    (Digital)
+                                </h5>
+                                <p>
+                                    Esta versión fue retirada de la PlayStation
+                                    Store el 11 de noviembre de 2021.
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Solo accesible si obtuviste el juego
+                                        antes de esa fecha
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="iii_definitive" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros de la Edición Definitiva</h5>
-              <p>Disponible en PlayStation 4/5, Xbox One/Series X/S, PC y Nintendo Switch</p>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+                        <article
+                            id="iii_definitive"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>Logros de la Edición Definitiva</h5>
+                                <p>
+                                    Disponible en PlayStation 4/5, Xbox
+                                    One/Series X/S, PC y Nintendo Switch
+                                </p>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="socialclub" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros adicionales de la Edición Definitiva</h5>
-              <p>Disponibles al jugar la Edición Definitiva con una cuenta de Social Club vinculada</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Los logros marcados con (*) fueron adaptados desde la versión original</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
-        </>
-      )}
+                        <article
+                            id="socialclub"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros adicionales de la Edición Definitiva
+                                </h5>
+                                <p>
+                                    Disponibles al jugar la Edición Definitiva
+                                    con una cuenta de Social Club vinculada
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Los logros marcados con (*) fueron
+                                        adaptados desde la versión original
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
+                    </>
+                )
+            }
 
-      {game === "VC" && (
-        <>
-          <article id="vc_original" class="achievement-content" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros para la versión de PlayStation 4 (Digital)</h5>
-              <p>Esta versión fue retirada de la PlayStation Store el 11 de noviembre de 2021.</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Solo accesible si obtuviste el juego antes de esa fecha</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+            {
+                game === "VC" && (
+                    <>
+                        <article
+                            id="vc_original"
+                            class="achievement-content"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros para la versión de PlayStation 4
+                                    (Digital)
+                                </h5>
+                                <p>
+                                    Esta versión fue retirada de la PlayStation
+                                    Store el 11 de noviembre de 2021.
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Solo accesible si obtuviste el juego
+                                        antes de esa fecha
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="vc_definitive" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros de la Edición Definitiva</h5>
-              <p>Disponible en PlayStation 4/5, Xbox One/Series X/S, PC y Nintendo Switch</p>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+                        <article
+                            id="vc_definitive"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>Logros de la Edición Definitiva</h5>
+                                <p>
+                                    Disponible en PlayStation 4/5, Xbox
+                                    One/Series X/S, PC y Nintendo Switch
+                                </p>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="socialclub" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros adicionales de la Edición Definitiva</h5>
-              <p>Disponibles al jugar la Edición Definitiva con una cuenta de Social Club vinculada</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Los logros marcados con (*) fueron adaptados desde la versión original</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
-        </>
-      )}
+                        <article
+                            id="socialclub"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros adicionales de la Edición Definitiva
+                                </h5>
+                                <p>
+                                    Disponibles al jugar la Edición Definitiva
+                                    con una cuenta de Social Club vinculada
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Los logros marcados con (*) fueron
+                                        adaptados desde la versión original
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
+                    </>
+                )
+            }
 
-      {game === "SA" && (
-        <>
-          <article id="sa_original" class="achievement-content" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros para la versión de PlayStation 4 (Digital)</h5>
-              <p>Esta versión fue retirada de la PlayStation Store el 11 de noviembre de 2021.</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Solo accesible si obtuviste el juego antes de esa fecha</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+            {
+                game === "SA" && (
+                    <>
+                        <article
+                            id="sa_original"
+                            class="achievement-content"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros para la versión de PlayStation 4
+                                    (Digital)
+                                </h5>
+                                <p>
+                                    Esta versión fue retirada de la PlayStation
+                                    Store el 11 de noviembre de 2021.
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Solo accesible si obtuviste el juego
+                                        antes de esa fecha
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="sa_definitive" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros de la Edición Definitiva</h5>
-              <p>Disponible en PlayStation 4/5, Xbox One/Series X/S, PC y Nintendo Switch</p>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+                        <article
+                            id="sa_definitive"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>Logros de la Edición Definitiva</h5>
+                                <p>
+                                    Disponible en PlayStation 4/5, Xbox
+                                    One/Series X/S, PC y Nintendo Switch
+                                </p>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="socialclub" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros adicionales de la Edición Definitiva</h5>
-              <p>Disponibles al jugar la Edición Definitiva con una cuenta de Social Club vinculada</p>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>Los logros marcados con (*) fueron adaptados desde la versión original</span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
-        </>
-      )}
+                        <article
+                            id="socialclub"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros adicionales de la Edición Definitiva
+                                </h5>
+                                <p>
+                                    Disponibles al jugar la Edición Definitiva
+                                    con una cuenta de Social Club vinculada
+                                </p>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Los logros marcados con (*) fueron
+                                        adaptados desde la versión original
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
+                    </>
+                )
+            }
 
-      {game === "IV" && (
-        <>
-          <article id="iv" class="achievement-content" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>
-                  Los logros con la etiqueta{" "}
-                  <span
-                    style={{
-                      fontSize: "0.75rem",
-                      padding: "0.4em 1.2em",
-                      borderRadius: "12px",
-                      fontFamily: "GTAArtDecoMedium",
-                      backgroundColor: "rgb(177, 38, 26)",
-                      color: "rgb(250, 250, 250)",
-                    }}
-                  >
-                    Online
-                  </span>{" "}
-                  solo están disponibles en consolas. En la versión de Steam fueron eliminados.
-                </span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+            {
+                game === "IV" && (
+                    <>
+                        <article
+                            id="iv"
+                            class="achievement-content"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Los logros con la etiqueta{" "}
+                                        <span
+                                            style={{
+                                                fontSize: "0.75rem",
+                                                padding: "4px 12px",
+                                                borderRadius: "12px",
+                                                marginInline: "7px",
+                                                fontFamily: "GTAArtDeco",
+                                                fontWeight: "600",
+                                                backgroundColor:
+                                                    "rgb(177, 38, 26)",
+                                                color: "rgb(250, 250, 250)",
+                                            }}
+                                        >
+                                            Online
+                                        </span>{" "}
+                                        solo están disponibles en consolas. En
+                                        la versión de Steam fueron eliminados.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="tlad" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-list"></div>
-          </article>
+                        <article
+                            id="tlad"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="tbogt" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-list"></div>
-          </article>
-        </>
-      )}
+                        <article
+                            id="tbogt"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-list" />
+                        </article>
+                    </>
+                )
+            }
 
-      {game === "V" && (
-        <>
-          <article id="v_original" class="achievement-content" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros disponibles para todas las versiones del juego</h5>
-              <div class="achievement-warning">
-                <span class="material-symbols-rounded">warning</span>
-                <span>
-                  Los logros con la etiqueta{" "}
-                  <span
-                    style={{
-                      fontSize: "0.75rem",
-                      padding: "0.4em 1.2em",
-                      borderRadius: "12px",
-                      fontFamily: "GTAArtDecoMedium",
-                      backgroundColor: "rgb(177, 38, 26)",
-                      color: "rgb(250, 250, 250)",
-                    }}
-                  >
-                    Online
-                  </span>{" "}
-                  ya no pueden ser obtenidos en las versiones de PlayStation 3 y Xbox 360.
-                </span>
-              </div>
-            </div>
-            <div class="achievement-list"></div>
-          </article>
+            {
+                game === "V" && (
+                    <>
+                        <article
+                            id="v_original"
+                            class="achievement-content"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros disponibles para todas las versiones
+                                    del juego
+                                </h5>
+                                <div class="achievement-warning">
+                                    <span class="material-symbols-rounded">
+                                        warning
+                                    </span>
+                                    <span>
+                                        Los logros con la etiqueta{" "}
+                                        <span
+                                            style={{
+                                                fontSize: "0.75rem",
+                                                padding: "4px 12px",
+                                                borderRadius: "12px",
+                                                marginInline: "7px",
+                                                fontFamily: "GTAArtDeco",
+                                                fontWeight: "600",
+                                                backgroundColor:
+                                                    "rgb(177, 38, 26)",
+                                                color: "rgb(250, 250, 250)",
+                                            }}
+                                        >
+                                            Online
+                                        </span>{" "}
+                                        ya no pueden ser obtenidos en las
+                                        versiones de PlayStation 3 y Xbox 360.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
 
-          <article id="v_enhanced" class="achievement-content" style="display: none" role="tabpanel">
-            <div class="achievement-disclaimer">
-              <h5>Logros disponibles para la versión Enhanced (PlayStation 4, Xbox One) y lanzamientos posteriores</h5>
-              <div class="achievement-warning" />
-            </div>
-            <div class="achievement-list"></div>
-          </article>
-        </>
-      )}
-    </section>
-  </main>
+                        <article
+                            id="v_enhanced"
+                            class="achievement-content"
+                            style="display: none"
+                            role="tabpanel"
+                        >
+                            <div class="achievement-disclaimer">
+                                <h5>
+                                    Logros disponibles para la versión Enhanced
+                                    (PlayStation 4, Xbox One) y lanzamientos
+                                    posteriores
+                                </h5>
+                                <div class="achievement-warning" />
+                            </div>
+                            <div class="achievement-list" />
+                        </article>
+                    </>
+                )
+            }
+        </section>
+    </main>
 
-  <fragment slot="scripts">
-    {meta.soundDelay !== null ? (
-      <script is:inline define:vars={{ delay: meta.soundDelay }}>
-        window.SOUND_DELAY = delay;
-      </script>
-    ) : null}
-    <!-- Right Content settings -->
-    <script is:inline src="/assets/scripts/cursor.js"></script>
-    <script is:inline src="/assets/scripts/sounds.js"></script>
-    <!-- Achievements -->
-    <script is:inline src="/assets/scripts/achievements.js"></script>
-  </fragment>
+    <fragment slot="scripts">
+        {
+            meta.soundDelay !== null ? (
+                <script is:inline define:vars={{ delay: meta.soundDelay }}>
+                    window.SOUND_DELAY = delay;
+                </script>
+            ) : null
+        }
+        <!-- Right Content settings -->
+        <script is:inline src="/assets/scripts/cursor.js"></script>
+        <script is:inline src="/assets/scripts/sounds.js"></script>
+        <!-- Achievements -->
+        <script is:inline src="/assets/scripts/achievements.js"></script>
+    </fragment>
 </BaseLayout>

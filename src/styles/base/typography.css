@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
 @font-face {
-    font-family: "GTAArtDecoRegular";
+    font-family: "GTAArtDeco";
     src: url("/assets/fonts/GTAArtDecoRegular.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "GTAArtDecoMedium";
+    font-family: "GTAArtDeco";
     src: url("/assets/fonts/GTAArtDecoMedium.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;

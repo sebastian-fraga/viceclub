@@ -138,8 +138,9 @@
         }
 
         & p {
-            font-family: "GTAArtDecoMedium";
+            font-family: "GTAArtDeco";
             color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+            font-weight: 600;
         }
     }
 
@@ -347,7 +348,7 @@
             & #songTitle {
                 color: #ffffff;
                 font-size: 16px;
-                font-family: "GTAArtDecoMedium";
+                font-family: "GTAArtDeco";
             }
 
             & #artistName,
@@ -427,7 +428,7 @@
             gap: 1em;
             width: 450px;
             color: #ebe9e9;
-            font-family: "GTAArtDecoMedium";
+            font-family: "GTAArtDeco";
 
             & #bar {
                 flex: 1;
