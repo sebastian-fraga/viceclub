@@ -48,9 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastVolume = elements.volumeSlider ? elements.volumeSlider.value : 100;
 
     function refreshTranslations() {
-        if (window.translations && window.applyTranslations) {
-            window.applyTranslations(window.translations);
+        if (!window.translations || !window.applyTranslations) return;
+
+        if (state.currentRadio) {
+            const data = state.radioData[state.currentRadio];
+
+            if (data?.playlists) {
+                const activeIndex = [
+                    ...document.querySelectorAll(".playlist-btn"),
+                ].findIndex((b) => b.classList.contains("active"));
+                const playlist =
+                    data.playlists[activeIndex] ?? data.playlists[0];
+                if (playlist)
+                    elements.radioGenre.innerHTML = renderGenre(playlist.genre);
+            } else {
+                elements.radioGenre.innerHTML = renderGenre(data?.genre);
+            }
         }
+
+        window.applyTranslations(window.translations);
     }
 
     function setFooterLoading(isLoading) {
@@ -156,16 +172,27 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
+    function getTranslation(key) {
+        if (!window.translations) return null;
+        return key.split(".").reduce((obj, k) => obj?.[k], window.translations);
+    }
+
     function renderGenre(genre) {
         if (!genre) return "";
         const genres = Array.isArray(genre) ? genre : [genre];
 
         return `
-            <span data-i18n="radio.info.genre">Género:</span>
-            <div class="genre-tags">
-                ${genres.map((g) => `<p>${g}</p>`).join("")}
-            </div>
-        `;
+        <span data-i18n="radio.info.genre">${getTranslation("radio.info.genre") || "Género:"}</span>
+        <div class="genre-tags">
+            ${genres
+                .map((g) => {
+                    const translated =
+                        getTranslation(`radio.info.genres.${g}`) || g;
+                    return `<p>${translated}</p>`;
+                })
+                .join("")}
+        </div>
+    `;
     }
 
     function renderSongList(songs, activeIndex) {
@@ -941,6 +968,23 @@ document.addEventListener("DOMContentLoaded", function () {
     function init() {
         initVolumeControls();
         loadRadioData();
+
+        window.onLangChange = function () {
+            if (!state.currentRadio) return;
+            const data = state.radioData[state.currentRadio];
+
+            if (data?.playlists) {
+                const activeIndex = [
+                    ...document.querySelectorAll(".playlist-btn"),
+                ].findIndex((b) => b.classList.contains("active"));
+                const playlist = data.playlists[Math.max(activeIndex, 0)];
+                if (playlist)
+                    elements.radioGenre.innerHTML = renderGenre(playlist.genre);
+            } else {
+                elements.radioGenre.innerHTML = renderGenre(data?.genre);
+                elements.radioDJ.innerHTML = renderDJ(data?.dj);
+            }
+        };
     }
 
     init();

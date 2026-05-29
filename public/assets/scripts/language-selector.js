@@ -53,12 +53,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     async function changeLang(lang) {
         localStorage.setItem("lang", lang);
-
         const translations = await loadLang(lang);
-
         window.translations = translations;
-
         applyTranslations(translations);
+
+        if (typeof window.onLangChange === "function") {
+            window.onLangChange();
+        }
     }
 
     const flags = {
