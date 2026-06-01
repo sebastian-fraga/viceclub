@@ -1,5 +1,5 @@
 ---
-import "../styles/pages/index.css"
+import "../styles/pages/index.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Loader from "../components/Loader.astro";
 const isProd = import.meta.env.PROD;
@@ -20,10 +20,16 @@ const isProd = import.meta.env.PROD;
         style="opacity: 0; transition: opacity 0.8s ease"
     >
         <section class="welcome-wrapper">
-            <h1 class="welcome-title" id="title">BIENVENIDO A VICE CLUB</h1>
+            <h1
+                class="welcome-title"
+                id="title"
+                data-i18n="index.welcome"
+            >
+                BIENVENIDO A VICE CLUB
+            </h1>
             <div class="fotd-container">
                 <div class="fotd-header">
-                    <h2>DATO DEL DÍA</h2>
+                    <h2 data-i18n="index.fotd">DATO DEL DÍA</h2>
                     <img src="" alt="" />
                 </div>
                 <div class="fotd-image">
@@ -35,7 +41,7 @@ const isProd = import.meta.env.PROD;
                 <div class="fotd-buttons"></div>
             </div>
             <div class="welcome-text">
-                <p class="index-text">
+                <p class="index-text" data-i18n="index.text.first">
                     Aquí podrás encontrar todo lo que buscas sobre los juegos de
                     la saga GTA: <span>Información</span>,
                     <span>noticias</span>, todos los <span>trucos</span> y
@@ -45,7 +51,7 @@ const isProd = import.meta.env.PROD;
                     <span>radios</span> disponibles para escuchar en tu día a día,
                     curiosidades y mucho más
                 </p>
-                <p class="index-text">
+                <p class="index-text" data-i18n="index.text.second">
                     ¡Actualizaciones de contenido <span>cada semana</span>! No
                     dudes en visitarnos a menudo y agregar la página a favoritos
                     (o incluso instalarla como una aplicación independiente!)
@@ -55,36 +61,36 @@ const isProd = import.meta.env.PROD;
 
         <section class="countdown-wrapper">
             <div class="countdown-header">
-                <h2>Lanzamiento de Grand Theft Auto VI</h2>
+                <h2 data-i18n="index.countdown.title">Lanzamiento de Grand Theft Auto VI</h2>
             </div>
             <div id="countdown">
                 <div class="time-box">
                     <span id="days">0</span>
-                    <p>DÍAS</p>
+                    <p data-i18n="index.countdown.days">DÍAS</p>
                     <div class="time-separator">:</div>
                 </div>
 
                 <div class="time-box">
                     <span id="hours">0</span>
-                    <p>HORAS</p>
+                    <p data-i18n="index.countdown.hours">HORAS</p>
                     <div class="time-separator">:</div>
                 </div>
 
                 <div class="time-box">
                     <span id="minutes">0</span>
-                    <p>MINUTOS</p>
+                    <p data-i18n="index.countdown.minutes">MINUTOS</p>
                     <div class="time-separator">:</div>
                 </div>
 
                 <div class="time-box">
                     <span id="seconds">0</span>
-                    <p>SEGUNDOS</p>
+                    <p data-i18n="index.countdown.seconds">SEGUNDOS</p>
                 </div>
             </div>
         </section>
 
         <section class="logo-carousel">
-            <h2>Explora Vice Club</h2>
+            <h2 data-i18n="index.carousel.cta">Explora Vice Club</h2>
             <div class="carousel-wrapper">
                 <a href="/III/inicio">
                     <img
@@ -154,9 +160,9 @@ const isProd = import.meta.env.PROD;
         </section>
 
         <section class="news">
-            <h2>ÚLTIMAS NOTICIAS</h2>
+            <h2 data-i18n="index.news.title">ÚLTIMAS NOTICIAS</h2>
             <div id="newsContainer"></div>
-            <button id="loadNews" aria-label="Cargar más noticias">
+            <button id="loadNews" aria-label="Cargar más noticias" data-i18n="index.news.button">
                 CARGAR MÁS NOTICIAS
                 <span class="material-symbols-rounded">expand_more</span>
             </button>
@@ -164,15 +170,15 @@ const isProd = import.meta.env.PROD;
 
         <section class="faq">
             <details>
-                <summary>PREGUNTAS FRECUENTES</summary>
-                <h3>
-                    <span class="material-symbols-rounded">apps</span>Sobre Vice
+                <summary data-i18n="index.faq.title">PREGUNTAS FRECUENTES</summary>
+                <h3 data-i18n="index.faq.section.first.title">
+                    <span class="material-symbols-rounded">apps</span >Sobre Vice
                     Club
                 </h3>
                 <div class="faq-section">
                     <article class="faq-question">
-                        <h4>¿Qué puedo encontrar en Vice Club?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.first.q1">¿Qué puedo encontrar en Vice Club?</h4>
+                        <p data-i18n="index.faq.section.first.a1">
                             En Vice Club encontrarás toda la información
                             relacionada a cada juego principal de la saga GTA.
                             Tendrás acceso a todos los trucos, radios, mapas
@@ -181,8 +187,8 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4>¿Cómo busco información por juego?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.first.q2">¿Cómo busco información por juego?</h4>
+                        <p data-i18n="index.faq.section.first.a2">
                             Muy sencillo. Simplemente tienes que tocar en el
                             menú de arriba a la derecha, y podrás elegir el
                             juego que deseas consultar. Para volver a esta
@@ -192,8 +198,8 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4>¿Cómo nace Vice Club?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.first.q3">¿Cómo nace Vice Club?</h4>
+                        <p data-i18n="index.faq.section.first.a3">
                             Vice Club nace como un proyecto personal de
                             desarrollo web, el cual comencé a idearlo a
                             principios de 2025. Me pareció una buena idea para
@@ -204,8 +210,8 @@ const isProd = import.meta.env.PROD;
                         </p>
                     </article>
                     <article class="faq-question">
-                        <h4>¿Con qué frecuencia se actualiza el contenido?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.first.q4">¿Con qué frecuencia se actualiza el contenido?</h4>
+                        <p data-i18n="index.faq.section.first.a4">
                             Prometo traer más información y contenido todas las
                             semanas hasta terminar con mis
                             <a
@@ -215,11 +221,11 @@ const isProd = import.meta.env.PROD;
                         </p>
                     </article>
                     <article class="faq-question">
-                        <h4>
+                        <h4 data-i18n="index.faq.section.first.q5">
                             ¿Puedo sugerir contenido, reportar algún error o
                             simplemente colaborar en el desarrollo?
                         </h4>
-                        <p>
+                        <p data-i18n="index.faq.section.first.a5">
                             ¡Por supuesto! Vice Club es de código abierto y su
                             repositorio puede encontrarse en
                             <a
@@ -229,14 +235,14 @@ const isProd = import.meta.env.PROD;
                         </p>
                     </article>
                 </div>
-                <h3>
+                <h3 data-i18n="index.faq.section.second.title">
                     <span class="material-symbols-rounded">person</span>
                     Sobre mí
                 </h3>
                 <div class="faq-section">
                     <article class="faq-question">
-                        <h4>¿Quién soy?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.second.q1">¿Quién soy?</h4>
+                        <p data-i18n="index.faq.section.second.a1">
                             Mi nombre es Sebastián. Soy un desarrollador web
                             front-end nacido en Argentina y fanático de la saga
                             GTA.
@@ -244,8 +250,8 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4>¿Cómo puedo contactarte?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.second.q2">¿Cómo puedo contactarte?</h4>
+                        <p data-i18n="index.faq.section.second.a2">
                             Puedes enviarme un
                             <a href="mailto:fragasebastian1@gmail.com"
                                 >correo electrónico</a
@@ -259,8 +265,8 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4>¿Juego favorito de la saga?</h4>
-                        <p>
+                        <h4 data-i18n="index.faq.section.second.q3">¿Juego favorito de la saga?</h4>
+                        <p data-i18n="index.faq.section.second.a3">
                             Sin ningún tipo de dudas, San Andreas. Por todo lo
                             que significó y sigue haciendo a más de 20 años
                             desde su salida. Menciones honoríficas a la mejor
@@ -273,7 +279,7 @@ const isProd = import.meta.env.PROD;
         </section>
 
         <section class="support">
-            <p>
+            <p data-i18n="index.support">
                 Vice Club es un proyecto 100% gratuito, hecho con mucho amor por
                 toda la saga. Si te gusta y deseas apoyar el desarrollo, podés
                 invitarme un café:
@@ -302,7 +308,7 @@ const isProd = import.meta.env.PROD;
                         is:inline></script>
                     <script type="text/javascript" is:inline>
                         kofiwidget2.init(
-                            "Apóyame en Ko-fi",
+                            "Ko-fi",
                             "#72a4f2",
                             "T6T71RM9WX",
                         );
@@ -397,7 +403,9 @@ const isProd = import.meta.env.PROD;
                 navigator.serviceWorker
                     .register("/sw.js")
                     .then(() => console.log("Service Worker registrado"))
-                    .catch((err) => console.error("Error de Service Worker", err));
+                    .catch((err) =>
+                        console.error("Error de Service Worker", err),
+                    );
             }
         </script>
     </fragment>

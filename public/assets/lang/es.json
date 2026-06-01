@@ -16,6 +16,62 @@
             "language": "Idioma"
         }
     },
+    "index": {
+        "welcome": "BIENVENIDO A VICE CLUB",
+        "fotd": "DATO DEL DÍA",
+        "text": {
+            "first": "Aquí podrás encontrar todo lo que buscas sobre los juegos de la saga GTA: <span>Información</span>, <span>noticias</span>, todos los <span>trucos</span> y <span>mods indispensables</span> para tu partida, <span>mapas interactivos</span> para completar los coleccionables mientras juegas, todas las <span>radios</span> disponibles para escuchar en tu día a día, curiosidades y mucho más.",
+            "second": "¡Actualizaciones de contenido <span>cada semana</span>! No dudes en visitarnos a menudo y agregar la página a favoritos (o incluso instalarla como una aplicación independiente!)"
+        },
+        "countdown": {
+            "title": "Lanzamiento de Grand Theft Auto VI",
+            "days": "DÍAS",
+            "hours": "HORAS",
+            "minutes": "MINUTOS",
+            "seconds": "SEGUNDOS"
+        },
+        "carousel": {
+            "cta": "Explora Vice Club"
+        },
+        "news": {
+            "title": "ÚLTIMAS NOTICIAS",
+            "button": "CARGAR MÁS NOTICIAS <span class='material-symbols-rounded'>expand_more</span>",
+            "share": {
+                "title": "Compartir:",
+                "copy": "Copiar enlace",
+                "copied": "Copiado",
+                "more": "Más"
+            }
+        },
+        "faq": {
+            "title": "PREGUNTAS FRECUENTES",
+            "section": {
+                "first": {
+                    "title": "<span class='material-symbols-rounded'>apps</span >Sobre Vice Club",
+                    "q1": "¿Qué puedo encontrar en Vice Club?",
+                    "a1": "En Vice Club encontrarás toda la información relacionada a cada juego principal de la saga GTA. Tendrás acceso a todos los trucos, radios, mapas interactivos, mods, noticias y mucho más.",
+                    "q2": "¿Cómo busco información por juego?",
+                    "a2": "Muy sencillo. Simplemente tienes que tocar en el menú de arriba a la derecha, y podrás elegir el juego que deseas consultar. Para volver a esta página principal, es tan sencillo como tocar en el logo de Vice Club de arriba a la izquierda.",
+                    "q3": "¿Cómo nace Vice Club?",
+                    "a3": "Vice Club nace como un proyecto personal de desarrollo web, el cual comencé a idearlo a principios de 2025. Me pareció una buena idea para poder practicar mis conocimientos en desarrollo front-end mientras plasmo todo en un sitio web dedicado a una de mis sagas favoritas de videojuegos.",
+                    "q4": "¿Con qué frecuencia se actualiza el contenido?",
+                    "a4": "Prometo traer más información y contenido todas las semanas hasta terminar con mis <a href='https://github.com/sebastian-fraga/viceclub/issues' referrerpolicy='no-referrer'>tareas</a>.",
+                    "q5": "¿Puedo sugerir contenido, reportar algún error o simplemente colaborar en el desarrollo?",
+                    "a5": "¡Por supuesto! Vice Club es de código abierto y su repositorio puede encontrarse en <a href='https://github.com/sebastian-fraga/viceclub' referrerpolicy='no-referrer'>GitHub</a>."
+                },
+                "second": {
+                    "title": "<span class='material-symbols-rounded'>person</span> Sobre mí",
+                    "q1": "¿Quién soy?",
+                    "a1": "Mi nombre es Sebastián. Soy un desarrollador web front-end nacido en Argentina y fanático de la saga GTA.",
+                    "q2": "¿Cómo puedo contactarte?",
+                    "a2": "Puedes enviarme un <a href='mailto:fragasebastian1@gmail.com'>correo electrónico</a> o contactarme por <a href='https://github.com/sebastian-fraga' referrerpolicy='no-referrer'>GitHub</a>.",
+                    "q3": "¿Juego favorito de la saga?",
+                    "a3": "Sin ningún tipo de dudas, San Andreas. Por todo lo que significó y sigue haciendo a más de 20 años desde su salida. Menciones honoríficas a la mejor historia de la saga (GTA 4) y a la mejor ambientación (GTA Vice City)."
+                }
+            }
+        },
+        "support": "Vice Club es un proyecto 100% gratuito, hecho con mucho amor por toda la saga. Si te gusta y deseas apoyar el desarrollo, podés invitarme un café:"
+    },
     "ficha": {
         "developer": "Desarrollador",
         "developers": "Desarrolladores",

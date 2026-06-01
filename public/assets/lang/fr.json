@@ -16,6 +16,62 @@
             "language": "Langue"
         }
     },
+    "index": {
+        "welcome": "BIENVENUE SUR VICE CLUB",
+        "fotd": "FAIT DU JOUR",
+        "text": {
+            "first": "Ici, vous trouverez tout ce dont vous avez besoin sur les jeux de la saga GTA : <span>informations</span>, <span>actualités</span>, tous les <span>codes de triche</span> et <span>mods indispensables</span> pour votre partie, <span>cartes interactives</span> pour compléter les collectibles en jouant, toutes les <span>stations de radio</span> disponibles à écouter au quotidien, des curiosités et bien plus encore.",
+            "second": "Mises à jour de contenu <span>chaque semaine</span> ! N'hésitez pas à nous rendre visite souvent et à ajouter la page à vos favoris (ou même à l'installer comme application indépendante !)"
+        },
+        "countdown": {
+            "title": "Lancement de Grand Theft Auto VI",
+            "days": "JOURS",
+            "hours": "HEURES",
+            "minutes": "MINUTES",
+            "seconds": "SECONDES"
+        },
+        "carousel": {
+            "cta": "Explorer Vice Club"
+        },
+        "news": {
+            "title": "DERNIÈRES ACTUALITÉS",
+            "button": "CHARGER PLUS D'ACTUALITÉS <span class='material-symbols-rounded'>expand_more</span>",
+            "share": {
+                "title": "Partager :",
+                "copy": "Copier le lien",
+                "copied": "Copié",
+                "more": "Plus"
+            }
+        },
+        "faq": {
+            "title": "FOIRE AUX QUESTIONS",
+            "section": {
+                "first": {
+                    "title": "<span class='material-symbols-rounded'>apps</span> À propos de Vice Club",
+                    "q1": "Qu'est-ce que je peux trouver sur Vice Club ?",
+                    "a1": "Sur Vice Club, vous trouverez toutes les informations relatives à chaque jeu principal de la saga GTA. Vous aurez accès à tous les codes de triche, les radios, les cartes interactives, les mods, les actualités et bien plus encore.",
+                    "q2": "Comment rechercher des informations par jeu ?",
+                    "a2": "C'est très simple. Il vous suffit de toucher le menu en haut à droite, et vous pourrez choisir le jeu que vous souhaitez consulter. Pour revenir à cette page d'accueil, il vous suffit de toucher le logo de Vice Club en haut à gauche.",
+                    "q3": "Comment est né Vice Club ?",
+                    "a3": "Vice Club est né comme un projet personnel de développement web que j'ai commencé à concevoir début 2025. Il m'a semblé être une bonne idée pour pratiquer mes compétences en développement front-end tout en créant un site dédié à l'une de mes sagas de jeux vidéo préférées.",
+                    "q4": "À quelle fréquence le contenu est-il mis à jour ?",
+                    "a4": "Je promets d'apporter plus d'informations et de contenu chaque semaine jusqu'à terminer mes <a href='https://github.com/sebastian-fraga/viceclub/issues' referrerpolicy='no-referrer'>tâches</a>.",
+                    "q5": "Puis-je suggérer du contenu, signaler une erreur ou simplement contribuer au développement ?",
+                    "a5": "Bien sûr ! Vice Club est open source et son dépôt peut être trouvé sur <a href='https://github.com/sebastian-fraga/viceclub' referrerpolicy='no-referrer'>GitHub</a>."
+                },
+                "second": {
+                    "title": "<span class='material-symbols-rounded'>person</span> À propos de moi",
+                    "q1": "Qui suis-je ?",
+                    "a1": "Je m'appelle Sebastián. Je suis un développeur web front-end né en Argentine et fan de la saga GTA.",
+                    "q2": "Comment vous contacter ?",
+                    "a2": "Vous pouvez m'envoyer un <a href='mailto:fragasebastian1@gmail.com'>e-mail</a> ou me contacter sur <a href='https://github.com/sebastian-fraga' referrerpolicy='no-referrer'>GitHub</a>.",
+                    "q3": "Jeu favori de la saga ?",
+                    "a3": "Sans aucun doute, San Andreas. Pour tout ce qu'il a représenté et continue de représenter plus de 20 ans après sa sortie. Mentions honorables pour la meilleure histoire de la saga (GTA 4) et la meilleure ambiance (GTA Vice City)."
+                }
+            }
+        },
+        "support": "Vice Club est un projet 100 % gratuit, réalisé avec beaucoup d'amour pour toute la saga. Si vous aimez ce projet et souhaitez soutenir son développement, vous pouvez m'offrir un café :"
+    },
     "ficha": {
         "developer": "Développeur",
         "developers": "Développeurs",
@@ -194,13 +250,27 @@
     },
     "trucos": {
         "definitive_edition": "Definitive Edition",
-        "III": { "heading": "Codes de Grand Theft Auto III" },
-        "VC": { "heading": "Codes de Grand Theft Auto: Vice City" },
-        "SA": { "heading": "Codes de Grand Theft Auto: San Andreas" },
-        "LCS": { "heading": "Codes de Grand Theft Auto: Liberty City Stories" },
-        "VCS": { "heading": "Codes de Grand Theft Auto: Vice City Stories" },
-        "IV": { "heading": "Codes de Grand Theft Auto IV" },
-        "V": { "heading": "Codes de Grand Theft Auto V" },
+        "III": {
+            "heading": "Codes de Grand Theft Auto III"
+        },
+        "VC": {
+            "heading": "Codes de Grand Theft Auto: Vice City"
+        },
+        "SA": {
+            "heading": "Codes de Grand Theft Auto: San Andreas"
+        },
+        "LCS": {
+            "heading": "Codes de Grand Theft Auto: Liberty City Stories"
+        },
+        "VCS": {
+            "heading": "Codes de Grand Theft Auto: Vice City Stories"
+        },
+        "IV": {
+            "heading": "Codes de Grand Theft Auto IV"
+        },
+        "V": {
+            "heading": "Codes de Grand Theft Auto V"
+        },
         "search_placeholder": "Rechercher des codes...",
         "tooltip": {
             "title": "Filtres de recherche",

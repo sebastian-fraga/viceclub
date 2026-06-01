@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 .split(".")
                 .reduce((obj, k) => obj?.[k], translations);
 
-            if (value) el.textContent = value;
+            if (value) el.innerHTML = value;
         });
 
         const game = window.location.pathname.split("/")[1];
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         const heading = translations?.[sectionKey]?.[game]?.heading;
 
-        if (heading) document.querySelector("h1").textContent = heading;
+        if (heading) document.querySelector("h1").innerHTML = heading;
 
         document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
             const key = el.dataset.i18nPlaceholder;

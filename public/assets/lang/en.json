@@ -16,6 +16,62 @@
             "language": "Language"
         }
     },
+    "index": {
+        "welcome": "WELCOME TO VICE CLUB",
+        "fotd": "FACT OF THE DAY",
+        "text": {
+            "first": "Here you can find everything you need about GTA games: <span>Information</span>, <span>news</span>, all the <span>cheats</span> and <span>essential mods</span> for your game, <span>interactive maps</span> to collect items while you play, all available <span>radio stations</span> to listen to any time, curiosities, and much more.",
+            "second": "Content updates <span>every week</span>! Feel free to visit often and add the page to your favorites (or even install it as a standalone app!)"
+        },
+        "countdown": {
+            "title": "Grand Theft Auto VI Launch",
+            "days": "DAYS",
+            "hours": "HOURS",
+            "minutes": "MINUTES",
+            "seconds": "SECONDS"
+        },
+        "carousel": {
+            "cta": "Explore Vice Club"
+        },
+        "news": {
+            "title": "LATEST NEWS",
+            "button": "LOAD MORE NEWS <span class='material-symbols-rounded'>expand_more</span>",
+            "share": {
+                "title": "Share:",
+                "copy": "Copy link",
+                "copied": "Copied",
+                "more": "More"
+            }
+        },
+        "faq": {
+            "title": "FREQUENTLY ASKED QUESTIONS",
+            "section": {
+                "first": {
+                    "title": "<span class='material-symbols-rounded'>apps</span> About Vice Club",
+                    "q1": "What can I find on Vice Club?",
+                    "a1": "On Vice Club you will find all the information related to each main game in the GTA franchise. You will have access to all cheats, radio stations, interactive maps, mods, news, and much more.",
+                    "q2": "How do I search for information by game?",
+                    "a2": "Very simple. Just tap on the menu in the top right, and you can choose the game you want to look up. To return to this home page, simply tap the Vice Club logo in the top left.",
+                    "q3": "How did Vice Club come to be?",
+                    "a3": "Vice Club started as a personal web development project that I began planning in early 2025. It seemed like a great way to practice my front-end development skills while building a website dedicated to one of my favorite video game franchises.",
+                    "q4": "How often is the content updated?",
+                    "a4": "I promise to bring more information and content every week until I finish my <a href='https://github.com/sebastian-fraga/viceclub/issues' referrerpolicy='no-referrer'>tasks</a>.",
+                    "q5": "Can I suggest content, report a bug, or simply contribute to the development?",
+                    "a5": "Of course! Vice Club is open source and its repository can be found on <a href='https://github.com/sebastian-fraga/viceclub' referrerpolicy='no-referrer'>GitHub</a>."
+                },
+                "second": {
+                    "title": "<span class='material-symbols-rounded'>person</span> About me",
+                    "q1": "Who am I?",
+                    "a1": "My name is Sebastián. I am an Argentine front-end web developer and a huge GTA fan.",
+                    "q2": "How can I contact you?",
+                    "a2": "You can send me an <a href='mailto:fragasebastian1@gmail.com'>email</a> or reach me on <a href='https://github.com/sebastian-fraga' referrerpolicy='no-referrer'>GitHub</a>.",
+                    "q3": "Favorite game in the franchise?",
+                    "a3": "Without any doubt, San Andreas. For everything it meant and continues to mean more than 20 years after its release. Honorable mentions to the best story in the franchise (GTA 4) and the best atmosphere (GTA Vice City)."
+                }
+            }
+        },
+        "support": "Vice Club is a 100% free project, made with a lot of love for the entire franchise. If you enjoy it and want to support the development, you can buy me a coffee:"
+    },
     "ficha": {
         "developer": "Developer",
         "developers": "Developers",

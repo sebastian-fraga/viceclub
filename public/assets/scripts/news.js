@@ -5,6 +5,18 @@ let news = [];
 let visibleCount = 2;
 let step = 2;
 
+function getLang() {
+    return (localStorage.getItem("lang") || "ES").toLowerCase();
+}
+
+function t(value) {
+    if (typeof value === "string") return value;
+
+    const lang = getLang();
+
+    return value?.[lang] || value?.es || "";
+}
+
 fetch(
     "https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" +
         Date.now(),
@@ -60,18 +72,31 @@ function shareOnX(title, slug) {
     window.open(url, "_blank", "noopener");
 }
 
+function getTranslation(path) {
+    return path
+        .split(".")
+        .reduce((obj, key) => obj?.[key], window.translations);
+}
+
 function copyLink(slug, title, btn) {
     const text = `${title}\n${getArticleUrl(slug)}`;
+
     navigator.clipboard.writeText(text).then(() => {
         const icon = btn.querySelector("span.material-symbols-rounded");
         const label = btn.querySelector(".button-text");
 
         icon.textContent = "check";
-        if (label) label.textContent = "Copiado";
+
+        if (label) {
+            label.textContent = getTranslation("index.news.share.copied");
+        }
 
         setTimeout(() => {
             icon.textContent = "content_copy";
-            if (label) label.textContent = "Copiar enlace";
+
+            if (label) {
+                label.textContent = getTranslation("index.news.share.copy");
+            }
         }, 900);
     });
 }
@@ -97,8 +122,8 @@ function renderNews(previousCount = step) {
 
         article.innerHTML = `
             <div class="news-header">
-                <h3>${item.title}</h3>
-                <p>${item.subtitle}</p>
+                <h3>${t(item.title)}</h3>
+                <p>${t(item.subtitle)}</p>
                 <div class="news-header-info">
                     <h4>
                         <span class="material-symbols-rounded unfilled">person</span>
@@ -106,38 +131,44 @@ function renderNews(previousCount = step) {
                     </h4>
                     <h4>
                         <span class="material-symbols-rounded unfilled">calendar_today</span>
-                        ${item.date}
+                        ${t(item.date)}
                     </h4>
                 </div>
             </div>
             <div class="news-content">
-                <p>${item.paragraph1}</p>
+                <p>${t(item.paragraph1)}</p>
                 <div class="news-image-wrapper">
-                    <img src="${item.image}" class="news-image" alt="${item.title}" loading="${loadingStrategy}" data-footer="${item.footerText}">
+                    <img
+                        src="${item.image}"
+                        class="news-image"
+                        alt="${t(item.title)}"
+                        loading="${loadingStrategy}"
+                        data-footer="${t(item.footerText)}"
+                    >
                     <div class="news-image-footer">
                         <span class="material-symbols-rounded unfilled">photo_camera</span>
-                        <p>${item.footerText}</p>
+                        <p>${t(item.footerText)}</p>
                     </div>
                 </div>
-                <p>${item.paragraph2}</p>
-                ${item.paragraph3 ? `<p class="last-paragraph">${item.paragraph3}</p>` : ""}
+                <p>${t(item.paragraph2)}</p>
+                ${item.paragraph3 ? `<p class="last-paragraph">${t(item.paragraph3)}</p>` : ""}
                 <a href="${item.link}" target="_blank" rel="noopener" class="news-link">
                     <span class="material-symbols-rounded">open_in_new</span>
-                    ${item.linkText || "Más información"}
+                    ${t(item.linkText) || "Más información"}
                 </a>
                 <div class="divider"></div>
                 <div class="news-share">
-                    <p>Compartir:</p>
+                    <p data-i18n="index.news.share.title">Compartir:</p>
                     <button class="share-btn btn-x">
                         <span class="x"></span>
                     </button>
                     <button class="share-btn btn-copy">
                         <span class="material-symbols-rounded unfilled">content_copy</span>
-                        <p class="button-text">Copiar enlace</p>
+                        <p class="button-text" data-i18n="index.news.share.copy">Copiar enlace</p>
                     </button>
                     <button class="share-btn btn-share">
                         <span class="material-symbols-rounded unfilled">share</span>
-                        <p class="button-text">Más</p>
+                        <p class="button-text" data-i18n="index.news.share.more">Más</p>
                     </button>
                 </div>
             </div>
@@ -146,16 +177,20 @@ function renderNews(previousCount = step) {
 
         article
             .querySelector(".btn-x")
-            .addEventListener("click", () => shareOnX(item.title, item.slug));
+            .addEventListener("click", () =>
+                shareOnX(t(item.title), item.slug),
+            );
+
         article
             .querySelector(".btn-copy")
             .addEventListener("click", (e) =>
-                copyLink(item.slug, item.title, e.currentTarget),
+                copyLink(item.slug, t(item.title), e.currentTarget),
             );
+
         article
             .querySelector(".btn-share")
             .addEventListener("click", () =>
-                shareNative(item.title, item.slug),
+                shareNative(t(item.title), item.slug),
             );
 
         if (isNew) {
@@ -166,6 +201,10 @@ function renderNews(previousCount = step) {
     });
 
     btn.style.display = visibleCount < news.length ? "flex" : "none";
+
+    if (window.translations) {
+        applyTranslations(window.translations);
+    }
 }
 
 btn.addEventListener("click", () => {
@@ -173,3 +212,13 @@ btn.addEventListener("click", () => {
     visibleCount += step;
     renderNews(previousCount);
 });
+
+const previousOnLangChange = window.onLangChange;
+
+window.onLangChange = function () {
+    if (typeof previousOnLangChange === "function") {
+        previousOnLangChange();
+    }
+
+    renderNews();
+};
