@@ -18,7 +18,11 @@
     },
     "index": {
         "welcome": "WELCOME TO VICE CLUB",
-        "fotd": "FACT OF THE DAY",
+        "fotd": {
+            "title":  "FACT OF THE DAY",
+            "source": "Source",
+            "location": "Location"
+        },
         "text": {
             "first": "Here you can find everything you need about GTA games: <span>Information</span>, <span>news</span>, all the <span>cheats</span> and <span>essential mods</span> for your game, <span>interactive maps</span> to collect items while you play, all available <span>radio stations</span> to listen to any time, curiosities, and much more.",
             "second": "Content updates <span>every week</span>! Feel free to visit often and add the page to your favorites (or even install it as a standalone app!)"

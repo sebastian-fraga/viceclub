@@ -18,7 +18,11 @@
     },
     "index": {
         "welcome": "BIENVENUE SUR VICE CLUB",
-        "fotd": "FAIT DU JOUR",
+        "fotd": {
+            "title": "FAIT DU JOUR",
+            "source": "Source",
+            "location": "Localisation"
+        },
         "text": {
             "first": "Ici, vous trouverez tout ce dont vous avez besoin sur les jeux de la saga GTA : <span>informations</span>, <span>actualités</span>, tous les <span>codes de triche</span> et <span>mods indispensables</span> pour votre partie, <span>cartes interactives</span> pour compléter les collectibles en jouant, toutes les <span>stations de radio</span> disponibles à écouter au quotidien, des curiosités et bien plus encore.",
             "second": "Mises à jour de contenu <span>chaque semaine</span> ! N'hésitez pas à nous rendre visite souvent et à ajouter la page à vos favoris (ou même à l'installer comme application indépendante !)"

@@ -18,7 +18,11 @@
     },
     "index": {
         "welcome": "BIENVENIDO A VICE CLUB",
-        "fotd": "DATO DEL DÍA",
+        "fotd": {
+            "title":  "DATO DEL DÍA",
+            "source": "Fuente",
+            "location": "Ubicación"
+        },
         "text": {
             "first": "Aquí podrás encontrar todo lo que buscas sobre los juegos de la saga GTA: <span>Información</span>, <span>noticias</span>, todos los <span>trucos</span> y <span>mods indispensables</span> para tu partida, <span>mapas interactivos</span> para completar los coleccionables mientras juegas, todas las <span>radios</span> disponibles para escuchar en tu día a día, curiosidades y mucho más.",
             "second": "¡Actualizaciones de contenido <span>cada semana</span>! No dudes en visitarnos a menudo y agregar la página a favoritos (o incluso instalarla como una aplicación independiente!)"

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             "https://viceclub.s3.us-east-1.amazonaws.com/facts.json?t=" +
                 Date.now(),
         );
+
+        const lang = localStorage.getItem("lang") || "ES";
         const facts = await res.json();
         const today = new Date();
         const start = new Date(today.getFullYear(), 0, 0);
@@ -12,16 +14,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         const dayOfYear = Math.floor(diff / oneDay);
 
         const params = new URLSearchParams(window.location.search);
+        const forceId = params.get("fact");
+        const parsedId = parseInt(forceId);
 
-        const forceIndex = params.get("fact");
-        const factIndex =
-            forceIndex !== null
-                ? parseInt(forceIndex) % facts.length
-                : dayOfYear % facts.length;
-        const fact = facts[factIndex];
+        const dailyFact = facts[dayOfYear % facts.length];
+        const fact =
+            forceId !== null && !isNaN(parsedId) && parsedId >= 1
+                ? (facts.find((f) => f.id === parsedId) ?? dailyFact)
+                : dailyFact;
+        // visit viceclub.app?fact=X for a specific fact
 
-        document.querySelector(".fotd-description p").innerHTML =
-            fact.description;
+        function renderFact(lang) {
+            const text =
+                typeof fact.description === "object"
+                    ? (fact.description[lang.toLowerCase()] ??
+                        fact.description["es"])
+                    : fact.description;
+
+            document.querySelector(".fotd-description p").innerHTML = text;
+        }
+
+        renderFact(localStorage.getItem("lang") || "ES");
+
+        window.onLangChange = () => {
+            renderFact(localStorage.getItem("lang") || "ES");
+        };
 
         const fotdImg = document.querySelector(".fotd-image img");
         fotdImg.src = fact.image + "?t=" + Date.now();
@@ -46,18 +63,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             sourceEl.target = "_blank";
             sourceEl.rel = "noopener";
             sourceEl.className = "fotd-source";
-            sourceEl.innerHTML = `<span class="material-symbols-rounded">info</span> Ver fuente`;
+            sourceEl.innerHTML = `
+                <span class="material-symbols-rounded">info</span>
+                <span data-i18n="index.fotd.source">Ver fuente</span>
+            `;
             footer.appendChild(sourceEl);
         }
+
         if (fact.location?.image) {
             const { image } = fact.location;
 
             const mapBtn = document.createElement("div");
             mapBtn.className = "fotd-map-btn";
             mapBtn.innerHTML = `
-        <span class="material-symbols-rounded">location_on</span>
-        Ubicación
-    `;
+                <span class="material-symbols-rounded">location_on</span>
+                <span data-i18n="index.fotd.location">Ubicación</span>
+            `;
 
             const preview = document.createElement("div");
             preview.className = "fotd-map-preview";
@@ -71,7 +92,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             footer.appendChild(mapBtn);
         }
+
+        if (window.translations) {
+            applyTranslations(window.translations);
+        }
     } catch (err) {
-        console.error("Error cargando los datos del día:", err);
+        console.error("Error cargando el dato del día:", err);
     }
 });
