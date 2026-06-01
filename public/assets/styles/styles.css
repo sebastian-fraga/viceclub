@@ -117,20 +117,26 @@ details[open]::details-content {
     align-items: center;
     justify-content: center;
     z-index: 100000;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
     background: #000000b3;
     backdrop-filter: blur(8px) brightness(0.5);
+    border: none;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    transition:
+        opacity 0.4s ease,
+        display 0.4s ease allow-discrete,
+        overlay 0.4s ease allow-discrete;
 
-    &.open {
-        opacity: 1;
-        pointer-events: all;
+    &:not([open]) {
+        opacity: 0;
+        pointer-events: none;
+    }
 
-        & figure {
-            transform: scale(1);
-            opacity: 1;
-        }
+    &:not([open]) {
+        opacity: 0;
+        pointer-events: none;
     }
 
     & figure {
@@ -138,11 +144,16 @@ details[open]::details-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: scale(0.5);
-        opacity: 0;
+        transform: scale(1);
+        opacity: 1;
         transition:
             transform 0.4s ease,
             opacity 0.4s ease;
+
+        @starting-style {
+            transform: scale(0.5);
+            opacity: 0;
+        }
 
         & .image-wrapper {
             position: relative;
