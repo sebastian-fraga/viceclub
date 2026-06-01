@@ -89,7 +89,7 @@
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
-        padding-inline: 1em;
+        gap: 4px 32px;
 
         & button {
             border: none;
