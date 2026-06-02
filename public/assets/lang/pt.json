@@ -108,6 +108,13 @@
                 "second": "Em The Ballad of Gay Tony, o jogador assume o controle de Luis Fernando Lopez, guarda-costas e sócio do empresário da vida noturna Anthony \"Gay Tony\" Prince. A história acompanha os problemas financeiros e criminosos de Tony, enquanto Luis tenta manter os negócios de seu chefe funcionando em meio a dívidas, gangues e a máfia.",
                 "third": "Quanto ao novo conteúdo, o jogo introduz 26 novas missões, armas exclusivas como o lança-granadas explosivo e o rifle de precisão avançado, novos veículos e atividades como casas noturnas, paraquedismo e lutas em jaula."
             }
+        },
+        "vi": {
+            "text": {
+                "first": "<span style='font-weight: 800'>Grand Theft Auto VI</span> é o próximo jogo a ser lançado pela Rockstar Games em 19 de novembro de 2026. Representa o ciclo de desenvolvimento mais longo de toda a série, com mais de 13 anos tendo se passado desde seu antecessor.",
+                "second": "O jogo se passa no estado de Leonida, uma paródia do estado da Flórida. Contará com até seis locais conhecidos: Vice City (Miami), os Leonida Keys (Florida Keys), Grassrivers (Everglades), Port Gelhorn, Ambrosia e Monte Kalaga.",
+                "third": "O jogador controlará Jason Duval e Lucia Caminos, um casal criminoso que precisará enfrentar uma conspiração criminosa contra eles, confiando um no outro para sobreviver."
+            }
         }
     },
     "ficha": {
@@ -177,6 +184,13 @@
                 "1": {
                     "0": "13 de abril de 2010 (NA)",
                     "1": "16 de abril de 2010 (EU)"
+                }
+            }
+        },
+        "vi": {
+            "dates": {
+                "0": {
+                    "0": "19 de novembro de 2026"
                 }
             }
         }

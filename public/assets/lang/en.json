@@ -108,6 +108,13 @@
                 "second": "In The Ballad of Gay Tony, players take control of Luis Fernando Lopez, bodyguard and business partner of nightclub entrepreneur Anthony \"Gay Tony\" Prince. The story follows Tony's financial and criminal troubles while Luis tries to keep his boss's businesses afloat amid debts, gangs, and the mafia.",
                 "third": "As for new content, the game introduces 26 new missions, exclusive weapons such as the explosive grenade launcher and the advanced sniper rifle, new vehicles, and activities including nightclub management, parachuting, and cage fighting."
             }
+        },
+        "vi": {
+            "text": {
+                "first": "<span style='font-weight: 800'>Grand Theft Auto VI</span> is the next game to be released by Rockstar Games on November 19, 2026. It represents the longest development cycle of any game in the series, with more than 13 years having passed since its predecessor.",
+                "second": "The game takes place in the state of Leonida, a parody of the state of Florida. It will feature up to six known locations: Vice City (Miami), the Leonida Keys (Florida Keys), Grassrivers (Everglades), Port Gelhorn, Ambrosia, and Mount Kalaga.",
+                "third": "Players will control Jason Duval and Lucia Caminos, a criminal couple who must confront a criminal conspiracy against them, relying on each other to survive."
+            }
         }
     },
     "ficha": {
@@ -177,6 +184,13 @@
                 "1": {
                     "0": "April 13, 2010 (NA)",
                     "1": "April 16, 2010 (EU)"
+                }
+            }
+        },
+        "vi": {
+            "dates": {
+                "0": {
+                    "0": "November 19, 2026"
                 }
             }
         }
