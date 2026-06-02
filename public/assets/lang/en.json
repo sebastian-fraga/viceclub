@@ -87,6 +87,13 @@
                 "third": "The player takes control of Claude, a man who was arrested for robbing the Liberty City Bank, where he was betrayed by his partner at the time, Catalina, who shot him at the crime scene. Claude must carry out missions for contacts in the Leone mafia, working his way up through various gangs, organizations and crews. The story features a total of 50 missions."
             }
         },
+        "lcs": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> is a video game developed by Rockstar Leeds and published by Rockstar Games. It was originally released for the PlayStation Portable on October 25, 2005, and was later ported to PlayStation 2 on June 6, 2006.",
+                "second": "The game's story takes place in 1998 in Liberty City. Players control Toni Cipriani, a criminal and member of the Leone crime family.",
+                "third": "It is the first game in the series to feature an official multiplayer mode. It was available on PlayStation Portable through Ad-Hoc connectivity and included 7 different game modes ranging from races and deathmatches to various team-based modes. Additionally, there were more than 40 characters to choose from."
+            }
+        },
         "iv": {
             "text": {
                 "first": "<span style='font-weight: bold; color: rgb(255, 255, 255)'>Grand Theft Auto IV</span> is an open-world action-adventure sandbox video game developed by Rockstar North and published by Rockstar Games, originally released on April 29, 2008, for PlayStation 3 and Xbox 360.",
@@ -152,6 +159,28 @@
                 "8": { "0": "December 14, 2023 (DE)" }
             },
             "sales": "14.5 million copies (March 2008)"
+        },
+        "lcs": {
+            "dates": {
+                "0": {
+                    "0": "October 25, 2005 (NA)",
+                    "1": "November 4, 2005 (EU)"
+                },
+                "1": {
+                    "0": "June 6, 2006 (NA)",
+                    "1": "June 23, 2006 (EU)"
+                },
+                "2": {
+                    "0": "December 17, 2015 (10th)"
+                },
+                "3": {
+                    "0": "February 11, 2016 (10th)"
+                },
+                "4": {
+                    "0": "March 11, 2016 (10th)"
+                }
+            },
+            "sales": "11 million copies (March 2017)"
         },
         "iv": {
             "dates": {
