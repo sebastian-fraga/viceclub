@@ -9,7 +9,11 @@ body.index {
 
         & .footer-left {
             & .footer-logo {
-                filter: drop-shadow(2px -2px 20px #0000008e)
+                filter: drop-shadow(2px -2px 20px #0000008e);
+
+                &:hover {
+                    filter: inherit;
+                }
             }
         }
 
@@ -90,6 +94,12 @@ footer {
 
         & .footer-logo {
             filter: drop-shadow(2px -2px 20px color-mix(in srgb, var(--accent-color) 40%, transparent));
+            transition: filter 0.2s ease;
+            width: max-content;
+
+            &:hover {
+                filter: drop-shadow(0 0 20px color-mix(in srgb, var(--accent-color) 90%, transparent));
+            }
 
             & a {
                 width: fit-content;
@@ -97,15 +107,9 @@ footer {
                 align-items: center;
                 gap: 12px;
                 text-decoration: none;
-                transition: filter 0.2s ease;
-
-                &:hover {
-                    filter: brightness(0.85);
-                }
 
                 & img {
                     width: 45px;
-
                 }
 
                 & p {
