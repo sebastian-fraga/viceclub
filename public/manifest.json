@@ -1,10 +1,15 @@
 {
     "name": "Vice Club",
     "short_name": "Vice Club",
+    "description": "El sitio web definitivo para los fanáticos de la saga GTA.",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#A28BE2",
     "theme_color": "#806fcd",
+    "lang": "es",
+    "orientation": "portrait-primary",
+    "display_override": ["window-controls-overlay", "standalone"],
     "icons": [
         {
             "src": "/assets/images/app/viceclub.png",

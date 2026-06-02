@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1.6.4";
+const CACHE_VERSION = "1.6.5";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 const assets = [
@@ -47,7 +47,7 @@ const assets = [
 ];
 
 self.addEventListener("install", (event) => {
-    console.log("[SW] installing");
+    console.log("Instalando [SW]");
 
     event.waitUntil(
         (async () => {
@@ -59,11 +59,11 @@ self.addEventListener("install", (event) => {
                         await cache.add(asset);
                         console.log("[SW] OK", asset);
                     } catch (e) {
-                        console.error("[SW] FAIL", asset, e);
+                        console.error("[SW] falló", asset, e);
                     }
                 }
             } catch (e) {
-                console.error("[SW] INSTALL ERROR", e);
+                console.error("Instalación del [SW] fallida", e);
             }
         })(),
     );

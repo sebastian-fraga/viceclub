@@ -1,5 +1,5 @@
 ---
-import "../styles/components/fichatecnica.css"
+import "../styles/components/fichatecnica.css";
 interface DateEntry {
     platforms: string[];
     dates: string[];
@@ -98,13 +98,17 @@ const {
                 <th data-i18n="ficha.date">FECHA DE LANZAMIENTO</th>
                 <td>
                     {
-                        dates.map((entry) => (
+                        dates.map((entry, i) => (
                             <div class="platform-entry">
                                 {entry.platforms.map((p) => (
                                     <span class="platform">{p}</span>
                                 ))}
-                                {entry.dates.map((d) => (
-                                    <span>{d}</span>
+                                {entry.dates.map((d, j) => (
+                                    <span
+                                        data-ficha-date={d}
+                                        data-i18n={`ficha.${game.toLowerCase()}.dates.${i}.${j}`}
+                                        set:html={d}
+                                    />
                                 ))}
                             </div>
                         ))
@@ -123,10 +127,47 @@ const {
                 sales && (
                     <tr>
                         <th data-i18n="ficha.sales">VENTAS</th>
-                        <td>{sales}</td>
+                        <td data-i18n={`ficha.${game.toLowerCase()}.sales`}>
+                            {sales}
+                        </td>
                     </tr>
                 )
             }
         </tbody>
     </table>
 </aside>
+
+<script>
+    function renderDates() {
+        const abbr = (window as any).translations?.ficha?.abbr ?? {};
+
+        const nodes = document.querySelectorAll("[data-ficha-date]");
+
+        nodes.forEach((el) => {
+            const span = el;
+
+            const current = span.innerHTML;
+            if (!current) return;
+
+            span.innerHTML = current.replace(
+                /\((NA|EU|DE|10th)\)/g,
+                (_, key) => `<abbr title="${abbr[key] ?? key}">(${key})</abbr>`,
+            );
+        });
+    }
+
+    const w = window as any;
+
+    if (typeof w.onLangChange !== "function") {
+        w.onLangChange = () => {};
+    }
+
+    const prev = w.onLangChange;
+
+    w.onLangChange = () => {
+        prev?.();
+        renderDates();
+    };
+
+    renderDates();
+</script>

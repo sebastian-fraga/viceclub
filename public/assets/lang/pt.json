@@ -1,25 +1,8 @@
 {
-    "rightmenu": {
-        "label": {
-            "inicio": "INÍCIO",
-            "artworks": "Artworks",
-            "herramientas_y_mods": "Ferramentas e mods",
-            "logros": "Conquistas",
-            "mapa": "Mapa",
-            "radio": "Rádio",
-            "trucos": "Trapaças",
-            "timeline": "Linha do tempo"
-        },
-        "settings": {
-            "cursor": "Cursor personalizado",
-            "sound": "Som",
-            "language": "Idioma"
-        }
-    },
     "index": {
         "welcome": "BEM-VINDO AO VICE CLUB",
         "fotd": {
-            "title":  "FATO DO DIA",
+            "title": "FATO DO DIA",
             "source": "Fonte",
             "location": "Localização"
         },
@@ -76,6 +59,57 @@
         },
         "support": "O Vice Club é um projeto 100% gratuito, feito com muito amor por toda a saga. Se você gosta e deseja apoiar o desenvolvimento, pode me pagar um café:"
     },
+    "rightmenu": {
+        "label": {
+            "inicio": "INÍCIO",
+            "artworks": "Artworks",
+            "herramientas_y_mods": "Ferramentas e mods",
+            "logros": "Conquistas",
+            "mapa": "Mapa",
+            "radio": "Rádio",
+            "trucos": "Trapaças",
+            "timeline": "Linha do tempo"
+        },
+        "settings": {
+            "cursor": "Cursor personalizado",
+            "sound": "Som",
+            "language": "Idioma"
+        }
+    },
+    "home": {
+        "characters": {
+            "title": "Personagens"
+        },
+        "iii": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: rgb(231, 183, 61)'>Grand Theft Auto III</span> é um videogame de ação e sandbox de mundo aberto desenvolvido pela DMA Design (atualmente Rockstar North) e distribuído pela Rockstar Games, lançado em 23 de outubro de 2001. É o primeiro Grand Theft Auto com visão em terceira pessoa e em 3D, estabelecendo um precedente na saga.",
+                "second": "O jogo se passa em Liberty City, uma cidade fictícia baseada em Nova York. Conta com 3 ilhas principais: Portland, Staunton Island e Shoreside Vale, que vão sendo desbloqueadas conforme o jogador avança na história.",
+                "third": "O jogador assumirá o controle de Claude, um homem preso por um assalto ao Liberty City Bank, onde foi traído por sua parceira na época, Catalina, que atirou nele na cena do crime. Claude deverá realizar missões para contatos da máfia Leone, subindo entre diferentes gangues, organizações e quadrilhas. A história conta com um total de 50 missões."
+            }
+        },
+        "iv": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: rgb(255, 255, 255)'>Grand Theft Auto IV</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado originalmente em 29 de abril de 2008 para PlayStation 3 e Xbox 360.",
+                "second": "O jogo se passa em uma versão moderna de Liberty City, uma paródia da cidade de Nova York, e no estado de Alderney (Nova Jersey).",
+                "third": "O jogador assume o controle de Niko Bellic, um veterano de guerra sérvio que chega à cidade em busca de vingança por uma traição que sofreu durante a guerra.",
+                "fourth": "Além disso, o jogo introduz a mecânica do telefone celular: por meio dele, o jogador pode receber chamadas de contatos para desbloquear missões ou fazer ligações para participar de atividades secundárias com amigos ou parceiros românticos."
+            }
+        },
+        "tlad": {
+            "text": {
+                "first": "<span style='color: #f18e8e; font-weight: bold'>Grand Theft Auto: The Lost and Damned</span> é o primeiro conteúdo para download (DLC) de Grand Theft Auto IV, desenvolvido pela Rockstar North e publicado pela Rockstar Games. Foi lançado originalmente de forma exclusiva para Xbox 360 em 17 de fevereiro de 2009 e posteriormente para PlayStation 3 e Microsoft Windows em 13 de abril de 2010 como parte de Grand Theft Auto: Episodes from Liberty City.",
+                "second": "Em The Lost and Damned, o jogador assume o controle de Johnny Klebitz, vice-presidente do clube de motociclistas The Lost. A história acompanha os conflitos internos da gangue enquanto ela enfrenta guerras entre facções e o tráfico de drogas.",
+                "third": "Quanto ao novo conteúdo, o jogo oferece 22 novas missões, 7 novas armas, 25 novos veículos e diversas atividades pelo mapa, como guerras de gangues, corridas de motos e queda de braço."
+            }
+        },
+        "tbogt": {
+            "text": {
+                "first": "<span style='color: #c8fffc; font-weight: bold'>Grand Theft Auto: The Ballad of Gay Tony</span> é o segundo conteúdo para download (DLC) de Grand Theft Auto IV, desenvolvido pela Rockstar North e publicado pela Rockstar Games. Foi lançado originalmente de forma exclusiva para Xbox 360 em 29 de outubro de 2009 e posteriormente para PlayStation 3 e Microsoft Windows em 13 de abril de 2010 como parte de Grand Theft Auto: Episodes from Liberty City.",
+                "second": "Em The Ballad of Gay Tony, o jogador assume o controle de Luis Fernando Lopez, guarda-costas e sócio do empresário da vida noturna Anthony \"Gay Tony\" Prince. A história acompanha os problemas financeiros e criminosos de Tony, enquanto Luis tenta manter os negócios de seu chefe funcionando em meio a dívidas, gangues e a máfia.",
+                "third": "Quanto ao novo conteúdo, o jogo introduz 26 novas missões, armas exclusivas como o lança-granadas explosivo e o rifle de precisão avançado, novos veículos e atividades como casas noturnas, paraquedismo e lutas em jaula."
+            }
+        }
+    },
     "ficha": {
         "developer": "Desenvolvedor",
         "developers": "Desenvolvedores",
@@ -85,25 +119,66 @@
         "platforms": "Plataformas",
         "date": "Data de lançamento",
         "engine": "Motor gráfico",
-        "sales": "Vendas"
-    },
-    "footer": {
-        "left": {
-            "motto": "O site definitivo para os fãs da saga GTA."
+        "sales": "Vendas",
+        "iii": {
+            "dates": {
+                "0": {
+                    "0": "23 de outubro de 2001 (NA)",
+                    "1": "26 de outubro de 2001 (EU)"
+                },
+                "1": {
+                    "0": "21 de maio de 2002 (NA)",
+                    "1": "24 de maio de 2002 (EU)"
+                },
+                "2": {
+                    "0": "4 de novembro de 2003 (NA)",
+                    "1": "2 de janeiro de 2004 (EU)"
+                },
+                "3": { "0": "12 de novembro de 2010" },
+                "4": { "0": "15 de dezembro de 2011 (10th)" },
+                "5": {
+                    "0": "25 de setembro de 2012 (NA)",
+                    "1": "26 de setembro de 2012 (EU)"
+                },
+                "6": { "0": "15 de maio de 2014 (10th)" },
+                "7": { "0": "11 de novembro de 2021 (DE)" },
+                "8": { "0": "14 de dezembro de 2023 (DE)" }
+            },
+            "sales": "14,5 milhões de cópias (março de 2008)"
         },
-        "center": {
-            "title": "Navegação"
+        "iv": {
+            "dates": {
+                "0": {
+                    "0": "29 de abril de 2008"
+                },
+                "1": {
+                    "0": "2 de dezembro de 2008 (NA)",
+                    "1": "3 de dezembro de 2008 (EU)"
+                }
+            },
+            "sales": "25 milhões de cópias (novembro de 2012)"
         },
-        "right": {
-            "title": "Aviso legal",
-            "legal": {
-                "first": "Vice Club é um site independente.",
-                "second": "As marcas GTA e Grand Theft Auto são marcas registradas de seus respectivos proprietários.",
-                "third": "Não é afiliado à Rockstar Games nem à Take-Two Interactive."
+        "tlad": {
+            "dates": {
+                "0": {
+                    "0": "17 de fevereiro de 2009"
+                },
+                "1": {
+                    "0": "13 de abril de 2010 (NA)",
+                    "1": "16 de abril de 2010 (EU)"
+                }
             }
         },
-        "bottom": {
-            "backtotop": "Voltar ao topo"
+        "tbogt": {
+            "dates": {
+                "0": {
+                    "0": "29 de outubro de 2009"
+                },
+                "1": {
+                    "0": "13 de abril de 2010 (NA)",
+                    "1": "16 de abril de 2010 (EU)"
+                }
+            }
         }
     },
     "checklist": {
@@ -284,6 +359,25 @@
                 "name": "nome",
                 "cheat": "trapaça"
             }
+        }
+    },
+    "footer": {
+        "left": {
+            "motto": "O site definitivo para os fãs da saga GTA."
+        },
+        "center": {
+            "title": "Navegação"
+        },
+        "right": {
+            "title": "Aviso legal",
+            "legal": {
+                "first": "Vice Club é um site independente.",
+                "second": "As marcas GTA e Grand Theft Auto são marcas registradas de seus respectivos proprietários.",
+                "third": "Não é afiliado à Rockstar Games nem à Take-Two Interactive."
+            }
+        },
+        "bottom": {
+            "backtotop": "Voltar ao topo"
         }
     }
 }
