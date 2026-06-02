@@ -119,7 +119,11 @@ const {
                 <th data-i18n="ficha.engine">MOTOR GRÁFICO</th>
                 <td>
                     <ul>
-                        {engines.map((e) => <li>{e}</li>)}
+                        {
+                            engines.map((e) => (
+                                <li data-engine={e} set:html={e} />
+                            ))
+                        }
                     </ul>
                 </td>
             </tr>
@@ -138,22 +142,24 @@ const {
 </aside>
 
 <script>
-    function renderDates() {
+    function renderAbbrs() {
         const abbr = (window as any).translations?.ficha?.abbr ?? {};
 
-        const nodes = document.querySelectorAll("[data-ficha-date]");
+        document
+            .querySelectorAll("[data-engine], [data-ficha-date]")
+            .forEach((el) => {
+                const current = el.innerHTML;
 
-        nodes.forEach((el) => {
-            const span = el;
+                if (!current) return;
 
-            const current = span.innerHTML;
-            if (!current) return;
-
-            span.innerHTML = current.replace(
-                /\((NA|EU|DE|10th)\)/g,
-                (_, key) => `<abbr title="${abbr[key] ?? key}">(${key})</abbr>`,
-            );
-        });
+                el.innerHTML = current.replace(
+                    /\((NA|EU|AU|DE|10th|E|E(?:&amp;|&)E)\)/g,
+                    (_, key) => {
+                        const normalized = key.replace("&amp;", "&");
+                        return `<abbr title="${abbr[normalized] ?? normalized}">(${normalized})</abbr>`;
+                    },
+                );
+            });
     }
 
     const w = window as any;
@@ -166,8 +172,8 @@ const {
 
     w.onLangChange = () => {
         prev?.();
-        renderDates();
+        renderAbbrs();
     };
 
-    renderDates();
+    renderAbbrs();
 </script>

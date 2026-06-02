@@ -87,6 +87,13 @@
                 "third": "O jogador assumirá o controle de Claude, um homem preso por um assalto ao Liberty City Bank, onde foi traído por sua parceira na época, Catalina, que atirou nele na cena do crime. Claude deverá realizar missões para contatos da máfia Leone, subindo entre diferentes gangues, organizações e quadrilhas. A história conta com um total de 50 missões."
             }
         },
+        "vc": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #13ebffef'>Grand Theft Auto: Vice City</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado em 29 de outubro de 2002.",
+                "second": "O jogo se passa em Vice City, uma cidade fictícia inspirada e parodiando Miami, no ano de 1986.",
+                "third": "O jogador assume o controle de Tommy Vercetti, um homem que acabou de sair da prisão após cumprir uma pena de 15 anos. Ele é encarregado de supervisionar uma negociação de drogas para a família Forelli. Depois que o acordo dá errado e o dinheiro de Sonny Forelli é perdido, Tommy inicia uma busca pelos responsáveis enquanto trabalha para diversas figuras influentes do submundo do crime de Vice City."
+            }
+        },
         "sa": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado originalmente em 26 de outubro de 2004 para PlayStation 2.",
@@ -99,6 +106,12 @@
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> é um jogo desenvolvido pela Rockstar Leeds e publicado pela Rockstar Games. Foi lançado originalmente para o PlayStation Portable em 25 de outubro de 2005 e posteriormente recebeu uma versão para PlayStation 2 em 6 de junho de 2006.",
                 "second": "A história do jogo se passa em 1998, em Liberty City. O jogador controla Toni Cipriani, um criminoso membro da máfia da Família Leone.",
                 "third": "É o primeiro jogo da série a oferecer um modo multijogador oficial. Ele estava disponível no PlayStation Portable por meio da conexão Ad-Hoc e contava com 7 modos de jogo diferentes, incluindo corridas, partidas de mata-mata e diversos modos em equipe. Além disso, havia mais de 40 personagens para escolher."
+            }
+        },
+        "vcs": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: rgb(225, 151, 242)'>Grand Theft Auto: Vice City Stories</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar Leeds e publicado pela Rockstar Games. Foi lançado em 31 de outubro de 2006 para o PlayStation Portable e em 5 de março de 2007 para o PlayStation 2.",
+                "second": "O jogo se passa dois anos antes dos acontecimentos de Grand Theft Auto: Vice City e conta a história de Victor Vance e sua tentativa de construir um império criminoso por toda a cidade ao lado de seu irmão Lance."
             }
         },
         "iv": {
@@ -123,6 +136,13 @@
                 "third": "Quanto ao novo conteúdo, o jogo introduz 26 novas missões, armas exclusivas como o lança-granadas explosivo e o rifle de precisão avançado, novos veículos e atividades como casas noturnas, paraquedismo e lutas em jaula."
             }
         },
+        "v": {
+            "text": {
+                "first": "<span style='color: rgba(93, 182, 229, 255);text-shadow: 3px 3px #000;font-weight: bold;'>Grand Theft Auto V</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar North e publicado pela Rockstar Games. Foi lançado originalmente para PlayStation 3 e Xbox 360 em 17 de setembro de 2013. O jogo também recebeu versões para os consoles da oitava geração (PlayStation 4 e Xbox One), chamadas de \"Enhanced\", e para os consoles da nona geração (PlayStation 5 e Xbox Series X/S), chamadas de \"Expanded & Enhanced\".",
+                "second": "A história se passa em Los Santos, uma paródia de Los Angeles, e em Blaine County, que representa o deserto da Califórnia. O jogador assume o controle de três protagonistas: Michael De Santa, Franklin Clinton e Trevor Philips.",
+                "third": "É o segundo jogo eletrônico mais vendido da história, com 230 milhões de cópias vendidas até o momento, sendo superado apenas por Minecraft."
+            }
+        },
         "vi": {
             "text": {
                 "first": "<span style='font-weight: 800'>Grand Theft Auto VI</span> é o próximo jogo a ser lançado pela Rockstar Games em 19 de novembro de 2026. Representa o ciclo de desenvolvimento mais longo de toda a série, com mais de 13 anos tendo se passado desde seu antecessor.",
@@ -144,8 +164,11 @@
         "abbr": {
             "NA": "América do Norte",
             "EU": "Europa",
+            "AU": "Austrália",
             "10th": "10º aniversário",
-            "DE": "Definitive Edition"
+            "DE": "Definitive Edition",
+            "E": "Enhanced",
+            "E&E": "Expanded & Enhanced"
         },
         "iii": {
             "dates": {
@@ -172,6 +195,45 @@
                 "8": { "0": "14 de dezembro de 2023 (DE)" }
             },
             "sales": "14,5 milhões de cópias (março de 2008)"
+        },
+        "vc": {
+            "dates": {
+                "0": {
+                    "0": "29 de outubro de 2002 (NA)",
+                    "1": "8 de novembro de 2002 (EU)"
+                },
+                "1": {
+                    "0": "13 de maio de 2003 (NA)",
+                    "1": "16 de maio de 2003 (EU)"
+                },
+                "2": {
+                    "0": "4 de novembro de 2003 (NA)",
+                    "1": "2 de janeiro de 2004 (EU)"
+                },
+                "3": {
+                    "0": "12 de novembro de 2010"
+                },
+                "4": {
+                    "0": "6 de dezembro de 2012 (10th)"
+                },
+                "5": {
+                    "0": "12 de dezembro de 2012 (10th)"
+                },
+                "6": {
+                    "0": "29 de janeiro de 2013 (NA)",
+                    "1": "30 de janeiro de 2013 (EU)"
+                },
+                "7": {
+                    "0": "15 de maio de 2014 (10th)"
+                },
+                "8": {
+                    "0": "11 de novembro de 2021 (DE)"
+                },
+                "9": {
+                    "0": "14 de dezembro de 2023 (DE)"
+                }
+            },
+            "sales": "17,5 milhões de cópias (março de 2008)"
         },
         "sa": {
             "dates": {
@@ -235,6 +297,20 @@
             },
             "sales": "11 milhões de cópias (março de 2017)"
         },
+        "vcs": {
+            "dates": {
+                "0": {
+                    "0": "31 de outubro de 2006 (NA)",
+                    "1": "3 de novembro de 2006 (EU)",
+                    "2": "10 de novembro de 2006 (AU)"
+                },
+                "1": {
+                    "0": "5 de março de 2007 (NA)",
+                    "1": "9 de março de 2007 (EU)"
+                }
+            },
+            "sales": "6 milhões de cópias (março de 2017)"
+        },
         "iv": {
             "dates": {
                 "0": {
@@ -268,6 +344,26 @@
                     "1": "16 de abril de 2010 (EU)"
                 }
             }
+        },
+        "v": {
+            "dates": {
+                "0": {
+                    "0": "17 de setembro de 2013"
+                },
+                "1": {
+                    "0": "18 de novembro de 2014 (E)"
+                },
+                "2": {
+                    "0": "14 de abril de 2015"
+                },
+                "3": {
+                    "0": "15 de março de 2022 (E&E)"
+                },
+                "4": {
+                    "0": "4 de março de 2025 (E)"
+                }
+            },
+            "sales": "230 milhões de cópias (maio de 2026)"
         },
         "vi": {
             "dates": {

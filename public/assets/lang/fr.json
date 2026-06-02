@@ -87,6 +87,13 @@
                 "third": "Le joueur prend le contrôle de Claude, un homme arrêté pour le braquage de la Liberty City Bank, où il a été trahi par sa petite amie de l'époque, Catalina, qui lui a tiré dessus sur les lieux du crime. Claude devra accomplir des missions pour des contacts de la mafia Leone, en gravissant les échelons de différents gangs, organisations et bandes. L'histoire compte un total de 50 missions."
             }
         },
+        "vc": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #13ebffef'>Grand Theft Auto: Vice City</span> est un jeu vidéo d'action-aventure en monde ouvert développé par Rockstar North et édité par Rockstar Games, sorti le 29 octobre 2002.",
+                "second": "Le jeu se déroule à Vice City, une ville fictive inspirée et parodiant Miami, en 1986.",
+                "third": "Le joueur incarne Tommy Vercetti, un homme qui vient de sortir de prison après avoir purgé une peine de 15 ans. Il est chargé de superviser une transaction de drogue pour le compte de la famille Forelli. Après l'échec de l'opération et la perte de l'argent de Sonny Forelli, Tommy se lance à la recherche des responsables tout en travaillant pour plusieurs figures influentes du milieu criminel de Vice City."
+            }
+        },
         "sa": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> est un jeu vidéo d'action-aventure en monde ouvert développé par Rockstar North et édité par Rockstar Games, sorti à l'origine le 26 octobre 2004 sur PlayStation 2.",
@@ -99,6 +106,12 @@
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> est un jeu vidéo développé par Rockstar Leeds et édité par Rockstar Games. Il est sorti à l'origine sur PlayStation Portable le 25 octobre 2005, puis a été porté sur PlayStation 2 le 6 juin 2006.",
                 "second": "L'histoire du jeu se déroule en 1998 à Liberty City. Le joueur incarne Toni Cipriani, un criminel membre de la famille mafieuse Leone.",
                 "third": "Il s'agit du premier jeu de la série à proposer un mode multijoueur officiel. Celui-ci était disponible sur PlayStation Portable via la connexion Ad-Hoc et comprenait 7 modes de jeu différents, allant des courses aux matchs à mort en passant par divers modes par équipes. Plus de 40 personnages étaient également disponibles."
+            }
+        },
+        "vcs": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: rgb(225, 151, 242)'>Grand Theft Auto: Vice City Stories</span> est un jeu vidéo d'action-aventure en monde ouvert développé par Rockstar Leeds et édité par Rockstar Games. Il est sorti le 31 octobre 2006 sur PlayStation Portable et le 5 mars 2007 sur PlayStation 2.",
+                "second": "Le jeu se déroule deux ans avant les événements de Grand Theft Auto: Vice City et raconte l'histoire de Victor Vance ainsi que sa tentative de bâtir un empire criminel à travers toute la ville aux côtés de son frère Lance."
             }
         },
         "iv": {
@@ -123,6 +136,13 @@
                 "third": "Concernant le nouveau contenu, le jeu introduit 26 nouvelles missions, des armes exclusives comme le lance-grenades explosif et le fusil de précision avancé, de nouveaux véhicules ainsi que des activités telles que les clubs nocturnes, le parachutisme et les combats en cage."
             }
         },
+        "v": {
+            "text": {
+                "first": "<span style='color: rgba(93, 182, 229, 255);text-shadow: 3px 3px #000;font-weight: bold;'>Grand Theft Auto V</span> est un jeu vidéo d'action-aventure en monde ouvert développé par Rockstar North et édité par Rockstar Games. Il est sorti à l'origine sur PlayStation 3 et Xbox 360 le 17 septembre 2013. Le jeu a également reçu des versions pour les consoles de huitième génération (PlayStation 4 et Xbox One), appelées « Enhanced », ainsi que pour les consoles de neuvième génération (PlayStation 5 et Xbox Series X/S), appelées « Expanded & Enhanced ».",
+                "second": "L'histoire se déroule à Los Santos, une parodie de Los Angeles, et dans le comté de Blaine, qui représente le désert californien. Le joueur contrôle trois protagonistes : Michael De Santa, Franklin Clinton et Trevor Philips.",
+                "third": "Il s'agit du deuxième jeu vidéo le plus vendu de l'histoire, avec 230 millions d'exemplaires écoulés à ce jour, seulement dépassé par Minecraft."
+            }
+        },
         "vi": {
             "text": {
                 "first": "<span style='font-weight: 800'>Grand Theft Auto VI</span> est le prochain jeu de Rockstar Games, dont la sortie est prévue le 19 novembre 2026. Il correspond au cycle de développement le plus long de l'histoire de la série, plus de 13 ans s'étant écoulés depuis son prédécesseur.",
@@ -144,8 +164,11 @@
         "abbr": {
             "NA": "Amérique du Nord",
             "EU": "Europe",
+            "AU": "Australie",
             "10th": "10e anniversaire",
-            "DE": "Definitive Edition"
+            "DE": "Definitive Edition",
+            "E": "Enhanced",
+            "E&E": "Expanded & Enhanced"
         },
         "iii": {
             "dates": {
@@ -169,6 +192,45 @@
                 "8": { "0": "14 décembre 2023 (DE)" }
             },
             "sales": "14,5 millions d'exemplaires (mars 2008)"
+        },
+        "vc": {
+            "dates": {
+                "0": {
+                    "0": "29 octobre 2002 (NA)",
+                    "1": "8 novembre 2002 (EU)"
+                },
+                "1": {
+                    "0": "13 mai 2003 (NA)",
+                    "1": "16 mai 2003 (EU)"
+                },
+                "2": {
+                    "0": "4 novembre 2003 (NA)",
+                    "1": "2 janvier 2004 (EU)"
+                },
+                "3": {
+                    "0": "12 novembre 2010"
+                },
+                "4": {
+                    "0": "6 décembre 2012 (10th)"
+                },
+                "5": {
+                    "0": "12 décembre 2012 (10th)"
+                },
+                "6": {
+                    "0": "29 janvier 2013 (NA)",
+                    "1": "30 janvier 2013 (EU)"
+                },
+                "7": {
+                    "0": "15 mai 2014 (10th)"
+                },
+                "8": {
+                    "0": "11 novembre 2021 (DE)"
+                },
+                "9": {
+                    "0": "14 décembre 2023 (DE)"
+                }
+            },
+            "sales": "17,5 millions d'exemplaires (mars 2008)"
         },
         "sa": {
             "dates": {
@@ -232,6 +294,20 @@
             },
             "sales": "11 millions d'exemplaires (mars 2017)"
         },
+        "vcs": {
+            "dates": {
+                "0": {
+                    "0": "31 octobre 2006 (NA)",
+                    "1": "3 novembre 2006 (EU)",
+                    "2": "10 novembre 2006 (AU)"
+                },
+                "1": {
+                    "0": "5 mars 2007 (NA)",
+                    "1": "9 mars 2007 (EU)"
+                }
+            },
+            "sales": "6 millions d'exemplaires (mars 2017)"
+        },
         "iv": {
             "dates": {
                 "0": {
@@ -265,6 +341,26 @@
                     "1": "16 avril 2010 (EU)"
                 }
             }
+        },
+        "v": {
+            "dates": {
+                "0": {
+                    "0": "17 septembre 2013"
+                },
+                "1": {
+                    "0": "18 novembre 2014 (E)"
+                },
+                "2": {
+                    "0": "14 avril 2015"
+                },
+                "3": {
+                    "0": "15 mars 2022 (E&E)"
+                },
+                "4": {
+                    "0": "4 mars 2025 (E)"
+                }
+            },
+            "sales": "230 millions d'exemplaires (mai 2026)"
         },
         "vi": {
             "dates": {

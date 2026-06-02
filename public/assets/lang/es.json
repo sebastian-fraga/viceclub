@@ -87,6 +87,13 @@
                 "third": "El jugador tomará el control de Claude, un hombre que fue arrestado por un robo al Liberty City Bank, donde fue traicionado por su pareja en ese momento, Catalina, disparándole en la escena del delito. Claude deberá hacer misiones con contactos de la mafia Leone, escalando entre distintas pandillas, organizaciones y bandas. La historia cuenta con un total de 50 misiones."
             }
         },
+        "vc": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #13ebffef'>Grand Theft Auto: Vice City</span>es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games, lanzado el 29 de octubre de 2002.",
+                "second": "El juego transcurre en Vice City, una ciudad ficticia parodia de Miami, en el año 1986.",
+                "third": "El jugador tomará el control de Tommy Vercetti, un hombre que salió de prisión tras cumplir una sentencia de 15 años, quién deberá supervisar un trato de drogas a pedido de la familia Forelli. Tras salir mal y perder el dinero de Sonny Forelli, Tommy comienza en la búsqueda del responsable, trabajando para varias figuras importantes del submundo criminal de Vice City."
+            }
+        },
         "sa": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games lanzado originalmente el 26 de octubre de 2004 para PlayStation 2.",
@@ -99,6 +106,12 @@
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> es un videojuego desarrollado por Rockstar Leeds y distribuido por Rockstar Games, lanzado originalmente para la PlayStation Portable el 25 de octubre de 2005, y siendo porteado a PlayStation 2 más tarde, el 6 de junio de 2006.",
                 "second": "La historia del juego transcurre en 1998, en Liberty City. Controlaremos a Toni Cipriani, un criminal integrante de la mafia de la Familia Leone.",
                 "third": "Es el primer juego de la saga en ofrecer un modo multijugador oficial. El mismo estuvo disponible para PlayStation Portable mediante el uso de Ad-Hoc, y contó con 7 modos de juego diferentes que iban desde Carreras, Partidas a muerte y diversos modos de equipos. También, habían más de 40 personajes para elegir"
+            }
+        },
+        "vcs": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: rgb(225, 151, 242)'>Grand Theft Auto: Vice City Stories</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar Leeds y distribuido por Rockstar Games, lanzado el 31 de octubre de 2006 para PlayStation Portable y el 5 de marzo de 2007 para PlayStation 2.",
+                "second": "El juego transcurre dos años antes de los sucesos de Grand Theft Auto: Vice City, y nos cuenta la historia de Victor Vance y su intento por construir un imperio criminal por toda la ciudad junto a su hermano Lance."
             }
         },
         "iv": {
@@ -123,6 +136,13 @@
                 "third": "En cuanto a nuevo contenido, el juego introduce 26 nuevas misiones, armas exclusivas como el lanzagranadas explosivo y el fusil de francotirador avanzado, nuevos vehículos y actividades como clubes nocturnos, paracaidismo y peleas en jaula."
             }
         },
+        "v": {
+            "text": {
+                "first": "<span style='color: rgba(93, 182, 229, 255);text-shadow: 3px 3px #000;font-weight: bold;'>Grand Theft Auto V</span> es un videojuego de acción y sandbox de mundo abierto desarrollado por Rockstar North y distribuido por Rockstar Games lanzado originalmente para PlayStation 3 y Xbox 360 el 17 de septiembre de 2013. También cuenta con versiones para consolas de octava generación (PlayStation 4 y Xbox One) llamada \"Enhanced\", y para consolas de novena generación (PlayStation 5 y Xbox Series X/S) llamada \"Expanded & Enhanced\".",
+                "second": "La historia transcurre en Los Santos, una parodia de Los Ángeles, y en Blaine County, correspondiente al desierto de California. El jugador tomará el control de tres personajes: Michael de Santa, Franklin Clinton y Trevor Philips.",
+                "third": "Es el segundo juego más vendido de la historia, con 230 millones de copias vendidas hasta la fecha, solo siendo superado por Minecraft."
+            }
+        },
         "vi": {
             "text": {
                 "first": "<span style='font-weight: 800'>Grand Theft Auto VI</span> es el próximo juego que será lanzado por Rockstar Games el 19 de noviembre de 2026. Corresponde al desarrollo más largo de un videojuego de la saga, habiendo pasado más de 13 años desde su antecesor.",
@@ -144,8 +164,11 @@
         "abbr": {
             "NA": "Norteamérica",
             "EU": "Europa",
+            "AU": "Australia",
             "10th": "Décimo aniversario",
-            "DE": "Edición Definitiva"
+            "DE": "Edición Definitiva",
+            "E": "Enhanced",
+            "E&E": "Expanded & Enhanced"
         },
         "iii": {
             "dates": {
@@ -172,6 +195,35 @@
                 "8": { "0": "14 de diciembre de 2023 (DE)" }
             },
             "sales": "14.5 millones de copias (marzo de 2008)"
+        },
+        "vc": {
+            "dates": {
+                "0": {
+                    "0": "29 de octubre de 2002 (NA)",
+                    "1": "8 de noviembre de 2002 (EU)"
+                },
+                "1": {
+                    "0": "13 de mayo de 2003 (NA)",
+                    "1": "16 de mayo de 2003 (EU)"
+                },
+                "2": {
+                    "0": "4 de noviembre de 2003 (NA)",
+                    "1": "2 de enero de 2004 (EU)"
+                },
+                "3": { "0": "12 de noviembre de 2010" },
+                "4": { "0": "6 de diciembre de 2012 (10th)" },
+                "5": {
+                    "0": "12 de diciembre de 2012 (10th)"
+                },
+                "6": {
+                    "0": "29 de enero de 2013 (NA)",
+                    "1": "30 de enero de 2013 (EU)"
+                },
+                "7": { "0": "15 de mayo de 2014 (10th)" },
+                "8": { "0": "11 de noviembre de 2021 (DE)" },
+                "9": { "0": "14 de diciembre de 2023 (DE)" }
+            },
+            "sales": "17.5 millones de copias (marzo de 2008)"
         },
         "sa": {
             "dates": {
@@ -221,6 +273,20 @@
             },
             "sales": "11 millones de copias (marzo de 2017)"
         },
+        "vcs": {
+            "dates": {
+                "0": {
+                    "0": "31 de octubre de 2006 (NA)",
+                    "1": "3 de noviembre de 2006 (EU)",
+                    "2": "10 de noviembre de 2006 (AU)"
+                },
+                "1": {
+                    "0": "5 de marzo de 2007 (NA)",
+                    "1": "9 de marzo de 2007 (EU)"
+                }
+            },
+            "sales": "6 millones de copias (marzo de 2017)"
+        },
         "iv": {
             "dates": {
                 "0": {
@@ -254,6 +320,26 @@
                     "1": "16 de abril de 2010 (EU)"
                 }
             }
+        },
+        "v": {
+            "dates": {
+                "0": {
+                    "0": "17 de septiembre de 2013"
+                },
+                "1": {
+                    "0": "18 de noviembre de 2014 (E)"
+                },
+                "2": {
+                    "0": "14 de abril de 2015"
+                },
+                "3": {
+                    "0": "15 de marzo de 2022 (E&E)"
+                },
+                "4": {
+                    "0": "4 de marzo de 2025 (E)"
+                }
+            },
+            "sales": "230 millones de copias (mayo de 2026)"
         },
         "vi": {
             "dates": {
