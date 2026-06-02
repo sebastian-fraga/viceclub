@@ -87,6 +87,13 @@
                 "third": "The player takes control of Claude, a man who was arrested for robbing the Liberty City Bank, where he was betrayed by his partner at the time, Catalina, who shot him at the crime scene. Claude must carry out missions for contacts in the Leone mafia, working his way up through various gangs, organizations and crews. The story features a total of 50 missions."
             }
         },
+        "sa": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> is an open-world action-adventure sandbox video game developed by Rockstar North and published by Rockstar Games, originally released on October 26, 2004, for PlayStation 2.",
+                "second": "The game takes place in 1992, primarily in a parody of Los Angeles called Los Santos. There, the main protagonist, Carl Johnson, returns to the city for the funeral of his murdered mother after spending five years living in Liberty City.",
+                "third": "The game stands out for its vast and diverse world. It features three major cities: Los Santos, San Fierro, and Las Venturas, as well as other large regions spread across the map, including the countryside with the counties of Whetstone, Flint County, and Red County, and the desert regions of Bone County and Tierra Robada."
+            }
+        },
         "lcs": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> is a video game developed by Rockstar Leeds and published by Rockstar Games. It was originally released for the PlayStation Portable on October 25, 2005, and was later ported to PlayStation 2 on June 6, 2006.",
@@ -134,6 +141,12 @@
         "date": "Release date",
         "engine": "Game engine",
         "sales": "Sales",
+        "abbr": {
+            "NA": "North America",
+            "EU": "Europe",
+            "10th": "10th Anniversary",
+            "DE": "Definitive Edition"
+        },
         "iii": {
             "dates": {
                 "0": {
@@ -159,6 +172,46 @@
                 "8": { "0": "December 14, 2023 (DE)" }
             },
             "sales": "14.5 million copies (March 2008)"
+        },
+        "sa": {
+            "dates": {
+                "0": {
+                    "0": "October 26, 2004 (NA)",
+                    "1": "October 29, 2004 (EU)"
+                },
+                "1": {
+                    "0": "June 7, 2005 (NA)",
+                    "1": "June 10, 2005 (EU)"
+                },
+                "2": {
+                    "0": "November 12, 2010"
+                },
+                "3": {
+                    "0": "December 12, 2013 (10th)"
+                },
+                "4": {
+                    "0": "December 19, 2013 (10th)"
+                },
+                "5": {
+                    "0": "January 27, 2014 (10th)"
+                },
+                "6": {
+                    "0": "May 15, 2014 (10th)"
+                },
+                "7": {
+                    "0": "October 26, 2014 (10th)"
+                },
+                "8": {
+                    "0": "December 1, 2015 (10th)"
+                },
+                "9": {
+                    "0": "November 11, 2021 (DE)"
+                },
+                "10": {
+                    "0": "December 14, 2023 (DE)"
+                }
+            },
+            "sales": "21.5 million copies (2008)"
         },
         "lcs": {
             "dates": {

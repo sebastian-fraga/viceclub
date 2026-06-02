@@ -87,6 +87,13 @@
                 "third": "Le joueur prend le contrôle de Claude, un homme arrêté pour le braquage de la Liberty City Bank, où il a été trahi par sa petite amie de l'époque, Catalina, qui lui a tiré dessus sur les lieux du crime. Claude devra accomplir des missions pour des contacts de la mafia Leone, en gravissant les échelons de différents gangs, organisations et bandes. L'histoire compte un total de 50 missions."
             }
         },
+        "sa": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> est un jeu vidéo d'action-aventure en monde ouvert développé par Rockstar North et édité par Rockstar Games, sorti à l'origine le 26 octobre 2004 sur PlayStation 2.",
+                "second": "L'histoire se déroule en 1992, principalement dans une parodie de Los Angeles appelée Los Santos. Le protagoniste principal, Carl Johnson, revient dans la ville pour assister aux funérailles de sa mère assassinée après avoir vécu pendant cinq ans à Liberty City.",
+                "third": "Le jeu se distingue par la richesse et l'étendue de son monde. Il comprend trois grandes villes : Los Santos, San Fierro et Las Venturas, ainsi que de vastes régions réparties sur la carte, notamment la campagne avec les comtés de Whetstone, Flint County et Red County, ainsi que les zones désertiques de Bone County et Tierra Robada."
+            }
+        },
         "lcs": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> est un jeu vidéo développé par Rockstar Leeds et édité par Rockstar Games. Il est sorti à l'origine sur PlayStation Portable le 25 octobre 2005, puis a été porté sur PlayStation 2 le 6 juin 2006.",
@@ -134,6 +141,12 @@
         "date": "Date de sortie",
         "engine": "Moteur graphique",
         "sales": "Ventes",
+        "abbr": {
+            "NA": "Amérique du Nord",
+            "EU": "Europe",
+            "10th": "10e anniversaire",
+            "DE": "Definitive Edition"
+        },
         "iii": {
             "dates": {
                 "0": {
@@ -156,6 +169,46 @@
                 "8": { "0": "14 décembre 2023 (DE)" }
             },
             "sales": "14,5 millions d'exemplaires (mars 2008)"
+        },
+        "sa": {
+            "dates": {
+                "0": {
+                    "0": "26 octobre 2004 (NA)",
+                    "1": "29 octobre 2004 (EU)"
+                },
+                "1": {
+                    "0": "7 juin 2005 (NA)",
+                    "1": "10 juin 2005 (EU)"
+                },
+                "2": {
+                    "0": "12 novembre 2010"
+                },
+                "3": {
+                    "0": "12 décembre 2013 (10th)"
+                },
+                "4": {
+                    "0": "19 décembre 2013 (10th)"
+                },
+                "5": {
+                    "0": "27 janvier 2014 (10th)"
+                },
+                "6": {
+                    "0": "15 mai 2014 (10th)"
+                },
+                "7": {
+                    "0": "26 octobre 2014 (10th)"
+                },
+                "8": {
+                    "0": "1 décembre 2015 (10th)"
+                },
+                "9": {
+                    "0": "11 novembre 2021 (DE)"
+                },
+                "10": {
+                    "0": "14 décembre 2023 (DE)"
+                }
+            },
+            "sales": "21,5 millions d'exemplaires (2008)"
         },
         "lcs": {
             "dates": {

@@ -87,6 +87,13 @@
                 "third": "O jogador assumirá o controle de Claude, um homem preso por um assalto ao Liberty City Bank, onde foi traído por sua parceira na época, Catalina, que atirou nele na cena do crime. Claude deverá realizar missões para contatos da máfia Leone, subindo entre diferentes gangues, organizações e quadrilhas. A história conta com um total de 50 missões."
             }
         },
+        "sa": {
+            "text": {
+                "first": "<span style='font-weight: bold; color: #cefcb5'>Grand Theft Auto: San Andreas</span> é um jogo eletrônico de ação e aventura em mundo aberto desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado originalmente em 26 de outubro de 2004 para PlayStation 2.",
+                "second": "O jogo se passa em 1992, principalmente em uma paródia de Los Angeles chamada Los Santos. Lá, o protagonista Carl Johnson retorna à cidade para o funeral de sua mãe assassinada após passar cinco anos vivendo em Liberty City.",
+                "third": "O jogo se destaca pela grande dimensão e diversidade de seu mundo. Ele conta com três cidades principais: Los Santos, San Fierro e Las Venturas, além de outras grandes regiões espalhadas pelo mapa, incluindo o interior com os condados de Whetstone, Flint County e Red County, e as áreas desérticas de Bone County e Tierra Robada."
+            }
+        },
         "lcs": {
             "text": {
                 "first": "<span style='font-weight: bold; color: #f29997'>Grand Theft Auto: Liberty City Stories</span> é um jogo desenvolvido pela Rockstar Leeds e publicado pela Rockstar Games. Foi lançado originalmente para o PlayStation Portable em 25 de outubro de 2005 e posteriormente recebeu uma versão para PlayStation 2 em 6 de junho de 2006.",
@@ -134,6 +141,12 @@
         "date": "Data de lançamento",
         "engine": "Motor gráfico",
         "sales": "Vendas",
+        "abbr": {
+            "NA": "América do Norte",
+            "EU": "Europa",
+            "10th": "10º aniversário",
+            "DE": "Definitive Edition"
+        },
         "iii": {
             "dates": {
                 "0": {
@@ -159,6 +172,46 @@
                 "8": { "0": "14 de dezembro de 2023 (DE)" }
             },
             "sales": "14,5 milhões de cópias (março de 2008)"
+        },
+        "sa": {
+            "dates": {
+                "0": {
+                    "0": "26 de outubro de 2004 (NA)",
+                    "1": "29 de outubro de 2004 (EU)"
+                },
+                "1": {
+                    "0": "7 de junho de 2005 (NA)",
+                    "1": "10 de junho de 2005 (EU)"
+                },
+                "2": {
+                    "0": "12 de novembro de 2010"
+                },
+                "3": {
+                    "0": "12 de dezembro de 2013 (10th)"
+                },
+                "4": {
+                    "0": "19 de dezembro de 2013 (10th)"
+                },
+                "5": {
+                    "0": "27 de janeiro de 2014 (10th)"
+                },
+                "6": {
+                    "0": "15 de maio de 2014 (10th)"
+                },
+                "7": {
+                    "0": "26 de outubro de 2014 (10th)"
+                },
+                "8": {
+                    "0": "1 de dezembro de 2015 (10th)"
+                },
+                "9": {
+                    "0": "11 de novembro de 2021 (DE)"
+                },
+                "10": {
+                    "0": "14 de dezembro de 2023 (DE)"
+                }
+            },
+            "sales": "21,5 milhões de cópias (2008)"
         },
         "lcs": {
             "dates": {
