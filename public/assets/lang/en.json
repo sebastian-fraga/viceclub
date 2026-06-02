@@ -401,6 +401,17 @@
             "host": "Hosted by:",
             "genre": "Genre:",
             "tracklist": "Tracklist:",
+            "playlists": {
+                "singles": "Singles",
+                "keinemusik": "Keinemusik Set",
+                "keinemusik_beach": "Keinemusik Set (Beach)",
+                "moodymann": "Moodymann Set",
+                "palms_trax": "Palms Trax Set",
+                "solomun": "Solomun Set",
+                "tale_of_us": "Tale of Us Set",
+                "dixon": "Dixon Set",
+                "the_black_madonna": "The Black Madonna Set"
+            },
             "genres": {
                 "80s": "'80s",
                 "acid_jazz": "Acid Jazz",

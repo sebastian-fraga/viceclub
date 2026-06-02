@@ -398,6 +398,17 @@
             "host": "Animé par:",
             "genre": "Genre:",
             "tracklist": "Liste des chansons:",
+            "playlists": {
+                "singles": "Singles",
+                "keinemusik": "Set de Keinemusik",
+                "keinemusik_beach": "Set de Keinemusik (Plage)",
+                "moodymann": "Set de Moodymann",
+                "palms_trax": "Set de Palms Trax",
+                "solomun": "Set de Solomun",
+                "tale_of_us": "Set de Tale of Us",
+                "dixon": "Set de Dixon",
+                "the_black_madonna": "Set de The Black Madonna"
+            },
             "genres": {
                 "80s": "Années 80",
                 "acid_jazz": "Acid Jazz",

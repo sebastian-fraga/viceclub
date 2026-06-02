@@ -609,13 +609,20 @@ document.addEventListener("DOMContentLoaded", function () {
             elements.playBtn.style.display = "inline";
 
             const selectorHTML = data.playlists
-                .map(
-                    (playlist, i) => `
-                        <button class="playlist-btn${i === 0 ? " active" : ""}" data-index="${i}">
-                            ${playlist.name}
-                        </button>
-                    `,
-                )
+                .map((playlist, i) => {
+                    const label = playlist.key
+                        ? getTranslation(
+                              `radio.info.playlists.${playlist.key}`,
+                          ) || playlist.name
+                        : playlist.name;
+
+                    return `
+                <button class="playlist-btn${i === 0 ? " active" : ""}" data-index="${i}"
+                        ${playlist.key ? `data-i18n="radio.info.playlists.${playlist.key}"` : ""}>
+                    ${label}
+                </button>
+            `;
+                })
                 .join("");
 
             elements.radioDJ.innerHTML = `<div id="playlistSelector">${selectorHTML}</div>`;

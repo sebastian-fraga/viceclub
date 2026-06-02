@@ -401,6 +401,17 @@
             "host": "Apresentado por:",
             "genre": "Gênero:",
             "tracklist": "Lista de músicas:",
+            "playlists": {
+                "singles": "Singles",
+                "keinemusik": "Set do Keinemusik",
+                "keinemusik_beach": "Set do Keinemusik (Praia)",
+                "moodymann": "Set do Moodymann",
+                "palms_trax": "Set do Palms Trax",
+                "solomun": "Set do Solomun",
+                "tale_of_us": "Set do Tale of Us",
+                "dixon": "Set do Dixon",
+                "the_black_madonna": "Set do The Black Madonna"
+            },
             "genres": {
                 "80s": "Anos 80",
                 "acid_jazz": "Acid Jazz",
