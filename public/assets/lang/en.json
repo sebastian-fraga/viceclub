@@ -184,15 +184,25 @@
                     "0": "November 4, 2003 (NA)",
                     "1": "January 2, 2004 (EU)"
                 },
-                "3": { "0": "November 12, 2010" },
-                "4": { "0": "December 15, 2011 (10th)" },
+                "3": {
+                    "0": "November 12, 2010"
+                },
+                "4": {
+                    "0": "December 15, 2011 (10th)"
+                },
                 "5": {
                     "0": "September 25, 2012 (NA)",
                     "1": "September 26, 2012 (EU)"
                 },
-                "6": { "0": "May 15, 2014 (10th)" },
-                "7": { "0": "November 11, 2021 (DE)" },
-                "8": { "0": "December 14, 2023 (DE)" }
+                "6": {
+                    "0": "May 15, 2014 (10th)"
+                },
+                "7": {
+                    "0": "November 11, 2021 (DE)"
+                },
+                "8": {
+                    "0": "December 14, 2023 (DE)"
+                }
             },
             "sales": "14.5 million copies (March 2008)"
         },

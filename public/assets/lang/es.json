@@ -184,15 +184,25 @@
                     "0": "4 de noviembre de 2003 (NA)",
                     "1": "2 de enero de 2004 (EU)"
                 },
-                "3": { "0": "12 de noviembre de 2010" },
-                "4": { "0": "15 de diciembre de 2011 (10th)" },
+                "3": {
+                    "0": "12 de noviembre de 2010"
+                },
+                "4": {
+                    "0": "15 de diciembre de 2011 (10th)"
+                },
                 "5": {
                     "0": "25 de septiembre de 2012 (NA)",
                     "1": "26 de septiembre de 2012 (EU)"
                 },
-                "6": { "0": "15 de mayo de 2014 (10th)" },
-                "7": { "0": "11 de noviembre de 2021 (DE)" },
-                "8": { "0": "14 de diciembre de 2023 (DE)" }
+                "6": {
+                    "0": "15 de mayo de 2014 (10th)"
+                },
+                "7": {
+                    "0": "11 de noviembre de 2021 (DE)"
+                },
+                "8": {
+                    "0": "14 de diciembre de 2023 (DE)"
+                }
             },
             "sales": "14.5 millones de copias (marzo de 2008)"
         },
@@ -210,8 +220,12 @@
                     "0": "4 de noviembre de 2003 (NA)",
                     "1": "2 de enero de 2004 (EU)"
                 },
-                "3": { "0": "12 de noviembre de 2010" },
-                "4": { "0": "6 de diciembre de 2012 (10th)" },
+                "3": {
+                    "0": "12 de noviembre de 2010"
+                },
+                "4": {
+                    "0": "6 de diciembre de 2012 (10th)"
+                },
                 "5": {
                     "0": "12 de diciembre de 2012 (10th)"
                 },
@@ -219,9 +233,15 @@
                     "0": "29 de enero de 2013 (NA)",
                     "1": "30 de enero de 2013 (EU)"
                 },
-                "7": { "0": "15 de mayo de 2014 (10th)" },
-                "8": { "0": "11 de noviembre de 2021 (DE)" },
-                "9": { "0": "14 de diciembre de 2023 (DE)" }
+                "7": {
+                    "0": "15 de mayo de 2014 (10th)"
+                },
+                "8": {
+                    "0": "11 de noviembre de 2021 (DE)"
+                },
+                "9": {
+                    "0": "14 de diciembre de 2023 (DE)"
+                }
             },
             "sales": "17.5 millones de copias (marzo de 2008)"
         },
@@ -238,16 +258,30 @@
                 "2": {
                     "0": "12 de noviembre de 2010"
                 },
-                "3": { "0": "12 de diciembre de 2013 (10th)" },
-                "4": { "0": "19 de diciembre de 2013 (10th)" },
+                "3": {
+                    "0": "12 de diciembre de 2013 (10th)"
+                },
+                "4": {
+                    "0": "19 de diciembre de 2013 (10th)"
+                },
                 "5": {
                     "0": "27 de enero de 2014 (10th)"
                 },
-                "6": { "0": "15 de mayo de 2014 (10th)" },
-                "7": { "0": "26 de octubre de 2014 (10th)" },
-                "8": { "0": "1 de diciembre de 2015 (10th)" },
-                "9": { "0": "11 de noviembre de 2021 (DE)" },
-                "10": { "0": "14 de diciembre de 2023 (DE)" }
+                "6": {
+                    "0": "15 de mayo de 2014 (10th)"
+                },
+                "7": {
+                    "0": "26 de octubre de 2014 (10th)"
+                },
+                "8": {
+                    "0": "1 de diciembre de 2015 (10th)"
+                },
+                "9": {
+                    "0": "11 de noviembre de 2021 (DE)"
+                },
+                "10": {
+                    "0": "14 de diciembre de 2023 (DE)"
+                }
             },
             "sales": "21.5 millones de copias (2008)"
         },
