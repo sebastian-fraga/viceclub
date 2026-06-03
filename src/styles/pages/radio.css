@@ -1,28 +1,48 @@
 .radio-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     position: relative;
 
+    @media (max-width:600px) {
+        overflow: hidden;
+        gap: 0;
+        padding-bottom: 40px;
+        flex-direction: column;
+    }
+
     & .radio-grid {
-        border: 1px solid color-mix(in srgb, var(--block-border) 60%, transparent);
+        border: 2px solid color-mix(in srgb, var(--block-border) 60%, transparent);
         background: linear-gradient(to bottom right,
                 color-mix(in srgb, var(--block-border) 50%, transparent),
                 color-mix(in srgb, transparent 80%, var(--accent-color)));
         margin-block: 3em;
-        margin-inline: 1em;
-        width: 100%;
-        border-radius: 25px;
-        padding: 1.5em 2.5em;
-        gap: 3.5em;
+        margin-inline: 10px;
+        width: fit-content;
+        border-radius: 12px;
+        gap: 50px;
+        padding: 20px 30px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         text-align: center;
-        transition: all 0.2s ease;
+
+        @media (max-width:600px) {
+            width: 100%;
+            overflow-x: scroll !important;
+            -webkit-overflow-scrolling: touch;
+            gap: 30px;
+            padding: 12px 20px;
+            margin-inline: 0;
+            margin-block: 2em;
+            display: flex;
+            justify-content: start;
+            scroll-snap-type: x mandatory;
+            flex-wrap: nowrap;
+        }
 
         & .radio-card {
             transition: transform 0.2s ease;
@@ -39,6 +59,10 @@
                 & img {
                     opacity: 1;
                     filter: brightness(1.05) drop-shadow(2px 2px 1px #000000);
+
+                    @media (max-width:600px) {
+                        width: 90px;
+                    }
                 }
             }
         }
@@ -49,11 +73,40 @@
             object-fit: contain;
             border-radius: 12px;
             transition: all 0.3s ease;
-            opacity: 0.35;
-            filter: drop-shadow(2px 2px 1px #000000);
+            opacity: 0.15;
+            filter: drop-shadow(2px 2px 1px #000000) grayscale(0.8);
+
+            @media (max-width:600px) {
+                width: 80px;
+            }
 
             &:hover {
                 opacity: 0.7;
+                filter: drop-shadow(2px 2px 1px #000000) grayscale(0)
+            }
+        }
+    }
+
+    & #radioDots {
+        @media (max-width:600px) {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+
+            & span {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: color-mix(in srgb, var(--accent-color) 10%, rgba(255, 255, 255, 0.15));
+                cursor: pointer;
+                transition: width 0.25s ease, background 0.25s ease, border-radius 0.25s ease;
+                flex-shrink: 0;
+
+                &.active {
+                    width: 24px;
+                    border-radius: 3px;
+                    background: color-mix(in srgb, var(--accent-color) 50%, #fff);
+                }
             }
         }
     }
@@ -83,13 +136,37 @@
         transform 0.5s ease,
         opacity 0.3s linear;
 
+    @media (max-width:600px) {
+        display: flex !important;
+        flex-direction: column;
+        padding-bottom: 7em;
+        border-radius: 10px;
+        margin: 5px 5px 10px 5px;
+        padding-top: 2em;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    @media (min-width: 661px) and (max-width: 900px) {
+        margin: 5em 0 1em 0;
+    }
+
+    @media (min-width: 900px) and (max-width: 1600px) {
+        margin: 6em 0 1em 0;
+    }
+
     & #playlistSelector {
         display: flex;
-        gap: 1em 0.3em;
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
         gap: 4px 32px;
+
+        @media (max-width:600px) {
+            align-items: start;
+            flex-direction: column;
+            gap: 4px 0;
+        }
 
         & button {
             border: none;
@@ -104,6 +181,10 @@
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
+
+        @media (max-width:600px) {
+            display: flex;
+        }
     }
 
     & img {
@@ -112,12 +193,22 @@
         border-radius: 15px;
         grid-row: 1 / 4;
         grid-column: 1 / 2;
+        filter: drop-shadow(1px 1px 4px #000);
+
+        @media (max-width:600px) {
+            width: 120px;
+            height: auto;
+        }
     }
 
     & h3 {
         grid-row: 1 / 2;
         grid-column: 2 / 4;
-        font-size: 1.8em;
+        font-size: clamp(12px, 5vw, 26px);
+
+        @media (max-width:600px) {
+            text-align: start;
+        }
     }
 
     & .tracklist-title {
@@ -128,13 +219,21 @@
 
     & #radioDJ,
     & #radioGenre {
-        display: inline;
-        gap: 5px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
         grid-column: 2 / 3;
+        gap: 2px;
+
+        @media (max-width:600px) {
+            align-items: center;
+        }
 
         & span {
             color: #f4eeee;
             font-weight: 100;
+            text-align: center;
         }
 
         & p {
@@ -142,47 +241,38 @@
             color: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
             font-weight: 600;
         }
+
+        & .dj-tags,
+        & .genre-tags {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+
+            & p {
+                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
+                font-size: 0.95em;
+                color: var(--block-color);
+                padding: 5px 14px;
+                border-radius: 25px;
+                width: max-content;
+            }
+        }
     }
 
     & #radioDJ {
         grid-row: 2 / 3;
 
-        & .dj-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 5px;
-
-            & p {
-                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
-                font-size: 0.95em;
-                color: var(--block-color);
-                padding: 5px 14px;
-                border-radius: 25px;
-                width: max-content;
-            }
+        @media (max-width:600px) {
+            margin-bottom: 10px;
         }
+
     }
 
     & #radioGenre {
         grid-row: 3 / 4;
         margin-bottom: 1em;
-
-        & .genre-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 5px;
-
-            & p {
-                background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
-                font-size: 0.95em;
-                color: var(--block-color);
-                padding: 5px 14px;
-                border-radius: 25px;
-                width: max-content;
-            }
-        }
     }
 
     & ol {
@@ -196,6 +286,12 @@
         margin: 0 5vw;
         list-style: none;
 
+        @media (max-width:600px) {
+            align-items: start;
+            text-align: start;
+            gap: 0.35em;
+            width: 85%;
+        }
 
         & li {
             display: flex;
@@ -211,6 +307,13 @@
             font-size: 1em;
             margin-left: 0;
 
+            @media (max-width:600px) {
+                user-select: none;
+                font-size: 0.95em;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
             &:hover {
                 opacity: 0.72;
                 background: color-mix(in srgb, var(--block-border) 8%, transparent);
@@ -225,6 +328,11 @@
                 font-size: 1.08em;
                 background: color-mix(in srgb, var(--block-border) 12%, transparent);
                 border-color: color-mix(in srgb, var(--block-border) 25%, transparent);
+
+                @media (max-width:600px) {
+                    font-weight: bold;
+                    font-size: 1em;
+                }
 
                 & .tl-play {
                     display: block;
@@ -307,8 +415,23 @@
     width: 100%;
     z-index: 10000;
 
+    @media (max-width:600px) {
+        padding-bottom: 1em;
+        gap: 0;
+        justify-content: center;
+    }
+
     &.active {
         display: grid;
+
+        @media (max-width:600px) {
+            display: flex
+        }
+
+        @media (min-width: 661px) and (max-width: 900px) {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     & .footer-left {
@@ -392,6 +515,10 @@
             justify-content: center;
             user-select: none;
 
+            @media (max-width:600px) {
+                width: 100%;
+            }
+
             & .footer-pause,
             & .footer-play {
                 color: #d0f2f8;
@@ -431,6 +558,10 @@
             font-family: "GTAArtDeco";
             font-weight: 600;
 
+            @media (max-width:600px) {
+                max-width: 400px;
+            }
+
             & #bar {
                 flex: 1;
                 height: 7px;
@@ -439,6 +570,10 @@
                 border-radius: 12px;
                 overflow: visible;
                 transition: background 0.3s ease-out;
+
+                @media (max-width:600px) {
+                    height: 10px;
+                }
 
                 &:hover {
                     background:
@@ -520,197 +655,41 @@
                 height: 6px;
                 border-radius: 21px;
                 background: rgba(192, 192, 192, 0.2);
-                outline: none;
-            }
 
-            input[type="range"]::-webkit-slider-runnable-track {
-                height: 9px;
-                border-radius: 999px;
-            }
-
-            input[type="range"]::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                width: 13px;
-                height: 13px;
-                background: #ffffff;
-                border-radius: 50%;
-                margin-top: -1.5px;
-            }
-
-            input[type="range"]::-moz-range-thumb {
-                width: 13px;
-                height: 13px;
-                background: #ffffff;
-                border-radius: 50%;
-            }
-
-            input[type="range"]::-moz-range-track {
-                height: 7px;
-                border-radius: 12px;
-                background: rgba(192, 192, 192, 0.2);
-            }
-        }
-    }
-}
-
-@media (max-width:600px) {
-    .radio-container {
-        overflow: hidden !important;
-
-        & .radio-grid {
-            overflow-x: scroll !important;
-            overflow-y: visible !important;
-            -webkit-overflow-scrolling: touch;
-            gap: 1.8em;
-            border-radius: 40px;
-            padding: 0.5em 2em;
-            margin-inline: 0;
-            margin-block: 2em;
-            display: flex;
-            justify-content: start;
-            scroll-snap-type: x mandatory;
-            flex-wrap: nowrap;
-
-            & .radio-card {
-
-
-                &.active {
-                    & img {
-                        width: 90px;
-                    }
-                }
-            }
-
-            & img {
-                width: 80px;
-            }
-        }
-    }
-
-    #radioInfo {
-        display: flex !important;
-        flex-direction: column;
-        padding-bottom: 7em;
-        border-radius: 10px;
-        margin: 5px 5px 10px 5px;
-        padding-top: 2em;
-        text-align: center;
-        overflow: hidden;
-
-        & .dj-tags,
-        & .genre-tags {
-            justify-content: center !important;
-        }
-
-        & #playlistSelector {
-            justify-content: center;
-        }
-
-        &.active {
-            transform: translateY(0);
-            opacity: 1;
-            pointer-events: auto;
-            display: flex;
-        }
-
-        & img {
-            width: 120px;
-            height: auto;
-        }
-
-        & h3 {
-            font-size: 1.5em;
-        }
-
-        & ol {
-            display: flex;
-            align-items: start;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: left;
-            gap: 0.35em;
-            width: 85%;
-
-            & li {
-                user-select: none;
-                font-size: 0.95em;
-                align-items: center;
-                width: 100%;
-                flex-wrap: wrap;
-
-                &.active {
-                    opacity: 1;
-                    font-weight: bold;
-                    font-size: 1em;
+                &::-webkit-slider-runnable-track {
+                    height: 9px;
+                    border-radius: 999px;
                 }
 
-                &:hover {
-                    opacity: 0.8;
-                    cursor: pointer;
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    width: 13px;
+                    height: 13px;
+                    background: #ffffff;
+                    border-radius: 50%;
+                    margin-top: -1.5px;
+                }
+
+                &::-moz-range-thumb {
+                    width: 13px;
+                    height: 13px;
+                    background: #ffffff;
+                    border-radius: 50%;
+                }
+
+                &::-moz-range-track {
+                    height: 7px;
+                    border-radius: 12px;
+                    background: rgba(192, 192, 192, 0.2);
                 }
             }
         }
     }
 
-    .radio-footer {
-        padding-bottom: 1em;
-        display: none;
-        gap: 0;
-        justify-content: center;
-
-        &.active {
-            display: flex;
-        }
-
-        & .footer-left {
+    & .footer-left,
+    & .footer-right {
+        @media (max-width: 900px) {
             display: none;
         }
-
-        & .footer-center {
-            & .footer-controls {
-                width: 100%;
-            }
-
-            & .footer-timer {
-                max-width: 400px;
-
-                & #bar {
-                    height: 10px;
-                }
-            }
-        }
-
-        & .footer-right {
-            display: none;
-        }
-    }
-}
-
-@media (min-width: 661px) and (max-width: 900px) {
-    #radioInfo {
-        margin: 5em 0 1em 0;
-    }
-
-    .radio-footer {
-        &.active {
-            display: flex;
-            justify-content: center;
-        }
-
-        & .footer-left,
-        & .footer-right {
-            display: none;
-        }
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1600px) {
-    #radioInfo {
-        margin: 6em 0 1em 0;
-    }
-
-    #artistName,
-    #songTitle {
-        max-width: 150px !important;
     }
 }

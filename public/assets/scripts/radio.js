@@ -165,11 +165,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const djs = Array.isArray(dj) ? dj : [dj];
 
         return `
-            <span data-i18n="radio.info.host">Conducido por:</span>
-            <div class="dj-tags">
-                ${djs.map((d) => `<p>${d}</p>`).join("")}
-            </div>
-        `;
+        <span data-i18n="radio.info.host">${getTranslation("radio.info.host") || "Conducido por:"}</span>
+        <div class="dj-tags">
+            ${djs.map((d) => `<p>${d}</p>`).join("")}
+        </div>
+    `;
     }
 
     function getTranslation(key) {
@@ -515,6 +515,101 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    function isScrollMode() {
+        return window.innerWidth <= 600;
+    }
+
+    function buildRadioDots() {
+
+        if (window.location.pathname.includes("/V/")) return;
+
+        const existing = document.getElementById("radioDots");
+        if (existing) existing.remove();
+
+        if (!isScrollMode()) return;
+
+        const cards = [...elements.radioGrid.querySelectorAll(".radio-card")];
+        if (cards.length === 0) return;
+
+        const dotsWrap = document.createElement("div");
+        dotsWrap.id = "radioDots";
+
+        const perPage = getCardsPerPage();
+        const pageCount = Math.ceil(cards.length / perPage);
+        const maxScroll =
+            elements.radioGrid.scrollWidth - elements.radioGrid.clientWidth;
+
+        for (let i = 0; i < pageCount; i++) {
+            const dot = document.createElement("span");
+            dot.dataset.page = i;
+            if (i === 0) dot.classList.add("active");
+
+            dot.addEventListener("click", () => {
+                const isLast = i === pageCount - 1;
+                const target = isLast
+                    ? maxScroll
+                    : cards[i * perPage].offsetLeft;
+                elements.radioGrid.scrollTo({
+                    left: target,
+                    behavior: "smooth",
+                });
+            });
+
+            dotsWrap.appendChild(dot);
+        }
+
+        elements.radioGrid.insertAdjacentElement("afterend", dotsWrap);
+        elements.radioGrid.addEventListener("scroll", updateRadioDots);
+    }
+
+    function updateRadioDots() {
+        if (!isScrollMode()) return;
+
+        const dotsWrap = document.getElementById("radioDots");
+        if (!dotsWrap) return;
+
+        const cards = [...elements.radioGrid.querySelectorAll(".radio-card")];
+        if (cards.length === 0) return;
+
+        const scrollLeft = elements.radioGrid.scrollLeft;
+        const maxScroll =
+            elements.radioGrid.scrollWidth - elements.radioGrid.clientWidth;
+        const perPage = getCardsPerPage();
+        const pageCount = Math.ceil(cards.length / perPage);
+
+        const anchors = [];
+        for (let i = 0; i < pageCount; i++) {
+            const isLast = i === pageCount - 1;
+            anchors.push(isLast ? maxScroll : cards[i * perPage].offsetLeft);
+        }
+
+        let activePage = 0;
+        let minDist = Infinity;
+        anchors.forEach((anchor, i) => {
+            const dist = Math.abs(scrollLeft - anchor);
+            if (dist < minDist) {
+                minDist = dist;
+                activePage = i;
+            }
+        });
+
+        dotsWrap.querySelectorAll("span").forEach((d, i) => {
+            d.classList.toggle("active", i === activePage);
+        });
+    }
+
+    function getCardsPerPage() {
+        if (!isScrollMode()) return 999;
+
+        const cards = [...elements.radioGrid.querySelectorAll(".radio-card")];
+        if (cards.length < 2) return 1;
+
+        const cardW = cards[1].offsetLeft - cards[0].offsetLeft;
+        if (cardW <= 0) return 1;
+
+        return Math.max(1, Math.floor(elements.radioGrid.clientWidth / cardW));
+    }
+
     function renderRadioGrid() {
         elements.radioGrid.innerHTML = "";
 
@@ -583,6 +678,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         makeDial();
+        buildRadioDots();
     }
 
     function updateRadioDirect(radioKey) {
@@ -950,15 +1046,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("resize", () => {
         clearTimeout(resizeTimeout);
-
         resizeTimeout = setTimeout(() => {
-            const songTitleEl = elements.songTitle;
-            const artistNameEl = elements.artistName;
-
-            if (songTitleEl) checkMarquee(songTitleEl);
-            if (artistNameEl) checkMarquee(artistNameEl);
-
+            checkMarquee(elements.songTitle);
+            checkMarquee(elements.artistName);
             makeDial();
+            buildRadioDots();
         }, 150);
     });
 

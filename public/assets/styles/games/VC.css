@@ -159,12 +159,17 @@ details.mod summary img {
 
 /* #region RADIO */
 
+
 #radioGrid {
     transform: skew(-20deg);
     border-radius: 0;
     gap: 2em;
-    width: fit-content;
+    width: max-content;
     margin-inline: auto;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
 
     & .radio-card {
         transform: skew(20deg);
