@@ -374,6 +374,7 @@
         }
     },
     "checklist": {
+        "progress": "PROGRESS",
         "III": {
             "heading": "100% Checklist for Grand Theft Auto III"
         },

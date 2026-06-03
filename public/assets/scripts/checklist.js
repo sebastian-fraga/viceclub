@@ -2,6 +2,13 @@ function getStorageKey(tabId = "default") {
     return `viceclub_checklist_${location.pathname}_${tabId}`;
 }
 
+function getText(value) {
+    const lang = (localStorage.getItem("lang") || "ES").toLowerCase();
+    if (typeof value === "object" && value !== null)
+        return value[lang] ?? value["es"];
+    return value;
+}
+
 function loadChecked(tabId) {
     try {
         return JSON.parse(localStorage.getItem(getStorageKey(tabId))) || {};
@@ -9,7 +16,6 @@ function loadChecked(tabId) {
         return {};
     }
 }
-
 
 function saveChecked(state, tabId) {
     localStorage.setItem(getStorageKey(tabId), JSON.stringify(state));
@@ -41,7 +47,9 @@ function createChecklistItem(item, game) {
     input.className = "checklist-cb";
     input.setAttribute(
         "aria-label",
-        item.texts ? item.texts.map((e) => e.text).join(" / ") : item.text,
+        item.texts
+            ? item.texts.map((e) => getText(e.text)).join(" / ")
+            : getText(item.text),
     );
 
     const spanCustom = document.createElement("span");
@@ -67,7 +75,8 @@ function createChecklistItem(item, game) {
                 line.appendChild(icon);
             }
 
-            line.appendChild(document.createTextNode(entry.text));
+            line.appendChild(document.createTextNode(getText(entry.text)));
+
             info.appendChild(line);
         });
     } else {
@@ -83,7 +92,8 @@ function createChecklistItem(item, game) {
             title.appendChild(icon);
         }
 
-        title.appendChild(document.createTextNode(item.text));
+        title.appendChild(document.createTextNode(getText(item.text)));
+
         info.appendChild(title);
     }
 
@@ -113,7 +123,7 @@ function renderPanel(panel, game, sections, tabId) {
             h3.appendChild(img);
         }
 
-        h3.appendChild(document.createTextNode(section.title));
+        h3.appendChild(document.createTextNode(getText(section.title)));
         article.appendChild(h3);
 
         const ul = document.createElement("ul");
@@ -202,7 +212,7 @@ function buildProgressBar(panel) {
     wrapper.className = "progress-wrapper";
     wrapper.innerHTML = `
         <div class="progress-label">
-            <span class="progress-text">Progreso</span>
+            <span class="progress-text" data-i18n="checklist.progress">Progreso</span>
             <span class="progress-count">0 / ${total}</span>
         </div>
         <div class="progress-bar-bg">
@@ -450,7 +460,7 @@ async function init() {
     const gameConfig = {
         III: { rows: 9, hasTabs: false },
         VC: { rows: 21, hasTabs: false },
-        SA: { rows: 19, hasTabs: false }, 
+        SA: { rows: 19, hasTabs: false },
         LCS: { rows: 10, hasTabs: false },
         VCS: { rows: 15, hasTabs: false },
         IV: { rows: 10, hasTabs: true, tabCount: 3 },
@@ -505,6 +515,9 @@ async function init() {
         );
         const data = await response.json();
 
+        container._data = data;
+        container._game = game;
+
         container.innerHTML = "";
 
         if (data.tabs && data.tabs.length > 1) {
@@ -516,7 +529,28 @@ async function init() {
             renderPanel(container, game, sections, tabId);
             buildProgressBar(container);
             updateProgress(container);
+            applyTranslations(window.translations);
         }
+
+        window.onLangChange = function () {
+            const d = container._data;
+            const g = container._game;
+            if (!d || !g) return;
+
+            container.innerHTML = "";
+
+            if (d.tabs && d.tabs.length > 1) {
+                renderTabLayout(container, g, d.tabs);
+            } else {
+                const sections = d.sections || d.tabs?.[0].sections;
+                const tabId = d.tabs?.[0].id || "default";
+                renderPanel(container, g, sections, tabId);
+                buildProgressBar(container);
+                updateProgress(container);
+            }
+
+            applyTranslations(window.translations);
+        };
     } catch (error) {
         console.error("Error cargando la checklist:", error);
     }

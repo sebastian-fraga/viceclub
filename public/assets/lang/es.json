@@ -350,6 +350,7 @@
         }
     },
     "checklist": {
+        "progress": "PROGRESO",
         "III": {
             "heading": "Lista del 100% para Grand Theft Auto III"
         },
