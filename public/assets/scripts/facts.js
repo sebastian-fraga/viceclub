@@ -28,15 +28,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             const text =
                 typeof fact.description === "object"
                     ? (fact.description[lang.toLowerCase()] ??
-                        fact.description["es"])
+                      fact.description["es"])
                     : fact.description;
 
             document.querySelector(".fotd-description p").innerHTML = text;
         }
 
-        renderFact(localStorage.getItem("lang") || "ES");
+        const previousOnLangChange = window.onLangChange;
 
         window.onLangChange = () => {
+            if (typeof previousOnLangChange === "function") {
+                previousOnLangChange();
+            }
             renderFact(localStorage.getItem("lang") || "ES");
         };
 

@@ -11,60 +11,12 @@ function getLang() {
 
 function t(value) {
     if (typeof value === "string") return value;
-
     const lang = getLang();
-
     return value?.[lang] || value?.es || "";
-}
-
-fetch(
-    "https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" +
-        Date.now(),
-)
-    .then((res) => res.json())
-    .then((data) => {
-        news = data;
-        renderNews();
-        const isLocalhost = location.hostname === "localhost";
-        if (isLocalhost) {
-            scrollToNews();
-        } else {
-            window.addEventListener(
-                "newsReady",
-                () => {
-                    setTimeout(scrollToNews, 300);
-                },
-                { once: true },
-            );
-        }
-    });
-
-function scrollToNews() {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get("news");
-    if (!slug) return;
-
-    const index = news.findIndex((n) => n.slug === slug);
-    if (index === -1) return;
-
-    if (index >= visibleCount) {
-        visibleCount = index + 1;
-        renderNews();
-    }
-
-    const articles = document.querySelectorAll(".news-article");
-    const target = articles[index];
-    if (!target) return;
-
-    const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
-    const top =
-        target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
-    window.scrollTo({ top, behavior: "smooth" });
 }
 
 function getArticleUrl(slug) {
     return `https://viceclub.app?news=${slug}`;
-    // return `http://localhost:4321/?news=${slug}`;
 }
 
 function shareOnX(title, slug) {
@@ -80,33 +32,23 @@ function getTranslation(path) {
 
 function copyLink(slug, title, btn) {
     const text = `${title}\n${getArticleUrl(slug)}`;
-
     navigator.clipboard.writeText(text).then(() => {
         const icon = btn.querySelector("span.material-symbols-rounded");
         const label = btn.querySelector(".button-text");
-
         icon.textContent = "check";
-
-        if (label) {
+        if (label)
             label.textContent = getTranslation("index.news.share.copied");
-        }
-
         setTimeout(() => {
             icon.textContent = "content_copy";
-
-            if (label) {
+            if (label)
                 label.textContent = getTranslation("index.news.share.copy");
-            }
         }, 900);
     });
 }
 
 function shareNative(title, slug) {
     if (navigator.share) {
-        navigator.share({
-            title: title,
-            url: getArticleUrl(slug),
-        });
+        navigator.share({ title, url: getArticleUrl(slug) });
     }
 }
 
@@ -173,6 +115,7 @@ function renderNews(previousCount = step) {
                 </div>
             </div>
         `;
+
         container.appendChild(article);
 
         article
@@ -180,13 +123,11 @@ function renderNews(previousCount = step) {
             .addEventListener("click", () =>
                 shareOnX(t(item.title), item.slug),
             );
-
         article
             .querySelector(".btn-copy")
             .addEventListener("click", (e) =>
                 copyLink(item.slug, t(item.title), e.currentTarget),
             );
-
         article
             .querySelector(".btn-share")
             .addEventListener("click", () =>
@@ -201,10 +142,29 @@ function renderNews(previousCount = step) {
     });
 
     btn.style.display = visibleCount < news.length ? "flex" : "none";
+}
 
-    if (window.translations) {
-        applyTranslations(window.translations);
+function scrollToNews() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("news");
+    if (!slug) return;
+
+    const index = news.findIndex((n) => n.slug === slug);
+    if (index === -1) return;
+
+    if (index >= visibleCount) {
+        visibleCount = index + 1;
+        renderNews();
     }
+
+    const articles = document.querySelectorAll(".news-article");
+    const target = articles[index];
+    if (!target) return;
+
+    const headerHeight = document.querySelector("header")?.offsetHeight ?? 0;
+    const top =
+        target.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+    window.scrollTo({ top, behavior: "smooth" });
 }
 
 btn.addEventListener("click", () => {
@@ -216,9 +176,38 @@ btn.addEventListener("click", () => {
 const previousOnLangChange = window.onLangChange;
 
 window.onLangChange = function () {
+
     if (typeof previousOnLangChange === "function") {
         previousOnLangChange();
     }
 
-    renderNews();
+    if (news.length > 0) {
+        renderNews();
+        applyTranslations(window.translations);
+    }
 };
+
+fetch(
+    "https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" +
+        Date.now(),
+)
+    .then((res) => res.json())
+    .then((data) => {
+        news = data;
+        renderNews();
+        if (window.translations) {
+            applyTranslations(window.translations);
+        }
+        const isLocalhost = location.hostname === "localhost";
+        if (isLocalhost) {
+            scrollToNews();
+        } else {
+            window.addEventListener(
+                "newsReady",
+                () => {
+                    setTimeout(scrollToNews, 300);
+                },
+                { once: true },
+            );
+        }
+    });
