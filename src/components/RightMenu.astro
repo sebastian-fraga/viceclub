@@ -1,5 +1,7 @@
 ---
-import "../styles/components/rightmenu.css"
+import "../styles/components/rightmenu.css";
+import { Image } from "astro:assets";
+
 interface Props {
     isIndex?: boolean;
     game?: string;
@@ -7,6 +9,19 @@ interface Props {
 }
 
 const { isIndex = false, game = "", section = "" } = Astro.props;
+
+const logoImports = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/images/icons/games/logos/*.webp",
+);
+
+const logos: Record<string, ImageMetadata> = {};
+for (const [path, importer] of Object.entries(logoImports)) {
+    const id = path.match(/\/(\w+)\.webp$/)?.[1];
+    if (id) {
+        const mod = await importer();
+        logos[id] = mod.default;
+    }
+}
 
 const gamesList = [
     { id: "III", name: "GTA 3" },
@@ -105,20 +120,16 @@ const activeSections = SECTIONS_METADATA.filter((sec) =>
         <nav id="rightContent">
             {gamesList.map((g) => (
                 <a href={`/${g.id}/inicio`}>
-                    <img
-                        src={`/assets/images/icons/games/logos/${g.id}.webp`}
-                        alt={`Logo de ${g.name}`}
-                        loading="lazy"
-                    />
-                    <span>
-                        {g.id === "VI"
-                            ? "GTA VI"
-                            : g.id === "IV"
-                              ? "GTA IV"
-                              : g.id === "III"
-                                ? "GTA III"
-                                : g.name}
-                    </span>
+                    {logos[g.id] && (
+                        <Image
+                            src={logos[g.id]}
+                            alt={`Logo de ${g.name}`}
+                            loading="lazy"
+                            loading="eager"
+                            fetchpriority="low"
+                        />
+                    )}
+                    <span>{g.name}</span>
                 </a>
             ))}
             <div class="footer-settings">
@@ -144,12 +155,16 @@ const activeSections = SECTIONS_METADATA.filter((sec) =>
                             href={isActive ? "#" : getHrefForGame(g.id)}
                             class={isActive ? "active" : undefined}
                         >
-                            <img
-                                src={`/assets/images/icons/games/logos/${g.id}.webp`}
-                                alt={`Logo de ${g.name}`}
-                                loading="lazy"
-                                class={isActive ? "active" : undefined}
-                            />
+                            {logos[g.id] && (
+                                <Image
+                                    src={logos[g.id]}
+                                    alt={`Logo de ${g.name}`}
+                                    loading="lazy"
+                                    class={isActive ? "active" : undefined}
+                                    loading="eager"
+                                    fetchpriority="low"
+                                />
+                            )}
                         </a>
                     );
                 })}

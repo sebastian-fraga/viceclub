@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const text =
                 typeof fact.description === "object"
                     ? (fact.description[lang.toLowerCase()] ??
-                      fact.description["es"])
+                        fact.description["es"])
                     : fact.description;
 
             document.querySelector(".fotd-description p").innerHTML = text;
@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
 
         const fotdImg = document.querySelector(".fotd-image img");
-        fotdImg.src = fact.image + "?t=" + Date.now();
+        fotdImg.src = fact.image;
         fotdImg.style.objectPosition = fact.imagePosition ?? "center";
+        fotdImg.setAttribute("loading", "eager");
 
         const logoImg = document.querySelector(".fotd-header img");
         if (fact.game) {

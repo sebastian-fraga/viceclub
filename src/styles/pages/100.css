@@ -5,10 +5,19 @@
     gap: 12px;
     margin: 16px 0 24px;
 
+    @media (max-width:660px) {
+        margin: 16px 0 32px;
+        width: 100%;
+    }
+
     & .progress-label {
         display: flex;
         flex-direction: column;
         min-width: 80px;
+
+        @media (max-width:660px) {
+            text-align: start;
+        }
 
         & .progress-text {
             font-size: 0.75rem;
@@ -21,6 +30,7 @@
             font-size: 0.85rem;
             font-weight: 600;
             opacity: 0.85;
+
         }
     }
 
@@ -56,6 +66,11 @@
     flex-direction: column;
     gap: 1em;
     padding: 0.5em 1.5em 2em 1.5em;
+
+    @media (max-width:660px) {
+        width: 100%;
+        gap: 0.9em;
+    }
 
     & article {
         margin-bottom: 5px;
@@ -301,21 +316,5 @@
         margin-right: 8px;
         vertical-align: middle;
         object-fit: contain;
-    }
-}
-
-@media (max-width:660px) {
-    .checklist-percentage {
-        margin: 1em 0 2em 0;
-        width: 100%;
-    }
-
-    .checklist-container {
-        width: 100%;
-        gap: 0.9em;
-    }
-
-    .progress-count {
-        text-align: start;
     }
 }

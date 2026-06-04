@@ -8,6 +8,16 @@
             var(--accent-color) 90%);
     background-color: color-mix(in srgb, var(--title-color), transparent 60%);
 
+    @media (max-width:600px) {
+
+        margin: 0 auto;
+        display: flex;
+        border-radius: 25px;
+        justify-content: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
     & table {
         max-width: 500px;
         width: 100%;
@@ -38,6 +48,12 @@
         & td {
             font-size: 17px;
             padding: 1em;
+
+            @media (max-width:600px) {
+                padding: 0.8em;
+                text-align: left;
+                font-size: 1em;
+            }
 
             & .platform-entry {
                 display: flex;
@@ -73,45 +89,22 @@
             font-family: var(--font-title);
             padding-inline: 1.3em;
 
+            @media (max-width:600px) {
+                font-size: 1em
+            }
+
             & img {
                 width: 80%;
                 height: auto;
                 display: block;
             }
         }
-        
+
         & abbr {
             font-size: 12px;
             color: color-mix(in srgb, var(--title-color) 40%, var(--block-text));
             text-shadow: 1px 1px 1px #000;
             font-family: var(--font-title);
-        }
-    }
-}
-
-@media (max-width:600px) {
-    .ficha-tecnica {
-        margin: 0 auto;
-        display: flex;
-        border-radius: 25px;
-        justify-content: center;
-        width: 100%;
-        max-width: 400px;
-
-        & table {
-            & th {
-                font-size: 1em;
-            }
-
-            & td {
-                padding: 0.8em;
-                text-align: left;
-                font-size: 1em;
-
-                & .table-platforms {
-                    font-size: 1.2em;
-                }
-            }
         }
     }
 }

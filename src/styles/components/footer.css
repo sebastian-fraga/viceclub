@@ -7,6 +7,10 @@ body.index {
         padding-bottom: 1em;
         border: none;
 
+        @media (max-width: 660px) {
+            border-radius: 20px;
+        }
+
         & .footer-left {
             & .footer-logo {
                 filter: drop-shadow(2px -2px 20px #0000008e);
@@ -66,6 +70,32 @@ footer {
         inset 0 0 15px 5px color-mix(in srgb, var(--block-border) 40%, transparent),
         0 4px 24px 0 color-mix(in srgb, var(--block-border) 70%, transparent),
         0 1px 0 0 var(--block-border);
+        
+    @media (max-width: 660px) {
+        padding-top: 1.5em;
+        padding-inline: 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 85px 5px 10px 5px;
+        border-radius: 6px;
+        border-width: 5px;
+        gap: 36px;
+    }
+
+    @media (min-width: 661px) and (max-width: 900px) {
+        padding: 0;
+        padding-top: 1.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin: 5em 0 1em 0;
+    }
+
+    @media (min-width: 900px) and (max-width: 1600px) {
+        margin: 6em 0 1em 0;
+    }
 
 
     &::before {
@@ -77,6 +107,10 @@ footer {
         opacity: 0.1;
         inset: 0;
         pointer-events: none;
+
+        @media (min-width: 661px) and (max-width: 900px) {
+            background-position: 50% 50%;
+        }
 
         @media (max-width:1600px) {
             background-position: 100% 100%;
@@ -92,10 +126,19 @@ footer {
         padding-left: 4em;
         grid-row: 1;
 
+        @media (max-width: 900px) {
+            padding: 0;
+            align-self: center;
+        }
+
         & .footer-logo {
             filter: drop-shadow(2px -2px 20px color-mix(in srgb, var(--accent-color) 40%, transparent));
             transition: filter 0.2s ease;
             width: max-content;
+
+            @media (max-width: 900px) {
+                margin-inline: auto;
+            }
 
             &:hover {
                 filter: drop-shadow(0 0 20px color-mix(in srgb, var(--accent-color) 90%, transparent));
@@ -119,6 +162,10 @@ footer {
                     background-color: var(--main-word-color);
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
+
+                    @media (max-width: 900px) {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -147,6 +194,10 @@ footer {
                 justify-content: center;
                 transition: background 0.2s, border-color 0.2s;
                 color: #fff;
+
+                @media (max-width: 900px) {
+                    width: 150px;
+                }
 
                 &:hover {
                     background: rgba(255, 255, 255, 0.18);
@@ -187,10 +238,19 @@ footer {
         padding-top: 2em;
         grid-row: 1;
 
+        @media (max-width: 900px) {
+            padding: 0;
+        }
+
         & ul {
             display: flex;
             flex-direction: column;
             gap: 0.3em;
+
+            @media (max-width: 900px) {
+                margin-block: 1em;
+                gap: 15px;
+            }
 
             & li {
 
@@ -230,6 +290,14 @@ footer {
         padding-top: 30px;
         grid-row: 1;
 
+        @media (max-width: 900px) {
+            padding: 0;
+        }
+
+        @media (min-width: 661px) and (max-width: 900px) {
+            align-items: center;
+        }
+
         & .footer-text {
             display: flex;
             flex-direction: column;
@@ -241,6 +309,14 @@ footer {
                 line-height: 1.75;
                 font-size: 0.9em;
                 opacity: 0.75;
+
+                @media (max-width: 660px) {
+                    text-align: left;
+                }
+
+                @media (min-width: 661px) and (max-width: 900px) {
+                    text-align: center;
+                }
             }
         }
     }
@@ -275,6 +351,15 @@ footer {
         z-index: 50;
         padding-block: 1em 0.8em;
 
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-self: center;
+            gap: 12px;
+            padding: 0;
+            margin-top: 1em;
+            padding-bottom: 2em;
+        }
+
         & .footer-copyright {
             font-size: 0.9em;
             opacity: 0.8;
@@ -297,6 +382,10 @@ footer {
                 gap: 12px;
                 transition: background 0.2s, border-color 0.2s;
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+                @media (max-width: 660px) {
+                    width: 100%;
+                }
 
                 &:hover {
                     background: rgba(255, 255, 255, 0.18);
@@ -325,142 +414,5 @@ footer {
                 display: none;
             }
         }
-    }
-}
-
-@media (max-width: 660px) {
-    body.index {
-        & footer {
-            border-radius: 20px;
-        }
-    }
-
-    footer {
-        padding-top: 1.5em;
-        padding-inline: 3em;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        margin: 85px 5px 10px 5px;
-        border-radius: 6px;
-        border-width: 5px;
-        gap: 36px;
-
-        & .footer-left {
-            padding: 0;
-            align-self: center;
-
-            & .footer-logo {
-                margin-inline: auto;
-            }
-
-            & p {
-                text-align: center;
-            }
-
-            & .footer-icons {
-                & a {
-                    width: 150px;
-                }
-            }
-        }
-
-        & .footer-center {
-            padding: 0;
-
-
-
-            & ul {
-                margin-block: 1em;
-                gap: 15px;
-            }
-        }
-
-        & .footer-right {
-            padding: 0;
-
-            & span {
-                text-align: left;
-            }
-        }
-
-        & .footer-bottom {
-            flex-direction: column;
-            align-self: center;
-            gap: 12px;
-            padding: 0;
-            margin-top: 1em;
-            padding-bottom: 2em;
-
-            & .footer-button {
-                & a {
-                    width: 100%;
-                }
-            }
-        }
-
-    }
-}
-
-@media (min-width: 661px) and (max-width: 900px) {
-    footer {
-        padding: 0;
-        padding-top: 1.5em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        margin: 5em 0 1em 0;
-
-        &::before {
-            background-position: 50% 50%;
-        }
-
-        & .footer-left {
-            padding: 0;
-            align-items: center;
-
-            & .footer-logo {
-                margin-inline: auto;
-            }
-
-            & p {
-                text-align: center;
-            }
-
-            & .footer-icons a {
-                width: 150px;
-            }
-        }
-
-        & .footer-center {
-            padding: 0;
-
-            & ul {
-                margin-block: 1em;
-                gap: 15px;
-            }
-        }
-
-        & .footer-right {
-            padding: 0;
-            align-items: center;
-
-            & span {
-                text-align: center;
-            }
-        }
-
-        & .footer-bottom {
-            flex-direction: column;
-            gap: 12px;
-        }
-
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1600px) {
-    footer {
-        margin: 6em 0 1em 0;
     }
 }

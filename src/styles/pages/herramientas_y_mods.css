@@ -7,6 +7,13 @@
     line-height: 1.8;
     color: color-mix(in srgb, var(--block-text) 85%, transparent);
 
+    @media (max-width: 660px) {
+        font-size: 1.25rem !important;
+        max-width: 30ch !important;
+        margin-inline: 10px 30px !important;
+        margin-block: 40px 70px !important;
+    }
+
     & b {
         color: var(--accent-color);
     }
@@ -20,6 +27,10 @@
     align-items: center;
     gap: 1.5rem;
     padding-bottom: 1rem;
+
+    @media (max-width: 660px) {
+        gap: 3rem;
+    }
 
     & .mod-group {
         width: 90%;
@@ -35,6 +46,15 @@
             margin-block: 0;
             padding: 1rem 1.5rem;
             border-bottom: 1px solid color-mix(in srgb, var(--block-border) 30%, transparent);
+
+            @media (max-width: 660px) {
+
+                &::before,
+                &::after {
+                    width: 20vw;
+                }
+
+            }
 
             & h3 {
                 font-size: 1.5rem;
@@ -56,6 +76,10 @@
         contain: layout paint;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
+        @media (max-width: 660px) {
+            max-width: 100%;
+        }
+
         &:last-child {
             border-bottom: none;
         }
@@ -67,6 +91,12 @@
             align-items: center;
             position: relative;
             padding: 1.3rem;
+            gap: 15px;
+
+            @media (max-width: 660px) {
+                grid-template-columns: 80px auto;
+                gap: 20px;
+            }
 
             & img {
                 width: 100px;
@@ -76,6 +106,11 @@
                     width 0.3s ease-out,
                     height 0.3s ease-out;
                 display: block;
+
+                @media (max-width: 660px) {
+                    width: 70px;
+                    height: 70px;
+                }
             }
 
             & .material-symbols-rounded.arrow {
@@ -84,7 +119,12 @@
                 right: 25px;
                 color: #f3f3f3;
                 transition: all 0.15s ease-in-out;
-                opacity: 0.15;
+                opacity: 0.1;
+
+                @media (max-width: 660px) {
+                    top: 12px;
+                    right: 12px;
+                }
             }
 
             & .mod-text {
@@ -93,12 +133,19 @@
                 align-items: start;
                 gap: 0.5rem;
 
+                @media (max-width: 660px) {
+                    gap: 0.1rem;
+                }
+
                 & h4 {
-                    margin-left: 0.7rem;
                     font-size: 1.6rem;
                     font-family: var(--font-title);
                     text-align: left;
                     transition: all 0.3s ease-out;
+
+                    @media (max-width: 660px) {
+                        font-size: 1.45rem;
+                    }
                 }
 
                 & p {
@@ -106,8 +153,13 @@
                     font-size: 1rem;
                     text-align: left;
                     transition: all 0.3s ease-out;
-                    margin: 0 1.3rem;
                     line-height: 1.3;
+                    margin: 0 !important;
+
+                    @media (max-width: 660px) {
+                        font-size: 0.85rem;
+                        margin: 10px 0 0 0 !important;
+                    }
                 }
             }
         }
@@ -137,12 +189,21 @@
                 gap: 1rem;
                 background: color-mix(in srgb, var(--block-color) 25%, transparent);
 
+                @media (max-width: 660px) {
+                    padding-bottom: 20px;
+                }
+
                 & nav {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 1.4rem;
                     padding-block: 1.3rem 0.3rem;
+
+                    @media (max-width: 660px) {
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                    }
 
                     & a {
                         display: flex;
@@ -163,6 +224,13 @@
                             outline 0.2s ease-in-out,
                             opacity 0.2s ease-in;
 
+
+                        @media (max-width: 660px) {
+                            font-size: 15px;
+                            width: 100%;
+                            padding: 10px 20px;
+                        }
+
                         &:hover {
                             background: color-mix(in srgb,
                                     var(--block-border) 30%,
@@ -175,13 +243,22 @@
                             background: color-mix(in srgb,
                                     var(--block-border) 90%,
                                     transparent);
-                            border: 2px solid color-mix(in srgb, var(--block-border) 95%, transparent);
+                            outline: 2px solid color-mix(in srgb, var(--block-border) 95%, #fff);
                             box-shadow: 0 0 20px 5px var(--block-shadow);
                             opacity: 1;
+
+                            @media (max-width: 660px) {
+                                font-weight: 800;
+                            }
                         }
 
                         & span {
                             color: var(--accent-color);
+
+
+                            @media (max-width: 660px) {
+                                font-size: 1.5rem;
+                            }
                         }
                     }
                 }
@@ -201,6 +278,10 @@
                             & h5 {
                                 font-size: 1.3rem;
                                 margin-block: 0.1rem 0.7rem;
+
+                                @media (max-width: 660px) {
+                                    font-size: 1.5rem;
+                                }
                             }
 
                             & ul,
@@ -216,8 +297,16 @@
                                 margin-inline: 3rem;
                                 list-style-type: none;
 
+                                @media (max-width: 660px) {
+                                    text-align: start;
+                                }
+
                                 & li {
                                     line-height: 1.5;
+
+                                    @media (max-width: 660px) {
+                                        line-height: 1.6;
+                                    }
 
                                     &::before {
                                         content: "✓";
@@ -267,11 +356,20 @@
                                     font-size: 1rem;
                                     font-style: italic;
                                     opacity: 0.65;
+
+                                    @media (max-width: 660px) {
+                                        font-size: 0.95rem;
+                                        line-height: 1.25;
+                                    }
                                 }
 
                                 & .btn-info,
                                 & .btn-download {
                                     display: none;
+
+                                    @media (max-width: 660px) {
+                                        font-size: 1rem;
+                                    }
                                 }
                             }
                         }
@@ -310,100 +408,4 @@
 
 details.mod:hover summary>.material-symbols-rounded.arrow {
     opacity: 1;
-}
-
-@media (max-width: 660px) {
-    .mod-paragraph {
-        text-align: start;
-        font-size: 1.1rem;
-        max-width: 33ch;
-        margin-inline: 1.3rem;
-        line-height: 1.8;
-    }
-
-    .mod-title-header {
-
-        &::before,
-        &::after {
-            width: 20vw;
-        }
-    }
-
-    .mods-container {
-        gap: 3rem;
-
-        & details {
-            max-width: 380px;
-
-            & summary {
-                & .material-symbols-rounded.arrow {
-                    top: 12px;
-                    right: 12px;
-                }
-
-                & .mod-text {
-                    gap: 0.6rem;
-
-                    & p {
-                        font-size: 0.9rem;
-                    }
-                }
-            }
-
-            &[open] {
-                & .mod-expanded {
-                    & nav {
-                        flex-direction: column;
-                        margin-bottom: 1rem;
-
-                        & a {
-                            justify-content: center;
-                            width: 100%;
-                            padding: 1rem 2rem;
-                            text-transform: uppercase;
-
-                            &.active {
-                                font-weight: 800;
-                            }
-
-                            & span {
-                                font-size: 1.5rem;
-                            }
-                        }
-                    }
-
-                    & .mod-features {
-                        & .tab-content {
-                            &.active {
-                                & h5 {
-                                    font-size: 1.5rem;
-                                }
-
-                                & ul,
-                                & ol {
-                                    text-align: start;
-
-                                    & li {
-                                        line-height: 1.6;
-                                    }
-                                }
-
-                                & .mod-author {
-                                    & p {
-                                        font-size: 0.95rem;
-                                        line-height: 1.25;
-                                    }
-
-                                    & .btn-info,
-                                    & .btn-download {
-                                        font-size: 1rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

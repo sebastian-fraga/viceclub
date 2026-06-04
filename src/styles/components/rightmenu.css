@@ -11,6 +11,17 @@ body.index {
         overflow-x: hidden;
         scrollbar-width: none;
 
+        @media (max-width:600px) {
+            padding-inline: 25px;
+            max-width: 65vw;
+            height: 100dvh;
+            gap: 0.3em;
+        }
+
+        @media (min-width: 601px) and (max-width: 1600px) {
+            padding-inline: 1em;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }
@@ -29,6 +40,10 @@ body.index {
 
             &:first-of-type {
                 margin-top: 0em;
+
+                @media (max-width:600px) {
+                    margin-top: 0.15em;
+                }
             }
 
             & img {
@@ -49,6 +64,10 @@ body.index {
             align-items: center;
             gap: 20px;
             position: relative;
+
+            @media (max-width:600px) {
+                flex: 0;
+            }
 
 
             & .settings-text {
@@ -233,6 +252,13 @@ body.index {
     z-index: 10000;
     box-shadow: inset 0 -120px 60px rgba(248, 170, 255, 0.2);
 
+    @media (max-width:600px) {
+        justify-content: flex-start;
+        width: 100%;
+        right: -250dvw;
+        height: 100svh;
+    }
+
     &.show {
         right: 0;
     }
@@ -250,6 +276,10 @@ body.index {
         border-left: 1px solid #8c71cf29;
         background-color: rgba(0, 0, 0, 0.2);
         padding: 0 0.8em 0 1em;
+
+        @media (max-width:600px) {
+            gap: 0.4em;
+        }
 
         & a {
             margin: 0;
@@ -307,6 +337,10 @@ body.index {
         overflow-y: auto;
         overflow-x: hidden;
 
+        @media (max-width:600px) {
+            flex: 1;
+        }
+
         & .right-content-links {
             display: flex;
             flex-direction: column;
@@ -331,6 +365,11 @@ body.index {
                 transition: all 0.15s ease-in-out;
                 font-family: var(--font-title);
 
+
+                @media (max-width:600px) {
+                    font-size: 1.25em;
+                }
+
                 & span {
                     font-size: 1.15em;
                     white-space: normal;
@@ -339,6 +378,10 @@ body.index {
 
                 & p {
                     max-width: 25ch;
+
+                    @media (max-width:600px) {
+                        max-width: 15ch;
+                    }
                 }
 
                 & span:is(a.active) {
@@ -582,69 +625,6 @@ body.index {
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@media (max-width:600px) {
-    body.index {
-        & #rightContent {
-            padding-inline: 25px;
-            max-width: 65vw;
-            height: 100dvh;
-            gap: 0.15em;
-
-            & a {
-                &:first-of-type {
-                    margin-top: 0.15em;
-                }
-
-                & img {
-                    width: 65px;
-                    height: auto;
-                }
-            }
-
-            & .footer-settings {
-                flex: 0;
-            }
-        }
-    }
-
-    #rightContent {
-        justify-content: flex-start;
-        width: 100%;
-        right: -250dvw;
-        height: 100svh;
-
-        & .right-content-nav {
-            flex: 1;
-
-            & .right-content-links {
-                & a {
-                    font-size: 1.25em;
-                }
-
-                & p {
-                    max-width: 15ch;
-                }
-            }
-        }
-
-        & .right-content-logos {
-            gap: 0.4em;
-        }
-    }
-}
-
-@media (min-width: 661px) and (max-width: 1600px) {
-    body.index {
-        & #rightContent {
-            padding-inline: 1em;
-
-            & .footer-settings {
-                flex: 1;
             }
         }
     }

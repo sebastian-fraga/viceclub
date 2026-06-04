@@ -190,7 +190,7 @@ function createModCard(mod) {
 
     const arrow = document.createElement("span");
     arrow.className = "material-symbols-rounded arrow";
-    arrow.textContent = "arrow_drop_down";
+    arrow.textContent = "keyboard_arrow_down";
 
     summary.append(img, textDiv, arrow);
     details.appendChild(summary);

@@ -5,10 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: fixed;
 
-    @media (min-width: 768px) {
-        background-attachment: fixed;
+    @media (max-width:960px) {
+        background: radial-gradient(circle at top, rgba(85, 150, 229, 0.8), rgba(141, 117, 239, 0.8));
     }
 
     &::after {
@@ -40,6 +40,11 @@
         position: relative;
         z-index: 1000;
 
+        @media (max-width:660px) {
+            box-shadow: inset 0px 0 140px #8067ff;
+            border-radius: 12px;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -53,6 +58,11 @@
             mask-composite: exclude;
             z-index: 100;
             pointer-events: none;
+
+            @media (max-width:660px) {
+                padding: 8px;
+                border-radius: 12px;
+            }
         }
     }
 
@@ -69,6 +79,13 @@
                 "title title"
                 "text fotd";
 
+            @media (max-width:660px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2em;
+            }
+
             & .welcome-title {
                 grid-area: title;
                 text-align: center;
@@ -80,6 +97,13 @@
                 background: linear-gradient(to right, #0e72edf6, #ff8baef6);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
+
+                @media (max-width:660px) {
+                    text-wrap: balance;
+                    margin: 0.7em auto;
+                    text-align: center;
+                    line-height: 1.3;
+                }
             }
 
             & .welcome-text {
@@ -105,6 +129,14 @@
                     -webkit-text-fill-color: transparent;
                     line-height: 1.7;
 
+                    @media (max-width:660px) {
+                        margin: 0 15px 1.2em 15px;
+                        text-align: left;
+                        font-size: 1.3em;
+                        max-width: 50ch;
+                        line-height: 1.8;
+                    }
+
                     & span {
                         font-weight: bold;
                     }
@@ -124,6 +156,12 @@
                 box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
                 border-radius: 25px;
                 max-width: 300px;
+
+                @media (max-width:660px) {
+                    margin: 5px auto;
+                    border-radius: 12px;
+                    max-width: 100%;
+                }
 
                 & .fotd-header {
                     padding: 0.6em 1em;
@@ -288,6 +326,13 @@
             position: relative;
             z-index: 0;
 
+            @media (max-width:660px) {
+                width: 95%;
+                margin: 1em auto 2em auto;
+                border-radius: 12px;
+                justify-content: space-around;
+            }
+
             &::before {
                 content: "";
                 background:
@@ -303,6 +348,14 @@
                 background-size: cover;
                 border-radius: 35px;
                 background-position: 0 0;
+
+                @media (max-width:660px) {
+                    background: url("/assets/images/main/countdown.webp");
+                    background-position: 0 0;
+                    background-size: cover;
+                    border-radius: 10px;
+                    filter: saturate(1.4);
+                }
             }
 
             & .countdown-header {
@@ -310,14 +363,20 @@
                     line-height: 1.6;
                     font-size: 2.2em;
                     color: #7374f4;
-                    background-image: linear-gradient(45deg,
-                            #7374f4 28%,
-                            #dc8ee4 53%,
+                    background-image: linear-gradient(to bottom,
+                            #7374f4 20%,
+                            #dc8ee4 60%,
                             #e59e7a 100%);
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    -webkit-text-stroke: 1px rgba(70, 50, 120, 0.6);
+                    -webkit-text-stroke: 1px rgba(70, 50, 120, 0.9);
+
+                    @media (max-width:660px) {
+                        text-wrap: balance;
+                        line-height: 1.25;
+                        font-size: 1.7em;
+                    }
 
                 }
             }
@@ -328,6 +387,17 @@
                 align-items: center;
                 text-align: center;
 
+                @media (max-width:660px) {
+                    background: rgba(13, 13, 13, 0.1);
+                    border: 2px solid rgba(13, 13, 13, 0.1);
+                    padding: 5px 24px;
+                    border-radius: 12px;
+                    backdrop-filter: blur(5px) brightness(0.85);
+                    justify-content: center;
+                    gap: 20px;
+                    width: 85%;
+                }
+
                 & .time-box {
                     display: flex;
                     flex-direction: column;
@@ -336,12 +406,16 @@
                     position: relative;
 
                     & span {
-                        font-size: 3em;
+                        font-size: clamp(1.3em, 3.5vw, 2.7em);
                         font-weight: 700;
                         color: #ffffff;
                         text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
                         transition: transform 0.2s ease;
                         display: inline-block;
+                    }
+
+                    & p {
+                        font-size: clamp(11px, 2vw, 16px);
                     }
 
                     & .time-separator {
@@ -352,6 +426,11 @@
                         font-weight: 900;
                         font-size: 2em;
                         color: #edecec;
+
+                        @media (max-width:660px) {
+                            top: 30%;
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -364,8 +443,12 @@
             display: flex;
             flex-direction: column;
 
+            @media (max-width:660px) {
+                width: 90%;
+            }
+
             & h2 {
-                font-size: clamp(1.3em, 4vw, 2em);
+                font-size: clamp(1.6em, 4vw, 2em);
                 text-align: center;
                 margin-bottom: 10px;
             }
@@ -376,14 +459,22 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                gap: clamp(20px, 1vw, 50px);
+                gap: 30px;
                 background: linear-gradient(135deg, rgba(58, 37, 55, 0.2), rgba(58, 37, 55, 0.4));
                 backdrop-filter: blur(1px);
                 border: 2px solid rgba(0, 0, 0, 0.2);
                 width: 95%;
                 margin: 1em auto 0 auto;
                 border-radius: 24px;
-                padding: clamp(0.8em, 2vw, 1.5em);
+                padding: 10px;
+
+                @media (max-width:660px) {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 20px 10px;
+                    border-radius: 18px;
+                    margin: 5px auto 0 auto;
+                }
 
                 & a {
                     text-decoration: none;
@@ -404,7 +495,6 @@
 
                     & span {
                         text-align: center;
-                        max-width: 15ch;
                         line-height: 1.2;
                         font-size: 0.95em;
                         color: #f4f4f4;
@@ -424,7 +514,6 @@
 
                         & span {
                             opacity: 1;
-                            font-weight: 800;
                         }
                     }
                 }
@@ -846,126 +935,9 @@
 
 @media (max-width:660px) {
     .index {
-        background: radial-gradient(circle at top, rgba(85, 150, 229, 0.8), rgba(141, 117, 239, 0.8));
-
-
-        & .block {
-            box-shadow: 0px -60px 10px #00cc9c71;
-            border-radius: 10px;
-            background: linear-gradient(180deg,
-                    rgba(141, 117, 239, 0.8),
-                    rgba(85, 150, 229, 0.8),
-                    rgba(141, 117, 239, 0.8));
-
-            &::before {
-                padding: 8px;
-                border-radius: 12px;
-            }
-        }
 
         & main {
 
-            & .welcome-wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 4em;
-
-                & .welcome-title {
-                    text-wrap: balance;
-                    margin: 0.7em auto 0 auto;
-                    text-align: center;
-                    line-height: 1.3;
-                }
-
-                & .welcome-text {
-                    & .index-text {
-                        margin: 0 15px 1.5em 15px;
-                        text-align: left;
-                        font-size: 1.3em;
-                        max-width: 50ch;
-                        line-height: 1.8;
-                    }
-                }
-
-                & .fotd-container {
-                    margin: 5px auto;
-                    max-width: 100%;
-
-                    & .fotd-image {
-                        width: 100%;
-                        margin: 0 auto;
-                    }
-                }
-            }
-
-            & .countdown-wrapper {
-                width: 95%;
-                margin: 1em auto 2em auto;
-                border-radius: 12px;
-                justify-content: space-around;
-
-                &::before {
-                    background: url("/assets/images/main/countdown.webp");
-                    background-position-y: 90%;
-                    background-size: cover;
-                    border-radius: 12px;
-                    filter: saturate(1.4);
-                }
-
-                & .countdown-header {
-                    & h2 {
-                        text-wrap: balance;
-                        line-height: 1.3;
-                        font-size: 1.7em;
-                    }
-                }
-
-                #countdown {
-                    background: rgba(13, 13, 13, 0.1);
-                    padding: 5px 12px;
-                    border-radius: 6px;
-                    backdrop-filter: blur(2px) brightness(0.8);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 20px;
-                    width: 100%;
-
-                    & .time-box {
-
-                        & span {
-                            font-size: 1.6em;
-                        }
-
-                        & p {
-                            font-size: 0.7em;
-                        }
-
-                        & .time-separator {
-                            top: 30%;
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
-
-            & .logo-carousel {
-
-                & h2 {
-                    margin-left: 0;
-                    text-align: center;
-                    font-size: 1.6em;
-                }
-
-                & .carousel-wrapper {
-                    display: grid;
-                    grid-template-columns: auto auto;
-                    gap: 20px 10px;
-                    border-radius: 12px;
-                }
-
-            }
 
             & .news {
                 margin: 3em auto 5em auto;

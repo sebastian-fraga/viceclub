@@ -18,7 +18,7 @@ async function loadCharacters() {
                 <div class="card-wrap">
                     <article class="card-inner">
                         <div class="card-front">
-                            <img src="${char.image}" alt="${char.name}" loading="lazy" />
+                            <img src="${char.image}" alt="${char.name}" loading="lazy" decoding="async" />
                             <div class="character-text">
                                 <p>${char.name}</p>
                                 <span>${char.role}</span>
