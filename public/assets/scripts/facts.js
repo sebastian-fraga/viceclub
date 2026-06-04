@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.querySelector(".fotd-description p").innerHTML = text;
         }
 
-        const previousOnLangChange = window.onLangChange;
+        renderFact(lang);
 
+        const previousOnLangChange = window.onLangChange;
         window.onLangChange = () => {
             if (typeof previousOnLangChange === "function") {
                 previousOnLangChange();
@@ -46,8 +47,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const fotdImg = document.querySelector(".fotd-image img");
         fotdImg.src = fact.image + "?t=" + Date.now();
         fotdImg.style.objectPosition = fact.imagePosition ?? "center";
-
-        document.querySelector(".fotd-image img").src = fact.image;
 
         const logoImg = document.querySelector(".fotd-header img");
         if (fact.game) {
