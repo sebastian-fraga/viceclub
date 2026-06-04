@@ -277,7 +277,6 @@
 }
 
 .skeleton-radio {
-    width: 90px;
-    margin-inline: 15px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
 }

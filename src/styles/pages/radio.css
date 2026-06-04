@@ -160,15 +160,18 @@
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
-        gap: 4px 32px;
+        margin-bottom: 15px;
+        gap: 4px 16px;
 
         @media (max-width:600px) {
-            align-items: start;
+            margin-block: 15px;
+            align-items: center;
             flex-direction: column;
-            gap: 4px 0;
+            gap: 16px 0;
         }
 
         & button {
+            font-size: clamp(10px, 4vw, 20px);
             border: none;
             transition: all 0.2s ease-in;
             cursor: pointer;
@@ -249,6 +252,10 @@
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 5px;
+
+            @media (max-width:600px) {
+                justify-content: center;
+            }
 
             & p {
                 background: color-mix(in srgb, var(--block-border) 90%, var(--block-text) 95%);
@@ -553,7 +560,7 @@
             display: flex;
             align-items: center;
             gap: 1em;
-            width: 450px;
+            width: 500px;
             color: #ebe9e9;
             font-family: "GTAArtDeco";
             font-weight: 600;
