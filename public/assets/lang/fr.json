@@ -34,7 +34,7 @@
             "title": "FOIRE AUX QUESTIONS",
             "section": {
                 "first": {
-                    "title": "<span class='material-symbols-rounded'>apps</span> À propos de Vice Club",
+                    "title": "<span class='material-symbols-rounded'>beach_access</span> À propos de Vice Club",
                     "q1": "Qu'est-ce que je peux trouver sur Vice Club ?",
                     "a1": "Sur Vice Club, vous trouverez toutes les informations relatives à chaque jeu principal de la saga GTA. Vous aurez accès à tous les codes de triche, les radios, les cartes interactives, les mods, les actualités et bien plus encore.",
                     "q2": "Comment rechercher des informations par jeu ?",
@@ -567,12 +567,13 @@
         "search_placeholder": "Rechercher des codes...",
         "tooltip": {
             "title": "Filtres de recherche",
-            "by_section": "Par section:",
-            "by_cheat": "Par code (PC):",
+            "by_section": "Par section",
+            "by_cheat": "Par code (PC)",
             "code": {
                 "name": "nom",
                 "cheat": "code"
-            }
+            },
+            "shortcut": "(raccourci)"
         }
     },
     "footer": {

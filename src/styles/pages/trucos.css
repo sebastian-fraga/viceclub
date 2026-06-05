@@ -6,6 +6,9 @@
     gap: 1.5em;
     margin: 30px auto;
 
+    @media (max-width:660px) {
+        gap: 0.6em;
+    }
 
     & .platform-family {
         position: relative;
@@ -213,14 +216,16 @@
         }
 
     }
-
 }
-
 
 .cheats-search {
     position: relative;
     max-width: 80%;
     margin: 1em auto 0.25em auto;
+
+    @media (max-width:660px) {
+        width: 90vw;
+    }
 
     &.loading {
         &::after {
@@ -278,7 +283,8 @@
         }
     }
 
-    & span {
+    & .search-icon,
+    & .help-icon {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -314,7 +320,6 @@
     & .tooltip {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         flex-wrap: wrap;
         position: fixed;
         background: color-mix(in srgb, var(--block-color) 85%, transparent);
@@ -324,7 +329,7 @@
         border-radius: 12px;
         border: 1.5px solid color-mix(in srgb, var(--block-border) 30%, transparent);
         pointer-events: none;
-        backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px) brightness(0.5);
         height: auto;
         width: clamp(260px, 40vw, 420px);
         min-width: unset;
@@ -334,81 +339,116 @@
         transition: opacity 0.2s ease, transform 0.2s ease;
         z-index: 100;
 
+        @media (max-width:660px) {
+            max-width: 350px;
+        }
+
         &.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        & h3 {
-            text-transform: uppercase;
-            margin: 0 auto 10px auto;
+        & .tooltip-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
             color: color-mix(in srgb, var(--block-text) 70%, var(--accent-color));
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 12px 18px;
-        }
+            padding: 12px;
 
-        & .tooltip-text {
-            font-size: 0.95em;
-            margin: 0;
-            text-wrap: pretty;
-            line-height: 1.3;
-            padding-left: 15px;
-        }
-
-        & ul {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            gap: 5px;
-            padding: 5px 0 10px 20px;
-            margin-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-            &.pc {
-                border-bottom: none;
-
-                & li {
-                    & code {
-                        background: color-mix(in srgb, var(--title-color) 10%, transparent);
-                        color: color-mix(in srgb, var(--title-color) 95%, transparent);
-                        border: 1px solid color-mix(in srgb, var(--title-color) 40%, transparent);
-                    }
-
-                }
+            & h3 {
+                font-size: 1em;
+                line-height: 1.4;
             }
 
-            & li {
-                margin-left: 10px;
+            & span {
+                font-size: 1em;
+            }
+        }
+
+        & .tooltip-content {
+            display: flex;
+            flex-direction: column;
+
+            & .tooltip-item {
                 display: flex;
-                align-items: center;
-                position: relative;
-                gap: 0.25em;
+                flex-direction: column;
+                padding-inline: 28px;
+                padding-block: 15px;
 
-                &::before {
-                    content: '•';
-                    position: absolute;
-                    transform: translateX(-200%);
-                    color: inherit;
-                    font-size: 0.8em;
+                &:first-of-type {
+                    padding-top: 10px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
                 }
 
-                & code {
-                    background: color-mix(in srgb, var(--accent-color) 10%, transparent);
-                    color: color-mix(in srgb, var(--accent-color) 95%, transparent);
-                    border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
-                    font-weight: 900;
-                    border-radius: 6px;
-                    padding: 3px 6px;
+                &:last-of-type {
+                    padding-bottom: 15px;
                 }
 
-                & span {
+                & p {
+                    font-size: 14px;
+                    margin: 0 0 5px 0;
+                    line-height: 1.3;
+                    color: #d7d7d7;
+                }
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
                     position: relative;
-                    transform: none;
-                    font-size: 1.1em;
-                    opacity: 0.9;
+                    flex-wrap: wrap;
+                    gap: 5px;
+
+                    &.pc {
+                        border-bottom: none;
+                    }
+
+                    & li {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        gap: 5px;
+                        padding-left: 4px;
+
+                        &::before {
+                            content: '•';
+                            position: absolute;
+                            left: -4px;
+                            color: inherit;
+                            font-size: 0.8em;
+                        }
+
+                        & code {
+                            background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+                            color: color-mix(in srgb, var(--accent-color) 95%, transparent);
+                            border: 1px solid color-mix(in srgb, var(--accent-color) 20%, transparent);
+                            font-weight: 900;
+                            border-radius: 6px;
+                            padding: 3px 6px;
+
+                            &:last-of-type {
+                                color: #fff;
+                                border: 1px solid #ffffff34;
+                                background: #ffffff19;
+                                font-weight: 100;
+                            }
+                        }
+
+                        & span {
+                            position: relative;
+                            transform: none;
+                            font-size: 15px;
+                            color: #d7d7d7;
+                        }
+
+                        & .alias {
+                            font-size: 10px;
+                            color: #afafaf;
+                            margin-left: 8px;
+                        }
+                    }
                 }
-
-
             }
         }
     }
@@ -421,6 +461,10 @@
     justify-content: center;
     gap: 1.5em;
 
+    @media (max-width:660px) {
+        width: 100%;
+    }
+
     & section {
         width: 100%;
         max-width: 80%;
@@ -428,6 +472,10 @@
         border: 2px solid color-mix(in srgb, var(--block-border) 60%, transparent);
         border-radius: 20px;
         background: color-mix(in srgb, var(--block-color) 80%, var(--block-border));
+
+        @media (max-width:660px) {
+            max-width: 95%;
+        }
 
         & .category-header {
             display: flex;
@@ -437,12 +485,23 @@
             padding-bottom: 1em;
             background: color-mix(in srgb, var(--block-color) 60%, var(--block-border));
 
+            @media (max-width:660px) {
+                justify-content: center;
+                padding-block: 0.1em 0.7em;
+                border-bottom: 1px solid color-mix(in srgb, var(--block-border) 40%, transparent);
+            }
+
             & h3 {
                 color: var(--accent-color);
                 padding: 0.5em 0 0.1em 0.9em;
                 font-size: 1.4em;
                 font-family: "GTAArtDeco";
                 text-shadow: 2px 2px #000000bf;
+
+                @media (max-width:660px) {
+                    padding-left: 0;
+                    font-size: 1.5em;
+                }
             }
 
             & .category-count {
@@ -459,15 +518,19 @@
 
         & .category-list {
 
-            & .cheat-item {
+            @media (max-width:660px) {
+                margin-block: 0;
+            }
 
+            & .cheat-item {
                 padding: 12px 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-                &:last-of-type {
-                    border-bottom: none;
+                @media (max-width:660px) {
+                    margin-block: 0;
                 }
 
+                &:last-of-type,
                 &.last-visible {
                     border-bottom: none;
                 }
@@ -475,7 +538,13 @@
                 & h4 {
                     font-size: 1.1em;
                     margin-left: 15px;
-                    font-weight: 100;
+                    font-weight: 700;
+
+                    @media (max-width:660px) {
+                        font-size: 1em;
+                        margin-bottom: 1em;
+                        color: #dbdada;
+                    }
                 }
 
                 & .cheat-note {
@@ -483,6 +552,10 @@
                     align-items: center;
                     gap: 0.3em;
                     padding: 0.4em 0 0.2em 1.2em;
+
+                    @media (max-width:660px) {
+                        justify-content: center;
+                    }
 
                     & .cheat-note-icon {
                         font-size: 0.95em;
@@ -501,6 +574,14 @@
                     & .cheat-note-text {
                         color: color-mix(in srgb, var(--block-border) 25%, #fff);
                         font-size: 0.8em;
+
+                        @media (max-width:660px) {
+                            padding-left: 10px;
+                            padding-right: 15px;
+                            text-align: start;
+                            line-height: 1.4;
+                            opacity: 0.8;
+                        }
 
                         & a {
                             color: color-mix(in srgb, var(--block-border) 55%, #fff);
@@ -524,6 +605,12 @@
                     align-items: center;
                     margin: 0.5em 0 0.6em 1em;
                     gap: 10px;
+
+                    @media (max-width:660px) {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        max-width: 50ch;
+                    }
 
                     & .pc-code-sep {
                         opacity: 0.7;
@@ -563,6 +650,10 @@
                         width: 50px;
                         height: auto;
                         padding: 5px;
+
+                        @media (max-width:660px) {
+                            width: 40px;
+                        }
                     }
                 }
             }
@@ -588,77 +679,6 @@
         & p {
             margin: 0;
             opacity: 0.7;
-        }
-    }
-}
-
-@media (max-width:660px) {
-    .platform-selector {
-        gap: 0.2em;
-    }
-
-
-    .cheats-search {
-        width: 90vw;
-
-        & .tooltip {
-            max-width: 350px;
-        }
-    }
-
-    #cheatsContainer {
-        width: 100%;
-
-        & section {
-            padding: 0;
-
-            max-width: 95%;
-
-            & .category-header {
-                justify-content: center;
-                gap: 15px;
-
-                & h3 {
-                    padding-left: 0;
-                    font-size: 1.5em;
-                }
-            }
-
-            & .category-list {
-                margin-block: 0;
-
-                & .cheat-item {
-                    margin-block: 0;
-
-                    & h4 {
-                        font-size: 1.15em;
-                        margin-bottom: 0.5em;
-                        color: #dbdada;
-                    }
-
-                    & .cheat-code {
-                        flex-wrap: wrap;
-                        justify-content: center;
-                        max-width: 50ch;
-                    }
-
-                    & .cheat-note {
-                        justify-content: center;
-
-                        & .cheat-note-text {
-                            padding-left: 10px;
-                            padding-right: 15px;
-                            text-align: start;
-                            line-height: 1.4;
-                            opacity: 0.8;
-                        }
-                    }
-                }
-            }
-        }
-
-        & img {
-            width: 45px;
         }
     }
 }

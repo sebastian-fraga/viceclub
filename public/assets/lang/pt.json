@@ -34,7 +34,7 @@
             "title": "PERGUNTAS FREQUENTES",
             "section": {
                 "first": {
-                    "title": "<span class='material-symbols-rounded'>apps</span> Sobre o Vice Club",
+                    "title": "<span class='material-symbols-rounded'>beach_access</span> Sobre o Vice Club",
                     "q1": "O que posso encontrar no Vice Club?",
                     "a1": "No Vice Club você encontrará todas as informações relacionadas a cada jogo principal da saga GTA. Você terá acesso a todos os cheats, rádios, mapas interativos, mods, notícias e muito mais.",
                     "q2": "Como busco informações por jogo?",
@@ -567,12 +567,13 @@
         "search_placeholder": "Pesquisar trapaças...",
         "tooltip": {
             "title": "Filtros de pesquisa",
-            "by_section": "Por seção:",
-            "by_cheat": "Por trapaça (PC):",
+            "by_section": "Por seção",
+            "by_cheat": "Por trapaça (PC)",
             "code": {
                 "name": "nome",
                 "cheat": "trapaça"
-            }
+            },
+            "shortcut": "(atalho)"
         }
     },
     "footer": {

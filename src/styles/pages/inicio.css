@@ -1,12 +1,25 @@
 .characters-container {
     margin-top: 7em;
 
+    @media (max-width:600px) {
+        width: 100%;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     & .characters-header {
         display: flex;
         align-items: center;
         gap: 30px;
         text-align: center;
         margin-inline: 3em;
+
+        @media (max-width:600px) {
+            gap: 6px;
+            margin-inline: 0;
+        }
 
         &::before,
         &::after {
@@ -38,6 +51,15 @@
         gap: 2em 1em;
         margin: 4em 2em;
 
+        @media (max-width:900px) {
+            display: grid;
+            margin: 2em auto 3em auto;
+            align-content: center;
+            gap: 2em 0.5em;
+            grid-template-columns: repeat(2, auto);
+            width: 95%;
+        }
+
         & .card-wrap {
             width: 250px;
             flex-shrink: 0;
@@ -47,6 +69,10 @@
             border-radius: 10px;
             transition: outline 0.25s ease, transform 0.15s ease, box-shadow 0.1s ease;
             outline: 2px solid transparent;
+
+            @media (max-width:600px) {
+                width: 40vw;
+            }
 
             &:hover {
                 box-shadow: 0 0 25px rgb(0, 0, 0);
@@ -110,16 +136,33 @@
                         padding: 1em;
                         z-index: 1;
 
+                        @media (max-width:600px) {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0.6em;
+                            gap: 0.4em;
+                        }
+
                         & p {
                             margin: 0;
-                            font-family: "GTAArtDeco";
+                            font-weight: 800;
+
+                            @media (max-width:600px) {
+                                line-height: 1.1;
+                                font-size: 1.1em;
+                            }
                         }
 
                         & span {
+                            font-weight: 100;
                             font-size: 0.85em;
                             color: color-mix(in srgb,
                                     var(--title-color) 70%,
                                     var(--block-text) 100%);
+
+                            @media (max-width:600px) {
+                                font-size: 0.75em;
+                            }
                         }
                     }
 
@@ -221,53 +264,5 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width:600px) {
-    .characters-container {
-        width: 100%;
-        margin-top: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        & .characters-header {
-            gap: 6px;
-            margin-inline: 0.5em;
-        }
-
-        & .characters-list {
-            margin: 2em auto 3em auto;
-            align-content: center;
-            gap: 2em 0.5em;
-            grid-template-columns: repeat(2, auto);
-            width: 95%;
-
-            & article {
-
-                & .character-text {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0.6em;
-                    gap: 0.4em;
-
-                    & p {
-                        line-height: 1.1;
-                        font-size: 1.1em;
-                    }
-
-                    & span {
-                        font-size: 0.8em;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 661px) and (max-width: 900px) {
-    .characters-list {
-        grid-template-columns: repeat(2, auto);
     }
 }

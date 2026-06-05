@@ -34,7 +34,7 @@
             "title": "FREQUENTLY ASKED QUESTIONS",
             "section": {
                 "first": {
-                    "title": "<span class='material-symbols-rounded'>apps</span> About Vice Club",
+                    "title": "<span class='material-symbols-rounded'>beach_access</span> About Vice Club",
                     "q1": "What can I find on Vice Club?",
                     "a1": "On Vice Club you will find all the information related to each main game in the GTA franchise. You will have access to all cheats, radio stations, interactive maps, mods, news, and much more.",
                     "q2": "How do I search for information by game?",
@@ -567,12 +567,13 @@
         "search_placeholder": "Search for cheats...",
         "tooltip": {
             "title": "Search filters",
-            "by_section": "By section:",
-            "by_cheat": "By cheat (PC):",
+            "by_section": "By section",
+            "by_cheat": "By cheat (PC)",
             "code": {
                 "name": "name",
                 "cheat": "cheat"
-            }
+            },
+            "shortcut": "(shortcut)"
         }
     },
     "footer": {

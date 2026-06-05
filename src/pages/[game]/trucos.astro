@@ -1,5 +1,5 @@
 ---
-import "../../styles/pages/trucos.css"
+import "../../styles/pages/trucos.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
@@ -82,8 +82,7 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
     <main class="block" id="container">
         <section class="text-container">
             <h1>{meta.heading}</h1>
-            <nav class="platform-selector" role="tablist">
-            </nav>
+            <nav class="platform-selector" role="tablist"></nav>
             <div class="platform-message"></div>
 
             <div class="cheats-search loading">
@@ -100,51 +99,76 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 
                 <span class="material-symbols-rounded help-icon">help</span>
                 <aside class="tooltip">
-                    <h3 data-i18n="trucos.tooltip.title">
-                        Filtros de búsqueda
-                    </h3>
-                    <p
-                        class="tooltip-text"
-                        data-i18n="trucos.tooltip.by_section"
-                    >
-                        Por sección
-                    </p>
-                    <ul>
-                        <li>
-                            <code>section:</code>
-                            <span>+</span>
-                            <code data-i18n="trucos.tooltip.code.name">[nombre]</code>
-                        </li>
-                        <li>
-                            <code>s:</code>
-                            <span>+</span>
-                            <code data-i18n="trucos.tooltip.code.name">[nombre]</code>
-                        </li>
-                    </ul>
-
-                    <p
-                        class="tooltip-text pc"
-                        data-i18n="trucos.tooltip.by_cheat"
-                    >
-                        Por truco (PC)
-                    </p>
-                    <ul class="pc">
-                        <li>
-                            <code>cheat:</code>
-                            <span>+</span>
-                            <code data-i18n="trucos.tooltip.code.cheat">[truco]</code>
-                        </li>
-                        <li>
-                            <code>c:</code>
-                            <span>+</span>
-                            <code data-i18n="trucos.tooltip.code.cheat">[truco]</code>
-                        </li>
-                    </ul>
+                    <div class="tooltip-header">
+                        <span class="material-symbols-rounded">filter_alt</span>
+                        <h3 data-i18n="trucos.tooltip.title">
+                            Filtros de búsqueda
+                        </h3>
+                    </div>
+                    <div class="tooltip-content">
+                        <div class="tooltip-item">
+                            <p
+                                class="tooltip-text"
+                                data-i18n="trucos.tooltip.by_section"
+                            >
+                                Por sección
+                            </p>
+                            <ul>
+                                <li>
+                                    <code>section:</code>
+                                    <span>+</span>
+                                    <code data-i18n="trucos.tooltip.code.name"
+                                        >[nombre]</code
+                                    >
+                                </li>
+                                <li>
+                                    <code>s:</code>
+                                    <span>+</span>
+                                    <code data-i18n="trucos.tooltip.code.name"
+                                        >[nombre]</code
+                                    >
+                                    <span
+                                        class="alias"
+                                        data-i18n="trucos.tooltip.shortcut"
+                                        >(atajo)</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tooltip-item">
+                            <p
+                                class="tooltip-text pc"
+                                data-i18n="trucos.tooltip.by_cheat"
+                            >
+                                Por truco (PC)
+                            </p>
+                            <ul class="pc">
+                                <li>
+                                    <code>cheat:</code>
+                                    <span>+</span>
+                                    <code data-i18n="trucos.tooltip.code.cheat"
+                                        >[truco]</code
+                                    >
+                                </li>
+                                <li>
+                                    <code>c:</code>
+                                    <span>+</span>
+                                    <code data-i18n="trucos.tooltip.code.cheat"
+                                        >[truco]</code
+                                    >
+                                    <span
+                                        class="alias"
+                                        data-i18n="trucos.tooltip.shortcut"
+                                        >(atajo)</span
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </aside>
             </div>
 
-            <div id="cheatsContainer" role="tabpanel">
-            </div>
+            <div id="cheatsContainer" role="tabpanel"></div>
         </section>
     </main>
 
