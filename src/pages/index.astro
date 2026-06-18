@@ -2,7 +2,10 @@
 import "../styles/pages/index.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Loader from "../components/Loader.astro";
-const isProd = import.meta.env.PROD;
+
+import PlayStation_5 from "../components/icons/PlayStation_5.astro";
+import XboxSeries from "../components/icons/XboxSeries.astro";
+import PlayStation5 from "../components/icons/PlayStation_5.astro";
 ---
 
 <BaseLayout
@@ -20,11 +23,7 @@ const isProd = import.meta.env.PROD;
         style="opacity: 0; transition: opacity 0.8s ease"
     >
         <section class="welcome-wrapper">
-            <h1
-                class="welcome-title"
-                id="title"
-                data-i18n="index.welcome"
-            >
+            <h1 class="welcome-title" id="title" data-i18n="index.welcome">
                 BIENVENIDO A VICE CLUB
             </h1>
             <div class="fotd-container">
@@ -59,10 +58,13 @@ const isProd = import.meta.env.PROD;
             </div>
         </section>
 
-        <section class="countdown-wrapper">
+        <section id="countdown-section" class="countdown-wrapper">
             <div class="countdown-header">
-                <h2 data-i18n="index.countdown.title">Lanzamiento de Grand Theft Auto VI</h2>
+                <h2 data-i18n="index.countdown.title">
+                    Lanzamiento de Grand Theft Auto VI
+                </h2>
             </div>
+
             <div id="countdown">
                 <div class="time-box">
                     <span id="days">0</span>
@@ -86,6 +88,26 @@ const isProd = import.meta.env.PROD;
                     <span id="seconds">0</span>
                     <p data-i18n="index.countdown.seconds">SEGUNDOS</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="countdown-finished" class="hidden">
+            <div class="countdown-header">
+                <h2 data-i18n="index.countdown.finished.title">
+                    ¡Grand Theft Auto VI ya disponible!
+                </h2>
+            </div>
+            <div class="countdown-buttons">
+                <a
+                    href="https://www.playstation.com/games/grand-theft-auto-vi/"
+                >
+                    <PlayStation5 />
+                </a>
+                <a
+                    href="https://www.xbox.com/games/store/grand-theft-auto-vi/9nl3wwnzlzzn"
+                >
+                    <XboxSeries />
+                </a>
             </div>
         </section>
 
@@ -162,7 +184,11 @@ const isProd = import.meta.env.PROD;
         <section class="news">
             <h2 data-i18n="index.news.title">ÚLTIMAS NOTICIAS</h2>
             <div id="newsContainer"></div>
-            <button id="loadNews" aria-label="Cargar más noticias" data-i18n="index.news.button">
+            <button
+                id="loadNews"
+                aria-label="Cargar más noticias"
+                data-i18n="index.news.button"
+            >
                 CARGAR MÁS NOTICIAS
                 <span class="material-symbols-rounded">expand_more</span>
             </button>
@@ -170,14 +196,18 @@ const isProd = import.meta.env.PROD;
 
         <section class="faq">
             <details>
-                <summary data-i18n="index.faq.title">PREGUNTAS FRECUENTES</summary>
+                <summary data-i18n="index.faq.title"
+                    >PREGUNTAS FRECUENTES</summary
+                >
                 <h3 data-i18n="index.faq.section.first.title">
-                    <span class="material-symbols-rounded">beach_access</span >Sobre Vice
-                    Club
+                    <span class="material-symbols-rounded">beach_access</span
+                    >Sobre Vice Club
                 </h3>
                 <div class="faq-section">
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.first.q1">¿Qué puedo encontrar en Vice Club?</h4>
+                        <h4 data-i18n="index.faq.section.first.q1">
+                            ¿Qué puedo encontrar en Vice Club?
+                        </h4>
                         <p data-i18n="index.faq.section.first.a1">
                             En Vice Club encontrarás toda la información
                             relacionada a cada juego principal de la saga GTA.
@@ -187,7 +217,9 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.first.q2">¿Cómo busco información por juego?</h4>
+                        <h4 data-i18n="index.faq.section.first.q2">
+                            ¿Cómo busco información por juego?
+                        </h4>
                         <p data-i18n="index.faq.section.first.a2">
                             Muy sencillo. Simplemente tienes que tocar en el
                             menú de arriba a la derecha, y podrás elegir el
@@ -198,7 +230,9 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.first.q3">¿Cómo nace Vice Club?</h4>
+                        <h4 data-i18n="index.faq.section.first.q3">
+                            ¿Cómo nace Vice Club?
+                        </h4>
                         <p data-i18n="index.faq.section.first.a3">
                             Vice Club nace como un proyecto personal de
                             desarrollo web, el cual comencé a idearlo a
@@ -210,7 +244,9 @@ const isProd = import.meta.env.PROD;
                         </p>
                     </article>
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.first.q4">¿Con qué frecuencia se actualiza el contenido?</h4>
+                        <h4 data-i18n="index.faq.section.first.q4">
+                            ¿Con qué frecuencia se actualiza el contenido?
+                        </h4>
                         <p data-i18n="index.faq.section.first.a4">
                             Prometo traer más información y contenido todas las
                             semanas hasta terminar con mis
@@ -241,7 +277,9 @@ const isProd = import.meta.env.PROD;
                 </h3>
                 <div class="faq-section">
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.second.q1">¿Quién soy?</h4>
+                        <h4 data-i18n="index.faq.section.second.q1">
+                            ¿Quién soy?
+                        </h4>
                         <p data-i18n="index.faq.section.second.a1">
                             Mi nombre es Sebastián. Soy un desarrollador web
                             front-end nacido en Argentina y fanático de la saga
@@ -250,7 +288,9 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.second.q2">¿Cómo puedo contactarte?</h4>
+                        <h4 data-i18n="index.faq.section.second.q2">
+                            ¿Cómo puedo contactarte?
+                        </h4>
                         <p data-i18n="index.faq.section.second.a2">
                             Puedes enviarme un
                             <a href="mailto:fragasebastian1@gmail.com"
@@ -265,7 +305,9 @@ const isProd = import.meta.env.PROD;
                     </article>
 
                     <article class="faq-question">
-                        <h4 data-i18n="index.faq.section.second.q3">¿Juego favorito de la saga?</h4>
+                        <h4 data-i18n="index.faq.section.second.q3">
+                            ¿Juego favorito de la saga?
+                        </h4>
                         <p data-i18n="index.faq.section.second.a3">
                             Sin ningún tipo de dudas, San Andreas. Por todo lo
                             que significó y sigue haciendo a más de 20 años
@@ -307,11 +349,7 @@ const isProd = import.meta.env.PROD;
                         src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
                         is:inline></script>
                     <script type="text/javascript" is:inline>
-                        kofiwidget2.init(
-                            "Ko-fi",
-                            "#72a4f2",
-                            "T6T71RM9WX",
-                        );
+                        kofiwidget2.init("Ko-fi", "#72a4f2", "T6T71RM9WX");
                         kofiwidget2.draw();
                     </script>
                 </article>
