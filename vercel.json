@@ -1,4 +1,18 @@
 {
     "cleanUrls": true,
-    "trailingSlash": false
+    "trailingSlash": false,
+
+    "redirects": [
+        {
+            "source": "/:path*",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "viceclub.app"
+                }
+            ],
+            "destination": "https://www.viceclub.app/:path*",
+            "permanent": true
+        }
+    ]
 }
