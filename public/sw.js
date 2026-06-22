@@ -1,4 +1,4 @@
-const CACHE_VERSION = "1.6.9";
+const CACHE_VERSION = "1.7.0";
 const CACHE_NAME = "viceclub-v" + CACHE_VERSION;
 
 const assets = [

@@ -19,7 +19,7 @@ header {
 
     @media (max-width: 660px) {
         justify-content: center;
-        gap: 3em;
+        gap: 0.4em;
     }
 
     & .logo-container {
@@ -31,6 +31,7 @@ header {
 
         @media (max-width: 660px) {
             flex: none;
+            gap: 0.4em;
         }
 
         & a {
@@ -149,4 +150,3 @@ header {
         transition: all 0.1s ease-out;
     }
 }
-
