@@ -900,7 +900,11 @@ export default {
     },
     timeline: {
         titles: {
-            vi: "Línea de tiempo de Grand Theft Auto VI"
+            vi: "Línea de tiempo de Grand Theft Auto VI",
+        },
+        buttons: {
+            showSpoilers: "Leer spoilers",
+            hideSpoilers: "Ocultar"
         },
         icons: {
             official: "Noticia oficial",
@@ -909,7 +913,7 @@ export default {
             milestone: "Hito",
             delay: "Atraso",
             press: "Noticia periodística",
-        }
+        },
     },
     sidebar: {
         close: "Cerrar menú",

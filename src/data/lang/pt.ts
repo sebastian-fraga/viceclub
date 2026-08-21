@@ -898,6 +898,23 @@ export default {
             },
         },
     },
+    timeline: {
+        titles: {
+            vi: "Linha do tempo de Grand Theft Auto VI",
+        },
+        buttons: {
+            showSpoilers: "Ler spoilers",
+            hideSpoilers: "Ocultar",
+        },
+        icons: {
+            official: "Notícia oficial",
+            marketing: "Marketing",
+            leak: "Vazamento",
+            milestone: "Marco",
+            delay: "Adiamento",
+            press: "Notícia da imprensa",
+        },
+    },
     sidebar: {
         close: "Fechar menu",
         home: "Início",

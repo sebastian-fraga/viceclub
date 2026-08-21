@@ -898,6 +898,23 @@ export default {
             },
         },
     },
+    timeline: {
+        titles: {
+            vi: "Grand Theft Auto VI Timeline",
+        },
+        buttons: {
+            showSpoilers: "Read spoilers",
+            hideSpoilers: "Hide",
+        },
+        icons: {
+            official: "Official News",
+            marketing: "Marketing",
+            leak: "Leak",
+            milestone: "Milestone",
+            delay: "Delay",
+            press: "Press News",
+        },
+    },
     sidebar: {
         close: "Close menu",
         home: "Home",

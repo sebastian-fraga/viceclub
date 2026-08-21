@@ -898,6 +898,23 @@ export default {
             },
         },
     },
+    timeline: {
+        titles: {
+            vi: "Chronologie de Grand Theft Auto VI",
+        },
+        buttons: {
+            showSpoilers: "Lire les spoilers",
+            hideSpoilers: "Masquer",
+        },
+        icons: {
+            official: "Actualité officielle",
+            marketing: "Marketing",
+            leak: "Fuite",
+            milestone: "Jalon",
+            delay: "Report",
+            press: "Actualité de la presse",
+        },
+    },
     sidebar: {
         close: "Fermer le menu",
         home: "Accueil",
