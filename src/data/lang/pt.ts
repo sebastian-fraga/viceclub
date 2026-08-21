@@ -1,0 +1,988 @@
+export default {
+    index: {
+        welcome: {
+            title: "Bem-vindo ao Vice Club",
+            description:
+                "O site definitivo para os fãs da série Grand Theft Auto",
+            button: "Explorar",
+        },
+        countdown: {
+            title: "Lançamento de Grand Theft Auto VI",
+            finishedTitle: "Grand Theft Auto VI já está disponível",
+            days: "Dias",
+            hours: "Horas",
+            minutes: "Minutos",
+            seconds: "Segundos",
+        },
+        news: {
+            buttons: {
+                external: "Mais informações",
+                share: "Compartilhar",
+                post: "Publicar",
+                copied: "Copiado!",
+                copy: "Copiar link",
+                more: "Mais",
+                load: "Carregar mais notícias",
+            },
+        },
+        faq: {
+            sections: {
+                viceClub: {
+                    title: "Sobre o Vice Club",
+                    items: {
+                        1: {
+                            title: "O que posso encontrar no Vice Club?",
+                            content:
+                                "No Vice Club, você encontrará todas as informações relacionadas a cada jogo principal da série GTA. Você terá acesso a todos os códigos, rádios, mapas interativos, mods, notícias e muito mais.",
+                        },
+                        2: {
+                            title: "Como posso encontrar informações sobre um jogo específico?",
+                            content:
+                                "É muito simples. Basta abrir o menu à esquerda, onde você poderá escolher o jogo que deseja consultar. Para voltar à página principal, basta clicar no botão Início localizado na parte superior do menu.",
+                        },
+                        3: {
+                            title: "Como surgiu o Vice Club?",
+                            content:
+                                "O Vice Club nasceu como um projeto pessoal de desenvolvimento web, que comecei a idealizar no início de 2025. Achei que seria uma ótima maneira de praticar meus conhecimentos em desenvolvimento front-end enquanto criava um site dedicado a uma das minhas séries de videogames favoritas.",
+                        },
+                        4: {
+                            title: "Posso sugerir conteúdo, relatar um problema ou contribuir com o desenvolvimento?",
+                            content:
+                                "Claro! O Vice Club é open source e seu repositório pode ser encontrado no <1>GitHub</1>.",
+                        },
+                    },
+                },
+                aboutMe: {
+                    title: "Sobre mim",
+                    items: {
+                        1: {
+                            title: "Quem sou eu?",
+                            content:
+                                "Meu nome é Sebastián. Sou um desenvolvedor web front-end da Argentina e um grande fã da série GTA.",
+                        },
+                        2: {
+                            title: "Como posso entrar em contato com você?",
+                            content:
+                                "Você pode me enviar um <1>e-mail</1> ou entrar em contato comigo pelo <3>GitHub</3>.",
+                        },
+                        3: {
+                            title: "Qual é o seu jogo favorito da série?",
+                            content:
+                                "Sem dúvida, San Andreas, por tudo o que significou e continua significando mais de 20 anos após seu lançamento. Menções honrosas para GTA 4 pela melhor história da série e GTA Vice City pela melhor ambientação.",
+                        },
+                    },
+                },
+            },
+        },
+        titles: {
+            carousel: "Explorar jogos",
+            news: "Últimas notícias",
+            faq: "Perguntas frequentes",
+        },
+    },
+    home: {
+        buttons: {
+            purchase: "Comprar",
+            notAvailable: "Nenhum conteúdo disponível",
+            trailers: "Assistir aos trailers",
+            goToSection: "Ir para a seção",
+        },
+        titles: {
+            technicalSheet: "Ficha técnica",
+            characters: "Personagens",
+            exploreSections: "Explorar seções",
+        },
+        technicalSheet: {
+            developer: "Desenvolvedora",
+            developers: "Desenvolvedoras",
+            publisher: "Distribuidora",
+            producer: "Produtor",
+            writers: "Roteiristas",
+            engine: "Motor gráfico",
+            sales: "Vendas",
+            releaseDate: "Data de lançamento",
+        },
+        characters: {
+            statusLabel: {
+                main: "Protagonista",
+                maleAlly: "Aliado",
+                femaleAlly: "Aliada",
+                maleEnemy: "Antagonista",
+                femaleEnemy: "Antagonista",
+                neutral: "Neutro",
+                unknown: "Desconhecido",
+            },
+            age: "Idade",
+            firstAppearance: "Primeira aparição",
+            unknown: "Desconhecida",
+            loadMore: "Carregar mais",
+        },
+        iii: {
+            trailers: {
+                1: "Teaser E3 2001",
+                2: "Trailer oficial PS2",
+                3: "Trailer 2 PS2",
+                4: "Trailer oficial Xbox",
+                5: "Trailer do 10º aniversário",
+                6: "Trailer Edição Definitiva (Trilogia)",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto III é um jogo eletrônico de ação e mundo aberto desenvolvido pela DMA Design (atualmente Rockstar North) e distribuído pela Rockstar Games, lançado em 23 de outubro de 2001. É o primeiro Grand Theft Auto com visão em terceira pessoa e em 3D, estabelecendo um precedente para a franquia.",
+                2: "O jogo se passa em Liberty City, uma cidade fictícia que faz uma paródia de Nova York. Conta com 3 ilhas principais: Portland, Staunton Island e Shoreside Vale, que vão sendo desbloqueadas conforme se avança na história.",
+                3: "O jogador assume o controle de Claude, um homem que foi preso por um assalto ao Liberty City Bank, onde foi traído e baleado por sua parceira da época, Catalina, na cena do crime. Claude deverá cumprir missões para contatos da família mafiosa Leone, subindo entre diferentes gangues e organizações. A história conta com um total de 50 missões.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "23 de outubro de 2001",
+                    1: "26 de outubro de 2001",
+                    2: "21 de maio de 2002",
+                    3: "24 de maio de 2002",
+                    4: "4 de novembro de 2003",
+                    5: "2 de janeiro de 2004",
+                    6: "12 de novembro de 2010",
+                    7: "15 de dezembro de 2011",
+                    8: "25 de setembro de 2012",
+                    9: "26 de setembro de 2012",
+                    10: "15 de maio de 2014",
+                    11: "11 de novembro de 2021",
+                    12: "14 de dezembro de 2023",
+                },
+                sales: "14,5M de cópias (março de 2008)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "...",
+                },
+                2: {
+                    role: "Antagonista principal",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Aliado de Claude",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Chefão da Família Leone",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Esposa de Salvatore",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Colíder dos Yakuza",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Policial corrupto",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Político e magnata",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+            },
+        },
+        vc: {
+            trailers: {
+                1: "Trailer oficial PS2",
+                2: "Trailer 2 PS2",
+                3: "Trailer 3 PS2",
+                4: "Trailer oficial PC",
+                5: "Trailer oficial Xbox",
+                6: "Trailer do 10º aniversário",
+                7: "Trailer Edição Definitiva (Trilogia)",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: Vice City é um jogo eletrônico de ação e mundo aberto desenvolvido pela Rockstar North e distribuído pela Rockstar Games, lançado em 29 de outubro de 2002.",
+                2: "O jogo se passa em Vice City, uma cidade fictícia que faz uma paródia de Miami, no ano de 1986.",
+                3: "O jogador assume o controle de Tommy Vercetti, um homem que saiu da prisão após cumprir uma pena de 15 anos, e que deverá supervisionar uma negociação de drogas a pedido da família Forelli. Depois que tudo dá errado e o dinheiro de Sonny Forelli desaparece, Tommy começa a busca pelo responsável, trabalhando para várias figuras importantes do submundo criminoso de Vice City.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "29 de outubro de 2002",
+                    1: "8 de novembro de 2002",
+                    2: "13 de maio de 2003",
+                    3: "16 de maio de 2003",
+                    4: "4 de novembro de 2003",
+                    5: "2 de janeiro de 2004",
+                    6: "12 de novembro de 2010",
+                    7: "6 de dezembro de 2012",
+                    8: "12 de dezembro de 2012",
+                    9: "29 de janeiro de 2013",
+                    10: "30 de janeiro de 2013",
+                    11: "15 de maio de 2014",
+                    12: "11 de novembro de 2021",
+                    13: "14 de dezembro de 2023",
+                },
+                sales: "17,5M de cópias (março de 2008)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Antagonista principal",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Advogado",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Braço direito de Tommy",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Traficante de drogas em Vice City",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Chefe da organização criminosa Cortez",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Informante em Vice City",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Contratante",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Líder da gangue haitiana",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Chefe da gangue cubana",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Traficante de armas",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Filha do coronel",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+            },
+        },
+        sa: {
+            trailers: {
+                1: 'Trailer oficial "Welcome to Los Santos"',
+                2: "Trailer 2 PS2",
+                3: 'Trailer 3 PS2 "Homecoming"',
+                4: "Trailer oficial Xbox",
+                5: "The Introduction",
+                6: "Trailer do 10º aniversário",
+                7: "Trailer Edição Definitiva (Trilogia)",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: San Andreas é um jogo eletrônico de ação e mundo aberto desenvolvido pela Rockstar North e distribuído pela Rockstar Games, lançado originalmente em 26 de outubro de 2004 para o PlayStation 2.",
+                2: "O jogo se passa no ano de 1992, principalmente numa paródia de Los Angeles chamada Los Santos. Lá, o protagonista principal (Carl Johnson) volta para a cidade para o funeral de sua mãe assassinada, depois de 5 anos vivendo em Liberty City.",
+                3: "O jogo se destaca pela sua grande densidade de locais e terrenos. Conta com 3 cidades principais: Los Santos, San Fierro e Las Venturas, além de outras grandes áreas espalhadas pelo mapa: o interior com seus condados Whetstone, Flint County e Red County, e o deserto de Bone County e Tierra Robada.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "26 de outubro de 2004",
+                    1: "29 de outubro de 2004",
+                    2: "7 de junho de 2005",
+                    3: "10 de junho de 2005",
+                    4: "12 de novembro de 2010",
+                    5: "12 de dezembro de 2013",
+                    6: "19 de dezembro de 2013",
+                    7: "27 de janeiro de 2014",
+                    8: "15 de maio de 2014",
+                    9: "26 de outubro de 2014",
+                    10: "1 de dezembro de 2015",
+                    11: "11 de novembro de 2021",
+                    12: "14 de dezembro de 2023",
+                },
+                sales: "21,5M de cópias (março de 2008)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "In the Beginning",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Líder da Grove Street Families",
+                    mission: "Sweet & Kendl",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Membro da Grove Street",
+                    mission: "Big Smoke",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Membro da Grove Street",
+                    mission: "Sweet & Kendl",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Membro da Grove Street",
+                    mission: "OG Loc",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Irmã de CJ e Sweet",
+                    mission: "Sweet & Kendl",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Líder dos Varrios Los Aztecas",
+                    mission: "Cesar Vialpando",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Namorada de CJ",
+                    mission: "Burning Desire",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Antagonista principal",
+                    mission: "In the Beginning",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Antagonista secundário",
+                    mission: "In the Beginning",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Hippie conspiracionista",
+                    mission: "Body Harvest",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Líder das Tríades",
+                    mission: "Wu Zi Mu",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Membro do Loco Syndicate",
+                    mission: "Photo Opportunity",
+                    quote: "🌴",
+                },
+                14: {
+                    role: "Membro do Loco Syndicate",
+                    mission: "Photo Opportunity",
+                    quote: "🌴",
+                },
+                15: {
+                    role: "Agente do governo",
+                    mission: "Photo Opportunity",
+                    quote: "🌴",
+                },
+                16: {
+                    role: "Artista musical",
+                    mission: "Madd Dogg",
+                    quote: "🌴",
+                },
+            },
+        },
+        lcs: {
+            trailers: {
+                1: "Trailer oficial PSP",
+                2: "Trailer 2 PSP",
+                3: "Trailer Multiplayer PSP",
+                4: "Trailer oficial PS2",
+                5: "Trailer do 10º aniversário",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: Liberty City Stories é um jogo eletrônico desenvolvido pela Rockstar Leeds e distribuído pela Rockstar Games, lançado originalmente para o PlayStation Portable em 25 de outubro de 2005, sendo portado para o PlayStation 2 mais tarde, em 6 de junho de 2006.",
+                2: "A história do jogo se passa em 1998, em Liberty City. O jogador controla Toni Cipriani, um criminoso integrante da máfia da Família Leone.",
+                3: "É o primeiro jogo da franquia a oferecer um modo multijogador oficial. Ele estava disponível para PlayStation Portable através do uso de Ad-Hoc, e contava com 7 modos de jogo diferentes, indo desde corridas e partidas de morte súbita até diversos modos de equipe. Também havia mais de 40 personagens para escolher.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "25 de outubro de 2005",
+                    1: "4 de novembro de 2005",
+                    2: "6 de junho de 2006",
+                    3: "23 de junho de 2006",
+                    4: "17 de dezembro de 2015",
+                    5: "11 de fevereiro de 2016",
+                    6: "11 de março de 2016",
+                },
+                sales: "11M de cópias (março de 2017)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "Introduction",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Chefão da Família Leone",
+                    mission: "Introduction",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Membro da Família Leone",
+                    mission: "Introduction",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Associado da Família Sindacco",
+                    mission: "Bone Voyeur!",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Alto escalão da Máfia Siciliana, antagonista",
+                    mission: "Calm Before the Storm",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Esposa de Salvatore",
+                    mission: "Ho Selecta!",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Empresário, candidato a prefeito de Liberty City",
+                    mission: "The Morgue Party Candidate",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Chefão da Família Sindacco",
+                    mission: "Taking the Peace",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Policial corrupto",
+                    mission: "Sayonara Sindaccos",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Jornalista do Liberty Tree",
+                    mission: "L.C. Confidential",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Esposa de Kazuki Kasen",
+                    mission: "More Deadly Than the Male",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Waka-Gashira dos Yakuza",
+                    mission: "Cash in Kazuki's Chips",
+                    quote: "🌴",
+                },
+            },
+        },
+        vcs: {
+            trailers: {
+                1: "Trailer oficial PSP",
+                2: "Trailer 2 PSP",
+                3: "Trailer 3 PSP",
+                4: "Trailer oficial PS2",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: Vice City Stories é um jogo eletrônico de ação e mundo aberto desenvolvido pela Rockstar Leeds e distribuído pela Rockstar Games, lançado em 31 de outubro de 2006 para PlayStation Portable e em 5 de março de 2007 para PlayStation 2.",
+                2: "O jogo se passa dois anos antes dos acontecimentos de Grand Theft Auto: Vice City, e conta a história de Victor Vance e sua tentativa de construir um império criminoso por toda a cidade ao lado de seu irmão Lance.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "31 de outubro de 2006",
+                    1: "3 de novembro de 2006",
+                    2: "10 de novembro de 2006",
+                    3: "5 de março de 2007",
+                    4: "9 de março de 2007",
+                },
+                sales: "6M de cópias (março de 2017)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Antagonista principal",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Traficante de armas, amigo de Vic",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Irmã de Phil",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Irmão de Vic",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Líder dos cubanos (Cabrones)",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Agente disfarçado da DEA",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Traficante de drogas em Vice City",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Diretora de cinema",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Braço direito do Coronel Cortez",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Traficante de drogas",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Artista musical",
+                    mission: "Kill Phil",
+                    quote: "🌴",
+                },
+            },
+        },
+        iv: {
+            trailers: {
+                1: 'Trailer 1: "Things Will Be Different"',
+                2: 'Trailer 2: "Looking for that Special Someone"',
+                3: 'Trailer 3: "Move Up, Ladies"',
+                4: 'Trailer 4: "Good Lord, What Are You Doing?"',
+                5: "Trailer comercial Xbox 360",
+                6: "Trailer oficial PC",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto IV é um jogo eletrônico de ação e mundo aberto desenvolvido pela Rockstar North e distribuído pela Rockstar Games, lançado originalmente em 29 de abril de 2008 para PlayStation 3 e Xbox 360.",
+                2: "O jogo se passa numa Liberty City moderna, paródia da cidade de Nova York, e no estado de Alderney (Nova Jersey).",
+                3: "O jogador assume o controle de Niko Bellic, um ex-combatente sérvio que chega à cidade em busca de vingança por uma traição sofrida durante a guerra.",
+                4: "Além disso, o jogo introduz a mecânica do telefone: através dele, o jogador pode receber ligações de contatos para desbloquear missões, ou fazer ligações para realizar atividades secundárias com amigos ou parceiros.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "29 de abril de 2008",
+                    1: "2 de dezembro de 2008 (AN)",
+                    2: "3 de dezembro de 2008 (UE)",
+                },
+                sales: "25M de cópias (novembro de 2012)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "The Cousins Bellic",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Primo de Niko",
+                    mission: "The Cousins Bellic",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Namorada de Roman",
+                    mission: "It's Your Call",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Agiota, antagonista",
+                    mission: "It's Your Call",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Chefe da máfia russa em Liberty City",
+                    mission: "Crime and Punishment",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Braço direito de Faustin, antagonista",
+                    mission: "Crime and Punishment",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Membro da gangue jamaicana, amigo de Niko",
+                    mission: "Jamaican Heat",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Amigo de Niko",
+                    mission: "Logging On",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Traficante de drogas em Liberty City",
+                    mission: "Luck of the Irish",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Membro da família McReary, amigo de Niko",
+                    mission: "Luck of the Irish",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Membro da família McReary",
+                    mission: "Three Leaf Clover",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Membro da família McReary",
+                    mission: "Three Leaf Clover",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Membro da família McReary, policial corrupto",
+                    mission: "Street Sweeper",
+                    quote: "🌴",
+                },
+                14: {
+                    role: "Traficante de crack em Liberty City",
+                    mission: "Blow Your Cover",
+                    quote: "🌴",
+                },
+                15: {
+                    role: "Sócio de Playboy X, amigo de Niko",
+                    mission: "Deconstruction for Beginners",
+                    quote: "🌴",
+                },
+                16: {
+                    role: "Ex-companheiro de Niko no exército",
+                    mission: "Weekend at Florian's",
+                    quote: "🌴",
+                },
+                17: {
+                    role: "Ex-companheiro de Niko no exército, antagonista",
+                    mission: "That Special Someone",
+                    quote: "🌴",
+                },
+                18: {
+                    role: "Capo da Família Pegorino",
+                    mission: "Harboring a Grudge",
+                    quote: "🌴",
+                },
+                19: {
+                    role: "Associado da Família Pegorino",
+                    mission: "No Way on the Subway",
+                    quote: "🌴",
+                },
+                20: {
+                    role: "Chefão da Família Pegorino, antagonista",
+                    mission: "Pegorino's Pride",
+                    quote: "🌴",
+                },
+            },
+        },
+        v: {
+            trailers: {
+                1: "Trailer 1",
+                2: "Trailer 2",
+                3: "Trailer oficial: Michael",
+                4: "Trailer oficial: Franklin",
+                5: "Trailer oficial: Trevor",
+                6: "Gameplay oficial",
+                7: "Trailer oficial de lançamento",
+                8: "GTA Online: Gameplay oficial",
+                9: "Comercial de Xbox 360",
+                10: "Anúncio da versão de PlayStation 4, Xbox One e PC",
+                11: "Trailer de lançamento da versão de PlayStation 4 e Xbox One",
+                12: "Trailer de lançamento de PC",
+                13: "Trailer de lançamento da versão Expanded & Enhanced",
+            },
+            paragraphs: {
+                1: 'Grand Theft Auto V é um jogo eletrônico de ação e mundo aberto desenvolvido pela Rockstar North e distribuído pela Rockstar Games, lançado originalmente para PlayStation 3 e Xbox 360 em 17 de setembro de 2013. Também conta com versões para consoles de oitava geração (PlayStation 4 e Xbox One) chamada "Enhanced", e para consoles de nona geração (PlayStation 5 e Xbox Series X/S) chamada "Expanded & Enhanced".',
+                2: "A história se passa em Los Santos, uma paródia de Los Angeles, e em Blaine County, correspondente ao deserto da Califórnia. O jogador assume o controle de três personagens: Michael De Santa, Franklin Clinton e Trevor Philips.",
+                3: "É o segundo jogo mais vendido da história, com 230 milhões de cópias vendidas até hoje, superado apenas por Minecraft.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "17 de setembro de 2013",
+                    1: "18 de novembro de 2014",
+                    2: "14 de abril de 2015",
+                    3: "15 de março de 2022",
+                    4: "4 de março de 2025",
+                },
+                sales: "230M de cópias (agosto de 2026)",
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Protagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Velho amigo de Michael e Trevor",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Velho amigo de Michael e Trevor",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Amigo de Franklin, membro da Grove Street Families",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Agente do FIB, amigo de Michael",
+                    mission: "🌴",
+                    quote: "",
+                },
+                8: {
+                    role: "Agente corrupto do FIB",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Empresário bilionário, antagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Membro da Grove Street Families, antagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Líder das Tríades, antagonista",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Esposa de Michael",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Filho de Michael",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                14: {
+                    role: "Filha de Michael",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                15: {
+                    role: "Chefe do Cartel de Madrazo",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                16: {
+                    role: "Esposa de Martin Madrazo",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                17: {
+                    role: "Amigo e sócio de Trevor",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                18: {
+                    role: "Amigo de Trevor",
+                    mimission: "🌴",
+                    quote: "🌴",
+                },
+                19: {
+                    role: "Produtor de filmes em Vinewood",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+                20: {
+                    role: "Assistente de Devin Weston",
+                    mission: "🌴",
+                    quote: "🌴",
+                },
+            },
+        },
+        vi: {
+            trailers: {
+                1: "Trailer 1",
+                2: "Trailer 2",
+                3: "Apresentação oficial da capa",
+                4: 'Trailer de anúncio "An Extended Look"',
+            },
+            paragraphs: {
+                1: "Grand Theft Auto VI é o próximo jogo que será lançado pela Rockstar Games em 19 de novembro de 2026. Corresponde ao desenvolvimento mais longo de um jogo da franquia, com mais de 13 anos passados desde seu antecessor.",
+                2: "O jogo se passa no estado de Leonida, uma paródia do estado da Flórida. Contará com até 6 locais conhecidos: Vice City (Miami), os Leonida Keys (Florida Keys), Grassrivers (os Everglades), Port Gelhorn, Ambrosia e o Monte Kalaga.",
+                3: "O jogador controlará Jason Duval e Lucia Caminos, um casal de criminosos que deverá enfrentar uma conspiração contra eles, confiando um no outro para sobreviver.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "19 de novembro de 2026",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Protagonista",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Traficante de drogas em Leonida",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Amigo de Jason",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Produtor musical, dono do Jack of Hearts",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Artista musical",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Dupla musical",
+                    mission: "?",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Assaltante de bancos experiente",
+                    mission: "?",
+                    quote: "🌴",
+                },
+            },
+        },
+    },
+    sidebar: {
+        close: "Fechar menu",
+        home: "Início",
+        settings: "Configurações",
+        games: "Jogos",
+        expand: "Expandir menu",
+        collapse: "Recolher",
+        navigation: "Navegação principal",
+        sections: {
+            home: "Início",
+            checklist: "Lista de 100%",
+            artworks: "Artes",
+            mods: "Ferramentas e mods",
+            achievements: "Conquistas",
+            map: "Mapa",
+            radio: "Rádio",
+            cheats: "Trapaças",
+            timeline: "Linha do tempo",
+        },
+    },
+    settings: {
+        title: "Configurações",
+        options: {
+            default: "Padrão",
+            select: "Selecionar",
+        },
+        sections: {
+            general: {
+                title: "Geral",
+                items: {
+                    1: {
+                        name: "Idioma",
+                    },
+                    2: {
+                        name: "Sons",
+                        description:
+                            "Sons da interface de cada jogo ao mudar de seção",
+                    },
+                    3: {
+                        name: "Cursores personalizados",
+                    },
+                    4: {
+                        name: "Animações reduzidas",
+                    },
+                },
+            },
+            home: {
+                items: {
+                    1: {
+                        name: "Plataforma preferida",
+                        description:
+                            "Usada para selecionar conteúdo automaticamente em várias seções do site",
+                    },
+                    2: {
+                        name: "Console preferido",
+                    },
+                },
+            },
+            timeline: {
+                items: {
+                    1: {
+                        name: "Fuso horário",
+                    },
+                    2: {
+                        name: "Formato de hora",
+                        option1: "24 horas",
+                        option2: "12 horas",
+                    },
+                },
+            },
+        },
+        resetProgress: {
+            name: "Redefinir progresso",
+        },
+    },
+    common: {
+        editionLabels: {
+            "10th": "Edição de 10º aniversário",
+            DE: "Edição Definitiva",
+            E: "Versão Enhanced",
+            L: "Versão Legacy",
+            "E&E": "Versão Expanded & Enhanced",
+            NA: "América do Norte",
+            EU: "Europa",
+            AU: "Austrália",
+        },
+    },
+};

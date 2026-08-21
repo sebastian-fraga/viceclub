@@ -1,37 +1,41 @@
 ---
-import "material-symbols/rounded.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import RightMenu from "../components/RightMenu.astro";
-import "../../public/assets/scripts/debug-menu";
+import { ClientRouter } from "astro:transitions";
+
+import type { Game } from "@/types/game";
+
+import Sidebar from "../components/layout/Sidebar";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import NotificationBanner from "@/components/layout/NotificationBanner";
+
+import CursorManager from "@/components/cursors/CursorManager";
+
 import "../styles/main.css";
 
 interface Props {
     title: string;
     description: string;
     canonical: string;
-    bodyClass?: string;
     dataGame?: string;
-    game?: string;
-    section?: string;
-    isIndex?: boolean;
+    game?: Game;
 }
 
 const {
     title,
     description,
     canonical,
-    bodyClass = "",
     dataGame,
-    game = "",
-    section = "",
-    isIndex = false,
+    game,
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
     <head>
+        <ClientRouter />
+        <script>
+            import "@/i18n";
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -53,39 +57,8 @@ const {
             crossorigin
         />
 
-        <link rel="stylesheet" href="/assets/styles/styles.css" />
-        {
-            game && (
-                <link
-                    rel="stylesheet"
-                    href={`/assets/styles/games/${game}.css`}
-                />
-            )
-        }
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href={canonical} />
-
-        {
-            isIndex && (
-                <link
-                    rel="prefetch"
-                    as="image"
-                    href="/assets/images/main/backgrounds/background.webp"
-                    fetchpriority="high"
-                />
-            )
-        }
-
-        {
-            game && (
-                <link
-                    rel="prefetch"
-                    as="image"
-                    href={`/assets/images/main/backgrounds/background_${game}.webp`}
-                    fetchpriority="high"
-                />
-            )
-        }
 
         <meta name="description" content={description} />
 
@@ -101,7 +74,7 @@ const {
         <meta property="og:locale" content="es_ES" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:type" content={isIndex ? "website" : "article"} />
+        <meta property="og:type" content="website" />
 
         <title>{title}</title>
         <script type="application/ld+json">
@@ -112,24 +85,49 @@ const {
                 "url": "https://www.viceclub.app"
             }
         </script>
+        <style is:global>
+            :root {
+                --sidebar-width: 88px;
+                --header-height: 88px;
+                --banner-height: 0px;
+            }
+        </style>
         <slot name="head" />
     </head>
 
-    <body class={bodyClass} data-game={dataGame} id="top">
-        <slot name="loader" />
-        <Header isIndex={isIndex} />
+    <body data-game={dataGame} id="top">
+        <NotificationBanner client:load transition:persist />
+        <Header transition:persist />
+        <Sidebar
+            client:load
+            currentPath={Astro.url.pathname}
+            transition:persist
+        />
 
-        <slot />
+        <CursorManager gameId={game?.id} client:load />
 
-        <Footer game={game} isIndex={isIndex} />
-        <RightMenu isIndex={isIndex} game={game} section={section} />
-        <slot name="overlay" />
+        <div
+            style={game
+                ? `
+            --game-accent: ${game.theme.accent.default};
+            --game-accent-muted: ${game.theme.accent.muted};
 
-        <!-- Language Selector -->
-        <script is:inline src="/assets/scripts/language-selector.js"></script>
-        <!-- Right Content Sidebar -->
-        <script is:inline src="/assets/scripts/right-menu.js"></script>
+            --game-buttons-primary-background: ${game.theme.buttons.primary.background};
+            --game-buttons-primary-hovered: ${game.theme.buttons.primary.hovered};
+            --game-buttons-primary-border: ${game.theme.buttons.primary.border};
+            --game-buttons-primary-text: ${game.theme.buttons.primary.text};
 
+            --game-buttons-secondary-background: ${game.theme.buttons.secondary.background};
+            --game-buttons-secondary-hovered: ${game.theme.buttons.secondary.hovered};
+            --game-buttons-secondary-border: ${game.theme.buttons.secondary.border};
+            --game-buttons-secondary-text: ${game.theme.buttons.secondary.text};
+        `
+                : ""}
+        >
+            <slot />
+        </div>
+
+        <Footer />
         <slot name="scripts" />
     </body>
 </html>

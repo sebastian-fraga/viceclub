@@ -1,0 +1,103 @@
+@reference "tailwindcss";
+
+@keyframes timeline-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.timeline-event-enter {
+    animation: timeline-fade-in 0.4s ease-out both;
+    animation-delay: calc(var(--stagger-index, 0) * 80ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline-event-enter {
+        animation: none;
+    }
+}
+
+.text-styles a {
+    @apply text-yellow-200 font-medium transition-all duration-300 hover:text-yellow-300 hover:underline;
+}
+
+.text-styles br {
+    @apply pt-12;
+}
+
+.timeline-entry {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.timeline-event {
+    position: relative;
+}
+
+.timeline-event-body {
+    position: relative;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.timeline-event-body::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 36px;
+    bottom: -1.5rem;
+    width: 2px;
+    background: rgb(129 140 248 / 0.18);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-event:last-child .timeline-event-body::before {
+    display: none;
+}
+
+.timeline-node {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .timeline-main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.timeline-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.timeline-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 360px;
+}
+
+.timeline-image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.timeline-text {
+    max-width: 850px;
+}

@@ -1,43 +1,41 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import type { TimelineData } from "@/components/timeline/Timeline";
+import Timeline from "@/components/timeline/Timeline";
+import { GTAVI } from "@/data/games/VI";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const game = "VI";
+const gameData = GTAVI;
+
+let timelineData: TimelineData | null = null;
+
+try {
+    const response = await fetch(
+        `https://viceclub.s3.us-east-1.amazonaws.com/${game}/timeline.json`,
+    );
+
+    if (response.ok) {
+        timelineData = await response.json();
+    } else {
+        console.error(
+            `Error al cargar timeline.json para ${game}: ${response.status}`,
+        );
+    }
+} catch (err) {
+    console.error(`Error al cargar timeline.json para ${game}:`, err);
+}
 ---
 
 <BaseLayout
     title="Linea de tiempo de GTA 6 – Lista completa de filtraciones e información | Vice Club"
     description="Línea de tiempo de GTA 6 con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
     canonical="https://www.viceclub.app/VI/timeline"
-    bodyClass="gta-vi timeline"
-    game="VI"
-    section="timeline"
+    game={gameData}
 >
-    <main class="block" id="container">
-        <section class="text-container" id="timelineContainer"></section>
+    <main
+        class="ml-0 flex flex-col gap-1 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-12 md:ml-(--sidebar-width) md:gap-4"
+        style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
+    >
+        <Timeline gameCode={game} initialData={timelineData} client:load />
     </main>
-
-    <div class="timeline-arrow" id="arrowButton">
-        <span class="material-symbols-rounded">south</span>
-    </div>
-
-    <dialog id="imageOverlay" slot="overlay">
-        <button
-            class="material-symbols-rounded close-btn"
-            id="closeBtn"
-            aria-label="Cerrar"
-        >
-            close_small
-        </button>
-        <figure>
-            <div class="image-wrapper">
-                <img src="" alt="Imagen ampliada" id="overlayImg" />
-            </div>
-            <figcaption id="overlayFooterText"></figcaption>
-        </figure>
-    </dialog>
-
-    <fragment slot="scripts">
-        <!-- Timeline -->
-        <script is:inline src="/assets/scripts/timeline.js"></script>
-        <!-- Overlay -->
-        <script is:inline src="/assets/scripts/overlay.js"></script>
-    </fragment>
 </BaseLayout>

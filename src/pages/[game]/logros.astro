@@ -1,5 +1,4 @@
 ---
-import "../../styles/pages/logros.css";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
@@ -65,7 +64,6 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
     description={meta.description}
     canonical={`https://www.viceclub.app/${game}/logros`}
     bodyClass={meta.bodyClass}
-    game={game}
     section="logros"
 >
     <main class="block" id="container">

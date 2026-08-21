@@ -1,0 +1,63 @@
+---
+import type { Game } from "@/types/game";
+
+import charactersData from "../../data/characters.json";
+import type { Character } from "../home/CharacterCard";
+import CharacterGrid from "../home/CharacterGrid";
+import ExploreSections from "../home/ExploreSections";
+import FichaTecnica from "../home/FichaTecnica.tsx";
+import GameHero from "../home/GameHero";
+import HomeParagraphs from "../home/HomeParagraphs";
+
+
+export async function getStaticPaths() {
+    const gameFiles = import.meta.glob<{ default: Game }>(
+        "../../data/games/*.ts",
+        { eager: true },
+    );
+
+    return Object.values(gameFiles).map(({ default: game }) => ({
+        params: { game: game.id },
+        props: { game },
+    }));
+}
+
+const { game } = Astro.props;
+
+const characters: Character[] =
+    (charactersData as unknown as Record<string, Character[]>)[game.id] ?? [];
+---
+
+<div
+    class="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-22 max-mobile:gap-8 mb-12 mt-4"
+>
+    <GameHero client:load game={game} />
+
+    <HomeParagraphs client:load paragraphs={game.description.paragraphs} />
+
+    <div
+        class="grid grid-cols-2 max-mobile:grid-cols-1 w-full gap-0 max-mobile:gap-8"
+    >
+        <div class="flex justify-start">
+            <FichaTecnica
+                game={game.id}
+                title={game.technicalSheet.title}
+                developers={game.technicalSheet.developers}
+                publisher={game.technicalSheet.publisher}
+                producer={game.technicalSheet.producer}
+                writers={game.technicalSheet.writers}
+                platforms={game.technicalSheet.platforms}
+                dates={game.technicalSheet.dates}
+                engines={game.technicalSheet.engines}
+                sales={game.technicalSheet.sales}
+                client:load
+            />
+        </div>
+
+        <CharacterGrid characters={characters} gameId={game.id} client:load />
+    </div>
+
+    <div>
+        <ExploreSections game={game} client:load />
+    </div>
+</div>

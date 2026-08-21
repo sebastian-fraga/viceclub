@@ -1,0 +1,97 @@
+<header
+    class="fixed top-(--banner-height) right-0 z-100 flex h-22 w-full items-center justify-start max-mobile:justify-center overflow-hidden border-b-2 border-slate-700/40 bg-linear-90 from-[#15151F] via-slate-950 to-[#15151F] transition-[top] duration-200 ease-out"
+>
+    <button
+        type="button"
+        id="mobile-menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        class="mobile:hidden max-mobile:flex absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-lg text-slate-200
+        border border-slate-50/10
+                hover:text-white
+            bg-white/10 transition z-12000"
+    >
+        <svg
+            id="mobile-menu-icon-hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+        </svg>
+    </button>
+
+    <div
+        class="flex items-center justify-start gap-4 max-mobile:flex-none max-mobile:gap-2"
+    >
+        <a
+            href="/"
+            class="m-0 p-0 leading-none transition-all duration-200 ease-in-out active:scale-90
+        hover:brightness-70"
+        >
+            <img
+                class="ml-7.5 w-[4em] drop-shadow-2xl drop-shadow-cyan-800/40 max-mobile:ml-0 max-mobile:w-15"
+                src="/assets/images/app/logo.webp"
+                alt="Vice Club Logo"
+            />
+        </a>
+
+        <span
+            class="select-none
+        text-center
+        font-body-condensed
+        font-black
+        text-5xl
+        tracking-tight
+        bg-linear-to-b
+        from-blue-200
+        via-blue-400
+        to-blue-600
+        bg-clip-text
+        text-transparent
+        [-webkit-text-stroke:1.5px_#101525]
+        drop-shadow-[0_2px_0_#000]
+        transition-all
+        duration-200
+        ease-in-out
+        hover:scale-x-[1.04]
+        hover:drop-shadow-[0_0_10px_#6ea8ff88]
+        hover:cursor-default
+        active:-translate-y-0.5
+        max-mobile:text-[2.3em]"
+        >
+            VICE CLUB
+        </span>
+    </div>
+
+    <script>
+        function initMobileMenuToggle() {
+            const button = document.getElementById("mobile-menu-toggle");
+            if (!button || button.dataset.bound === "true") return;
+            button.dataset.bound = "true";
+
+            button.addEventListener("click", () => {
+                document.dispatchEvent(new CustomEvent("vc:toggle-sidebar"));
+            });
+
+            document.addEventListener("vc:sidebar-state", (event) => {
+                const { open } = (event as CustomEvent<{ open: boolean }>)
+                    .detail;
+
+                button.setAttribute("aria-expanded", String(open));
+                button.setAttribute("aria-label", "Abrir menú");
+            });
+        }
+
+        initMobileMenuToggle();
+        document.addEventListener("astro:after-swap", initMobileMenuToggle);
+    </script>
+</header>

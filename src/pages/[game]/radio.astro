@@ -1,31 +1,51 @@
 ---
-import "../../styles/pages/radio.css"
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Skeleton from "../../components/Skeleton.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
-export function getStaticPaths() {
-    return [
-        { params: { game: "III" } },
-        { params: { game: "VC" } },
-        { params: { game: "SA" } },
-        { params: { game: "LCS" } },
-        { params: { game: "VCS" } },
-        { params: { game: "IV" } },
-        { params: { game: "V" } },
-    ];
-}
+import { GAME_SECTIONS, type GameId } from "@/config/games";
+import { GTAIII } from "@/data/games/III";
+import { GTAVC } from "@/data/games/VC";
+import { GTASA } from "@/data/games/SA";
+import { GTALCS } from "@/data/games/LCS";
+import { GTAVCS } from "@/data/games/VCS";
+import { GTAIV } from "@/data/games/IV";
+import { GTAV } from "@/data/games/V";
 
-const radioCountMap: Record<string, number> = {
-    III: 9,
-    VC: 9,
-    SA: 11,
-    LCS: 10,
-    VCS: 9,
-    IV: 22,
-    V: 27,
+import { parseRadioData } from "@/components/radio/lib/parseRadioData";
+import { getRadioJsonUrl } from "@/components/radio/lib/radioUrls";
+import RadioPlayer from "@/components/radio/RadioPlayer";
+import Title from "@/components/ui/Title";
+
+const GAME_DATA: Partial<Record<GameId, typeof GTAIII>> = {
+    III: GTAIII,
+    VC: GTAVC,
+    SA: GTASA,
+    LCS: GTALCS,
+    VCS: GTAVCS,
+    IV: GTAIV,
+    V: GTAV,
 };
 
+export function getStaticPaths() {
+    return (Object.keys(GAME_SECTIONS) as GameId[])
+        .filter((gameId) => GAME_SECTIONS[gameId].includes("radio"))
+        .map((game) => ({
+            params: { game },
+        }));
+}
+
 const { game } = Astro.params;
+const gameId = game as GameId;
+
+const gameData = GAME_DATA[gameId];
+
+if (!gameData) {
+    throw new Error(`No game data found for ${gameId}`);
+}
+
+const res = await fetch(getRadioJsonUrl(gameId));
+const radioDataRaw = await res.json();
+
+const stations = parseRadioData(radioDataRaw);
 
 const metadata = {
     III: {
@@ -36,6 +56,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto III",
         soundDelay: null,
     },
+
     VC: {
         title: "Radios de GTA Vice City – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -44,6 +65,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto: Vice City",
         soundDelay: null,
     },
+
     SA: {
         title: "Radios de GTA San Andreas – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -52,6 +74,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto: San Andreas",
         soundDelay: 200,
     },
+
     LCS: {
         title: "Radios de GTA Liberty City Stories – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -60,6 +83,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto: Liberty City Stories",
         soundDelay: 200,
     },
+
     VCS: {
         title: "Radios de GTA Vice City Stories – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -68,6 +92,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto: Vice City Stories",
         soundDelay: null,
     },
+
     IV: {
         title: "Radios de GTA IV – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -76,6 +101,7 @@ const metadata = {
         heading: "Radios de Grand Theft Auto IV",
         soundDelay: null,
     },
+
     V: {
         title: "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
         description:
@@ -86,93 +112,29 @@ const metadata = {
     },
 };
 
-const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+const meta = metadata[gameId as keyof typeof metadata];
 ---
 
 <BaseLayout
     title={meta.title}
     description={meta.description}
-    canonical={`https://www.viceclub.app/${game}/radio`}
+    canonical={`https://www.viceclub.app/${gameId}/radio`}
     bodyClass={meta.bodyClass}
-    game={game}
+    game={gameData}
     section="radio"
 >
-    <main class="block" id="container" style="display: block;">
-        <section class="text-container">
-            <h1>{meta.heading}</h1>
-            <div class="radio-container">
-                <div
-                    id="radioGrid"
-                    class={game === "V" ? "radio-wheel" : "radio-grid"}
-                >
-                    <Skeleton
-                        variant="radio"
-                        game={game}
-                        radioCount={radioCountMap[game as string] ?? 1}
-                    />
-                </div>
+    <main
+        style="padding-top: var(--header-height); transition: margin-left 0.3s;"
+        class="ml-0 md:ml-(--sidebar-width) bg-linear-135 from-[#15151F] to-[#1E1E33] flex flex-col gap-16 md:gap-45 pb-12 mt-30"
+    >
+        <section
+            class="w-fit max-mobile:w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-16 max-mobile:gap-20 max-mobile:pb-12"
+        >
+            <div class="max-w-fit">
+                <Title label={meta.heading} />
             </div>
+
+            <RadioPlayer client:load stations={stations} />
         </section>
     </main>
-
-    <aside id="radioInfo" class="radio-info" role="region">
-        <img src="" alt="" id="radioImage" />
-        <h3 id="radioTitle"></h3>
-        <div id="radioDJ"></div>
-        <div id="radioGenre"></div>
-        <ol id="radioList"></ol>
-    </aside>
-
-    <section class="radio-footer" aria-label="Reproductor de radio">
-        <div class="footer-left">
-            <div class="footer-album">
-                <img id="albumArt" alt="" />
-            </div>
-            <div class="footer-text">
-                <p id="songTitle"></p>
-                <p id="artistName"></p>
-            </div>
-        </div>
-        <div class="footer-center">
-            <div class="footer-controls">
-                <span class="material-symbols-rounded">skip_previous</span>
-                <span class="material-symbols-rounded footer-pause"
-                    >pause_circle</span
-                >
-                <span
-                    class="material-symbols-rounded footer-play"
-                    style="display: none;">play_circle</span
-                >
-                <span class="material-symbols-rounded">skip_next</span>
-            </div>
-            <div class="footer-timer">
-                <p id="currentTime">0:00</p>
-                <div id="bar">
-                    <div id="currentBar"></div>
-                </div>
-                <p id="totalTime">0:00</p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <div class="footer-volume">
-                <span class="material-symbols-rounded">volume_up</span>
-                <input type="range" min="0" max="100" value="100" />
-            </div>
-        </div>
-    </section>
-
-    <fragment slot="scripts">
-        {
-            meta.soundDelay !== null ? (
-                <script is:inline define:vars={{ delay: meta.soundDelay }}>
-                    window.SOUND_DELAY = delay;
-                </script>
-            ) : null
-        }
-        <!-- Right Content settings -->
-        <script is:inline src="/assets/scripts/cursor.js"></script>
-        <script is:inline src="/assets/scripts/sounds.js"></script>
-        <!-- Radio -->
-        <script is:inline src="/assets/scripts/radio.js"></script>
-    </fragment>
 </BaseLayout>
