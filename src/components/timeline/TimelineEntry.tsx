@@ -210,10 +210,10 @@ function TimelineEventItem({
                                         onClick={() => setSpoilerOpen(false)}
                                         aria-expanded={true}
                                         aria-controls="spoiler-content"
-                                        className="flex items-center gap-1.5 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-medium text-slate-200 backdrop-blur-sm cursor-pointer hover:bg-slate-900 transition"
+                                        className="flex items-center gap-1.5 rounded-full bg-blue-950 text-white px-3 py-1 text-xs font-medium backdrop-blur-sm cursor-pointer hover:bg-slate-900 hover:text-indigo-400 transition"
                                     >
                                         <IconEyeOff size={14} stroke={2} />
-                                        Ocultar
+                                        {t("timeline.buttons.hideSpoilers")}
                                     </button>
                                 )}
                             </div>
@@ -271,7 +271,7 @@ function TimelineEventItem({
                                             className="flex items-center gap-2 rounded-full bg-indigo-300 px-5 py-2.5 max-mobile:px-4 max-mobile:py-2 max-mobile:text-sm text-sm font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white shadow-lg active:scale-[0.98] transition"
                                         >
                                             <IconEye size={18} stroke={2} />
-                                            Leer spoilers
+                                            {t("timeline.buttons.showSpoilers")}
                                         </button>
                                     </div>
                                 )}
