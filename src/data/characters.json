@@ -952,8 +952,8 @@
             "role": "home.iv.characters.19.role",
             "image": "../assets/images/characters/IV/phil.webp",
             "age": 41,
-            "status": "home.characters.statusLabel.maleAlly",
-            "statusLabel": "Aliado",
+            "status": "maleAlly",
+            "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.19.mission",
             "quote": "home.iv.characters.19.quote",
             "nationalities": ["ie", "it", "us"]
@@ -964,8 +964,8 @@
             "role": "home.iv.characters.20.role",
             "image": "../assets/images/characters/IV/pegorino.webp",
             "age": 51,
-            "status": "home.characters.statusLabel.maleEnemy",
-            "statusLabel": "Antagonista",
+            "status": "maleEnemy",
+            "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iv.characters.20.mission",
             "quote": "home.iv.characters.20.quote",
             "nationalities": ["it", "us"]
