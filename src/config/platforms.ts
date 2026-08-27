@@ -1,19 +1,47 @@
+import type { ComponentType } from "react";
+
+import PlayStationIcon from "@/components/icons/PlayStationIcon";
+import XboxIcon from "@/components/icons/XboxIcon";
+import NintendoIcon from "@/components/icons/NintendoIcon";
+import WindowsIcon from "@/components/icons/WindowsIcon";
+
+import PS2Icon from "@/components/icons/PS2Icon";
+import PSPIcon from "@/components/icons/PSPIcon";
+import PS3Icon from "@/components/icons/PS3Icon";
+import PS4Icon from "@/components/icons/PS4Icon";
+import PS5Icon from "@/components/icons/PS5Icon";
+
+import XboxSeriesIcon from "@/components/icons/XboxSeriesIcon";
+
+import SwitchIcon from "@/components/icons/SwitchIcon";
+
 export const platformFamilies = {
     playstation: {
         name: "PlayStation",
         platforms: ["ps2", "psp", "ps3", "ps4", "ps5"],
+        background: "#1b2a5585",
+        icon: PlayStationIcon,
     },
+
     xbox: {
         name: "Xbox",
         platforms: ["xbox", "xbox360", "xboxOne", "xboxSeries"],
+        background: "#204723c4",
+        icon: XboxIcon,
     },
+
     nintendo: {
         name: "Nintendo",
         platforms: ["switch"],
+        background: "#463636c4",
+        icon: NintendoIcon,
     },
+
     pc: {
         name: "PC",
         platforms: ["pc"],
+        background: "",
+        icon: WindowsIcon,
     },
 } as const;
 
@@ -30,15 +58,33 @@ export const platforms = {
     xboxSeries: "Xbox Series",
 
     switch: "Nintendo Switch",
-
     pc: "PC",
 } as const;
 
 export type PlatformFamily = keyof typeof platformFamilies;
 export type Platform = keyof typeof platforms;
 
+export const platformIcons = {
+    ps2: PS2Icon,
+    psp: PSPIcon,
+    ps3: PS3Icon,
+    ps4: PS4Icon,
+    ps5: PS5Icon,
+
+    xbox: XboxIcon,
+    xbox360: XboxIcon,
+    xboxOne: XboxIcon,
+    xboxSeries: XboxSeriesIcon,
+
+    switch: SwitchIcon,
+    pc: WindowsIcon,
+} satisfies Record<Platform, ComponentType>;
+
 export const platformFamilyOptions = [
-    { label: "settings.options.default", value: "default" },
+    {
+        label: "settings.options.default",
+        value: "default",
+    },
     ...Object.entries(platformFamilies).map(([value, { name }]) => ({
         label: name,
         value,
@@ -72,5 +118,5 @@ export const getPlatformFamily = (
         (data.platforms as readonly Platform[]).includes(platform),
     );
 
-    return family?.[0] as PlatformFamily | "default";
+    return (family?.[0] as PlatformFamily) ?? "default";
 };
