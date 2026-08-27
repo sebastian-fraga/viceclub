@@ -1,5 +1,6 @@
 import {
     IconAccessible,
+    IconCalendar,
     IconClock,
     IconDeviceGamepad,
     IconDeviceGamepad2,
@@ -10,7 +11,7 @@ import {
     IconVolume,
 } from "@tabler/icons-react";
 
-import type { SettingsSection } from "@/types/settings";
+import type { ActionSetting, SettingsSection } from "@/types/settings";
 import { defaultLanguage, languageOptions } from "./languages";
 import { getPlatformOptions, platformFamilyOptions } from "./platforms";
 import { defaultUtcOffset, utcOffsetOptions } from "./utcOffsets";
@@ -42,6 +43,7 @@ export const settingsConfig: SettingsSection[] = [
                 type: "toggle",
                 defaultValue: false,
                 icon: IconPointerFilled,
+                hideOnMobile: true,
             },
             {
                 id: "reduced-animations",
@@ -85,7 +87,7 @@ export const settingsConfig: SettingsSection[] = [
                 type: "action",
                 icon: IconRefreshAlert,
                 destructive: true,
-            },
+            } satisfies ActionSetting,
         ],
     },
     {
@@ -114,18 +116,35 @@ export const settingsConfig: SettingsSection[] = [
                 options: utcOffsetOptions,
             },
             {
-                id: "timeformat",
+                id: "dateformat",
                 name: "settings.sections.timeline.items.2.name",
+                type: "select",
+                icon: IconCalendar,
+                defaultValue: "DD/MM/YYYY",
+                options: [
+                    {
+                        label: "settings.sections.timeline.items.2.option1",
+                        value: "DD/MM/YYYY",
+                    },
+                    {
+                        label: "settings.sections.timeline.items.2.option2",
+                        value: "MM/DD/YYYY",
+                    },
+                ],
+            },
+            {
+                id: "timeformat",
+                name: "settings.sections.timeline.items.3.name",
                 type: "select",
                 icon: IconClock,
                 defaultValue: "24h",
                 options: [
                     {
-                        label: "settings.sections.timeline.items.2.option1",
+                        label: "settings.sections.timeline.items.3.option1",
                         value: "24h",
                     },
                     {
-                        label: "settings.sections.timeline.items.2.option2",
+                        label: "settings.sections.timeline.items.3.option2",
                         value: "12h",
                     },
                 ],
