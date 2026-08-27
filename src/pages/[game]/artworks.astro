@@ -1,79 +1,101 @@
 ---
+import { IconArrowLeft } from "@tabler/icons-react";
+import { GTAIII } from "../../data/games/III";
+import { GTAIV } from "../../data/games/IV";
+import { GTALCS } from "../../data/games/LCS";
+import { GTASA } from "../../data/games/SA";
+import { GTAV } from "../../data/games/V";
+import { GTAVC } from "../../data/games/VC";
+import { GTAVCS } from "../../data/games/VCS";
+import { GTAVI } from "../../data/games/VI";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-  return [
-    { params: { game: "III" } },
-    { params: { game: "VC" } },
-    { params: { game: "SA" } },
-    { params: { game: "LCS" } },
-    { params: { game: "VCS" } },
-    { params: { game: "IV" } },
-    { params: { game: "V" } },
-  ];
+    const games = {
+        III: GTAIII,
+        VC: GTAVC,
+        SA: GTASA,
+        LCS: GTALCS,
+        VCS: GTAVCS,
+        IV: GTAIV,
+        V: GTAV,
+        VI: GTAVI,
+    };
+
+    return Object.entries(games).map(([game, gameData]) => ({
+        params: { game },
+        props: { gameData },
+    }));
 }
 
-const { game } = Astro.params;
-
 const metadata = {
-  III: {
-    title: "Artworks de GTA III | Vice Club",
-    description: "Todos los artworks de GTA III. Artworks de Claude, personajes secundarios, bandas y más en Grand Theft Auto III.",
-    bodyClass: "gta-3"
-  },
-  VC: {
-    title: "Artworks de GTA VC | Vice Club",
-    description: "Todos los artworks de GTA VC. Artworks de Tommy, personajes secundarios, bandas y más en Grand Theft Auto: Vice City.",
-    bodyClass: "gta-vc"
-  },
-  SA: {
-    title: "Artworks de GTA SA | Vice Club",
-    description: "Todos los artworks de GTA SA. Artworks de CJ, personajes secundarios, bandas y más en Grand Theft Auto: San Andreas.",
-    bodyClass: "gta-sa"
-  },
-  LCS: {
-    title: "Artworks de GTA LCS | Vice Club",
-    description: "Todos los artworks de GTA LCS. Artworks de Toni Cipriani, personajes secundarios, bandas y más en Grand Theft Auto: Liberty City Stories.",
-    bodyClass: "gta-lcs"
-  },
-  VCS: {
-    title: "Artworks de GTA VCS | Vice Club",
-    description: "Todos los artworks de GTA VCS. Artworks de Victor Vance, personajes secundarios, bandas y más en Grand Theft Auto: Vice City Stories.",
-    bodyClass: "gta-vcs"
-  },
-  IV: {
-    title: "Artworks de GTA IV | Vice Club",
-    description: "Todos los artworks de GTA IV. Artworks de Niko Bellic, personajes secundarios, bandas y más en Grand Theft Auto IV.",
-    bodyClass: "gta-4"
-  },
-  V: {
-    title: "Artworks de GTA V | Vice Club",
-    description: "Todos los artworks de GTA V. Artworks de Michael, Franklin, Trevor, personajes secundarios y más en Grand Theft Auto V.",
-    bodyClass: "gta-5"
-  }
+    III: {
+        title: "Artworks de GTA III | Vice Club",
+        description:
+            "Todos los artworks de GTA III. Artworks de Claude, personajes secundarios, bandas y más en Grand Theft Auto III.",
+        bodyClass: "gta-3",
+    },
+    VC: {
+        title: "Artworks de GTA VC | Vice Club",
+        description:
+            "Todos los artworks de GTA VC. Artworks de Tommy, personajes secundarios, bandas y más en Grand Theft Auto: Vice City.",
+        bodyClass: "gta-vc",
+    },
+    SA: {
+        title: "Artworks de GTA SA | Vice Club",
+        description:
+            "Todos los artworks de GTA SA. Artworks de CJ, personajes secundarios, bandas y más en Grand Theft Auto: San Andreas.",
+        bodyClass: "gta-sa",
+    },
+    LCS: {
+        title: "Artworks de GTA LCS | Vice Club",
+        description:
+            "Todos los artworks de GTA LCS. Artworks de Toni Cipriani, personajes secundarios, bandas y más en Grand Theft Auto: Liberty City Stories.",
+        bodyClass: "gta-lcs",
+    },
+    VCS: {
+        title: "Artworks de GTA VCS | Vice Club",
+        description:
+            "Todos los artworks de GTA VCS. Artworks de Victor Vance, personajes secundarios, bandas y más en Grand Theft Auto: Vice City Stories.",
+        bodyClass: "gta-vcs",
+    },
+    IV: {
+        title: "Artworks de GTA IV | Vice Club",
+        description:
+            "Todos los artworks de GTA IV. Artworks de Niko Bellic, personajes secundarios, bandas y más en Grand Theft Auto IV.",
+        bodyClass: "gta-4",
+    },
+    V: {
+        title: "Artworks de GTA V | Vice Club",
+        description:
+            "Todos los artworks de GTA V. Artworks de Michael, Franklin, Trevor, personajes secundarios y más en Grand Theft Auto V.",
+        bodyClass: "gta-5",
+    },
 };
+
+const { game } = Astro.params;
+const { gameData } = Astro.props;
 
 const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-  title={meta.title}
-  description={meta.description}
-  canonical={`https://www.viceclub.app/${game}/artworks`}
-  bodyClass={meta.bodyClass}
-  game={game}
-  section="artworks"
+    title={meta.title}
+    description={meta.description}
+    canonical={`https://www.viceclub.app/${game}/artworks`}
+    game={gameData}
 >
-  <div class="wip">
-    <p>EN CONSTRUCCIÓN</p>
-  </div>
-  <div class="block" id="container">
-    <div class="text-container"></div>
-  </div>
+    <main class="flex flex-col min-h-screen items-center justify-center">
+        <h2 class="text-4xl font-bold text-white">UNDER CONSTRUCTION</h2>
+        <a
+            class="mt-3 bg-indigo-300 px-8 py-3 text-xl text-indigo-900 font-medium rounded-full flex items-center gap-2 transition-all hover:bg-indigo-400 hover:text-indigo-50"
+            href="/"
+        >
+            <IconArrowLeft />
+            Back
+        </a>
+    </main>
 
-  <fragment slot="scripts">
-    <!-- Right Content settings -->
-    <script is:inline src="/assets/scripts/cursor.js"></script>
-    <script is:inline src="/assets/scripts/sounds.js"></script>
-  </fragment>
+    <fragment slot="scripts">
+    </fragment>
 </BaseLayout>

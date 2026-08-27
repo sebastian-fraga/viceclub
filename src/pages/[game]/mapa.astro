@@ -1,19 +1,18 @@
 ---
+import type { GameId } from "@/config/games";
+import { games } from "../../data/games";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { IconArrowLeft } from "@tabler/icons-react";
 
 export function getStaticPaths() {
-    return [
-        { params: { game: "III" } },
-        { params: { game: "VC" } },
-        { params: { game: "SA" } },
-        { params: { game: "LCS" } },
-        { params: { game: "VCS" } },
-        { params: { game: "IV" } },
-        { params: { game: "V" } },
-    ];
+    return Object.entries(games).map(([game, gameData]) => ({
+        params: { game },
+        props: { gameData },
+    }));
 }
 
-const { game } = Astro.params;
+const game = Astro.params.game as GameId;
+const gameData = games[game as keyof typeof games];
 
 const metadata = {
     III: {
@@ -85,119 +84,19 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-    title={meta.title}
-    description={meta.description}
+    title={`${gameData.title} | Vice Club`}
+    description={gameData.description.paragraphs[0]}
     canonical={`https://www.viceclub.app/${game}/mapa`}
-    bodyClass={meta.bodyClass}
-    game={game}
-    section="mapa"
+    game={gameData}
 >
-    <fragment slot="head">
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-            crossorigin=""
-        />
-        <script
-            is:inline
-            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
-        />
-    </fragment>
-
-    <main class="block" id="container">
-        <section class="text-container">
-            <h1>{meta.heading}</h1>
-
-            <div class="map-wrapper">
-                <aside>
-                    <div id="map-toolbar">
-                        <div class="toolbar-top">
-                            <div class="aside-header">
-                                <span class="material-symbols-rounded">map</span
-                                >
-                                <h3>{meta.toolbarGameId}</h3>
-                            </div>
-                            <div id="layer-buttons"></div>
-                        </div>
-
-                        <div class="toolbar-text">
-                            <div class="toolbar-buttons">
-                                <button id="btn-export-progress">
-                                    <span class="material-symbols-rounded"
-                                        >download</span
-                                    >
-                                    Exportar progreso
-                                </button>
-
-                                <button id="btn-export-debug">
-                                    <span class="material-symbols-rounded"
-                                        >download</span
-                                    >
-                                    Exportar JSON (debug)
-                                </button>
-
-                                <button id="btn-import">
-                                    <span class="material-symbols-rounded"
-                                        >upload</span
-                                    >
-                                    Importar datos
-                                </button>
-                            </div>
-
-                            <div class="toolbar-footer">
-                                <button id="btn-reset">
-                                    <span class="material-symbols-rounded"
-                                        >restart_alt</span
-                                    >
-                                    Reiniciar progreso
-                                </button>
-                            </div>
-                        </div>
-
-                        <input
-                            type="file"
-                            id="input-import"
-                            accept=".json"
-                            hidden
-                        />
-                    </div>
-                </aside>
-                <figure class="map-container" id="map"></figure>
-            </div>
-        </section>
+    <main class="flex flex-col min-h-screen items-center justify-center">
+        <h2 class="text-4xl font-bold text-white">UNDER CONSTRUCTION</h2>
+        <a
+            class="mt-3 bg-indigo-300 px-8 py-3 text-xl text-indigo-900 font-medium rounded-full flex items-center gap-2 transition-all hover:bg-indigo-400 hover:text-indigo-50"
+            href="/"
+        >
+            <IconArrowLeft />
+            Back
+        </a>
     </main>
-
-    <fragment slot="scripts">
-        {
-            meta.soundDelay !== null ? (
-                <script is:inline define:vars={{ delay: meta.soundDelay }}>
-                    window.SOUND_DELAY = delay;
-                </script>
-            ) : null
-        }
-        <!-- Right Content settings -->
-        <script is:inline src="/assets/scripts/cursor.js"></script>
-        <script is:inline src="/assets/scripts/sounds.js"></script>
-
-        <!-- Map -->
-        <script
-            is:inline
-            src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"
-        ></script>
-        <script is:inline define:vars={{ gameId: game }}>
-            window.GAME_ID = gameId;
-            window.CONFIG_URL = `https://viceclub.s3.us-east-1.amazonaws.com/${gameId}/map.json`;
-        </script>
-        <script is:inline src="/assets/scripts/map.js"></script>
-    </fragment>
 </BaseLayout>
