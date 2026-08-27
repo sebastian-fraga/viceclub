@@ -1,0 +1,713 @@
+{
+    "wildstyle_pirate_radio": {
+        "image": "../assets/images/radios/VC/wildstyle.webp",
+        "displayName": "Wildstyle Pirate Radio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wildstyle.ogg",
+        "dj": "Mr. Magic",
+        "genre": ["rap", "funk"],
+        "songs": [
+            {
+                "artist": "Trouble Funk",
+                "title": "Pump Me Up",
+                "start": "0",
+                "end": "275"
+            },
+            {
+                "artist": "Davy DMX",
+                "title": "One for the Treble",
+                "start": "278",
+                "end": "525"
+            },
+            {
+                "artist": "Cybotron",
+                "title": "Clear",
+                "start": "526",
+                "end": "704"
+            },
+            {
+                "artist": "Hashim",
+                "title": "Al Naafiysh (The Soul)",
+                "start": "708",
+                "end": "971"
+            },
+            {
+                "artist": "Herbie Hancock",
+                "title": "Rockit",
+                "start": "973",
+                "end": "1119"
+            },
+            {
+                "artist": "Afrika Bambaataa & Soul Sonic Force",
+                "title": "Looking for the Perfect Beat (12\" Vocal Version)",
+                "start": "1128",
+                "end": "1537"
+            },
+            {
+                "artist": "2 Live Crew",
+                "title": "Get It Girl",
+                "start": "1541",
+                "end": "1776"
+            },
+            {
+                "artist": "Run-D.M.C.",
+                "title": "Rock Box",
+                "start": "1781",
+                "end": "2029"
+            },
+            {
+                "artist": "Mantronix",
+                "title": "Bassline",
+                "start": "2032",
+                "end": "2253"
+            },
+            {
+                "artist": "Tyrone Brunson",
+                "title": "The Smurf",
+                "start": "2256",
+                "end": "2489"
+            },
+            {
+                "artist": "Whodini",
+                "title": "Magic's Wand",
+                "start": "2494",
+                "end": "2784"
+            },
+            {
+                "artist": "Zapp & Roger",
+                "title": "More Bounce to the Ounce",
+                "start": "2810",
+                "end": "3099"
+            },
+            {
+                "artist": "Grandmaster Flash and The Furious Five",
+                "title": "The Message",
+                "start": "3101",
+                "end": "3468"
+            },
+            {
+                "artist": "Kurtis Blow",
+                "title": "The Breaks",
+                "start": "3477",
+                "end": "3754"
+            },
+            {
+                "artist": "Man Parrish",
+                "title": "Hip Hop, Be Bop (Don't Stop)",
+                "start": "3757",
+                "end": "4097"
+            }
+        ]
+    },
+    "flash_fm": {
+        "image": "../assets/images/radios/VC/flash.webp",
+        "displayName": "Flash FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/flash.ogg",
+        "dj": "Toni",
+        "genre": ["pop", "new_wave"],
+        "songs": [
+            {
+                "artist": "Hall & Oates",
+                "title": "Out of Touch",
+                "start": "8",
+                "end": "200"
+            },
+            {
+                "artist": "Wang Chung",
+                "title": "Dance Hall Days",
+                "start": "255",
+                "end": "436"
+            },
+            {
+                "artist": "Michael Jackson",
+                "title": "Billie Jean",
+                "start": "450",
+                "end": "696"
+            },
+            {
+                "artist": "Laura Branigan",
+                "title": "Self Control",
+                "start": "698",
+                "end": "917"
+            },
+            {
+                "artist": "Go West",
+                "title": "Call Me",
+                "start": "980",
+                "end": "1184"
+            },
+            {
+                "artist": "INXS",
+                "title": "Kiss the Dirt (Falling Down the Mountain)",
+                "start": "1186",
+                "end": "1392"
+            },
+            {
+                "artist": "Bryan Adams",
+                "title": "Run to You",
+                "start": "1472",
+                "end": "1662"
+            },
+            {
+                "artist": "Electric Light Orchestra",
+                "title": "Four Little Diamonds",
+                "start": "1681",
+                "end": "1914"
+            },
+            {
+                "artist": "Yes",
+                "title": "Owner of a Lonely Heart",
+                "start": "1916",
+                "end": "2126"
+            },
+            {
+                "artist": "The Buggles",
+                "title": "Video Killed the Radio Star",
+                "start": "2170",
+                "end": "2366"
+            },
+            {
+                "artist": "Aneka",
+                "title": "Japanese Boy",
+                "start": "2367",
+                "end": "2593"
+            },
+            {
+                "artist": "Talk Talk",
+                "title": "Life's What You Make It",
+                "start": "2672",
+                "end": "2884"
+            },
+            {
+                "artist": "The Outfield",
+                "title": "Your Love",
+                "start": "2885",
+                "end": "3056"
+            },
+            {
+                "artist": "Joe Jackson",
+                "title": "Steppin' Out",
+                "start": "3174",
+                "end": "3354"
+            },
+            {
+                "artist": "The Fixx",
+                "title": "One Thing Leads To Another",
+                "start": "3370",
+                "end": "3546"
+            },
+            {
+                "artist": "Lionel Richie",
+                "title": "Running With The Night",
+                "start": "3589",
+                "end": "3773"
+            }
+        ]
+    },
+    "k_chat": {
+        "image": "../assets/images/radios/VC/kchat.webp",
+        "displayName": "K-Chat",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/kchat.ogg",
+        "dj": "Amy Sheckenhausen",
+        "genre": "talk_radio",
+        "songs": [
+            {
+                "artist": "Amy Sheckenhausen",
+                "title": "K-Chat",
+                "start": "0",
+                "end": "6239"
+            }
+        ]
+    },
+    "fever_105": {
+        "image": "../assets/images/radios/VC/fever.webp",
+        "displayName": "Fever 105",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/fever.ogg",
+        "dj": "Oliver Biscuit",
+        "genre": ["disco", "funk"],
+        "songs": [
+            {
+                "artist": "The Whispers",
+                "title": "And The Beat Goes On",
+                "start": "4",
+                "end": "270"
+            },
+            {
+                "artist": "Fat Larry's Band",
+                "title": "Act Like You Know",
+                "start": "272",
+                "end": "525"
+            },
+            {
+                "artist": "Oliver Cheatham",
+                "title": "Get Down Saturday Night",
+                "start": "560",
+                "end": "889"
+            },
+            {
+                "artist": "The Pointer Sisters",
+                "title": "Automatic",
+                "start": "964",
+                "end": "1240"
+            },
+            {
+                "artist": "René & Angela",
+                "title": "I'll Be Good",
+                "start": "1242",
+                "end": "1483"
+            },
+            {
+                "artist": "Mary Jane Girls",
+                "title": "All Night Long",
+                "start": "1487",
+                "end": "1763"
+            },
+            {
+                "artist": "Rick James",
+                "title": "Ghetto Life",
+                "start": "1822",
+                "end": "2078"
+            },
+            {
+                "artist": "Michael Jackson",
+                "title": "Wanna Be Startin' Somethin'",
+                "start": "2080",
+                "end": "2434"
+            },
+            {
+                "artist": "Evelyn \"Champagne\" King",
+                "title": "Shame",
+                "start": "2437",
+                "end": "2699"
+            },
+            {
+                "artist": "Teena Marie",
+                "title": "Behind The Groove",
+                "start": "2747",
+                "end": "2947"
+            },
+            {
+                "artist": "Mtume",
+                "title": "Juicy Fruit",
+                "start": "2962",
+                "end": "3226"
+            },
+            {
+                "artist": "Kool & The Gang",
+                "title": "Summer Madness",
+                "start": "3227",
+                "end": "3476"
+            },
+            {
+                "artist": "Indeep",
+                "title": "Last Night a DJ Saved My Life",
+                "start": "3538",
+                "end": "3785"
+            }
+        ]
+    },
+    "v_rock": {
+        "image": "../assets/images/radios/VC/vrock.webp",
+        "displayName": "V-Rock",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vrock.ogg",
+        "dj": "Lazlow Jones",
+        "genre": "rock",
+        "songs": [
+            {
+                "artist": "Twisted Sister",
+                "title": "I Wanna Rock",
+                "start": "7",
+                "end": "179"
+            },
+            {
+                "artist": "Mötley Crüe",
+                "title": "Too Young To Fall In Love",
+                "start": "186",
+                "end": "377"
+            },
+            {
+                "artist": "Quiet Riot",
+                "title": "Cum On Feel The Noize",
+                "start": "510",
+                "end": "754"
+            },
+            {
+                "artist": "The Cult",
+                "title": "She Sells Sanctuary",
+                "start": "865",
+                "end": "1098"
+            },
+            {
+                "artist": "Ozzy Osbourne",
+                "title": "Bark at the Moon",
+                "start": "1212",
+                "end": "1465"
+            },
+            {
+                "artist": "Love Fist",
+                "title": "Dangerous Bastard",
+                "start": "1548",
+                "end": "1728"
+            },
+            {
+                "artist": "Iron Maiden",
+                "title": "2 Minutes To Midnight",
+                "start": "1789",
+                "end": "2138"
+            },
+            {
+                "artist": "Loverboy",
+                "title": "Working for the Weekend",
+                "start": "2250",
+                "end": "2466"
+            },
+            {
+                "artist": "Alcatrazz",
+                "title": "God Blessed Video",
+                "start": "2524",
+                "end": "2729"
+            },
+            {
+                "artist": "Tesla",
+                "title": "Cumin' Atcha Live",
+                "start": "2738",
+                "end": "2946"
+            },
+            {
+                "artist": "Autograph",
+                "title": "Turn Up The Radio",
+                "start": "2954",
+                "end": "3219"
+            },
+            {
+                "artist": "Megadeth",
+                "title": "Peace Sells",
+                "start": "3220",
+                "end": "3459"
+            },
+            {
+                "artist": "Anthrax",
+                "title": "Madhouse",
+                "start": "3513",
+                "end": "3754"
+            },
+            {
+                "artist": "Slayer",
+                "title": "Raining Blood",
+                "start": "3755",
+                "end": "3932"
+            },
+            {
+                "artist": "Judas Priest",
+                "title": "You've Got Another Thing Comin'",
+                "start": "3956",
+                "end": "4217"
+            },
+            {
+                "artist": "Love Fist",
+                "title": "Fist Fury",
+                "start": "4225",
+                "end": "4413"
+            },
+            {
+                "artist": "David Lee Roth",
+                "title": "Yankee Rose",
+                "start": "4422",
+                "end": "4642"
+            }
+        ]
+    },
+    "vcpr": {
+        "image": "../assets/images/radios/VC/vcpr.webp",
+        "displayName": "Vice City Public Radio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vcpr.ogg",
+        "dj": "Maurice Chavez",
+        "genre": "talk_radio",
+        "songs": [
+            {
+                "artist": "Maurice Chavez",
+                "title": "Pressing Issues",
+                "start": "0",
+                "end": "5187"
+            }
+        ]
+    },
+    "radio_espantoso": {
+        "image": "../assets/images/radios/VC/espantoso.webp",
+        "displayName": "Radio Espantoso",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/espantoso.ogg",
+        "dj": "Pepe",
+        "genre": ["salsa", "jazz", "latin_music"],
+        "songs": [
+            {
+                "artist": "Cachao",
+                "title": "A gozar con mi combo",
+                "start": "9",
+                "end": "337"
+            },
+            {
+                "artist": "Alpha Banditos",
+                "title": "The Bull Is Wrong",
+                "start": "339",
+                "end": "553"
+            },
+            {
+                "artist": "Tres Apenas Como Eso",
+                "title": "Yo te miré",
+                "start": "555",
+                "end": "758"
+            },
+            {
+                "artist": "Eumir Deodato",
+                "title": "Latín Flute",
+                "start": "873",
+                "end": "1105"
+            },
+            {
+                "artist": "Mongo Santamaría",
+                "title": "Mama Papa Tu",
+                "start": "1107",
+                "end": "1307"
+            },
+            {
+                "artist": "Mongo Santamaría",
+                "title": "Me and You Baby (Picao y Tostao)",
+                "start": "1403",
+                "end": "1668"
+            },
+            {
+                "artist": "Machito y su Orquesta Afrocubana",
+                "title": "Mambo, mucho mambo",
+                "start": "1670",
+                "end": "1846"
+            },
+            {
+                "artist": "Unaesta",
+                "title": "La vida es una lenteja",
+                "start": "1848",
+                "end": "2083"
+            },
+            {
+                "artist": "Lonnie Liston Smith",
+                "title": "Expansions",
+                "start": "2156",
+                "end": "2411"
+            },
+            {
+                "artist": "Irakere",
+                "title": "Añunga Ñunga",
+                "start": "2412",
+                "end": "2722"
+            },
+            {
+                "artist": "Eumir Deodato",
+                "title": "Super Strut",
+                "start": "2724",
+                "end": "3059"
+            },
+            {
+                "artist": "Xavier Cugat y Su Gran Orquesta",
+                "title": "Jamay",
+                "start": "3121",
+                "end": "3277"
+            },
+            {
+                "artist": "Beny Moré",
+                "title": "Maracaibo",
+                "start": "3289",
+                "end": "3470"
+            },
+            {
+                "artist": "Tito Puente",
+                "title": "Mambo gozón",
+                "start": "3535",
+                "end": "3698"
+            }
+        ]
+    },
+    "emotion": {
+        "image": "../assets/images/radios/VC/emotion.webp",
+        "displayName": "Emotion 98.3",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/emotion.ogg",
+        "dj": "Fernando Martínez",
+        "genre": ["soft_rock", "romantic_pop"],
+        "songs": [
+            {
+                "artist": "Foreigner",
+                "title": "Waiting For A Girl Like You",
+                "start": "8",
+                "end": "258"
+            },
+            {
+                "artist": "Kate Bush",
+                "title": "Wow",
+                "start": "330",
+                "end": "549"
+            },
+            {
+                "artist": "Squeeze",
+                "title": "Tempted",
+                "start": "623",
+                "end": "846"
+            },
+            {
+                "artist": "REO Speedwagon",
+                "title": "Keep On Loving You",
+                "start": "848",
+                "end": "1034"
+            },
+            {
+                "artist": "Cutting Crew",
+                "title": "(I Just) Died in Your Arms",
+                "start": "1042",
+                "end": "1290"
+            },
+            {
+                "artist": "Roxy Music",
+                "title": "More Than This",
+                "start": "1293",
+                "end": "1529"
+            },
+            {
+                "artist": "Toto",
+                "title": "Africa",
+                "start": "1666",
+                "end": "1909"
+            },
+            {
+                "artist": "Mr. Mister",
+                "title": "Broken Wings",
+                "start": "1922",
+                "end": "2212"
+            },
+            {
+                "artist": "John Waite",
+                "title": "Missing You",
+                "start": "2221",
+                "end": "2441"
+            },
+            {
+                "artist": "Jan Hammer",
+                "title": "Crockett's Theme",
+                "start": "2520",
+                "end": "2712"
+            },
+            {
+                "artist": "Night Ranger",
+                "title": "Sister Christian",
+                "start": "2778",
+                "end": "3073"
+            },
+            {
+                "artist": "Luther Vandross",
+                "title": "Never Too Much",
+                "start": "3179",
+                "end": "3399"
+            }
+        ]
+    },
+    "wave_103": {
+        "image": "../assets/images/radios/VC/wave.webp",
+        "displayName": "Wave 103",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wave.ogg",
+        "dj": "Adam First",
+        "genre": "new_wave",
+        "songs": [
+            {
+                "artist": "Frankie Goes To Hollywood",
+                "title": "Two Tribes",
+                "start": "7",
+                "end": "179"
+            },
+            {
+                "artist": "Sigue Sigue Sputnik",
+                "title": "Love Missile F1-11",
+                "start": "283",
+                "end": "492"
+            },
+            {
+                "artist": "Gary Numan",
+                "title": "Cars",
+                "start": "498",
+                "end": "669"
+            },
+            {
+                "artist": "The Human League",
+                "title": "(Keep Feeling) Fascination",
+                "start": "686",
+                "end": "893"
+            },
+            {
+                "artist": "Blondie",
+                "title": "Atomic",
+                "start": "1018",
+                "end": "1249"
+            },
+            {
+                "artist": "Nena",
+                "title": "99 Luftballons",
+                "start": "1250",
+                "end": "1435"
+            },
+            {
+                "artist": "Kim Wilde",
+                "title": "Kids In America",
+                "start": "1446",
+                "end": "1642"
+            },
+            {
+                "artist": "Tears For Fears",
+                "title": "Pale Shelter",
+                "start": "1643",
+                "end": "1870"
+            },
+            {
+                "artist": "Corey Hart",
+                "title": "Sunglasses at Night",
+                "start": "1942",
+                "end": "2161"
+            },
+            {
+                "artist": "ABC",
+                "title": "Poison Arrow",
+                "start": "2162",
+                "end": "2362"
+            },
+            {
+                "artist": "A Flock Of Seagulls",
+                "title": "I Ran (So Far Away)",
+                "start": "2381",
+                "end": "2588"
+            },
+            {
+                "artist": "The Psychedelic Furs",
+                "title": "Love My Way",
+                "start": "2700",
+                "end": "2883"
+            },
+            {
+                "artist": "Animotion",
+                "title": "Obsession",
+                "start": "2892",
+                "end": "3115"
+            },
+            {
+                "artist": "Spandau Ballet",
+                "title": "Gold",
+                "start": "3188",
+                "end": "3410"
+            },
+            {
+                "artist": "Thomas Dolby",
+                "title": "Hyperactive!",
+                "start": "3418",
+                "end": "3659"
+            },
+            {
+                "artist": "Romeo Void",
+                "title": "Never Say Never",
+                "start": "3666",
+                "end": "3959"
+            }
+        ]
+    }
+}

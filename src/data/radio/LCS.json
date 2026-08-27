@@ -1,0 +1,681 @@
+{
+    "head_radio": {
+        "image": "../assets/images/radios/LCS/head.webp",
+        "displayName": "Head Radio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/head.ogg",
+        "dj": "Michael Hunt",
+        "genre": "soft_rock",
+        "songs": [
+            {
+                "artist": "Conor and Jay",
+                "title": "Train",
+                "start": "9",
+                "end": "199"
+            },
+            {
+                "artist": "Cloud Nineteen",
+                "title": "The One For Me",
+                "start": "244",
+                "end": "414"
+            },
+            {
+                "artist": "Purser",
+                "title": "Take The Pain",
+                "start": "475",
+                "end": "653"
+            },
+            {
+                "artist": "L-Marie",
+                "title": "Free Yourself ft. Raff",
+                "start": "722",
+                "end": "955"
+            },
+            {
+                "artist": "15 Ways",
+                "title": "Drive",
+                "start": "961",
+                "end": "1132"
+            },
+            {
+                "artist": "Rosco Stow",
+                "title": "Welcome to the Real World",
+                "start": "1185",
+                "end": "1331"
+            },
+            {
+                "artist": "Vanilla Smoothie",
+                "title": "Keep Dreaming",
+                "start": "1416",
+                "end": "1595"
+            }
+        ]
+    },
+    "double_clef_fm": {
+        "image": "../assets/images/radios/LCS/clef.webp",
+        "displayName": "Double Clef FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/clef.ogg",
+        "dj": "Sergio Boccino",
+        "genre": ["classical", "opera"],
+        "songs": [
+            {
+                "artist": "Wolfgang Amadeus Mozart",
+                "title": "E amore un ladroncello",
+                "start": "8",
+                "end": "241"
+            },
+            {
+                "artist": "Giuseppe Verdi",
+                "title": "Anvil Chorus",
+                "start": "253",
+                "end": "417"
+            },
+            {
+                "artist": "Wolfgang Amadeus Mozart",
+                "title": "Overture",
+                "start": "495",
+                "end": "742"
+            },
+            {
+                "artist": "Giuseppe Verdi",
+                "title": "Chorus of the Hebrew Slaves",
+                "start": "827",
+                "end": "1061"
+            },
+            {
+                "artist": "Giuseppe Verdi",
+                "title": "Tacea la notte placida",
+                "start": "1168",
+                "end": "1392"
+            },
+            {
+                "artist": "Ruggiero Leoncavallo",
+                "title": "Vesti la giubba",
+                "start": "1408",
+                "end": "1592"
+            }
+        ]
+    },
+    "kjah_radio": {
+        "image": "../assets/images/radios/LCS/kjah.webp",
+        "displayName": "K-Jah Radio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/kjah.ogg",
+        "dj": "Natalee Walsh Davis",
+        "genre": "reggae",
+        "songs": [
+            {
+                "artist": "Peter Bouncer",
+                "title": "Ready For The Dancehall Tonight ft. Ruddy Ranks & Redeye",
+                "start": "10",
+                "end": "231"
+            },
+            {
+                "artist": "Kenny Knots",
+                "title": "Ring My Number ft. Ruddy Ranks & Redeye",
+                "start": "242",
+                "end": "412"
+            },
+            {
+                "artist": "Richie Davis",
+                "title": "You Ha Fe Cool ft. Ruddy Ranks & Redeye",
+                "start": "489",
+                "end": "665"
+            },
+            {
+                "artist": "Selah Collins",
+                "title": "Pick a Sound ft. Ruddy Ranks & Redeye",
+                "start": "673",
+                "end": "865"
+            },
+            {
+                "artist": "Kenny Knots",
+                "title": "Watch How the People Dancing ft. Ruddy Ranks & Redeye",
+                "start": "867",
+                "end": "1053"
+            },
+            {
+                "artist": "Richie Davis",
+                "title": "Lean Boot ft. Ruddy Ranks & Redeye",
+                "start": "1103",
+                "end": "1280"
+            },
+            {
+                "artist": "Errol Bellot",
+                "title": "What a Wonderful Feeling ft. Ruddy Ranks & Redeye",
+                "start": "1282",
+                "end": "1454"
+            },
+            {
+                "artist": "Kenny Knots",
+                "title": "Run Come Call Me ft. Ruddy Ranks & Redeye",
+                "start": "1463",
+                "end": "1665"
+            }
+        ]
+    },
+    "rise_fm": {
+        "image": "../assets/images/radios/LCS/rise.webp",
+        "displayName": "Rise FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rise.ogg",
+        "dj": "Boy Sanchez",
+        "genre": ["dance", "house"],
+        "songs": [
+            {
+                "artist": "Slam",
+                "title": "Positive Education",
+                "start": "0",
+                "end": "200"
+            },
+            {
+                "artist": "Green Velvet",
+                "title": "Flash",
+                "start": "203",
+                "end": "400"
+            },
+            {
+                "artist": "Robert Armani",
+                "title": "Circus Bells",
+                "start": "402",
+                "end": "535"
+            },
+            {
+                "artist": "Wink",
+                "title": "Higher State of Consciousness",
+                "start": "542",
+                "end": "794"
+            },
+            {
+                "artist": "Moloko",
+                "title": "Sing It Back",
+                "start": "970",
+                "end": "1141"
+            },
+            {
+                "artist": "Ultra Naté",
+                "title": "Free (Mood II Swing Radio Edit)",
+                "start": "1142",
+                "end": "1290"
+            },
+            {
+                "artist": "Happy Clappers",
+                "title": "I Believe",
+                "start": "1291",
+                "end": "1439"
+            },
+            {
+                "artist": "Eddie Amador",
+                "title": "House Music",
+                "start": "1440",
+                "end": "1558"
+            },
+            {
+                "artist": "Kristine W",
+                "title": "Feel What You Want",
+                "start": "1559",
+                "end": "1738"
+            },
+            {
+                "artist": "De'Lacy",
+                "title": "Hideway",
+                "start": "1739",
+                "end": "1904"
+            },
+            {
+                "artist": "Sneaker Pimps",
+                "title": "Spin Spin Sugar (Remix)",
+                "start": "1905",
+                "end": "2102"
+            },
+            {
+                "artist": "Jaydee",
+                "title": "Plastic Dreams",
+                "start": "2103",
+                "end": "2268"
+            },
+            {
+                "artist": "Ron Trent",
+                "title": "Altered Trent",
+                "start": "2269",
+                "end": "2426"
+            },
+            {
+                "artist": "The Absolute",
+                "title": "There Will Come a Day (Half Tub Dub)",
+                "start": "2427",
+                "end": "2539"
+            }
+        ]
+    },
+    "lips_106": {
+        "image": "../assets/images/radios/LCS/lips.webp",
+        "displayName": "Lips 106",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lips.ogg",
+        "dj": ["Cliff Lane", "Andee"],
+        "genre": "teen_pop",
+        "songs": [
+            {
+                "artist": "Rudy La Fontaine",
+                "title": "Funk In Time",
+                "start": "9",
+                "end": "217"
+            },
+            {
+                "artist": "Sarwarr",
+                "title": "Love is the Feeling",
+                "start": "267",
+                "end": "449"
+            },
+            {
+                "artist": "Sunshine Shine",
+                "title": "Mine Until Monday",
+                "start": "450",
+                "end": "628"
+            },
+            {
+                "artist": "Credit Check",
+                "title": "Get Down",
+                "start": "725",
+                "end": "914"
+            },
+            {
+                "artist": "Cool Timers",
+                "title": "Tonight",
+                "start": "948",
+                "end": "1140"
+            },
+            {
+                "artist": "Nina Barry",
+                "title": "Bassmatic",
+                "start": "1188",
+                "end": "1385"
+            },
+            {
+                "artist": "The Jackstars",
+                "title": "Into Something (Come On, Get Down)",
+                "start": "1475",
+                "end": "1674"
+            }
+        ]
+    },
+    "radio_del_mundo": {
+        "image": "../assets/images/radios/LCS/rdm.webp",
+        "displayName": "Radio del Mundo",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rdm.ogg",
+        "dj": "Panjit Gavaskar",
+        "genre": ["world_music_middle_east", "world_music_africa"],
+        "songs": [
+            {
+                "artist": "Ahmed Mneimneh",
+                "title": "Aini Bet Ref",
+                "start": "12",
+                "end": "252"
+            },
+            {
+                "artist": "Ofra Haza",
+                "title": "Im Nin'Alu",
+                "start": "253",
+                "end": "428"
+            },
+            {
+                "artist": "Farid al-Atrash",
+                "title": "Hebeena Hebeena",
+                "start": "501",
+                "end": "824"
+            },
+            {
+                "artist": "Natacha Atlas",
+                "title": "Kidda",
+                "start": "970",
+                "end": "1186"
+            },
+            {
+                "artist": "Vijaya Anand",
+                "title": "Neeve Nanna (Only You Were Mine)",
+                "start": "1187",
+                "end": "1422"
+            },
+            {
+                "artist": "Samira Tawfic",
+                "title": "Ballaa Tsoubou Hal Kahwa",
+                "start": "1444",
+                "end": "1616"
+            },
+            {
+                "artist": "Asha Bhosie",
+                "title": "Dum Maro Dum",
+                "start": "1629",
+                "end": "1778"
+            },
+            {
+                "artist": "Ananda Shankar",
+                "title": "Raghupati",
+                "start": "1815",
+                "end": "2013"
+            },
+            {
+                "artist": "Salatin El Tarab Orchestra",
+                "title": "Ah Ya Zein",
+                "start": "2016",
+                "end": "2180"
+            },
+            {
+                "artist": "Michel Nahme",
+                "title": "Marmara",
+                "start": "2181",
+                "end": "2369"
+            },
+            {
+                "artist": "Mohamed Eskander",
+                "title": "La Tisalouni",
+                "start": "2370",
+                "end": "2924"
+            }
+        ]
+    },
+    "msx_98": {
+        "image": "../assets/images/radios/LCS/msx.webp",
+        "displayName": "MSX 98",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/msx.ogg",
+        "dj": ["MC Codebreaker", "DJ Timecode"],
+        "genre": "drum_and_bass",
+        "songs": [
+            {
+                "artist": "Omni Trio",
+                "title": "Renegade Snares (Original Mix)",
+                "start": "0",
+                "end": "283"
+            },
+            {
+                "artist": "Renegade",
+                "title": "Terrorist",
+                "start": "284",
+                "end": "430"
+            },
+            {
+                "artist": "Foul Play",
+                "title": "Finest Illusion (Legal Mix)",
+                "start": "431",
+                "end": "672"
+            },
+            {
+                "artist": "Omni Trio",
+                "title": "Living For The Future (FBD Project Remix)",
+                "start": "673",
+                "end": "922"
+            },
+            {
+                "artist": "DJ Pulse",
+                "title": "Stay Calm (Foul Play Remix)",
+                "start": "923",
+                "end": "1136"
+            },
+            {
+                "artist": "Hyper-on Experience",
+                "title": "Disturbance (Tango Reimx)",
+                "start": "1137",
+                "end": "1359"
+            },
+            {
+                "artist": "Higher Sense",
+                "title": "Cold Fresh Air",
+                "start": "1360",
+                "end": "1448"
+            },
+            {
+                "artist": "Omni Trio",
+                "title": "Living For The Future",
+                "start": "1449",
+                "end": "1682"
+            },
+            {
+                "artist": "Omni Trio",
+                "title": "Thru The Vibe (2 on 1 Remix)",
+                "start": "1680",
+                "end": "1956"
+            },
+            {
+                "artist": "Deep Blue",
+                "title": "The Helicopter Tune",
+                "start": "1957",
+                "end": "2140"
+            },
+            {
+                "artist": "Dead Dred",
+                "title": "Dred Bass",
+                "start": "2141",
+                "end": "2328"
+            }
+        ]
+    },
+    "flashback_fm": {
+        "image": "../assets/images/radios/LCS/flashback.webp",
+        "displayName": "Flashback 95.6",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/flashback.ogg",
+        "dj": "Reni Wassulmaier",
+        "genre": ["disco", "electronic"],
+        "songs": [
+            {
+                "artist": "Giorgio Moroder",
+                "title": "I Wanna Rock You",
+                "start": "9",
+                "end": "271"
+            },
+            {
+                "artist": "Giorgio Moroder",
+                "title": "E=MC²",
+                "start": "320",
+                "end": "532"
+            },
+            {
+                "artist": "Giorgio Moroder",
+                "title": "From Here To Eternity",
+                "start": "564",
+                "end": "796"
+            },
+            {
+                "artist": "Giorgio Moroder",
+                "title": "Chase",
+                "start": "873",
+                "end": "1141"
+            },
+            {
+                "artist": "Giorgio Moroder",
+                "title": "First Hand Experience in Second Hand Love",
+                "start": "1155",
+                "end": "1408"
+            },
+            {
+                "artist": "Giorgio Moroder",
+                "title": "I'm Left, You're Right, She's Gone",
+                "start": "1418",
+                "end": "1669"
+            }
+        ]
+    },
+    "the_liberty_jam": {
+        "image": "../assets/images/radios/LCS/tlj.webp",
+        "displayName": "The Liberty Jam",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/tlj.ogg",
+        "dj": "DJ Clue",
+        "genre": "east_coast_hip_hop",
+        "songs": [
+            {
+                "artist": "Onyx",
+                "title": "Shut 'Em Down (Remix) ft. Noreaga & Big Pun",
+                "start": "21",
+                "end": "273"
+            },
+            {
+                "artist": "Raekwon",
+                "title": "Incarcerated Scarfaces",
+                "start": "287",
+                "end": "530"
+            },
+            {
+                "artist": "Method Man",
+                "title": "All I Need ft. Street Life",
+                "start": "589",
+                "end": "776"
+            },
+            {
+                "artist": "Big Pun",
+                "title": "Twinz (Deep Cover '98) ft. Fat Joe",
+                "start": "778",
+                "end": "994"
+            },
+            {
+                "artist": "DMX",
+                "title": "Ruff Ryders Anthem (Remix) ft. DJ Clue, Jadakiss, Styles P, Drag-On & Eve",
+                "start": "1070",
+                "end": "1300"
+            },
+            {
+                "artist": "DMX",
+                "title": "Get At Me Dog ft. Sheek Louch",
+                "start": "1301",
+                "end": "1479"
+            },
+            {
+                "artist": "Big Pun",
+                "title": "Beware",
+                "start": "1550",
+                "end": "1741"
+            },
+            {
+                "artist": "Redman",
+                "title": "Do What Ya Feel ft. Method Man",
+                "start": "1749",
+                "end": "2000"
+            },
+            {
+                "artist": "The Lox",
+                "title": "Chain Gang Freestyle ft. Black Rob",
+                "start": "2001",
+                "end": "2221"
+            },
+            {
+                "artist": "Noreaga",
+                "title": "N.O.R.E.",
+                "start": "2233",
+                "end": "2416"
+            },
+            {
+                "artist": "Mobb Deep",
+                "title": "Shook Ones, Pt. II",
+                "start": "2417",
+                "end": "2654"
+            },
+            {
+                "artist": "The Lox",
+                "title": "Chest 2 Chest Freestyle",
+                "start": "2655",
+                "end": "2857"
+            }
+        ]
+    },
+    "liberty_city_free_radio": {
+        "image": "../assets/images/radios/LCS/lcfr.webp",
+        "displayName": "Liberty City Free Radio",
+        "playlists": [
+            {
+                "name": "Heartland Values with Nurse Bob",
+                "dj": "Nurse Bob",
+                "genre": "medical_advice_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Nurse Bob",
+                        "title": "Heartland Values with Nurse Bob - Segmento #1",
+                        "start": "0",
+                        "end": "321"
+                    },
+                    {
+                        "artist": "Nurse Bob",
+                        "title": "Heartland Values with Nurse Bob - Segmento #2",
+                        "start": "388",
+                        "end": "644"
+                    }
+                ]
+            },
+            {
+                "name": "The Electron Zone",
+                "dj": ["Bill", "Steve"],
+                "genre": "tech_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Bill y Steve",
+                        "title": "The Electron Zone - Segmento #1",
+                        "start": "10",
+                        "end": "209"
+                    },
+                    {
+                        "artist": "Bill y Steve",
+                        "title": "The Electron Zone - Segmento #2",
+                        "start": "251",
+                        "end": "481"
+                    }
+                ]
+            },
+            {
+                "name": "Breathing World",
+                "dj": "Melissa Chowder",
+                "genre": "spiritual_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_3.ogg",
+                "songs": [
+                    {
+                        "artist": "Melissa Chowder",
+                        "title": "Breathing World - Segmento #1",
+                        "start": "9",
+                        "end": "239"
+                    },
+                    {
+                        "artist": "Melissa Chowder",
+                        "title": "Breathing World - Segmento #2",
+                        "start": "283",
+                        "end": "598"
+                    }
+                ]
+            },
+            {
+                "name": "Coq O Vin",
+                "dj": "Richard Goblin",
+                "genre": "cooking_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_4.ogg",
+                "songs": [
+                    {
+                        "artist": "Richard Goblin",
+                        "title": "Coq O Vin - Segmento #1",
+                        "start": "7",
+                        "end": "324"
+                    },
+                    {
+                        "artist": "Richard Goblin",
+                        "title": "Coq O Vin - Segmento #2",
+                        "start": "375",
+                        "end": "549"
+                    }
+                ]
+            },
+            {
+                "name": "Chatterbox",
+                "dj": "Lazlow",
+                "genre": "talk_radio",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_5.ogg",
+                "songs": [
+                    {
+                        "artist": "Lazlow",
+                        "title": "Chatterbox - Segmento #1",
+                        "start": "7",
+                        "end": "458"
+                    },
+                    {
+                        "artist": "Lazlow",
+                        "title": "Chatterbox - Segmento #2",
+                        "start": "534",
+                        "end": "684"
+                    }
+                ]
+            }
+        ]
+    }
+}

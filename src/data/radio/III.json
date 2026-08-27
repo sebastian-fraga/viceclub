@@ -1,0 +1,425 @@
+{
+    "head_radio": {
+        "displayName": "Head Radio",
+        "image": "../assets/images/radios/III/head.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/head.ogg",
+        "dj": "Michael Hunt",
+        "genre": ["alternative_rock", "pop"],
+        "songs": [
+            {
+                "artist": "Dil-Don't",
+                "title": "Stripe Summer",
+                "start": "13",
+                "end": "154"
+            },
+            {
+                "artist": "Whatever",
+                "title": "Good Thing",
+                "start": "199",
+                "end": "368"
+            },
+            {
+                "artist": "Craig Gray",
+                "title": "Fade Away",
+                "start": "371",
+                "end": "557"
+            },
+            {
+                "artist": "Conor and Jay",
+                "title": "Change",
+                "start": "571",
+                "end": "735"
+            },
+            {
+                "artist": "Frankie Fame",
+                "title": "See Through You",
+                "start": "790",
+                "end": "959"
+            },
+            {
+                "artist": "Scatwerk",
+                "title": "Electronic Go Go",
+                "start": "968",
+                "end": "1112"
+            },
+            {
+                "artist": "Dezma",
+                "title": "Life Is But A Mere Supply",
+                "start": "1174",
+                "end": "1312"
+            }
+        ]
+    },
+    "double_clef_fm": {
+        "displayName": "Double Clef FM",
+        "image": "../assets/images/radios/III/clef.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/clef.ogg",
+        "dj": "Morgan Merryweather",
+        "genre": ["classical", "opera"],
+        "songs": [
+            {
+                "artist": "Wolfgang Amadeus Mozart",
+                "title": "Non Piu Andrai Farfallone Amoroso",
+                "start": "9",
+                "end": "221"
+            },
+            {
+                "artist": "Giacomo Puccini",
+                "title": "O Mio Babbino Caro",
+                "start": "238",
+                "end": "365"
+            },
+            {
+                "artist": "Giuseppe Verdi",
+                "title": "Libiamo Ne'lieti Calici",
+                "start": "546",
+                "end": "735"
+            },
+            {
+                "artist": "Gaetano Donizetti",
+                "title": "Chi Mi Frena In Tal Momento",
+                "start": "748",
+                "end": "963"
+            },
+            {
+                "artist": "Giuseppe Verdi",
+                "title": "La Donna E Mobile",
+                "start": "1093",
+                "end": "1286"
+            },
+            {
+                "artist": "Wolfgang Amadeus Mozart",
+                "title": "Finch'han Del Vino",
+                "start": "1295",
+                "end": "1361"
+            }
+        ]
+    },
+    "kjah_radio": {
+        "displayName": "K-Jah Radio",
+        "image": "../assets/images/radios/III/kjah.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/kjah.ogg",
+        "dj": "Horace \"The Pacifist\" Walsh",
+        "genre": "reggae",
+        "songs": [
+            {
+                "artist": "Scientist",
+                "title": "Dance of the Vampires",
+                "start": "3",
+                "end": "237"
+            },
+            {
+                "artist": "Scientist",
+                "title": "Your Teeth in My Neck",
+                "start": "242",
+                "end": "517"
+            },
+            {
+                "artist": "Scientist",
+                "title": "The Corpse Rises",
+                "start": "520",
+                "end": "711"
+            },
+            {
+                "artist": "Scientist",
+                "title": "The Mummy's Shroud",
+                "start": "728",
+                "end": "989"
+            },
+            {
+                "artist": "Scientist",
+                "title": "Plague of Zombies",
+                "start": "994",
+                "end": "1144"
+            }
+        ]
+    },
+    "rise_fm": {
+        "displayName": "Rise FM",
+        "image": "../assets/images/radios/III/rise.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/rise.ogg",
+        "dj": "DJ Andre",
+        "genre": ["trance", "house"],
+        "songs": [
+            {
+                "artist": "Chris Walsh & Dave Beran",
+                "title": "Shake (Revolt Clogrock Remix)",
+                "start": "0",
+                "end": "94"
+            },
+            {
+                "artist": "Shiver",
+                "title": "Deep Time",
+                "start": "95",
+                "end": "313"
+            },
+            {
+                "artist": "R.R.D.S.",
+                "title": "Innerbattle",
+                "start": "315",
+                "end": "562"
+            },
+            {
+                "artist": "Slyder",
+                "title": "Score (Original Mix)",
+                "start": "563",
+                "end": "841"
+            },
+            {
+                "artist": "Slyder",
+                "title": "Neo (The One)",
+                "start": "842",
+                "end": "1254"
+            },
+            {
+                "artist": "Chris Walsh & Dave Beran",
+                "title": "Shake (Revolt Clogrock Remix)",
+                "start": "1255",
+                "end": "1568"
+            }
+        ]
+    },
+    "lips_106": {
+        "displayName": "Lips 106",
+        "image": "../assets/images/radios/III/lips.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/lips.ogg",
+        "dj": "Andee",
+        "genre": ["pop", "jazz", "rap"],
+        "songs": [
+            {
+                "artist": "Fatamarse",
+                "title": "Bump To The Music",
+                "start": "74",
+                "end": "206"
+            },
+            {
+                "artist": "April's in Paris",
+                "title": "Feels Like I Just Can't Take No More",
+                "start": "333",
+                "end": "527"
+            },
+            {
+                "artist": "Lucy",
+                "title": "Forever",
+                "start": "529",
+                "end": "698"
+            },
+            {
+                "artist": "Boyz 2 Girls",
+                "title": "Pray It Goes Ok?",
+                "start": "708",
+                "end": "926"
+            },
+            {
+                "artist": "Da Shootaz",
+                "title": "Grand Theft Auto",
+                "start": "938",
+                "end": "1055"
+            },
+            {
+                "artist": "Funky BJs",
+                "title": "Rubber Tip",
+                "start": "1061",
+                "end": "1201"
+            }
+        ]
+    },
+    "game_radio_fm": {
+        "displayName": "Game Radio FM",
+        "image": "../assets/images/radios/III/game.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/game.ogg",
+        "dj": ["Stretch Armstrong", "Lord Sear"],
+        "genre": "hip_hop",
+        "songs": [
+            {
+                "artist": "Reef",
+                "title": "Scary Movies (Instrumental)",
+                "start": "5",
+                "end": "32"
+            },
+            {
+                "artist": "Royce Da 5'9\"",
+                "title": "We're Live (Danger)",
+                "start": "34",
+                "end": "162"
+            },
+            {
+                "artist": "Nature",
+                "title": "Nature Freestyle",
+                "start": "163",
+                "end": "227"
+            },
+            {
+                "artist": "JoJo Pellegrino",
+                "title": "JoJo Pellegrino Freestyle",
+                "start": "228",
+                "end": "299"
+            },
+            {
+                "artist": "Royce Da 5'9\" ft. Pretty Ugly",
+                "title": "Spit Game",
+                "start": "320",
+                "end": "454"
+            },
+            {
+                "artist": "Royce Da 5'9\"",
+                "title": "I'm The King",
+                "start": "455",
+                "end": "615"
+            },
+            {
+                "artist": "Rush",
+                "title": "Instrumental Bed 1",
+                "start": "646",
+                "end": "696"
+            },
+            {
+                "artist": "Black Rob",
+                "title": "By A Stranger",
+                "start": "697",
+                "end": "770"
+            },
+            {
+                "artist": "Sean Price ft. Agallah",
+                "title": "Rising To The Top",
+                "start": "771",
+                "end": "915"
+            },
+            {
+                "artist": "Rush",
+                "title": "Instrumental Bed 2",
+                "start": "916",
+                "end": "944"
+            }
+        ]
+    },
+    "msx": {
+        "displayName": "MSX FM",
+        "image": "../assets/images/radios/III/msx.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/msx.ogg",
+        "dj": "MC Codebreaker",
+        "genre": ["drum_and_bass", "jungle"],
+        "songs": [
+            {
+                "artist": "Calyx",
+                "title": "Quagmire",
+                "start": "0",
+                "end": "171"
+            },
+            {
+                "artist": "Rascal & Klone",
+                "title": "Get Wild",
+                "start": "173",
+                "end": "354"
+            },
+            {
+                "artist": "Ryme Tyme",
+                "title": "Judgement Day",
+                "start": "355",
+                "end": "481"
+            },
+            {
+                "artist": "Hex",
+                "title": "Force",
+                "start": "482",
+                "end": "565"
+            },
+            {
+                "artist": "Omni Trio",
+                "title": "First Contact",
+                "start": "567",
+                "end": "651"
+            },
+            {
+                "artist": "Aquasky",
+                "title": "Spectre",
+                "start": "652",
+                "end": "759"
+            },
+            {
+                "artist": "Rascal & Klone",
+                "title": "Winner Takes All",
+                "start": "761",
+                "end": "1043"
+            },
+            {
+                "artist": "Ryme Tyme",
+                "title": "T Minus",
+                "start": "1047",
+                "end": "1091"
+            },
+            {
+                "artist": "nCode",
+                "title": "Spasm",
+                "start": "1093",
+                "end": "1273"
+            },
+            {
+                "artist": "D.Kay",
+                "title": "Monolith",
+                "start": "1274",
+                "end": "1391"
+            },
+            {
+                "artist": "Dom & Ryme Tyme",
+                "title": "Iceberg",
+                "start": "1392",
+                "end": "1500"
+            }
+        ]
+    },
+    "flashback_fm": {
+        "displayName": "Flashback 95.6",
+        "image": "../assets/images/radios/III/flashback.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/flashback.ogg",
+        "dj": "Toni",
+        "genre": ["new_wave", "synth_pop", "scarface_soundtrack"],
+        "songs": [
+            {
+                "artist": "Debbie Harry",
+                "title": "Rush Rush",
+                "start": "4",
+                "end": "196"
+            },
+            {
+                "artist": "Elizabeth Daily",
+                "title": "Shake It Up",
+                "start": "244.27",
+                "end": "441"
+            },
+            {
+                "artist": "Paul Engemann",
+                "title": "Scarface (Push It To The Limit)",
+                "start": "526",
+                "end": "672"
+            },
+            {
+                "artist": "Amy Holland",
+                "title": "She's On Fire",
+                "start": "678",
+                "end": "885"
+            },
+            {
+                "artist": "Elizabeth Daily",
+                "title": "I'm Hot Tonight",
+                "start": "939",
+                "end": "1107"
+            }
+        ]
+    },
+    "chatterbox": {
+        "displayName": "Chatterbox FM",
+        "image": "../assets/images/radios/III/chatterbox.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/chatterbox.ogg",
+        "dj": "Lazlow",
+        "genre": "talk_radio",
+        "songs": [
+            {
+                "artist": "Lazlow",
+                "title": "Chatterbox FM",
+                "start": "0",
+                "end": "3484"
+            }
+        ]
+    }
+}

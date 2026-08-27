@@ -1,0 +1,1261 @@
+{
+    "playback_fm": {
+        "image": "../assets/images/radios/SA/playback.webp",
+        "displayName": "Playback FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/playback.ogg",
+        "dj": "Forth Right MC",
+        "genre": "east_coast_hip_hop",
+        "songs": [
+            {
+                "artist": "Kool G Rap",
+                "title": "Road To The Riches",
+                "start": "11",
+                "end": "232"
+            },
+            {
+                "artist": "Big Daddy Kane",
+                "title": "Warm It Up, Kane",
+                "start": "276",
+                "end": "463"
+            },
+            {
+                "artist": "Spoonie Gee",
+                "title": "The Godfather",
+                "start": "491",
+                "end": "697"
+            },
+            {
+                "artist": "Masta Ace",
+                "title": "Me And The Biz",
+                "start": "714",
+                "end": "926"
+            },
+            {
+                "artist": "Slick Rick",
+                "title": "Children's Story",
+                "start": "995",
+                "end": "1228"
+            },
+            {
+                "artist": "Public Enemy",
+                "title": "Rebel Without A Pause",
+                "start": "1229",
+                "end": "1455"
+            },
+            {
+                "artist": "Eric B. & Rakim",
+                "title": "I Know You Got Soul",
+                "start": "1467",
+                "end": "1670"
+            },
+            {
+                "artist": "Rob Base & DJ E-Z Rock",
+                "title": "It Takes Two",
+                "start": "1873",
+                "end": "2089"
+            },
+            {
+                "artist": "Gang Starr",
+                "title": "B.Y.S.",
+                "start": "2101",
+                "end": "2283"
+            },
+            {
+                "artist": "Biz Markie",
+                "title": "Vapors",
+                "start": "2383.95",
+                "end": "2606.86"
+            },
+            {
+                "artist": "Brand Nubian",
+                "title": "Brand Nubian",
+                "start": "2624.35",
+                "end": "2812.49"
+            },
+            {
+                "artist": "Ultramagnetic MC's",
+                "title": "Critical Beatdown",
+                "start": "2820.6",
+                "end": "3017.07"
+            }
+        ]
+    },
+    "k_rose": {
+        "image": "../assets/images/radios/SA/krose.webp",
+        "displayName": "K-Rose",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/krose.ogg",
+        "dj": "Mary-Beth Maybell",
+        "genre": "country_music",
+        "songs": [
+            {
+                "artist": "Hank Williams With His Drifting Cowboys",
+                "title": "Hey Good Lookin'",
+                "start": "7",
+                "end": "178"
+            },
+            {
+                "artist": "Willie Nelson",
+                "title": "Crazy",
+                "start": "251",
+                "end": "487"
+            },
+            {
+                "artist": "Mickey Gilley",
+                "title": "Make The World Go Away",
+                "start": "569",
+                "end": "728"
+            },
+            {
+                "artist": "The Desert Rose Band",
+                "title": "One Step Forward",
+                "start": "790",
+                "end": "966"
+            },
+            {
+                "artist": "Eddie Rabbitt",
+                "title": "I Love A Rainy Night",
+                "start": "1016",
+                "end": "1168"
+            },
+            {
+                "artist": "Asleep At The Wheel",
+                "title": "The Letter That Johnny Walker Read",
+                "start": "1180",
+                "end": "1363"
+            },
+            {
+                "artist": "Ed Bruce",
+                "title": "Mamas Don't Let Your Babies Grow Up To Be Cowboys",
+                "start": "1423",
+                "end": "1611"
+            },
+            {
+                "artist": "The Statler Brothers",
+                "title": "Bed Of Roses",
+                "start": "1621",
+                "end": "1765"
+            },
+            {
+                "artist": "The Statler Brothers",
+                "title": "New York City",
+                "start": "1820",
+                "end": "1984"
+            },
+            {
+                "artist": "Whitey Shafer",
+                "title": "All My Ex's Live In Texas",
+                "start": "2041",
+                "end": "2237"
+            },
+            {
+                "artist": "Conway Twitty & Loretta Lynn",
+                "title": "Louisiana Woman, Mississippi Man",
+                "start": "2257",
+                "end": "2396"
+            },
+            {
+                "artist": "Jerry Reed",
+                "title": "Amos Moses",
+                "start": "2473",
+                "end": "2606"
+            },
+            {
+                "artist": "Merle Haggard And The Strangers",
+                "title": "Always Wanting You",
+                "start": "2661",
+                "end": "2843"
+            },
+            {
+                "artist": "Juice Newton",
+                "title": "Queen of Hearts",
+                "start": "2903",
+                "end": "3091"
+            },
+            {
+                "artist": "Patsy Cline",
+                "title": "Three Cigarettes In An Ashtray",
+                "start": "3099",
+                "end": "3231"
+            }
+        ]
+    },
+    "k_dst": {
+        "image": "../assets/images/radios/SA/kdst.webp",
+        "displayName": "K-DST",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kdst.ogg",
+        "dj": "Tommy \"The Nightmare\" Smith",
+        "genre": "classic_rock",
+        "songs": [
+            {
+                "artist": "Grand Funk Railroad",
+                "title": "Some Kind of Wonderful",
+                "start": "0",
+                "end": "187"
+            },
+            {
+                "artist": "Rod Stewart",
+                "title": "Young Turks",
+                "start": "271",
+                "end": "515"
+            },
+            {
+                "artist": "Billy Idol",
+                "title": "White Wedding",
+                "start": "516",
+                "end": "735"
+            },
+            {
+                "artist": "Humble Pie",
+                "title": "Get Down To It",
+                "start": "776",
+                "end": "964"
+            },
+            {
+                "artist": "Kiss",
+                "title": "Strutter",
+                "start": "1043",
+                "end": "1232"
+            },
+            {
+                "artist": "Foghat",
+                "title": "Slow Ride",
+                "start": "1268",
+                "end": "1457"
+            },
+            {
+                "artist": "Heart",
+                "title": "Barracuda",
+                "start": "1479",
+                "end": "1672"
+            },
+            {
+                "artist": "Lynyrd Skynyrd",
+                "title": "Free Bird",
+                "start": "1673",
+                "end": "2018"
+            },
+            {
+                "artist": "Creedance Clearwater Revival",
+                "title": "Green River",
+                "start": "2029",
+                "end": "2164"
+            },
+            {
+                "artist": "The Who",
+                "title": "Eminence Front",
+                "start": "2165",
+                "end": "2421"
+            },
+            {
+                "artist": "Tom Petty",
+                "title": "Runnin' Down A Dream",
+                "start": "2445",
+                "end": "2702"
+            },
+            {
+                "artist": "Eddie Money",
+                "title": "Two Tickets to Paradise",
+                "start": "2703",
+                "end": "2915"
+            },
+            {
+                "artist": "America",
+                "title": "A Horse With No Name",
+                "start": "3010",
+                "end": "3217"
+            },
+            {
+                "artist": "Boston",
+                "title": "Smokin'",
+                "start": "3234",
+                "end": "3440"
+            },
+            {
+                "artist": "Joe Cocker",
+                "title": "Woman to Woman",
+                "start": "3441",
+                "end": "3661"
+            },
+            {
+                "artist": "David Bowie",
+                "title": "Somebody Up There Likes Me",
+                "start": "3744",
+                "end": "3979"
+            },
+            {
+                "artist": "Toto",
+                "title": "Hold The Line",
+                "start": "3980",
+                "end": "4189"
+            }
+        ]
+    },
+    "bounce_fm": {
+        "image": "../assets/images/radios/SA/bounce.webp",
+        "displayName": "Bounce FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/bounce.ogg",
+        "dj": "The Funktipus",
+        "genre": ["disco", "funk"],
+        "songs": [
+            {
+                "artist": "Rick James",
+                "title": "Cold Blooded",
+                "start": "17",
+                "end": "261"
+            },
+            {
+                "artist": "The Ohio Players",
+                "title": "Funky Worm",
+                "start": "262",
+                "end": "420"
+            },
+            {
+                "artist": "The Fatback Band",
+                "title": "Yum Yum (Gimme Some)",
+                "start": "478",
+                "end": "669"
+            },
+            {
+                "artist": "The Isley Brothers",
+                "title": "Between The Sheets",
+                "start": "670",
+                "end": "888"
+            },
+            {
+                "artist": "The Gap Band",
+                "title": "You Dropped A Bomb On Me",
+                "start": "913",
+                "end": "1149"
+            },
+            {
+                "artist": "Cameo",
+                "title": "Candy",
+                "start": "1156",
+                "end": "1357"
+            },
+            {
+                "artist": "Kool & the Gang",
+                "title": "Hollywood Swinging",
+                "start": "1358",
+                "end": "1561"
+            },
+            {
+                "artist": "Lakeside",
+                "title": "Fantastic Voyage",
+                "start": "1612",
+                "end": "1837"
+            },
+            {
+                "artist": "MFSB",
+                "title": "Love Is The Message (Part 2) ft. The Three Degrees",
+                "start": "1838",
+                "end": "2047"
+            },
+            {
+                "artist": "Zapp",
+                "title": "I Can Make You Dance",
+                "start": "2060",
+                "end": "2275"
+            },
+            {
+                "artist": "Johnny Harris",
+                "title": "Odyssey",
+                "start": "2332",
+                "end": "2608"
+            },
+            {
+                "artist": "Roy Ayers",
+                "title": "Running Away",
+                "start": "2615",
+                "end": "2807"
+            },
+            {
+                "artist": "Maze",
+                "title": "Twilight",
+                "start": "2843",
+                "end": "3058"
+            },
+            {
+                "artist": "Dazz Band",
+                "title": "Let it Whip",
+                "start": "3066",
+                "end": "3275"
+            },
+            {
+                "artist": "Ronnie Hudson & The Street People",
+                "title": "West Coast Poplock",
+                "start": "3287",
+                "end": "3515"
+            },
+            {
+                "artist": "George Clinton",
+                "title": "Loopzilla",
+                "start": "3530",
+                "end": "3746"
+            },
+            {
+                "artist": "The Ohio Players",
+                "title": "Love Rollercoaster",
+                "start": "3756",
+                "end": "3935"
+            }
+        ]
+    },
+    "sfur": {
+        "image": "../assets/images/radios/SA/sfur.webp",
+        "displayName": "SF-UR",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/sfur.ogg",
+        "dj": "Hans Oberlander",
+        "genre": ["house", "electro", "dance"],
+        "list": [],
+        "songs": [
+            {
+                "artist": "Joe Smooth",
+                "title": "Promised Land ft. Anthony Thomas (Original Mix)",
+                "start": "1",
+                "end": "180"
+            },
+            {
+                "artist": "Ce Ce Rogers",
+                "title": "Someday (Club Mix)",
+                "start": "197",
+                "end": "453"
+            },
+            {
+                "artist": "Maurice",
+                "title": "This Is Acid (A New Dance Craze) (K & T Mix)",
+                "start": "513",
+                "end": "717"
+            },
+            {
+                "artist": "The Todd Terry Project",
+                "title": "Weekend (Club Version)",
+                "start": "727",
+                "end": "957"
+            },
+            {
+                "artist": "Marshall Jefferson",
+                "title": "Move Your Body",
+                "start": "959",
+                "end": "1199"
+            },
+            {
+                "artist": "Jomanda",
+                "title": "Make My Body Rock (Feel It) (The Basic Mix)",
+                "start": "1250",
+                "end": "1492"
+            },
+            {
+                "artist": "A Guy Called Gerald",
+                "title": "Voodoo Ray",
+                "start": "1493",
+                "end": "1718"
+            },
+            {
+                "artist": "Cultural Vibe",
+                "title": "Ma Foom Bey",
+                "start": "1758",
+                "end": "1989"
+            },
+            {
+                "artist": "Mr. Fingers",
+                "title": "Can You Feel It (Chuck D. Mix)",
+                "start": "2019",
+                "end": "2255"
+            },
+            {
+                "artist": "The Night Writers",
+                "title": "Let The Music (Use You) ft. Ricky Dillard",
+                "start": "2298",
+                "end": "2580"
+            },
+            {
+                "artist": "The 28th Street Crew",
+                "title": "I Need A Rhythm",
+                "start": "2591",
+                "end": "2825"
+            },
+            {
+                "artist": "Frankie Knuckles",
+                "title": "Your Love ft. Jamie Principle",
+                "start": "2591",
+                "end": "3090"
+            },
+            {
+                "artist": "Raze",
+                "title": "Break 4 Love",
+                "start": "3100",
+                "end": "3327"
+            },
+            {
+                "artist": "Fallout",
+                "title": "The Morning After (Sunrise Mix)",
+                "start": "3330",
+                "end": "3580"
+            },
+            {
+                "artist": "Robert Owens",
+                "title": "I'll Be Your Friend (Original Def Mix)",
+                "start": "3657",
+                "end": "3932"
+            },
+            {
+                "artist": "808 State",
+                "title": "Pacific-202",
+                "start": "3971",
+                "end": "4149"
+            }
+        ]
+    },
+    "radio_los_santos": {
+        "image": "../assets/images/radios/SA/rls.webp",
+        "displayName": "Radio Los Santos",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/rls.ogg",
+        "dj": "Julio G",
+        "genre": "west_coast_hip_hop",
+        "songs": [
+            {
+                "artist": "Ice Cube",
+                "title": "It Was A Good Day",
+                "start": "13",
+                "end": "214"
+            },
+            {
+                "artist": "Ice Cube",
+                "title": "Check Yo Self (Remix) ft. Das Efx",
+                "start": "230",
+                "end": "433"
+            },
+            {
+                "artist": "Dr. Dre",
+                "title": "Deep Cover ft. Snoop Dogg",
+                "start": "494",
+                "end": "721"
+            },
+            {
+                "artist": "2Pac",
+                "title": " I Don't Give A Fuck ft. Mickey Cooley & Pogo",
+                "start": "796",
+                "end": "1042"
+            },
+            {
+                "artist": "Da Lench Mob",
+                "title": "Guerillas In Tha Mist ft. Ice Cube",
+                "start": "1108",
+                "end": "1303"
+            },
+            {
+                "artist": "Dr. Dre",
+                "title": "Nuthin' But A G Thang ft. Snoop Dogg",
+                "start": "1311",
+                "end": "1527"
+            },
+            {
+                "artist": "Dr. Dre",
+                "title": "Fuck Wit Dre Day ft. Snoop Dogg",
+                "start": "1606",
+                "end": "1839"
+            },
+            {
+                "artist": "Cypress Hill",
+                "title": "How I Could Just Kill A Man",
+                "start": "1840",
+                "end": "2075"
+            },
+            {
+                "artist": "Compton's Most Wanted",
+                "title": "Hood Took Me Under",
+                "start": "2161",
+                "end": "2366"
+            },
+            {
+                "artist": "Kid Frost",
+                "title": "La Raza",
+                "start": "2412",
+                "end": "2609"
+            },
+            {
+                "artist": "Above The Law",
+                "title": "Murder Rap",
+                "start": "2610",
+                "end": "2862"
+            },
+            {
+                "artist": "N.W.A.",
+                "title": "Express Yourself",
+                "start": "2937",
+                "end": "3174"
+            },
+            {
+                "artist": "Too $hort",
+                "title": "The Ghetto",
+                "start": "3175",
+                "end": "3395"
+            },
+            {
+                "artist": "The D.O.C.",
+                "title": "It's Funky Enough",
+                "start": "3445",
+                "end": "3675"
+            },
+            {
+                "artist": "Eazy-E",
+                "title": "Eazy-Er Said Than Dunn",
+                "start": "3692",
+                "end": "3907"
+            },
+            {
+                "artist": "N.W.A.",
+                "title": "Alwayz Into Somethin'",
+                "start": "3969",
+                "end": "4177"
+            }
+        ]
+    },
+    "radio_x": {
+        "image": "../assets/images/radios/SA/radiox.webp",
+        "displayName": "Radio X",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/radiox.ogg",
+        "dj": "Sage",
+        "genre": ["alternative_rock", "grunge"],
+        "songs": [
+            {
+                "artist": "Helmet",
+                "title": "Unsung",
+                "start": "11",
+                "end": "214"
+            },
+            {
+                "artist": "Living Colour",
+                "title": "Cult of Personality",
+                "start": "224",
+                "end": "415"
+            },
+            {
+                "artist": "Stone Temple Pilots",
+                "title": "Plush",
+                "start": "441",
+                "end": "658"
+            },
+            {
+                "artist": "Soundgarden",
+                "title": "Rusty Cage",
+                "start": "685",
+                "end": "858"
+            },
+            {
+                "artist": "Guns N' Roses",
+                "title": "Welcome To The Jungle",
+                "start": "859",
+                "end": "1101"
+            },
+            {
+                "artist": "Danzig",
+                "title": "Mother",
+                "start": "1159",
+                "end": "1343"
+            },
+            {
+                "artist": "Rage Against The Machine",
+                "title": "Killing In The Name",
+                "start": "1397",
+                "end": "1691"
+            },
+            {
+                "artist": "Jane's Addiction",
+                "title": "Been Caught Stealing",
+                "start": "1752",
+                "end": "1952"
+            },
+            {
+                "artist": "The Stone Roses",
+                "title": "Fools Gold",
+                "start": "1953",
+                "end": "2201"
+            },
+            {
+                "artist": "L7",
+                "title": "Pretend We're Dead",
+                "start": "2230",
+                "end": "2458"
+            },
+            {
+                "artist": "Alice In Chains",
+                "title": "Them Bones",
+                "start": "2468",
+                "end": "2615"
+            },
+            {
+                "artist": "Primal Scream",
+                "title": "Movin' On Up",
+                "start": "2625",
+                "end": "2804"
+            },
+            {
+                "artist": "Faith No More",
+                "title": "Midlife Crisis",
+                "start": "2814",
+                "end": "3001"
+            },
+            {
+                "artist": "Ozzy Osbourne",
+                "title": "Hellraiser",
+                "start": "3049",
+                "end": "3253"
+            },
+            {
+                "artist": "Depeche Mode",
+                "title": "Personal Jesus",
+                "start": "3254",
+                "end": "3468"
+            }
+        ]
+    },
+    "csr": {
+        "image": "../assets/images/radios/SA/csr.webp",
+        "displayName": "CSR 103:9",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/csr.ogg",
+        "dj": "Phillip \"PM\" Michaels",
+        "genre": ["soul", "funk"],
+        "songs": [
+            {
+                "artist": "Bobby Brown",
+                "title": "Don't Be Cruel",
+                "start": "13",
+                "end": "211"
+            },
+            {
+                "artist": "Wreckx-N-Effect",
+                "title": "New Jack Swing ft. Teddy Riley",
+                "start": "260",
+                "end": "457"
+            },
+            {
+                "artist": "Today",
+                "title": "I Got The Feeling",
+                "start": "467",
+                "end": "689"
+            },
+            {
+                "artist": "SWV",
+                "title": "I'm So Into You",
+                "start": "702",
+                "end": "909"
+            },
+            {
+                "artist": "Boyz II Men",
+                "title": "Motownphilly",
+                "start": "910",
+                "end": "1111"
+            },
+            {
+                "artist": "Soul II Soul",
+                "title": "Keep On Movin'",
+                "start": "1131",
+                "end": "1335"
+            },
+            {
+                "artist": "Bell Biv DeVoe",
+                "title": "Poison",
+                "start": "1357",
+                "end": "1553"
+            },
+            {
+                "artist": "Guy",
+                "title": "Groove Me",
+                "start": "1554",
+                "end": "1755"
+            },
+            {
+                "artist": "Johnny Gill",
+                "title": "Rub You The Right Way (Extended Hype I) ft. C.L. Smooth",
+                "start": "1782",
+                "end": "1973"
+            },
+            {
+                "artist": "Samuelle",
+                "title": "So You Like What You See",
+                "start": "1987",
+                "end": "2156"
+            },
+            {
+                "artist": "Aaron Hall",
+                "title": "Don't Be Afraid",
+                "start": "2162",
+                "end": "2361"
+            },
+            {
+                "artist": "En Vogue",
+                "title": "My Lovin' (You're Never Gonna Get It)",
+                "start": "2370",
+                "end": "2597"
+            },
+            {
+                "artist": "Ralph Tresvant",
+                "title": "Sensitivity",
+                "start": "2634",
+                "end": "2821"
+            }
+        ]
+    },
+    "kjah_west": {
+        "image": "../assets/images/radios/SA/kjah.webp",
+        "displayName": "K-Jah Radio West",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kjah.ogg",
+        "dj": ["Marshall Peters", "Johnny Lawton"],
+        "genre": "reggae",
+        "songs": [
+            {
+                "artist": "Black Harmony",
+                "title": "Don't Let It Go To Your Head",
+                "start": "1",
+                "end": "224"
+            },
+            {
+                "artist": "Blood Sisters",
+                "title": "Ring My Bell",
+                "start": "251",
+                "end": "463"
+            },
+            {
+                "artist": "Shabba Ranks",
+                "title": "Wicked Inna Bed",
+                "start": "473",
+                "end": "665"
+            },
+            {
+                "artist": "Buju Banton",
+                "title": "Batty Rider",
+                "start": "666",
+                "end": "883"
+            },
+            {
+                "artist": "Augustus Pablo",
+                "title": "King Tubby Meets Rockers Uptown",
+                "start": "924",
+                "end": "1073"
+            },
+            {
+                "artist": "Dennis Brown",
+                "title": "Revolution",
+                "start": "1074",
+                "end": "1303"
+            },
+            {
+                "artist": "Willie Williams",
+                "title": "Armagideon Time",
+                "start": "1328",
+                "end": "1470"
+            },
+            {
+                "artist": "I-Roy",
+                "title": "Sidewalk Killer",
+                "start": "1497",
+                "end": "1712"
+            },
+            {
+                "artist": "Toots & the Maytals",
+                "title": "Funky Kingston",
+                "start": "1851",
+                "end": "2056"
+            },
+            {
+                "artist": "Dillinger",
+                "title": "Cocaine In My Brain",
+                "start": "2065",
+                "end": "2269"
+            },
+            {
+                "artist": "Toots & the Maytals",
+                "title": "Pressure Drop",
+                "start": "2270",
+                "end": "2482"
+            },
+            {
+                "artist": "The Pliers",
+                "title": "Bam Bam",
+                "start": "2550",
+                "end": "2793"
+            },
+            {
+                "artist": "Barrington Levy",
+                "title": "Here I Come",
+                "start": "2804",
+                "end": "3011"
+            },
+            {
+                "artist": "Reggie Stepper",
+                "title": "Drum Pan Sound",
+                "start": "3012",
+                "end": "3204"
+            },
+            {
+                "artist": "Black Uhuru",
+                "title": "Great Train Robbery",
+                "start": "3339",
+                "end": "3568"
+            },
+            {
+                "artist": "Max Romeo & The Upsetters",
+                "title": "I Chase The Devil",
+                "start": "3569",
+                "end": "3767"
+            }
+        ]
+    },
+    "master_sounds": {
+        "image": "../assets/images/radios/SA/master.webp",
+        "displayName": "Master Sounds 98.3",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/master.ogg",
+        "dj": "Johnny \"The Love Giant\" Parkinson",
+        "genre": ["soul", "funk_groove"],
+        "songs": [
+            {
+                "artist": "James Brown",
+                "title": "The Payback",
+                "start": "15.34",
+                "end": "247.14"
+            },
+            {
+                "artist": "Harlem Underground Band",
+                "title": "Smokin' Cheeba Cheeba",
+                "start": "260.96",
+                "end": "520.79"
+            },
+            {
+                "artist": "Charles Wright & The Watts 103rd Street Rhythm Band",
+                "title": "Express Yourself",
+                "start": "541.31",
+                "end": "757.34"
+            },
+            {
+                "artist": "Booker T. & the M.G.'s",
+                "title": "Green Onions",
+                "start": "769.42",
+                "end": "935.36"
+            },
+            {
+                "artist": "Lyn Collins",
+                "title": "Think (About It)",
+                "start": "935.79",
+                "end": "1131.14"
+            },
+            {
+                "artist": "James Brown",
+                "title": "Funky President (People It's Bad)",
+                "start": "1200.85",
+                "end": "1433.15"
+            },
+            {
+                "artist": "Bobby Byrd",
+                "title": "I Know You Got Soul",
+                "start": "1446.66",
+                "end": "1667.67"
+            },
+            {
+                "artist": "Bob James",
+                "title": "Nautilus",
+                "start": "1688.65",
+                "end": "1914"
+            },
+            {
+                "artist": "The J.B.'s",
+                "title": "The Grunt",
+                "start": "1914.75",
+                "end": "2075.56"
+            },
+            {
+                "artist": "The Blackbyrds",
+                "title": "Rock Creek Park",
+                "start": "2107.49",
+                "end": "2315.81"
+            },
+            {
+                "artist": "Maceo & The Macks",
+                "title": "Cross The Tracks (We Better Go Back)",
+                "start": "2334.34",
+                "end": "2527.3"
+            },
+            {
+                "artist": "War",
+                "title": "Low Rider",
+                "start": "2540.92",
+                "end": "2706.17"
+            },
+            {
+                "artist": "The Chakachas",
+                "title": "Jungle Fever",
+                "start": "2721.37",
+                "end": "2935.3"
+            },
+            {
+                "artist": "Gloria Jones",
+                "title": "Tainted Love",
+                "start": "2950.98",
+                "end": "3071.98"
+            },
+            {
+                "artist": "Bobby Byrd",
+                "title": "Hot Pants (I'm Coming, I'm Coming, I'm Coming)",
+                "start": "3121.34",
+                "end": "3264.6"
+            },
+            {
+                "artist": "Sir Joe Quarterman & Free Soul",
+                "title": "(I've Got) So Much Trouble In My Mind",
+                "start": "3285.39",
+                "end": "3516.07"
+            },
+            {
+                "artist": "Lyn Collins",
+                "title": "Rock Me Again & Again & Again & Again & Again & Again",
+                "start": "3529.9",
+                "end": "3729.96"
+            },
+            {
+                "artist": "Maceo & The Macks",
+                "title": "Soul Power '74",
+                "start": "3730.22",
+                "end": "3953"
+            }
+        ]
+    },
+    "wctr": {
+        "image": "../assets/images/radios/SA/wctr.webp",
+        "displayName": "West Coast Talk Radio",
+        "playlists": [
+            {
+                "name": "WCTR News",
+                "dj": "Lianne Forget",
+                "genre": "news_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #1",
+                        "start": "0",
+                        "end": "140"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #2",
+                        "start": "141",
+                        "end": "281"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #3",
+                        "start": "283",
+                        "end": "394"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #4",
+                        "start": "397",
+                        "end": "521"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #5",
+                        "start": "522",
+                        "end": "675"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #6",
+                        "start": "677",
+                        "end": "818"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #7",
+                        "start": "819",
+                        "end": "961"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #8",
+                        "start": "962",
+                        "end": "1095"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #9",
+                        "start": "1096",
+                        "end": "1154"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #10",
+                        "start": "1157",
+                        "end": "1227"
+                    },
+                    {
+                        "artist": "Lianne Forget",
+                        "title": "WCTR News - Noticia #11",
+                        "start": "1228",
+                        "end": "1406"
+                    }
+                ]
+            },
+            {
+                "name": "The Tight End Zone",
+                "dj": "Derrick Thackery",
+                "genre": "sports_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Derrick Thackery",
+                        "title": "The Tight End Zone",
+                        "start": "0",
+                        "end": "623"
+                    }
+                ]
+            },
+            {
+                "name": "The Wild Traveler",
+                "dj": "James Pedeaston",
+                "genre": "travel_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_3.ogg",
+                "songs": [
+                    {
+                        "artist": "James Pedeaston",
+                        "title": "The Wild Traveler - Segmento #1",
+                        "start": "0",
+                        "end": "336"
+                    },
+                    {
+                        "artist": "James Pedeaston",
+                        "title": "The Wild Traveler - Segmento #2",
+                        "start": "338",
+                        "end": "701"
+                    }
+                ]
+            },
+            {
+                "name": "Entertaining America",
+                "dj": ["Billy Dexter", "Lazlow"],
+                "genre": "entertainment_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_4.ogg",
+                "songs": [
+                    {
+                        "artist": "Billy Dexter",
+                        "title": "Entertaining America - Segmento #1",
+                        "start": "0",
+                        "end": "358"
+                    },
+                    {
+                        "artist": "Lazlow",
+                        "title": "Entertaining America - Segmento #2",
+                        "start": "359",
+                        "end": "652"
+                    },
+                    {
+                        "artist": "Lazlow",
+                        "title": "Entertaining America - Segmento #3",
+                        "start": "654",
+                        "end": "1067"
+                    }
+                ]
+            },
+            {
+                "name": "Gardening with Maurice",
+                "dj": "Maurice",
+                "genre": "gardening_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_5.ogg",
+                "songs": [
+                    {
+                        "artist": "Maurice",
+                        "title": "Gardening with Maurice - Segmento #1",
+                        "start": "0",
+                        "end": "252"
+                    },
+                    {
+                        "artist": "Maurice",
+                        "title": "Gardening with Maurice - Segmento #2",
+                        "start": "253",
+                        "end": "615"
+                    },
+                    {
+                        "artist": "Maurice",
+                        "title": "Gardening with Maurice - Adelanto #1",
+                        "start": "616",
+                        "end": "685"
+                    },
+                    {
+                        "artist": "Maurice",
+                        "title": "Gardening with Maurice - Adelanto #2",
+                        "start": "686",
+                        "end": "779"
+                    }
+                ]
+            },
+            {
+                "name": "I Say/You Say",
+                "dj": ["Peyton Phillips", "Mary Phillips"],
+                "genre": "political_debate_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_6.ogg",
+                "songs": [
+                    {
+                        "artist": "Peyton y Mary Phillips",
+                        "title": "I Say/You Say - Segmento #1",
+                        "start": "0",
+                        "end": "345"
+                    },
+                    {
+                        "artist": "Peyton y Mary Phillips",
+                        "title": "I Say/You Say - Segmento #2",
+                        "start": "346",
+                        "end": "630"
+                    }
+                ]
+            },
+            {
+                "name": "Lonely Hearts",
+                "dj": ["Christy MacIntyre", "Fernando Martinez"],
+                "genre": "dating_advice_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_7.ogg",
+                "songs": [
+                    {
+                        "artist": "Christy MacIntyre",
+                        "title": "Lonely Hearts - Segmento #1",
+                        "start": "0",
+                        "end": "420"
+                    },
+                    {
+                        "artist": "Christy MacIntyre y Fernando Martinez",
+                        "title": "Lonely Hearts - Segmento #2",
+                        "start": "422",
+                        "end": "752"
+                    }
+                ]
+            },
+            {
+                "name": "Area 53",
+                "dj": "Marvin Trill",
+                "genre": "conspiracy_theory_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_8.ogg",
+                "songs": [
+                    {
+                        "artist": "Marvin Trill",
+                        "title": "Area 53 - Segmento #1",
+                        "start": "0",
+                        "end": "168"
+                    },
+                    {
+                        "artist": "Marvin Trill",
+                        "title": "Area 53 - Segmento #2",
+                        "start": "169",
+                        "end": "347"
+                    },
+                    {
+                        "artist": "Marvin Trill",
+                        "title": "Area 53 - Segmento #3",
+                        "start": "348",
+                        "end": "538"
+                    }
+                ]
+            }
+        ]
+    }
+}

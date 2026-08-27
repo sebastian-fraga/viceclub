@@ -1,0 +1,2665 @@
+{
+    "vladivostok_fm": {
+        "image": "../assets/images/radios/IV/vlad.webp",
+        "displayName": "Vladivostok FM",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": "Ruslana",
+                "genre": ["russian_music", "ukrainian_music"],
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vlad_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Zveri",
+                        "title": "Квартира",
+                        "start": "15",
+                        "end": "210"
+                    },
+                    {
+                        "artist": "Kino",
+                        "title": "Группа крови",
+                        "start": "298",
+                        "end": "502"
+                    },
+                    {
+                        "artist": "Seryoga",
+                        "title": "Liberty City: The Invasion",
+                        "start": "503",
+                        "end": "709"
+                    },
+                    {
+                        "artist": "Sergey Shnurov",
+                        "title": "Никого не жалко",
+                        "start": "788",
+                        "end": "986"
+                    },
+                    {
+                        "artist": "Oleg Kvasha",
+                        "title": "Зеленоглазое такси (Club Remix)",
+                        "start": "1018",
+                        "end": "1221"
+                    },
+                    {
+                        "artist": "Splean",
+                        "title": "Линия жизни",
+                        "start": "1349",
+                        "end": "1517"
+                    },
+                    {
+                        "artist": "Seryoga",
+                        "title": "Король ринга",
+                        "start": "1518",
+                        "end": "1699"
+                    },
+                    {
+                        "artist": "Marakesh",
+                        "title": "Ждать",
+                        "start": "1759",
+                        "end": "1965"
+                    },
+                    {
+                        "artist": "Ranetki Girls",
+                        "title": "О тебе",
+                        "start": "1966",
+                        "end": "2155"
+                    },
+                    {
+                        "artist": "Ruslana",
+                        "title": "Wild Dances",
+                        "start": "2178",
+                        "end": "2352"
+                    },
+                    {
+                        "artist": "Basta",
+                        "title": "Мама",
+                        "start": "2415",
+                        "end": "2635"
+                    },
+                    {
+                        "artist": "Dolphin",
+                        "title": "РЭП",
+                        "start": "2667",
+                        "end": "2829"
+                    },
+                    {
+                        "artist": "Glukoza",
+                        "title": "Швайне",
+                        "start": "2945",
+                        "end": "3176"
+                    },
+                    {
+                        "artist": "Riffmaster",
+                        "title": "Riffmaster Tony",
+                        "start": "3192",
+                        "end": "3424"
+                    },
+                    {
+                        "artist": "Zhenya Fokin",
+                        "title": "Ночью",
+                        "start": "3479",
+                        "end": "3689"
+                    },
+                    {
+                        "artist": "Seryoga",
+                        "title": "Добавь скорость",
+                        "start": "3690",
+                        "end": "3886"
+                    },
+                    {
+                        "artist": "Riffmaster",
+                        "title": "Бегу",
+                        "start": "3952",
+                        "end": "4148"
+                    },
+                    {
+                        "artist": "Seryoga",
+                        "title": "Чики",
+                        "start": "4238",
+                        "end": "4395"
+                    },
+                    {
+                        "artist": "Kievelektro",
+                        "title": "Гуляй, Славяне! ft. Alyona Vinnitskaya",
+                        "start": "4414",
+                        "end": "4617"
+                    },
+                    {
+                        "artist": "Ayvengo",
+                        "title": "Репрезенты",
+                        "start": "4673",
+                        "end": "4876"
+                    },
+                    {
+                        "artist": "Aleksey Bolshoy",
+                        "title": "Я ненавижу караоке",
+                        "start": "4908",
+                        "end": "5097"
+                    },
+                    {
+                        "artist": "Seryoga",
+                        "title": "Mon Ami ft. Max Lorens",
+                        "start": "5197",
+                        "end": "5413"
+                    },
+                    {
+                        "artist": "Ayvengo",
+                        "title": "Андеграунд",
+                        "start": "5414",
+                        "end": "5590"
+                    },
+                    {
+                        "artist": "Delise",
+                        "title": "Горячее Лето",
+                        "start": "5650",
+                        "end": "5860"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": "DJ Paul",
+                "genre": "dance",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vlad_2.ogg",
+                "songs": [
+                    {
+                        "artist": "David Morales",
+                        "title": "How Would U Feel ft. Lea-Lorien",
+                        "start": "0",
+                        "end": "177"
+                    },
+                    {
+                        "artist": "Steve Mac",
+                        "title": "Lovin' You More (Freemasons Vocal Club Mix)",
+                        "start": "178",
+                        "end": "311"
+                    },
+                    {
+                        "artist": "Sucker DJs",
+                        "title": "Salvation (eSQUIRE Mix)",
+                        "start": "312",
+                        "end": "446"
+                    },
+                    {
+                        "artist": "Stonebridge",
+                        "title": "Put 'Em High (JJ's Club Mix) ft. Therese",
+                        "start": "448",
+                        "end": "646"
+                    },
+                    {
+                        "artist": "Marly",
+                        "title": "You Never Know (Morjac Extended Mix)",
+                        "start": "650",
+                        "end": "782"
+                    },
+                    {
+                        "artist": "The Shapeshifters",
+                        "title": "Lola's Theme",
+                        "start": "784",
+                        "end": "959"
+                    },
+                    {
+                        "artist": "Freemasons",
+                        "title": "Love on My Mind ft. Amanda Wilson",
+                        "start": "960",
+                        "end": "1161"
+                    },
+                    {
+                        "artist": "Soulsearcher",
+                        "title": "Can't Get Enough",
+                        "start": "1162",
+                        "end": "1371"
+                    },
+                    {
+                        "artist": "Michael Gray",
+                        "title": "The Weekend",
+                        "start": "1372",
+                        "end": "1521"
+                    },
+                    {
+                        "artist": "Jonathan Peters",
+                        "title": "Music ft. Maya Azucena",
+                        "start": "1522",
+                        "end": "1743"
+                    },
+                    {
+                        "artist": "J Majik & Wickaman",
+                        "title": "Crazy World (Fonzerelli Mix)",
+                        "start": "1745",
+                        "end": "1949"
+                    },
+                    {
+                        "artist": "Booty Luv",
+                        "title": "Boogie 2Nite (Seamus Haji Big Love Mix)",
+                        "start": "1950",
+                        "end": "2172"
+                    },
+                    {
+                        "artist": "Hook N Sling",
+                        "title": "The Best Thing",
+                        "start": "2172",
+                        "end": "2388"
+                    },
+                    {
+                        "artist": "Eric Prydz",
+                        "title": "Pjanoo (Original Club Mix)",
+                        "start": "2389",
+                        "end": "2538"
+                    },
+                    {
+                        "artist": "David Guetta",
+                        "title": "When Love Takes Over ft. Kelly Rowland",
+                        "start": "2539",
+                        "end": "2865"
+                    }
+                ]
+            }
+        ]
+    },
+    "public_liberty_radio": {
+        "image": "../assets/images/radios/IV/plr.webp",
+        "displayName": "Public Liberty Radio",
+        "playlists": [
+            {
+                "name": "The Séance",
+                "dj": "Beatrix Fontaine",
+                "genre": "spiritualism_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Beatrix Fontaine",
+                        "title": "The Séance - Segmento #1",
+                        "start": "2",
+                        "end": "566"
+                    },
+                    {
+                        "artist": "Beatrix Fontaine",
+                        "title": "The Séance - Segmento #2",
+                        "start": "584",
+                        "end": "1076"
+                    }
+                ]
+            },
+            {
+                "name": "Pacemaker",
+                "dj": "Ryan McFallon",
+                "genre": "medical_aid_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Ryan McFallon",
+                        "title": "Pacemaker",
+                        "start": "12",
+                        "end": "1023"
+                    }
+                ]
+            },
+            {
+                "name": "Intelligent Agenda",
+                "dj": "Mike Riley",
+                "genre": "liberal_debate_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_3.ogg",
+                "songs": [
+                    {
+                        "artist": "Mike Riley",
+                        "title": "Intelligent Agenda",
+                        "start": "0",
+                        "end": "942"
+                    }
+                ]
+            }
+        ]
+    },
+    "san_juan_sounds": {
+        "image": "../assets/images/radios/IV/sanjuan.webp",
+        "displayName": "San Juan Sounds",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": "Daddy Yankee",
+                "genre": "reggaeton",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/sanjuan_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Don Omar",
+                        "title": "Salió El Sol",
+                        "start": "9.76",
+                        "end": "210.29"
+                    },
+                    {
+                        "artist": "Angel y Khriz",
+                        "title": "Ven Báilalo",
+                        "start": "236.14",
+                        "end": "436.89"
+                    },
+                    {
+                        "artist": "Hector El Father",
+                        "title": "Maldades",
+                        "start": "508.92",
+                        "end": "709.70"
+                    },
+                    {
+                        "artist": "Wisin & Yandel",
+                        "title": "Sexy Movimiento",
+                        "start": "775.72",
+                        "end": "965.74"
+                    },
+                    {
+                        "artist": "Daddy Yankee",
+                        "title": "Impacto",
+                        "start": "965.93",
+                        "end": "1149.62"
+                    },
+                    {
+                        "artist": "Voltio",
+                        "title": "Pónmela ft. Jowell & Randy",
+                        "start": "1201.37",
+                        "end": "1422.45"
+                    },
+                    {
+                        "artist": "Tito El Bambino",
+                        "title": "Siente El Boom",
+                        "start": "1422.46",
+                        "end": "1613.2"
+                    },
+                    {
+                        "artist": "Calle 13",
+                        "title": "Atrévete-te-te",
+                        "start": "1673.79",
+                        "end": "1882"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": "Henry Santos",
+                "genre": "reggaeton",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/sanjuan_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Aventura",
+                        "title": "El Desprecio",
+                        "start": "0",
+                        "end": "263.87"
+                    },
+                    {
+                        "artist": "Elvis Crespo",
+                        "title": "Suavemente",
+                        "start": "274.69",
+                        "end": "538.93"
+                    },
+                    {
+                        "artist": "Angel y Khriz",
+                        "title": "Na De Na ft. Gocho & John Eric",
+                        "start": "546.15",
+                        "end": "745.41"
+                    },
+                    {
+                        "artist": "Ivy Queen",
+                        "title": "Dime",
+                        "start": "752.67",
+                        "end": "924.54"
+                    },
+                    {
+                        "artist": "Don Omar",
+                        "title": "Virtual Diva",
+                        "start": "924.55",
+                        "end": "1160.68"
+                    },
+                    {
+                        "artist": "Wisin & Yandel",
+                        "title": "Me Estás Tentando ft. DJ Nesty",
+                        "start": "1161.02",
+                        "end": "1385.82"
+                    },
+                    {
+                        "artist": "Tego Calderón",
+                        "title": "Llora, Llora ft. Oscar D'León",
+                        "start": "1386.45",
+                        "end": "1592.15"
+                    },
+                    {
+                        "artist": "Fulanito",
+                        "title": "Guallando",
+                        "start": "1603.09",
+                        "end": "1806"
+                    }
+                ]
+            }
+        ]
+    },
+    "electro_choc": {
+        "image": "../assets/images/radios/IV/electro.webp",
+        "displayName": "Electro-Choc",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": "François K",
+                "genre": ["electro", "house"],
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/electro_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Padded Cell",
+                        "title": "Signal Failure",
+                        "start": "0",
+                        "end": "215"
+                    },
+                    {
+                        "artist": "Black Devil Disco Club",
+                        "title": "The Devil In Us (Dub Version)",
+                        "start": "216",
+                        "end": "450"
+                    },
+                    {
+                        "artist": "One + One",
+                        "title": "No Pressure (Deadmau5 Remix)",
+                        "start": "451",
+                        "end": "661"
+                    },
+                    {
+                        "artist": "Alex Gopher",
+                        "title": "Brain Leech (Bugged Mind Remix)",
+                        "start": "662",
+                        "end": "890.81"
+                    },
+                    {
+                        "artist": "K.I.M.",
+                        "title": "B.T.T.T.T.R.Y. (Bag Raiders Remix)",
+                        "start": "894.1",
+                        "end": "1140.37"
+                    },
+                    {
+                        "artist": "Simian Mobile Disco",
+                        "title": "Tits and Acid",
+                        "start": "1143.61",
+                        "end": "1275"
+                    },
+                    {
+                        "artist": "Nitzer Ebb",
+                        "title": "Let Your Body Learn",
+                        "start": "1276",
+                        "end": "1443"
+                    },
+                    {
+                        "artist": "Kavinsky",
+                        "title": "Testarossa Autodrive (SebastiAn Remix)",
+                        "start": "1444.6",
+                        "end": "1622"
+                    },
+                    {
+                        "artist": "Chris Lake & deadmau5",
+                        "title": "Thought It Inside Out (Original Mix)",
+                        "start": "1623",
+                        "end": "1773"
+                    },
+                    {
+                        "artist": "Boys Noize",
+                        "title": "& Down",
+                        "start": "1774",
+                        "end": "1956"
+                    },
+                    {
+                        "artist": "Justice",
+                        "title": "Waters of Nazareth",
+                        "start": "1958.3",
+                        "end": "2174"
+                    },
+                    {
+                        "artist": "Killing Joke",
+                        "title": "Turn To Red",
+                        "start": "2175",
+                        "end": "2375"
+                    },
+                    {
+                        "artist": "Playgroup",
+                        "title": "Make It Happen (Extended Dub Version)",
+                        "start": "2376",
+                        "end": "2550"
+                    },
+                    {
+                        "artist": "Liquid Liquid",
+                        "title": "Optimo",
+                        "start": "2551",
+                        "end": "2683"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": "Crookers",
+                "genre": ["electro", "house", "dance"],
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/electro_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Major Lazer",
+                        "title": "Jump Up ft. Leftside & Supa Hype",
+                        "start": "1",
+                        "end": "203.93"
+                    },
+                    {
+                        "artist": "Daniel Haaksman",
+                        "title": "Kid Conga ft. MC Miltinho",
+                        "start": "204.12",
+                        "end": "317.4"
+                    },
+                    {
+                        "artist": "Boy 8-Bit",
+                        "title": "A City Under Siege",
+                        "start": "317.59",
+                        "end": "415.65"
+                    },
+                    {
+                        "artist": "Crookers",
+                        "title": "Put Your Hands on Me (A Capella) ft. Kardinal Offishall & Carla-Marie",
+                        "start": "416.67",
+                        "end": "491.46"
+                    },
+                    {
+                        "artist": "The Chemical Brothers",
+                        "title": "Nude Night",
+                        "start": "491.56",
+                        "end": "619.65"
+                    },
+                    {
+                        "artist": "Crookers",
+                        "title": "Bad Men ft. Solo",
+                        "start": "619.97",
+                        "end": "745.75"
+                    },
+                    {
+                        "artist": "Miike Show & Crookers",
+                        "title": "Animal (Crookers Remix)",
+                        "start": "748.36",
+                        "end": "778.05"
+                    },
+                    {
+                        "artist": "Jahcoozi",
+                        "title": "Watching You (Oliver $ Remix)",
+                        "start": "778.75",
+                        "end": "929.93"
+                    },
+                    {
+                        "artist": "Crookers",
+                        "title": "Boxer ft. Nic Sarno",
+                        "start": "931.24",
+                        "end": "1094.87"
+                    },
+                    {
+                        "artist": "SonicC",
+                        "title": "Stickin",
+                        "start": "1126.35",
+                        "end": "1186.9"
+                    },
+                    {
+                        "artist": "Black Noise",
+                        "title": "Knock You Out (Andy George Remix)",
+                        "start": "1216.68",
+                        "end": "1378.68"
+                    },
+                    {
+                        "artist": "Mixhell",
+                        "title": "Boom Da (Crookers Mix) ft. Jen Lasher & Oh Snap",
+                        "start": "1381.34",
+                        "end": "1498.51"
+                    },
+                    {
+                        "artist": "Crookers",
+                        "title": "No Security ft. Kelis",
+                        "start": "1515.81",
+                        "end": "1702"
+                    }
+                ]
+            }
+        ]
+    },
+    "the_classics": {
+        "image": "../assets/images/radios/IV/classics.webp",
+        "displayName": "The Classics 104.1",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/classics.ogg",
+        "dj": "DJ Premier",
+        "genre": "classic_hip_hop",
+        "songs": [
+            {
+                "artist": "Group Home",
+                "title": "Supa Star",
+                "start": "0",
+                "end": "173"
+            },
+            {
+                "artist": "Brand Nubian",
+                "title": "All for One",
+                "start": "174",
+                "end": "338"
+            },
+            {
+                "artist": "Special Ed",
+                "title": "I Got It Made",
+                "start": "339",
+                "end": "518"
+            },
+            {
+                "artist": "Jeru The Damaja",
+                "title": "D. Original",
+                "start": "519",
+                "end": "640"
+            },
+            {
+                "artist": "Marley Marl",
+                "title": "Droppin' Science ft. Craig G",
+                "start": "642",
+                "end": "751"
+            },
+            {
+                "artist": "MC Lyte",
+                "title": "Cha Cha Cha",
+                "start": "754",
+                "end": "918"
+            },
+            {
+                "artist": "Audio Two",
+                "title": "Top Billin'",
+                "start": "982",
+                "end": "1057"
+            },
+            {
+                "artist": "Stetsasonic",
+                "title": "Go Stetsa I (12\" Remix)",
+                "start": "1058",
+                "end": "1222"
+            },
+            {
+                "artist": "T La Rock & Jazzy Jay",
+                "title": "It's Yours",
+                "start": "1223",
+                "end": "1342"
+            },
+            {
+                "artist": "Gang Starr",
+                "title": "Who's Gonna Take the Weight?",
+                "start": "1343",
+                "end": "1624"
+            },
+            {
+                "artist": "Main Source",
+                "title": "Live at the Barbeque ft. Nas, Joe Fatal & Akinyele",
+                "start": "1632",
+                "end": "1734"
+            }
+        ]
+    },
+    "if99": {
+        "image": "../assets/images/radios/IV/if99.webp",
+        "displayName": "International Funk 99",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/if99.ogg",
+        "dj": "Femi Kuti",
+        "genre": ["funk", "afrobeat"],
+        "songs": [
+            {
+                "artist": "The Meters",
+                "title": "Just Kissed My Baby",
+                "start": "13",
+                "end": "198"
+            },
+            {
+                "artist": "Hummingbird",
+                "title": "You Can't Hide Love",
+                "start": "299",
+                "end": "498"
+            },
+            {
+                "artist": "Manu Dibango",
+                "title": "New Bell",
+                "start": "499",
+                "end": "687"
+            },
+            {
+                "artist": "Lonnie Liston Smith",
+                "title": "A Chance for Peace",
+                "start": "764",
+                "end": "955"
+            },
+            {
+                "artist": "Gil Scott-Heron",
+                "title": "Home Is Where the Hatred Is",
+                "start": "979",
+                "end": "1175"
+            },
+            {
+                "artist": "Mandrill",
+                "title": "Livin' It Up",
+                "start": "1206",
+                "end": "1420"
+            },
+            {
+                "artist": "Fela Kuti",
+                "title": "Sorrow, Tears & Blood",
+                "start": "1512",
+                "end": "1908"
+            },
+            {
+                "artist": "The O'Jays",
+                "title": "Give the People What They Want",
+                "start": "1929",
+                "end": "2143"
+            },
+            {
+                "artist": "Creative Source",
+                "title": "Who Is He (And What Is He to You)?",
+                "start": "2189",
+                "end": "2435"
+            },
+            {
+                "artist": "Fela Kuti",
+                "title": "Zombie",
+                "start": "2436",
+                "end": "2798"
+            },
+            {
+                "artist": "Femi Kuti",
+                "title": "Truth Don Die",
+                "start": "2875",
+                "end": "3174"
+            },
+            {
+                "artist": "War",
+                "title": "Galaxy",
+                "start": "3199",
+                "end": "3411"
+            }
+        ]
+    },
+    "tuff_gong_radio": {
+        "image": "../assets/images/radios/IV/tuff.webp",
+        "displayName": "Tuff Gong Radio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/tuff.ogg",
+        "dj": "Carl Bradshaw",
+        "genre": "reggae",
+        "songs": [
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Rebel Music (3 O'Clock Roadblock)",
+                "start": "9",
+                "end": "206"
+            },
+            {
+                "artist": "Stephen Marley",
+                "title": "Chase Dem",
+                "start": "270",
+                "end": "477"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Wake Up & Live (Parts 1 & 2)",
+                "start": "478",
+                "end": "669"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Pimper's Paradise",
+                "start": "740",
+                "end": "925"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "So Much Trouble In The World",
+                "start": "934",
+                "end": "1137"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Concrete Jungle (The Unreleased Original Jamaican Version)",
+                "start": "1261",
+                "end": "1484"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Stand Up Jamrock ft. Damian Marley",
+                "start": "1548",
+                "end": "1809"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Satisfy My Soul",
+                "start": "1810",
+                "end": "2051"
+            },
+            {
+                "artist": "Bob Marley & The Wailers",
+                "title": "Rat Race",
+                "start": "2163",
+                "end": "2321"
+            }
+        ]
+    },
+    "integrity": {
+        "displayName": "Integrity 2.0",
+        "image": "../assets/images/radios/IV/integrity.webp",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/integrity.ogg",
+        "dj": "Lazlow",
+        "genre": "talk_radio",
+        "songs": [
+            {
+                "artist": "Lazlow",
+                "title": "Integrity 2.0",
+                "start": "14",
+                "end": "2860"
+            }
+        ]
+    },
+    "the_vibe": {
+        "image": "../assets/images/radios/IV/vibe.webp",
+        "displayName": "The Vibe 98.8",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vibe.ogg",
+        "dj": "Vaughn Harper",
+        "genre": ["rhythm_and_blues", "soul"],
+        "songs": [
+            {
+                "artist": "Minnie Riperton",
+                "title": "Inside My Love",
+                "start": "11",
+                "end": "201"
+            },
+            {
+                "artist": "Freddie Jackson",
+                "title": "Have You Ever Loved Somebody",
+                "start": "275",
+                "end": "506"
+            },
+            {
+                "artist": "Ne-Yo",
+                "title": "Because of You",
+                "start": "550",
+                "end": "758"
+            },
+            {
+                "artist": "Barry White",
+                "title": "It's Only Love Doing Its Thing",
+                "start": "780",
+                "end": "984"
+            },
+            {
+                "artist": "Raheem DeVaughn",
+                "title": "You",
+                "start": "1051",
+                "end": "1242"
+            },
+            {
+                "artist": "C.J.",
+                "title": "I Want You",
+                "start": "1243",
+                "end": "1449"
+            },
+            {
+                "artist": "R. Kelly",
+                "title": "Bump n' Grind",
+                "start": "1538",
+                "end": "1747"
+            },
+            {
+                "artist": "Marvin Gaye",
+                "title": "Inner City Blues (Make Me Wanna Holler)",
+                "start": "1779",
+                "end": "2017"
+            },
+            {
+                "artist": "Loose Ends",
+                "title": "Hangin' On A String (Contemplating)",
+                "start": "2071",
+                "end": "2328"
+            },
+            {
+                "artist": "Jodeci",
+                "title": "Freek'n You",
+                "start": "2353",
+                "end": "2610"
+            },
+            {
+                "artist": "Jill Scott",
+                "title": "Golden",
+                "start": "2658",
+                "end": "2871"
+            },
+            {
+                "artist": "Ginuwine",
+                "title": "Pony",
+                "start": "2872",
+                "end": "3126"
+            },
+            {
+                "artist": "Alexander O'Neal",
+                "title": "Criticize (Edit)",
+                "start": "3222",
+                "end": "3420"
+            },
+            {
+                "artist": "The S.O.S. Band",
+                "title": "Just Be Good to Me",
+                "start": "3448",
+                "end": "3723"
+            },
+            {
+                "artist": "Mtume",
+                "title": "C.O.D. (I'll Deliver)",
+                "start": "3828",
+                "end": "4025"
+            },
+            {
+                "artist": "Dru Hill",
+                "title": "In My Bed (So So Def Remix)",
+                "start": "4077",
+                "end": "4289"
+            },
+            {
+                "artist": "The Isley Brothers",
+                "title": "Footsteps in the Dark, Pts. 1 & 2",
+                "start": "4296",
+                "end": "4554"
+            },
+            {
+                "artist": "Lloyd",
+                "title": "Get It Shawty",
+                "start": "4620",
+                "end": "4812"
+            },
+            {
+                "artist": "RAMP",
+                "title": "Daylight",
+                "start": "4813",
+                "end": "5037"
+            }
+        ]
+    },
+    "liberty_rock_radio": {
+        "image": "../assets/images/radios/IV/lrr.webp",
+        "displayName": "Liberty Rock Radio 97.8",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": "Iggy Pop",
+                "genre": "classic_rock",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/rock_1.ogg",
+                "songs": [
+                    {
+                        "artist": "The Smashing Pumpkins",
+                        "title": "1979",
+                        "start": "11.9",
+                        "end": "259"
+                    },
+                    {
+                        "artist": "Electric Light Orchestra",
+                        "title": "Evil Woman",
+                        "start": "276.21",
+                        "end": "503.15"
+                    },
+                    {
+                        "artist": "Genesis",
+                        "title": "Mama",
+                        "start": "565.45",
+                        "end": "860.13"
+                    },
+                    {
+                        "artist": "Sisters of Mercy",
+                        "title": "Dominion / Mother Russia",
+                        "start": "897",
+                        "end": "1196.52"
+                    },
+                    {
+                        "artist": "Heart",
+                        "title": "Straight On",
+                        "start": "1196.6",
+                        "end": "1387.47"
+                    },
+                    {
+                        "artist": "Bob Seger & The Silver Bullet Band ",
+                        "title": "Her Strut",
+                        "start": "1403.38",
+                        "end": "1599.41"
+                    },
+                    {
+                        "artist": "Joe Walsh",
+                        "title": "Rocky Mountain Way",
+                        "start": "1664.74",
+                        "end": "1928.83"
+                    },
+                    {
+                        "artist": "R.E.M.",
+                        "title": "Turn You Inside Out",
+                        "start": "1987.75",
+                        "end": "2182.45"
+                    },
+                    {
+                        "artist": "Thin Lizzy",
+                        "title": "Jailbreak",
+                        "start": "2201.82",
+                        "end": "2439.97"
+                    },
+                    {
+                        "artist": "The Who",
+                        "title": "The Seeker",
+                        "start": "2455.1",
+                        "end": "2644.16"
+                    },
+                    {
+                        "artist": "Queen",
+                        "title": "One Vision",
+                        "start": "2644.36",
+                        "end": "2875.56"
+                    },
+                    {
+                        "artist": "Godley & Creme",
+                        "title": "Cry",
+                        "start": "2932.21",
+                        "end": "3156.3"
+                    },
+                    {
+                        "artist": "The Black Crowes",
+                        "title": "Remedy",
+                        "start": "3180.94",
+                        "end": "3412.41"
+                    },
+                    {
+                        "artist": "Elton John",
+                        "title": "Street Kids",
+                        "start": "3429.3",
+                        "end": "3681.72"
+                    },
+                    {
+                        "artist": "Stevie Nicks",
+                        "title": "Edge of Seventeen",
+                        "start": "3752.09",
+                        "end": "4025.24"
+                    },
+                    {
+                        "artist": "Black Sabbath",
+                        "title": "Heaven and Hell",
+                        "start": "4033.81",
+                        "end": "4338.87"
+                    },
+                    {
+                        "artist": "Q Lazzarus",
+                        "title": "Goodbye Horses",
+                        "start": "4339.08",
+                        "end": "4510.11"
+                    },
+                    {
+                        "artist": "Steve Marriott",
+                        "title": "Cocaine",
+                        "start": "4539.45",
+                        "end": "4748.9"
+                    },
+                    {
+                        "artist": "David Bowie",
+                        "title": "Fascination",
+                        "start": "4749.6",
+                        "end": "4968.31"
+                    },
+                    {
+                        "artist": "Hello",
+                        "title": "New York Groove",
+                        "start": "5017.25",
+                        "end": "5173.58"
+                    },
+                    {
+                        "artist": "ZZ Top",
+                        "title": "Thug",
+                        "start": "5206",
+                        "end": "5406.7"
+                    },
+                    {
+                        "artist": "The Stooges",
+                        "title": "I Wanna Be Your Dog",
+                        "start": "5423.54",
+                        "end": "5602.1"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": "Iggy Pop",
+                "genre": "classic_rock",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/rock_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Bon Jovi",
+                        "title": "Wanted Dead Or Alive",
+                        "start": "15.64",
+                        "end": "307.95"
+                    },
+                    {
+                        "artist": "The Doobie Brothers",
+                        "title": "China Grove",
+                        "start": "365.37",
+                        "end": "550.4"
+                    },
+                    {
+                        "artist": "Foghat",
+                        "title": "Drivin' Wheel",
+                        "start": "662.94",
+                        "end": "894.42"
+                    },
+                    {
+                        "artist": "Rod Stewart",
+                        "title": "Every Picture Tells a Story",
+                        "start": "957.06",
+                        "end": "1275.7"
+                    },
+                    {
+                        "artist": "The Edgar Winter Group",
+                        "title": "Free Ride",
+                        "start": "1275.85",
+                        "end": "1444.93"
+                    },
+                    {
+                        "artist": "Saxon",
+                        "title": "Wheels of Steel",
+                        "start": "1511.74",
+                        "end": "1790.17"
+                    },
+                    {
+                        "artist": "The Doors",
+                        "title": "Five to One",
+                        "start": "1833.56",
+                        "end": "2088"
+                    },
+                    {
+                        "artist": "Jefferson Starship",
+                        "title": "Jane",
+                        "start": "2197.55",
+                        "end": "2403.63"
+                    },
+                    {
+                        "artist": "Styx",
+                        "title": "Renegade",
+                        "start": "2506.81",
+                        "end": "2737.04"
+                    },
+                    {
+                        "artist": "Aerosmith",
+                        "title": "Lord of the Thighs",
+                        "start": "2737.05",
+                        "end": "2947.05"
+                    },
+                    {
+                        "artist": "Deep Purple",
+                        "title": "Highway Star",
+                        "start": "3018.71",
+                        "end": "3288.64"
+                    },
+                    {
+                        "artist": "Iron Maiden",
+                        "title": "Run to the Hills",
+                        "start": "3288.76",
+                        "end": "3518.9"
+                    },
+                    {
+                        "artist": "Lynyrd Skynyrd",
+                        "title": "Saturday Night Special",
+                        "start": "3574.4",
+                        "end": "3845.72"
+                    },
+                    {
+                        "artist": "Alice Cooper",
+                        "title": "Go to Hell",
+                        "start": "3891.2",
+                        "end": "4113.15"
+                    },
+                    {
+                        "artist": "James Gang",
+                        "title": "Funk #49",
+                        "start": "4227.91",
+                        "end": "4434.35"
+                    },
+                    {
+                        "artist": "AC/DC",
+                        "title": "Touch Too Much",
+                        "start": "4544.87",
+                        "end": "4810.41"
+                    },
+                    {
+                        "artist": "Nazareth",
+                        "title": "Hair of the Dog",
+                        "start": "4810.47",
+                        "end": "5029.03"
+                    },
+                    {
+                        "artist": "Mötley Crüe",
+                        "title": "Wild Side",
+                        "start": "5029.54",
+                        "end": "5229"
+                    }
+                ]
+            }
+        ]
+    },
+    "jazz_nation_radio": {
+        "image": "../assets/images/radios/IV/jnr.webp",
+        "displayName": "Jazz Nation Radio 108.5",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/jnr.ogg",
+        "dj": "Roy Haynes",
+        "genre": "jazz",
+        "songs": [
+            {
+                "artist": "Chet Baker",
+                "title": "Let's Get Lost",
+                "start": "8.37",
+                "end": "229.51"
+            },
+            {
+                "artist": "Charlie Parker",
+                "title": "Night and Day",
+                "start": "231.17",
+                "end": "401.04"
+            },
+            {
+                "artist": "Art Blakey and The Jazz Messengers",
+                "title": "Moanin'",
+                "start": "470.83",
+                "end": "686"
+            },
+            {
+                "artist": "Roy Haynes",
+                "title": "Snap Crackle",
+                "start": "687.03",
+                "end": "878.56"
+            },
+            {
+                "artist": "Count Basie",
+                "title": "April in Paris",
+                "start": "937.39",
+                "end": "1126.06"
+            },
+            {
+                "artist": "Miles Davis",
+                "title": "Move",
+                "start": "1290.23",
+                "end": "1440.25"
+            },
+            {
+                "artist": "Dizzy Gillespie",
+                "title": "Whisper Not",
+                "start": "1481.87",
+                "end": "1657.37"
+            },
+            {
+                "artist": "Sonny Rollins",
+                "title": "St. Thomas",
+                "start": "1715.03",
+                "end": "1911.6"
+            },
+            {
+                "artist": "Duke Ellington",
+                "title": "Take the \"A\" Train",
+                "start": "1912.22",
+                "end": "2085.88"
+            },
+            {
+                "artist": "John Coltrane",
+                "title": "Giant Steps",
+                "start": "2109.44",
+                "end": "2290.4"
+            }
+        ]
+    },
+    "massive_b_soundsystem": {
+        "image": "../assets/images/radios/IV/massive.webp",
+        "displayName": "Massive B Soundsystem 96.9",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/mbs.ogg",
+        "dj": "Bobby Konders",
+        "genre": "dancehall",
+        "songs": [
+            {
+                "artist": "Burro Banton",
+                "title": "Badder Den Dem",
+                "start": "19",
+                "end": "162"
+            },
+            {
+                "artist": "Choppa Chop",
+                "title": "Set It Off",
+                "start": "163",
+                "end": "291"
+            },
+            {
+                "artist": "Mavado",
+                "title": "Real McKoy ft. Busy Signal",
+                "start": "294",
+                "end": "442"
+            },
+            {
+                "artist": "Jabba",
+                "title": "Raise It Up",
+                "start": "444",
+                "end": "590"
+            },
+            {
+                "artist": "Bunji Garlin",
+                "title": "Brrrt",
+                "start": "594",
+                "end": "738"
+            },
+            {
+                "artist": "Richie Spice",
+                "title": "Youth Dem Cold",
+                "start": "782",
+                "end": "950"
+            },
+            {
+                "artist": "Chuck Fenda",
+                "title": "All About Da Weed",
+                "start": "966",
+                "end": "1034"
+            },
+            {
+                "artist": "Chezidek",
+                "title": "Call Pon Dem",
+                "start": "1047",
+                "end": "1188"
+            },
+            {
+                "artist": "Mavado",
+                "title": "Last Night",
+                "start": "1200",
+                "end": "1290"
+            },
+            {
+                "artist": "Spragga Benz",
+                "title": "Da Order",
+                "start": "1299",
+                "end": "1379"
+            },
+            {
+                "artist": "Bounty Killer",
+                "title": "Bullet Proof Skin",
+                "start": "1388",
+                "end": "1482"
+            },
+            {
+                "artist": "Shaggy",
+                "title": "Church Heathen",
+                "start": "1498",
+                "end": "1600"
+            },
+            {
+                "artist": "Munga",
+                "title": "No Fraid A",
+                "start": "1613",
+                "end": "1704"
+            },
+            {
+                "artist": "Buju Banton",
+                "title": "Driver A",
+                "start": "1733",
+                "end": "1933"
+            }
+        ]
+    },
+    "k109": {
+        "image": "../assets/images/radios/IV/k109.webp",
+        "displayName": "K109 The Studio",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/k109.ogg",
+        "dj": "Karl Lagerfeld",
+        "genre": ["disco", "funk"],
+        "songs": [
+            {
+                "artist": "Rainbow Brown",
+                "title": "Till You Surrender",
+                "start": "15",
+                "end": "287"
+            },
+            {
+                "artist": "Fatback Band",
+                "title": "(Are You Ready) Do the Bus Stop",
+                "start": "321",
+                "end": "560"
+            },
+            {
+                "artist": "Peter Brown",
+                "title": "Burning Love Breakdown",
+                "start": "651",
+                "end": "868"
+            },
+            {
+                "artist": "Rose Royce",
+                "title": "Still in Love",
+                "start": "890",
+                "end": "1161"
+            },
+            {
+                "artist": "Change",
+                "title": "A Lover's Holiday",
+                "start": "1162",
+                "end": "1378"
+            },
+            {
+                "artist": "Sylvester",
+                "title": "I Need You",
+                "start": "1420",
+                "end": "1642"
+            },
+            {
+                "artist": "Tamiko Jones",
+                "title": "Can't Live Without Your Love",
+                "start": "1649",
+                "end": "1919"
+            },
+            {
+                "artist": "Gino Soccio",
+                "title": "Dancer",
+                "start": "1995",
+                "end": "2257"
+            },
+            {
+                "artist": "Suzy Q",
+                "title": "Get On Up and Do It Again",
+                "start": "2271",
+                "end": "2526"
+            },
+            {
+                "artist": "Don Ray",
+                "title": "Standing in the Rain",
+                "start": "2587",
+                "end": "2815"
+            },
+            {
+                "artist": "Candi Staton",
+                "title": "Young Hearts Run Free",
+                "start": "2826",
+                "end": "3024"
+            },
+            {
+                "artist": "A Taste of Honey",
+                "title": "Boogie Oogie Oogie",
+                "start": "3076",
+                "end": "3260"
+            },
+            {
+                "artist": "Sister Sledge",
+                "title": "He's the Greatest Dancer",
+                "start": "3261",
+                "end": "3556"
+            },
+            {
+                "artist": "Stephanie Mills",
+                "title": "Put Your Body In It",
+                "start": "3632",
+                "end": "3842"
+            },
+            {
+                "artist": "Patrick Cowley",
+                "title": "Menergy",
+                "start": "3860",
+                "end": "4051"
+            },
+            {
+                "artist": "Electrik Funk",
+                "title": "On a Journey (I Sing the Funk Electric)",
+                "start": "4109",
+                "end": "4360"
+            },
+            {
+                "artist": "Skatt Brothers",
+                "title": "Walk the Night",
+                "start": "4444",
+                "end": "4690"
+            },
+            {
+                "artist": "The Trammps",
+                "title": "Disco Inferno",
+                "start": "4698",
+                "end": "4903"
+            },
+            {
+                "artist": "Harry Thumann",
+                "title": "Underwater",
+                "start": "5008",
+                "end": "5255"
+            },
+            {
+                "artist": "Creme d'Cocoa",
+                "title": "Doin' the Dog",
+                "start": "5290",
+                "end": "5503"
+            },
+            {
+                "artist": "Dan Hartman",
+                "title": "Relight My Fire",
+                "start": "5589",
+                "end": "5866"
+            },
+            {
+                "artist": "Peaches & Herb",
+                "title": "Shake Your Groove Thing",
+                "start": "5867",
+                "end": "6086"
+            },
+            {
+                "artist": "CHIC",
+                "title": "Everybody Dance",
+                "start": "6134",
+                "end": "6374"
+            },
+            {
+                "artist": "Rufus",
+                "title": "Any Love ft. Chaka Khan",
+                "start": "6391",
+                "end": "6624"
+            },
+            {
+                "artist": "Machine",
+                "title": "There But For the Grace of God Go I",
+                "start": "6679",
+                "end": "6904"
+            },
+            {
+                "artist": "Cerrone",
+                "title": "Supernature",
+                "start": "6917",
+                "end": "7167"
+            }
+        ]
+    },
+    "self_actualization_fm": {
+        "image": "../assets/images/radios/IV/self.webp",
+        "displayName": "Self Actualizaation FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/self.ogg",
+        "dj": "Audrey",
+        "genre": "ambient",
+        "songs": [
+            {
+                "artist": "Larry Heard",
+                "title": "Cosmology Myth",
+                "start": "13",
+                "end": "247"
+            },
+            {
+                "artist": "Tom Middleton",
+                "title": "Moonbathing",
+                "start": "265",
+                "end": "498"
+            },
+            {
+                "artist": "Chilled by Nature",
+                "title": "Go Forward (Love Bubble Mix)",
+                "start": "508",
+                "end": "742"
+            },
+            {
+                "artist": "Autechre",
+                "title": "Bike",
+                "start": "743",
+                "end": "977"
+            },
+            {
+                "artist": "Alpha Wave Movement",
+                "title": "Artifacts & Prophecies",
+                "start": "991",
+                "end": "1221"
+            },
+            {
+                "artist": "The Orb",
+                "title": "A Huge Ever Growing Pulsating Brain That Rules From The Centre of the Ultraworld (Live Mix MK10)",
+                "start": "1236",
+                "end": "1480"
+            },
+            {
+                "artist": "Alucidnation",
+                "title": "Skygazer (3002 Remix)",
+                "start": "1488",
+                "end": "1718"
+            },
+            {
+                "artist": "Pete Namlook & Klaus Schulze",
+                "title": "Psychedelic Brunch Pt. 5 Version 8 ft. Bill Laswell",
+                "start": "1742",
+                "end": "1977"
+            }
+        ]
+    },
+    "we_know_the_truth": {
+        "image": "../assets/images/radios/IV/wktt.webp",
+        "displayName": "WKTT Radio",
+        "playlists": [
+            {
+                "name": "Just or Unjust",
+                "dj": "Juez Grady",
+                "genre": "court_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Juez Grady",
+                        "title": "Just or Unjust - Segmento #1",
+                        "start": "10",
+                        "end": "555"
+                    },
+                    {
+                        "artist": "Juez Grady",
+                        "title": "Just or Unjust - Segmento #2",
+                        "start": "557",
+                        "end": "1058"
+                    }
+                ]
+            },
+            {
+                "name": "The Richard Bastion Show",
+                "dj": "Richard Bastion",
+                "genre": "conservative_debate_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Richard Bastion",
+                        "title": "The Richard Bastion Show - Segmento #1",
+                        "start": "0",
+                        "end": "413"
+                    },
+                    {
+                        "artist": "Richard Bastion",
+                        "title": "The Richard Bastion Show - Segmento #2",
+                        "start": "483",
+                        "end": "1162"
+                    }
+                ]
+            },
+            {
+                "name": "Fizz!",
+                "dj": ["Jane Labrador", "Marcel LeMuir", "Jeffron James"],
+                "genre": "entertainment_news_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_3.ogg",
+                "songs": [
+                    {
+                        "artist": "Jane Labrador, Marcel LeMuir y Jeffron James",
+                        "title": "Fizz! - Segmento #1",
+                        "start": "0",
+                        "end": "371"
+                    },
+                    {
+                        "artist": "Jane Labrador, Marcel LeMuir y Jeffron James",
+                        "title": "Fizz! - Segmento #2",
+                        "start": "439",
+                        "end": "867"
+                    }
+                ]
+            },
+            {
+                "name": "The Martin Serious Show",
+                "dj": "Martin Serious",
+                "genre": "shock_jock_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_4.ogg",
+                "songs": [
+                    {
+                        "artist": "Martin Serious",
+                        "title": "The Martin Serious Show",
+                        "start": "0",
+                        "end": "869"
+                    }
+                ]
+            },
+            {
+                "name": "Conspire",
+                "dj": "John Smith",
+                "genre": "conspiracy_theory_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_5.ogg",
+                "songs": [
+                    {
+                        "artist": "John Smith",
+                        "title": "Conspire - Segmento #1",
+                        "start": "0",
+                        "end": "480"
+                    },
+                    {
+                        "artist": "John Smith",
+                        "title": "Conspire - Segmento #2",
+                        "start": "483",
+                        "end": "1190"
+                    }
+                ]
+            }
+        ]
+    },
+    "vice_city_fm": {
+        "image": "../assets/images/radios/IV/vice.webp",
+        "displayName": "Vice City FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vice.ogg",
+        "dj": "Fernando Martinez",
+        "genre": ["new_wave", "80s"],
+        "songs": [
+            {
+                "artist": "Nu Shooz",
+                "title": "I Can't Wait",
+                "start": "12",
+                "end": "222"
+            },
+            {
+                "artist": "Swing Out Sister",
+                "title": "Breakout",
+                "start": "253",
+                "end": "460"
+            },
+            {
+                "artist": "Mai Tai",
+                "title": "History",
+                "start": "471",
+                "end": "680"
+            },
+            {
+                "artist": "Prefab Sprout",
+                "title": "When Love Breaks Down",
+                "start": "681",
+                "end": "899"
+            },
+            {
+                "artist": "John Farnham",
+                "title": "You're The Voice",
+                "start": "912",
+                "end": "1165"
+            },
+            {
+                "artist": "T'Pau",
+                "title": "Heart and Soul",
+                "start": "1197",
+                "end": "1409"
+            },
+            {
+                "artist": "Climie Fisher",
+                "title": "Love Changes (Everything)",
+                "start": "1420",
+                "end": "1641"
+            },
+            {
+                "artist": "Robbie Nevil",
+                "title": "C'est la Vie",
+                "start": "1673",
+                "end": "1860"
+            },
+            {
+                "artist": "Re-Flex",
+                "title": "The Politics of Dancing",
+                "start": "1873",
+                "end": "2086"
+            },
+            {
+                "artist": "Texas",
+                "title": "I Don't Want a Lover",
+                "start": "2121",
+                "end": "2327"
+            },
+            {
+                "artist": "Marillion",
+                "title": "Kayleigh",
+                "start": "2338",
+                "end": "2554"
+            },
+            {
+                "artist": "Roxette",
+                "title": "The Look",
+                "start": "2575",
+                "end": "2790"
+            },
+            {
+                "artist": "Five Star",
+                "title": "Find the Time",
+                "start": "2791",
+                "end": "3009"
+            },
+            {
+                "artist": "Jeffrey Osborne",
+                "title": "Stay with Me Tonight",
+                "start": "3021",
+                "end": "3237"
+            },
+            {
+                "artist": "Curiosity Killed the Cat",
+                "title": "Misfit",
+                "start": "3268",
+                "end": "3488"
+            },
+            {
+                "artist": "Terence Trent D'Arby",
+                "title": "Wishing Well",
+                "start": "3496",
+                "end": "3697"
+            },
+            {
+                "artist": "Roachford",
+                "title": "Cuddly Toy",
+                "start": "3742",
+                "end": "3943"
+            },
+            {
+                "artist": "Wet Wet Wet",
+                "title": "Wishing I Was Lucky",
+                "start": "3955",
+                "end": "4146"
+            },
+            {
+                "artist": "Level 42",
+                "title": "Something About You",
+                "start": "4179",
+                "end": "4370"
+            },
+            {
+                "artist": "Hue and Cry",
+                "title": "Labour of Love",
+                "start": "4383",
+                "end": "4594"
+            },
+            {
+                "artist": "'Til Tuesday",
+                "title": "Voices Carry",
+                "start": "4627",
+                "end": "4862"
+            },
+            {
+                "artist": "Scritti Politti",
+                "title": "Wood Beez (Pray Like Aretha Franklin)",
+                "start": "4871",
+                "end": "5086"
+            },
+            {
+                "artist": "Narada Michael Walden",
+                "title": "Divine Emotions",
+                "start": "5131",
+                "end": "5358"
+            },
+            {
+                "artist": "Coldcut",
+                "title": "People Hold On ft. Lisa Stansfield",
+                "start": "5359",
+                "end": "5566"
+            },
+            {
+                "artist": "Boy Meets Girl",
+                "title": "Waiting for a Star to Fall",
+                "start": "5578",
+                "end": "5821"
+            },
+            {
+                "artist": "Hall & Oates",
+                "title": "Maneater",
+                "start": "5866",
+                "end": "6095"
+            },
+            {
+                "artist": "Womack & Womack",
+                "title": "Teardrops",
+                "start": "6109",
+                "end": "6324"
+            },
+            {
+                "artist": "Neneh Cherry",
+                "title": "Buffalo Stance",
+                "start": "6372",
+                "end": "6592"
+            }
+        ]
+    },
+    "liberty_city_hardcore": {
+        "image": "../assets/images/radios/IV/lchc.webp",
+        "displayName": "Liberty City Hardcore",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": "Jimmy Gestapo",
+                "genre": ["hardcore_punk", "death_metal"],
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/lchc_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Bad Brains",
+                        "title": "Right Brigade",
+                        "start": "25.9",
+                        "end": "165.22"
+                    },
+                    {
+                        "artist": "Agnostic Front",
+                        "title": "Victim in Pain",
+                        "start": "210.54",
+                        "end": "256.14"
+                    },
+                    {
+                        "artist": "Maximum Penalty",
+                        "title": "All Your Boys",
+                        "start": "288.31",
+                        "end": "427.53"
+                    },
+                    {
+                        "artist": "Sick Of It All",
+                        "title": "Injustice System!",
+                        "start": "440.19",
+                        "end": "566.14"
+                    },
+                    {
+                        "artist": "Murphy's Law",
+                        "title": "A Day in the Life",
+                        "start": "577.70",
+                        "end": "680.85"
+                    },
+                    {
+                        "artist": "Killing Time",
+                        "title": "Tell Tale",
+                        "start": "744.51",
+                        "end": "830.20"
+                    },
+                    {
+                        "artist": "Underdog",
+                        "title": "Back to Back",
+                        "start": "855.01",
+                        "end": "1023.39"
+                    },
+                    {
+                        "artist": "Cro-Mags",
+                        "title": "It's the Limit",
+                        "start": "1034.65",
+                        "end": "1123.75"
+                    },
+                    {
+                        "artist": "Sheer Terror",
+                        "title": "Just Can't Hate Enough",
+                        "start": "1183.66",
+                        "end": "1339.65"
+                    },
+
+                    {
+                        "artist": "Leeway",
+                        "title": "Enforcer",
+                        "start": "1380.9",
+                        "end": "1606.45"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": "Max Cavalera",
+                "genre": ["Hardcore Punk", "Death Metal"],
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/lchc_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Soulfly",
+                        "title": "Blood Fire War Hate",
+                        "start": "0",
+                        "end": "40.58"
+                    },
+                    {
+                        "artist": "Entombed",
+                        "title": "Drowned",
+                        "start": "40.93",
+                        "end": "277.57"
+                    },
+                    {
+                        "artist": "Deicide",
+                        "title": "Dead by Dawn",
+                        "start": "277.78",
+                        "end": "509.72"
+                    },
+                    {
+                        "artist": "Bathory",
+                        "title": "Call from the Grave",
+                        "start": "512.03",
+                        "end": "736.22"
+                    },
+                    {
+                        "artist": "Cannibal Corpse",
+                        "title": "I Cum Blood",
+                        "start": "737.49",
+                        "end": "952.62"
+                    },
+                    {
+                        "artist": "Sepultura",
+                        "title": "Dead Embryonic Cells",
+                        "start": "962.84",
+                        "end": "1192.13"
+                    },
+                    {
+                        "artist": "Terrorizer",
+                        "title": "Fear of Napalm",
+                        "start": "1197.31",
+                        "end": "1368.54"
+                    },
+                    {
+                        "artist": "Kreator",
+                        "title": "Awakening of the Gods",
+                        "start": "1371.68",
+                        "end": "1585.59"
+                    },
+                    {
+                        "artist": "Celtic Frost",
+                        "title": "Inner Sanctum",
+                        "start": "1593.19",
+                        "end": "1904.29"
+                    },
+                    {
+                        "artist": "At the Gates",
+                        "title": "Slaughter of the Soul",
+                        "start": "1912.35",
+                        "end": "2084.53"
+                    },
+                    {
+                        "artist": "Jailbait",
+                        "title": "Drive By Audio",
+                        "start": "2088.07",
+                        "end": "2326"
+                    }
+                ]
+            }
+        ]
+    },
+    "the_journey": {
+        "image": "../assets/images/radios/IV/journey.webp",
+        "displayName": "The Journey",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/journey.ogg",
+        "dj": "Fruit",
+        "genre": "ambient",
+        "songs": [
+            {
+                "artist": "Tangerine Dream",
+                "title": "Remote Viewing",
+                "start": "12",
+                "end": "228"
+            },
+            {
+                "artist": "Steve Roach",
+                "title": "Arrival",
+                "start": "243",
+                "end": "395"
+            },
+            {
+                "artist": "Ray Lynch",
+                "title": "The Oh of Pleasure",
+                "start": "409",
+                "end": "605"
+            },
+            {
+                "artist": "Aphex Twin",
+                "title": "#17",
+                "start": "606",
+                "end": "713"
+            },
+            {
+                "artist": "Philip Glass",
+                "title": "Pruit Igoe",
+                "start": "723",
+                "end": "929"
+            },
+            {
+                "artist": "Terry Riley",
+                "title": "A Rainbow In Curved Air",
+                "start": "942",
+                "end": "1151"
+            },
+            {
+                "artist": "Global Communication",
+                "title": "5:23",
+                "start": "1163",
+                "end": "1363"
+            },
+            {
+                "artist": "Jean-Michel Jarre",
+                "title": "Oxygène, Pt. 4",
+                "start": "1375",
+                "end": "1566"
+            },
+            {
+                "artist": "Michael Shrieve ft. Kevin Shrieve and Klaus Schulze",
+                "title": "Communiqué: Approach Spiral",
+                "start": "1566",
+                "end": "1772"
+            }
+        ]
+    },
+    "fusion_fm": {
+        "image": "../assets/images/radios/IV/fusion.webp",
+        "displayName": "Fusion FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/fusion.ogg",
+        "dj": "Roy Ayers",
+        "genre": ["jazz_fusion", "acid_jazz"],
+        "songs": [
+            {
+                "artist": "Ryo Kawasaki",
+                "title": "Raisins",
+                "start": "7",
+                "end": "217"
+            },
+            {
+                "artist": "Marc Moulin",
+                "title": "Stomp",
+                "start": "331",
+                "end": "535"
+            },
+            {
+                "artist": "David Axelrod",
+                "title": "Holy Thursday",
+                "start": "536",
+                "end": "744"
+            },
+            {
+                "artist": "Roy Ayers",
+                "title": "Funk in the Hole",
+                "start": "827",
+                "end": "1038"
+            },
+            {
+                "artist": "Grover Washington, Jr.",
+                "title": "Knucklehead",
+                "start": "1182",
+                "end": "1406"
+            },
+            {
+                "artist": "Tom Scott and the L.A. Express",
+                "title": "Sneakin' in the Back",
+                "start": "1453",
+                "end": "1651"
+            },
+            {
+                "artist": "Bill Cobham",
+                "title": "Stratus",
+                "start": "1750",
+                "end": "1952"
+            },
+            {
+                "artist": "Aleksander Maliszewski",
+                "title": "Pokusa",
+                "start": "1990",
+                "end": "2200"
+            },
+            {
+                "artist": "David McCallum",
+                "title": "The Edge",
+                "start": "2264",
+                "end": "2434"
+            },
+            {
+                "artist": "Gong",
+                "title": "Heavy Tune",
+                "start": "2491",
+                "end": "2708"
+            }
+        ]
+    },
+    "the_beat": {
+        "image": "../assets/images/radios/IV/beat.webp",
+        "displayName": "The Beat 102.7",
+        "playlists": [
+            {
+                "name": "GTA IV",
+                "dj": ["DJ Mister Cee", "DJ Green Lantern"],
+                "genre": "east_coast_hip_hop",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/beat_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Swizz Beatz",
+                        "title": "Top Down",
+                        "start": "10",
+                        "end": "164"
+                    },
+                    {
+                        "artist": "Nas",
+                        "title": "War Is Necessary",
+                        "start": "169",
+                        "end": "309"
+                    },
+                    {
+                        "artist": "Kanye West",
+                        "title": "Flashing Lights ft. Dwele",
+                        "start": "310",
+                        "end": "480"
+                    },
+                    {
+                        "artist": "Joell Ortiz",
+                        "title": "Hip Hop (Remix) ft. Jadakiss & Saigon",
+                        "start": "499",
+                        "end": "680"
+                    },
+                    {
+                        "artist": "Fat Joe",
+                        "title": "The Crackhouse ft. Lil Wayne",
+                        "start": "688",
+                        "end": "887"
+                    },
+                    {
+                        "artist": "Mobb Deep",
+                        "title": "Dirty New Yorker",
+                        "start": "891",
+                        "end": "1034"
+                    },
+                    {
+                        "artist": "Ghostface Killah",
+                        "title": "We Celebrate ft. Kid Capri",
+                        "start": "1043",
+                        "end": "1166"
+                    },
+                    {
+                        "artist": "Styles P",
+                        "title": "Blow Your Mind (Remix) ft. Sheek Louch & Jadakiss",
+                        "start": "1176",
+                        "end": "1338"
+                    },
+                    {
+                        "artist": "Papoose",
+                        "title": "Stylin'",
+                        "start": "1369",
+                        "end": "1474"
+                    },
+                    {
+                        "artist": "Styles P",
+                        "title": "What's The Problem",
+                        "start": "1550",
+                        "end": "1667"
+                    },
+                    {
+                        "artist": "Uncle Murda",
+                        "title": "Anybody Can Get It",
+                        "start": "1668",
+                        "end": "1770"
+                    },
+                    {
+                        "artist": "Qadir",
+                        "title": "Nickname",
+                        "start": "1780",
+                        "end": "1926"
+                    },
+                    {
+                        "artist": "Busta Rhymes",
+                        "title": "Where's My Money",
+                        "start": "1976",
+                        "end": "2158"
+                    },
+                    {
+                        "artist": "Maino",
+                        "title": "Getaway Driver",
+                        "start": "2159",
+                        "end": "2291"
+                    },
+                    {
+                        "artist": "Red Cafe",
+                        "title": "Stick'm",
+                        "start": "2403",
+                        "end": "2511"
+                    },
+                    {
+                        "artist": "Tru Life",
+                        "title": "Wet 'Em Up",
+                        "start": "2548",
+                        "end": "2623"
+                    },
+                    {
+                        "artist": "Johnny Polygon",
+                        "title": "Price On Your Head",
+                        "start": "2626",
+                        "end": "2768"
+                    }
+                ]
+            },
+            {
+                "name": "Episodes From Liberty City",
+                "dj": ["Funkmaster Flex", "Statik Selektah"],
+                "genre": "east_coast_hip_hop",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/beat_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Busta Rhymes",
+                        "title": "Arab Money ft. Ron Browz",
+                        "start": "16",
+                        "end": "247"
+                    },
+                    {
+                        "artist": "Busta Rhymes",
+                        "title": "Respect My Conglomerate ft. Young Jeezy & Jadakiss",
+                        "start": "248",
+                        "end": "469"
+                    },
+                    {
+                        "artist": "T.I.",
+                        "title": "Swing Ya Rag ft. Swizz Beatz",
+                        "start": "470",
+                        "end": "617"
+                    },
+                    {
+                        "artist": "Ron Browz",
+                        "title": "Jumping (Out the Window)",
+                        "start": "619",
+                        "end": "767"
+                    },
+                    {
+                        "artist": "DJ Khaled",
+                        "title": "Go Hard ft. Kanye West & T-Pain",
+                        "start": "778",
+                        "end": "968"
+                    },
+                    {
+                        "artist": "Kardinal Offishall",
+                        "title": "Dangerous (Remix) ft. Akon & Sean Paul",
+                        "start": "973",
+                        "end": "1142"
+                    },
+                    {
+                        "artist": "John Legend",
+                        "title": "Green Light ft. André 3000",
+                        "start": "1144",
+                        "end": "1355"
+                    },
+                    {
+                        "artist": "Kanye West",
+                        "title": "Love Lockdown",
+                        "start": "1357",
+                        "end": "1597"
+                    },
+                    {
+                        "artist": "Auto Tune",
+                        "title": "B.o.B",
+                        "start": "1608",
+                        "end": "1754"
+                    },
+                    {
+                        "artist": "Freeway",
+                        "title": "Carjack",
+                        "start": "1779",
+                        "end": "1935"
+                    },
+                    {
+                        "artist": "Termanology",
+                        "title": "Here in Liberty City",
+                        "start": "1936",
+                        "end": "2115"
+                    },
+                    {
+                        "artist": "Saigon",
+                        "title": "Spit",
+                        "start": "2124",
+                        "end": "2326"
+                    },
+                    {
+                        "artist": "Skyzoo",
+                        "title": "The Chase Is On",
+                        "start": "2330",
+                        "end": "2491"
+                    },
+                    {
+                        "artist": "Consequence",
+                        "title": "I Hear Footsteps",
+                        "start": "2493",
+                        "end": "2668"
+                    },
+                    {
+                        "artist": "Talib Kweli",
+                        "title": "My Favorite Song",
+                        "start": "2679",
+                        "end": "2873"
+                    }
+                ]
+            }
+        ]
+    },
+    "ramjam_fm": {
+        "image": "../assets/images/radios/IV/ram.webp",
+        "displayName": "RamJam FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/ram.ogg",
+        "dj": "David Rodigan",
+        "genre": "reggae",
+        "songs": [
+            {
+                "artist": "Barrington Levy",
+                "title": "Don't Fuss (AKA \"Sweet Reggae Music\")",
+                "start": "14",
+                "end": "162"
+            },
+            {
+                "artist": "Ini Kamoze",
+                "title": "Outta Jamaica",
+                "start": "168",
+                "end": "396"
+            },
+            {
+                "artist": "Damian \"Jr. Gong\" Marley",
+                "title": "Holiday",
+                "start": "397",
+                "end": "668"
+            },
+            {
+                "artist": "The Morwells & Prince Jammy",
+                "title": "Jammin' for Survival",
+                "start": "672",
+                "end": "890"
+            },
+            {
+                "artist": "John Holt",
+                "title": "Police in Helicopter ft. Sizzla",
+                "start": "893",
+                "end": "1116"
+            },
+            {
+                "artist": "Sugar Minott",
+                "title": "Hard Time Pressure",
+                "start": "1118",
+                "end": "1314"
+            },
+            {
+                "artist": "Desmond Dekker",
+                "title": "007 (Shanty Town)",
+                "start": "1320",
+                "end": "1492"
+            },
+            {
+                "artist": "Major Lazer",
+                "title": "Anything Goes ft. Turbalance",
+                "start": "1496",
+                "end": "1679"
+            },
+            {
+                "artist": "Prince Jammy",
+                "title": "Jammy's A Shine",
+                "start": "1700",
+                "end": "1853"
+            },
+            {
+                "artist": "Toots & the Maytals",
+                "title": "54-46 Was My Number",
+                "start": "1856",
+                "end": "2042"
+            },
+            {
+                "artist": "Frankie Paul",
+                "title": "Worries in the Dance",
+                "start": "2077",
+                "end": "2252"
+            },
+            {
+                "artist": "Mr. Vegas",
+                "title": "Mus Come a Road",
+                "start": "2253",
+                "end": "2496"
+            }
+        ]
+    },
+    "radio_broker": {
+        "image": "../assets/images/radios/IV/broker.webp",
+        "displayName": "Radio Broker",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/broker.ogg",
+        "dj": "Juliette Lewis",
+        "genre": ["alternative_rock", "indie_rock"],
+        "songs": [
+            {
+                "artist": "!!!",
+                "title": "Yadnus (Still Going to the Roadhouse Mix)",
+                "start": "5",
+                "end": "328"
+            },
+            {
+                "artist": "Greenskeepers",
+                "title": "Vagabond (Liberty City Mix)",
+                "start": "430",
+                "end": "607"
+            },
+            {
+                "artist": "Juliette and the Licks",
+                "title": "Inside the Cage (David Gilmour Girls Remix)",
+                "start": "666",
+                "end": "863"
+            },
+            {
+                "artist": "Cheeseburger",
+                "title": "Cocaine",
+                "start": "865",
+                "end": "970"
+            },
+            {
+                "artist": "Teenager",
+                "title": "Pony",
+                "start": "1045",
+                "end": "1205"
+            },
+            {
+                "artist": "The Prairie Cartel",
+                "title": "Homicide",
+                "start": "1261",
+                "end": "1480"
+            },
+            {
+                "artist": "Deluka",
+                "title": "Sleep Is Impossible",
+                "start": "1503",
+                "end": "1723"
+            },
+            {
+                "artist": "The Boggs",
+                "title": "Arm in Arm (Shy Child Mix)",
+                "start": "1746",
+                "end": "1929"
+            },
+            {
+                "artist": "Les Savy Fav",
+                "title": "Raging in the Plague Age",
+                "start": "1957",
+                "end": "2115"
+            },
+            {
+                "artist": "LCD Soundsystem",
+                "title": "Get Innocuous!",
+                "start": "2116",
+                "end": "2389"
+            },
+            {
+                "artist": "Get Shakes",
+                "title": "Disneyland, Pt. 1",
+                "start": "2446",
+                "end": "2645"
+            },
+            {
+                "artist": "Whitey",
+                "title": "WRAP IT UP",
+                "start": "2646",
+                "end": "2861"
+            },
+            {
+                "artist": "UNKLE",
+                "title": "Mayday ft. The Duke Spirit",
+                "start": "2914",
+                "end": "3108"
+            },
+            {
+                "artist": "The Black Keys",
+                "title": "Strange Times",
+                "start": "3124",
+                "end": "3313"
+            },
+            {
+                "artist": "Ralph Myerz and the Jack Herren Band",
+                "title": "The Teacher",
+                "start": "3393",
+                "end": "3616"
+            },
+            {
+                "artist": "White Light Parade",
+                "title": "Riot in the City",
+                "start": "3662",
+                "end": "3804"
+            },
+            {
+                "artist": "The Pistolas",
+                "title": "Take it With a Kiss",
+                "start": "3860",
+                "end": "4032"
+            },
+            {
+                "artist": "The Rapture",
+                "title": "No Sex for Ben",
+                "start": "4033",
+                "end": "4244"
+            },
+            {
+                "artist": "Tom Vek",
+                "title": "One Horse Race",
+                "start": "4337",
+                "end": "4586"
+            },
+            {
+                "artist": "The Yelling",
+                "title": "Blood on the Steps",
+                "start": "4621",
+                "end": "4815"
+            },
+            {
+                "artist": "Blonde Acid Cult",
+                "title": "Shake It Loose",
+                "start": "4816",
+                "end": "5071"
+            },
+            {
+                "artist": "Magic Dirt",
+                "title": "Get Ready to Die",
+                "start": "5088",
+                "end": "5228"
+            },
+            {
+                "artist": "Japanther",
+                "title": "Radical Businessman",
+                "start": "5253",
+                "end": "5387"
+            },
+            {
+                "artist": "The Jane Shermans",
+                "title": "I Walk Alone",
+                "start": "5458",
+                "end": "5727"
+            },
+            {
+                "artist": "Kill Memory Crash",
+                "title": "Hell on Wheels",
+                "start": "5783",
+                "end": "6033"
+            },
+            {
+                "artist": "Kreeps",
+                "title": "The Hunger (Blood in My Mouth)",
+                "start": "6155",
+                "end": "6406"
+            },
+            {
+                "artist": "Adam Freeland",
+                "title": "Borderline ft. Brody Dalle",
+                "start": "6428",
+                "end": "6664"
+            },
+            {
+                "artist": "Brazilian Girls",
+                "title": "Nouveau Americain",
+                "start": "6738",
+                "end": "6963"
+            },
+            {
+                "artist": "Foxylane",
+                "title": "Command",
+                "start": "7079",
+                "end": "7341"
+            },
+            {
+                "artist": "Game Rebellion",
+                "title": "Dance Girl (GTA MIX)",
+                "start": "7389",
+                "end": "7586"
+            },
+            {
+                "artist": "Monotonix",
+                "title": "Body Language",
+                "start": "7606",
+                "end": "7791"
+            }
+        ]
+    }
+}

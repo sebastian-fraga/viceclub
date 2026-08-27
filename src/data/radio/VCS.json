@@ -1,0 +1,780 @@
+{
+    "flash_fm": {
+        "image": "../assets/images/radios/VCS/flash.webp",
+        "displayName": "Flash FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/flash.ogg",
+        "dj": ["Teri", "Toni"],
+        "genre": ["pop", "new_wave"],
+        "songs": [
+            {
+                "artist": "Laura Branigan",
+                "title": "Gloria",
+                "start": "0",
+                "end": "220"
+            },
+            {
+                "artist": "Rick Springfield",
+                "title": "Human Touch",
+                "start": "248",
+                "end": "423"
+            },
+            {
+                "artist": "INXS",
+                "title": "The One Thing",
+                "start": "482",
+                "end": "677"
+            },
+            {
+                "artist": "Philip Bailey & Phil Collins",
+                "title": "Easy Lover",
+                "start": "678",
+                "end": "885"
+            },
+            {
+                "artist": "Patty Smyth",
+                "title": "The Warrior ft. Scandal",
+                "start": "959",
+                "end": "1123"
+            },
+            {
+                "artist": "Alison Moyet",
+                "title": "Love Resurrection",
+                "start": "1169",
+                "end": "1367"
+            },
+            {
+                "artist": "The Alan Parsons Project",
+                "title": "Games People Play",
+                "start": "1382",
+                "end": "1584"
+            },
+            {
+                "artist": "Hall & Oates",
+                "title": "Family Man",
+                "start": "1664",
+                "end": "1843"
+            },
+            {
+                "artist": "Pat Benatar",
+                "title": "Love Is A Battlefield",
+                "start": "1846",
+                "end": "1969"
+            },
+            {
+                "artist": "Nik Kershaw",
+                "title": "Wouldn't It Be Good",
+                "start": "2046",
+                "end": "2234"
+            },
+            {
+                "artist": "Philip Oakey & Giorgio Moroder",
+                "title": "Together In Electric Dreams",
+                "start": "2243",
+                "end": "2403"
+            },
+            {
+                "artist": "Talk Talk",
+                "title": "It's My Life",
+                "start": "2454",
+                "end": "2667"
+            },
+            {
+                "artist": "Missing Persons",
+                "title": "Destination Unknown",
+                "start": "2674",
+                "end": "2865"
+            },
+            {
+                "artist": "Wang Chung",
+                "title": "Don't Let Go",
+                "start": "2871",
+                "end": "3066"
+            },
+            {
+                "artist": "Gino Vannelli",
+                "title": "Appaloosa",
+                "start": "3082",
+                "end": "3246"
+            },
+            {
+                "artist": "Genesis",
+                "title": "Turn It On Again",
+                "start": "3251",
+                "end": "3415"
+            },
+            {
+                "artist": "Blancmange",
+                "title": "Living on the Ceiling",
+                "start": "3474",
+                "end": "3684"
+            },
+            {
+                "artist": "Paul Young",
+                "title": "Come Back And Stay",
+                "start": "3685",
+                "end": "3890"
+            }
+        ]
+    },
+    "v_rock": {
+        "image": "../assets/images/radios/VCS/vrock.webp",
+        "displayName": "V-Rock",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vrock.ogg",
+        "dj": ["Couzin Ed", "Lazlow"],
+        "genre": "rock",
+        "songs": [
+            {
+                "artist": "Dio",
+                "title": "Holy Diver",
+                "start": "32",
+                "end": "256"
+            },
+            {
+                "artist": "Queensryche",
+                "title": "Queen of the Reich",
+                "start": "267",
+                "end": "520"
+            },
+            {
+                "artist": "KISS",
+                "title": "Lick it Up",
+                "start": "592",
+                "end": "788"
+            },
+            {
+                "artist": "Dokken",
+                "title": "Breaking the Chains",
+                "start": "799",
+                "end": "1026"
+            },
+            {
+                "artist": "Autograph",
+                "title": "All I'm Gonna Take",
+                "start": "1111",
+                "end": "1345"
+            },
+            {
+                "artist": "Accept",
+                "title": "Balls to the Wall",
+                "start": "1425",
+                "end": "1638"
+            },
+            {
+                "artist": "Scorpions",
+                "title": "Rock You Like a Hurricane",
+                "start": "1681",
+                "end": "1929"
+            },
+            {
+                "artist": "Krokus",
+                "title": "Long Stick Goes Boom",
+                "start": "1930",
+                "end": "2191"
+            },
+            {
+                "artist": "Ted Nugent",
+                "title": "Stranglehold",
+                "start": "2202",
+                "end": "2437"
+            },
+            {
+                "artist": "Ratt",
+                "title": "Round and Round",
+                "start": "2462",
+                "end": "2646"
+            },
+            {
+                "artist": "Judas Priest",
+                "title": "Electric Eye",
+                "start": "2681",
+                "end": "2886"
+            },
+            {
+                "artist": "Mötley Crüe",
+                "title": "Looks That Kill",
+                "start": "2971",
+                "end": "3180"
+            },
+            {
+                "artist": "Quiet Riot",
+                "title": "Metal Health (Bang Your Head)",
+                "start": "3312",
+                "end": "3500"
+            }
+        ]
+    },
+    "paradise_fm": {
+        "image": "../assets/images/radios/VCS/paradise.webp",
+        "displayName": "Paradise FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/paradise.ogg",
+        "dj": "",
+        "genre": "disco",
+        "songs": [
+            {
+                "artist": "Unlimited Touch",
+                "title": "I Hear Music in the Streets",
+                "start": "0",
+                "end": "178.93"
+            },
+            {
+                "artist": "Plunky & The Oneness of Juju",
+                "title": "Everyway But Loose (Larry Levan Remix)",
+                "start": "179.46",
+                "end": "417"
+            },
+            {
+                "artist": "Geraldine Hunt",
+                "title": "Can't Fake the Feeling",
+                "start": "418",
+                "end": "587.5"
+            },
+            {
+                "artist": "Raw Silk",
+                "title": "Do It To the Music",
+                "start": "588",
+                "end": "761"
+            },
+            {
+                "artist": "Jimmy \"Bo\" Horne",
+                "title": "Is It In",
+                "start": "762",
+                "end": "912.5"
+            },
+            {
+                "artist": "Exodus",
+                "title": "Together Forever",
+                "start": "913",
+                "end": "1104.5"
+            },
+            {
+                "artist": "Jackie Moore",
+                "title": "This Time Baby",
+                "start": "1105",
+                "end": "1394"
+            },
+            {
+                "artist": "Class Action",
+                "title": "Weekend ft. Chris Wiltshire",
+                "start": "1395.3",
+                "end": "1584"
+            },
+            {
+                "artist": "Gwen Guthrie",
+                "title": "It Should Have Been You",
+                "start": "1585.7",
+                "end": "1793"
+            },
+            {
+                "artist": "Thelma Houston",
+                "title": "You Used To Hold Me So Tight",
+                "start": "1797.18",
+                "end": "1950.27"
+            },
+            {
+                "artist": "Sister Sledge",
+                "title": "Lost In Music (Special 1984 Nile Rodgers Remix)",
+                "start": "1952",
+                "end": "2112"
+            },
+            {
+                "artist": "Donald Byrd",
+                "title": "Love Has Come Around",
+                "start": "2116.85",
+                "end": "2281.53"
+            },
+            {
+                "artist": "Change",
+                "title": "The Glow of Love ft. Luther Vandross",
+                "start": "2282.09",
+                "end": "2478"
+            }
+        ]
+    },
+    "vcpr": {
+        "image": "../assets/images/radios/VCS/vcpr.webp",
+        "displayName": "Vice City Public Radio",
+        "playlists": [
+            {
+                "name": "Pressing Issues",
+                "dj": "Maurice Chavez",
+                "genre": "public_affairs_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_1.ogg",
+                "songs": [
+                    {
+                        "artist": "Maurice Chavez",
+                        "title": "Pressing Issues",
+                        "start": "8",
+                        "end": "1035"
+                    }
+                ]
+            },
+            {
+                "name": "Bait and Switch",
+                "dj": ["Larry Joe", "Bobbie Ray"],
+                "genre": "fishing_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_2.ogg",
+                "songs": [
+                    {
+                        "artist": "Larry Joe y Bobbie Ray",
+                        "title": "Bait and Switch",
+                        "start": "11",
+                        "end": "835"
+                    }
+                ]
+            },
+            {
+                "name": "New World Order",
+                "dj": "Dwayne Thorn",
+                "genre": "international_affairs_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_3.ogg",
+                "songs": [
+                    {
+                        "artist": "Dwayne Thorn",
+                        "title": "New World Order",
+                        "start": "11",
+                        "end": "752"
+                    }
+                ]
+            },
+            {
+                "name": "The Time Ranger",
+                "dj": "Ernest Keigel",
+                "genre": "time_traveler_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_4.ogg",
+                "songs": [
+                    {
+                        "artist": "Ernest Keigel",
+                        "title": "The Time Ranger",
+                        "start": "9",
+                        "end": "511"
+                    }
+                ]
+            },
+            {
+                "name": "Moorehead Rides Again!",
+                "dj": "Jonathan Freeloader",
+                "genre": "police_drama_radio_show",
+                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_5.ogg",
+                "songs": [
+                    {
+                        "artist": "Jonathan Freeloader",
+                        "title": "Moorehead Rides Again!",
+                        "start": "26",
+                        "end": "703"
+                    }
+                ]
+            }
+        ]
+    },
+    "vcfl": {
+        "image": "../assets/images/radios/VCS/vcfl.webp",
+        "displayName": "VCFL",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcfl.ogg",
+        "dj": "Tina Jane",
+        "genre": "soul",
+        "songs": [
+            {
+                "artist": "Marvin Gaye",
+                "title": "Sexual Healing",
+                "start": "0",
+                "end": "189"
+            },
+            {
+                "artist": "Earth, Wind & Fire",
+                "title": "Fantasy",
+                "start": "201",
+                "end": "384"
+            },
+            {
+                "artist": "Hot Chocolate",
+                "title": "It Started With a Kiss",
+                "start": "447",
+                "end": "616"
+            },
+            {
+                "artist": "Rick James",
+                "title": "Mary Jane",
+                "start": "642",
+                "end": "795"
+            },
+            {
+                "artist": "The Commodores",
+                "title": "Nightshift",
+                "start": "813",
+                "end": "942"
+            },
+            {
+                "artist": "Wally Badarou",
+                "title": "Mambo",
+                "start": "985",
+                "end": "1158"
+            },
+            {
+                "artist": "Barry White",
+                "title": "It's Ecstasy When You Lay Down Next To Me",
+                "start": "1162",
+                "end": "1381"
+            },
+            {
+                "artist": "Sylvia Striplin",
+                "title": "You Can't Turn Me Away",
+                "start": "1388",
+                "end": "1636"
+            },
+            {
+                "artist": "Roy Ayers",
+                "title": "Everybody Loves the Sunshine",
+                "start": "1642",
+                "end": "1842"
+            },
+            {
+                "artist": "Keni Burke",
+                "title": "Risin' to the Top",
+                "start": "1904",
+                "end": "2122"
+            },
+            {
+                "artist": "Teddy Pendergrass",
+                "title": "Love TKO",
+                "start": "2131",
+                "end": "2322"
+            }
+        ]
+    },
+    "wave_103": {
+        "image": "../assets/images/radios/VCS/wave.webp",
+        "displayName": "Wave 103",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/wave.ogg",
+        "dj": ["Adam First", "Trish Camden"],
+        "genre": "new_wave",
+        "songs": [
+            {
+                "artist": "The Human League",
+                "title": "Love Action (I Believe In Love)",
+                "start": "10",
+                "end": "220"
+            },
+            {
+                "artist": "The Thompson Twins",
+                "title": "Love on Your Side",
+                "start": "227",
+                "end": "442"
+            },
+            {
+                "artist": "Depeche Mode",
+                "title": "Everything Counts",
+                "start": "510",
+                "end": "751"
+            },
+            {
+                "artist": "Blondie",
+                "title": "Heart of Glass",
+                "start": "753",
+                "end": "990"
+            },
+            {
+                "artist": "Frankie Goes to Hollywood",
+                "title": "Relax",
+                "start": "991",
+                "end": "1221"
+            },
+            {
+                "artist": "ABC",
+                "title": "How to Be a Millonaire",
+                "start": "1222",
+                "end": "1434"
+            },
+            {
+                "artist": "New Order",
+                "title": "Blue Monday",
+                "start": "1515",
+                "end": "1764"
+            },
+            {
+                "artist": "Japan",
+                "title": "Quiet Life",
+                "start": "1771",
+                "end": "1982"
+            },
+            {
+                "artist": "Kajagoogoo",
+                "title": "Too Shy (Midnight Mix)",
+                "start": "2049",
+                "end": "2254"
+            },
+            {
+                "artist": "Heaven 17",
+                "title": "Penthouse and Pavement",
+                "start": "2264",
+                "end": "2470"
+            },
+            {
+                "artist": "Berlin",
+                "title": "Sex (I'm A...)",
+                "start": "2485",
+                "end": "2692"
+            },
+            {
+                "artist": "Howard Jones",
+                "title": "Like to Get to Know You Well",
+                "start": "2745",
+                "end": "2940"
+            },
+            {
+                "artist": "The Cure",
+                "title": "A Forest",
+                "start": "2948",
+                "end": "3157"
+            },
+            {
+                "artist": "A Flock of Seagulls",
+                "title": "Space Age Love Song",
+                "start": "3163",
+                "end": "3385"
+            },
+            {
+                "artist": "Yazoo",
+                "title": "Don't Go",
+                "start": "3386",
+                "end": "3547"
+            }
+        ]
+    },
+    "fresh_fm": {
+        "image": "../assets/images/radios/VCS/fresh.webp",
+        "displayName": "Fresh 105 FM",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/fresh.ogg",
+        "dj": "DJ Luke",
+        "genre": ["hip_hop", "breakbeat"],
+        "songs": [
+            {
+                "artist": "Afrika Bambaata & The Soulsonic Force",
+                "title": "Renegades of Funk",
+                "start": "0",
+                "end": "188"
+            },
+            {
+                "artist": "Jonzun Crew",
+                "title": "Pack Jam",
+                "start": "189",
+                "end": "336"
+            },
+            {
+                "artist": "Run-D.M.C.",
+                "title": "It's Like That",
+                "start": "337",
+                "end": "514"
+            },
+            {
+                "artist": "Planet Patrol",
+                "title": "Play At Your Own Risk",
+                "start": "519",
+                "end": "719"
+            },
+            {
+                "artist": "The Egyptian Lover",
+                "title": "Egpyt, Egypt",
+                "start": "720",
+                "end": "896"
+            },
+            {
+                "artist": "Art of Noise",
+                "title": "Beat Box",
+                "start": "908",
+                "end": "1079"
+            },
+            {
+                "artist": "Man Parrish",
+                "title": "Boogie Down (Bronx)",
+                "start": "1080",
+                "end": "1227"
+            },
+            {
+                "artist": "Rock Master Scott & the Dynamic Three",
+                "title": "Request Line",
+                "start": "1228",
+                "end": "1419"
+            },
+            {
+                "artist": "Midnight Star",
+                "title": "Freak-A-Zoid",
+                "start": "1420",
+                "end": "1606"
+            },
+            {
+                "artist": "Whodini",
+                "title": "Freaks Come Out At Night",
+                "start": "1607",
+                "end": "1778"
+            }
+        ]
+    },
+    "radio_espantoso": {
+        "image": "../assets/images/radios/VCS/espantoso.webp",
+        "displayName": "Radio Espantoso",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/espantoso.ogg",
+        "dj": "Hector Hernandez",
+        "genre": ["salsa", "latin_jazz"],
+        "songs": [
+            {
+                "artist": "Ray Barretto",
+                "title": "Acid",
+                "start": "0",
+                "end": "190"
+            },
+            {
+                "artist": "Pete \"El Conde\" Rodríguez",
+                "title": "I Like It (I Like It Like That)",
+                "start": "207",
+                "end": "403"
+            },
+            {
+                "artist": "Tito Puente",
+                "title": "Oye Como Va",
+                "start": "464",
+                "end": "660"
+            },
+            {
+                "artist": "Bobby Valentín",
+                "title": "Mi Ritmo Es Bueno",
+                "start": "686",
+                "end": "845"
+            },
+            {
+                "artist": "Celia Cruz & Johnny Pacheco",
+                "title": "Quimbara",
+                "start": "852",
+                "end": "1016"
+            },
+            {
+                "artist": "Héctor Lavoe",
+                "title": "Mi Gente",
+                "start": "1058",
+                "end": "1254"
+            },
+            {
+                "artist": "Eddie Palmieri",
+                "title": "Revolt / La Libertad Lógico",
+                "start": "1258",
+                "end": "1457"
+            },
+            {
+                "artist": "Willie Colón",
+                "title": "El Malo",
+                "start": "1467",
+                "end": "1702"
+            }
+        ]
+    },
+    "emotion": {
+        "image": "../assets/images/radios/VCS/emotion.webp",
+        "displayName": "Emotion 98.3",
+        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/emotion.ogg",
+        "dj": "Lionel Makepeace",
+        "genre": "soft_rock",
+        "songs": [
+            {
+                "artist": "The Motels",
+                "title": "Only the Lonely",
+                "start": "7",
+                "end": "173"
+            },
+            {
+                "artist": "10cc",
+                "title": "I'm Not In Love",
+                "start": "178",
+                "end": "426"
+            },
+            {
+                "artist": "Quarterflash",
+                "title": "Harden My Heart",
+                "start": "488",
+                "end": "708"
+            },
+            {
+                "artist": "Toto",
+                "title": "Make Believe",
+                "start": "787",
+                "end": "963"
+            },
+            {
+                "artist": "Elkie Brooks",
+                "title": "Fool If You Think It's Over",
+                "start": "995",
+                "end": "1191"
+            },
+            {
+                "artist": "The Passions",
+                "title": "I'm In Love With a German Film Star",
+                "start": "1263",
+                "end": "1476"
+            },
+            {
+                "artist": "Foreigner",
+                "title": "I Want To Know What Love Is",
+                "start": "1549",
+                "end": "1767"
+            },
+            {
+                "artist": "The Assembly",
+                "title": "Never Never",
+                "start": "1781",
+                "end": "1967"
+            },
+            {
+                "artist": "Pat Benatar",
+                "title": "We Belong",
+                "start": "2060",
+                "end": "2235"
+            },
+            {
+                "artist": "The Pretenders",
+                "title": "Private Life",
+                "start": "2295",
+                "end": "2500"
+            },
+            {
+                "artist": "Phil Collins",
+                "title": "In The Air Tonight",
+                "start": "2504",
+                "end": "2779"
+            },
+            {
+                "artist": "Roxy Music",
+                "title": "Avalon",
+                "start": "2794",
+                "end": "3016"
+            },
+            {
+                "artist": "Eddie Money",
+                "title": "Baby Hold On",
+                "start": "3074",
+                "end": "3268"
+            },
+            {
+                "artist": "Rainbow",
+                "title": "Stone Cold",
+                "start": "3290",
+                "end": "3480"
+            },
+            {
+                "artist": "Giuffria",
+                "title": "Call To The Heart",
+                "start": "3545",
+                "end": "3702"
+            },
+            {
+                "artist": "Art of Noise",
+                "title": "Moments In Love",
+                "start": "3773",
+                "end": "3958"
+            },
+            {
+                "artist": "Dan Hartman",
+                "title": "I Can Dream About You",
+                "start": "3973",
+                "end": "4147"
+            }
+        ]
+    }
+}
