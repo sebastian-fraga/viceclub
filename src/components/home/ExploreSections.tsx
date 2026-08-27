@@ -3,9 +3,10 @@ import {
     SECTIONS_METADATA,
     UNFINISHED_SECTIONS,
 } from "@/config/games";
+import { useGameChecklistProgress } from "@/hooks/useGameChecklistProgress";
 import type { Game } from "@/types/game";
+import { IconExternalLink, IconTools } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { ExternalLinkIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Title from "../ui/Title";
 
@@ -34,6 +35,7 @@ function getBentoClasses(index: number) {
 
 export default function ExploreSections({ game }: Props) {
     const { t } = useTranslation();
+    const checklistProgress = useGameChecklistProgress(game.id)
 
     const sections = GAME_SECTIONS[game.id]
         .filter((id) => id !== "inicio")
@@ -54,6 +56,7 @@ export default function ExploreSections({ game }: Props) {
                     const isUnderConstruction =
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
+                    const isChecklist = section.id === "100"
 
                     const { pattern, isLarge, isWide } = getBentoClasses(index);
                     const featured = isLarge || isWide;
@@ -93,7 +96,7 @@ export default function ExploreSections({ game }: Props) {
                             className={`${pattern} max-mobile:row-span-1 group relative flex flex-col overflow-hidden rounded-md border p-4 transition-colors max-mobile:p-3 ${
                                 isUnderConstruction
                                     ? "cursor-not-allowed border-neutral-400/10 bg-neutral-900/50 opacity-55"
-                                    : "cursor-pointer border-neutral-400/10 bg-neutral-900 hover:border-(--game-buttons-primary-hovered)/60 hover:bg-neutral-800/60"
+                                    : "cursor-pointer border-neutral-600/50 hover:border-(--game-buttons-primary-hovered)/80 hover:bg-zinc-950/60 bg-neutral-950"
                             } ${
                                 featured
                                     ? "justify-end items-start gap-2 text-left"
@@ -119,10 +122,19 @@ export default function ExploreSections({ game }: Props) {
                             )}
 
                             {isUnderConstruction && (
-                                <span className="absolute right-2 top-2 z-10 rounded-2xl border border-red-800/50 bg-red-950/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-red-300/80 max-mobile:text-[8px]">
-                                    En construcción
+                                <span className="absolute right-2 top-2 z-10 rounded-2xl border border-red-800/50 bg-red-950/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-red-300/80 max-mobile:text-[8px] flex items-center gap-2">
+                                    <IconTools size={12} />
+                                    {t("common.buttons.underConstruction")}
                                 </span>
                             )}
+
+                            {isChecklist &&
+                                !isUnderConstruction &&
+                                checklistProgress !== null && (
+                                    <span className="absolute left-4 top-4 z-10 rounded-2xl bg-(--game-accent)/80 px-3 py-1 text-[10px] font-black tabular-nums text-(--game-buttons-primary-text)/90 max-mobile:right-4 max-mobile:left-auto max-mobile:text-[8px]">
+                                        {checklistProgress.pct}%
+                                    </span>
+                                )}
 
                             <IconComponent
                                 size={iconSize}
@@ -130,7 +142,7 @@ export default function ExploreSections({ game }: Props) {
                                 className={`relative max-mobile:size-4.5 ${
                                     isUnderConstruction
                                         ? "text-neutral-500"
-                                        : "text-(--game-buttons-primary-hovered)"
+                                        : "text-(--game-buttons-primary-background)"
                                 }`}
                             />
 
@@ -150,17 +162,25 @@ export default function ExploreSections({ game }: Props) {
                                 {t(section.label)}
                             </span>
 
+                            {isChecklist &&
+                                !isUnderConstruction &&
+                                checklistProgress !== null &&
+                                (isLarge || isWide) && (
+                                    <div className="relative mt-1 h-1 w-full max-w-42 overflow-hidden rounded-full bg-white/10">
+                                        <div
+                                            className="h-full rounded-full bg-(--game-accent)"
+                                            style={{
+                                                width: `${checklistProgress.pct}%`,
+                                            }}
+                                        />
+                                    </div>
+                                )}
+
                             {!isUnderConstruction && (
                                 <motion.span
-                                    initial={{
-                                        opacity: 0,
-                                        height: 0,
-                                    }}
+                                    initial={{ opacity: 0, height: 0 }}
                                     variants={{
-                                        hover: {
-                                            opacity: 1,
-                                            height: "auto",
-                                        },
+                                        hover: { opacity: 1, height: "auto" },
                                     }}
                                     transition={{
                                         duration: 0.2,
@@ -169,7 +189,7 @@ export default function ExploreSections({ game }: Props) {
                                     className="relative flex items-center gap-2 overflow-hidden text-[11px] text-neutral-500 lowercase max-mobile:text-[10px]"
                                 >
                                     {t("home.buttons.goToSection")}
-                                    <ExternalLinkIcon size={12} />
+                                    <IconExternalLink size={12} />
                                 </motion.span>
                             )}
                         </motion.a>
