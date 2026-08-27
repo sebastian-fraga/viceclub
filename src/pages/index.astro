@@ -1,19 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import Countdown from "../components/index/countdown/Countdown";
-import Hero from "../components/index/hero/Hero";
 import GameCarousel from "../components/carousel/GameCarousel";
-import News from "../components/index/news/News";
+import Countdown from "../components/index/countdown/Countdown";
 import Faq from "../components/index/faq/Faq";
+import Hero from "../components/index/hero/Hero";
+import News from "../components/index/news/News";
 ---
 
 <BaseLayout
     title="Vice Club | La página definitiva de la saga GTA"
     description="Guías completas de GTA, checklists para el 100%, mapas interactivos, mods, trucos y radios de GTA San Andreas, GTA 5, GTA 6 y más"
     canonical="https://www.viceclub.app/"
-    bodyClass="index"
-    isIndex={true}
 >
     <main
         style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
@@ -33,9 +31,4 @@ import Faq from "../components/index/faq/Faq";
             <Faq client:load />
         </div>
     </main>
-
-    <fragment slot="scripts">
-        <!--Overlay-->
-        <script is:inline src="/assets/scripts/overlay.js"></script>
-    </fragment>
 </BaseLayout>
