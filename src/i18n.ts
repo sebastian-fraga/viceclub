@@ -1,23 +1,19 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import {
-    defaultLanguage,
-    detectBrowserLanguage,
-    languages,
-    type Language,
-} from "@/config/languages";
+import { defaultLanguage } from "@/config/languages";
 import { resources } from "@/data/lang";
 
-const storedLanguage =
-    typeof localStorage !== "undefined"
-        ? localStorage.getItem("language")
-        : null;
+declare global {
+    interface Window {
+        __INITIAL_LANG__?: string;
+    }
+}
 
-const initialLanguage: Language =
-    storedLanguage && storedLanguage in languages
-        ? (storedLanguage as Language)
-        : (detectBrowserLanguage() ?? defaultLanguage);
+const initialLanguage =
+    typeof window !== "undefined"
+        ? (window.__INITIAL_LANG__ ?? defaultLanguage)
+        : defaultLanguage;
 
 i18n.use(initReactI18next).init({
     resources,
