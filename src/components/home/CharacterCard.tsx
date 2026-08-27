@@ -92,6 +92,7 @@ export default function CharacterCard({ character, gameId }: Props) {
                             src={character.image}
                             alt={character.name}
                             className="h-full w-full object-cover"
+                            loading="lazy"
                         />
 
                         <span
