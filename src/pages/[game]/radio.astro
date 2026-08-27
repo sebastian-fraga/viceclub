@@ -1,49 +1,35 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import { GAME_SECTIONS, type GameId } from "@/config/games";
-import { GTAIII } from "@/data/games/III";
-import { GTAVC } from "@/data/games/VC";
-import { GTASA } from "@/data/games/SA";
-import { GTALCS } from "@/data/games/LCS";
-import { GTAVCS } from "@/data/games/VCS";
-import { GTAIV } from "@/data/games/IV";
-import { GTAV } from "@/data/games/V";
+import { games } from "../../data/games";
 
+import { getRadioData } from "@/components/radio/lib/getRadioData";
 import { parseRadioData } from "@/components/radio/lib/parseRadioData";
-import { getRadioJsonUrl } from "@/components/radio/lib/radioUrls";
 import RadioPlayer from "@/components/radio/RadioPlayer";
-import Title from "@/components/ui/Title";
-
-const GAME_DATA: Partial<Record<GameId, typeof GTAIII>> = {
-    III: GTAIII,
-    VC: GTAVC,
-    SA: GTASA,
-    LCS: GTALCS,
-    VCS: GTAVCS,
-    IV: GTAIV,
-    V: GTAV,
-};
 
 export function getStaticPaths() {
-    return (Object.keys(GAME_SECTIONS) as GameId[])
-        .filter((gameId) => GAME_SECTIONS[gameId].includes("radio"))
-        .map((game) => ({
+    return Object.entries(games)
+        .filter(([_, gameData]) => getRadioData(gameData.id))
+        .map(([game]) => ({
             params: { game },
         }));
 }
 
 const { game } = Astro.params;
-const gameId = game as GameId;
 
-const gameData = GAME_DATA[gameId];
+const gameData = games[game as keyof typeof games];
 
 if (!gameData) {
-    throw new Error(`No game data found for ${gameId}`);
+    throw new Error(`Game not found: ${game}`);
 }
 
-const res = await fetch(getRadioJsonUrl(gameId));
-const radioDataRaw = await res.json();
+const gameId = gameData.id;
+
+const radioDataRaw = getRadioData(gameId);
+
+if (!radioDataRaw) {
+    throw new Error(`Radio data not found for ${gameId}`);
+}
 
 const stations = parseRadioData(radioDataRaw);
 
@@ -52,63 +38,42 @@ const metadata = {
         title: "Radios de GTA III – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA 3. Escucha todas las emisoras de Grand Theft Auto III en Vice Club",
-        bodyClass: "gta-3",
-        heading: "Radios de Grand Theft Auto III",
-        soundDelay: null,
     },
 
     VC: {
         title: "Radios de GTA Vice City – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA VC. Escucha todas las emisoras de Grand Theft Auto: Vice City en Vice Club",
-        bodyClass: "gta-vc",
-        heading: "Radios de Grand Theft Auto: Vice City",
-        soundDelay: null,
     },
 
     SA: {
         title: "Radios de GTA San Andreas – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA SA. Escucha todas las emisoras de Grand Theft Auto: San Andreas en Vice Club",
-        bodyClass: "gta-sa",
-        heading: "Radios de Grand Theft Auto: San Andreas",
-        soundDelay: 200,
     },
 
     LCS: {
         title: "Radios de GTA Liberty City Stories – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club",
-        bodyClass: "gta-lcs",
-        heading: "Radios de Grand Theft Auto: Liberty City Stories",
-        soundDelay: 200,
     },
 
     VCS: {
         title: "Radios de GTA Vice City Stories – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA VCS. Escucha todas las emisoras de Grand Theft Auto: Vice City Stories en Vice Club",
-        bodyClass: "gta-vcs",
-        heading: "Radios de Grand Theft Auto: Vice City Stories",
-        soundDelay: null,
     },
 
     IV: {
         title: "Radios de GTA IV – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA 4. Escucha todas las emisoras de Grand Theft Auto IV y sus expansiones en Vice Club",
-        bodyClass: "gta-4",
-        heading: "Radios de Grand Theft Auto IV",
-        soundDelay: null,
     },
 
     V: {
         title: "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
         description:
             "Radios de GTA 5. Escucha todas las emisoras de Grand Theft Auto V en Vice Club",
-        bodyClass: "gta-5",
-        heading: "Radios de Grand Theft Auto V",
-        soundDelay: 400,
     },
 };
 
@@ -116,25 +81,19 @@ const meta = metadata[gameId as keyof typeof metadata];
 ---
 
 <BaseLayout
-    title={meta.title}
+    title={`${gameData.title} | Vice Club`}
     description={meta.description}
     canonical={`https://www.viceclub.app/${gameId}/radio`}
-    bodyClass={meta.bodyClass}
     game={gameData}
-    section="radio"
 >
     <main
         style="padding-top: var(--header-height); transition: margin-left 0.3s;"
-        class="ml-0 md:ml-(--sidebar-width) bg-linear-135 from-[#15151F] to-[#1E1E33] flex flex-col gap-16 md:gap-45 pb-12 mt-30"
+        class="ml-0 md:ml-(--sidebar-width) bg-linear-135 from-[#15151F] to-[#1E1E33] flex flex-col gap-16 md:gap-45 pb-20 mt-30"
     >
         <section
-            class="w-fit max-mobile:w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-16 max-mobile:gap-20 max-mobile:pb-12"
+            class="w-fit max-mobile:w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-8 max-mobile:gap-20 max-mobile:pb-12"
         >
-            <div class="max-w-fit">
-                <Title label={meta.heading} />
-            </div>
-
-            <RadioPlayer client:load stations={stations} />
+            <RadioPlayer client:load stations={stations} game={gameId} />
         </section>
     </main>
 </BaseLayout>

@@ -1,27 +1,9 @@
 ---
 import GameHome from "@/components/home/GameHome.astro";
-import { GTAIII } from "../../data/games/III";
-import { GTASA } from "../../data/games/SA";
-import { GTAVC } from "../../data/games/VC";
-import { GTALCS } from "../../data/games/LCS";
-import { GTAVCS } from "../../data/games/VCS";
-import { GTAIV } from "../../data/games/IV";
-import { GTAV } from "../../data/games/V";
-import { GTAVI } from "../../data/games/VI";
+import { games } from "../../data/games";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    const games = {
-        III: GTAIII,
-        VC: GTAVC,
-        SA: GTASA,
-        LCS: GTALCS,
-        VCS: GTAVCS,
-        IV: GTAIV,
-        V: GTAV,
-        VI: GTAVI,
-    };
-
     return Object.entries(games).map(([game, gameData]) => ({
         params: { game },
         props: { gameData },
@@ -29,7 +11,7 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.params;
-const { gameData } = Astro.props;
+const gameData = games[game as keyof typeof games];
 ---
 
 <BaseLayout
