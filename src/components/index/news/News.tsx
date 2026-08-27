@@ -1,7 +1,6 @@
 import {
     IconBrandX,
     IconCalendarEvent,
-    IconCamera,
     IconCheck,
     IconChevronDown,
     IconCopy,
@@ -139,9 +138,11 @@ export default function News() {
                     i {
                         display: inline-block;
                         margin-block: 12px 0;
-                        background: oklch(65.6% 0.241 354.308 / 0.3);
-                        border-radius: 12px;
-                        padding: 12px 20px
+                        background: oklch(58.5% 0.233 277.117 / 0.5);
+                        border-radius: 18px;
+                        color: #ffffffdd;
+                        font-weight: 500;
+                        padding: 22px 20px
                     }
                 `}
             </style>
@@ -200,15 +201,15 @@ export default function News() {
                             <div className="w-full my-6">
                                 <img
                                     src={item.image}
-                                    className="w-full rounded-xl border-slate-500 border-2 drop-shadow-2xl drop-shadow-pink-400/20"
+                                    className="w-full rounded-xl border-slate-500 border-2 drop-shadow-2xl drop-shadow-pink-400/10"
                                     alt={translateContent(item.title)}
                                     loading={index >= STEP ? "eager" : "lazy"}
                                 />
 
-                                <div className="text-xs flex gap-2 items-center pt-1.5 pl-1 text-gray-300 italic">
-                                    <IconCamera size={18} />
+                                <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
+                                    <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
 
-                                    <p className="">
+                                    <p className="italic pl-2">
                                         {translateContent(item.footerText)}
                                     </p>
                                 </div>
