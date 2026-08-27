@@ -1,4 +1,4 @@
-import { sanityClient, urlFor } from "@/lib/sanityClient";
+import { sanityClient, urlFor } from "@/lib/app/sanityClient";
 import { IconX } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -38,7 +38,7 @@ const STORAGE_KEY = "notification-banner-dismissed";
 const BANNER_HEIGHT_PX = "60px";
 
 export default function NotificationBanner() {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
     const [banner, setBanner] = useState<BannerData | null>(null);
     const [loading, setLoading] = useState(true);
     const [dismissed, setDismissed] = useState(false);
@@ -71,7 +71,7 @@ export default function NotificationBanner() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const shouldShow = window.scrollY <= 120;
+            const shouldShow = window.scrollY <= 190;
             setVisible((current) => {
                 if (current === shouldShow) return current;
                 return shouldShow;
@@ -181,7 +181,7 @@ export default function NotificationBanner() {
                                 handleClose();
                             }}
                             className="p-1.5 max-mobile:p-1 mr-2 max-mobile:mr-1 cursor-pointer backdrop:blur-2xl text-white absolute right-2 max-mobile:right-1 hover:scale-110 rounded-lg hover:text-slate-100 border border-transparent hover:border-white/40 hover:bg-slate-200/10 transition-all z-12000"
-                            aria-label="Cerrar banner"
+                            aria-label={t("index.banner.close")}
                         >
                             <IconX size={18} className="max-mobile:hidden" />
                             <IconX

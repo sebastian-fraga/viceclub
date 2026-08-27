@@ -6,12 +6,14 @@ import type { Game } from "@/types/game";
 
 import PurchaseDropdown from "@/components/home/PurchaseDropdown";
 import TrailerDropdown from "@/components/home/TrailerDropdown";
+import { useTranslation } from "react-i18next";
 
 interface Props {
     game: Game;
 }
 
 export default function GameHero({ game }: Props) {
+    const {t} = useTranslation()
     const { settings } = useSettings();
 
     const buttonClass =
@@ -50,7 +52,12 @@ export default function GameHero({ game }: Props) {
                 className="absolute inset-x-0 bottom-0 grid grid-cols-[192px_1fr] grid-rows-[1fr_auto] items-center ml-4 max-mobile:grid-cols-[96px_1fr] max-mobile:ml-2 -mb-2.5 max-mobile:-mb-1"
             >
                 <div className="row-span-2 w-48 self-end object-fit max-mobile:w-24">
-                    <img src={gameIcon} alt="" />
+                    <img
+                        src={gameIcon}
+                        alt={t("common.accessibility.gameIcon", {
+                            game: game.id,
+                        })}
+                    />
                 </div>
 
                 <div
