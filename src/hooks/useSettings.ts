@@ -2,7 +2,12 @@ import { useState } from "react";
 
 import i18n from "@/i18n";
 
-import { getPlatformOptions, type PlatformFamily } from "@/config/platforms";
+import {
+    getPlatformOptions,
+    platformFamilies,
+    type Platform,
+    type PlatformFamily,
+} from "@/config/platforms";
 import { settingsConfig } from "@/config/settings";
 
 import type { Language } from "@/config/languages";
@@ -52,8 +57,24 @@ const getValidStoredSettings = (
             }
 
             if (setting.type === "select") {
-                if (setting.id === "platform" && value === "default") {
-                    validSettings[setting.id] = value;
+                if (setting.id === "platform") {
+                    if (value === "default") {
+                        validSettings[setting.id] = value;
+                        continue;
+                    }
+
+                    const isValidPlatform = Object.values(
+                        platformFamilies,
+                    ).some((family) =>
+                        (family.platforms as readonly Platform[]).includes(
+                            value as Platform,
+                        ),
+                    );
+
+                    if (isValidPlatform) {
+                        validSettings[setting.id] = value;
+                    }
+
                     continue;
                 }
 
