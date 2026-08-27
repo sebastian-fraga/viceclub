@@ -1,11 +1,15 @@
 import { Tooltip } from "@/components/ui/Tooltip";
-import { formatTimelineTime, type TimeFormat } from "@/lib/formatTimelineTime";
-import { getTimelineIcon } from "@/lib/timelineIcons";
+import {
+    formatTimelineDateTime,
+    type DateFormat,
+    type TimeFormat,
+} from "@/lib/timeline/formatTimelineTime";
+import { getTimelineIcon } from "@/lib/timeline/timelineIcons";
 import parse from "html-react-parser";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { IconCamera, IconEye, IconEyeOff } from "@tabler/icons-react";
+import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import "./timeline.css";
 
 export interface TimelineEvent {
@@ -39,6 +43,7 @@ export interface TimelineEntryProps {
     showDate?: boolean;
     timezone: string;
     timeFormat: TimeFormat;
+    dateFormat: DateFormat;
     locale: string;
 }
 
@@ -55,6 +60,7 @@ export default function TimelineEntry({
     showDate = true,
     timezone,
     timeFormat,
+    dateFormat,
     locale,
 }: TimelineEntryProps) {
     const { t } = useTranslation();
@@ -71,12 +77,27 @@ export default function TimelineEntry({
         },
     ];
 
+    // Hora representativa del grupo para recalcular el header:
+    // el time a nivel entry si existe, si no el del primer evento.
+    const representativeTime = time ?? itemsToRender[0]?.time;
+
+    const displayDate = representativeTime
+        ? formatTimelineDateTime(
+              date,
+              representativeTime,
+              timeFormat,
+              timezone,
+              dateFormat,
+              locale,
+          ).date
+        : date;
+
     return (
         <article className="timeline-entry flex flex-col">
             {showDate && (
                 <div className="flex items-baseline gap-1.5 mb-3 ml-2 max-mobile:ml-0">
                     <h3 className="text-sm font-bold tracking-wide text-slate-100 uppercase">
-                        {date}
+                        {displayDate}
                     </h3>
                 </div>
             )}
@@ -96,6 +117,7 @@ export default function TimelineEntry({
                             date={date}
                             timezone={timezone}
                             timeFormat={timeFormat}
+                            dateFormat={dateFormat}
                             locale={locale}
                         />
                     </div>
@@ -111,6 +133,7 @@ function TimelineEventItem({
     date,
     timezone,
     timeFormat,
+    dateFormat,
     locale,
 }: {
     event: TimelineEvent;
@@ -118,6 +141,7 @@ function TimelineEventItem({
     date: string;
     timezone: string;
     timeFormat: TimeFormat;
+    dateFormat: DateFormat;
     locale: string;
 }) {
     const [spoilerOpen, setSpoilerOpen] = useState(false);
@@ -131,23 +155,32 @@ function TimelineEventItem({
         spoiler,
     } = event;
 
-    const { icon: Icon, label } = getTimelineIcon(icon);
+    const { icon: Icon, label, style } = getTimelineIcon(icon);
 
     const displayTime = time
-        ? formatTimelineTime(date, time, timeFormat, timezone, locale)
+        ? formatTimelineDateTime(
+              date,
+              time,
+              timeFormat,
+              timezone,
+              dateFormat,
+              locale,
+          ).time
         : undefined;
 
     return (
         <div className="timeline-event">
             <div className="timeline-event-body">
-                <div className="timeline-node shrink-0 w-9 h-9 max-mobile:w-8 max-mobile:h-8 rounded-lg shadow-indigo-500/40 shadow-md bg-indigo-300 flex items-center justify-center relative z-10">
+                <div
+                    className={`timeline-node shrink-0 w-9 h-9 max-mobile:w-8 max-mobile:h-8 rounded-lg shadow-md flex items-center justify-center relative z-10 ${style.bg} ${style.shadow}`}
+                >
                     <Tooltip
                         label={t(`timeline.icons.${label}`)}
                         position="bottom"
                     >
                         <Icon
                             size={22}
-                            className="text-blue-950 hover:cursor-help max-mobile:size-4.5"
+                            className={`hover:cursor-help max-mobile:size-4.5 ${style.text}`}
                             stroke={2}
                         />
                     </Tooltip>
@@ -184,12 +217,17 @@ function TimelineEventItem({
                                     src={image}
                                     loading="lazy"
                                     className="w-full rounded-xl border-slate-500 border-2 drop-shadow-xl drop-shadow-indigo-400/20"
-                                    alt=""
+                                    alt={t(
+                                        "timeline.accessibility.timelineImage",
+                                    )}
                                 />
                                 {footerText && (
-                                    <div className="text-xs flex gap-2 items-center pt-2.5 pl-3 text-gray-300 italic">
-                                        <IconCamera size={18} />
-                                        {footerText}
+                                    <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
+                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
+
+                                        <p className="italic pl-2">
+                                            {footerText}
+                                        </p>
                                     </div>
                                 )}
                             </div>
@@ -197,9 +235,9 @@ function TimelineEventItem({
                     </div>
 
                     {spoiler && (
-                        <div className="spoiler-container relative mt-4 w-full rounded-xl border border-indigo-950/70 bg-indigo-950/10 overflow-hidden">
-                            <div className="flex items-center justify-between gap-2 px-4 py-2.5 max-mobile:px-3 max-mobile:py-2 border-b border-indigo-950/50 bg-indigo-950/20">
-                                <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-300/80">
+                        <div className="spoiler-container relative mt-4 w-full rounded-2xl bg-(--button-bg)/40 overflow-hidden">
+                            <div className="flex items-center justify-between gap-2 px-4 py-3.5 max-mobile:px-3 max-mobile:py-2 border-b border-indigo-950/50 bg-(--button-bg)/40">
+                                <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-100">
                                     <IconEye size={14} stroke={2} />
                                     Spoiler
                                 </span>
@@ -210,7 +248,7 @@ function TimelineEventItem({
                                         onClick={() => setSpoilerOpen(false)}
                                         aria-expanded={true}
                                         aria-controls="spoiler-content"
-                                        className="flex items-center gap-1.5 rounded-full bg-blue-950 text-white px-3 py-1 text-xs font-medium backdrop-blur-sm cursor-pointer hover:bg-slate-900 hover:text-indigo-400 transition"
+                                        className="flex items-center gap-1.5 rounded-full bg-(--button-bg) text-white px-3 py-1 text-xs font-medium backdrop-blur-sm cursor-pointer hover:bg-(--button-bg-hover) transition"
                                     >
                                         <IconEyeOff size={14} stroke={2} />
                                         {t("timeline.buttons.hideSpoilers")}
@@ -222,6 +260,10 @@ function TimelineEventItem({
                                 <div
                                     id="spoiler-content"
                                     role="region"
+                                    aria-label={t(
+                                        "timeline.accessibility.spoilerContent",
+                                    )}
+                                    aria-hidden={!spoilerOpen}
                                     className={`px-5 py-6 max-mobile:px-4 max-mobile:py-5 transition-[filter,opacity] duration-300 ${
                                         spoilerOpen
                                             ? "opacity-100"
@@ -249,7 +291,9 @@ function TimelineEventItem({
                                                 src={spoiler.image}
                                                 loading="lazy"
                                                 className="block w-full h-auto object-cover"
-                                                alt=""
+                                                alt={t(
+                                                    "timeline.accessibility.timelineImage",
+                                                )}
                                             />
 
                                             {spoiler.footerText && (

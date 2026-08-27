@@ -1,6 +1,7 @@
 import TimelineEntry from "@/components/timeline/TimelineEntry";
 import Title from "@/components/ui/Title";
-import useSettings from "@/hooks/useSettings"; // ajustá el path si difiere
+import useSettings from "@/hooks/useSettings";
+import type { DateFormat } from "@/lib/timeline/formatTimelineTime";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -46,6 +47,7 @@ interface TimelineProps {
 interface TimeSettings {
     timezone: string;
     timeFormat: "12h" | "24h";
+    dateFormat: DateFormat;
 }
 
 export default function Timeline({ gameCode, initialData }: TimelineProps) {
@@ -55,12 +57,10 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
     const [data, setData] = useState<TimelineData | null>(initialData ?? null);
     const [hasError, setHasError] = useState(false);
 
-    // Estado local de timezone/formato, para poder reaccionar en vivo
-    // a cambios hechos desde otra instancia de useSettings (ej: el modal
-    // de ajustes), ya que useSettings no sincroniza entre instancias por sí solo.
     const [timeSettings, setTimeSettings] = useState<TimeSettings>({
         timezone: settings.timezone as string,
         timeFormat: settings.timeformat as "12h" | "24h",
+        dateFormat: settings.dateformat as DateFormat,
     });
 
     useEffect(() => {
@@ -73,7 +73,8 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
 
             if (
                 typeof detail.timezone === "string" ||
-                typeof detail.timeformat === "string"
+                typeof detail.timeformat === "string" ||
+                typeof detail.dateformat === "string"
             ) {
                 setTimeSettings((prev) => ({
                     timezone:
@@ -84,6 +85,10 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                         typeof detail.timeformat === "string"
                             ? (detail.timeformat as "12h" | "24h")
                             : prev.timeFormat,
+                    dateFormat:
+                        typeof detail.dateformat === "string"
+                            ? (detail.dateformat as DateFormat)
+                            : prev.dateFormat,
                 }));
             }
         };
@@ -177,6 +182,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                             showDate
                             timezone={timeSettings.timezone}
                             timeFormat={timeSettings.timeFormat}
+                            dateFormat={timeSettings.dateFormat}
                             locale={i18n.language}
                         />
                     </div>
