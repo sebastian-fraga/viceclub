@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import CountdownTimer from "./CountdownTimer";
 
 import PlayStation5 from "../../icons/PlayStation5";
-import XboxSeries from "../../icons/XboxSeries";
+import XboxSeries from "../../icons/XboxSeriesIcon";
 
 const RELEASE_DATE = new Date("Nov 19, 2026 00:00:00").getTime();
 
@@ -39,7 +39,10 @@ function getTimeLeft(): TimeLeft {
 }
 
 const sectionBaseClass =
-    "bg-[url('/assets/images/main/countdown.webp')] bg-cover bg-top flex flex-col justify-center items-center text-center mx-auto my-6 rounded-2xl text-slate-50 p-6 max-mobile:p-3 w-[92%] max-w-7xl h-[clamp(220px,28vw,280px)] drop-shadow-2xl drop-shadow-cyan-300/20 border-4 border-blue-600/60 relative overflow-hidden";
+    "bg-[url('/assets/images/main/countdown.webp')] bg-cover bg-top flex flex-col justify-center items-center text-center mx-auto my-6 rounded-2xl max-mobile:rounded-4xl text-slate-50 p-6 max-mobile:p-14 w-full max-w-7xl max-mobile:h-50 h-[clamp(220px,28vw,280px)] drop-shadow-2xl drop-shadow-cyan-300/20 border-4 border-blue-600/60 relative overflow-hidden";
+
+const titleClass =
+    "font-black text-[clamp(1rem,3vw,2.5rem)] max-mobile:text-2xl leading-tight bg-linear-to-b from-[#7374f4] via-[#dc8ee4] to-[#e59e7a] bg-clip-text text-transparent text-pretty";
 
 export default function Countdown() {
     const { t } = useTranslation();
@@ -53,13 +56,13 @@ export default function Countdown() {
     const shouldReduceMotion = useReducedMotion();
 
     const timers = timeLeft
-    ? [
-        { value: timeLeft.days, label: t("index.countdown.days") },
-        { value: timeLeft.hours, label: t("index.countdown.hours") },
-        { value: timeLeft.minutes, label: t("index.countdown.minutes") },
-        { value: timeLeft.seconds, label: t("index.countdown.seconds") },
-    ]
-    : [];
+        ? [
+              { value: timeLeft.days, label: t("index.countdown.days") },
+              { value: timeLeft.hours, label: t("index.countdown.hours") },
+              { value: timeLeft.minutes, label: t("index.countdown.minutes") },
+              { value: timeLeft.seconds, label: t("index.countdown.seconds") },
+          ]
+        : [];
 
     useEffect(() => {
         const updateTime = () => {
@@ -131,18 +134,7 @@ export default function Countdown() {
                 >
                     <div className="space-y-6 w-full">
                         <h2
-                            className="
-                            font-black
-                            text-[clamp(1rem,3vw,2.5rem)]
-                            leading-tight
-                            bg-linear-to-b
-                            from-[#7374f4]
-                            via-[#dc8ee4]
-                            to-[#e59e7a]
-                            bg-clip-text
-                            text-transparent
-                            text-balance
-                            "
+                            className={titleClass}
                             style={{
                                 WebkitTextStroke: "1px rgba(70, 50, 120, 0.7)",
                             }}
@@ -213,18 +205,7 @@ export default function Countdown() {
                 >
                     <div className="space-y-5 w-full">
                         <h2
-                            className="
-                            font-black
-                            text-[clamp(1rem,3vw,2.5rem)]
-                            leading-tight
-                            bg-linear-to-b
-                            from-[#7374f4]
-                            via-[#dc8ee4]
-                            to-[#e59e7a]
-                            bg-clip-text
-                            text-transparent
-                            text-balance
-                            "
+                            className={titleClass}
                             style={{
                                 WebkitTextStroke: "1px rgba(70, 50, 120, 0.7)",
                             }}
@@ -250,7 +231,7 @@ export default function Countdown() {
                                         />
 
                                         {index < timers.length - 1 && (
-                                            <span className="px-1 text-xl font-bold text-white/60">
+                                            <span className="px-1 text-xl max-mobile:text-sm font-bold text-white/60">
                                                 :
                                             </span>
                                         )}
