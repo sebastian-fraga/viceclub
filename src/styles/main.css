@@ -1,11 +1,13 @@
 @import './base/typography.css';
-@import './utils/animations.css';
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
 :root {
+  --button-bg: #38365d;
+  --button-bg-hover: #433F6A;
+  --title-color: #EDE9FE;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -39,9 +41,6 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   interpolate-size: allow-keywords;
-  --main-header-gradient: #8d75efd1;
-  --secondary-header-gradient: #b475efce;
-  --main-word-color: #4d9eff;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -115,12 +114,11 @@ body {
 }
 
 .scroll-radio {
-  --sb-track-color: #1c2225;
-  --sb-thumb-color: #fbf9c8;
+  --sb-thumb-color: rgba(251, 249, 200, 0.55);
   --sb-size: 4px;
 
   scrollbar-width: thin;
-  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  scrollbar-color: var(--sb-thumb-color) transparent;
 
   &::-webkit-scrollbar {
     width: var(--sb-size);
@@ -128,12 +126,11 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
-    border-radius: 12px;
+    border-radius: 999px;
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 12px;
+    background: transparent;
   }
 }
 
@@ -177,6 +174,29 @@ body {
       transparent 100%);
 }
 
+.scroll-selector {
+  scroll-behavior: smooth;
+
+  scrollbar-width: thin;
+  scrollbar-color: #726AA7 transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #726AA7;
+    border-radius: 12px;
+  }
+}
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -222,7 +242,7 @@ body {
   --color-background: var(--background);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
+  --radius-lg: 8px;
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
