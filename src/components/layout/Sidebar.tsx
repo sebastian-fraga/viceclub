@@ -19,6 +19,7 @@ import {
     type SectionId,
 } from "@/config/games";
 
+import { useIsMobile } from "@/hooks/useIsMobile";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import SettingsModal from "../settings/SettingsModal";
@@ -29,29 +30,6 @@ function gameHref(gameId: GameId, sectionId: SectionId) {
 }
 
 const SIDEBAR_STORAGE_KEY = "viceclub:sidebar-expanded";
-const MOBILE_BREAKPOINT = 660;
-
-function useIsMobile(breakpoint: number) {
-    const [isMobile, setIsMobile] = useState<boolean | null>(null);
-
-    useEffect(() => {
-        const mql = window.matchMedia(`(max-width: ${breakpoint}px)`);
-
-        const handleChange = () => {
-            setIsMobile(mql.matches);
-        };
-
-        handleChange();
-
-        mql.addEventListener("change", handleChange);
-
-        return () => {
-            mql.removeEventListener("change", handleChange);
-        };
-    }, [breakpoint]);
-
-    return isMobile;
-}
 
 type SidebarProps = {
     currentPath: string;
@@ -59,6 +37,7 @@ type SidebarProps = {
 
 function Sidebar({ currentPath: initialPath }: SidebarProps) {
     const { t } = useTranslation();
+    const isMobile = useIsMobile();
     const [currentPath, setCurrentPath] = useState(initialPath);
     useEffect(() => {
         function handleNavigation() {
@@ -71,7 +50,6 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
     });
 
     const asideRef = useRef<HTMLElement>(null);
-    const isMobile = useIsMobile(MOBILE_BREAKPOINT);
     const [settingsOpen, setSettingsOpen] = useState(false);
 
     const [mounted, setMounted] = useState(false);
@@ -137,6 +115,8 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         if (!shouldListen) return;
 
         function handleClickOutside(event: MouseEvent) {
+            if (settingsOpen) return;
+
             if (
                 asideRef.current &&
                 !asideRef.current.contains(event.target as Node)
@@ -150,9 +130,10 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         }
 
         document.addEventListener("mousedown", handleClickOutside);
+
         return () =>
             document.removeEventListener("mousedown", handleClickOutside);
-    }, [isMobile, mobileOpen, expanded]);
+    }, [isMobile, mobileOpen, expanded, settingsOpen]);
 
     const { activeGame, activeSection } = useMemo(() => {
         const match = currentPath.match(/^\/([^/]+)\/?([^/]*)/i);
