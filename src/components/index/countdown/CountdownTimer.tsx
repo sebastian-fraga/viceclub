@@ -20,7 +20,7 @@ export default function CountdownTimer({ value, label }: Props) {
 
     return (
         <div className="flex flex-col items-center gap-1 sm:gap-2">
-            <div className="relative h-10 w-14 sm:h-14 sm:w-20 md:h-16 md:w-24 overflow-hidden">
+            <div className="relative h-16 w-24 max-mobile:h-7 max-mobile:w-12 overflow-hidden">
                 <AnimatePresence mode="popLayout">
                     <motion.span
                         key={displayValue}
