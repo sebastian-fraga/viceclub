@@ -78,7 +78,7 @@ export default function Hero() {
             className="
                 relative
                 flex
-                h-[80vh]
+                h-[calc(90vh-var(--header-height))]
                 min-h-125
                 w-full
                 items-center
@@ -93,7 +93,7 @@ export default function Hero() {
                     <motion.img
                         key={currentImage}
                         src={currentImage}
-                        alt=""
+                        alt={t("index.welcome.accessibility.heroImage")}
                         initial={{
                             opacity: 0,
                             scale: 1.08,
@@ -142,7 +142,7 @@ export default function Hero() {
                         duration: 0.9,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="text-8xl max-mobile:text-5xl font-black text-yellow-100 uppercase font-body-condensed"
+                    className="text-8xl max-mobile:text-6xl text-balance font-black text-yellow-100 uppercase font-body-condensed"
                 >
                     {t("index.welcome.title")}
                 </motion.h1>
@@ -179,7 +179,7 @@ export default function Hero() {
                     transition={{
                         duration: 0.7,
                     }}
-                    className="mt-4 rounded-full bg-pink-200 px-10 max-mobile:px-12 max-mobile:py:2 py-5 text-2xl max-mobile:text-base font-semibold tracking-wide text-[#3B304E] transition-colors duration-500 hover:bg-pink-300 relative"
+                    className="mt-4 rounded-full bg-pink-200 px-10 max-mobile:px-12 max-mobile:py-4 py-5 text-2xl max-mobile:text-lg font-semibold tracking-wide text-[#3B304E] transition-colors duration-500 hover:bg-pink-300 relative"
                 >
                     <div className="absolute inset-0 -z-10 rounded-full bg-pink-400/20 blur-lg animate-pulse" />
                     {t("index.welcome.button")}
