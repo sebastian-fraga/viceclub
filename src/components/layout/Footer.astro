@@ -1,5 +1,5 @@
 ---
-import { APP_VERSION, BUILD } from "@/lib/version";
+import { APP_VERSION, BUILD } from "@/lib/app/version";
 
 import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
 
@@ -23,6 +23,7 @@ const anchorClasses =
                 src="/assets/images/app/logo.webp"
                 alt="Logo de Vice Club"
                 class="w-24 mobile:w-auto max-mobile:w-12"
+                loading="lazy"
             />
             <span
                 class="select-none text-center font-body-condensed text-2xl transition-all duration-200 ease-in-out [-webkit-text-stroke:1px_#00000077] [-webkit-text-fill-color:transparent] max-mobile:text-[2.3em] bg-linear-to-br from-blue-300 to-blue-500 bg-clip-text text-transparent"
@@ -45,7 +46,10 @@ const anchorClasses =
                     <IconBrandX stroke={1.5} />
                 </a>
 
-                <a href="mailto:fragasebastian1@gmail.com" class={anchorClasses}>
+                <a
+                    href="mailto:fragasebastian1@gmail.com"
+                    class={anchorClasses}
+                >
                     <IconMail stroke={1.5} />
                 </a>
             </div>
