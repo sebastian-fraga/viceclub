@@ -77,8 +77,6 @@ export default function TimelineEntry({
         },
     ];
 
-    // Hora representativa del grupo para recalcular el header:
-    // el time a nivel entry si existe, si no el del primer evento.
     const representativeTime = time ?? itemsToRender[0]?.time;
 
     const displayDate = representativeTime
