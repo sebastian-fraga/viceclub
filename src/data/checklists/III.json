@@ -1,0 +1,964 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": {
+                        "es": "Dáme libertad",
+                        "en": "Give Me Liberty",
+                        "fr": "À moi Liberty",
+                        "pt": "Give Me Liberty"
+                    },
+                    "icon": "8ball"
+                },
+                {
+                    "id": "mp-02",
+                    "text": {
+                        "es": "Las chicas de Luigi",
+                        "en": "Luigi's Girls",
+                        "fr": "Les Filles de Luigi",
+                        "pt": "Luigi's Girls"
+                    },
+                    "icon": "luigi"
+                },
+                {
+                    "id": "mp-03",
+                    "text": {
+                        "es": "No drogues a mi zorra",
+                        "en": "Don't Spank Ma Bitch up",
+                        "fr": "Pas de SPANK pour la pépée",
+                        "pt": "Don't Spank Ma Bitch up"
+                    },
+                    "icon": "luigi"
+                },
+                {
+                    "id": "mp-04",
+                    "text": {
+                        "es": "Lleva a Misty por mí",
+                        "en": "Drive Misty For Me",
+                        "fr": "La Mystérieuse Misty",
+                        "pt": "Drive Misty For Me"
+                    },
+                    "icon": "luigi"
+                },
+                {
+                    "id": "mp-05",
+                    "text": {
+                        "es": "Chulo con escopeta",
+                        "en": "Pump-Action Pimp",
+                        "fr": "Maquereau en boite",
+                        "pt": "Pump-Action Pimp"
+                    },
+                    "icon": "luigi"
+                },
+                {
+                    "id": "mp-06",
+                    "text": {
+                        "es": "El baile de la policía",
+                        "en": "The Fuzz Ball",
+                        "fr": "Le Bal à balles",
+                        "pt": "The Fuzz Ball"
+                    },
+                    "icon": "luigi"
+                },
+                {
+                    "id": "mp-07",
+                    "text": {
+                        "es": "El último almuerzo de Mike 'labios'",
+                        "en": "Mike Lips Last Lunch",
+                        "fr": "Le Dernier Repas de Mike 'Babines'",
+                        "pt": "Mike Lips Last Lunch"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-08",
+                    "text": {
+                        "es": "Despedida a Lee Chong 'el gordo'",
+                        "en": "Farewell 'Chunky' Lee Chong",
+                        "fr": "Au revoir Lee",
+                        "pt": "Farewell 'Chunky' Lee Chong"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-09",
+                    "text": {
+                        "es": "El robo de la furgoneta",
+                        "en": "Van Heist",
+                        "fr": "Haut les mains",
+                        "pt": "Van Heist"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-10",
+                    "text": {
+                        "es": "El chófer de Cipriani",
+                        "en": "Cipriani's Chauffeur",
+                        "fr": "Le Chauffeur de Monsieur",
+                        "pt": "Cipriani's Chauffeur"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-11",
+                    "text": {
+                        "es": "La mofeta muerta en el maletero",
+                        "en": "Dead Skunk in the Trunk",
+                        "fr": "Transport de marchandises avariées",
+                        "pt": "Dead Skunk in the Trunk"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-12",
+                    "text": {
+                        "es": "La huída",
+                        "en": "The Getaway",
+                        "fr": "L'Évasion",
+                        "pt": "The Getaway"
+                    },
+                    "icon": "joey"
+                },
+                {
+                    "id": "mp-13",
+                    "text": {
+                        "es": "Sacando la colada",
+                        "en": "Taking Out the Laundry",
+                        "fr": "Linge sale",
+                        "pt": "Taking Out the Laundry"
+                    },
+                    "icon": "toni"
+                },
+                {
+                    "id": "mp-14",
+                    "text": {
+                        "es": "El encargo",
+                        "en": "The Pick-Up",
+                        "fr": "La Livraison",
+                        "pt": "The Pick-Up"
+                    },
+                    "icon": "toni"
+                },
+                {
+                    "id": "mp-15",
+                    "text": {
+                        "es": "Salvatore ha convocado una reunión",
+                        "en": "Salvatore's Called a Meeting",
+                        "fr": "La Rencontre",
+                        "pt": "Salvatore's Called a Meeting"
+                    },
+                    "icon": "toni"
+                },
+                {
+                    "id": "mp-16",
+                    "text": {
+                        "es": "Carabina",
+                        "en": "Chaperone",
+                        "fr": "Le Chaperon",
+                        "pt": "Chaperone"
+                    },
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-17",
+                    "text": {
+                        "es": "Tríadas y tribulaciones",
+                        "en": "Triads and Tribulations",
+                        "fr": "Le Triangle des Triades",
+                        "pt": "Triads and Tribulations"
+                    },
+                    "icon": "toni"
+                },
+                {
+                    "id": "mp-18",
+                    "text": {
+                        "es": "Lluvia de peces",
+                        "en": "Blow Fish",
+                        "fr": "La Huitième Plaie",
+                        "pt": "Blow Fish"
+                    },
+                    "icon": "toni"
+                },
+                {
+                    "id": "mp-19",
+                    "text": {
+                        "es": "Cortando la hierba",
+                        "en": "Cutting the Grass",
+                        "fr": "La Fille du Moghol",
+                        "pt": "Cutting the Grass"
+                    },
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-20",
+                    "text": {
+                        "es": "Bombardea esa base: Acto I",
+                        "en": "Bomb Da Base: Act I",
+                        "fr": "La Bombe : acte 1",
+                        "pt": "Bomb Da Base: Act I"
+                    },
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-21",
+                    "text": {
+                        "es": "Bombardea esa base: Acto II",
+                        "en": "Bomb Da Base: Act II",
+                        "fr": "La Bombe : acte 2",
+                        "pt": "Bomb Da Base: Act II"
+                    },
+                    "icon": "8ball"
+                },
+                {
+                    "id": "mp-22",
+                    "text": {
+                        "es": "Últimos deseos",
+                        "en": "Last Requests",
+                        "fr": "Dernières volontés",
+                        "pt": "Last Requests"
+                    },
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-23",
+                    "text": {
+                        "es": "Sayonara, Salvatore",
+                        "en": "Sayonara Salvatore",
+                        "fr": "Sayonara Salvatore",
+                        "pt": "Sayonara Salvatore"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-24",
+                    "text": {
+                        "es": "Bajo vigilancia",
+                        "en": "Under Surveillance",
+                        "fr": "Sous surveillance",
+                        "pt": "Under Surveillance"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-25",
+                    "text": {
+                        "es": "Sangra paparazzi",
+                        "en": "Paparazzi Purge",
+                        "fr": "Purge de paparazzi",
+                        "pt": "Paparazzi Purge"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-26",
+                    "text": {
+                        "es": "Día de paga para Ray",
+                        "en": "Payday For Ray",
+                        "fr": "Jour de paye",
+                        "pt": "Payday For Ray"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-27",
+                    "text": {
+                        "es": "Tanner dos caras",
+                        "en": "Two-Faced Tanner",
+                        "fr": "Tanner l'agent double",
+                        "pt": "Two-Faced Tanner"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-28",
+                    "text": {
+                        "es": "El escape del Kanbu",
+                        "en": "Kanbu Bust-out",
+                        "fr": "La Grande Évasion",
+                        "pt": "Kanbu Bust-out"
+                    },
+                    "icon": "kenji"
+                },
+                {
+                    "id": "mp-29",
+                    "text": {
+                        "es": "Robo de vehículos",
+                        "en": "Grand Theft Auto",
+                        "fr": "Grand Theft Auto",
+                        "pt": "Grand Theft Auto"
+                    },
+                    "icon": "kenji"
+                },
+                {
+                    "id": "mp-30",
+                    "text": {
+                        "es": "Trato sigiloso",
+                        "en": "Deal Steal",
+                        "fr": "Négociation",
+                        "pt": "Deal Steal"
+                    },
+                    "icon": "kenji"
+                },
+                {
+                    "id": "mp-31",
+                    "text": {
+                        "es": "Shima",
+                        "en": "Shima",
+                        "fr": "Shima",
+                        "pt": "Shima"
+                    },
+                    "icon": "kenji"
+                },
+                {
+                    "id": "mp-32",
+                    "text": {
+                        "es": "Contrincantes traficantes",
+                        "en": "Smack Down",
+                        "fr": "Les Rivières pourpres",
+                        "pt": "Smack Down"
+                    },
+                    "icon": "kenji"
+                },
+                {
+                    "id": "mp-33",
+                    "text": {
+                        "es": "Silencia al soplón",
+                        "en": "Silence the Sneak",
+                        "fr": "Équilibrer la balance",
+                        "pt": "Silence the Sneak"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-34",
+                    "text": {
+                        "es": "Suministro de armas",
+                        "en": "Arms Shortage",
+                        "fr": "Pénurie d'armes",
+                        "pt": "Arms Shortage"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-35",
+                    "text": {
+                        "es": "Poca evidencia",
+                        "en": "Evidence Dash",
+                        "fr": "Preuves à prouver",
+                        "pt": "Evidence Dash"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-36",
+                    "text": {
+                        "es": "De pesca",
+                        "en": "Gone Fishing",
+                        "fr": "La Pêche au gros",
+                        "pt": "Gone Fishing"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-37",
+                    "text": {
+                        "es": "Romper el yeso",
+                        "en": "Plaster Blaster",
+                        "fr": "Le Marteau et l'Enclume",
+                        "pt": "Plaster Blaster"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-38",
+                    "text": {
+                        "es": "El liberador",
+                        "en": "Liberator",
+                        "fr": "Le Libérateur",
+                        "pt": "Liberator"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-39",
+                    "text": {
+                        "es": "¡Extermina al Waka-Gashira!",
+                        "en": "Waka-Gashira Wipeout!",
+                        "fr": "Hara-kiri waka-shira",
+                        "pt": "Waka-Gashira Wipeout!"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-40",
+                    "text": {
+                        "es": "Una gota en el océano",
+                        "en": "A Drop in the Ocean",
+                        "fr": "Une goutte d'eau dans l'océan",
+                        "pt": "A Drop in the Ocean"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-41",
+                    "text": {
+                        "es": "Robo de vehículos aéreos",
+                        "en": "Grand Theft Aero",
+                        "fr": "Vol au vent",
+                        "pt": "Grand Theft Aero"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-42",
+                    "text": {
+                        "es": "Servicio de escolta",
+                        "en": "Escort Service",
+                        "fr": "Accorte escorte",
+                        "pt": "Escort Service"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-43",
+                    "text": {
+                        "es": "Señuelo",
+                        "en": "Decoy",
+                        "fr": "L'Appât",
+                        "pt": "Decoy"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-44",
+                    "text": {
+                        "es": "La desaparición de Love",
+                        "en": "Love's Disappearance",
+                        "fr": "La Disparition de Love",
+                        "pt": "Love's Disappearance"
+                    },
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-45",
+                    "text": {
+                        "es": "Hombre muerto",
+                        "en": "Marked Man",
+                        "fr": "L'Homme à abattre !",
+                        "pt": "Marked Man"
+                    },
+                    "icon": "ray"
+                },
+                {
+                    "id": "mp-46",
+                    "text": {
+                        "es": "Cebo",
+                        "en": "Bait",
+                        "fr": "L'appât",
+                        "pt": "Bait"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-47",
+                    "text": {
+                        "es": "Café para llevar",
+                        "en": "Espresso-2-Go!",
+                        "fr": "Café Rapido",
+                        "pt": "Espresso-2-Go!"
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-48",
+                    "text": {
+                        "es": "Misil tierra-aire",
+                        "en": "S.A.M.",
+                        "fr": "S.A.M.",
+                        "pt": "S.A.M."
+                    },
+                    "icon": "asuka"
+                },
+                {
+                    "id": "mp-49",
+                    "text": {
+                        "es": "Rescate",
+                        "en": "Ransom",
+                        "fr": "La Rançon",
+                        "pt": "Ransom"
+                    },
+                    "icon": "catalina"
+                },
+                {
+                    "id": "mp-50",
+                    "text": {
+                        "es": "El intercambio",
+                        "en": "The Exchange",
+                        "fr": "L'Échange",
+                        "pt": "The Exchange"
+                    },
+                    "icon": "catalina"
+                }
+            ]
+        },
+        {
+            "id": "ms",
+            "title": {
+                "es": "Misiones secundarias",
+                "en": "Side Missions",
+                "fr": "Missions secondaires",
+                "pt": "Missões secundárias"
+            },
+            "items": [
+                {
+                    "id": "ms-01",
+                    "text": {
+                        "es": "100 viajes como taxista",
+                        "en": "100 taxi rides completed",
+                        "fr": "100 courses en taxi effectuées",
+                        "pt": "100 corridas de táxi completadas"
+                    }
+                },
+                {
+                    "id": "ms-02",
+                    "text": {
+                        "es": "Nivel 12 de paramédico completado",
+                        "en": "Paramedic level 12 completed",
+                        "fr": "Niveau 12 de paramédic complété",
+                        "pt": "Nível 12 de paramédico completado"
+                    }
+                },
+                {
+                    "id": "ms-03",
+                    "text": {
+                        "es": "20 delincuentes abatidos como vigilante (Portland)",
+                        "en": "20 criminals killed as vigilante (Portland)",
+                        "fr": "20 criminels éliminés en tant que justicier (Portland)",
+                        "pt": "20 criminosos abatidos como vigilante (Portland)"
+                    }
+                },
+                {
+                    "id": "ms-04",
+                    "text": {
+                        "es": "20 delincuentes abatidos como vigilante (Staunton Island)",
+                        "en": "20 criminals killed as vigilante (Staunton Island)",
+                        "fr": "20 criminels éliminés en tant que justicier (Staunton Island)",
+                        "pt": "20 criminosos abatidos como vigilante (Staunton Island)"
+                    }
+                },
+                {
+                    "id": "ms-05",
+                    "text": {
+                        "es": "20 delincuentes abatidos como vigilante (Shoreside Vale)",
+                        "en": "20 criminals killed as vigilante (Shoreside Vale)",
+                        "fr": "20 criminels éliminés en tant que justicier (Shoreside Vale)",
+                        "pt": "20 criminosos abatidos como vigilante (Shoreside Vale)"
+                    }
+                },
+                {
+                    "id": "ms-06",
+                    "text": {
+                        "es": "20 fuegos apagados como bombero (Portland)",
+                        "en": "20 fires extinguished as firefighter (Portland)",
+                        "fr": "20 incendies éteints en tant que pompier (Portland)",
+                        "pt": "20 incêndios apagados como bombeiro (Portland)"
+                    }
+                },
+                {
+                    "id": "ms-07",
+                    "text": {
+                        "es": "20 fuegos apagados como bombero (Staunton Island)",
+                        "en": "20 fires extinguished as firefighter (Staunton Island)",
+                        "fr": "20 incendies éteints en tant que pompier (Staunton Island)",
+                        "pt": "20 incêndios apagados como bombeiro (Staunton Island)"
+                    }
+                },
+                {
+                    "id": "ms-08",
+                    "text": {
+                        "es": "20 fuegos apagados como bombero (Shoreside Vale)",
+                        "en": "20 fires extinguished as firefighter (Shoreside Vale)",
+                        "fr": "20 incendies éteints en tant que pompier (Shoreside Vale)",
+                        "pt": "20 incêndios apagados como bombeiro (Shoreside Vale)"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "mt",
+            "title": {
+                "es": "Misiones telefónicas",
+                "en": "Phone missions",
+                "fr": "Missions téléphoniques",
+                "pt": "Missões telefônicas"
+            },
+            "items": [
+                {
+                    "id": "mt-01",
+                    "text": "El Burro",
+                    "icon": "burro"
+                },
+                {
+                    "id": "mt-02",
+                    "text": "D-Ice",
+                    "icon": "d-ice"
+                },
+                {
+                    "id": "mt-03",
+                    "text": "King Courtney",
+                    "icon": "king"
+                },
+                {
+                    "id": "mt-04",
+                    "text": "Marty Chonks"
+                }
+            ]
+        },
+        {
+            "id": "rc",
+            "title": {
+                "es": "Misiones RC",
+                "en": "RC Toyz Missions",
+                "fr": "Camionnettes Toyz",
+                "pt": "Missões Off-Road"
+            },
+            "items": [
+                {
+                    "id": "rc-01",
+                    "text": {
+                        "es": "Masacre de la Mafia",
+                        "en": "Mafia Massacre",
+                        "fr": "Massacre de la mafia",
+                        "pt": "TOMafia MassacreDO"
+                    }
+                },
+                {
+                    "id": "rc-02",
+                    "text": {
+                        "es": "Destrucción de los Diablos",
+                        "en": "Diablo Destruction",
+                        "fr": "Destruction de Diablo",
+                        "pt": "Diablo Destruction"
+                    }
+                },
+                {
+                    "id": "rc-03",
+                    "text": {
+                        "es": "Calamidad del Casino",
+                        "en": "Casino Calamity",
+                        "fr": "Gaz à tous les étages",
+                        "pt": "Casino Calamity"
+                    }
+                },
+                {
+                    "id": "rc-04",
+                    "text": {
+                        "es": "Ataque Rumpo",
+                        "en": "Rumpo Rampage",
+                        "fr": "Rumpo Rampage",
+                        "pt": "Rumpo Rampage"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "pc",
+            "title": {
+                "es": "Misiones de puntos de control",
+                "en": "Off-Road Challenges",
+                "fr": "Missions tout-terrain",
+                "pt": "Missões de Veículos de Controle Remoto"
+            },
+            "items": [
+                {
+                    "id": "pc-01",
+                    "text": {
+                        "es": "Lugar de juegos del patriota",
+                        "en": "Patriot Playground",
+                        "fr": "Terrain de jeu du Patriot",
+                        "pt": "Patriot Playground"
+                    }
+                },
+                {
+                    "id": "pc-02",
+                    "text": {
+                        "es": "Agarrado!",
+                        "en": "Gripped!",
+                        "fr": "Adhérence !",
+                        "pt": "Gripped!"
+                    }
+                },
+                {
+                    "id": "pc-03",
+                    "text": {
+                        "es": "Un paseo por el parque",
+                        "en": "A Ride in the Park",
+                        "fr": "Un tour dans le Parc",
+                        "pt": "A Ride in the Park"
+                    }
+                },
+                {
+                    "id": "pc-04",
+                    "text": {
+                        "es": "Disturbio de diferentes niveles",
+                        "en": "Multistorey Mayhem",
+                        "fr": "Gaz à tous les étages",
+                        "pt": "Multistorey Mayhem"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Colecionáveis"
+            },
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": {
+                        "es": "100 paquetes ocultos",
+                        "en": "100 hidden packages",
+                        "fr": "100 colis cachés",
+                        "pt": "100 pacotes ocultos"
+                    }
+                },
+                {
+                    "id": "col-02",
+                    "text": {
+                        "es": "20 saltos únicos",
+                        "en": "20 unique jumps",
+                        "fr": "20 sauts uniques",
+                        "pt": "20 saltos únicos"
+                    }
+                },
+                {
+                    "id": "col-03",
+                    "text": {
+                        "es": "20 masacres",
+                        "en": "20 rampages",
+                        "fr": "20 carnages",
+                        "pt": "20 massacres"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "gar_p",
+            "title": {
+                "es": "Garaje de Portland",
+                "en": "Portland Garage",
+                "fr": "Garage de Portland",
+                "pt": "Garagem de Portland"
+            },
+            "items": [
+                {
+                    "id": "gar_p-01",
+                    "text": "Securicar"
+                },
+                {
+                    "id": "gar_p-02",
+                    "text": "Moonbeam"
+                },
+                {
+                    "id": "gar_p-03",
+                    "text": "Coach"
+                },
+                {
+                    "id": "gar_p-04",
+                    "text": "Flatbed"
+                },
+                {
+                    "id": "gar_p-05",
+                    "text": "Linerunner"
+                },
+                {
+                    "id": "gar_p-06",
+                    "text": "Trashmaster"
+                },
+                {
+                    "id": "gar_p-07",
+                    "text": "Patriot"
+                },
+                {
+                    "id": "gar_p-08",
+                    "text": "Mr. Whoopee"
+                },
+                {
+                    "id": "gar_p-09",
+                    "text": "Blista"
+                },
+                {
+                    "id": "gar_p-10",
+                    "text": "Mule"
+                },
+                {
+                    "id": "gar_p-11",
+                    "text": "Yankee"
+                },
+                {
+                    "id": "gar_p-12",
+                    "text": "Bobcat"
+                },
+                {
+                    "id": "gar_p-13",
+                    "text": "Dodo"
+                },
+                {
+                    "id": "gar_p-14",
+                    "text": "Bus"
+                },
+                {
+                    "id": "gar_p-15",
+                    "text": "Rumpo"
+                },
+                {
+                    "id": "gar_p-16",
+                    "text": "Pony"
+                }
+            ]
+        },
+        {
+            "id": "gar_s",
+            "title": {
+                "es": "Garaje de Shoreside Vale",
+                "en": "Shoreside Vale Garage",
+                "fr": "Garage de Shoreside Vale",
+                "pt": "Garagem de Shoreside Vale"
+            },
+            "items": [
+                {
+                    "id": "gar_s-01",
+                    "text": "Sentinel"
+                },
+                {
+                    "id": "gar_s-02",
+                    "text": "Cheetah"
+                },
+                {
+                    "id": "gar_s-03",
+                    "text": "Banshee"
+                },
+                {
+                    "id": "gar_s-04",
+                    "text": "Idaho"
+                },
+                {
+                    "id": "gar_s-05",
+                    "text": "Infernus"
+                },
+                {
+                    "id": "gar_s-06",
+                    "text": "Taxi"
+                },
+                {
+                    "id": "gar_s-07",
+                    "text": "Kuruma"
+                },
+                {
+                    "id": "gar_s-08",
+                    "text": "Stretch"
+                },
+                {
+                    "id": "gar_s-09",
+                    "text": "Perennial"
+                },
+                {
+                    "id": "gar_s-10",
+                    "text": "Stinger"
+                },
+                {
+                    "id": "gar_s-11",
+                    "text": "Manana"
+                },
+                {
+                    "id": "gar_s-12",
+                    "text": "Landstalker"
+                },
+                {
+                    "id": "gar_s-13",
+                    "text": "Stallion"
+                },
+                {
+                    "id": "gar_s-14",
+                    "text": "BF Injection"
+                },
+                {
+                    "id": "gar_s-15",
+                    "text": "Cabbie"
+                },
+                {
+                    "id": "gar_s-16",
+                    "text": "Esperanto"
+                }
+            ]
+        },
+        {
+            "id": "gar_e",
+            "title": {
+                "es": "Grúa de emergencia de Portland",
+                "en": "Portland Emergency Crane",
+                "fr": "Grue d'urgence de Portland",
+                "pt": "Guincho de emergência de Portland"
+            },
+            "items": [
+                {
+                    "id": "gar_e-01",
+                    "text": {
+                        "es": "Coche de policía",
+                        "en": "Police car",
+                        "fr": "Police car",
+                        "pt": "Carro de polícia"
+                    }
+                },
+                {
+                    "id": "gar_e-02",
+                    "text": {
+                        "es": "Ambulancia",
+                        "en": "Ambulance",
+                        "fr": "Ambulance",
+                        "pt": "Ambulância"
+                    }
+                },
+                {
+                    "id": "gar_e-03",
+                    "text": {
+                        "es": "Camión de bomberos",
+                        "en": "Firetruck",
+                        "fr": "Firetruck",
+                        "pt": "Caminhão de bombeiros"
+                    }
+                },
+                {
+                    "id": "gar_e-04",
+                    "text": "Enforcer"
+                },
+                {
+                    "id": "gar_e-05",
+                    "text": "FBI Cruiser"
+                },
+                {
+                    "id": "gar_e-06",
+                    "text": "Rhino"
+                },
+                {
+                    "id": "gar_e-07",
+                    "text": "Barracks OL"
+                }
+            ]
+        }
+    ]
+}

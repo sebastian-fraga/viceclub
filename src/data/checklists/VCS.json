@@ -1,0 +1,829 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": "Misiones principales",
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": "Soldado",
+                    "icon": "martinez"
+                },
+                {
+                    "id": "mp-02",
+                    "text": "Limpiando la casa",
+                    "icon": "martinez"
+                },
+                {
+                    "id": "mp-03",
+                    "text": "Degradación moral",
+                    "icon": "martinez"
+                },
+                {
+                    "id": "mp-04",
+                    "text": "Victoria sobre los Cholos",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-05",
+                    "text": "Adiós al Boomshine",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-06",
+                    "text": "¡Chorizando a los  Cholos!",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-07",
+                    "text": "Paliza",
+                    "icon": "marty"
+                },
+                {
+                    "id": "mp-08",
+                    "text": "Embargo a lo largo",
+                    "icon": "marty"
+                },
+                {
+                    "id": "mp-09",
+                    "text": "Despertando a los vecinos",
+                    "icon": "marty"
+                },
+                {
+                    "id": "mp-10",
+                    "text": "¿Dónde queda el burdel?",
+                    "icon": "marty"
+                },
+                {
+                    "id": "mp-11",
+                    "text": "¿Tienes protección?",
+                    "icon": "marty"
+                },
+                {
+                    "id": "mp-12",
+                    "text": "En el punto de la mira",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-13",
+                    "text": "Quedada donde los Quads",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-14",
+                    "text": "Limpiando la mierda",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-15",
+                    "text": "D.I.V.O.R.C.I.O.",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-16",
+                    "text": "Víctor, victorioso",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-17",
+                    "text": "Baile sobre ruedas",
+                    "icon": "aeropuerto"
+                },
+                {
+                    "id": "mp-18",
+                    "text": "Chorreando churris",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-19",
+                    "text": "Robando la cuna",
+                    "icon": "louise"
+                },
+                {
+                    "id": "mp-20",
+                    "text": "Bonito paquete",
+                    "icon": "umberto"
+                },
+                {
+                    "id": "mp-21",
+                    "text": "Pelotas",
+                    "icon": "umberto"
+                },
+                {
+                    "id": "mp-22",
+                    "text": "Papi, no la líes",
+                    "icon": "umberto"
+                },
+                {
+                    "id": "mp-23",
+                    "text": "Havana, buenos tiempos",
+                    "icon": "umberto"
+                },
+                {
+                    "id": "mp-24",
+                    "text": "La audición",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-25",
+                    "text": "Dinero gratis",
+                    "icon": "bryan"
+                },
+                {
+                    "id": "mp-26",
+                    "text": "Persecución a lo loco",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-27",
+                    "text": "Un soplón del copón",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-28",
+                    "text": "Saltar y botar",
+                    "icon": "bryan"
+                },
+                {
+                    "id": "mp-29",
+                    "text": "Todo va de culo",
+                    "icon": "bryan"
+                },
+                {
+                    "id": "mp-30",
+                    "text": "Subiendo como la espuma",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-31",
+                    "text": "Unos muertos muy vivos",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-32",
+                    "text": "\"Blitzkrieg\"",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-34",
+                    "text": "Loca pandemia de policía",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-35",
+                    "text": "Cayendo a pedazos",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-36",
+                    "text": "Lluvia blanca",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-37",
+                    "text": "Donde más duele",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-38",
+                    "text": "\"Blitzkrieg\" contraataca",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-39",
+                    "text": "Departamento de objetos perdidos",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-40",
+                    "text": "Mira al pajarito",
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-41",
+                    "text": "Relevo hostil",
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-42",
+                    "text": "Eliminando a los rivales",
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-43",
+                    "text": "Pendiendo de un hilo",
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-44",
+                    "text": "Hasta aquí hemos llegado",
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-45",
+                    "text": "El muerto al hoyo...",
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-46",
+                    "text": "Purple Haze",
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-47",
+                    "text": "Adiós a las armas",
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-48",
+                    "text": "Rodando en coche",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-49",
+                    "text": "La coca del \"Colonel\"",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-50",
+                    "text": "Kill Phil",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-51",
+                    "text": "Di patata",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-52",
+                    "text": "Kill Phil: Part 2",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-53",
+                    "text": "Salchicha Schlong",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-54",
+                    "text": "In The Air Tonight",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-55",
+                    "text": "Mete cizaña",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-56",
+                    "text": "El intercambio",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-57",
+                    "text": "Domo Arigato Domestoboto",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-58",
+                    "text": "Light my Pyre",
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-59",
+                    "text": "Volando alto",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-60",
+                    "text": "El último encuentro",
+                    "icon": "diaz"
+                }
+            ]
+        },
+        {
+            "id": "ms",
+            "title": "Misiones secundarias",
+            "items": [
+                {
+                    "id": "ms-01",
+                    "text": "50 clientes o $5000 conseguidos como taxista"
+                },
+                {
+                    "id": "ms-02",
+                    "text": "Nivel 15 de paramédico completado"
+                },
+                {
+                    "id": "ms-03",
+                    "text": "Nivel 15 de vigilante completado"
+                },
+                {
+                    "id": "ms-04",
+                    "text": "Nivel 15 de bombero completado"
+                },
+                {
+                    "id": "ms-05",
+                    "text": "Nivel 15 de rescate aéreo completado"
+                },
+                {
+                    "id": "ms-06",
+                    "text": "Nivel 5 de bombero aéreo completado"
+                },
+                {
+                    "id": "ms-07",
+                    "text": "Nivel 15 de vigilante de la playa completado"
+                },
+                {
+                    "id": "ms-08",
+                    "text": "Nivel 5 de Vistas de Vice City completado"
+                },
+                {
+                    "id": "ms-09",
+                    "text": "5 rondas completadas en el campo de tiro de Phil"
+                },
+                {
+                    "id": "ms-10",
+                    "text": "Golfería"
+                },
+                {
+                    "id": "ms-11",
+                    "text": "Cazador letal"
+                },
+                {
+                    "id": "ms-12",
+                    "text": "¡Crash!"
+                },
+                {
+                    "id": "ms-13",
+                    "text": "Aprisa*"
+                }
+            ]
+        },
+        {
+            "id": "iv",
+            "title": "Misiones del Imperio Vance",
+            "icon": "imperio",
+            "items": [
+                {
+                    "id": "iv-01",
+                    "text": "15 trabajos de Extorsión"
+                },
+                {
+                    "id": "iv-02",
+                    "text": "15 trabajos de Acaparamiento"
+                },
+                {
+                    "id": "iv-03",
+                    "text": "15 trabajos de Prostitución"
+                },
+                {
+                    "id": "iv-04",
+                    "text": "6 misiones de Drogas"
+                },
+                {
+                    "id": "iv-05",
+                    "text": "6 misiones de Contrabando"
+                },
+                {
+                    "id": "iv-06",
+                    "text": "6 misiones de Robos"
+                }
+            ]
+        },
+        {
+            "id": "mc",
+            "title": "Misiones contrarreloj",
+            "items": [
+                {
+                    "id": "mc-01",
+                    "texts": [
+                        {
+                            "text": "As en tierra, mar y aire"
+                        },
+                        {
+                            "text": "Contrarreloj con varios vehículos"
+                        }
+                    ]
+                },
+                {
+                    "id": "mc-02",
+                    "text": "Memorial Hyman, o muere en el intento*"
+                },
+                {
+                    "id": "mc-03",
+                    "text": "Aerodeslizador en Haiti"
+                },
+                {
+                    "id": "mc-04",
+                    "text": "Aerodeslizador en el puerto"
+                },
+                {
+                    "id": "mc-05",
+                    "text": "Fardando en the Point"
+                },
+                {
+                    "id": "mc-06",
+                    "text": "Fardando en Downtown"
+                },
+                {
+                    "id": "mc-07",
+                    "text": "Fardando en el muelle*"
+                },
+                {
+                    "id": "mc-08",
+                    "text": "Fardando en el parking*"
+                },
+                {
+                    "id": "mc-09",
+                    "text": "Cerco al centro comercial"
+                },
+                {
+                    "id": "mc-10",
+                    "text": "El cochecito leré*"
+                },
+                {
+                    "id": "mc-11",
+                    "text": "Criminales con alas"
+                },
+                {
+                    "id": "mc-12",
+                    "text": "Criminales con manguitos*"
+                }
+            ]
+        },
+        {
+            "id": "pcbmx",
+            "title": "Pruebas contrarreloj (BMX)",
+            "items": [
+                {
+                    "id": "pcbmx-01",
+                    "text": "Carrera 1"
+                },
+                {
+                    "id": "pcbmx-02",
+                    "text": "Carrera 2"
+                },
+                {
+                    "id": "pcbmx-03",
+                    "text": "Carrera 3"
+                },
+                {
+                    "id": "pcbmx-04",
+                    "text": "Carrera 4"
+                },
+                {
+                    "id": "pcbmx-05",
+                    "text": "Carrera 5"
+                },
+                {
+                    "id": "pcbmx-06",
+                    "text": "Carrera 6"
+                },
+                {
+                    "id": "pcbmx-07",
+                    "text": "Carrera 7"
+                },
+                {
+                    "id": "pcbmx-08",
+                    "text": "Carrera 8"
+                }
+            ]
+        },
+        {
+            "id": "pcs",
+            "title": "Pruebas contrarreloj (Sánchez)",
+            "items": [
+                {
+                    "id": "pcs-01",
+                    "text": "Carrera 1"
+                },
+                {
+                    "id": "pcs-02",
+                    "text": "Carrera 2"
+                },
+                {
+                    "id": "pcs-03",
+                    "text": "Carrera 3"
+                },
+                {
+                    "id": "pcs-04",
+                    "text": "Carrera 4"
+                },
+                {
+                    "id": "pcs-05",
+                    "text": "Carrera 5"
+                },
+                {
+                    "id": "pcs-06",
+                    "text": "Carrera 6"
+                },
+                {
+                    "id": "pcs-07",
+                    "text": "Carrera 7"
+                },
+                {
+                    "id": "pcs-08",
+                    "text": "Carrera 8"
+                },
+                {
+                    "id": "pcs-09",
+                    "text": "Carrera 9"
+                },
+                {
+                    "id": "pcs-10",
+                    "text": "Carrera 10"
+                },
+                {
+                    "id": "pcs-11",
+                    "text": "Carrera 11"
+                },
+                {
+                    "id": "pcs-12",
+                    "text": "Carrera 12"
+                }
+            ]
+        },
+        {
+            "id": "pcq",
+            "title": "Pruebas contrarreloj (Quad)",
+            "items": [
+                {
+                    "id": "pcq-01",
+                    "text": "Carrera 1"
+                },
+                {
+                    "id": "pcq-02",
+                    "text": "Carrera 2"
+                },
+                {
+                    "id": "pcq-03",
+                    "text": "Carrera 3"
+                },
+                {
+                    "id": "pcq-04",
+                    "text": "Carrera 4"
+                }
+            ]
+        },
+        {
+            "id": "da",
+            "title": "Deporte acuático",
+            "items": [
+                {
+                    "id": "da-01",
+                    "text": "Circuito 1"
+                },
+                {
+                    "id": "da-02",
+                    "text": "Circuito 2"
+                },
+                {
+                    "id": "da-03",
+                    "text": "Circuito 3"
+                },
+                {
+                    "id": "da-04",
+                    "text": "Circuito 4"
+                },
+                {
+                    "id": "da-05",
+                    "text": "Circuito 5"
+                },
+                {
+                    "id": "da-06",
+                    "text": "Circuito 6"
+                },
+                {
+                    "id": "da-07",
+                    "text": "Circuito 7"
+                },
+                {
+                    "id": "da-08",
+                    "text": "Circuito 8"
+                }
+            ]
+        },
+        {
+            "id": "tsa",
+            "title": "Turismo (Sunshine Autos)",
+            "items": [
+                {
+                    "id": "tsa-01",
+                    "text": "Pista de Escobar"
+                },
+                {
+                    "id": "tsa-02",
+                    "text": "Furia Downtown"
+                },
+                {
+                    "id": "tsa-03",
+                    "text": "Aire Deportivo"
+                },
+                {
+                    "id": "tsa-04",
+                    "text": "Sabor Latino"
+                },
+                {
+                    "id": "tsa-05",
+                    "text": "Ruedas Cubanas"
+                }
+            ]
+        },
+        {
+            "id": "tcw",
+            "title": "Turismo (Chunder Wheel)",
+            "items": [
+                {
+                    "id": "tcw-01",
+                    "text": "Carrera Majara"
+                },
+                {
+                    "id": "tcw-02",
+                    "text": "Apuesta y Gana"
+                },
+                {
+                    "id": "tcw-03",
+                    "text": "Asalto al Asfalto"
+                },
+                {
+                    "id": "tcw-04",
+                    "text": "Sobrecarga"
+                }
+            ]
+        },
+        {
+            "id": "si_1",
+            "title": "Servicio de incautaciones (1)",
+            "items": [
+                {
+                    "id": "si_1-01",
+                    "text": "Streetfighter"
+                },
+                {
+                    "id": "si_1-02",
+                    "text": "Sanchez"
+                },
+                {
+                    "id": "si_1-03",
+                    "text": "Boxville"
+                },
+                {
+                    "id": "si_1-04",
+                    "text": "Stallion"
+                },
+                {
+                    "id": "si_1-05",
+                    "text": "Polaris V8"
+                },
+                {
+                    "id": "si_1-06",
+                    "text": "Oceanic"
+                },
+                {
+                    "id": "si_1-07",
+                    "text": "Cuban Hermes"
+                },
+                {
+                    "id": "si_1-08",
+                    "text": "Pony"
+                }
+            ]
+        },
+        {
+            "id": "si_2",
+            "title": "Servicio de incautaciones (2)",
+            "items": [
+                {
+                    "id": "si_2-01",
+                    "text": "Wintergreen"
+                },
+                {
+                    "id": "si_2-02",
+                    "text": "Freeway"
+                },
+                {
+                    "id": "si_2-03",
+                    "text": "Banshee"
+                },
+                {
+                    "id": "si_2-04",
+                    "text": "Cheetah"
+                },
+                {
+                    "id": "si_2-05",
+                    "text": "Comet"
+                },
+                {
+                    "id": "si_2-06",
+                    "text": "Phoenix"
+                },
+                {
+                    "id": "si_2-07",
+                    "text": "Mule"
+                },
+                {
+                    "id": "si_2-08",
+                    "text": "Sentinel XS"
+                }
+            ]
+        },
+        {
+            "id": "si_3",
+            "title": "Servicio de incautaciones (3)",
+            "items": [
+                {
+                    "id": "si_3-01",
+                    "text": "PCJ-600"
+                },
+                {
+                    "id": "si_3-02",
+                    "text": "Deluxo"
+                },
+                {
+                    "id": "si_3-03",
+                    "text": "Infernus"
+                },
+                {
+                    "id": "si_3-04",
+                    "text": "Maverick"
+                },
+                {
+                    "id": "si_3-05",
+                    "text": "Sparrow"
+                },
+                {
+                    "id": "si_3-06",
+                    "text": "Stretch"
+                },
+                {
+                    "id": "si_3-07",
+                    "text": "Stinger"
+                },
+                {
+                    "id": "si_3-08",
+                    "text": "Sabre"
+                }
+            ]
+        },
+        {
+            "id": "si_a",
+            "title": "Servicio de incautaciones (Actuáticos)",
+            "items": [
+                {
+                    "id": "si_a-01",
+                    "text": "Dinghy"
+                },
+                {
+                    "id": "si_a-02",
+                    "text": "Jet Ski"
+                },
+                {
+                    "id": "si_a-03",
+                    "text": "Rio"
+                },
+                {
+                    "id": "si_a-04",
+                    "text": "Marquis"
+                },
+                {
+                    "id": "si_a-05",
+                    "text": "Reefer"
+                },
+                {
+                    "id": "si_a-06",
+                    "text": "Tropic"
+                },
+                {
+                    "id": "si_a-07",
+                    "text": "Squalo"
+                },
+                {
+                    "id": "si_a-08",
+                    "text": "Violator"
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": "Coleccionables",
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": "99 globos rojos"
+                },
+                {
+                    "id": "col-02",
+                    "text": "30 locales para el Imperio Vance"
+                },
+                {
+                    "id": "col-03",
+                    "text": "36 saltos únicos"
+                },
+                {
+                    "id": "col-04",
+                    "text": "35 masacres"
+                }
+            ]
+        }
+    ]
+}

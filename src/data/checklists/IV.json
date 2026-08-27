@@ -1,0 +1,1821 @@
+{
+    "tabs": [
+        {
+            "id": "iv",
+            "label": "GTA IV",
+            "sections": [
+                {
+                    "id": "mp",
+                    "title": {
+                        "es": "Misiones principales",
+                        "en": "Story Missions",
+                        "fr": "Missions principales",
+                        "pt": "Missões principais"
+                    },
+                    "items": [
+                        {
+                            "id": "mp-01",
+                            "text": "The Cousins Bellic",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-02",
+                            "text": "It's Your Call",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-03",
+                            "text": "Three's a Crowd",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-04",
+                            "text": "First Date",
+                            "icon": "michelle"
+                        },
+                        {
+                            "id": "mp-05",
+                            "text": "Bleed Out",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-06",
+                            "text": "Easy Fare",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-07",
+                            "text": "Jamaican Heat",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-08",
+                            "text": "Bull in a China Shop",
+                            "icon": "vlad"
+                        },
+                        {
+                            "id": "mp-09",
+                            "text": "Hung Out to Dry",
+                            "icon": "vlad"
+                        },
+                        {
+                            "id": "mp-10",
+                            "text": "Clean Getaway",
+                            "icon": "vlad"
+                        },
+                        {
+                            "id": "mp-11",
+                            "text": "Ivan the Not So Terrible",
+                            "icon": "vlad"
+                        },
+                        {
+                            "id": "mp-12",
+                            "text": "Concrete Jungle",
+                            "icon": "jacob"
+                        },
+                        {
+                            "id": "mp-13",
+                            "text": "Uncle Vlad",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-14",
+                            "text": "Crime and Punishment",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-15",
+                            "text": "Do You Have Protection?",
+                            "icon": "faustin"
+                        },
+                        {
+                            "id": "mp-16",
+                            "text": "Shadow",
+                            "icon": "jacob"
+                        },
+                        {
+                            "id": "mp-17",
+                            "text": "Final Destination",
+                            "icon": "faustin"
+                        },
+                        {
+                            "id": "mp-18",
+                            "text": "No Love Lost",
+                            "icon": "faustin"
+                        },
+                        {
+                            "id": "mp-19",
+                            "text": "Logging On",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-20",
+                            "text": "Rigged to Blow",
+                            "icon": "faustin"
+                        },
+                        {
+                            "id": "mp-21",
+                            "text": "Search and Delete",
+                            "icon": "brucie"
+                        },
+                        {
+                            "id": "mp-22",
+                            "text": "Easy as Can Be",
+                            "icon": "brucie"
+                        },
+                        {
+                            "id": "mp-23",
+                            "text": "The Master and the Molotov",
+                            "icon": "dimitri"
+                        },
+                        {
+                            "id": "mp-24",
+                            "text": "Russian Revolution",
+                            "icon": "dimitri"
+                        },
+                        {
+                            "id": "mp-25",
+                            "text": "Roman's Sorrow",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-26",
+                            "text": "Out of the Closet...",
+                            "icon": "brucie"
+                        },
+                        {
+                            "id": "mp-27",
+                            "text": "...Out of the Closet",
+                            "icon": "brucie"
+                        },
+                        {
+                            "id": "mp-28",
+                            "text": "No. 1",
+                            "icon": "brucie"
+                        },
+                        {
+                            "id": "mp-29",
+                            "text": "Escuela of the Streets",
+                            "icon": "manny"
+                        },
+                        {
+                            "id": "mp-30",
+                            "text": "Street Sweeper",
+                            "icon": "manny"
+                        },
+                        {
+                            "id": "mp-31",
+                            "text": "Luck of the Irish",
+                            "icon": "elizabeta"
+                        },
+                        {
+                            "id": "mp-32",
+                            "text": "Blow Your Cover",
+                            "icon": "elizabeta"
+                        },
+                        {
+                            "id": "mp-33",
+                            "text": "The Puerto Rican Connection",
+                            "icon": "manny"
+                        },
+                        {
+                            "id": "mp-34",
+                            "text": "The Snow Storm",
+                            "icon": "elizabeta"
+                        },
+                        {
+                            "id": "mp-35",
+                            "text": "Have a Heart",
+                            "icon": "elizabeta"
+                        },
+                        {
+                            "id": "mp-36",
+                            "text": "Call and Collect",
+                            "icon": "unknown"
+                        },
+                        {
+                            "id": "mp-37",
+                            "text": "Harboring a Grudge",
+                            "icon": "packie"
+                        },
+                        {
+                            "id": "mp-38",
+                            "text": "Waste Not Want Knots",
+                            "icon": "packie"
+                        },
+                        {
+                            "id": "mp-39",
+                            "text": "Three Leaf Clover",
+                            "icon": "packie"
+                        },
+                        {
+                            "id": "mp-40",
+                            "text": "Final Interview...",
+                            "icon": "francis"
+                        },
+                        {
+                            "id": "mp-41",
+                            "text": "...Final Interview",
+                            "icon": "entrevista"
+                        },
+                        {
+                            "id": "mp-42",
+                            "text": "Holland Nights",
+                            "icon": "francis"
+                        },
+                        {
+                            "id": "mp-43",
+                            "text": "Lure",
+                            "icon": "francis"
+                        },
+                        {
+                            "id": "mp-44",
+                            "text": "Deconstruction for Begginers",
+                            "icon": "playboy"
+                        },
+                        {
+                            "id": "mp-45",
+                            "text": "Photo Shoot",
+                            "icon": "playboy"
+                        },
+                        {
+                            "id": "mp-46",
+                            "text": "Buff Rider",
+                            "icon": "dwayne"
+                        },
+                        {
+                            "id": "mp-47",
+                            "text": "Undress to Kill",
+                            "icon": "dwayne"
+                        },
+                        {
+                            "id": "mp-48",
+                            "text": "Wrong is Right",
+                            "icon": "unknown"
+                        },
+                        {
+                            "id": "mp-49",
+                            "text": "Portrait of a Killer",
+                            "icon": "ulp"
+                        },
+                        {
+                            "id": "mp-50",
+                            "text": "Hostile Negotiation",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-51",
+                            "text": "The Holland Play...",
+                            "icon": "dwayne"
+                        },
+                        {
+                            "id": "mp-52",
+                            "texts": [
+                                {
+                                    "text": "...The Holland Play",
+                                    "icon": "playboy_red"
+                                },
+                                {
+                                    "text": "...The Holland Play",
+                                    "icon": "dwayne_red"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "mp-53",
+                            "text": "Dust Off",
+                            "icon": "ulp"
+                        },
+                        {
+                            "id": "mp-54",
+                            "text": "Paper Trail",
+                            "icon": "ulp"
+                        },
+                        {
+                            "id": "mp-55",
+                            "text": "Action Speak Louder Than Words",
+                            "icon": "gerry"
+                        },
+                        {
+                            "id": "mp-56",
+                            "text": "I Need Your Clothes, Your Boots, and Your Motorcycle",
+                            "icon": "gerry"
+                        },
+                        {
+                            "id": "mp-57",
+                            "text": "Smackdown",
+                            "icon": "derrick"
+                        },
+                        {
+                            "id": "mp-58",
+                            "text": "A Long Way to Fall",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-59",
+                            "text": "Babysitting",
+                            "icon": "derrick"
+                        },
+                        {
+                            "id": "mp-60",
+                            "text": "Tunnel of Death",
+                            "icon": "derrick"
+                        },
+                        {
+                            "id": "mp-61",
+                            "text": "Blood Brothers",
+                            "icon": "francis"
+                        },
+                        {
+                            "id": "mp-62",
+                            "text": "Undertaker",
+                            "icon": "packie"
+                        },
+                        {
+                            "id": "mp-63",
+                            "text": "Taking in the Trash",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-64",
+                            "text": "Meltdown",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-65",
+                            "text": "I'll Take Her...",
+                            "icon": "gerry"
+                        },
+                        {
+                            "id": "mp-66",
+                            "text": "...I'll Take Her",
+                            "icon": "rescate"
+                        },
+                        {
+                            "id": "mp-67",
+                            "text": "Museum Piece",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-68",
+                            "text": "No Way on the Subway",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-69",
+                            "text": "Late Checkout",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-70",
+                            "text": "Weekend at Florian's",
+                            "icon": "ray"
+                        },
+                        {
+                            "id": "mp-71",
+                            "text": "Ransom",
+                            "icon": "rescate"
+                        },
+                        {
+                            "id": "mp-72",
+                            "text": "She's a Keeper",
+                            "icon": "gerry"
+                        },
+                        {
+                            "id": "mp-73",
+                            "text": "Hating the Haters",
+                            "icon": "bernie"
+                        },
+                        {
+                            "id": "mp-74",
+                            "text": "Union Drive",
+                            "icon": "bernie"
+                        },
+                        {
+                            "id": "mp-75",
+                            "text": "Buoys Ahoy",
+                            "icon": "bernie"
+                        },
+                        {
+                            "id": "mp-76",
+                            "text": "Truck Hustle",
+                            "icon": "phil"
+                        },
+                        {
+                            "id": "mp-77",
+                            "text": "Pegorino's Pride",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-78",
+                            "text": "Payback",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-79",
+                            "text": "Catch the Wave",
+                            "icon": "phil"
+                        },
+                        {
+                            "id": "mp-80",
+                            "text": "Trespass",
+                            "icon": "phil"
+                        },
+                        {
+                            "id": "mp-81",
+                            "text": "To Live and Die in Alderney",
+                            "icon": "phil"
+                        },
+                        {
+                            "id": "mp-82",
+                            "text": "Diamonds are a Girl's Best Friend",
+                            "icon": "gerry"
+                        },
+                        {
+                            "id": "mp-83",
+                            "text": "Entourage",
+                            "icon": "gravelli"
+                        },
+                        {
+                            "id": "mp-84",
+                            "text": "Dining Out",
+                            "icon": "gravelli"
+                        },
+                        {
+                            "id": "mp-85",
+                            "text": "Liquidize the Assets",
+                            "icon": "gravelli"
+                        },
+                        {
+                            "id": "mp-86",
+                            "text": "Flatline",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-87",
+                            "text": "Pest Control...",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-88",
+                            "text": "...Pest Control",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-89",
+                            "text": "That Special Someone",
+                            "icon": "ulp"
+                        },
+                        {
+                            "id": "mp-90",
+                            "text": "One Last Thing",
+                            "icon": "pegorino"
+                        },
+                        {
+                            "id": "mp-91",
+                            "texts": [
+                                {
+                                    "text": "If the Price is Right",
+                                    "icon": "dinero"
+                                },
+                                {
+                                    "text": "A Dish Served Cold",
+                                    "icon": "venganza"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "mp-92",
+                            "text": "Mr. and Mrs. Bellic",
+                            "icon": "roman"
+                        },
+                        {
+                            "id": "mp-93",
+                            "texts": [
+                                {
+                                    "text": "A Revenger's Tragedy",
+                                    "icon": "dinero"
+                                },
+                                {
+                                    "text": "Out of Commision",
+                                    "icon": "venganza"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "ms",
+                    "title": {
+                        "es": "Misiones secundarias",
+                        "en": "Side Missions",
+                        "fr": "Missions secondaires",
+                        "pt": "Missões secundárias"
+                    },
+                    "items": [
+                        {
+                            "id": "ms-01",
+                            "text": {
+                                "es": "10 coches de Exotic Exports",
+                                "en": "10 Exotic Exports cars",
+                                "fr": "10 voitures d'Exotic Exports",
+                                "pt": "10 carros do Exotic Exports"
+                            }
+                        },
+                        {
+                            "id": "ms-02",
+                            "text": {
+                                "es": "30 coches de Stevie",
+                                "en": "30 Stevie's cars",
+                                "fr": "30 voitures de Stevie",
+                                "pt": "30 carros do Stevie"
+                            }
+                        },
+                        {
+                            "id": "ms-03",
+                            "text": {
+                                "es": "10 entregas de droga de Little Jacob",
+                                "en": "10 Little Jacob drug deliveries",
+                                "fr": "10 livraisons de drogue de Little Jacob",
+                                "pt": "10 entregas de droga do Little Jacob"
+                            }
+                        },
+                        {
+                            "id": "ms-04",
+                            "text": {
+                                "es": "Más buscados (Broker/Dukes/Bohan)",
+                                "en": "Most Wanted (Broker/Dukes/Bohan)",
+                                "fr": "Les plus recherchés (Broker/Dukes/Bohan)",
+                                "pt": "Mais procurados (Broker/Dukes/Bohan)"
+                            }
+                        },
+                        {
+                            "id": "ms-05",
+                            "text": {
+                                "es": "Más buscados (Algonquin)",
+                                "en": "Most Wanted (Algonquin)",
+                                "fr": "Les plus recherchés (Algonquin)",
+                                "pt": "Mais procurados (Algonquin)"
+                            }
+                        },
+                        {
+                            "id": "ms-06",
+                            "text": {
+                                "es": "Más buscados (Alderney)",
+                                "en": "Most Wanted (Alderney)",
+                                "fr": "Les plus recherchés (Alderney)",
+                                "pt": "Mais procurados (Alderney)"
+                            }
+                        },
+                        {
+                            "id": "ms-07",
+                            "text": {
+                                "es": "20 criminales abatidos como vigilante",
+                                "en": "20 criminals killed as vigilante",
+                                "fr": "20 criminels éliminés en tant que justicier",
+                                "pt": "20 criminosos abatidos como vigilante"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "ma",
+                    "title": {
+                        "es": "Misiones de asesinato",
+                        "en": "Assassination Missions",
+                        "fr": "Missions d'assassinat",
+                        "pt": "Missões de assassinato"
+                    },
+                    "icon": "asesinato",
+                    "items": [
+                        {
+                            "id": "ma-01",
+                            "text": "Migration Control"
+                        },
+                        {
+                            "id": "ma-02",
+                            "text": "Bailing Out for Good"
+                        },
+                        {
+                            "id": "ma-03",
+                            "text": "Derelict Target"
+                        },
+                        {
+                            "id": "ma-04",
+                            "text": "R.U.B. Down"
+                        },
+                        {
+                            "id": "ma-05",
+                            "text": "Taken Out"
+                        },
+                        {
+                            "id": "ma-06",
+                            "text": "Industrial Action"
+                        },
+                        {
+                            "id": "ma-07",
+                            "text": "Hook, Line, and Sinker"
+                        },
+                        {
+                            "id": "ma-08",
+                            "text": "Dead End"
+                        },
+                        {
+                            "id": "ma-09",
+                            "text": "Water Hazard"
+                        }
+                    ]
+                },
+                {
+                    "id": "per",
+                    "title": {
+                        "es": "Personajes aleatorios",
+                        "en": "Random Characters",
+                        "fr": "Personnages aléatoires",
+                        "pt": "Personagens aleatórios"
+                    },
+                    "icon": "personajes",
+                    "items": [
+                        {
+                            "id": "per-01",
+                            "text": "Brian (1)"
+                        },
+                        {
+                            "id": "per-02",
+                            "text": "Brian (2)"
+                        },
+                        {
+                            "id": "per-03",
+                            "text": "Brian (3)"
+                        },
+                        {
+                            "id": "per-04",
+                            "text": "Badman"
+                        },
+                        {
+                            "id": "per-05",
+                            "text": "Mel"
+                        },
+                        {
+                            "id": "per-06",
+                            "text": "Ilyena Faustin"
+                        },
+                        {
+                            "id": "per-07",
+                            "text": "Hossan"
+                        },
+                        {
+                            "id": "per-08",
+                            "text": "Sara (1)"
+                        },
+                        {
+                            "id": "per-09",
+                            "text": "Sara (2)"
+                        },
+                        {
+                            "id": "per-10",
+                            "text": "Pathos (1)"
+                        },
+                        {
+                            "id": "per-11",
+                            "text": "Pathos (2)"
+                        },
+                        {
+                            "id": "per-12",
+                            "text": "Marnie (1)"
+                        },
+                        {
+                            "id": "per-13",
+                            "text": "Marnie (2)"
+                        },
+                        {
+                            "id": "per-14",
+                            "text": "Eddie Low (1)"
+                        },
+                        {
+                            "id": "per-15",
+                            "text": "Eddie Low (2)"
+                        },
+                        {
+                            "id": "per-16",
+                            "text": "Gracie"
+                        }
+                    ]
+                },
+                {
+                    "id": "car",
+                    "title": {
+                        "es": "Carreras de Brucie",
+                        "en": "Brucie's races",
+                        "fr": "Courses de Brucie",
+                        "pt": "Corridas do Brucie"
+                    },
+                    "items": [
+                        {
+                            "id": "car-01",
+                            "text": "South Broker"
+                        },
+                        {
+                            "id": "car-02",
+                            "text": "Airport Run"
+                        },
+                        {
+                            "id": "car-03",
+                            "text": "Dukes Boulevard"
+                        },
+                        {
+                            "id": "car-04",
+                            "text": "South Algonquin"
+                        },
+                        {
+                            "id": "car-05",
+                            "text": "Star Junction"
+                        },
+                        {
+                            "id": "car-06",
+                            "text": "Road to Bohan"
+                        },
+                        {
+                            "id": "car-07",
+                            "text": "North Alderney"
+                        },
+                        {
+                            "id": "car-08",
+                            "text": "Elevated"
+                        },
+                        {
+                            "id": "car-09",
+                            "text": "South Alderney"
+                        }
+                    ]
+                },
+                {
+                    "id": "act_br",
+                    "title": {
+                        "es": "Actividades con Brucie",
+                        "en": "Activities with Brucie",
+                        "fr": "Activités avec Brucie",
+                        "pt": "Atividades com Brucie"
+                    },
+                    "items": [
+                        {
+                            "id": "act_br-01",
+                            "text": {
+                                "es": "+70% de amistad",
+                                "en": "+70% friendship",
+                                "fr": "+70% d'amitié",
+                                "pt": "+70% de amizade"
+                            }
+                        },
+                        {
+                            "id": "act_br-02",
+                            "text": {
+                                "es": "Navegar",
+                                "en": "Boating",
+                                "fr": "Bateau",
+                                "pt": "Passeio de Barco"
+                            }
+                        },
+                        {
+                            "id": "act_br-03",
+                            "text": {
+                                "es": "Bolos",
+                                "en": "Bowling",
+                                "fr": "Bowling",
+                                "pt": "Boliche"
+                            }
+                        },
+                        {
+                            "id": "act_br-04",
+                            "text": {
+                                "es": "Beber",
+                                "en": "Drinking",
+                                "fr": "Boire",
+                                "pt": "Beber"
+                            }
+                        },
+                        {
+                            "id": "act_br-05",
+                            "text": {
+                                "es": "Comer",
+                                "en": "Eating",
+                                "fr": "Manger",
+                                "pt": "Comer"
+                            }
+                        },
+                        {
+                            "id": "act_br-06",
+                            "text": {
+                                "es": "Paseo en helicóptero",
+                                "en": "Heli Ride",
+                                "fr": "Hélicoptère",
+                                "pt": "Passeio de Helicóptero"
+                            }
+                        },
+                        {
+                            "id": "act_br-07",
+                            "text": {
+                                "es": "Espectáculo",
+                                "en": "Shows",
+                                "fr": "Spectacles",
+                                "pt": "Show"
+                            }
+                        },
+                        {
+                            "id": "act_br-08",
+                            "text": {
+                                "es": "Club de striptease",
+                                "en": "Strip Club",
+                                "fr": "Strip Club",
+                                "pt": "Clube de Strip"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "act_lj",
+                    "title": {
+                        "es": "Actividades con Little Jacob",
+                        "en": "Activities with Little Jacob",
+                        "fr": "Activités avec Little Jacob",
+                        "pt": "Atividades com Little Jacob"
+                    },
+                    "items": [
+                        {
+                            "id": "act_lj-01",
+                            "text": {
+                                "es": "+60% de amistad",
+                                "en": "+60% friendship",
+                                "fr": "+60% d'amitié",
+                                "pt": "+60% de amizade"
+                            }
+                        },
+                        {
+                            "id": "act_lj-02",
+                            "text": {
+                                "es": "Dardos",
+                                "en": "Darts",
+                                "fr": "Fléchettes",
+                                "pt": "Dardos"
+                            }
+                        },
+                        {
+                            "id": "act_lj-03",
+                            "text": {
+                                "es": "Beber",
+                                "en": "Drinking",
+                                "fr": "Boire",
+                                "pt": "Beber"
+                            }
+                        },
+                        {
+                            "id": "act_lj-04",
+                            "text": {
+                                "es": "Comer",
+                                "en": "Eating",
+                                "fr": "Manger",
+                                "pt": "Comer"
+                            }
+                        },
+                        {
+                            "id": "act_lj-05",
+                            "text": {
+                                "es": "Billar",
+                                "en": "Pool",
+                                "fr": "Billard",
+                                "pt": "Bilhar"
+                            }
+                        },
+                        {
+                            "id": "act_lj-06",
+                            "text": {
+                                "es": "Espectáculo",
+                                "en": "Shows",
+                                "fr": "Spectacles",
+                                "pt": "Show"
+                            }
+                        },
+                        {
+                            "id": "act_lj-07",
+                            "text": {
+                                "es": "Club de striptease",
+                                "en": "Strip Club",
+                                "fr": "Strip Club",
+                                "pt": "Clube de Strip"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "act_pa",
+                    "title": {
+                        "es": "Actividades con Packie",
+                        "en": "Activities with Packie",
+                        "fr": "Activités avec Packie",
+                        "pt": "Atividades com Packie"
+                    },
+                    "items": [
+                        {
+                            "id": "act_pa-01",
+                            "text": {
+                                "es": "+75% de amistad",
+                                "en": "+75% friendship",
+                                "fr": "+75% d'amitié",
+                                "pt": "+75% de amizade"
+                            }
+                        },
+                        {
+                            "id": "act_pa-02",
+                            "text": {
+                                "es": "Bolos",
+                                "en": "Bowling",
+                                "fr": "Bowling",
+                                "pt": "Boliche"
+                            }
+                        },
+                        {
+                            "id": "act_pa-03",
+                            "text": {
+                                "es": "Dardos",
+                                "en": "Darts",
+                                "fr": "Fléchettes",
+                                "pt": "Dardos"
+                            }
+                        },
+                        {
+                            "id": "act_pa-04",
+                            "text": {
+                                "es": "Beber",
+                                "en": "Drinking",
+                                "fr": "Boire",
+                                "pt": "Beber"
+                            }
+                        },
+                        {
+                            "id": "act_pa-05",
+                            "text": {
+                                "es": "Billar",
+                                "en": "Pool",
+                                "fr": "Billard",
+                                "pt": "Bilhar"
+                            }
+                        },
+                        {
+                            "id": "act_pa-06",
+                            "text": {
+                                "es": "Espectáculo",
+                                "en": "Shows",
+                                "fr": "Spectacles",
+                                "pt": "Show"
+                            }
+                        },
+                        {
+                            "id": "act_pa-07",
+                            "text": {
+                                "es": "Club de striptease",
+                                "en": "Strip Club",
+                                "fr": "Strip Club",
+                                "pt": "Clube de Strip"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "misc",
+                    "title": {
+                        "es": "Miscelánea",
+                        "en": "Miscellaneous",
+                        "fr": "Divers",
+                        "pt": "Miscelânea"
+                    },
+                    "items": [
+                        {
+                            "id": "misc-01",
+                            "text": {
+                                "es": "Ganar una partida de billar",
+                                "en": "Win a game of pool",
+                                "fr": "Gagner une partie de billard",
+                                "pt": "Ganhar uma partida de bilhar"
+                            },
+                            "icon": "billar"
+                        },
+                        {
+                            "id": "misc-02",
+                            "text": {
+                                "es": "Ganar una partida de dardos",
+                                "en": "Win a game of darts",
+                                "fr": "Gagner une partie de fléchettes",
+                                "pt": "Ganhar uma partida de dardos"
+                            },
+                            "icon": "dardos"
+                        },
+                        {
+                            "id": "misc-03",
+                            "text": {
+                                "es": "Ganar una partida de bolos",
+                                "en": "Win a game of bowling",
+                                "fr": "Gagner une partie de bowling",
+                                "pt": "Ganhar uma partida de boliche"
+                            },
+                            "icon": "bolos"
+                        },
+                        {
+                            "id": "misc-04",
+                            "text": {
+                                "es": "Obtener la puntuación más alta en QUB3D",
+                                "en": "Get the highest score in QUB3D",
+                                "fr": "Obtenir le meilleur score à QUB3D",
+                                "pt": "Obter a pontuação mais alta no QUB3D"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "col",
+                    "title": {
+                        "es": "Coleccionables",
+                        "en": "Collectibles",
+                        "fr": "Objets à collectionner",
+                        "pt": "Colecionáveis"
+                    },
+                    "items": [
+                        {
+                            "id": "col-01",
+                            "text": {
+                                "es": "200 ratas voladoras",
+                                "en": "200 flying rats",
+                                "fr": "200 rats volants",
+                                "pt": "200 ratos voadores"
+                            }
+                        },
+                        {
+                            "id": "col-02",
+                            "text": {
+                                "es": "50 saltos únicos",
+                                "en": "50 unique jumps",
+                                "fr": "50 sauts uniques",
+                                "pt": "50 saltos únicos"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tlad",
+            "label": "The Lost and Damned",
+            "sections": [
+                {
+                    "id": "tlad_mp",
+                    "title": {
+                        "es": "Misiones principales",
+                        "en": "Story Missions",
+                        "fr": "Missions principales",
+                        "pt": "Missões principais"
+                    },
+                    "items": [
+                        {
+                            "id": "tlad_mp-01",
+                            "text": "Clean and Serene",
+                            "icon": "tlad_billy"
+                        },
+                        {
+                            "id": "tlad_mp-02",
+                            "text": "Angels in America",
+                            "icon": "tlad_billy"
+                        },
+                        {
+                            "id": "tlad_mp-03",
+                            "text": "It's War",
+                            "icon": "tlad_billy"
+                        },
+                        {
+                            "id": "tlad_mp-04",
+                            "text": "Action/Reaction",
+                            "icon": "tlad_billy"
+                        },
+                        {
+                            "id": "tlad_mp-05",
+                            "text": "Liberty City Choppers",
+                            "icon": "tlad_jim"
+                        },
+                        {
+                            "id": "tlad_mp-06",
+                            "text": "Bad Cop Drop",
+                            "icon": "tlad_jim"
+                        },
+                        {
+                            "id": "tlad_mp-07",
+                            "text": "Buyer's Market",
+                            "icon": "tlad_elizabeta"
+                        },
+                        {
+                            "id": "tlad_mp-08",
+                            "text": "Politics",
+                            "icon": "tlad_stubbs"
+                        },
+                        {
+                            "id": "tlad_mp-09",
+                            "text": "Coming Down",
+                            "icon": "tlad_ashley"
+                        },
+                        {
+                            "id": "tlad_mp-10",
+                            "text": "Off Route",
+                            "icon": "tlad_stubbs"
+                        },
+                        {
+                            "id": "tlad_mp-11",
+                            "text": "This Shit's Cursed",
+                            "icon": "tlad_billy"
+                        },
+                        {
+                            "id": "tlad_mp-12",
+                            "text": "Hit the Pipe",
+                            "icon": "tlad_jim"
+                        },
+                        {
+                            "id": "tlad_mp-13",
+                            "text": "End of Chapter",
+                            "icon": "tlad_jim"
+                        },
+                        {
+                            "id": "tlad_mp-14",
+                            "text": "Bad Standing",
+                            "icon": "tlad_jim"
+                        },
+                        {
+                            "id": "tlad_mp-15",
+                            "text": "Heavy Toll",
+                            "icon": "tlad_elizabeta"
+                        },
+                        {
+                            "id": "tlad_mp-16",
+                            "text": "Marta Full of Grace",
+                            "icon": "tlad_elizabeta"
+                        },
+                        {
+                            "id": "tlad_mp-17",
+                            "text": "Shifting Weight",
+                            "icon": "tlad_elizabeta"
+                        },
+                        {
+                            "id": "tlad_mp-18",
+                            "text": "Roman's Holiday",
+                            "icon": "tlad_ashley"
+                        },
+                        {
+                            "id": "tlad_mp-19",
+                            "text": "Diamonds in the Rough",
+                            "icon": "tlad_ray"
+                        },
+                        {
+                            "id": "tlad_mp-20",
+                            "text": "Collector's Item",
+                            "icon": "tlad_ray"
+                        },
+                        {
+                            "id": "tlad_mp-21",
+                            "text": "Was It Worth It?",
+                            "icon": "tlad_ray"
+                        },
+                        {
+                            "id": "tlad_mp-22",
+                            "text": "Get Lost",
+                            "icon": "tlad_stubbs"
+                        }
+                    ]
+                },
+                {
+                    "id": "tlad_per",
+                    "title": {
+                        "es": "Personajes aleatorios",
+                        "en": "Random Characters",
+                        "fr": "Personnages aléatoires",
+                        "pt": "Personagens aleatórios"
+                    },
+                    "icon": "personajes",
+                    "items": [
+                        {
+                            "id": "tlad_per-01",
+                            "text": "Malc (1)"
+                        },
+                        {
+                            "id": "tlad_per-02",
+                            "text": "Malc (2)"
+                        },
+                        {
+                            "id": "tlad_per-03",
+                            "text": "Dave Grossman"
+                        }
+                    ]
+                },
+                {
+                    "id": "tlad_ms",
+                    "title": {
+                        "es": "Misiones secundarias",
+                        "en": "Side Missions",
+                        "fr": "Missions secondaires",
+                        "pt": "Missões secundárias"
+                    },
+                    "items": [
+                        {
+                            "id": "tlad_ms-01",
+                            "text": {
+                                "es": "5 misiones de Stubbs",
+                                "en": "5 Stubbs missions",
+                                "fr": "5 missions de Stubbs",
+                                "pt": "5 missões do Stubbs"
+                            }
+                        },
+                        {
+                            "id": "tlad_ms-02",
+                            "text": {
+                                "es": "10 robos de motos de Angus",
+                                "en": "10 Angus bike thefts",
+                                "fr": "10 vols de motos d'Angus",
+                                "pt": "10 roubos de motos do Angus"
+                            }
+                        },
+                        {
+                            "id": "tlad_ms-03",
+                            "text": {
+                                "es": "25 guerras de bandas completadas",
+                                "en": "25 gang wars completed",
+                                "fr": "25 guerres de gangs terminées",
+                                "pt": "25 guerras de gangues completadas"
+                            },
+                            "icon": "tlad_banda"
+                        },
+                        {
+                            "id": "tlad_ms-04",
+                            "text": {
+                                "es": "12 carreras de motos ganadas",
+                                "en": "12 bike races won",
+                                "fr": "12 courses de motos gagnées",
+                                "pt": "12 corridas de moto vencidas"
+                            },
+                            "icon": "tlad_carrera"
+                        }
+                    ]
+                },
+                {
+                    "id": "tlad_act_ct",
+                    "title": {
+                        "es": "Actividades con Clay y Terry",
+                        "en": "Activities with Clay and Terry",
+                        "fr": "Activités avec Clay et Terry",
+                        "pt": "Atividades com Clay e Terry"
+                    },
+                    "items": [
+                        {
+                            "id": "tlad_act_ct_01",
+                            "text": {
+                                "es": "Air Hockey",
+                                "en": "Air Hockey",
+                                "fr": "Air hockey",
+                                "pt": "Air hockey"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_02",
+                            "text": {
+                                "es": "Dardos",
+                                "en": "Darts",
+                                "fr": "Fléchettes",
+                                "pt": "Dardos"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_03",
+                            "text": {
+                                "es": "Beber",
+                                "en": "Drinking",
+                                "fr": "Boire",
+                                "pt": "Beber"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_04",
+                            "text": {
+                                "es": "Comer",
+                                "en": "Eating",
+                                "fr": "Manger",
+                                "pt": "Comer"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_05",
+                            "text": {
+                                "es": "Billar",
+                                "en": "Pool",
+                                "fr": "Billard",
+                                "pt": "Bilhar"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_06",
+                            "text": {
+                                "es": "Espectáculo",
+                                "en": "Shows",
+                                "fr": "Spectacles",
+                                "pt": "Show"
+                            }
+                        },
+                        {
+                            "id": "tlad_act_ct_07",
+                            "text": {
+                                "es": "Club de striptease",
+                                "en": "Strip Club",
+                                "fr": "Strip Club",
+                                "pt": "Clube de Stip"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "tlad_misc",
+                    "title": {
+                        "es": "Miscelánea",
+                        "en": "Miscellaneous",
+                        "fr": "Divers",
+                        "pt": "Miscelânea"
+                    },
+                    "items": [
+                        {
+                            "id": "tlad_misc-01",
+                            "text": {
+                                "es": "Ganar un pulso",
+                                "en": "Win an arm wrestling match",
+                                "fr": "Gagner un bras de fer",
+                                "pt": "Ganhar uma queda de braço"
+                            },
+                            "icon": "tlad_pulso"
+                        },
+                        {
+                            "id": "tlad_misc-02",
+                            "text": {
+                                "es": "Ganar una partida de billar",
+                                "en": "Win a game of pool",
+                                "fr": "Gagner une partie de billard",
+                                "pt": "Ganhar uma partida de bilhar"
+                            },
+                            "icon": "billar"
+                        },
+                        {
+                            "id": "tlad_misc-03",
+                            "text": {
+                                "es": "Ganar una partida de dardos",
+                                "en": "Win a game of darts",
+                                "fr": "Gagner une partie de fléchettes",
+                                "pt": "Ganhar uma partida de dardos"
+                            },
+                            "icon": "dardos"
+                        },
+                        {
+                            "id": "tlad_misc-04",
+                            "text": {
+                                "es": "Ganar una partida de Air hockey",
+                                "en": "Win a game of Air hockey",
+                                "fr": "Gagner une partie d'Air hockey",
+                                "pt": "Ganhar uma partida de Air hockey"
+                            },
+                            "icon": "air_hockey"
+                        }
+                    ]
+                },
+                {
+                    "id": "tlad_col",
+                    "title": {
+                        "es": "Coleccionables",
+                        "en": "Collectibles",
+                        "fr": "Objets à collectionner",
+                        "pt": "Colecionáveis"
+                    },
+                    "items": [
+                        {
+                            "id": "tlad_col-01",
+                            "text": {
+                                "es": "50 gaviotas",
+                                "en": "50 seagulls",
+                                "fr": "50 mouettes",
+                                "pt": "50 gaivotas"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tbogt",
+            "label": "The Ballad of Gay Tony",
+            "sections": [
+                {
+                    "id": "tbogt_mp",
+                    "title": {
+                        "es": "Misiones principales",
+                        "en": "Story Missions",
+                        "fr": "Missions principales",
+                        "pt": "Missões principais"
+                    },
+                    "items": [
+                        {
+                            "id": "tbogt_mp-01",
+                            "text": "I Luv L.C.",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-02",
+                            "text": "Chinese Takeout",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-03",
+                            "text": "Momma's Boy",
+                            "icon": "tbogt_mama"
+                        },
+                        {
+                            "id": "tbogt_mp-04",
+                            "text": "Corner Kids",
+                            "icon": "tbogt_mama"
+                        },
+                        {
+                            "id": "tbogt_mp-05",
+                            "text": "Clocking Off",
+                            "icon": "tbogt_mama"
+                        },
+                        {
+                            "id": "tbogt_mp-06",
+                            "text": "Practice Swing",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-07",
+                            "text": "Blog This!...",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-08",
+                            "text": "Bang Bang",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-09",
+                            "text": "Boulevard Baby",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-10",
+                            "text": "Frosting on the Cake",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-11",
+                            "text": "Kibbutz Number One",
+                            "icon": "tbogt_mori"
+                        },
+                        {
+                            "id": "tbogt_mp-12",
+                            "text": "Sexy Time",
+                            "icon": "tbogt_yusuf"
+                        },
+                        {
+                            "id": "tbogt_mp-13",
+                            "text": "High Dive",
+                            "icon": "tbogt_yusuf"
+                        },
+                        {
+                            "id": "tbogt_mp-14",
+                            "text": "...Blog This!",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-15",
+                            "text": "This Ain't Checkers",
+                            "icon": "tbogt_mori"
+                        },
+                        {
+                            "id": "tbogt_mp-16",
+                            "text": "Not So Fast",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-17",
+                            "text": "Ladies' Night",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-18",
+                            "text": "No. 3",
+                            "icon": "tbogt_mori"
+                        },
+                        {
+                            "id": "tbogt_mp-19",
+                            "text": "Going Deep",
+                            "icon": "tbogt_bulgarin"
+                        },
+                        {
+                            "id": "tbogt_mp-20",
+                            "text": "Caught with your Pants Down",
+                            "icon": "tbogt_yusuf"
+                        },
+                        {
+                            "id": "tbogt_mp-21",
+                            "text": "Dropping In",
+                            "icon": "tbogt_bulgarin"
+                        },
+                        {
+                            "id": "tbogt_mp-22",
+                            "text": "For the Man Who Has Everything",
+                            "icon": "tbogt_yusuf"
+                        },
+                        {
+                            "id": "tbogt_mp-23",
+                            "text": "In The Crosshairs",
+                            "icon": "tbogt_bulgarin"
+                        },
+                        {
+                            "id": "tbogt_mp-24",
+                            "text": "Ladies Half Price",
+                            "icon": "tbogt_tony"
+                        },
+                        {
+                            "id": "tbogt_mp-25",
+                            "text": "Party's Over",
+                            "icon": "tbogt_rocco"
+                        },
+                        {
+                            "id": "tbogt_mp-26",
+                            "text": "Departure Time",
+                            "icon": "tbogt_tony"
+                        }
+                    ]
+                },
+                {
+                    "id": "tbogt_per",
+                    "title": {
+                        "es": "Personajes aleatorios",
+                        "en": "Random Characters",
+                        "fr": "Personnages aléatoires",
+                        "pt": "Personagens aleatórios"
+                    },
+                    "icon": "personajes",
+                    "items": [
+                        {
+                            "id": "tbogt_per-01",
+                            "text": "Arnaud (1)"
+                        },
+                        {
+                            "id": "tbogt_per-02",
+                            "text": "Arnaud (2)"
+                        },
+                        {
+                            "id": "tbogt_per-03",
+                            "text": "Daisie"
+                        },
+                        {
+                            "id": "tbogt_per-04",
+                            "text": "Margot"
+                        },
+                        {
+                            "id": "tbogt_per-05",
+                            "text": "Margot"
+                        }
+                    ]
+                },
+                {
+                    "id": "tbogt_ms",
+                    "title": {
+                        "es": "Misiones secundarias",
+                        "en": "Side Missions",
+                        "fr": "Missions secondaires",
+                        "pt": "Missões secundárias"
+                    },
+                    "items": [
+                        {
+                            "id": "tbogt_ms-01",
+                            "text": {
+                                "es": "8 trabajos de gestión del local completados",
+                                "en": "8 club management jobs completed",
+                                "fr": "8 missions de gestion du club terminées",
+                                "pt": "8 trabalhos de gestão do clube completados"
+                            },
+                            "icon": "tbogt_club"
+                        },
+                        {
+                            "id": "tbogt_ms-02",
+                            "text": {
+                                "es": "25 guerras de drogas completadas",
+                                "en": "25 drug wars completed",
+                                "fr": "25 guerres de drogue terminées",
+                                "pt": "25 guerras de drogas completadas"
+                            },
+                            "icon": "tbogt_drogas"
+                        },
+                        {
+                            "id": "tbogt_ms-03",
+                            "text": {
+                                "es": "3 triatlones ganados",
+                                "en": "3 triathlons won",
+                                "fr": "3 triathlons gagnés",
+                                "pt": "3 triatlos vencidos"
+                            },
+                            "icon": "tbogt_triatlon"
+                        }
+                    ]
+                },
+                {
+                    "id": "tbogt_act_ah",
+                    "title": {
+                        "es": "Actividades con Armando y Henrique",
+                        "en": "Activities with Armando and Henrique",
+                        "fr": "Activités avec Armando et Henrique",
+                        "pt": "Atividades com Armando e Henrique"
+                    },
+                    "items": [
+                        {
+                            "id": "tbogt_act_ah-01",
+                            "text": {
+                                "es": "Air hockey",
+                                "en": "Air Hockey",
+                                "fr": "Air hockey",
+                                "pt": "Air hockey"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-02",
+                            "text": {
+                                "es": "Dardos",
+                                "en": "Darts",
+                                "fr": "Fléchettes",
+                                "pt": "Dardos"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-03",
+                            "text": {
+                                "es": "Beber",
+                                "en": "Drinking",
+                                "fr": "Boire",
+                                "pt": "Beber"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-04",
+                            "text": {
+                                "es": "Comer",
+                                "en": "Eating",
+                                "fr": "Manger",
+                                "pt": "Comer"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-05",
+                            "text": {
+                                "es": "Golf",
+                                "en": "Golfing",
+                                "fr": "Golf",
+                                "pt": "Golf"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-06",
+                            "text": {
+                                "es": "Billar",
+                                "en": "Pool",
+                                "fr": "Billard",
+                                "pt": "Bilhar"
+                            }
+                        },
+                        {
+                            "id": "tbogt_act_ah-07",
+                            "text": {
+                                "es": "Club de striptease",
+                                "en": "Strip Club",
+                                "fr": "Strip Club",
+                                "pt": "Clube de Strip"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "tbogt_misc",
+                    "title": {
+                        "es": "Miscelánea",
+                        "en": "Miscellaneous",
+                        "fr": "Divers",
+                        "pt": "Miscelânea"
+                    },
+                    "items": [
+                        {
+                            "id": "tbogt_misc-01",
+                            "text": {
+                                "es": "Ganar una partida de billar",
+                                "en": "Win a game of pool",
+                                "fr": "Gagner une partie de billard",
+                                "pt": "Ganhar uma partida de bilhar"
+                            },
+                            "icon": "billar"
+                        },
+                        {
+                            "id": "tbogt_misc-02",
+                            "text": {
+                                "es": "Ganar una partida de dardos",
+                                "en": "Win a game of darts",
+                                "fr": "Gagner une partie de fléchettes",
+                                "pt": "Ganhar uma partida de dardos"
+                            },
+                            "icon": "dardos"
+                        },
+                        {
+                            "id": "tbogt_misc-03",
+                            "text": {
+                                "es": "Ganar una partida de golf",
+                                "en": "Win a game of golf",
+                                "fr": "Gagner une partie de golf",
+                                "pt": "Ganhar uma partida de golf"
+                            },
+                            "icon": "tbogt_golf"
+                        },
+                        {
+                            "id": "tbogt_misc-04",
+                            "text": {
+                                "es": "Ganar una partida de Air hockey",
+                                "en": "Win a game of Air hockey",
+                                "fr": "Gagner une partie de Air hockey",
+                                "pt": "Ganhar uma partida de Air hockey"
+                            },
+                            "icon": "air_hockey"
+                        },
+                        {
+                            "id": "tbogt_misc-05",
+                            "text": {
+                                "es": "Ganar las 6 rondas de L.C. Cage Fighters",
+                                "en": "Win 6 rounds of L.C. Cage Fighters",
+                                "fr": "Gagner 6 manches à L.C. Cage Fighters",
+                                "pt": "Vencer as 6 rodadas de L.C. Cage Fighters"
+                            },
+                            "icon": "tbogt_pelea"
+                        },
+                        {
+                            "id": "tbogt_misc-06",
+                            "text": {
+                                "es": "Ganar el duelo de champagne",
+                                "en": "Win the champagne drinking contest",
+                                "fr": "Remporter le concours de champagne",
+                                "pt": "Vencer o concurso de champanhe"
+                            }
+                        },
+                        {
+                            "id": "tbogt_misc-07",
+                            "text": {
+                                "es": "Bailar con éxito en el Maisonette 9",
+                                "en": "Dance successfully in Maisonette 9",
+                                "fr": "Réussir une danse au Maisonette 9",
+                                "pt": "Dançar com sucesso na Maisonette 9"
+                            }
+                        },
+                        {
+                            "id": "tbogt_misc-08",
+                            "text": {
+                                "es": "Bailar con éxito en el Hercules",
+                                "en": "Dance successfully in Hercules",
+                                "fr": "Réussir une danse au Hercules",
+                                "pt": "Dançar com sucesso no Hercules"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "tbogt_col",
+                    "title": {
+                        "es": "Coleccionables",
+                        "en": "Collectibles",
+                        "fr": "Objets à collectionner",
+                        "pt": "Colecionáveis"
+                    },
+                    "items": [
+                        {
+                            "id": "tbogt_col-01",
+                            "text": {
+                                "es": "50 gaviotas",
+                                "en": "50 seagulls",
+                                "fr": "50 mouettes",
+                                "pt": "50 gaivotas"
+                            }
+                        },
+                        {
+                            "id": "tbogt_col-02",
+                            "text": {
+                                "es": "15 saltos base",
+                                "en": "15 base jumps",
+                                "fr": "15 sauts en parachute",
+                                "pt": "15 saltos base"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

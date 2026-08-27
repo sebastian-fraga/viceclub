@@ -1,0 +1,972 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": "Misiones principales",
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": "Big Smoke",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-02",
+                    "text": "Sweet and Kendl",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-03",
+                    "text": "Ryder",
+                    "icon": "ryder"
+                },
+                {
+                    "id": "mp-04",
+                    "text": "Tagging up Turf",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-05",
+                    "text": "Cleaning the Hood",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-06",
+                    "text": "Drive-Thru",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-07",
+                    "text": "Nines and AK's",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-08",
+                    "text": "Drive-By",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-09",
+                    "text": "Sweet's Girl",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-10",
+                    "text": "Cesar Vialpando",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-11",
+                    "text": "OG Loc",
+                    "icon": "smoke"
+                },
+                {
+                    "id": "mp-12",
+                    "text": "Running Dog",
+                    "icon": "smoke"
+                },
+                {
+                    "id": "mp-13",
+                    "text": "Wrong Side of the Tracks",
+                    "icon": "smoke"
+                },
+                {
+                    "id": "mp-14",
+                    "text": "Just Business",
+                    "icon": "smoke"
+                },
+                {
+                    "id": "mp-15",
+                    "text": "Home Invasion",
+                    "icon": "ryder"
+                },
+                {
+                    "id": "mp-16",
+                    "text": "Catalyst",
+                    "icon": "ryder"
+                },
+                {
+                    "id": "mp-17",
+                    "text": "Robbing Uncle Sam",
+                    "icon": "ryder"
+                },
+                {
+                    "id": "mp-18",
+                    "text": "High Stakes, Low-Rider",
+                    "icon": "cesar"
+                },
+                {
+                    "id": "mp-19",
+                    "text": "Life's a Beach",
+                    "icon": "ogloc"
+                },
+                {
+                    "id": "mp-20",
+                    "text": "Madd Dogg's Rhymes",
+                    "icon": "ogloc"
+                },
+                {
+                    "id": "mp-21",
+                    "text": "Management Issues",
+                    "icon": "ogloc"
+                },
+                {
+                    "id": "mp-22",
+                    "text": "House Party",
+                    "icon": "ogloc"
+                },
+                {
+                    "id": "mp-23",
+                    "text": "Burning Desire",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-24",
+                    "text": "Gray Imports",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-25",
+                    "text": "Doberman",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-26",
+                    "text": "Los Sepulcros",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-27",
+                    "text": "Reuniting the Families",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-28",
+                    "text": "The Green Sabre",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-29",
+                    "text": "Badlands",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-30",
+                    "text": "Local Liquor Store",
+                    "icon": "catalina"
+                },
+                {
+                    "id": "mp-31",
+                    "text": "Against All Odds",
+                    "icon": "catalina"
+                },
+                {
+                    "id": "mp-32",
+                    "text": "Tanker Commander",
+                    "icon": "catalina"
+                },
+                {
+                    "id": "mp-33",
+                    "text": "Small Town Bank",
+                    "icon": "catalina"
+                },
+                {
+                    "id": "mp-34",
+                    "text": "Body Harvest",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-35",
+                    "text": "King in Exile",
+                    "icon": "cesar"
+                },
+                {
+                    "id": "mp-36",
+                    "text": "Wu Zi Mu",
+                    "icon": "cesar"
+                },
+                {
+                    "id": "mp-37",
+                    "text": "Farewell, My Love...",
+                    "icon": "cesar"
+                },
+                {
+                    "id": "mp-38",
+                    "text": "Are You Going to San Fierro?",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-39",
+                    "text": "Wear Flowers in Your Hair",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-40",
+                    "text": "555 We Tip",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-41",
+                    "text": "Deconstruction",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-42",
+                    "text": "Photo Opportunity",
+                    "icon": "cesar"
+                },
+                {
+                    "id": "mp-43",
+                    "text": "Jizzy",
+                    "icon": "jizzy"
+                },
+                {
+                    "id": "mp-44",
+                    "text": "T-Bone Méndez",
+                    "icon": "jizzy"
+                },
+                {
+                    "id": "mp-45",
+                    "text": "Mike Toreno",
+                    "icon": "jizzy"
+                },
+                {
+                    "id": "mp-46",
+                    "text": "Mountain Cloud Boys",
+                    "icon": "woozie"
+                },
+                {
+                    "id": "mp-47",
+                    "text": "Ran Fa Li",
+                    "icon": "woozie"
+                },
+                {
+                    "id": "mp-48",
+                    "text": "Lure",
+                    "icon": "woozie"
+                },
+                {
+                    "id": "mp-49",
+                    "text": "Amphibious Assault",
+                    "icon": "woozie"
+                },
+                {
+                    "id": "mp-50",
+                    "text": "The Da Nang Thang",
+                    "icon": "woozie"
+                },
+                {
+                    "id": "mp-51",
+                    "text": "Outrider",
+                    "icon": "triadas"
+                },
+                {
+                    "id": "mp-52",
+                    "text": "Snail Trail",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-53",
+                    "text": "Ice Cold Killa",
+                    "icon": "triadas"
+                },
+                {
+                    "id": "mp-54",
+                    "text": "Pier 69",
+                    "icon": "triadas"
+                },
+                {
+                    "id": "mp-55",
+                    "text": "Toreno's Last Flight",
+                    "icon": "triadas"
+                },
+                {
+                    "id": "mp-56",
+                    "text": "Yay Ka-Boom-Boom",
+                    "icon": "triadas"
+                },
+                {
+                    "id": "mp-57",
+                    "text": "Monster",
+                    "icon": "unknown"
+                },
+                {
+                    "id": "mp-58",
+                    "text": "Highjack",
+                    "icon": "unknown"
+                },
+                {
+                    "id": "mp-59",
+                    "text": "Interdiction",
+                    "icon": "toreno"
+                },
+                {
+                    "id": "mp-60",
+                    "text": "Verdant Meadows",
+                    "icon": "toreno"
+                },
+                {
+                    "id": "mp-61",
+                    "text": "Learning to Fly",
+                    "icon": "verdant"
+                },
+                {
+                    "id": "mp-62",
+                    "text": "N.O.E.",
+                    "icon": "verdant"
+                },
+                {
+                    "id": "mp-63",
+                    "text": "Stowaway",
+                    "icon": "verdant"
+                },
+                {
+                    "id": "mp-64",
+                    "text": "Black Project",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-65",
+                    "text": "Green Goo",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-66",
+                    "text": "Fender Ketchup",
+                    "icon": "four_dragons"
+                },
+                {
+                    "id": "mp-67",
+                    "text": "Explosive Situation",
+                    "icon": "four_dragons"
+                },
+                {
+                    "id": "mp-68",
+                    "text": "You've Had Your Chips",
+                    "icon": "four_dragons"
+                },
+                {
+                    "id": "mp-69",
+                    "text": "Don Peyote",
+                    "icon": "truth"
+                },
+                {
+                    "id": "mp-70",
+                    "text": "Intensive Care",
+                    "icon": "caligula"
+                },
+                {
+                    "id": "mp-71",
+                    "text": "The Meat Business",
+                    "icon": "caligula"
+                },
+                {
+                    "id": "mp-72",
+                    "text": "Misappropriation",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-73",
+                    "text": "Madd Dogg",
+                    "icon": "madddogg"
+                },
+                {
+                    "id": "mp-74",
+                    "text": "Fish in a Barrel",
+                    "icon": "four_dragons"
+                },
+                {
+                    "id": "mp-75",
+                    "text": "Freefall",
+                    "icon": "caligula"
+                },
+                {
+                    "id": "mp-76",
+                    "text": "High Noon",
+                    "icon": "crash"
+                },
+                {
+                    "id": "mp-77",
+                    "text": "Saint Mark's Bistro",
+                    "icon": "caligula"
+                },
+                {
+                    "id": "mp-78",
+                    "text": "A Home in the Hills",
+                    "icon": "four_dragons"
+                },
+                {
+                    "id": "mp-79",
+                    "text": "Vertical Bird",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-80",
+                    "text": "Home Coming",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-81",
+                    "text": "Cut Throat Business",
+                    "icon": "madddogg"
+                },
+                {
+                    "id": "mp-82",
+                    "text": "Beat Down on B-Dup",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-83",
+                    "text": "Grove 4 Life",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-84",
+                    "text": "Riot",
+                    "icon": "cj"
+                },
+                {
+                    "id": "mp-85",
+                    "text": "Los Desperados",
+                    "icon": "sweet"
+                },
+                {
+                    "id": "mp-86",
+                    "text": "End of the Line",
+                    "icon": "sweet"
+                }
+            ]
+        },
+        {
+            "id": "mz",
+            "title": "Misiones de Zero",
+            "icon": "zero",
+            "items": [
+                {
+                    "id": "mz-01",
+                    "text": "Air Raid"
+                },
+                {
+                    "id": "mz-02",
+                    "text": "Supply Lines..."
+                },
+                {
+                    "id": "mz-03",
+                    "text": "New Model Army"
+                }
+            ]
+        },
+        {
+            "id": "mwc",
+            "title": "Misiones de Wang Cars",
+            "icon": "cesar",
+            "items": [
+                {
+                    "id": "mwc-01",
+                    "text": "Zeroing In"
+                },
+                {
+                    "id": "mwc-02",
+                    "text": "Test Drive"
+                },
+                {
+                    "id": "mwc-03",
+                    "text": "Customs Fast Track"
+                },
+                {
+                    "id": "mwc-04",
+                    "text": "Puncture Wounds"
+                }
+            ]
+        },
+        {
+            "id": "cal",
+            "title": "Misiones del robo al Casino Calígula",
+            "icon": "robo",
+            "items": [
+                {
+                    "id": "cal-01",
+                    "text": "Architectural Espionage"
+                },
+                {
+                    "id": "cal-02",
+                    "text": "Key to Her Heart"
+                },
+                {
+                    "id": "cal-03",
+                    "text": "Dam and Blast"
+                },
+                {
+                    "id": "cal-04",
+                    "text": "Cop Wheels"
+                },
+                {
+                    "id": "cal-05",
+                    "text": "Up, Up and Away!"
+                },
+                {
+                    "id": "cal-06",
+                    "text": "Tarjeta de Millie"
+                },
+                {
+                    "id": "cal-07",
+                    "text": "Breaking the Bank at Caligula's"
+                }
+            ]
+        },
+        {
+            "id": "ms",
+            "title": "Misiones secundarias",
+            "items": [
+                {
+                    "id": "ms-01",
+                    "text": "50 viajes como taxista"
+                },
+                {
+                    "id": "ms-02",
+                    "text": "Nivel 12 de paramédico completado"
+                },
+                {
+                    "id": "ms-03",
+                    "text": "Nivel 12 de vigilante completado"
+                },
+                {
+                    "id": "ms-04",
+                    "text": "Nivel 12 de bombero completado"
+                },
+                {
+                    "id": "ms-05",
+                    "text": "Nivel 10 de misiones de chulo completado"
+                },
+                {
+                    "id": "ms-06",
+                    "text": "Nivel 5 de aparcacoches completado"
+                },
+                {
+                    "id": "ms-07",
+                    "text": "Nivel 2 de misiones de carga completado"
+                },
+                {
+                    "id": "ms-08",
+                    "text": "Nivel 8 de misiones de camionero completado",
+                    "icon": "camionero"
+                },
+                {
+                    "id": "ms-09",
+                    "text": "Nivel 7 de misiones de la cantera completado",
+                    "icon": "cantera"
+                }
+            ]
+        },
+        {
+            "id": "rep",
+            "title": "Misiones de repartidor",
+            "items": [
+                {
+                    "id": "rep-01",
+                    "text": "Los Santos"
+                },
+                {
+                    "id": "rep-02",
+                    "text": "San Fierro"
+                },
+                {
+                    "id": "rep-03",
+                    "text": "Las Venturas"
+                }
+            ]
+        },
+        {
+            "id": "cmc",
+            "title": "Carreras del Monte Chiliad",
+            "items": [
+                {
+                    "id": "cmc-01",
+                    "text": "Scotch Bonnet Yellow"
+                },
+                {
+                    "id": "cmc-02",
+                    "text": "Birdseye Winder Yellow"
+                },
+                {
+                    "id": "cmc-03",
+                    "text": "Cobra Run"
+                }
+            ]
+        },
+        {
+            "id": "cls",
+            "title": "Carreras de Los Santos",
+            "icon": "carrera",
+            "items": [
+                {
+                    "id": "cls-01",
+                    "text": "Badlands A"
+                },
+                {
+                    "id": "cls-02",
+                    "text": "Badlands B"
+                },
+                {
+                    "id": "cls-03",
+                    "text": "Lowrider Race"
+                },
+                {
+                    "id": "cls-04",
+                    "text": "Little Loop"
+                },
+                {
+                    "id": "cls-05",
+                    "text": "Backroad Wanderer"
+                },
+                {
+                    "id": "cls-06",
+                    "text": "City Circuit"
+                },
+                {
+                    "id": "cls-07",
+                    "text": "Vinewood"
+                },
+                {
+                    "id": "cls-08",
+                    "text": "Freeway"
+                },
+                {
+                    "id": "cls-09",
+                    "text": "Into the Country"
+                }
+            ]
+        },
+        {
+            "id": "csf",
+            "title": "Carreras de San Fierro",
+            "icon": "carrera",
+            "items": [
+                {
+                    "id": "csf-01",
+                    "text": "Dirtbike Danger"
+                },
+                {
+                    "id": "csf-02",
+                    "text": "Bandito County"
+                },
+                {
+                    "id": "csf-03",
+                    "text": "GO-GO-Karting"
+                },
+                {
+                    "id": "csf-04",
+                    "text": "San Fierro Fastlane"
+                },
+                {
+                    "id": "csf-05",
+                    "text": "San Fierro Hills"
+                },
+                {
+                    "id": "csf-06",
+                    "text": "Country Endurance"
+                }
+            ]
+        },
+        {
+            "id": "clv",
+            "title": "Carreras de Las Venturas",
+            "icon": "carrera",
+            "items": [
+                {
+                    "id": "clv-01",
+                    "text": "SF to LV"
+                },
+                {
+                    "id": "clv-02",
+                    "text": "Dam Rider"
+                },
+                {
+                    "id": "clv-03",
+                    "text": "Desert Tricks"
+                },
+                {
+                    "id": "clv-04",
+                    "text": "LV Ringroad"
+                }
+            ]
+        },
+        {
+            "id": "ca",
+            "title": "Carreras aéreas",
+            "icon": "carrera",
+            "items": [
+                {
+                    "id": "ca-01",
+                    "text": "World War Acer"
+                },
+                {
+                    "id": "ca-02",
+                    "text": "Barnstorming"
+                },
+                {
+                    "id": "ca-03",
+                    "text": "Military Service"
+                },
+                {
+                    "id": "ca-04",
+                    "text": "Chopper Checkpoint"
+                },
+                {
+                    "id": "ca-05",
+                    "text": "Whirly Bird Waypoint"
+                },
+                {
+                    "id": "ca-06",
+                    "text": "Heli Heli"
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": "Coleccionables",
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": "100 grafitis"
+                },
+                {
+                    "id": "col-02",
+                    "text": "50 fotografías"
+                },
+                {
+                    "id": "col-03",
+                    "text": "50 herraduras"
+                },
+                {
+                    "id": "col-04",
+                    "text": "50 ostras"
+                }
+            ]
+        },
+        {
+            "id": "imp_1",
+            "title": "Pizarrón de importación (1)",
+            "items": [
+                {
+                    "id": "imp_1-01",
+                    "text": "Patriot"
+                },
+                {
+                    "id": "imp_1-02",
+                    "text": "Sanchez"
+                },
+                {
+                    "id": "imp_1-03",
+                    "text": "Stretch"
+                },
+                {
+                    "id": "imp_1-04",
+                    "text": "Feltzer"
+                },
+                {
+                    "id": "imp_1-05",
+                    "text": "Remington"
+                },
+                {
+                    "id": "imp_1-06",
+                    "text": "Buffalo"
+                },
+                {
+                    "id": "imp_1-07",
+                    "text": "Sentinel"
+                },
+                {
+                    "id": "imp_1-08",
+                    "text": "Infernus"
+                },
+                {
+                    "id": "imp_1-09",
+                    "text": "Camper"
+                },
+                {
+                    "id": "imp_1-10",
+                    "text": "Admiral"
+                }
+            ]
+        },
+        {
+            "id": "imp_2",
+            "title": "Pizarrón de importación (2)",
+            "items": [
+                {
+                    "id": "imp_2-01",
+                    "text": "Slamvan"
+                },
+                {
+                    "id": "imp_2-02",
+                    "text": "Blista Compact"
+                },
+                {
+                    "id": "imp_2-03",
+                    "text": "Stafford"
+                },
+                {
+                    "id": "imp_2-04",
+                    "text": "Sabre"
+                },
+                {
+                    "id": "imp_2-05",
+                    "text": "FCR-900"
+                },
+                {
+                    "id": "imp_2-06",
+                    "text": "Cheetah"
+                },
+                {
+                    "id": "imp_2-07",
+                    "text": "Rancher"
+                },
+                {
+                    "id": "imp_2-08",
+                    "text": "Stallion"
+                },
+                {
+                    "id": "imp_2-09",
+                    "text": "Tanker"
+                },
+                {
+                    "id": "imp_2-10",
+                    "text": "Comet"
+                }
+            ]
+        },
+        {
+            "id": "imp_3",
+            "title": "Pizarrón de importación (3)",
+            "items": [
+                {
+                    "id": "imp_3-01",
+                    "text": "Blade"
+                },
+                {
+                    "id": "imp_3-02",
+                    "text": "Freeway"
+                },
+                {
+                    "id": "imp_3-03",
+                    "text": "Mesa"
+                },
+                {
+                    "id": "imp_3-04",
+                    "text": "ZR-350"
+                },
+                {
+                    "id": "imp_3-05",
+                    "text": "Euros"
+                },
+                {
+                    "id": "imp_3-06",
+                    "text": "Banshee"
+                },
+                {
+                    "id": "imp_3-07",
+                    "text": "Super GT"
+                },
+                {
+                    "id": "imp_3-08",
+                    "text": "Journey"
+                },
+                {
+                    "id": "imp_3-09",
+                    "text": "Huntley"
+                },
+                {
+                    "id": "imp_3-10",
+                    "text": "BF Injection"
+                }
+            ]
+        },
+        {
+            "id": "est",
+            "title": "Estadios",
+            "icon": "estadio",
+            "items": [
+                {
+                    "id": "est-01",
+                    "text": "Hotring (Los Santos)"
+                },
+                {
+                    "id": "est-02",
+                    "text": "Bloodring (San Fierro)"
+                },
+                {
+                    "id": "est-03",
+                    "text": "Dirt Track (Las Venturas)"
+                },
+                {
+                    "id": "est-04",
+                    "text": "Kickstart (Las Venturas)"
+                }
+            ]
+        },
+        {
+            "id": "esc",
+            "title": "Escuelas de conducción",
+            "icon": "escuela",
+            "items": [
+                {
+                    "id": "esc-01",
+                    "text": "Autoescuela de coches"
+                },
+                {
+                    "id": "esc-02",
+                    "text": "Escuela de aviación"
+                },
+                {
+                    "id": "esc-03",
+                    "text": "Autoescuela de motos"
+                },
+                {
+                    "id": "esc-04",
+                    "text": "Escuela náutica"
+                }
+            ]
+        },
+        {
+            "id": "gym",
+            "title": "Estilos de pelea",
+            "icon": "gimnasio",
+            "items": [
+                {
+                    "id": "gym-01",
+                    "text": "Boxeo (Los Santos)"
+                },
+                {
+                    "id": "gym-02",
+                    "text": "Kung Fu (San Fierro)"
+                },
+                {
+                    "id": "gym-03",
+                    "text": "Kick Boxing (Las Venturas)"
+                }
+            ]
+        },
+        {
+            "id": "misc",
+            "title": "Miscelánea",
+            "items": [
+                {
+                    "id": "misc-01",
+                    "text": "Desafío BMX completado"
+                },
+                {
+                    "id": "misc-02",
+                    "text": "Desafío NRG-500 completado"
+                },
+                {
+                    "id": "misc-03",
+                    "text": "Desafío de Ammu-Nation completado"
+                },
+                {
+                    "id": "misc-04",
+                    "text": "Todas las propiedades compradas"
+                }
+            ]
+        }
+    ]
+}

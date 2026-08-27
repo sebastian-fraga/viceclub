@@ -1,0 +1,589 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": "Misiones principales",
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": "Prólogo"
+                },
+                {
+                    "id": "mp-02",
+                    "text": "Franklin y Lamar"
+                },
+                {
+                    "id": "mp-03",
+                    "text": "Embargo",
+                    "icon": "simeon"
+                },
+                {
+                    "id": "mp-04",
+                    "text": "Complicaciones",
+                    "icon": "simeon"
+                },
+                {
+                    "id": "mp-05",
+                    "text": "Chop",
+                    "icon": "franklin"
+                },
+                {
+                    "id": "mp-06",
+                    "text": "Stretch el largo",
+                    "icon": "franklin"
+                },
+                {
+                    "id": "mp-07",
+                    "text": "Padre/Hijo",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-08",
+                    "text": "Asesoramiento matrimonial",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-09",
+                    "text": "La niñita de papá",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-10",
+                    "text": "Solicitud de amistad",
+                    "icon": "lester"
+                },
+                {
+                    "id": "mp-11",
+                    "text": "Ojear la joyería",
+                    "icon": "lester"
+                },
+                {
+                    "id": "mp-12",
+                    "text": "El trabajo de la joyería",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-13",
+                    "text": "Sr. Philips",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-14",
+                    "text": "Ron, el nervioso",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-15",
+                    "text": "El reencuentro",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-16",
+                    "text": "Industrias Trevor Philips",
+                    "icon": "cheng"
+                },
+                {
+                    "id": "mp-17",
+                    "text": "Laberinto de cristal",
+                    "icon": "cheng"
+                },
+                {
+                    "id": "mp-18",
+                    "text": "Fama o drama",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-19",
+                    "text": "Muerto viviente",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-20",
+                    "text": "Tres son multitud",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-21",
+                    "text": "De libro",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-22",
+                    "text": "Asesinato en el hotel",
+                    "icon": "lester_f"
+                },
+                {
+                    "id": "mp-23",
+                    "text": "Safari por el barrio",
+                    "icon": "franklin"
+                },
+                {
+                    "id": "mp-24",
+                    "text": "¿Alguien dijo yoga?",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-25",
+                    "text": "Explorar el puerto",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-26",
+                    "text": "El golpe a Merryweather",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-27",
+                    "text": "Sr. Richards",
+                    "icon": "solomon"
+                },
+                {
+                    "id": "mp-28",
+                    "text": "El bloqueo",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-29",
+                    "text": "Me enfrenté a la ley...",
+                    "icon": "devin_m"
+                },
+                {
+                    "id": "mp-30",
+                    "text": "Cámara aérea",
+                    "icon": "devin_t"
+                },
+                {
+                    "id": "mp-31",
+                    "text": "Infiltrado",
+                    "icon": "devin_f"
+                },
+                {
+                    "id": "mp-32",
+                    "text": "Caída libre",
+                    "icon": "madrazo"
+                },
+                {
+                    "id": "mp-34",
+                    "text": "Leves turbulencias",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-35",
+                    "text": "Depredador",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-36",
+                    "text": "Descarrilado",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-37",
+                    "text": "Preparación del golpe de Paleto",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-38",
+                    "text": "El golpe de Paleto",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-39",
+                    "text": "Negocios turbios",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-40",
+                    "text": "Club de relax",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-41",
+                    "text": "Investigando el golpe",
+                    "icon": "trevor"
+                },
+                {
+                    "id": "mp-42",
+                    "text": "Planificación del golpe",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-43",
+                    "text": "Desenterrando el pasado",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-44",
+                    "text": "Pack Man",
+                    "icon": "devin_f"
+                },
+                {
+                    "id": "mp-45",
+                    "text": "Carne fresca",
+                    "icon": "franklin"
+                },
+                {
+                    "id": "mp-46",
+                    "text": "La balada de Rocco",
+                    "icon": "solomon"
+                },
+                {
+                    "id": "mp-47",
+                    "text": "Problemas legales",
+                    "icon": "solomon"
+                },
+                {
+                    "id": "mp-48",
+                    "text": "Cataclismo",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-49",
+                    "text": "Reuniendo a la familia",
+                    "icon": "michael"
+                },
+                {
+                    "id": "mp-50",
+                    "text": "Limpiando el FIB",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-51",
+                    "text": "Atando cabos",
+                    "icon": "fib"
+                },
+                {
+                    "id": "mp-52",
+                    "text": "Planes para el arquitecto",
+                    "icon": "lester_f"
+                },
+                {
+                    "id": "mp-53",
+                    "text": "Asalto al FIB",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-54",
+                    "text": "Lamar de problemas",
+                    "icon": "franklin"
+                },
+                {
+                    "id": "mp-55",
+                    "text": "El gran golpe",
+                    "icon": "golpe"
+                },
+                {
+                    "id": "mp-56",
+                    "texts": [
+                        {
+                            "text": "Opción sensata",
+                            "icon": "franklin"
+                        },
+                        {
+                            "text": "Ha llegado la hora",
+                            "icon": "franklin"
+                        },
+                        {
+                            "text": "La tercera vía",
+                            "icon": "lester_f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ma",
+            "title": "Misiones de asesinato",
+            "icon": "lester_f",
+            "items": [
+                {
+                    "id": "ma-01",
+                    "text": "El asesinato múltiple"
+                },
+                {
+                    "id": "ma-02",
+                    "text": "Asesinato de vicio"
+                },
+                {
+                    "id": "ma-03",
+                    "text": "El asesinato del bus"
+                },
+                {
+                    "id": "ma-04",
+                    "text": "El asesinato de la obra"
+                }
+            ]
+        },
+        {
+            "id": "eyl",
+            "title": "Extraños y locos",
+            "icon": "unknown",
+            "items": [
+                {
+                    "id": "eyl-01",
+                    "text": "Movimiento verde - Franklin",
+                    "icon": "barry"
+                },
+                {
+                    "id": "eyl-02",
+                    "text": "Movimiento verde - La recogida",
+                    "icon": "barry"
+                },
+                {
+                    "id": "eyl-03",
+                    "text": "Movimiento verde - Para el arrastre",
+                    "icon": "barry"
+                },
+                {
+                    "id": "eyl-04",
+                    "text": "Movimiento verde - La fumada",
+                    "icon": "barry"
+                },
+                {
+                    "id": "eyl-05",
+                    "text": "Paparazzi",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-06",
+                    "text": "Paparazzi - El video porno",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-07",
+                    "text": "Paparazzi - Socios",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-08",
+                    "text": "Paparazzi - Colapso",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-09",
+                    "text": "Paparazzi - Alteza",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-10",
+                    "text": "Paparazzi - La cruda realidad",
+                    "icon": "beverly"
+                },
+                {
+                    "id": "eyl-11",
+                    "text": "Gestión de riesgos",
+                    "icon": "dom"
+                },
+                {
+                    "id": "eyl-12",
+                    "text": "Riesgo de liquidez",
+                    "icon": "dom"
+                },
+                {
+                    "id": "eyl-13",
+                    "text": "Riesgo dirigido",
+                    "icon": "dom"
+                },
+                {
+                    "id": "eyl-14",
+                    "text": "Riesgo no calculado",
+                    "icon": "dom"
+                },
+                {
+                    "id": "eyl-15",
+                    "text": "Cambios",
+                    "icon": "unknown"
+                },
+                {
+                    "id": "eyl-16",
+                    "text": "Ejercitando demonios - Franklin",
+                    "icon": "maryann"
+                },
+                {
+                    "id": "eyl-17",
+                    "text": "Pasado de rosca",
+                    "icon": "omega"
+                },
+                {
+                    "id": "eyl-18",
+                    "text": "La última frontera",
+                    "icon": "omega"
+                },
+                {
+                    "id": "eyl-19",
+                    "text": "Una joven estrella en Vinewood",
+                    "icon": "unknown"
+                },
+                {
+                    "id": "eyl-20",
+                    "text": "Pedir favores",
+                    "icon": "tonya"
+                },
+                {
+                    "id": "eyl-21",
+                    "text": "Otro favor",
+                    "icon": "tonya"
+                },
+                {
+                    "id": "eyl-22",
+                    "text": "Otro favor más",
+                    "icon": "tonya"
+                },
+                {
+                    "id": "eyl-23",
+                    "text": "Y dale con los favores",
+                    "icon": "tonya"
+                },
+                {
+                    "id": "eyl-24",
+                    "text": "Un último favor",
+                    "icon": "tonya"
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": "Coleccionables",
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": "50 piezas de la nave espacial"
+                },
+                {
+                    "id": "col-02",
+                    "text": "50 fragmentos de la carta"
+                },
+                {
+                    "id": "col-03",
+                    "text": "25 saltos acrobáticos"
+                },
+                {
+                    "id": "col-04",
+                    "text": "25 vuelos bajo el puente"
+                },
+                {
+                    "id": "col-05",
+                    "text": "8 vuelos a cuchillo"
+                }
+            ]
+        },
+        {
+            "id": "ap",
+            "title": "Aficiones y pasatiempos",
+            "items": [
+                {
+                    "id": "ap-01",
+                    "text": "4 carreras marítimas completadas",
+                    "icon": "carrera_maritima"
+                },
+                {
+                    "id": "ap-02",
+                    "text": "6 carreras todoterreno completadas",
+                    "icon": "carrera_todoterreno"
+                },
+                {
+                    "id": "ap-03",
+                    "text": "5 carreras urbanas completadas",
+                    "icon": "carrera_urbana"
+                },
+                {
+                    "id": "ap-04",
+                    "text": "Desafíos de la galería de tiro completados",
+                    "icon": "galeria"
+                },
+                {
+                    "id": "ap-05",
+                    "text": "Escuela de vuelo completada",
+                    "icon": "escuela"
+                },
+                {
+                    "id": "ap-06",
+                    "text": "Partida de dardos ganada",
+                    "icon": "dardos"
+                },
+                {
+                    "id": "ap-07",
+                    "text": "Juego de tenis ganado",
+                    "icon": "tenis"
+                },
+                {
+                    "id": "ap-08",
+                    "text": "Partida de golf terminada en par o bajo par",
+                    "icon": "golf"
+                },
+                {
+                    "id": "ap-09",
+                    "text": "3 triatlones completados",
+                    "icon": "triatlon"
+                },
+                {
+                    "id": "ap-10",
+                    "text": "13 saltos en paracaídas completados",
+                    "icon": "paracaidas"
+                },
+                {
+                    "id": "ap-11",
+                    "text": "Paseo con Chop realizado",
+                    "icon": "chop"
+                },
+                {
+                    "id": "ap-12",
+                    "text": "Cine visitado",
+                    "icon": "cine"
+                }
+            ]
+        },
+        {
+            "id": "act",
+            "title": "Actividades con amigos",
+            "items": [
+                {
+                    "id": "act-01",
+                    "text": "Bar"
+                },
+                {
+                    "id": "act-02",
+                    "text": "Club de striptease"
+                },
+                {
+                    "id": "act-03",
+                    "text": "Cine"
+                },
+                {
+                    "id": "act-04",
+                    "text": "Dardos"
+                }
+            ]
+        },
+        {
+            "id": "misc",
+            "title": "Miscelánea",
+            "items": [
+                {
+                    "id": "misc-01",
+                    "text": "5 propiedades compradas"
+                },
+                {
+                    "id": "misc-02",
+                    "text": "Vehículo comprado por internet"
+                },
+                {
+                    "id": "misc-03",
+                    "text": "Cita sexual conseguida"
+                },
+                {
+                    "id": "misc-04",
+                    "text": "Servicio recibido de una prostituta"
+                },
+                {
+                    "id": "misc-05",
+                    "text": "Baile privado en el club de striptease"
+                },
+                {
+                    "id": "misc-06",
+                    "text": "Tienda robada"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,625 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": "Misiones principales",
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": "Home Sweet Home"
+                },
+                {
+                    "id": "mp-02",
+                    "text": "Slacker",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-03",
+                    "text": "Dealing Revenge",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-04",
+                    "text": "Snuff",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-05",
+                    "text": "Smash and Grab",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-06",
+                    "text": "Hot Wheels",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-07",
+                    "text": "Bone Voyeur!",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-08",
+                    "text": "Don in 60 Seconds",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-09",
+                    "text": "A Volatile Situation",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-10",
+                    "text": "Blow Up 'Dolls'",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-11",
+                    "text": "Snappy Dresser",
+                    "icon": "ma"
+                },
+                {
+                    "id": "mp-12",
+                    "text": "Big Rumble in Little China",
+                    "icon": "ma"
+                },
+                {
+                    "id": "mp-13",
+                    "text": "Grease Sucho",
+                    "icon": "ma"
+                },
+                {
+                    "id": "mp-14",
+                    "text": "Dead Meat",
+                    "icon": "ma"
+                },
+                {
+                    "id": "mp-15",
+                    "text": "No Son of Mine",
+                    "icon": "ma"
+                },
+                {
+                    "id": "mp-16",
+                    "text": "The Offer",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-17",
+                    "text": "Ho Selecta!",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-18",
+                    "text": "Frighteners",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-19",
+                    "text": "Rollercoaster Ride",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-20",
+                    "text": "Shop 'til You Strop",
+                    "icon": "maria"
+                },
+                {
+                    "id": "mp-21",
+                    "text": "Taken for a Ride",
+                    "icon": "maria"
+                },
+                {
+                    "id": "mp-22",
+                    "text": "Booby Prize",
+                    "icon": "maria"
+                },
+                {
+                    "id": "mp-23",
+                    "text": "Biker Heat",
+                    "icon": "maria"
+                },
+                {
+                    "id": "mp-24",
+                    "text": "Overdose of Trouble",
+                    "icon": "maria"
+                },
+                {
+                    "id": "mp-25",
+                    "text": "Contra-Banned",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-26",
+                    "text": "Salvatore's Salvation",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-27",
+                    "text": "The Guns of Leone",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-28",
+                    "text": "Calm Before the Storm",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-29",
+                    "text": "The Made Man",
+                    "icon": "jd"
+                },
+                {
+                    "id": "mp-30",
+                    "text": "The Portland Chainsaw Masquerade",
+                    "icon": "vincenzo"
+                },
+                {
+                    "id": "mp-31",
+                    "text": "Sindacco Sabotage",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-32",
+                    "text": "The Trouble With Triads",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-34",
+                    "text": "Driving Mr. Leone",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-35",
+                    "text": "A Walk in The Park",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-36",
+                    "text": "Making Toni",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-37",
+                    "text": "The Morgue Party Candidate",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-38",
+                    "text": "Steering the Vote",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-39",
+                    "text": "Cam-Pain",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-40",
+                    "text": "Friggin' the Riggin'",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-41",
+                    "text": "Love & Bullets",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-42",
+                    "text": "Counterfeit Count",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-43",
+                    "text": "L.C. Confidential",
+                    "icon": "ned"
+                },
+                {
+                    "id": "mp-44",
+                    "text": "The Passion of the Heist",
+                    "icon": "ned"
+                },
+                {
+                    "id": "mp-45",
+                    "text": "Karmageddon",
+                    "icon": "ned"
+                },
+                {
+                    "id": "mp-46",
+                    "text": "False Idols",
+                    "icon": "ned"
+                },
+                {
+                    "id": "mp-47",
+                    "text": "Caught in the Act",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-48",
+                    "text": "Search and Rescue",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-49",
+                    "text": "Taking the Peace",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-50",
+                    "text": "Shoot the Messenger",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-51",
+                    "text": "Sayonara Sindaccos",
+                    "icon": "leon"
+                },
+                {
+                    "id": "mp-52",
+                    "text": "The Whole 9 Yardies",
+                    "icon": "leon"
+                },
+                {
+                    "id": "mp-53",
+                    "text": "Crazy '69'",
+                    "icon": "leon"
+                },
+                {
+                    "id": "mp-54",
+                    "text": "Night of the Livid Dreads",
+                    "icon": "leon"
+                },
+                {
+                    "id": "mp-55",
+                    "text": "Munitions Dump",
+                    "icon": "leon"
+                },
+                {
+                    "id": "mp-56",
+                    "text": "Love on the Rocks",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-57",
+                    "text": "Rough Justice",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-58",
+                    "text": "Dead Reckoning",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-59",
+                    "text": "Shogun Showdown",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-60",
+                    "text": "Panlantic Land Grab",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-61",
+                    "text": "Stop the Press",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-62",
+                    "text": "Morgue Party Resurrection",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-63",
+                    "text": "More Deadly Than the Male",
+                    "icon": "toshiko"
+                },
+                {
+                    "id": "mp-64",
+                    "text": "Cash Clash",
+                    "icon": "toshiko"
+                },
+                {
+                    "id": "mp-65",
+                    "text": "A Date With Death",
+                    "icon": "toshiko"
+                },
+                {
+                    "id": "mp-66",
+                    "text": "Cash in Kazuki's Chips",
+                    "icon": "toshiko"
+                },
+                {
+                    "id": "mp-67",
+                    "text": "No Money, Mo' Problems",
+                    "icon": "8ball"
+                },
+                {
+                    "id": "mp-68",
+                    "text": "Bringing the House Down",
+                    "icon": "8ball"
+                },
+                {
+                    "id": "mp-69",
+                    "text": "Love on the Run",
+                    "icon": "donald"
+                },
+                {
+                    "id": "mp-70",
+                    "text": "The Shoreside Redemption",
+                    "icon": "salvatore"
+                },
+                {
+                    "id": "mp-71",
+                    "text": "The Sicilian Gambit",
+                    "icon": "salvatore"
+                }
+            ]
+        },
+        {
+            "id": "ms",
+            "title": "Misiones secundarias",
+            "items": [
+                {
+                    "id": "ms-01",
+                    "text": "100 viajes como taxista"
+                },
+                {
+                    "id": "ms-02",
+                    "text": "Nivel 12 de paramédico completado"
+                },
+                {
+                    "id": "ms-03",
+                    "text": "Nivel 12 de vigilante completado"
+                },
+                {
+                    "id": "ms-04",
+                    "text": "Nivel 12 de bombero completado"
+                },
+                {
+                    "id": "ms-05",
+                    "text": "Nivel 10 de repartidor de Noodle Punk completado"
+                },
+                {
+                    "id": "ms-06",
+                    "text": "Nivel 10 de repartidor de pizzas completado"
+                },
+                {
+                    "id": "ms-07",
+                    "text": "Nivel 12 de guía turístico completado"
+                },
+                {
+                    "id": "ms-08",
+                    "text": "Nivel 6 de vendedor de coches completado"
+                },
+                {
+                    "id": "ms-09",
+                    "text": "40 motos vendidas como vendedor de motos"
+                },
+                {
+                    "id": "ms-10",
+                    "text": "Karmageddon"
+                },
+                {
+                    "id": "ms-11",
+                    "text": "5 oleadas de Slash TV completadas"
+                }
+            ]
+        },
+        {
+            "id": "mb",
+            "title": "Misiones de basurero",
+            "items": [
+                {
+                    "id": "mb-01",
+                    "text": "Portland"
+                },
+                {
+                    "id": "mb-02",
+                    "text": "Staunton Island"
+                },
+                {
+                    "id": "mb-03",
+                    "text": "Shoreside Vale"
+                }
+            ]
+        },
+        {
+            "id": "mav",
+            "title": "Misiones de Ángeles Vengadores",
+            "items": [
+                {
+                    "id": "mav-01",
+                    "text": "15 niveles (Portland)"
+                },
+                {
+                    "id": "mav-02",
+                    "text": "15 niveles (Staunton Island)"
+                },
+                {
+                    "id": "mav-03",
+                    "text": "15 niveles (Shoreside Vale)"
+                }
+            ]
+        },
+        {
+            "id": "mc",
+            "title": "Misiones de copiloto",
+            "items": [
+                {
+                    "id": "mc-01",
+                    "text": "9MM Mayhem"
+                },
+                {
+                    "id": "mc-02",
+                    "text": "Scooter Shooter"
+                },
+                {
+                    "id": "mc-03",
+                    "text": "AWOL Angel"
+                }
+            ]
+        },
+        {
+            "id": "rc",
+            "title": "Misiones de RC",
+            "items": [
+                {
+                    "id": "rc-01",
+                    "text": "RC Triad Take-down"
+                },
+                {
+                    "id": "rc-02",
+                    "text": "Thrashin' RC"
+                },
+                {
+                    "id": "rc-03",
+                    "text": "Ragin' RC"
+                },
+                {
+                    "id": "rc-04",
+                    "text": "Chasin' RC"
+                }
+            ]
+        },
+        {
+            "id": "pc",
+            "title": "Misiones de puntos de control",
+            "items": [
+                {
+                    "id": "pc-01",
+                    "text": "Bumps & Grinds (10 trayectos)"
+                },
+                {
+                    "id": "pc-02",
+                    "text": "Wong side of the Tracks"
+                },
+                {
+                    "id": "pc-03",
+                    "text": "Go Go Faggio"
+                },
+                {
+                    "id": "pc-04",
+                    "text": "Scrapyard Challenge (+20 puntos)"
+                }
+            ]
+        },
+        {
+            "id": "car",
+            "title": "Carreras",
+            "items": [
+                {
+                    "id": "car-01",
+                    "text": "Low-Rider Rumble"
+                },
+                {
+                    "id": "car-02",
+                    "text": "Deimos Dash"
+                },
+                {
+                    "id": "car-03",
+                    "text": "Wi-Cheetah Run"
+                },
+                {
+                    "id": "car-04",
+                    "text": "Red Light Racing"
+                },
+                {
+                    "id": "car-05",
+                    "text": "Gangsta GP"
+                },
+                {
+                    "id": "car-06",
+                    "text": "Torrington TT"
+                }
+            ]
+        },
+        {
+            "id": "cga",
+            "title": "Car-azy Car Give Away",
+            "items": [
+                {
+                    "id": "cga-01",
+                    "text": "Hearse"
+                },
+                {
+                    "id": "cga-02",
+                    "text": "Faggio"
+                },
+                {
+                    "id": "cga-03",
+                    "text": "Freeway"
+                },
+                {
+                    "id": "cga-04",
+                    "text": "Phobos VT"
+                },
+                {
+                    "id": "cga-05",
+                    "text": "Infernus"
+                },
+                {
+                    "id": "cga-06",
+                    "text": "Sentinel"
+                },
+                {
+                    "id": "cga-07",
+                    "text": "PCJ-600"
+                },
+                {
+                    "id": "cga-08",
+                    "text": "Deimos SP"
+                },
+                {
+                    "id": "cga-09",
+                    "text": "Manana"
+                },
+                {
+                    "id": "cga-10",
+                    "text": "Hellenbach GT"
+                },
+                {
+                    "id": "cga-11",
+                    "text": "V8 Ghost"
+                },
+                {
+                    "id": "cga-12",
+                    "text": "Thunder-Rodd"
+                },
+                {
+                    "id": "cga-13",
+                    "text": "Banshee"
+                },
+                {
+                    "id": "cga-14",
+                    "text": "Landstalker"
+                },
+                {
+                    "id": "cga-15",
+                    "text": "BF Injection"
+                },
+                {
+                    "id": "cga-16",
+                    "text": "Patriot"
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": "Coleccionables",
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": "100 objetos ocultos"
+                },
+                {
+                    "id": "col-02",
+                    "text": "26 saltos únicos"
+                },
+                {
+                    "id": "col-03",
+                    "text": "20 masacres"
+                }
+            ]
+        }
+    ]
+}

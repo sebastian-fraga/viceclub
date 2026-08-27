@@ -1,0 +1,654 @@
+{
+    "sections": [
+        {
+            "id": "mp",
+            "title": "Misiones principales",
+            "items": [
+                {
+                    "id": "mp-01",
+                    "text": "Al principio..."
+                },
+                {
+                    "id": "mp-02",
+                    "text": "Un viejo amigo"
+                },
+                {
+                    "id": "mp-03",
+                    "text": "La fiesta",
+                    "icon": "rosenberg"
+                },
+                {
+                    "id": "mp-04",
+                    "text": "Pelea en el callejón trasero",
+                    "icon": "rosenberg"
+                },
+                {
+                    "id": "mp-05",
+                    "text": "Furia en el jurado",
+                    "icon": "rosenberg"
+                },
+                {
+                    "id": "mp-06",
+                    "text": "Disturbios",
+                    "icon": "rosenberg"
+                },
+                {
+                    "id": "mp-07",
+                    "text": "Hierro número cuatro",
+                    "icon": "avery"
+                },
+                {
+                    "id": "mp-08",
+                    "text": "Demoledor",
+                    "icon": "avery"
+                },
+                {
+                    "id": "mp-09",
+                    "text": "Cerdo traidor",
+                    "icon": "cortez"
+                },
+                {
+                    "id": "mp-10",
+                    "text": "Tiros en el centro comercial",
+                    "icon": "cortez"
+                },
+                {
+                    "id": "mp-11",
+                    "text": "Ángeles guardianes",
+                    "icon": "cortez"
+                },
+                {
+                    "id": "mp-12",
+                    "text": "La caza",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-13",
+                    "text": "Phnom Penh '86",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-14",
+                    "text": "El barco más rápido",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-15",
+                    "text": "Oferta y demanda",
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-16",
+                    "text": "¡Señor, sí, señor!",
+                    "icon": "cortez"
+                },
+                {
+                    "id": "mp-17",
+                    "text": "Dos leves impactos",
+                    "icon": "avery"
+                },
+                {
+                    "id": "mp-18",
+                    "text": "El corredor de la muerte",
+                    "icon": "kent"
+                },
+                {
+                    "id": "mp-19",
+                    "text": "¡Todos con las manos arriba!",
+                    "icon": "cortez"
+                },
+                {
+                    "id": "mp-20",
+                    "text": "Borrar",
+                    "icon": "vercetti"
+                },
+                {
+                    "id": "mp-21",
+                    "text": "Extorsión",
+                    "icon": "vercetti"
+                },
+                {
+                    "id": "mp-22",
+                    "text": "Pelea en el bar",
+                    "icon": "vercetti"
+                },
+                {
+                    "id": "mp-23",
+                    "text": "Tierra de polis",
+                    "icon": "vercetti"
+                },
+                {
+                    "id": "mp-24",
+                    "text": "El desafío del barco trucado",
+                    "icon": "cuba"
+                },
+                {
+                    "id": "mp-25",
+                    "text": "Carne de cañón",
+                    "icon": "cuba"
+                },
+                {
+                    "id": "mp-26",
+                    "text": "Encuentro naval",
+                    "icon": "cuba"
+                },
+                {
+                    "id": "mp-27",
+                    "text": "Poción mágica",
+                    "icon": "haiti"
+                },
+                {
+                    "id": "mp-28",
+                    "text": "¡Bombas fuera!",
+                    "icon": "haiti"
+                },
+                {
+                    "id": "mp-29",
+                    "text": "Juego sucio",
+                    "icon": "haiti"
+                },
+                {
+                    "id": "mp-30",
+                    "text": "Vudú troyano",
+                    "icon": "cuba"
+                },
+                {
+                    "id": "mp-31",
+                    "text": "Love Juice",
+                    "icon": "fist"
+                },
+                {
+                    "id": "mp-32",
+                    "text": "Asesino psicópata",
+                    "icon": "fist"
+                },
+                {
+                    "id": "mp-33",
+                    "text": "Moto con llantas de aleación",
+                    "icon": "mitch"
+                },
+                {
+                    "id": "mp-34",
+                    "text": "Incitando al macho",
+                    "icon": "mitch"
+                },
+                {
+                    "id": "mp-35",
+                    "text": "Moto robada",
+                    "icon": "mitch"
+                },
+                {
+                    "id": "mp-36",
+                    "text": "Gira publicitaria",
+                    "icon": "fist"
+                },
+                {
+                    "id": "mp-37",
+                    "text": "Traficante de armas",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-38",
+                    "text": "Boomshine Saigon",
+                    "icon": "phil"
+                },
+                {
+                    "id": "mp-39",
+                    "text": "Descubriendo el pastel",
+                    "icon": "imprenta"
+                },
+                {
+                    "id": "mp-40",
+                    "text": "Ataca al mensajero",
+                    "icon": "imprenta"
+                },
+                {
+                    "id": "mp-41",
+                    "text": "Liquida al cobrador",
+                    "icon": "imprenta"
+                },
+                {
+                    "id": "mp-42",
+                    "text": "Mantén cerca a tus amigos",
+                    "icon": "vercetti"
+                }
+            ]
+        },
+        {
+            "id": "ast",
+            "title": "Misiones del astillero",
+            "icon": "astillero",
+            "items": [
+                {
+                    "id": "ast-01",
+                    "text": "El astillero"
+                },
+                {
+                    "id": "ast-02",
+                    "text": "Checkpoint Charlie"
+                }
+            ]
+        },
+        {
+            "id": "chp",
+            "title": "Misiones de Cherry Popper",
+            "icon": "cherry",
+            "items": [
+                {
+                    "id": "chp-01",
+                    "text": "Helados Cherry Popper"
+                },
+                {
+                    "id": "chp-02",
+                    "text": "50 entregas seguidas realizadas"
+                }
+            ]
+        },
+        {
+            "id": "ig",
+            "title": "Misiones de Interglobal Films",
+            "icon": "estudio",
+            "items": [
+                {
+                    "id": "ig-01",
+                    "text": "Campaña de reclutamiento"
+                },
+                {
+                    "id": "ig-02",
+                    "text": "Consolador Dodo"
+                },
+                {
+                    "id": "ig-03",
+                    "text": "La foto policial de Marta"
+                },
+                {
+                    "id": "ig-04",
+                    "text": "Punto G"
+                }
+            ]
+        },
+        {
+            "id": "kc",
+            "title": "Misiones de Kaufman Cabs",
+            "icon": "taxi",
+            "items": [
+                {
+                    "id": "kc-01",
+                    "text": "Taxis Kaufman"
+                },
+                {
+                    "id": "kc-02",
+                    "text": "V.I.P."
+                },
+                {
+                    "id": "kc-03",
+                    "text": "Rivalidad amistosa"
+                },
+                {
+                    "id": "kc-04",
+                    "text": "Taxigedón"
+                }
+            ]
+        },
+        {
+            "id": "cm",
+            "title": "Misiones del Club Malibú",
+            "icon": "malibu",
+            "items": [
+                {
+                    "id": "cm-01",
+                    "text": "¿Sin escapatoria?"
+                },
+                {
+                    "id": "cm-02",
+                    "text": "El tirador"
+                },
+                {
+                    "id": "cm-03",
+                    "text": "El conductor"
+                },
+                {
+                    "id": "cm-04",
+                    "text": "El atraco"
+                }
+            ]
+        },
+        {
+            "id": "sa",
+            "title": "Sunshine Autos",
+            "icon": "sunshine",
+            "items": [
+                {
+                    "id": "sa-01",
+                    "text": "Coches Sunshine"
+                }
+            ]
+        },
+        {
+            "id": "pp",
+            "title": "Club Pole Position",
+            "icon": "pole",
+            "items": [
+                {
+                    "id": "pp-01",
+                    "text": "$300 gastados en un baile privado"
+                }
+            ]
+        },
+        {
+            "id": "ms",
+            "title": "Misiones secundarias",
+            "items": [
+                {
+                    "id": "ms-01",
+                    "text": "100 viajes como taxista"
+                },
+                {
+                    "id": "ms-02",
+                    "text": "Nivel 12 de paramédico completado"
+                },
+                {
+                    "id": "ms-03",
+                    "text": "Nivel 12 de vigilante completado"
+                },
+                {
+                    "id": "ms-04",
+                    "text": "Nivel 12 de bombero completado"
+                },
+                {
+                    "id": "ms-05",
+                    "text": "Nivel 10 de repartidor de pizzas completado"
+                }
+            ]
+        },
+        {
+            "id": "mt",
+            "title": "Misiones telefónicas",
+            "icon": "telefono",
+            "items": [
+                {
+                    "id": "mt-01",
+                    "text": "Muerte en la carretera"
+                },
+                {
+                    "id": "mt-02",
+                    "text": "Elimina a la esposa"
+                },
+                {
+                    "id": "mt-03",
+                    "text": "Autocidio"
+                },
+                {
+                    "id": "mt-04",
+                    "text": "Comprobar el registro"
+                },
+                {
+                    "id": "mt-05",
+                    "text": "Cabos sueltos"
+                }
+            ]
+        },
+        {
+            "id": "rc",
+            "title": "Misiones RC",
+            "items": [
+                {
+                    "id": "rc-01",
+                    "text": "Carreras Bandit RC"
+                },
+                {
+                    "id": "rc-02",
+                    "text": "Recogidas del Helicóptero RC"
+                },
+                {
+                    "id": "rc-03",
+                    "text": "Carrera Barón RC"
+                }
+            ]
+        },
+        {
+            "id": "pc",
+            "title": "Misiones de puntos de control",
+            "items": [
+                {
+                    "id": "pc-01",
+                    "text": "Conocircuito"
+                },
+                {
+                    "id": "pc-02",
+                    "text": "Prueba PCJ"
+                },
+                {
+                    "id": "pc-03",
+                    "text": "Probar pista"
+                },
+                {
+                    "id": "pc-04",
+                    "text": "Prueba por tierra"
+                }
+            ]
+        },
+        {
+            "id": "est",
+            "title": "Estadio",
+            "items": [
+                {
+                    "id": "est-01",
+                    "text": "Bloodring"
+                },
+                {
+                    "id": "est-02",
+                    "text": "Dirtring"
+                },
+                {
+                    "id": "est-03",
+                    "text": "Hotring"
+                }
+            ]
+        },
+        {
+            "id": "csa",
+            "title": "Carreras de Sunshine Autos",
+            "items": [
+                {
+                    "id": "csa-01",
+                    "text": "Velocidad terminal"
+                },
+                {
+                    "id": "csa-02",
+                    "text": "Ocean Drive"
+                },
+                {
+                    "id": "csa-03",
+                    "text": "Carrera por el borde"
+                },
+                {
+                    "id": "csa-04",
+                    "text": "Capital Cruise"
+                },
+                {
+                    "id": "csa-05",
+                    "text": "¡Tour!"
+                },
+                {
+                    "id": "csa-06",
+                    "text": "Aguante en V.C."
+                }
+            ]
+        },
+        {
+            "id": "ch",
+            "title": "Control de helicóptero",
+            "items": [
+                {
+                    "id": "ch-01",
+                    "text": "Ocean Beach"
+                },
+                {
+                    "id": "ch-02",
+                    "text": "Vice Point"
+                },
+                {
+                    "id": "ch-03",
+                    "text": "Little Haiti"
+                },
+                {
+                    "id": "ch-04",
+                    "text": "Downtown"
+                }
+            ]
+        },
+        {
+            "id": "col",
+            "title": "Coleccionables",
+            "items": [
+                {
+                    "id": "col-01",
+                    "text": "100 paquetes ocultos"
+                },
+                {
+                    "id": "col-02",
+                    "text": "36 saltos únicos"
+                },
+                {
+                    "id": "col-03",
+                    "text": "35 masacres"
+                }
+            ]
+        },
+        {
+            "id": "gi_1",
+            "title": "Garaje de importación (1)",
+            "items": [
+                {
+                    "id": "g1_1-01",
+                    "text": "Landstalker"
+                },
+                {
+                    "id": "g1_1-02",
+                    "text": "Idaho"
+                },
+                {
+                    "id": "g1_1-03",
+                    "text": "Esperanto"
+                },
+                {
+                    "id": "g1_1-04",
+                    "text": "Stallion"
+                },
+                {
+                    "id": "g1_1-05",
+                    "text": "Rancher"
+                },
+                {
+                    "id": "g1_1-06",
+                    "text": "Blista Compact"
+                }
+            ]
+        },
+        {
+            "id": "gi_2",
+            "title": "Garaje de importación (2)",
+            "items": [
+                {
+                    "id": "gi_2-01",
+                    "text": "Saber"
+                },
+                {
+                    "id": "gi_2-02",
+                    "text": "Virgo"
+                },
+                {
+                    "id": "gi_2-03",
+                    "text": "Limusina"
+                },
+                {
+                    "id": "gi_2-04",
+                    "text": "Admiral"
+                },
+                {
+                    "id": "gi_2-05",
+                    "text": "Sentinel"
+                },
+                {
+                    "id": "gi_2-06",
+                    "text": "Washington"
+                }
+            ]
+        },
+        {
+            "id": "gi_3",
+            "title": "Garaje de importación (3)",
+            "items": [
+                {
+                    "id": "gi_3-01",
+                    "text": "Cheetah"
+                },
+                {
+                    "id": "gi_3-02",
+                    "text": "Banshee"
+                },
+                {
+                    "id": "gi_3-03",
+                    "text": "Stinger"
+                },
+                {
+                    "id": "gi_3-04",
+                    "text": "Infernus"
+                },
+                {
+                    "id": "gi_3-05",
+                    "text": "Phoenix"
+                },
+                {
+                    "id": "gi_3-06",
+                    "text": "Comet"
+                }
+            ]
+        },
+        {
+            "id": "gi_4",
+            "title": "Garaje de importación (4)",
+            "items": [
+                {
+                    "id": "gi_4-01",
+                    "text": "Mr. Whoopee"
+                },
+                {
+                    "id": "gi_4-02",
+                    "text": "Pizzaboy"
+                },
+                {
+                    "id": "gi_4-03",
+                    "text": "Caddy"
+                },
+                {
+                    "id": "gi_4-04",
+                    "text": "Mozo de equipaje"
+                },
+                {
+                    "id": "gi_4-05",
+                    "text": "Cuban Hermes"
+                },
+                {
+                    "id": "gi_4-06",
+                    "text": "Voodoo"
+                }
+            ]
+        },
+        {
+            "id": "misc",
+            "title": "Miscelánea",
+            "items": [
+                {
+                    "id": "misc-01",
+                    "text": "15 tiendas robadas"
+                },
+                {
+                    "id": "misc-02",
+                    "text": "+45 puntos en el campo de tiro con rifle"
+                }
+            ]
+        }
+    ]
+}
