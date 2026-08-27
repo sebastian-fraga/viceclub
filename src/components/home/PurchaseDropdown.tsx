@@ -196,6 +196,7 @@ export default function PurchaseDropdown({
                     <AnimatePresence>
                         {isOpen && (
                             <motion.div
+                            layout
                                 initial={{
                                     opacity: 0,
                                     y: -6,
@@ -220,7 +221,7 @@ export default function PurchaseDropdown({
                                     top: dropdownPosition.top,
                                     left: dropdownPosition.left,
                                 }}
-                                className="z-50 max-w-120 rounded-2xl bg-black pt-4 max-mobile:max-w-[calc(100vw-2rem)] max-mobile:pt-3"
+                                className="z-50 max-w-80 w-full rounded-2xl bg-zinc-950 border border-black/40 pt-4 max-mobile:max-w-[calc(100vw-2rem)] max-mobile:pt-3"
                                 ref={dropdownContentRef}
                             >
                                 <div
@@ -263,7 +264,7 @@ export default function PurchaseDropdown({
                                     })}
                                 </div>
 
-                                <AnimatePresence mode="wait">
+                                <AnimatePresence mode="popLayout">
                                     <motion.div
                                         key={selectedPlatform}
                                         initial={{ opacity: 0, scale: 0.97 }}
