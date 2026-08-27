@@ -1,99 +1,55 @@
 ---
+import { ChecklistContainer } from "@/components/checklist/ChecklistContainer";
+import type { GameId } from "@/config/games";
+import type { ChecklistData } from "@/types/checklist";
+import { games } from "../../data/games";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const game = Astro.params.game as GameId;
+const gameData = games[game as keyof typeof games];
+
 export function getStaticPaths() {
-    return [
-        { params: { game: "III" } },
-        { params: { game: "VC" } },
-        { params: { game: "SA" } },
-        { params: { game: "LCS" } },
-        { params: { game: "VCS" } },
-        { params: { game: "IV" } },
-        { params: { game: "V" } },
-    ];
+    const checklistModules = import.meta.glob("../../data/checklists/*.json", {
+        eager: true,
+    });
+
+    return Object.entries(games)
+        .filter(([game]) =>
+            Object.keys(checklistModules).some((path) =>
+                path.endsWith(`/checklists/${game}.json`),
+            ),
+        )
+        .map(([game, gameData]) => ({
+            params: { game },
+            props: { gameData },
+        }));
 }
 
-const { game } = Astro.params;
+const checklistModules = import.meta.glob("../../data/checklists/*.json", {
+    eager: true,
+});
 
-const metadata = {
-    III: {
-        title: "GTA III Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA 3. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto III.",
-        bodyClass: "gta-3",
-        heading: "Lista para el 100% de Grand Theft Auto III",
-    },
-    VC: {
-        title: "GTA VC Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA: Vice City. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City.",
-        bodyClass: "gta-vc",
-        heading: "Lista para el 100% de Grand Theft Auto: Vice City",
-    },
-    SA: {
-        title: "GTA SA Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA: San Andreas. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: San Andreas.",
-        bodyClass: "gta-sa",
-        heading: "Lista para el 100% de Grand Theft Auto: San Andreas",
-    },
-    LCS: {
-        title: "GTA LCS Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA: Liberty City Stories. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Liberty City Stories.",
-        bodyClass: "gta-lcs",
-        heading: "Lista para el 100% de Grand Theft Auto: Liberty City Stories",
-    },
-    VCS: {
-        title: "GTA VCS Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA: Vice City Stories. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto: Vice City Stories.",
-        bodyClass: "gta-vcs",
-        heading: "Lista para el 100% de Grand Theft Auto: Vice City Stories",
-    },
-    IV: {
-        title: "GTA IV Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA 4. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto IV.",
-        bodyClass: "gta-4",
-        heading: "Lista para el 100% de Grand Theft Auto IV",
-    },
-    V: {
-        title: "GTA V Checklist para el 100% | Vice Club",
-        description:
-            "Checklist completo para lograr el 100% en GTA 5. Seguimiento de misiones, paquetes ocultos y progreso total en Grand Theft Auto V.",
-        bodyClass: "gta-5",
-        heading: "Lista para el 100% de Grand Theft Auto V",
-    },
-};
+const checklistEntry = Object.entries(checklistModules).find(([path]) =>
+    path.endsWith(`/checklists/${game}.json`),
+);
 
-const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+if (!checklistEntry) {
+    throw new Error(`No se encontró checklist para el juego "${game}"`);
+}
+
+const data = (checklistEntry[1] as { default: ChecklistData }).default;
 ---
 
 <BaseLayout
-    title={meta.title}
-    description={meta.description}
-    canonical={`https://www.viceclub.app/${game}/100`}
-    bodyClass={meta.bodyClass}
-    game={game}
-    section="100"
+    title={`${gameData.title} | Vice Club`}
+    description={gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/inicio`}
+    game={gameData}
 >
-    <main class="block" id="container">
-        <section class="text-container">
-            <h1>{meta.heading}</h1>
-            <div class="checklist-container"></div>
-        </section>
+    <main
+        class="ml-0 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-12 md:ml-(--sidebar-width) md:gap-45"
+        style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
+    >
+        <ChecklistContainer game={game} data={data} client:load />
     </main>
-
-    <fragment slot="scripts">
-        <!-- Right Content settings -->
-        <script is:inline src="/assets/scripts/cursor.js"></script>
-        <script is:inline src="/assets/scripts/sounds.js"></script>
-        <!-- Checklist -->
-        <script is:inline src="/assets/scripts/checklist.js"></script>
-        <script
-            is:inline
-            src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.0.2/tsparticles.confetti.bundle.min.js"
-        ></script>
-    </fragment>
 </BaseLayout>
