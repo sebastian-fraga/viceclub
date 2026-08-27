@@ -17,7 +17,7 @@ const GAMES = [
 
 const DRAG_THRESHOLD = 2;
 const FADE_SIZE = 64;
-const EDGE_TOLERANCE = 1;
+const EDGE_TOLERANCE = 8;
 
 export default function GameCarousel() {
     const { t } = useTranslation();
@@ -35,22 +35,10 @@ export default function GameCarousel() {
         const el = scrollerRef.current;
         if (!el) return;
 
-        const isAtStart = el.scrollLeft <= 2;
-        const isAtEnd =
-            Math.ceil(el.scrollLeft + el.clientWidth) >= el.scrollWidth - 2;
+        const maxScrollLeft = el.scrollWidth - el.clientWidth;
 
-        console.log({
-            scrollLeft: el.scrollLeft,
-            clientWidth: el.clientWidth,
-            scrollWidth: el.scrollWidth,
-            isAtStart,
-            isAtEnd,
-            canScrollLeft: !isAtStart,
-            canScrollRight: !isAtEnd,
-        });
-
-        setCanScrollLeft(!isAtStart);
-        setCanScrollRight(!isAtEnd);
+        setCanScrollLeft(el.scrollLeft > EDGE_TOLERANCE);
+        setCanScrollRight(el.scrollLeft < maxScrollLeft - EDGE_TOLERANCE);
     }
 
     useEffect(() => {
@@ -131,6 +119,8 @@ export default function GameCarousel() {
             ? `black calc(100% - ${FADE_SIZE}px), transparent 100%`
             : "black 100%",
     ].join(", ");
+    const carouselButtonClass =
+        "rounded-full p-4 max-mobile:p-2.5 text-slate-300 bg-(--button-bg) transition duration-300 cursor-pointer hover:bg-(--button-bg-hover) disabled:!cursor-not-allowed disabled:!opacity-30 disabled:hover:bg-(--button-bg)";
 
     return (
         <section
@@ -140,32 +130,29 @@ export default function GameCarousel() {
             <div className="flex items-center justify-between w-full">
                 <Title label={t("index.titles.carousel")} />
 
-                <div className="flex gap-2 pr-1">
+                <div className="flex gap-4 pr-1">
                     <button
                         type="button"
                         onClick={() => scrollByAmount(-1)}
                         disabled={!canScrollLeft}
-                        aria-label="Anterior"
-                        className="rounded-full p-2 border border-white/20 text-slate-300 transition hover:bg-white/10 hover:text-white disabled:opacity-30 disabled:pointer-events-none"
+                        aria-label={t("common.accessibility.prev")}
+                        className={carouselButtonClass}
                     >
-                        <IconChevronLeft size={20} />
+                        <IconChevronLeft size={22} />
                     </button>
                     <button
                         type="button"
                         onClick={() => scrollByAmount(1)}
                         disabled={!canScrollRight}
-                        aria-label="Siguiente"
-                        className="rounded-full p-2 border border-white/20 text-slate-300 transition hover:bg-white/10 hover:text-white disabled:opacity-30 disabled:pointer-events-none"
+                        aria-label={t("common.accessibility.next")}
+                        className={carouselButtonClass}
                     >
-                        <IconChevronRight size={20} />
+                        <IconChevronRight size={22} />
                     </button>
                 </div>
             </div>
 
-            <div
-                className="relative w-full"
-                style={{ maskImage, WebkitMaskImage: maskImage }}
-            >
+            <div className="relative w-full">
                 <div
                     ref={scrollerRef}
                     onScroll={updateScrollState}
@@ -174,6 +161,7 @@ export default function GameCarousel() {
                     onPointerUp={handlePointerUp}
                     onPointerLeave={handlePointerUp}
                     className="flex gap-5 overflow-x-auto pr-6 pl-1 py-6 snap-x snap-mandatory mx-8 scrollbar-none scroll-smooth cursor-grab active:cursor-grabbing select-none"
+                    style={{ maskImage, WebkitMaskImage: maskImage }}
                 >
                     {GAMES.map((game) => (
                         <a
@@ -182,12 +170,12 @@ export default function GameCarousel() {
                             onClick={handleCardClick}
                             draggable={false}
                             onDragStart={(e) => e.preventDefault()}
-                            className="group relative block w-56 max-mobile:w-40 shrink-0 snap-start overflow-hidden rounded-xl border-2 border-transparent hover:border-cyan-200 focus-visible:border-yellow-200 outline-none transition-all duration-300 ease-out hover:-translate-y-1.5 hover:scale-[1.03] active:scale-95 will-change-transform"
+                            className="group relative block w-56 max-mobile:w-40 shrink-0 snap-start overflow-hidden rounded-xl border-4 border-transparent hover:border-yellow-200 focus-visible:border-yellow-200 outline-none transition-all duration-300 ease-out hover:-translate-y-1.5 active:scale-95"
                         >
                             <img
                                 src={`/assets/images/main/boxarts/portada_${game.id}.webp`}
                                 alt={game.name}
-                                loading="lazy"
+                                loading="eager"
                                 decoding="async"
                                 draggable={false}
                                 className="aspect-2/3 w-full object-cover pointer-events-none transition-transform duration-300 group-hover:scale-105"
