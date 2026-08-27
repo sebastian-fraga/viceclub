@@ -1,7 +1,8 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import type { RadioStation } from "./types/types";
-import clsx from "clsx";
 
 interface StationSelectorProps {
     stations: RadioStation[];
@@ -14,6 +15,7 @@ export function StationSelector({
     activeStationId,
     onSelect,
 }: StationSelectorProps) {
+    const { t } = useTranslation();
     const scrollRef = useRef<HTMLDivElement>(null);
     const [canScrollUp, setCanScrollUp] = useState(false);
     const [canScrollDown, setCanScrollDown] = useState(false);
@@ -30,9 +32,11 @@ export function StationSelector({
     if (stations.length === 0) {
         return (
             <div className="flex flex-col px-4 py-6 rounded-2xl bg-[#24222E] text-slate-50">
-                <h3 className="mb-4 text-2xl font-medium">Emisoras</h3>
+                <h3 className="mb-4 text-2xl font-medium">
+                    {t("radio.stations")}
+                </h3>
                 <p className="text-sm text-slate-400">
-                    No hay emisoras disponibles.
+                    {t("radio.emptySelector")}
                 </p>
             </div>
         );
@@ -46,13 +50,13 @@ export function StationSelector({
 
     return (
         <motion.div
-            className="flex flex-col pl-4 py-6 rounded-2xl bg-[#24222E] text-slate-50 min-h-0 shadow-2xl shadow-zinc-600/3 h-full"
+            className="flex flex-col pl-4 py-6 rounded-2xl bg-linear-to-b from-[#231e3f] from-20% to-(--button-bg) shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
             <h3 className="mb-2 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium">
-                Emisoras
+                {t("radio.stations")}
             </h3>
             <div
                 ref={scrollRef}

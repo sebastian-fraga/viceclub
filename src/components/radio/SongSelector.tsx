@@ -1,21 +1,24 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 import {
+    IconChevronLeft,
     IconHeadphones,
     IconMusic,
     IconMusicOff,
-    IconChevronLeft,
 } from "@tabler/icons-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
-import { formatTime } from "./lib/formatTime";
-import { getGenreLabel } from "./lib/genreLabels";
-import type { RadioStation, Playlist } from "./types/types";
 import clsx from "clsx";
 import { EqualizerBars } from "./EqualizerBars";
+import { formatTime } from "./lib/formatTime";
+import { translateRadioText } from "./lib/translateRadioText";
+import type { Playlist, RadioStation } from "./types/types";
 
 interface SongSelectorProps {
+    isBusy: boolean;
+    isPlaying: boolean;
     station: RadioStation | null;
     activePlaylist: Playlist | null;
     currentIndex: number;
@@ -26,6 +29,8 @@ interface SongSelectorProps {
 }
 
 export function SongSelector({
+    isBusy,
+    isPlaying,
     station,
     activePlaylist,
     currentIndex,
@@ -34,6 +39,8 @@ export function SongSelector({
     onBack,
     preventAutoScrollOnMobile = true,
 }: SongSelectorProps) {
+    const { t } = useTranslation();
+
     const scrollRef = useRef<HTMLUListElement>(null);
     const songRefs = useRef<Map<number, HTMLLIElement>>(new Map());
     const [canScrollUp, setCanScrollUp] = useState(false);
@@ -84,6 +91,9 @@ export function SongSelector({
     ];
     const maskImage = `linear-gradient(to bottom, ${maskParts.join(", ")})`;
 
+    const selectorClasses =
+        "text-gray-300/80 flex flex-col rounded-2xl bg-linear-to-b from-[#231e3f] from-20% to-[var(--button-bg)] shadow-2xl shadow-pink-300/5";
+
     return (
         <AnimatePresence mode="wait">
             {!station || !activePlaylist ? (
@@ -93,15 +103,15 @@ export function SongSelector({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="text-gray-300/80 flex flex-col h-full bg-[#2B2939] rounded-2xl items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center"
+                    className={`${selectorClasses} h-full items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center`}
                 >
                     <IconMusicOff size={42} />
-                    <p>No hay ninguna emisora seleccionada</p>
+                    <p>{t("radio.emptySelector")}</p>
                 </motion.div>
             ) : (
                 <motion.div
                     key={station.id}
-                    className="text-gray-300/80 flex flex-col bg-[#2B2939] rounded-2xl px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5 h-full min-h-0"
+                    className={`${selectorClasses} px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5 h-full min-h-0`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -113,7 +123,7 @@ export function SongSelector({
                             className="hidden max-mobile:flex items-center gap-1 text-sm text-slate-300 hover:text-white -mb-2 cursor-pointer"
                         >
                             <IconChevronLeft size={18} />
-                            Emisoras
+                            {t("radio.stations")}
                         </button>
                     )}
 
@@ -147,7 +157,9 @@ export function SongSelector({
                                         >
                                             <IconMusic className="text-violet-400" />
                                             <span className="text-violet-200 text-md max-mobile:text-sm whitespace-nowrap">
-                                                {getGenreLabel(genre)}
+                                                {t(`radio.genres.${genre}`, {
+                                                    defaultValue: genre,
+                                                })}
                                             </span>
                                         </div>
                                     ))}
@@ -201,7 +213,7 @@ export function SongSelector({
                                                 : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white",
                                         )}
                                     >
-                                        {playlist.name}
+                                        {translateRadioText(playlist.name, t)}
                                     </button>
                                 );
                             })}
@@ -210,7 +222,7 @@ export function SongSelector({
 
                     <div className="border-t border-purple-400/10 pt-3 flex-1 min-h-0 flex flex-col">
                         <p className="font-bold text-xl max-mobile:text-lg text-yellow-50 shrink-0">
-                            Canciones
+                            {t("radio.tracks")}
                         </p>
                         <ul
                             ref={scrollRef}
@@ -250,8 +262,8 @@ export function SongSelector({
                                             data-active={isActive}
                                         >
                                             <div className="flex items-center gap-3 max-mobile:gap-2 min-w-0">
-                                                <AnimatePresence mode="wait">
-                                                    {isActive && (
+                                                <AnimatePresence>
+                                                    {isActive && isPlaying && (
                                                         <motion.div
                                                             key="playing-icon"
                                                             initial={{
@@ -279,6 +291,7 @@ export function SongSelector({
                                                         </motion.div>
                                                     )}
                                                 </AnimatePresence>
+
                                                 <div className="flex flex-col min-w-0">
                                                     <span
                                                         className={clsx(
@@ -288,8 +301,12 @@ export function SongSelector({
                                                                 : "text-white",
                                                         )}
                                                     >
-                                                        {song.title}
+                                                        {translateRadioText(
+                                                            song.title,
+                                                            t,
+                                                        )}
                                                     </span>
+
                                                     <span className="text-gray-400 text-sm max-mobile:text-xs font-thin truncate max-mobile:max-w-60">
                                                         {song.artist}
                                                     </span>

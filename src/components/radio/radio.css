@@ -1,0 +1,40 @@
+.volume-slider {
+    width: 6rem;
+    height: 4px;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    background: linear-gradient(to right,
+            var(--color-violet-500) var(--volume),
+            var(--button-bg-hover) var(--volume));
+}
+
+.volume-slider::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 9999px;
+    background: transparent;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    margin-top: -3px;
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-violet-500);
+}
+
+.volume-slider::-moz-range-track {
+    height: 4px;
+    border-radius: 9999px;
+    background: transparent;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-violet-500);
+}

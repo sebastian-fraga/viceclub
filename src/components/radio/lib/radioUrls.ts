@@ -1,7 +1,5 @@
-import type { GameId } from "@/components/layout/Sidebar"
-
-const S3_BASE_URL = "https://viceclub.s3.us-east-1.amazonaws.com";
+import type { GameId } from "@/config/games";
 
 export function getRadioJsonUrl(gameId: GameId): string {
-    return `${S3_BASE_URL}/${gameId}/radio.json`;
+    return `/src/data/radio/${gameId}.json`;
 }

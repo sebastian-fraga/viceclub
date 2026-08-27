@@ -12,25 +12,49 @@ export function useAudioPlayer() {
     const [isSeeking, setIsSeekingState] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
-    const [volume, setVolumeState] = useState(1); // 0 a 1, arranca al máximo
+
+    const [volume, setVolumeState] = useState(1);
+
+    useEffect(() => {
+        const savedVolume = localStorage.getItem("radio-volume");
+
+        if (savedVolume === null) return;
+
+        const parsedVolume = parseFloat(savedVolume);
+
+        if (!Number.isFinite(parsedVolume)) return;
+
+        setVolumeState(Math.max(0, Math.min(1, parsedVolume)));
+    }, []);
+
+    const setVolume = useCallback((value: number) => {
+        const clamped = Math.max(0, Math.min(1, value));
+
+        setVolumeState(clamped);
+        localStorage.setItem("radio-volume", clamped.toString());
+
+        if (audioRef.current) {
+            audioRef.current.volume = clamped;
+        }
+    }, []);
+
+    useEffect(() => {
+        if (audioRef.current) {
+            audioRef.current.volume = volume;
+        }
+    }, [volume]);
 
     const setIsSeeking = (val: boolean) => {
         isSeekingRef.current = val;
         setIsSeekingState(val);
     };
 
-    const setVolume = useCallback((value: number) => {
-        const clamped = Math.max(0, Math.min(1, value));
-        setVolumeState(clamped);
-        if (audioRef.current) {
-            audioRef.current.volume = clamped;
-        }
-    }, []);
-
     const play = useCallback(() => {
         const audio = audioRef.current;
         if (!audio) return;
+
         const p = audio.play();
+
         if (p !== undefined) {
             p.then(() => setIsPlaying(true)).catch((err: DOMException) => {
                 if (err.name === "NotAllowedError") {
@@ -55,42 +79,59 @@ export function useAudioPlayer() {
     const seekTo = useCallback((time: number) => {
         const audio = audioRef.current;
         if (!audio) return;
+
         if (!isFinite(audio.duration)) {
             pendingSeekRef.current = time;
             return;
         }
+
         const clamped = Math.max(0, Math.min(time, audio.duration));
+
         setIsSeeking(true);
         audio.currentTime = clamped;
-        setCurrentTime(clamped); 
+        setCurrentTime(clamped);
     }, []);
 
     const seekRelative = useCallback(
         (seconds: number) => {
             const audio = audioRef.current;
             if (!audio || isSeekingRef.current) return;
-            const newTime = Math.max(0, Math.min(audio.currentTime + seconds, audio.duration));
+
+            const newTime = Math.max(
+                0,
+                Math.min(audio.currentTime + seconds, audio.duration),
+            );
+
             seekTo(newTime);
         },
         [seekTo],
     );
 
-    const load = useCallback((src: string, options?: { autoplay?: boolean }) => {
-        const audio = audioRef.current;
-        if (!audio) return;
-        const autoplay = options?.autoplay ?? true;
-        pendingAutoplayRef.current = autoplay;
-        setCurrentTime(0);
-        setDuration(0);
-        audio.src = `${src}?v=${Date.now()}`;
-        audio.load();
-    }, []);
+    const load = useCallback(
+        (src: string, options?: { autoplay?: boolean }) => {
+            const audio = audioRef.current;
+            if (!audio) return;
+
+            const autoplay = options?.autoplay ?? true;
+
+            pendingAutoplayRef.current = autoplay;
+
+            setCurrentTime(0);
+            setDuration(0);
+
+            audio.src = `${src}?v=${Date.now()}`;
+            audio.load();
+        },
+        [],
+    );
 
     const stop = useCallback(() => {
         const audio = audioRef.current;
         if (!audio) return;
+
         audio.pause();
         audio.src = "";
+
         setIsPlaying(false);
         setCurrentTime(0);
         setDuration(0);
@@ -98,31 +139,41 @@ export function useAudioPlayer() {
 
     useEffect(() => {
         const audio = new Audio();
+
         audio.volume = volume;
         audioRef.current = audio;
 
         const onLoadStart = () => setIsLoading(true);
+
         const onCanPlay = () => {
             setIsLoading(false);
+
             if (pendingAutoplayRef.current) {
                 play();
             }
         };
+
         const onTimeUpdate = () => {
             if (isSeekingRef.current) return;
+
             setCurrentTime(audio.currentTime);
             setDuration(audio.duration || 0);
         };
+
         const onEnded = () => setIsPlaying(false);
+
         const onSeeked = () => {
             setIsSeeking(false);
+
             if (targetTimeRef.current !== null) {
                 audio.currentTime = targetTimeRef.current;
                 targetTimeRef.current = null;
             }
         };
+
         const onLoadedMetadata = () => {
             setDuration(audio.duration || 0);
+
             if (pendingSeekRef.current !== null) {
                 const t = pendingSeekRef.current;
                 pendingSeekRef.current = null;
@@ -130,8 +181,6 @@ export function useAudioPlayer() {
             }
         };
 
-        // NUEVO: sincroniza isPlaying con el estado REAL del audio,
-        // sin importar si el play/pause vino de tu código, del auricular, o del lockscreen.
         const onPlay = () => setIsPlaying(true);
         const onPause = () => setIsPlaying(false);
 
@@ -153,6 +202,7 @@ export function useAudioPlayer() {
             audio.removeEventListener("loadedmetadata", onLoadedMetadata);
             audio.removeEventListener("play", onPlay);
             audio.removeEventListener("pause", onPause);
+
             audio.pause();
             audioRef.current = null;
         };

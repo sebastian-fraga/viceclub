@@ -1,23 +1,26 @@
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import {
-    IconPlayerPlayFilled,
     IconPlayerPauseFilled,
+    IconPlayerPlayFilled,
     IconPlayerSkipBackFilled,
     IconPlayerSkipForwardFilled,
     IconVolume,
     IconVolume2,
     IconVolume3,
 } from "@tabler/icons-react";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
-import { formatTime } from "./lib/formatTime";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import { formatTime } from "./lib/formatTime";
+
+import "./radio.css";
 
 interface PlayerBarProps {
     isPlaying: boolean;
     isLoading: boolean;
     isSeeking: boolean;
-    hasStation: boolean; // nuevo
+    hasStation: boolean;
     currentTime: number;
     duration: number;
     volume: number;
@@ -48,6 +51,7 @@ export function PlayerFooter({
     onSeek,
     onVolumeChange,
 }: PlayerBarProps) {
+    const { t } = useTranslation();
     const hasLoadedOnceRef = useRef(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [hoverRatio, setHoverRatio] = useState<number | null>(null);
@@ -80,12 +84,12 @@ export function PlayerFooter({
     };
 
     return (
-        <div className="flex items-center gap-4 rounded-2xl bg-slate-800 px-5 py-3.5 max-mobile:px-3 max-mobile:py-2">
+        <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 max-mobile:px-3 max-mobile:py-2 shadow-2xl shadow-pink-300/5">
             <div className="flex items-center gap-3.5">
                 <button
                     onClick={onPrev}
                     disabled={controlsDisabled}
-                    aria-label="Canción anterior"
+                    aria-label={t("radio.common.prevSong")}
                     className="text-slate-300 hover:text-white transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:text-slate-300"
                 >
                     <IconPlayerSkipBackFilled size={18} />
@@ -94,7 +98,11 @@ export function PlayerFooter({
                 <button
                     onClick={onPlayPause}
                     disabled={controlsDisabled}
-                    aria-label={isPlaying ? "Pausar" : "Reproducir"}
+                    aria-label={
+                        isPlaying
+                            ? t("radio.common.pauseSong")
+                            : t("radio.common.playSong")
+                    }
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-500 text-slate-900 cursor-pointer hover:bg-violet-400 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-violet-500"
                 >
                     {isPlaying ? (
@@ -107,7 +115,7 @@ export function PlayerFooter({
                 <button
                     onClick={onNext}
                     disabled={controlsDisabled}
-                    aria-label="Canción siguiente"
+                    aria-label={t("radio.common.nextSong")}
                     className="text-slate-300 hover:text-white transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:text-slate-300"
                 >
                     <IconPlayerSkipForwardFilled size={18} />
@@ -122,7 +130,7 @@ export function PlayerFooter({
 
             <div
                 className={clsx(
-                    "group relative h-1.5 flex-1 min-w-0 rounded-full bg-slate-600 overflow-hidden max-mobile:h-2",
+                    "group relative h-1.5 flex-1 min-w-0 rounded-full bg-(--button-bg)  overflow-hidden max-mobile:h-2",
                     hasStation ? "cursor-pointer" : "cursor-default opacity-40",
                 )}
                 onClick={handleProgressClick}
@@ -131,7 +139,7 @@ export function PlayerFooter({
             >
                 {!isBusy && hoverProgress !== null && (
                     <div
-                        className="absolute top-0 left-0 h-full rounded-full bg-slate-300/60"
+                        className="absolute top-0 left-0 h-full rounded-full bg-(--button-bg-hover)"
                         style={{ width: `${hoverProgress}%` }}
                     />
                 )}
@@ -166,9 +174,18 @@ export function PlayerFooter({
                         {formatTime(duration)}
                     </span>
                     <div className="flex items-center gap-1.5 max-mobile:hidden">
-                        <span className="text-slate-300">
+                        <button
+                            type="button"
+                            onClick={() => onVolumeChange(volume > 0 ? 0 : 1)}
+                            className="cursor-pointer text-slate-300 hover:text-white transition-colors"
+                            aria-label={
+                                volume > 0
+                                    ? t("radio.common.mute")
+                                    : t("radio.common.unmute")
+                            }
+                        >
                             <VolumeIcon volume={volume} />
-                        </span>
+                        </button>
                         <input
                             type="range"
                             min={0}
@@ -178,8 +195,13 @@ export function PlayerFooter({
                             onChange={(e) =>
                                 onVolumeChange(parseFloat(e.target.value))
                             }
-                            className="h-1 w-24 cursor-pointer accent-violet-400"
-                            aria-label="Volumen"
+                            style={
+                                {
+                                    "--volume": `${volume * 100}%`,
+                                } as React.CSSProperties
+                            }
+                            className="volume-slider"
+                            aria-label={t("radio.common.volume")}
                         />
                     </div>
                 </div>
