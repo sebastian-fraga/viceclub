@@ -13,6 +13,17 @@ import {
 
 export type GameId = "III" | "VC" | "SA" | "LCS" | "VCS" | "IV" | "V" | "VI";
 
+export const GAME_IDS: GameId[] = [
+    "III",
+    "VC",
+    "SA",
+    "LCS",
+    "VCS",
+    "IV",
+    "V",
+    "VI",
+];
+
 export type SectionId =
     | "inicio"
     | "100"
@@ -69,24 +80,40 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
 };
 
 export const UNFINISHED_SECTIONS: Partial<Record<GameId, SectionId[]>> = {
-    III: ["100", "artworks", "herramientas_y_mods", "logros", "mapa", "trucos"],
-    VC: ["100", "artworks", "herramientas_y_mods", "logros", "mapa", "trucos"],
-    SA: ["100", "artworks", "herramientas_y_mods", "logros", "mapa", "trucos"],
-    LCS: ["100", "artworks", "mapa", "trucos"],
-    VCS: ["100", "artworks", "mapa", "trucos"],
-    IV: ["100", "artworks", "herramientas_y_mods", "logros", "mapa", "trucos"],
-    V: ["100", "artworks", "herramientas_y_mods", "logros", "mapa", "trucos"],
+    III: ["artworks", "herramientas_y_mods", "logros", "mapa"],
+    VC: ["artworks", "herramientas_y_mods", "logros", "mapa"],
+    SA: ["artworks", "herramientas_y_mods", "logros", "mapa"],
+    LCS: ["artworks", "mapa"],
+    VCS: ["artworks", "mapa"],
+    IV: ["artworks", "herramientas_y_mods", "logros", "mapa"],
+    V: ["artworks", "herramientas_y_mods", "logros", "mapa"],
 };
 
-export const gamesList: { id: GameId; name: string }[] = [
-    { id: "III", name: "GTA III" },
-    { id: "VC", name: "GTA Vice City" },
-    { id: "SA", name: "GTA San Andreas" },
-    { id: "LCS", name: "GTA Liberty City Stories" },
-    { id: "VCS", name: "GTA Vice City Stories" },
-    { id: "IV", name: "GTA IV" },
-    { id: "V", name: "GTA V" },
-    { id: "VI", name: "GTA VI" },
+export const gamesList: { id: GameId; name: string; fullName: string }[] = [
+    { id: "III", name: "GTA III", fullName: "Grand Theft Auto III" },
+    {
+        id: "VC",
+        name: "GTA Vice City",
+        fullName: "Grand Theft Auto: Vice City",
+    },
+    {
+        id: "SA",
+        name: "GTA San Andreas",
+        fullName: "Grand Theft Auto: San Andreas",
+    },
+    {
+        id: "LCS",
+        name: "GTA Liberty City Stories",
+        fullName: "Grand Theft Auto: Liberty City Stories",
+    },
+    {
+        id: "VCS",
+        name: "GTA Vice City Stories",
+        fullName: "Grand Theft Auto: Vice City Stories",
+    },
+    { id: "IV", name: "GTA IV", fullName: "Grand Theft Auto IV" },
+    { id: "V", name: "GTA V", fullName: "Grand Theft Auto V" },
+    { id: "VI", name: "GTA VI", fullName: "Grand Theft Auto VI" },
 ];
 
 const FULL_SECTIONS: SectionId[] = [
