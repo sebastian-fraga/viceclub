@@ -91,4 +91,10 @@ export const GTAVI: Game = {
         ],
         engines: ["RAGE"],
     },
+    platforms: ["ps5", "xboxSeries"],
+    originalPlatforms: [],
+    anniversaryPlatforms: [],
+    definitivePlatforms: [],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };

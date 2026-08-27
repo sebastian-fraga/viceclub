@@ -202,4 +202,10 @@ export const GTAV: Game = {
 
         sales: "home.v.technicalSheet.sales",
     },
+    platforms: ["ps3", "ps4", "ps5", "xbox360", "xboxOne", "xboxSeries", "pc"],
+    originalPlatforms: ["ps3", "xbox360"],
+    anniversaryPlatforms: [],
+    definitivePlatforms: [],
+    enhancedPlatforms: ["ps4", "xboxOne"],
+    expandedAndEnhancedPlatforms: ["ps5", "xboxSeries"],
 };

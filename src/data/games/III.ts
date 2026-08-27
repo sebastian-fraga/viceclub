@@ -270,4 +270,20 @@ export const GTAIII: Game = {
 
         sales: "home.iii.technicalSheet.sales",
     },
+    platforms: [
+        "ps2",
+        "ps3",
+        "ps4",
+        "ps5",
+        "xbox",
+        "xboxOne",
+        "xboxSeries",
+        "switch",
+        "pc",
+    ],
+    originalPlatforms: ["ps2", "ps3", "xbox"],
+    anniversaryPlatforms: [],
+    definitivePlatforms: ["ps4", "ps5", "xboxOne", "xboxSeries", "switch"],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };

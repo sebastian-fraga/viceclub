@@ -22,6 +22,29 @@ export const GTAIV: Game = {
             },
         },
     },
+    variants: [
+        {
+            id: "IV",
+            label: "GTA IV",
+            theme: {
+                accent: "#e5e5e5",
+            },
+        },
+        {
+            id: "TLAD",
+            label: "The Lost and Damned",
+            theme: {
+                accent: "#f00",
+            },
+        },
+        {
+            id: "TBOGT",
+            label: "The Ballad of Gay Tony",
+            theme: {
+                accent: "#f3f",
+            },
+        },
+    ],
     buttonsPosition: "left",
     trailers: [
         {
@@ -120,4 +143,10 @@ export const GTAIV: Game = {
 
         sales: "home.iv.technicalSheet.sales",
     },
+    platforms: [],
+    originalPlatforms: [],
+    anniversaryPlatforms: [],
+    definitivePlatforms: [],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };

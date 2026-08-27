@@ -88,4 +88,10 @@ export const GTAVCS: Game = {
 
         sales: "home.vcs.technicalSheet.sales",
     },
+    platforms: ["ps2", "psp"],
+    originalPlatforms: ["ps2", "psp"],
+    anniversaryPlatforms: [],
+    definitivePlatforms: [],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };

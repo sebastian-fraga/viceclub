@@ -147,7 +147,12 @@ export const GTALCS: Game = {
             },
         ],
         engines: ["Rockstar Leeds 3D Engine"],
-
         sales: "home.lcs.technicalSheet.sales",
     },
+    platforms: ["ps2", "psp"],
+    originalPlatforms: ["ps2", "psp"],
+    anniversaryPlatforms: [],
+    definitivePlatforms: [],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };

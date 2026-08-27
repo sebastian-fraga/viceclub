@@ -286,4 +286,21 @@ export const GTASA: Game = {
 
         sales: "home.sa.technicalSheet.sales",
     },
+    platforms: [
+        "ps2",
+        "ps3",
+        "ps4",
+        "ps5",
+        "xbox",
+        "xbox360",
+        "xboxOne",
+        "xboxSeries",
+        "switch",
+        "pc",
+    ],
+    originalPlatforms: ["ps2", "xbox"],
+    anniversaryPlatforms: ["ps3", "xbox360"],
+    definitivePlatforms: ["ps4", "ps5", "xboxOne", "xboxSeries", "switch"],
+    enhancedPlatforms: [],
+    expandedAndEnhancedPlatforms: [],
 };
