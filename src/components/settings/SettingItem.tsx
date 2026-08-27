@@ -4,11 +4,13 @@ import type { SelectOption, Setting } from "@/types/settings";
 
 import Select from "./ui/Select";
 import Toggle from "./ui/Toggle";
+import {  IconChevronRight } from "@tabler/icons-react";
 
 interface Props {
     setting: Setting;
     value: string | boolean;
     onChange: (value: string | boolean) => void;
+    onAction?: (id: string) => void;
     options?: SelectOption[];
     disabled?: boolean;
 }
@@ -17,6 +19,7 @@ export default function SettingItem({
     setting,
     value,
     onChange,
+    onAction,
     options,
     disabled,
 }: Props) {
@@ -46,7 +49,24 @@ export default function SettingItem({
                 );
 
             case "action":
-                return <button>Button</button>;
+                return (
+                    <button
+                        onClick={() => onAction?.(setting.id)}
+                        disabled={disabled}
+                        className={`shrink-0 px-3 py-1.5 text-xs rounded-md transition-colors flex items-center gap-1 not-only-of-type:disabled:cursor-not-allowed cursor-pointer disabled:opacity-40 ${
+                            setting.destructive
+                                ? "bg-red-500/15 text-red-300 hover:bg-red-500/25"
+                                : "bg-white/10 text-white/80 hover:bg-white/15"
+                        }`}
+                    >
+                        {t(
+                            setting.destructive
+                                ? "common.buttons.reset"
+                                : "common.buttons.open",
+                        )}
+                        <IconChevronRight size={14}/>
+                    </button>
+                );
         }
     };
 
@@ -57,15 +77,14 @@ export default function SettingItem({
     const iconStyles = setting.destructive ? "text-red-400" : "text-purple-300";
     return (
         <div className={itemStyles}>
-            {}
             <div className="flex items-center gap-3 min-w-0 flex-1">
-                {Icon && <Icon size={20} className={iconStyles} />}
+                {Icon && <Icon size={20} className={`${iconStyles} shrink-0`}  />}
 
                 <div className="flex flex-col gap-0.5 min-w-0">
                     <span className="text-sm truncate">{t(setting.name)}</span>
 
                     {setting.description && (
-                        <span className="text-xs text-gray-400 max-w-90">
+                        <span className="text-xs text-gray-400 max-mobile:max-w-90 pr-2">
                             {t(setting.description)}
                         </span>
                     )}
