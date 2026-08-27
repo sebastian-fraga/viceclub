@@ -1,0 +1,464 @@
+{
+    "Grand Theft Auto IV": [
+        {
+            "id": "iv_1",
+            "title": {
+                "ES": "Obtener salud y armadura",
+                "EN": "Get health and armor",
+                "FR": "Obtenir santé et armure",
+                "PT": "Obter saúde e armadura"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea los trofeos/logros <b>Calles peligrosas despejadas</b>, <b>Acaba con él</b> y <b>Ejército de un hombre</b>.",
+                        "EN": "Blocks the trophies/achievements <b>Cleaned the Mean Streets</b>, <b>Finish Him</b> and <b>One Man Army</b>",
+                        "FR": "Bloque les trophées/succès <b>Justicier de la rue</b>, <b>Poing final</b> et <b>Armée d'un seul homme</b>",
+                        "PT": "Bloqueia os troféus/conquistas <b>Cleaned the Mean Streets</b>, <b>Finish Him</b> e <b>One Man Army</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["362-555-0100"]
+            }
+        },
+        {
+            "id": "iv_2",
+            "title": {
+                "ES": "Obtener salud, armadura, set de armas avanzadas y munición",
+                "EN": "Get health, armor, advanced weapon set and ammo",
+                "FR": "Obtenir santé, armure, set d'armes avancées et munitions",
+                "PT": "Obter saúde, armadura, conjunto de armas avançadas e munição"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea los trofeos/logros <b>Calles peligrosas despejadas</b>, <b>Acaba con él</b> y <b>Ejército de un hombre</b>.",
+                        "EN": "Blocks the trophies/achievements <b>Cleaned the Mean Streets</b>, <b>Finish Him</b> and <b>One Man Army</b>",
+                        "FR": "Bloque les trophées/succès <b>Justicier de la rue</b>, <b>Poing final</b> et <b>Armée d'un seul homme</b>",
+                        "PT": "Bloqueia os troféus/conquistas <b>Cleaned the Mean Streets</b>, <b>Finish Him</b> e <b>One Man Army</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["482-555-0100"]
+            }
+        },
+        {
+            "id": "iv_3",
+            "title": {
+                "ES": "Set de armas avanzadas",
+                "EN": "Advanced weapon set",
+                "FR": "Set d'armes avancées",
+                "PT": "Conjunto de armas avançadas"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Otorga el Bate de béisbol, Granadas, Pistola de combate, Escopeta de combate, Subfusil, Carabina, Rifle de combate y Lanzacohetes",
+                        "EN": "Grants the Baseball Bat, Grenades, Combat Pistol, Combat Shotgun, SMG, Carbine Rifle, Combat Sniper and RPG",
+                        "FR": "Accorde la Batte de baseball, Grenades, Pistolet de combat, Fusil à pompe de combat, Pistolet-mitrailleur, Carabine, Fusil de combat et Lance-roquettes",
+                        "PT": "Concede o Taco de baseball, Granadas, Pistola de combate, Espingarda de combate, Subfusil, Carabina, Rifle de combate e Lançador de foguetes"
+                    },
+                    "noteType": "info"
+                },
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea el trofeo/logro <b>Calles peligrosas despejadas</b>",
+                        "EN": "Blocks the trophy/achievement <b>Cleaned the Mean Streets</b>",
+                        "FR": "Bloque le trophée/succès <b>Justicier de la rue</b>",
+                        "PT": "Bloqueia o troféu/conquista <b>Cleaned the Mean Streets</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["486-555-0100"]
+            }
+        },
+        {
+            "id": "iv_4",
+            "title": {
+                "ES": "Set de armas pobres",
+                "EN": "Poor weapon set",
+                "FR": "Set d'armes basiques",
+                "PT": "Conjunto de armas básicas"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Otorga el Cuchillo, Cócteles molotov, Pistola, Escopeta corredera, Subfusil micro, Fusil de asalto, Rifle de precisión y Lanzacohetes",
+                        "EN": "Grants the Knife, Molotov Cocktails, Pistol, Pump Shotgun, Micro-SMG, Assault Rifle, Sniper Rifle and RPG",
+                        "FR": "Accorde le Couteau, Cocktails molotov, Pistolet, Fusil à pompe, Micro pistolet-mitrailleur, Fusil d'assaut, Fusil de précision et Lance-roquettes",
+                        "PT": "Concede a Faca, Coquetéis molotov, Pistola, Espingarda de bombeamento, Subfusil micro, Rifle de assalto, Rifle de precisão e Lançador de foguetes"
+                    },
+                    "noteType": "info"
+                },
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea el trofeo/logro <b>Calles peligrosas despejadas</b>",
+                        "EN": "Blocks the trophy/achievement <b>Cleaned the Mean Streets</b>",
+                        "FR": "Bloque le trophée/succès <b>Justicier de la rue</b>",
+                        "PT": "Bloqueia o troféu/conquista <b>Cleaned the Mean Streets</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["486-555-0150"]
+            }
+        },
+        {
+            "id": "iv_5",
+            "title": {
+                "ES": "Obtener niveles de búsqueda",
+                "EN": "Raise wanted level",
+                "FR": "Augmenter le niveau de recherche",
+                "PT": "Aumentar nível de procurado"
+            },
+            "codes": {
+                "pc": ["267-555-0150"]
+            }
+        },
+        {
+            "id": "iv_6",
+            "title": {
+                "ES": "Eliminar nivel de búsqueda",
+                "EN": "Remove wanted level",
+                "FR": "Supprimer le niveau de recherche",
+                "PT": "Remover nível de procurado"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea los trofeos/logros <b>Camina en libertad</b> y <b>Ejército de un hombre</b>",
+                        "EN": "Blocks the trophies/achievements <b>Walk Free</b> and <b>One Man Army</b>",
+                        "FR": "Bloque les trophées/succès <b>En catimini</b> et <b>Armée d'un seul homme</b>",
+                        "PT": "Bloqueia os troféus/conquistas <b>Walk Free</b> e <b>One Man Army</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["267-555-0100"]
+            }
+        },
+        {
+            "id": "iv_7",
+            "title": {
+                "ES": "Cambiar el clima",
+                "EN": "Change weather",
+                "FR": "Changer la météo",
+                "PT": "Mudar o clima"
+            },
+            "codes": {
+                "pc": ["468-555-0100"]
+            }
+        },
+        {
+            "id": "iv_8",
+            "title": {
+                "ES": "Aparecer un Annihilator",
+                "EN": "Spawn Annihilator",
+                "FR": "Faire apparaître un Annihilator",
+                "PT": "Invocar um Annihilator"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Bloquea los trofeos/logros <b>Camina en libertad</b> y <b>Ejército de un hombre</b>",
+                        "EN": "Blocks the trophies/achievements <b>Walk Free</b> and <b>One Man Army</b>",
+                        "FR": "Bloque les trophées/succès <b>En catimini</b> et <b>Armée d'un seul homme</b>",
+                        "PT": "Bloqueia os troféus/conquistas <b>Walk Free</b> e <b>One Man Army</b>"
+                    },
+                    "noteType": "warning"
+                }
+            ],
+            "codes": {
+                "pc": ["359-555-0100"]
+            }
+        },
+        {
+            "id": "iv_9",
+            "title": {
+                "ES": "Aparecer un Jetmax",
+                "EN": "Spawn Jetmax",
+                "FR": "Faire apparaître un Jetmax",
+                "PT": "Invocar um Jetmax"
+            },
+            "codes": {
+                "pc": ["938-555-0100"]
+            }
+        },
+        {
+            "id": "iv_10",
+            "title": {
+                "ES": "Aparecer una NRG-900",
+                "EN": "Spawn NRG-900",
+                "FR": "Faire apparaître une NRG-900",
+                "PT": "Invocar uma NRG-900"
+            },
+            "codes": {
+                "pc": ["625-555-0100"]
+            }
+        },
+        {
+            "id": "iv_11",
+            "title": {
+                "ES": "Aparecer una Sánchez",
+                "EN": "Spawn Sánchez",
+                "FR": "Faire apparaître une Sánchez",
+                "PT": "Invocar uma Sánchez"
+            },
+            "codes": {
+                "pc": ["625-555-0150"]
+            }
+        },
+        {
+            "id": "iv_12",
+            "title": {
+                "ES": "Aparecer un FIB Buffalo",
+                "EN": "Spawn FIB Buffalo",
+                "FR": "Faire apparaître un FIB Buffalo",
+                "PT": "Invocar um FIB Buffalo"
+            },
+            "codes": {
+                "pc": ["227-555-0100"]
+            }
+        },
+        {
+            "id": "iv_13",
+            "title": {
+                "ES": "Aparecer un Comet",
+                "EN": "Spawn Comet",
+                "FR": "Faire apparaître un Comet",
+                "PT": "Invocar um Comet"
+            },
+            "codes": {
+                "pc": ["227-555-0175"]
+            }
+        },
+        {
+            "id": "iv_14",
+            "title": {
+                "ES": "Aparecer un Turismo",
+                "EN": "Spawn Turismo",
+                "FR": "Faire apparaître un Turismo",
+                "PT": "Invocar um Turismo"
+            },
+            "codes": {
+                "pc": ["227-555-0147"]
+            }
+        },
+        {
+            "id": "iv_15",
+            "title": {
+                "ES": "Aparecer un Cognoscenti",
+                "EN": "Spawn Cognoscenti",
+                "FR": "Faire apparaître un Cognoscenti",
+                "PT": "Invocar um Cognoscenti"
+            },
+            "codes": {
+                "pc": ["227-555-0142"]
+            }
+        },
+        {
+            "id": "iv_16",
+            "title": {
+                "ES": "Aparecer un Super GT",
+                "EN": "Spawn Super GT",
+                "FR": "Faire apparaître un Super GT",
+                "PT": "Invocar um Super GT"
+            },
+            "codes": {
+                "pc": ["227-555-0168"]
+            }
+        }
+    ],
+    "The Lost and Damned": [
+        {
+            "id": "tlad_1",
+            "title": {
+                "ES": "Aparecer una Innovation",
+                "EN": "Spawn Innovation",
+                "FR": "Faire apparaître une Innovation",
+                "PT": "Invocar uma Innovation"
+            },
+            "codes": { "pc": ["245-555-0100"] }
+        },
+        {
+            "id": "tlad_2",
+            "title": {
+                "ES": "Aparecer una Hexer",
+                "EN": "Spawn Hexer",
+                "FR": "Faire apparaître une Hexer",
+                "PT": "Invocar uma Hexer"
+            },
+            "codes": { "pc": ["245-555-0150"] }
+        },
+        {
+            "id": "tlad_3",
+            "title": {
+                "ES": "Aparecer una Hakuchou Custom",
+                "EN": "Spawn Hakuchou Custom",
+                "FR": "Faire apparaître une Hakuchou Custom",
+                "PT": "Invocar uma Hakuchou Custom"
+            },
+            "codes": { "pc": ["245-555-0199"] }
+        },
+        {
+            "id": "tlad_4",
+            "title": {
+                "ES": "Aparecer una Double T Custom",
+                "EN": "Spawn Double T Custom",
+                "FR": "Faire apparaître une Double T Custom",
+                "PT": "Invocar uma Double T Custom"
+            },
+            "codes": { "pc": ["245-555-0125"] }
+        },
+        {
+            "id": "tlad_5",
+            "title": {
+                "ES": "Aparecer un Gang Burrito",
+                "EN": "Spawn Gang Burrito",
+                "FR": "Faire apparaître un Gang Burrito",
+                "PT": "Invocar um Gang Burrito"
+            },
+            "codes": { "pc": ["826-555-0150"] }
+        },
+        {
+            "id": "tlad_6",
+            "title": {
+                "ES": "Aparecer un Slamvan",
+                "EN": "Spawn Slamvan",
+                "FR": "Faire apparaître un Slamvan",
+                "PT": "Invocar um Slamvan"
+            },
+            "codes": { "pc": ["826-555-0100"] }
+        }
+    ],
+    "The Ballad of Gay Tony": [
+        {
+            "id": "tbogt_1",
+            "title": {
+                "ES": "Set de armas avanzadas",
+                "EN": "Advanced weapon set",
+                "FR": "Set d'armes avancées",
+                "PT": "Conjunto de armas avançadas"
+            },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "ES": "Otorga el Cuchillo, Bombas lapa, Pistola 44, Escopeta explosiva, Subfusil de asalto, MG avanzada, Rifle de francotirador avanzado y Lanzagranadas",
+                        "EN": "Grants the Knife, Sticky Bombs, Pistol .44, Explosive Shotgun, Assault SMG, Advanced MG, Advanced Sniper and Grenade Launcher",
+                        "FR": "Accorde le Couteau, Bombes collantes, Pistolet 44, Fusil à pompe explosif, Pistolet-mitrailleur d'assaut, MG avancée, Fusil de sniper avancé et Lance-grenades",
+                        "PT": "Concede a Faca, Bombas adesivas, Pistola 44, Espingarda explosiva, Subfusil de assalto, MG avançada, Rifle de sniper avançado e Lançador de granadas"
+                    },
+                    "noteType": "info"
+                }
+            ],
+            "codes": { "pc": ["486-555-0100"] }
+        },
+        {
+            "id": "tbogt_2",
+            "title": {
+                "ES": "Obtener paracaídas",
+                "EN": "Get parachute",
+                "FR": "Obtenir un parachute",
+                "PT": "Obter paraquedas"
+            },
+            "codes": { "pc": ["359-555-7272"] }
+        },
+        {
+            "id": "tbogt_3",
+            "title": {
+                "ES": "Puñetazos explosivos",
+                "EN": "Explosive punches",
+                "FR": "Coups de poing explosifs",
+                "PT": "Socos explosivos"
+            },
+            "codes": { "pc": ["276-555-2666"] }
+        },
+        {
+            "id": "tbogt_4",
+            "title": {
+                "ES": "Balas de francotirador explosivas",
+                "EN": "Explosive sniper bullets",
+                "FR": "Balles de sniper explosives",
+                "PT": "Balas de sniper explosivas"
+            },
+            "codes": { "pc": ["486-555-2526"] }
+        },
+        {
+            "id": "tbogt_5",
+            "title": {
+                "ES": "Aparecer un Floater",
+                "EN": "Spawn Floater",
+                "FR": "Faire apparaître un Floater",
+                "PT": "Invocar um Floater"
+            },
+            "codes": { "pc": ["938-555-0150"] }
+        },
+        {
+            "id": "tbogt_6",
+            "title": {
+                "ES": "Aparecer una Akuma",
+                "EN": "Spawn Akuma",
+                "FR": "Faire apparaître une Akuma",
+                "PT": "Invocar uma Akuma"
+            },
+            "codes": { "pc": ["625-555-0200"] }
+        },
+        {
+            "id": "tbogt_7",
+            "title": {
+                "ES": "Aparecer una Vader",
+                "EN": "Spawn Vader",
+                "FR": "Faire apparaître une Vader",
+                "PT": "Invocar uma Vader"
+            },
+            "codes": { "pc": ["625-555-3273"] }
+        },
+        {
+            "id": "tbogt_8",
+            "title": {
+                "ES": "Aparecer un APC",
+                "EN": "Spawn APC",
+                "FR": "Faire apparaître un APC",
+                "PT": "Invocar um APC"
+            },
+            "codes": { "pc": ["272-555-8265"] }
+        },
+        {
+            "id": "tbogt_9",
+            "title": {
+                "ES": "Aparecer un Buzzard",
+                "EN": "Spawn Buzzard",
+                "FR": "Faire apparaître un Buzzard",
+                "PT": "Invocar um Buzzard"
+            },
+            "codes": { "pc": ["359-555-2899"] }
+        },
+        {
+            "id": "tbogt_10",
+            "title": {
+                "ES": "Aparecer un Bullet GT",
+                "EN": "Spawn Bullet GT",
+                "FR": "Faire apparaître un Bullet GT",
+                "PT": "Invocar um Bullet GT"
+            },
+            "codes": { "pc": ["227-555-9666"] }
+        }
+    ]
+}

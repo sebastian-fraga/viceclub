@@ -1,0 +1,1302 @@
+{
+    "Jugador": {
+        "category": {
+            "ES": "Jugador",
+            "EN": "Player",
+            "FR": "Joueur",
+            "PT": "Jogador"
+        },
+        "cheats": [
+            {
+                "id": "player_1",
+                "title": {
+                    "ES": "Salud al máximo",
+                    "EN": "Full health",
+                    "FR": "Santé maximale",
+                    "PT": "Saúde máxima"
+                },
+                "codes": {
+                    "psp": ["L", "R", "CROSS", "L", "R", "SQUARE", "L", "R"],
+                    "ps2": [
+                        "L1",
+                        "R1",
+                        "CROSS",
+                        "L1",
+                        "R1",
+                        "SQUARE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "player_2",
+                "title": {
+                    "ES": "Blindaje al máximo",
+                    "EN": "Full armor",
+                    "FR": "Armure maximale",
+                    "PT": "Blindagem máxima"
+                },
+                "codes": {
+                    "psp": ["L", "R", "CIRCLE", "L", "R", "CROSS", "L", "R"],
+                    "ps2": [
+                        "L1",
+                        "R1",
+                        "CIRCLE",
+                        "L1",
+                        "R1",
+                        "CROSS",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "player_3",
+                "title": {
+                    "ES": "Obtener $250,000",
+                    "EN": "Get $250,000",
+                    "FR": "Obtenir 250 000 $",
+                    "PT": "Obter $250.000"
+                },
+                "codes": {
+                    "psp": ["L", "R", "TRIANGLE", "L", "R", "CIRCLE", "L", "R"],
+                    "ps2": [
+                        "L1",
+                        "R1",
+                        "TRIANGLE",
+                        "L1",
+                        "R1",
+                        "CIRCLE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "player_4",
+                "title": {
+                    "ES": "Suicidarse",
+                    "EN": "Commit suicide",
+                    "FR": "Se suicider",
+                    "PT": "Cometer suicídio"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "DOWN",
+                        "LEFT",
+                        "R",
+                        "CROSS",
+                        "UP",
+                        "TRIANGLE"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "DOWN",
+                        "LEFT",
+                        "R1",
+                        "CROSS",
+                        "UP",
+                        "TRIANGLE"
+                    ]
+                }
+            },
+            {
+                "id": "player_5",
+                "title": {
+                    "ES": "Set de armas 1",
+                    "EN": "Weapons set 1",
+                    "FR": "Ensemble d'armes 1",
+                    "PT": "Conjunto de armas 1"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "ES": "Otorga el Puño americano, Cuchillo, Cócteles molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de francotirador y Lanzallamas.",
+                            "EN": "Gives the Brass Knuckles, Knife, Molotov Cocktails, Pistol, Shotgun, Tec-9, AK-47, Sniper Rifle and Flamethrower",
+                            "FR": "Donne le Poing américain, Couteau, Cocktails Molotov, Pistolet, Fusil à pompe, Tec-9, AK-47, Fusil de sniper et Lance-flammes",
+                            "PT": "Concede Soco-inglês, Faca, Coquetéis Molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de precisão e Lança-chamas"
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "SQUARE",
+                        "SQUARE",
+                        "DOWN",
+                        "LEFT",
+                        "SQUARE",
+                        "SQUARE",
+                        "RIGHT"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "SQUARE",
+                        "SQUARE",
+                        "DOWN",
+                        "LEFT",
+                        "SQUARE",
+                        "SQUARE",
+                        "RIGHT"
+                    ]
+                }
+            },
+            {
+                "id": "player_6",
+                "title": {
+                    "ES": "Set de armas 2",
+                    "EN": "Weapons set 2",
+                    "FR": "Ensemble d'armes 2",
+                    "PT": "Conjunto de armas 2"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "ES": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Micro SMG, M4, Rifle de francotirador PSG-1 y Lanzacohetes.",
+                            "EN": "Gives the Katana, Grenades, .357 Revolver, Sawed-off Shotgun, Micro SMG, M4, PSG-1 Sniper Rifle and Rocket Launcher",
+                            "FR": "Donne le Katana, Grenades, Revolver .357, Fusil à canon scié, Micro SMG, M4, Fusil de sniper PSG-1 et Lance-roquettes",
+                            "PT": "Concede Katana, Granadas, Revólver .357, Escopeta serrada, Micro SMG, M4, Rifle de precisão PSG-1 e Lança-foguetes"
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "LEFT",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "LEFT",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "RIGHT"
+                    ]
+                }
+            },
+            {
+                "id": "player_7",
+                "title": {
+                    "ES": "Set de armas 3",
+                    "EN": "Weapons set 3",
+                    "FR": "Ensemble d'armes 3",
+                    "PT": "Conjunto de armas 3"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "ES": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de francotirador y Minigun.",
+                            "EN": "Gives the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, Sniper Rifle and Minigun",
+                            "FR": "Donne la Tronçonneuse, Grenades, Revolver .357, S.P.A.S. 12, Fusil de sniper et Minigun",
+                            "PT": "Concede Motosserra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de precisão e Minigun"
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "CROSS",
+                        "CROSS",
+                        "DOWN",
+                        "LEFT",
+                        "CROSS",
+                        "CROSS",
+                        "RIGHT"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "CROSS",
+                        "CROSS",
+                        "DOWN",
+                        "LEFT",
+                        "CROSS",
+                        "CROSS",
+                        "RIGHT"
+                    ]
+                }
+            },
+            {
+                "id": "player_8",
+                "title": {
+                    "ES": "Obtener 2 niveles de búsqueda",
+                    "EN": "Get 2 wanted levels",
+                    "FR": "Obtenir 2 niveaux de recherche",
+                    "PT": "Obter 2 níveis de procurado"
+                },
+                "codes": {
+                    "psp": ["L", "R", "SQUARE", "L", "R", "TRIANGLE", "L", "R"],
+                    "ps2": [
+                        "L1",
+                        "R1",
+                        "SQUARE",
+                        "L1",
+                        "R1",
+                        "TRIANGLE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "player_9",
+                "title": {
+                    "ES": "Desactivar nivel de búsqueda",
+                    "EN": "Disable wanted level",
+                    "FR": "Désactiver le niveau de recherche",
+                    "PT": "Desativar o nível de procurado"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "TRIANGLE",
+                        "R",
+                        "R",
+                        "CROSS",
+                        "SQUARE",
+                        "CIRCLE"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "TRIANGLE",
+                        "R1",
+                        "R1",
+                        "CROSS",
+                        "SQUARE",
+                        "CIRCLE"
+                    ]
+                }
+            },
+            {
+                "id": "player_10",
+                "title": {
+                    "ES": "Cambiar la skin de Toni",
+                    "EN": "Change Toni's skin",
+                    "FR": "Changer le skin de Toni",
+                    "PT": "Mudar a skin do Toni"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "LEFT",
+                        "L",
+                        "L",
+                        "RIGHT",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "LEFT",
+                        "L1",
+                        "L1",
+                        "RIGHT",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ]
+                }
+            },
+            {
+                "id": "player_11",
+                "title": {
+                    "ES": "Aparecer en las noticias",
+                    "EN": "Show media attention level",
+                    "FR": "Afficher le niveau d'attention des médias",
+                    "PT": "Mostrar o nível de atenção da mídia"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "ES": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
+                            "EN": "A message will appear on the interface when you have a high wanted level",
+                            "FR": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
+                            "PT": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "psp": [
+                        "L",
+                        "UP",
+                        "RIGHT",
+                        "R",
+                        "TRIANGLE",
+                        "SQUARE",
+                        "DOWN",
+                        "CROSS"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "UP",
+                        "RIGHT",
+                        "R1",
+                        "TRIANGLE",
+                        "SQUARE",
+                        "DOWN",
+                        "CROSS"
+                    ]
+                }
+            }
+        ]
+    },
+    "Vehículos": {
+        "category": {
+            "ES": "Vehículos",
+            "EN": "Vehicles",
+            "FR": "Véhicules",
+            "PT": "Veículos"
+        },
+        "cheats": [
+            {
+                "id": "vehicles_1",
+                "title": {
+                    "ES": "Aparecer un Rhino",
+                    "EN": "Spawn Rhino",
+                    "FR": "Faire apparaître un Rhino",
+                    "PT": "Gerar um Rhino"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "LEFT",
+                        "L",
+                        "L",
+                        "RIGHT",
+                        "TRIANGLE",
+                        "CIRCLE"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "LEFT",
+                        "L1",
+                        "L1",
+                        "RIGHT",
+                        "TRIANGLE",
+                        "CIRCLE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_2",
+                "title": {
+                    "ES": "Aparecer un Trashmaster",
+                    "EN": "Spawn Trashmaster",
+                    "FR": "Faire apparaître un Trashmaster",
+                    "PT": "Gerar um Trashmaster"
+                },
+                "codes": {
+                    "psp": [
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "UP",
+                        "L",
+                        "L"
+                    ],
+                    "ps2": [
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "L1"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_3",
+                "title": {
+                    "ES": "Explotar todos los vehículos",
+                    "EN": "Blow up all vehicles",
+                    "FR": "Faire exploser tous les véhicules",
+                    "PT": "Explodir todos os veículos"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "LEFT",
+                        "L",
+                        "L",
+                        "RIGHT",
+                        "CROSS",
+                        "SQUARE"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "LEFT",
+                        "L1",
+                        "L1",
+                        "RIGHT",
+                        "CROSS",
+                        "SQUARE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_4",
+                "title": {
+                    "ES": "Los coches flotarán en el agua",
+                    "EN": "Cars float on water",
+                    "FR": "Les voitures flottent sur l'eau",
+                    "PT": "Carros flutuam na água"
+                },
+                "codes": {
+                    "psp": [
+                        "CIRCLE",
+                        "CROSS",
+                        "DOWN",
+                        "CIRCLE",
+                        "CROSS",
+                        "UP",
+                        "L",
+                        "L"
+                    ],
+                    "ps2": [
+                        "CIRCLE",
+                        "CROSS",
+                        "DOWN",
+                        "CIRCLE",
+                        "CROSS",
+                        "UP",
+                        "L1",
+                        "L1"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_5",
+                "title": {
+                    "ES": "Mejor conducción",
+                    "EN": "Better handling",
+                    "FR": "Meilleure conduite",
+                    "PT": "Melhor dirigibilidade"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "UP",
+                        "LEFT",
+                        "R",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "CROSS"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "UP",
+                        "LEFT",
+                        "R1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "DOWN",
+                        "CROSS"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_6",
+                "title": {
+                    "ES": "Motos con ruedas gigantes",
+                    "EN": "Bikes with giant wheels",
+                    "FR": "Motos avec des roues géantes",
+                    "PT": "Motos com rodas gigantes"
+                },
+                "codes": {
+                    "psp": [
+                        "CIRCLE",
+                        "RIGHT",
+                        "CROSS",
+                        "UP",
+                        "RIGHT",
+                        "CROSS",
+                        "L",
+                        "SQUARE"
+                    ],
+                    "ps2": [
+                        "CIRCLE",
+                        "RIGHT",
+                        "CROSS",
+                        "UP",
+                        "RIGHT",
+                        "CROSS",
+                        "L1",
+                        "SQUARE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_7",
+                "title": {
+                    "ES": "Conductores agresivos",
+                    "EN": "Aggressive drivers",
+                    "FR": "Conducteurs agressifs",
+                    "PT": "Motoristas agressivos"
+                },
+                "codes": {
+                    "psp": [
+                        "SQUARE",
+                        "SQUARE",
+                        "R",
+                        "CROSS",
+                        "CROSS",
+                        "L",
+                        "CIRCLE",
+                        "CIRCLE"
+                    ],
+                    "ps2": [
+                        "SQUARE",
+                        "SQUARE",
+                        "R1",
+                        "CROSS",
+                        "CROSS",
+                        "L1",
+                        "CIRCLE",
+                        "CIRCLE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_8",
+                "title": {
+                    "ES": "Tráfico blanco",
+                    "EN": "White traffic",
+                    "FR": "Circulation blanche",
+                    "PT": "Trânsito branco"
+                },
+                "codes": {
+                    "psp": [
+                        "SQUARE",
+                        "SQUARE",
+                        "R",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L",
+                        "TRIANGLE",
+                        "TRIANGLE"
+                    ],
+                    "ps2": [
+                        "SQUARE",
+                        "SQUARE",
+                        "R1",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "TRIANGLE",
+                        "TRIANGLE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_9",
+                "title": {
+                    "ES": "Tráfico negro",
+                    "EN": "Black traffic",
+                    "FR": "Circulation noire",
+                    "PT": "Trânsito negro"
+                },
+                "codes": {
+                    "psp": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "R",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "L",
+                        "SQUARE",
+                        "SQUARE"
+                    ],
+                    "ps2": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "R1",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "L1",
+                        "SQUARE",
+                        "SQUARE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_10",
+                "title": {
+                    "ES": "Tráfico cromado",
+                    "EN": "Chrome traffic",
+                    "FR": "Circulation chromée",
+                    "PT": "Trânsito cromado"
+                },
+                "codes": {
+                    "psp": [
+                        "TRIANGLE",
+                        "R",
+                        "L",
+                        "DOWN",
+                        "DOWN",
+                        "R",
+                        "R",
+                        "TRIANGLE"
+                    ],
+                    "ps2": [
+                        "TRIANGLE",
+                        "R1",
+                        "L1",
+                        "DOWN",
+                        "DOWN",
+                        "R1",
+                        "R1",
+                        "TRIANGLE"
+                    ]
+                }
+            },
+            {
+                "id": "vehicles_11",
+                "title": {
+                    "ES": "Todos los semáforos verdes",
+                    "EN": "All traffic lights green",
+                    "FR": "Tous les feux de circulation au vert",
+                    "PT": "Todos os semáforos verdes"
+                },
+                "codes": {
+                    "psp": [
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "R",
+                        "SQUARE",
+                        "SQUARE",
+                        "L",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps2": [
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "R1",
+                        "SQUARE",
+                        "SQUARE",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ]
+                }
+            }
+        ]
+    },
+    "Clima": {
+        "category": {
+            "ES": "Clima",
+            "EN": "Weather",
+            "FR": "Météo",
+            "PT": "Clima"
+        },
+        "cheats": [
+            {
+                "id": "weather_1",
+                "title": {
+                    "ES": "Clima soleado",
+                    "EN": "Sunny weather",
+                    "FR": "Temps ensoleillé",
+                    "PT": "Clima ensolarado"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "CIRCLE",
+                        "R",
+                        "R",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CROSS"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "CIRCLE",
+                        "R1",
+                        "R1",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CROSS"
+                    ]
+                }
+            },
+            {
+                "id": "weather_2",
+                "title": {
+                    "ES": "Clima despejado",
+                    "EN": "Clear weather",
+                    "FR": "Temps dégagé",
+                    "PT": "Tempo limpo"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "DOWN",
+                        "CIRCLE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "DOWN",
+                        "CIRCLE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "weather_3",
+                "title": {
+                    "ES": "Clima nublado",
+                    "EN": "Cloudy weather",
+                    "FR": "Temps nuageux",
+                    "PT": "Clima nublado"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "DOWN",
+                        "CROSS",
+                        "UP",
+                        "DOWN",
+                        "TRIANGLE",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "DOWN",
+                        "CROSS",
+                        "UP",
+                        "DOWN",
+                        "TRIANGLE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "weather_4",
+                "title": {
+                    "ES": "Clima lluvioso",
+                    "EN": "Rainy weather",
+                    "FR": "Temps pluvieux",
+                    "PT": "Tempo chuvoso"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "DOWN",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "CIRCLE",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "DOWN",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "CIRCLE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "weather_5",
+                "title": {
+                    "ES": "Niebla",
+                    "EN": "Foggy weather",
+                    "FR": "Temps brumeux",
+                    "PT": "Clima com neblina"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "DOWN",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN",
+                        "CROSS",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "UP",
+                        "DOWN",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN",
+                        "CROSS",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            }
+        ]
+    },
+    "Peatones": {
+        "category": {
+            "ES": "Peatones",
+            "EN": "Pedestrians",
+            "FR": "Piétons",
+            "PT": "Pedestres"
+        },
+        "cheats": [
+            {
+                "id": "peds_1",
+                "title": {
+                    "ES": "Pelea de peatones",
+                    "EN": "Pedestrian riot",
+                    "FR": "Émeute des piétons",
+                    "PT": "Motim de pedestres"
+                },
+                "codes": {
+                    "psp": ["L", "L", "R", "L", "L", "R", "LEFT", "SQUARE"],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "R1",
+                        "LEFT",
+                        "SQUARE"
+                    ]
+                }
+            },
+            {
+                "id": "peds_2",
+                "title": {
+                    "ES": "Los peatones odian a Toni",
+                    "EN": "Pedestrians hate Toni",
+                    "FR": "Les piétons détestent Toni",
+                    "PT": "Os pedestres odeiam Toni"
+                },
+                "codes": {
+                    "psp": ["L", "L", "R", "L", "L", "R", "UP", "TRIANGLE"],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "R1",
+                        "UP",
+                        "TRIANGLE"
+                    ]
+                }
+            },
+            {
+                "id": "peds_3",
+                "title": {
+                    "ES": "Los peatones tendrán armas",
+                    "EN": "Pedestrians carry weapons",
+                    "FR": "Les piétons portent des armes",
+                    "PT": "Os pedestres terão armas"
+                },
+                "codes": {
+                    "psp": ["R", "R", "L", "R", "R", "L", "RIGHT", "CIRCLE"],
+                    "ps2": [
+                        "R1",
+                        "R1",
+                        "L1",
+                        "R1",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ]
+                }
+            },
+            {
+                "id": "peds_4",
+                "title": {
+                    "ES": "Los peatones seguirán a Toni",
+                    "EN": "Pedestrians follow Toni",
+                    "FR": "Les piétons suivent Toni",
+                    "PT": "Os pedestres seguem Toni"
+                },
+                "codes": {
+                    "psp": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "peds_5",
+                "title": {
+                    "ES": "Los peatones se subirán al vehículo de Toni",
+                    "EN": "Pedestrians get into Toni's vehicle",
+                    "FR": "Les piétons monteront dans le véhicule de Toni",
+                    "PT": "Os pedestres entrarão no veículo de Toni"
+                },
+                "codes": {
+                    "psp": [
+                        "CROSS",
+                        "SQUARE",
+                        "DOWN",
+                        "CROSS",
+                        "SQUARE",
+                        "UP",
+                        "R",
+                        "R"
+                    ],
+                    "ps2": [
+                        "CROSS",
+                        "SQUARE",
+                        "DOWN",
+                        "CROSS",
+                        "SQUARE",
+                        "UP",
+                        "R1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "peds_6",
+                "title": {
+                    "ES": "Todos los personajes cabezones",
+                    "EN": "Big head mode",
+                    "FR": "Mode grosses têtes",
+                    "PT": "Modo cabeção"
+                },
+                "codes": {
+                    "psp": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CROSS",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CROSS",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            }
+        ]
+    },
+    "Otros": {
+        "category": {
+            "ES": "Otros",
+            "EN": "Other",
+            "FR": "Autres",
+            "PT": "Outros"
+        },
+        "cheats": [
+            {
+                "id": "other_1",
+                "title": {
+                    "ES": "Aumentar velocidad de juego",
+                    "EN": "Increase game speed",
+                    "FR": "Augmenter la vitesse du jeu",
+                    "PT": "Aumentar velocidade do jogo"
+                },
+                "codes": {
+                    "psp": ["R", "R", "L", "R", "R", "L", "DOWN", "CROSS"],
+                    "ps2": ["R1", "R1", "L1", "R1", "R1", "L1", "DOWN", "CROSS"]
+                }
+            },
+            {
+                "id": "other_2",
+                "title": {
+                    "ES": "Disminuir velocidad de juego",
+                    "EN": "Decrease game speed",
+                    "FR": "Réduire la vitesse du jeu",
+                    "PT": "Diminuir velocidade do jogo"
+                },
+                "codes": {
+                    "psp": [
+                        "R",
+                        "TRIANGLE",
+                        "CROSS",
+                        "R",
+                        "SQUARE",
+                        "CIRCLE",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps2": [
+                        "R1",
+                        "TRIANGLE",
+                        "CROSS",
+                        "R1",
+                        "SQUARE",
+                        "CIRCLE",
+                        "LEFT",
+                        "RIGHT"
+                    ]
+                }
+            },
+            {
+                "id": "other_3",
+                "title": {
+                    "ES": "Adelantar el reloj del juego",
+                    "EN": "Faster game clock",
+                    "FR": "Horloge du jeu accélérée",
+                    "PT": "Relógio do jogo acelerado"
+                },
+                "codes": {
+                    "psp": [
+                        "L",
+                        "L",
+                        "LEFT",
+                        "L",
+                        "L",
+                        "RIGHT",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "ps2": [
+                        "L1",
+                        "L1",
+                        "LEFT",
+                        "L1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE",
+                        "CROSS"
+                    ]
+                }
+            },
+            {
+                "id": "other_4",
+                "title": {
+                    "ES": "Mundo al revés",
+                    "EN": "Upside-down world",
+                    "FR": "Monde à l'envers",
+                    "PT": "Mundo de cabeça para baixo"
+                },
+                "codes": {
+                    "psp": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R",
+                        "L"
+                    ],
+                    "ps2": [
+                        "DOWN",
+                        "DOWN",
+                        "DOWN",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R1",
+                        "L1"
+                    ]
+                }
+            },
+            {
+                "id": "other_5",
+                "title": {
+                    "ES": "Mundo invertido",
+                    "EN": "Mirrored world",
+                    "FR": "Monde inversé",
+                    "PT": "Mundo invertido"
+                },
+                "codes": {
+                    "psp": [
+                        "CROSS",
+                        "CROSS",
+                        "CROSS",
+                        "DOWN",
+                        "DOWN",
+                        "RIGHT",
+                        "L",
+                        "R"
+                    ],
+                    "ps2": [
+                        "CROSS",
+                        "CROSS",
+                        "CROSS",
+                        "DOWN",
+                        "DOWN",
+                        "RIGHT",
+                        "L1",
+                        "R1"
+                    ]
+                }
+            },
+            {
+                "id": "other_6",
+                "title": {
+                    "ES": "Mostrar créditos del juego",
+                    "EN": "Show game credits",
+                    "FR": "Afficher les crédits du jeu",
+                    "PT": "Mostrar créditos do jogo"
+                },
+                "codes": {
+                    "psp": ["L", "R", "L", "R", "UP", "DOWN", "L", "R"],
+                    "ps2": ["L1", "R1", "L1", "R1", "UP", "DOWN", "L1", "R1"]
+                }
+            }
+        ]
+    },
+    "Multijugador": {
+        "category": {
+            "ES": "Multijugador",
+            "EN": "Multiplayer",
+            "FR": "Multijoueur",
+            "PT": "Multijogador"
+        },
+        "cheats": [
+            {
+                "id": "multiplayer_1",
+                "title": {
+                    "ES": "Desbloquear el 25% del contenido multijugador",
+                    "EN": "Unlock 25% of multiplayer content",
+                    "FR": "Débloquer 25 % du contenu multijoueur",
+                    "PT": "Desbloquear 25% do conteúdo multijogador"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "UP",
+                        "UP",
+                        "SQUARE",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "R",
+                        "L"
+                    ]
+                }
+            },
+            {
+                "id": "multiplayer_2",
+                "title": {
+                    "ES": "Desbloquear el 50% del contenido multijugador",
+                    "EN": "Unlock 50% of multiplayer content",
+                    "FR": "Débloquer 50 % du contenu multijoueur",
+                    "PT": "Desbloquear 50% do conteúdo multijogador"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CROSS",
+                        "L",
+                        "R"
+                    ]
+                }
+            },
+            {
+                "id": "multiplayer_3",
+                "title": {
+                    "ES": "Desbloquear el 75% del contenido multijugador",
+                    "EN": "Unlock 75% of multiplayer content",
+                    "FR": "Débloquer 75 % du contenu multijoueur",
+                    "PT": "Desbloquear 75% do conteúdo multijogador"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R",
+                        "L"
+                    ]
+                }
+            },
+            {
+                "id": "multiplayer_4",
+                "title": {
+                    "ES": "Desbloquear el 100% del contenido multijugador",
+                    "EN": "Unlock 100% of multiplayer content",
+                    "FR": "Débloquer 100 % du contenu multijoueur",
+                    "PT": "Desbloquear 100% do conteúdo multijogador"
+                },
+                "codes": {
+                    "psp": [
+                        "UP",
+                        "UP",
+                        "UP",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "L",
+                        "R"
+                    ]
+                }
+            }
+        ]
+    }
+}

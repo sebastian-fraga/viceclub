@@ -1,0 +1,5544 @@
+{
+    "Jugador": {
+        "category": {
+            "ES": "Jugador",
+            "EN": "Player",
+            "FR": "Joueur",
+            "PT": "Jogador"
+        },
+        "cheats": [
+            {
+                "id": "player_1",
+                "title": {
+                    "ES": "Salud al máximo",
+                    "EN": "Full health",
+                    "FR": "Santé maximale",
+                    "PT": "Saúde máxima"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "BLACK",
+                        "LT",
+                        "B",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "B",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "B",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZR",
+                        "L",
+                        "A",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "pc": ["ASPIRINE"]
+                }
+            },
+            {
+                "id": "player_2",
+                "title": {
+                    "ES": "Blindaje al máximo",
+                    "EN": "Full armor",
+                    "FR": "Armure maximale",
+                    "PT": "Blindagem máxima"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CROSS",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CROSS",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CROSS",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "CROSS",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "BLACK",
+                        "LT",
+                        "A",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "A",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "A",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZR",
+                        "L",
+                        "B",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "pc": ["PRECIOUSPROTECTION"]
+                }
+            },
+            {
+                "id": "player_3",
+                "title": {
+                    "ES": "Suicidarse",
+                    "EN": "Commit suicide",
+                    "FR": "Se suicider",
+                    "PT": "Cometer suicídio"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "L1"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "WHITE",
+                        "DOWN",
+                        "RT",
+                        "LEFT",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "WHITE",
+                        "LT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "LT",
+                        "DOWN",
+                        "RB",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "LT",
+                        "LB"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "LT",
+                        "DOWN",
+                        "RB",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "LT",
+                        "LB"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "ZL",
+                        "DOWN",
+                        "R",
+                        "LEFT",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "ZL",
+                        "L"
+                    ],
+                    "pc": ["ICANTTAKEITANYMORE"]
+                }
+            },
+            {
+                "id": "player_4",
+                "title": {
+                    "ES": "Set de armas básicas",
+                    "EN": "Basic Weapons set",
+                    "FR": "Ensemble d'armes de base",
+                    "PT": "Conjunto de armas básicas"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xboxOne",
+                            "xboxSeries",
+                            "switch",
+                            "pc"
+                        ],
+                        "note": {
+                            "ES": "Otorga el Puño americano, Bate de béisbol, Cócteles molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de francotirador y Lanzallamas.",
+                            "EN": "Grants Brass Knuckles, Baseball Bat, Molotov Cocktails, Pistol, Shotgun, Tec-9, Kruger, Sniper Rifle, and Flamethrower.",
+                            "FR": "Accorde les Poings américains, la batte de baseball, les cocktails Molotov, le pistolet, le fusil à pompe, le Tec-9, le Kruger, le fusil de précision et le lance-flammes.",
+                            "PT": "Concede os Socos Ingleses, Taco de Beisebol, Coquetéis Molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de Precisão e Lança-chamas."
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "BLACK",
+                        "LT",
+                        "BLACK",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZR",
+                        "L",
+                        "ZR",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "pc": ["THUGSTOOLS"]
+                }
+            },
+            {
+                "id": "player_5",
+                "title": {
+                    "ES": "Set de armas intermedias",
+                    "EN": "Intermediate Weapons set",
+                    "FR": "Ensemble d'armes intermédiaires",
+                    "PT": "Conjunto de armas intermediárias"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xboxOne",
+                            "xboxSeries",
+                            "switch",
+                            "pc"
+                        ],
+                        "note": {
+                            "ES": "Otorga la Katana, Granadas a control remoto, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
+                            "EN": "Grants the Katana, Remote Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
+                            "FR": "Accorde le katana, les grenades télécommandées, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
+                            "PT": "Concede a Katana, Granadas por Controle Remoto, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "BLACK",
+                        "LT",
+                        "BLACK",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZR",
+                        "L",
+                        "ZR",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "pc": ["PROFESSIONALTOOLS"]
+                }
+            },
+            {
+                "id": "player_6",
+                "title": {
+                    "ES": "Set de armas avanzadas",
+                    "EN": "Advanced Weapons set",
+                    "FR": "Ensemble d'armes avancées",
+                    "PT": "Conjunto de armas avançadas"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xboxOne",
+                            "xboxSeries",
+                            "switch",
+                            "pc"
+                        ],
+                        "note": {
+                            "ES": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de francotirador .308 y Minigun.",
+                            "EN": "Grants the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, MP5, M4, .308 Sniper Rifle, and Minigun.",
+                            "FR": "Accorde la tronçonneuse, les grenades, le revolver .357, le S.P.A.S. 12, le MP5, le M4, le fusil de précision .308 et la minigun.",
+                            "PT": "Concede a Motosserra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de Precisão .308 e Minigun."
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R2",
+                        "L1",
+                        "R2",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "BLACK",
+                        "LT",
+                        "BLACK",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "DOWN"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "DOWN"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RT",
+                        "LB",
+                        "RT",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "DOWN",
+                        "DOWN"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZR",
+                        "L",
+                        "ZR",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP",
+                        "LEFT",
+                        "DOWN",
+                        "RIGHT",
+                        "UP"
+                    ],
+                    "pc": ["NUTTERTOOLS"]
+                }
+            },
+            {
+                "id": "player_7",
+                "title": {
+                    "ES": "Obtener 2 niveles de búsqueda",
+                    "EN": "Get 2 wanted levels",
+                    "FR": "Obtenir 2 niveaux de recherche",
+                    "PT": "Obter 2 níveis de procurado"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "RT",
+                        "B",
+                        "BLACK",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RB",
+                        "B",
+                        "RT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RB",
+                        "B",
+                        "RT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "switch": [
+                        "R",
+                        "R",
+                        "A",
+                        "ZR",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "pc": ["YOUWONTTAKEMEALIVE"]
+                }
+            },
+            {
+                "id": "player_8",
+                "title": {
+                    "ES": "Eliminar nivel de búsqueda",
+                    "EN": "Remove wanted level",
+                    "FR": "Supprimer le niveau de recherche",
+                    "PT": "Remover nível de procurado"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "RT",
+                        "B",
+                        "BLACK",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "RB",
+                        "B",
+                        "RT",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "RB",
+                        "B",
+                        "RT",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "switch": [
+                        "R",
+                        "R",
+                        "A",
+                        "ZR",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "pc": ["LEAVEMEALONE"]
+                }
+            },
+            {
+                "id": "player_9",
+                "title": {
+                    "ES": "Aparecer en las noticias",
+                    "EN": "Show media attention level",
+                    "FR": "Afficher le niveau d'attention des médias",
+                    "PT": "Mostrar o nível de atenção da mídia"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xboxOne",
+                            "xboxSeries",
+                            "switch",
+                            "pc"
+                        ],
+                        "note": {
+                            "ES": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
+                            "EN": "A message will appear on the interface when you have a high wanted level",
+                            "FR": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
+                            "PT": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "B",
+                        "UP",
+                        "LT",
+                        "RIGHT",
+                        "RT",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "Y"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "B",
+                        "UP",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "Y"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "B",
+                        "UP",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "Y"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "A",
+                        "UP",
+                        "L",
+                        "RIGHT",
+                        "R",
+                        "RIGHT",
+                        "UP",
+                        "Y",
+                        "X"
+                    ],
+                    "pc": ["CHASESTAT"]
+                }
+            },
+            {
+                "id": "player_10",
+                "title": {
+                    "ES": "Cambiar la skin de Tommy",
+                    "EN": "Change Tommy's skin",
+                    "FR": "Changer le skin de Tommy",
+                    "PT": "Mudar a skin do Tommy"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "L1",
+                        "L2",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "L1",
+                        "L2",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "L1",
+                        "L2",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "L1",
+                        "L2",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "LT",
+                        "WHITE",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "LB",
+                        "LT",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "LB",
+                        "LT",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "RIGHT",
+                        "LEFT",
+                        "UP",
+                        "L",
+                        "ZL",
+                        "LEFT",
+                        "UP",
+                        "DOWN",
+                        "RIGHT"
+                    ],
+                    "pc": ["STILLLIKEDRESSINGUP"]
+                }
+            },
+            {
+                "id": "player_11",
+                "title": {
+                    "ES": "Tommy delgado",
+                    "EN": "Thin Tommy",
+                    "FR": "Tommy maigre",
+                    "PT": "Tommy magro"
+                },
+                "codes": {
+                    "pc": ["PROGRAMMER"]
+                }
+            },
+            {
+                "id": "player_12",
+                "title": {
+                    "ES": "Tommy gordo",
+                    "EN": "Fat Tommy",
+                    "FR": "Tommy gros",
+                    "PT": "Tommy gordo"
+                },
+                "codes": {
+                    "pc": ["DEEPFRIEDMARSBARS"]
+                }
+            },
+            {
+                "id": "player_13",
+                "title": {
+                    "ES": "Tommy fumará",
+                    "EN": "Smoking Tommy",
+                    "FR": "Tommy fumeur",
+                    "PT": "Tommy fumante"
+                },
+                "codes": {
+                    "pc": ["CERTAINDEATH"]
+                }
+            }
+        ]
+    },
+    "Vehículos": {
+        "category": {
+            "ES": "Vehículos",
+            "EN": "Vehicles",
+            "FR": "Véhicules",
+            "PT": "Veículos"
+        },
+        "cheats": [
+            {
+                "id": "vehicles_1",
+                "title": {
+                    "ES": "Aparecer un Sabre Turbo",
+                    "EN": "Spawn Sabre Turbo",
+                    "FR": "Faire apparaître un Sabre Turbo",
+                    "PT": "Gerar um Sabre Turbo"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "L2",
+                        "DOWN",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "LEFT"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "WHITE",
+                        "DOWN",
+                        "WHITE",
+                        "WHITE",
+                        "A",
+                        "RT",
+                        "LT",
+                        "B",
+                        "LEFT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "LT",
+                        "DOWN",
+                        "LT",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "B",
+                        "LEFT"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "LT",
+                        "DOWN",
+                        "LT",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "B",
+                        "LEFT"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "ZL",
+                        "DOWN",
+                        "ZL",
+                        "ZL",
+                        "B",
+                        "R",
+                        "L",
+                        "A",
+                        "LEFT"
+                    ],
+                    "pc": ["GETTHEREFAST"]
+                }
+            },
+            {
+                "id": "vehicles_2",
+                "title": {
+                    "ES": "Aparecer un Caddy",
+                    "EN": "Spawn Caddy",
+                    "FR": "Faire apparaître un Caddy",
+                    "PT": "Gerar um Caddy"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L1",
+                        "UP",
+                        "R1",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L1",
+                        "UP",
+                        "R1",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "L1",
+                        "UP",
+                        "R1",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "L1",
+                        "UP",
+                        "R1",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "xbox": [
+                        "B",
+                        "LT",
+                        "UP",
+                        "RT",
+                        "WHITE",
+                        "A",
+                        "RT",
+                        "LT",
+                        "B",
+                        "A"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "LB",
+                        "UP",
+                        "RB",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "B",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "LB",
+                        "UP",
+                        "RB",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "B",
+                        "A"
+                    ],
+                    "switch": [
+                        "A",
+                        "L",
+                        "UP",
+                        "R",
+                        "ZL",
+                        "B",
+                        "R",
+                        "L",
+                        "A",
+                        "B"
+                    ],
+                    "pc": ["BETTERTHANWALKING"]
+                }
+            },
+            {
+                "id": "vehicles_3",
+                "title": {
+                    "ES": "Aparecer un Romero",
+                    "EN": "Spawn Romero",
+                    "FR": "Faire apparaître un Romero",
+                    "PT": "Gerar um Romero"
+                },
+                "codes": {
+                    "ps2": [
+                        "DOWN",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps3": [
+                        "DOWN",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps4": [
+                        "DOWN",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "ps5": [
+                        "DOWN",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xbox": [
+                        "DOWN",
+                        "BLACK",
+                        "DOWN",
+                        "RT",
+                        "WHITE",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xboxOne": [
+                        "DOWN",
+                        "RT",
+                        "DOWN",
+                        "RB",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "xboxSeries": [
+                        "DOWN",
+                        "RT",
+                        "DOWN",
+                        "RB",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "switch": [
+                        "DOWN",
+                        "ZR",
+                        "DOWN",
+                        "R",
+                        "ZL",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "LEFT",
+                        "RIGHT"
+                    ],
+                    "pc": ["THELASTRIDE"]
+                }
+            },
+            {
+                "id": "vehicles_4",
+                "title": {
+                    "ES": "Aparecer un Trashmaster",
+                    "EN": "Spawn Trashmaster",
+                    "FR": "Faire apparaître un Trashmaster",
+                    "PT": "Gerar um Trashmaster"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "R1",
+                        "CIRCLE",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "R1",
+                        "CIRCLE",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "R1",
+                        "CIRCLE",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "R1",
+                        "CIRCLE",
+                        "R1",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "xbox": [
+                        "B",
+                        "RT",
+                        "B",
+                        "RT",
+                        "LEFT",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "RB",
+                        "B",
+                        "RB",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "RB",
+                        "B",
+                        "RB",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "switch": [
+                        "A",
+                        "ZR",
+                        "A",
+                        "R",
+                        "LEFT",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "A",
+                        "RIGHT"
+                    ],
+                    "pc": ["RUBBISHCAR"]
+                }
+            },
+            {
+                "id": "vehicles_5",
+                "title": {
+                    "ES": "Aparecer una limusina Love Fist",
+                    "EN": "Spawn Love Fist Limo",
+                    "FR": "Faire apparaître une limousine Love Fist",
+                    "PT": "Gerar uma limusine Love Fist"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "UP",
+                        "L2",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "UP",
+                        "L2",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "UP",
+                        "L2",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "UP",
+                        "L2",
+                        "LEFT",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "UP",
+                        "WHITE",
+                        "LEFT",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "UP",
+                        "LT",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "UP",
+                        "LT",
+                        "LEFT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "B",
+                        "RIGHT"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "UP",
+                        "ZL",
+                        "LEFT",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "A",
+                        "RIGHT"
+                    ],
+                    "pc": ["ROCKANDROLLCAR"]
+                }
+            },
+            {
+                "id": "vehicles_6",
+                "title": {
+                    "ES": "Aparecer un Rhino",
+                    "EN": "Spawn Rhino",
+                    "FR": "Faire apparaître un Rhino",
+                    "PT": "Gerar um Rhino"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "L2",
+                        "R1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "L2",
+                        "R1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "L2",
+                        "R1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "L2",
+                        "R1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "xbox": [
+                        "B",
+                        "B",
+                        "LT",
+                        "B",
+                        "B",
+                        "B",
+                        "LT",
+                        "WHITE",
+                        "RT",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "B",
+                        "LB",
+                        "B",
+                        "B",
+                        "B",
+                        "LB",
+                        "LT",
+                        "RB",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "B",
+                        "LB",
+                        "B",
+                        "B",
+                        "B",
+                        "LB",
+                        "LT",
+                        "RB",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "switch": [
+                        "A",
+                        "A",
+                        "L",
+                        "A",
+                        "A",
+                        "A",
+                        "L",
+                        "ZL",
+                        "R",
+                        "X",
+                        "A",
+                        "X"
+                    ],
+                    "pc": ["PANZER"]
+                }
+            },
+            {
+                "id": "vehicles_7",
+                "title": {
+                    "ES": "Aparecer un Hotring Racer V2",
+                    "EN": "Spawn Hotring Racer V2",
+                    "FR": "Faire apparaître un Hotring Racer V2",
+                    "PT": "Gerar um Hotring Racer V2"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "RIGHT",
+                        "L1",
+                        "L2",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R1"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "RIGHT",
+                        "L1",
+                        "L2",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R1"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "RIGHT",
+                        "L1",
+                        "L2",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R1"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "RIGHT",
+                        "L1",
+                        "L2",
+                        "CROSS",
+                        "CROSS",
+                        "SQUARE",
+                        "R1"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "B",
+                        "BLACK",
+                        "RIGHT",
+                        "LT",
+                        "WHITE",
+                        "A",
+                        "A",
+                        "X",
+                        "RT"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "B",
+                        "RT",
+                        "RIGHT",
+                        "LB",
+                        "LT",
+                        "A",
+                        "A",
+                        "X",
+                        "RB"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "B",
+                        "RT",
+                        "RIGHT",
+                        "LB",
+                        "LT",
+                        "A",
+                        "A",
+                        "X",
+                        "RB"
+                    ],
+                    "switch": [
+                        "R",
+                        "A",
+                        "ZR",
+                        "RIGHT",
+                        "L",
+                        "ZL",
+                        "B",
+                        "B",
+                        "Y",
+                        "R"
+                    ],
+                    "pc": ["GETTHEREAMAZINGLYFAST"]
+                }
+            },
+            {
+                "id": "vehicles_8",
+                "title": {
+                    "ES": "Aparecer un Hotring Racer V3",
+                    "EN": "Spawn Hotring Racer V3",
+                    "FR": "Faire apparaître un Hotring Racer V3",
+                    "PT": "Gerar um Hotring Racer V3"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT",
+                        "L1",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "R2"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT",
+                        "L1",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "R2"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT",
+                        "L1",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "R2"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "L1",
+                        "CIRCLE",
+                        "RIGHT",
+                        "L1",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "R2"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "LT",
+                        "B",
+                        "RIGHT",
+                        "LT",
+                        "RT",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "BLACK"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "LB",
+                        "B",
+                        "RIGHT",
+                        "LB",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "RT"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "LB",
+                        "B",
+                        "RIGHT",
+                        "LB",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "RT"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "L",
+                        "A",
+                        "RIGHT",
+                        "L",
+                        "R",
+                        "RIGHT",
+                        "UP",
+                        "A",
+                        "ZR"
+                    ],
+                    "pc": ["GETTHEREVERYFASTINDEED"]
+                }
+            },
+            {
+                "id": "vehicles_9",
+                "title": {
+                    "ES": "Aparecer un Bloodring Banger",
+                    "EN": "Spawn Bloodring Banger",
+                    "FR": "Faire apparaître un Bloodring Banger",
+                    "PT": "Gerar um Bloodring Banger"
+                },
+                "codes": {
+                    "ps2": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "L1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "L2"
+                    ],
+                    "ps3": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "L1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "L2"
+                    ],
+                    "ps4": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "L1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "L2"
+                    ],
+                    "ps5": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "L1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "L2"
+                    ],
+                    "xbox": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "LT",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "WHITE"
+                    ],
+                    "xboxOne": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "LB",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "LT"
+                    ],
+                    "xboxSeries": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "LB",
+                        "RIGHT",
+                        "UP",
+                        "X",
+                        "LT"
+                    ],
+                    "switch": [
+                        "UP",
+                        "RIGHT",
+                        "RIGHT",
+                        "L",
+                        "RIGHT",
+                        "UP",
+                        "Y",
+                        "ZL"
+                    ],
+                    "pc": ["GETTHEREQUICKLY"]
+                }
+            },
+            {
+                "id": "vehicles_10",
+                "title": {
+                    "ES": "Aparecer un Bloodring Banger V2",
+                    "EN": "Spawn Bloodring Banger V2",
+                    "FR": "Faire apparaître un Bloodring Banger V2",
+                    "PT": "Gerar um Bloodring Banger V2"
+                },
+                "codes": {
+                    "ps2": [
+                        "DOWN",
+                        "R1",
+                        "CIRCLE",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "ps3": [
+                        "DOWN",
+                        "R1",
+                        "CIRCLE",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "ps4": [
+                        "DOWN",
+                        "R1",
+                        "CIRCLE",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "ps5": [
+                        "DOWN",
+                        "R1",
+                        "CIRCLE",
+                        "L2",
+                        "L2",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "xbox": [
+                        "DOWN",
+                        "RT",
+                        "B",
+                        "WHITE",
+                        "WHITE",
+                        "A",
+                        "RT",
+                        "LT",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "xboxOne": [
+                        "DOWN",
+                        "RB",
+                        "B",
+                        "LT",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "xboxSeries": [
+                        "DOWN",
+                        "RB",
+                        "B",
+                        "LT",
+                        "LT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "switch": [
+                        "DOWN",
+                        "R",
+                        "A",
+                        "ZL",
+                        "ZL",
+                        "B",
+                        "R",
+                        "L",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "pc": ["TRAVELINSTYLE"]
+                }
+            },
+            {
+                "id": "vehicles_11",
+                "title": {
+                    "ES": "Explotar todos los vehículos",
+                    "EN": "Blow up all vehicles",
+                    "FR": "Faire exploser tous les véhicules",
+                    "PT": "Explodir todos os veículos"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "L2",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "R2",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "L2",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "R2",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "L2",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "R2",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "L2",
+                        "R1",
+                        "L1",
+                        "L2",
+                        "R2",
+                        "SQUARE",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE",
+                        "L2",
+                        "L1"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "WHITE",
+                        "RT",
+                        "LT",
+                        "WHITE",
+                        "BLACK",
+                        "X",
+                        "Y",
+                        "B",
+                        "Y",
+                        "WHITE",
+                        "LT"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "LT",
+                        "RB",
+                        "LB",
+                        "LT",
+                        "RT",
+                        "X",
+                        "Y",
+                        "B",
+                        "Y",
+                        "LT",
+                        "LB"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "LT",
+                        "RB",
+                        "LB",
+                        "LT",
+                        "RT",
+                        "X",
+                        "Y",
+                        "B",
+                        "Y",
+                        "LT",
+                        "LB"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "ZL",
+                        "R",
+                        "L",
+                        "ZL",
+                        "ZR",
+                        "Y",
+                        "X",
+                        "A",
+                        "X",
+                        "ZL",
+                        "L"
+                    ],
+                    "pc": ["BIGBANG"]
+                }
+            },
+            {
+                "id": "vehicles_12",
+                "title": {
+                    "ES": "Coches voladores",
+                    "EN": "Flying cars",
+                    "FR": "Voitures volantes",
+                    "PT": "Carros voadores"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "DOWN",
+                        "L1",
+                        "R1"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "DOWN",
+                        "L1",
+                        "R1"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "DOWN",
+                        "L1",
+                        "R1"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "DOWN",
+                        "L1",
+                        "R1"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "BLACK",
+                        "B",
+                        "RT",
+                        "WHITE",
+                        "DOWN",
+                        "LT",
+                        "RT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "DOWN",
+                        "LB",
+                        "RB"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "DOWN",
+                        "LB",
+                        "RB"
+                    ],
+                    "switch": ["RIGHT", "ZR", "A", "R", "ZL", "DOWN", "L", "R"],
+                    "pc": ["COMEFLYWITHME"]
+                }
+            },
+            {
+                "id": "vehicles_13",
+                "title": {
+                    "ES": "Barcos voladores",
+                    "EN": "Flying boats",
+                    "FR": "Bateaux volants",
+                    "PT": "Barcos voadores"
+                },
+                "codes": {
+                    "pc": ["AIRSHIP"]
+                }
+            },
+            {
+                "id": "vehicles_14",
+                "title": {
+                    "ES": "Los coches flotarán en el agua",
+                    "EN": "Cars float on water",
+                    "FR": "Les voitures flottent sur l'eau",
+                    "PT": "Carros flutuam na água"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "SQUARE",
+                        "R1",
+                        "R2"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "SQUARE",
+                        "R1",
+                        "R2"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "SQUARE",
+                        "R1",
+                        "R2"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "SQUARE",
+                        "R1",
+                        "R2"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "BLACK",
+                        "B",
+                        "RT",
+                        "WHITE",
+                        "X",
+                        "RT",
+                        "BLACK"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "X",
+                        "RB",
+                        "RT"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "X",
+                        "RB",
+                        "RT"
+                    ],
+                    "switch": ["RIGHT", "ZR", "A", "R", "ZL", "Y", "R", "ZR"],
+                    "pc": ["SEAWAYS"]
+                }
+            },
+            {
+                "id": "vehicles_15",
+                "title": {
+                    "ES": "Coches invisibles",
+                    "EN": "Invisible cars",
+                    "FR": "Voitures invisibles",
+                    "PT": "Carros invisíveis"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "ES": "Truco removido en la Edición Definitiva.",
+                            "EN": "Cheat removed in the Definitive Edition.",
+                            "FR": "Triche supprimée dans la Definitive Edition.",
+                            "PT": "Trapaça removida na Definitive Edition."
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "TRIANGLE",
+                        "L1",
+                        "TRIANGLE",
+                        "R2",
+                        "SQUARE",
+                        "L1",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "TRIANGLE",
+                        "L1",
+                        "TRIANGLE",
+                        "R2",
+                        "SQUARE",
+                        "L1",
+                        "L1"
+                    ],
+                    "xbox": ["Y", "LT", "Y", "BLACK", "X", "LT", "LT"],
+                    "switch": ["X", "L", "X", "ZR", "Y", "L", "L"],
+                    "pc": ["WHEELSAREALLINEED"]
+                }
+            },
+            {
+                "id": "vehicles_16",
+                "title": {
+                    "ES": "Mejor conducción",
+                    "EN": "Better handling",
+                    "FR": "Meilleure conduite",
+                    "PT": "Melhor dirigibilidade"
+                },
+                "codes": {
+                    "ps2": [
+                        "TRIANGLE",
+                        "R1",
+                        "R1",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "TRIANGLE",
+                        "R1",
+                        "R1",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "TRIANGLE",
+                        "R1",
+                        "R1",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "TRIANGLE",
+                        "R1",
+                        "R1",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L1"
+                    ],
+                    "xbox": [
+                        "Y",
+                        "RT",
+                        "RT",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "BLACK",
+                        "LT"
+                    ],
+                    "xboxOne": [
+                        "Y",
+                        "RB",
+                        "RB",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RT",
+                        "LB"
+                    ],
+                    "xboxSeries": [
+                        "Y",
+                        "RB",
+                        "RB",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RT",
+                        "LB"
+                    ],
+                    "switch": ["X", "R", "R", "LEFT", "R", "L", "ZR", "L"],
+                    "pc": ["GRIPISEVERYTHING"]
+                }
+            },
+            {
+                "id": "vehicles_17",
+                "title": {
+                    "ES": "Vehículos con ruedas gigantes",
+                    "EN": "Vehicles with giant wheels",
+                    "FR": "Véhicules avec des roues géantes",
+                    "PT": "Veículos com rodas gigantes"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "RIGHT",
+                        "R2",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "RIGHT",
+                        "R2",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "RIGHT",
+                        "R2",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "RIGHT",
+                        "R2",
+                        "SQUARE",
+                        "UP",
+                        "DOWN",
+                        "SQUARE"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "A",
+                        "Y",
+                        "RIGHT",
+                        "BLACK",
+                        "X",
+                        "UP",
+                        "DOWN",
+                        "X"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "A",
+                        "Y",
+                        "RIGHT",
+                        "RT",
+                        "X",
+                        "UP",
+                        "DOWN",
+                        "X"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "A",
+                        "Y",
+                        "RIGHT",
+                        "RT",
+                        "X",
+                        "UP",
+                        "DOWN",
+                        "X"
+                    ],
+                    "switch": [
+                        "R",
+                        "B",
+                        "X",
+                        "RIGHT",
+                        "ZR",
+                        "Y",
+                        "UP",
+                        "DOWN",
+                        "Y"
+                    ],
+                    "pc": ["LOADSOFLITTLETHINGS"]
+                }
+            },
+            {
+                "id": "vehicles_18",
+                "title": {
+                    "ES": "Tráfico agresivo",
+                    "EN": "Aggressive traffic",
+                    "FR": "Circulation agressive",
+                    "PT": "Trânsito agressivo"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L2"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L2"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L2"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CIRCLE",
+                        "R1",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R2",
+                        "L2"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "B",
+                        "RT",
+                        "WHITE",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "BLACK",
+                        "WHITE"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RT",
+                        "LT"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "B",
+                        "RB",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RT",
+                        "LT"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "A",
+                        "R",
+                        "ZL",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "ZR",
+                        "ZL"
+                    ],
+                    "pc": ["MIAMITRAFFIC"]
+                }
+            },
+            {
+                "id": "vehicles_19",
+                "title": {
+                    "ES": "Tráfico negro",
+                    "EN": "Black traffic",
+                    "FR": "Circulation noire",
+                    "PT": "Trânsito negro"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L2",
+                        "UP",
+                        "R1",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "CIRCLE"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L2",
+                        "UP",
+                        "R1",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "CIRCLE"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "L2",
+                        "UP",
+                        "R1",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "CIRCLE"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "L2",
+                        "UP",
+                        "R1",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "LEFT",
+                        "CIRCLE"
+                    ],
+                    "xbox": [
+                        "B",
+                        "WHITE",
+                        "UP",
+                        "RT",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "LT",
+                        "LEFT",
+                        "B"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "LT",
+                        "UP",
+                        "RB",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "B"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "LT",
+                        "UP",
+                        "RB",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LEFT",
+                        "B"
+                    ],
+                    "switch": [
+                        "A",
+                        "ZL",
+                        "UP",
+                        "R",
+                        "LEFT",
+                        "B",
+                        "R",
+                        "L",
+                        "LEFT",
+                        "A"
+                    ],
+                    "pc": ["IWANTITPAINTEDBLACK"]
+                }
+            },
+            {
+                "id": "vehicles_20",
+                "title": {
+                    "ES": "Tráfico rosa",
+                    "EN": "Pink traffic",
+                    "FR": "Circulation rose",
+                    "PT": "Trânsito rosa"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "xbox": [
+                        "B",
+                        "LT",
+                        "DOWN",
+                        "WHITE",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "LT",
+                        "RIGHT",
+                        "A"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "RIGHT",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "RIGHT",
+                        "A"
+                    ],
+                    "switch": [
+                        "A",
+                        "L",
+                        "DOWN",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "R",
+                        "L",
+                        "RIGHT",
+                        "A"
+                    ],
+                    "pc": ["AHAIRDRESSERSCAR"]
+                }
+            },
+            {
+                "id": "vehicles_21",
+                "title": {
+                    "ES": "Todos los semáforos verdes",
+                    "EN": "All traffic lights green",
+                    "FR": "Tous les feux de circulation au vert",
+                    "PT": "Todos os semáforos verdes"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "L2",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R1",
+                        "R1"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "L2",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R1",
+                        "R1"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "L2",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R1",
+                        "R1"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "L2",
+                        "L2",
+                        "LEFT",
+                        "R1",
+                        "L1",
+                        "R1",
+                        "R1"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "RT",
+                        "UP",
+                        "WHITE",
+                        "WHITE",
+                        "LEFT",
+                        "RT",
+                        "LT",
+                        "RT",
+                        "RT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "RB",
+                        "UP",
+                        "LT",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RB",
+                        "RB"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "RB",
+                        "UP",
+                        "LT",
+                        "LT",
+                        "LEFT",
+                        "RB",
+                        "LB",
+                        "RB",
+                        "RB"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "R",
+                        "UP",
+                        "ZL",
+                        "ZL",
+                        "LEFT",
+                        "R",
+                        "L",
+                        "R",
+                        "R"
+                    ],
+                    "pc": ["GREENLIGHT"]
+                }
+            }
+        ]
+    },
+    "Clima": {
+        "category": {
+            "ES": "Clima",
+            "EN": "Weather",
+            "FR": "Météo",
+            "PT": "Clima"
+        },
+        "cheats": [
+            {
+                "id": "weather_1",
+                "title": {
+                    "ES": "Clima soleado",
+                    "EN": "Sunny weather",
+                    "FR": "Temps ensoleillé",
+                    "PT": "Clima ensolarado"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "DOWN"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "DOWN"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "DOWN"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "DOWN"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "A",
+                        "LT",
+                        "LT",
+                        "WHITE",
+                        "WHITE",
+                        "WHITE",
+                        "DOWN"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "DOWN"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "DOWN"
+                    ],
+                    "switch": ["ZR", "B", "L", "L", "ZL", "ZL", "ZL", "DOWN"],
+                    "pc": ["ALOVELYDAY"]
+                }
+            },
+            {
+                "id": "weather_2",
+                "title": {
+                    "ES": "Clima despejado",
+                    "EN": "Clear weather",
+                    "FR": "Temps dégagé",
+                    "PT": "Tempo limpo"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "TRIANGLE"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "A",
+                        "LT",
+                        "LT",
+                        "WHITE",
+                        "WHITE",
+                        "WHITE",
+                        "Y"
+                    ],
+                    "xboxOne": ["RT", "A", "LB", "LB", "LT", "LT", "LT", "Y"],
+                    "xboxSeries": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "Y"
+                    ],
+                    "switch": ["ZR", "B", "L", "L", "ZL", "ZL", "ZL", "X"],
+                    "pc": ["APLEASANTDAY"]
+                }
+            },
+            {
+                "id": "weather_3",
+                "title": {
+                    "ES": "Clima nublado",
+                    "EN": "Cloudy weather",
+                    "FR": "Temps nuageux",
+                    "PT": "Clima nublado"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "SQUARE"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "SQUARE"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "SQUARE"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "SQUARE"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "A",
+                        "LT",
+                        "LT",
+                        "WHITE",
+                        "WHITE",
+                        "WHITE",
+                        "X"
+                    ],
+                    "xboxOne": ["RT", "A", "LB", "LB", "LT", "LT", "LT", "X"],
+                    "xboxSeries": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "X"
+                    ],
+                    "switch": ["ZR", "B", "L", "L", "ZL", "ZL", "ZL", "Y"],
+                    "pc": ["ABITDRIEG"]
+                }
+            },
+            {
+                "id": "weather_4",
+                "title": {
+                    "ES": "Tormenta",
+                    "EN": "Stormy weather",
+                    "FR": "Temps orageux",
+                    "PT": "Clima tempestuoso"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CIRCLE"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CIRCLE"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CIRCLE"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CIRCLE"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "A",
+                        "LT",
+                        "LT",
+                        "WHITE",
+                        "WHITE",
+                        "WHITE",
+                        "B"
+                    ],
+                    "xboxOne": ["RT", "A", "LB", "LB", "LT", "LT", "LT", "B"],
+                    "xboxSeries": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "B"
+                    ],
+                    "switch": ["ZR", "B", "L", "L", "ZL", "ZL", "ZL", "A"],
+                    "pc": ["CATSANDDOGS"]
+                }
+            },
+            {
+                "id": "weather_5",
+                "title": {
+                    "ES": "Niebla",
+                    "EN": "Foggy weather",
+                    "FR": "Temps brumeux",
+                    "PT": "Clima com neblina"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CROSS"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "L2",
+                        "L2",
+                        "L2",
+                        "CROSS"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "A",
+                        "LT",
+                        "LT",
+                        "WHITE",
+                        "WHITE",
+                        "WHITE",
+                        "A"
+                    ],
+                    "xboxOne": ["RT", "A", "LB", "LB", "LT", "LT", "LT", "A"],
+                    "xboxSeries": [
+                        "RT",
+                        "A",
+                        "LB",
+                        "LB",
+                        "LT",
+                        "LT",
+                        "LT",
+                        "A"
+                    ],
+                    "switch": ["ZR", "B", "L", "L", "ZL", "ZL", "ZL", "B"],
+                    "pc": ["CANTSEEATHING"]
+                }
+            }
+        ]
+    },
+    "Peatones": {
+        "category": {
+            "ES": "Peatones",
+            "EN": "Pedestrians",
+            "FR": "Piétons",
+            "PT": "Pedestres"
+        },
+        "cheats": [
+            {
+                "id": "peds_1",
+                "title": {
+                    "ES": "Pelea de peatones",
+                    "EN": "Pedestrian riot",
+                    "FR": "Émeute des piétons",
+                    "PT": "Motim de pedestres"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
+                        "note": {
+                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                        },
+                        "noteType": "warning"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L1"
+                    ],
+                    "xbox": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "A",
+                        "BLACK",
+                        "RT",
+                        "WHITE",
+                        "LT"
+                    ],
+                    "xboxOne": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "RB",
+                        "LT",
+                        "LB"
+                    ],
+                    "xboxSeries": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "RB",
+                        "LT",
+                        "LB"
+                    ],
+                    "switch": [
+                        "DOWN",
+                        "LEFT",
+                        "UP",
+                        "LEFT",
+                        "B",
+                        "ZR",
+                        "R",
+                        "ZL",
+                        "L"
+                    ],
+                    "pc": ["FIGHTFIGHTFIGHT"]
+                }
+            },
+            {
+                "id": "peds_2",
+                "title": {
+                    "ES": "Los peatones odian a Tommy",
+                    "EN": "Pedestrians hate Tommy",
+                    "FR": "Les piétons détestent Tommy",
+                    "PT": "Os pedestres odeiam Tommy"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
+                        "note": {
+                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                        },
+                        "noteType": "warning"
+                    }
+                ],
+                "codes": {
+                    "ps2": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L2"
+                    ],
+                    "ps3": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L2"
+                    ],
+                    "ps4": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L2"
+                    ],
+                    "ps5": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "CROSS",
+                        "R2",
+                        "R1",
+                        "L2",
+                        "L2"
+                    ],
+                    "xbox": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "A",
+                        "BLACK",
+                        "RT",
+                        "WHITE",
+                        "WHITE"
+                    ],
+                    "xboxOne": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "A",
+                        "RT",
+                        "RB",
+                        "LT",
+                        "LT"
+                    ],
+                    "xboxSeries": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "A",
+                        "RT",
+                        "RB",
+                        "LT",
+                        "LT"
+                    ],
+                    "switch": [
+                        "DOWN",
+                        "UP",
+                        "UP",
+                        "UP",
+                        "B",
+                        "ZR",
+                        "R",
+                        "ZL",
+                        "ZL"
+                    ],
+                    "pc": ["NOBODYLIKESME"]
+                }
+            },
+            {
+                "id": "peds_3",
+                "title": {
+                    "ES": "Los peatones tendrán armas",
+                    "EN": "Pedestrians carry weapons",
+                    "FR": "Les piétons portent des armes",
+                    "PT": "Os pedestres terão armas"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "CROSS",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "CROSS",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "CROSS",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "R1",
+                        "CROSS",
+                        "TRIANGLE",
+                        "CROSS",
+                        "TRIANGLE",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "xbox": ["BLACK", "RT", "A", "Y", "A", "Y", "UP", "DOWN"],
+                    "xboxOne": ["RT", "RB", "A", "Y", "A", "Y", "UP", "DOWN"],
+                    "xboxSeries": [
+                        "RT",
+                        "RB",
+                        "A",
+                        "Y",
+                        "A",
+                        "Y",
+                        "UP",
+                        "DOWN"
+                    ],
+                    "switch": ["ZR", "R", "B", "X", "B", "X", "UP", "DOWN"],
+                    "pc": ["OURGODGIVENRIGHTTOBEARARMS"]
+                }
+            },
+            {
+                "id": "peds_4",
+                "title": {
+                    "ES": "Las mujeres seguirán a Tommy",
+                    "EN": "Women follow Tommy",
+                    "FR": "Les femmes suivent Tommy",
+                    "PT": "As mulheres seguem Tommy"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "R2",
+                        "CROSS",
+                        "CROSS",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "R2",
+                        "CROSS",
+                        "CROSS",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "R2",
+                        "CROSS",
+                        "CROSS",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "CROSS",
+                        "L1",
+                        "L1",
+                        "R2",
+                        "CROSS",
+                        "CROSS",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "xbox": ["B", "A", "LT", "LT", "BLACK", "A", "A", "B", "Y"],
+                    "xboxOne": ["B", "A", "LB", "LB", "RT", "A", "A", "B", "Y"],
+                    "xboxSeries": [
+                        "B",
+                        "A",
+                        "LB",
+                        "LB",
+                        "RT",
+                        "A",
+                        "A",
+                        "B",
+                        "Y"
+                    ],
+                    "switch": ["A", "B", "L", "L", "ZR", "B", "B", "A", "X"],
+                    "pc": ["FANNYMAGNET"]
+                }
+            },
+            {
+                "id": "peds_5",
+                "title": {
+                    "ES": "La banda de Vercetti serán mujeres con M4",
+                    "EN": "Vercetti Gang members are women with M4s",
+                    "FR": "Les membres du gang de Vercetti seront des femmes avec des M4",
+                    "PT": "Os membros da gangue de Vercetti serão mulheres com M4s"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "CROSS"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "L1",
+                        "CROSS"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "LT",
+                        "B",
+                        "WHITE",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "LT",
+                        "LT",
+                        "A"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "LB",
+                        "B",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LB",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "LB",
+                        "B",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "LB",
+                        "A"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "L",
+                        "A",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "R",
+                        "L",
+                        "L",
+                        "B"
+                    ],
+                    "pc": ["CHICKSWITHGUNS"]
+                }
+            },
+            {
+                "id": "peds_6",
+                "title": {
+                    "ES": "Los peatones se subirán al vehículo de Tommy",
+                    "EN": "Pedestrians get into Tommy's vehicle",
+                    "FR": "Les piétons monteront dans le véhicule de Tommy",
+                    "PT": "Os pedestres entrarão no veículo de Tommy"
+                },
+                "codes": {
+                    "pc": ["HOPINGIRL"]
+                }
+            },
+            {
+                "id": "peds_7",
+                "title": {
+                    "ES": "Los policías resucitarán",
+                    "EN": "Police cops will resurrect",
+                    "FR": "Les policiers ressusciteront",
+                    "PT": "Os policiais ressuscitarão"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CROSS"
+                    ]
+                }
+            }
+        ]
+    },
+    "Skins": {
+        "category": {
+            "ES": "Skins",
+            "EN": "Skins",
+            "FR": "Skins",
+            "PT": "Skins"
+        },
+        "cheats": [
+            {
+                "id": "skin_1",
+                "title": {
+                    "ES": "Jugar como Candy Suxxx",
+                    "EN": "Play as Candy Suxxx",
+                    "FR": "Jouer en tant que Candy Suxxx",
+                    "PT": "Jogar como Candy Suxxx"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L2"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L2"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L2"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "R2",
+                        "DOWN",
+                        "R1",
+                        "LEFT",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L2"
+                    ],
+                    "xbox": [
+                        "B",
+                        "BLACK",
+                        "DOWN",
+                        "RT",
+                        "LEFT",
+                        "RIGHT",
+                        "RT",
+                        "LT",
+                        "A",
+                        "WHITE"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "RT",
+                        "DOWN",
+                        "RB",
+                        "LEFT",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "LT"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "RT",
+                        "DOWN",
+                        "RB",
+                        "LEFT",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "LT"
+                    ],
+                    "switch": [
+                        "A",
+                        "ZR",
+                        "DOWN",
+                        "R",
+                        "LEFT",
+                        "RIGHT",
+                        "R",
+                        "L",
+                        "B",
+                        "ZL"
+                    ],
+                    "pc": ["IWANTBIGTITS"]
+                }
+            },
+            {
+                "id": "skin_2",
+                "title": {
+                    "ES": "Jugar como Hilary King",
+                    "EN": "Play as Hilary King",
+                    "FR": "Jouer en tant que Hilary King",
+                    "PT": "Jogar como Hilary King"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R2"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R2"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R2"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "CIRCLE",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R2"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "B",
+                        "BLACK",
+                        "LT",
+                        "RIGHT",
+                        "RT",
+                        "LT",
+                        "A",
+                        "BLACK"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "B",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "RT"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "B",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "RT"
+                    ],
+                    "switch": [
+                        "R",
+                        "A",
+                        "ZR",
+                        "L",
+                        "RIGHT",
+                        "R",
+                        "L",
+                        "B",
+                        "ZR"
+                    ],
+                    "pc": ["ILOOKLIKEHILARY"]
+                }
+            },
+            {
+                "id": "skin_3",
+                "title": {
+                    "ES": "Jugar como Ken Rosenberg",
+                    "EN": "Play as Ken Rosenberg",
+                    "FR": "Jouer en tant que Ken Rosenberg",
+                    "PT": "Jogar como Ken Rosenberg"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "L1",
+                        "UP",
+                        "L2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R1"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "L1",
+                        "UP",
+                        "L2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R1"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "L1",
+                        "UP",
+                        "L2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R1"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "L1",
+                        "UP",
+                        "L2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "R1"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "LT",
+                        "UP",
+                        "WHITE",
+                        "LT",
+                        "RIGHT",
+                        "RT",
+                        "LT",
+                        "A",
+                        "RT"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "LB",
+                        "UP",
+                        "LT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "RB"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "LB",
+                        "UP",
+                        "LT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "A",
+                        "RB"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "L",
+                        "UP",
+                        "ZL",
+                        "L",
+                        "RIGHT",
+                        "R",
+                        "L",
+                        "B",
+                        "R"
+                    ],
+                    "pc": ["MYSONISALAWYER"]
+                }
+            },
+            {
+                "id": "skin_4",
+                "title": {
+                    "ES": "Jugar como Lance Vance",
+                    "EN": "Play as Lance Vance",
+                    "FR": "Jouer en tant que Lance Vance",
+                    "PT": "Jogar como Lance Vance"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "L1"
+                    ],
+                    "xbox": ["B", "WHITE", "LEFT", "A", "RT", "LT", "A", "LT"],
+                    "xboxOne": ["B", "LT", "LEFT", "A", "RB", "LB", "A", "LB"],
+                    "xboxSeries": [
+                        "B",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "A",
+                        "LB"
+                    ],
+                    "switch": ["A", "ZL", "LEFT", "B", "R", "L", "B", "L"],
+                    "pc": ["LOOKLIKELANCE"]
+                }
+            },
+            {
+                "id": "skin_5",
+                "title": {
+                    "ES": "Jugar como Dick de Love Fist",
+                    "EN": "Play as Dick from Love Fist",
+                    "FR": "Jouer en tant que Dick de Love Fist",
+                    "PT": "Jogar como Dick do Love Fist"
+                },
+                "codes": {
+                    "ps2": [
+                        "R1",
+                        "L2",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R2",
+                        "LEFT",
+                        "CROSS",
+                        "SQUARE",
+                        "L1"
+                    ],
+                    "ps3": [
+                        "R1",
+                        "L2",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R2",
+                        "LEFT",
+                        "CROSS",
+                        "SQUARE",
+                        "L1"
+                    ],
+                    "ps4": [
+                        "R1",
+                        "L2",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R2",
+                        "LEFT",
+                        "CROSS",
+                        "SQUARE",
+                        "L1"
+                    ],
+                    "ps5": [
+                        "R1",
+                        "L2",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R2",
+                        "LEFT",
+                        "CROSS",
+                        "SQUARE",
+                        "L1"
+                    ],
+                    "xbox": [
+                        "RT",
+                        "WHITE",
+                        "BLACK",
+                        "LT",
+                        "RIGHT",
+                        "BLACK",
+                        "LEFT",
+                        "A",
+                        "X",
+                        "LT"
+                    ],
+                    "xboxOne": [
+                        "RB",
+                        "LT",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RT",
+                        "LEFT",
+                        "A",
+                        "X",
+                        "LB"
+                    ],
+                    "xboxSeries": [
+                        "RB",
+                        "LT",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RT",
+                        "LEFT",
+                        "A",
+                        "X",
+                        "LB"
+                    ],
+                    "switch": [
+                        "R",
+                        "ZL",
+                        "ZR",
+                        "L",
+                        "RIGHT",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "Y",
+                        "ZL"
+                    ],
+                    "pc": ["WELOVEOURDICK"]
+                }
+            },
+            {
+                "id": "skin_6",
+                "title": {
+                    "ES": "Jugar como Jezz de Love Fist",
+                    "EN": "Play as Jezz from Love Fist",
+                    "FR": "Jouer en tant que Jezz de Love Fist",
+                    "PT": "Jogar como Jezz do Love Fist"
+                },
+                "codes": {
+                    "ps2": [
+                        "DOWN",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "DOWN",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps4": [
+                        "DOWN",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "DOWN",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "xbox": [
+                        "DOWN",
+                        "LT",
+                        "DOWN",
+                        "WHITE",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "LT",
+                        "A",
+                        "A"
+                    ],
+                    "xboxOne": [
+                        "DOWN",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "A",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "DOWN",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "A",
+                        "A"
+                    ],
+                    "switch": [
+                        "DOWN",
+                        "L",
+                        "DOWN",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "R",
+                        "L",
+                        "B",
+                        "B"
+                    ],
+                    "pc": ["ROCKANDROLLMAN"]
+                }
+            },
+            {
+                "id": "skin_7",
+                "title": {
+                    "ES": "Jugar como Mercedes",
+                    "EN": "Play as Mercedes",
+                    "FR": "Jouer en tant que Mercedes",
+                    "PT": "Jogar como Mercedes"
+                },
+                "codes": {
+                    "ps2": [
+                        "R2",
+                        "L1",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "R2",
+                        "L1",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "R2",
+                        "L1",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "R2",
+                        "L1",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "xbox": [
+                        "BLACK",
+                        "LT",
+                        "UP",
+                        "LT",
+                        "RIGHT",
+                        "RT",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxOne": [
+                        "RT",
+                        "LB",
+                        "UP",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxSeries": [
+                        "RT",
+                        "LB",
+                        "UP",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "Y"
+                    ],
+                    "switch": [
+                        "ZR",
+                        "L",
+                        "UP",
+                        "L",
+                        "RIGHT",
+                        "R",
+                        "RIGHT",
+                        "UP",
+                        "A",
+                        "X"
+                    ],
+                    "pc": ["FOXYLITTLETHING"]
+                }
+            },
+            {
+                "id": "skin_8",
+                "title": {
+                    "ES": "Jugar como Phil Cassidy",
+                    "EN": "Play as Phil Cassidy",
+                    "FR": "Jouer en tant que Phil Cassidy",
+                    "PT": "Jogar como Phil Cassidy"
+                },
+                "codes": {
+                    "ps2": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps3": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps4": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "ps5": [
+                        "RIGHT",
+                        "R1",
+                        "UP",
+                        "R2",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "L1",
+                        "RIGHT",
+                        "CIRCLE"
+                    ],
+                    "xbox": [
+                        "RIGHT",
+                        "RT",
+                        "UP",
+                        "BLACK",
+                        "LT",
+                        "RIGHT",
+                        "RT",
+                        "LT",
+                        "RIGHT",
+                        "B"
+                    ],
+                    "xboxOne": [
+                        "RIGHT",
+                        "RB",
+                        "UP",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "RIGHT",
+                        "B"
+                    ],
+                    "xboxSeries": [
+                        "RIGHT",
+                        "RB",
+                        "UP",
+                        "RT",
+                        "LB",
+                        "RIGHT",
+                        "RB",
+                        "LB",
+                        "RIGHT",
+                        "B"
+                    ],
+                    "switch": [
+                        "RIGHT",
+                        "R",
+                        "UP",
+                        "ZR",
+                        "L",
+                        "RIGHT",
+                        "R",
+                        "L",
+                        "RIGHT",
+                        "A"
+                    ],
+                    "pc": ["ONEARMEDBANDIT"]
+                }
+            },
+            {
+                "id": "skin_9",
+                "title": {
+                    "ES": "Jugar como Ricardo Diaz",
+                    "EN": "Play as Ricardo Diaz",
+                    "FR": "Jouer en tant que Ricardo Diaz",
+                    "PT": "Jogar como Ricardo Diaz"
+                },
+                "codes": {
+                    "ps2": ["L1", "L2", "R1", "R2", "DOWN", "L1", "R2", "L2"],
+                    "ps3": ["L1", "L2", "R1", "R2", "DOWN", "L1", "R2", "L2"],
+                    "ps4": ["L1", "L2", "R1", "R2", "DOWN", "L1", "R2", "L2"],
+                    "ps5": ["L1", "L2", "R1", "R2", "DOWN", "L1", "R2", "L2"],
+                    "xbox": [
+                        "LT",
+                        "WHITE",
+                        "RT",
+                        "BLACK",
+                        "DOWN",
+                        "LT",
+                        "BLACK",
+                        "WHITE"
+                    ],
+                    "xboxOne": [
+                        "LB",
+                        "LT",
+                        "RB",
+                        "RT",
+                        "DOWN",
+                        "LB",
+                        "RT",
+                        "LT"
+                    ],
+                    "xboxSeries": [
+                        "LB",
+                        "LT",
+                        "RB",
+                        "RT",
+                        "DOWN",
+                        "LB",
+                        "RT",
+                        "LT"
+                    ],
+                    "switch": ["L", "ZL", "R", "ZR", "DOWN", "L", "ZR", "ZR"],
+                    "pc": ["CHEATSHAVEBEENCRACKED"]
+                }
+            },
+            {
+                "id": "skin_10",
+                "title": {
+                    "ES": "Jugar como Sonny Forelli",
+                    "EN": "Play as Sonny Forelli",
+                    "FR": "Jouer en tant que Sonny Forelli",
+                    "PT": "Jogar como Sonny Forelli"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "L1",
+                        "CIRCLE",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
+                        "L1",
+                        "CROSS",
+                        "CROSS"
+                    ],
+                    "xbox": [
+                        "B",
+                        "LT",
+                        "B",
+                        "WHITE",
+                        "LEFT",
+                        "A",
+                        "RT",
+                        "LT",
+                        "A",
+                        "A"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "LB",
+                        "B",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "A",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "LB",
+                        "B",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "LB",
+                        "A",
+                        "A"
+                    ],
+                    "switch": [
+                        "A",
+                        "L",
+                        "A",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "R",
+                        "L",
+                        "B",
+                        "B"
+                    ],
+                    "pc": ["IDONTHAVETHEMONEYSONNY"]
+                }
+            }
+        ]
+    },
+    "Otros": {
+        "category": {
+            "ES": "Otros",
+            "EN": "Other",
+            "FR": "Autres",
+            "PT": "Outros"
+        },
+        "cheats": [
+            {
+                "id": "other_1",
+                "title": {
+                    "ES": "Aumentar velocidad de juego",
+                    "EN": "Increase game speed",
+                    "FR": "Augmenter la vitesse du jeu",
+                    "PT": "Aumentar velocidade do jogo"
+                },
+                "codes": {
+                    "ps2": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "L2",
+                        "R1",
+                        "SQUARE"
+                    ],
+                    "ps3": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "L2",
+                        "R1",
+                        "SQUARE"
+                    ],
+                    "ps4": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "L2",
+                        "R1",
+                        "SQUARE"
+                    ],
+                    "ps5": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "L2",
+                        "R1",
+                        "SQUARE"
+                    ],
+                    "xbox": ["Y", "UP", "RIGHT", "DOWN", "WHITE", "LT", "X"],
+                    "xboxOne": ["Y", "UP", "RIGHT", "DOWN", "LT", "LB", "X"],
+                    "xboxSeries": ["Y", "UP", "RIGHT", "DOWN", "LT", "LB", "X"],
+                    "switch": ["X", "UP", "RIGHT", "DOWN", "ZL", "R", "Y"],
+                    "pc": ["ONSPEED"]
+                }
+            },
+            {
+                "id": "other_2",
+                "title": {
+                    "ES": "Disminuir velocidad de juego",
+                    "EN": "Decrease game speed",
+                    "FR": "Réduire la vitesse du jeu",
+                    "PT": "Diminuir velocidade do jogo"
+                },
+                "codes": {
+                    "ps2": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "SQUARE",
+                        "R2",
+                        "R1"
+                    ],
+                    "ps3": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "SQUARE",
+                        "R2",
+                        "R1"
+                    ],
+                    "ps4": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "SQUARE",
+                        "R2",
+                        "R1"
+                    ],
+                    "ps5": [
+                        "TRIANGLE",
+                        "UP",
+                        "RIGHT",
+                        "DOWN",
+                        "SQUARE",
+                        "R2",
+                        "R1"
+                    ],
+                    "xbox": ["Y", "UP", "RIGHT", "DOWN", "X", "BLACK", "RT"],
+                    "xboxOne": ["Y", "UP", "RIGHT", "DOWN", "X", "RT", "RB"],
+                    "xboxSeries": ["Y", "UP", "RIGHT", "DOWN", "X", "RT", "RB"],
+                    "switch": ["X", "UP", "RIGHT", "DOWN", "Y", "ZR", "R"],
+                    "pc": ["BOOOOOORING"]
+                }
+            },
+            {
+                "id": "other_3",
+                "title": {
+                    "ES": "Adelantar el reloj del juego",
+                    "EN": "Faster game clock",
+                    "FR": "Horloge du jeu accélérée",
+                    "PT": "Relógio do jogo acelerado"
+                },
+                "codes": {
+                    "ps2": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "SQUARE",
+                        "L1",
+                        "SQUARE",
+                        "SQUARE",
+                        "SQUARE",
+                        "L1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps3": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "SQUARE",
+                        "L1",
+                        "SQUARE",
+                        "SQUARE",
+                        "SQUARE",
+                        "L1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps4": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "SQUARE",
+                        "L1",
+                        "SQUARE",
+                        "SQUARE",
+                        "SQUARE",
+                        "L1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "ps5": [
+                        "CIRCLE",
+                        "CIRCLE",
+                        "L1",
+                        "SQUARE",
+                        "L1",
+                        "SQUARE",
+                        "SQUARE",
+                        "SQUARE",
+                        "L1",
+                        "TRIANGLE",
+                        "CIRCLE",
+                        "TRIANGLE"
+                    ],
+                    "xbox": [
+                        "B",
+                        "B",
+                        "LT",
+                        "X",
+                        "LT",
+                        "X",
+                        "X",
+                        "X",
+                        "LT",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxOne": [
+                        "B",
+                        "B",
+                        "LB",
+                        "X",
+                        "LB",
+                        "X",
+                        "X",
+                        "X",
+                        "LB",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "xboxSeries": [
+                        "B",
+                        "B",
+                        "LB",
+                        "X",
+                        "LB",
+                        "X",
+                        "X",
+                        "X",
+                        "LB",
+                        "Y",
+                        "B",
+                        "Y"
+                    ],
+                    "switch": [
+                        "A",
+                        "A",
+                        "L",
+                        "Y",
+                        "L",
+                        "Y",
+                        "Y",
+                        "Y",
+                        "L",
+                        "X",
+                        "A",
+                        "X"
+                    ],
+                    "pc": ["LIFEISPASSINGMEBY"]
+                }
+            },
+            {
+                "id": "other_4",
+                "title": {
+                    "ES": "Todos los personajes cabezones",
+                    "EN": "Big head mode",
+                    "FR": "Mode grosses têtes",
+                    "PT": "Modo cabeção"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "ES": "Solo disponible en la Edición Definitiva.",
+                            "EN": "Only available in the Definitive Edition.",
+                            "FR": "Disponible uniquement dans l'Édition Définitive.",
+                            "PT": "Disponível apenas na Edição Definitiva."
+                        },
+                        "notetype": "info"
+                    }
+                ],
+                "codes": {
+                    "ps4": [
+                        "UP",
+                        "UP",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "ps5": [
+                        "UP",
+                        "UP",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "CIRCLE",
+                        "CROSS"
+                    ],
+                    "xboxOne": [
+                        "UP",
+                        "UP",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "B",
+                        "A"
+                    ],
+                    "xboxSeries": [
+                        "UP",
+                        "UP",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "B",
+                        "A"
+                    ],
+                    "switch": [
+                        "UP",
+                        "UP",
+                        "DOWN",
+                        "DOWN",
+                        "LEFT",
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT",
+                        "A",
+                        "B"
+                    ],
+                    "pc": ["EXPANDDOME"]
+                }
+            }
+        ]
+    }
+}
