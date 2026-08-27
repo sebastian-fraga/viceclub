@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.cheat-note-entry b {
+    @apply text-red-200
+}
