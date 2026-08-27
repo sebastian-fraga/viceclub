@@ -13,6 +13,7 @@ function Support() {
                         src="https://cdn.cafecito.app/imgs/buttons/button_1_3.75x.png"
                         alt="Cafecito"
                         className={imageClasses}
+                        loading="lazy"
                     />
                 </a>
 
@@ -25,6 +26,7 @@ function Support() {
                         src="/assets/images/app/kofi.webp"
                         alt="Ko-fi"
                         className={imageClasses}
+                        loading="lazy"
                     />
                 </a>
             </div>
