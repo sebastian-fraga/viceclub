@@ -6,6 +6,7 @@ type BaseSetting = {
     description?: string;
     destructive?: boolean;
     icon?: TablerIcon;
+    hideOnMobile?: boolean
 };
 
 export type SelectOption = {

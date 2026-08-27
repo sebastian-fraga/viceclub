@@ -1,6 +1,7 @@
 import type { GameId } from "@/config/games";
 import type { PlatformFamily } from "@/config/platforms";
 import type { StoreIcon } from "@/config/stores";
+import type { PlatformId } from "@/types/cheats";
 
 interface Store {
     name: string;
@@ -39,6 +40,8 @@ export interface Game {
         };
     };
 
+    variants?: GameVariant[];
+
     buttonsPosition: "left" | "right";
 
     trailers: {
@@ -69,5 +72,19 @@ export interface Game {
         }[];
         engines: string[];
         sales?: string;
+    };
+    platforms: PlatformId[];
+    originalPlatforms: PlatformId[];
+    anniversaryPlatforms: PlatformId[];
+    definitivePlatforms: PlatformId[];
+    enhancedPlatforms: PlatformId[];
+    expandedAndEnhancedPlatforms: PlatformId[];
+}
+
+export interface GameVariant {
+    id: string;
+    label: string;
+    theme: {
+        accent: string;
     };
 }
