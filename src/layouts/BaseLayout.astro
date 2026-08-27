@@ -8,9 +8,10 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import NotificationBanner from "@/components/layout/NotificationBanner";
 
-import CursorManager from "@/components/cursors/CursorManager";
+import CursorManager from "@/components/providers/CursorManager";
 
 import "../styles/main.css";
+import LanguageSync from "@/components/providers/LanguageSync";
 
 interface Props {
     title: string;
@@ -20,13 +21,7 @@ interface Props {
     game?: Game;
 }
 
-const {
-    title,
-    description,
-    canonical,
-    dataGame,
-    game,
-} = Astro.props;
+const { title, description, canonical, dataGame, game } = Astro.props;
 ---
 
 <!doctype html>
@@ -104,24 +99,22 @@ const {
             transition:persist
         />
 
+        <LanguageSync client:load />
         <CursorManager gameId={game?.id} client:load />
 
         <div
             style={game
-                ? `
-            --game-accent: ${game.theme.accent.default};
-            --game-accent-muted: ${game.theme.accent.muted};
-
-            --game-buttons-primary-background: ${game.theme.buttons.primary.background};
-            --game-buttons-primary-hovered: ${game.theme.buttons.primary.hovered};
-            --game-buttons-primary-border: ${game.theme.buttons.primary.border};
-            --game-buttons-primary-text: ${game.theme.buttons.primary.text};
-
-            --game-buttons-secondary-background: ${game.theme.buttons.secondary.background};
-            --game-buttons-secondary-hovered: ${game.theme.buttons.secondary.hovered};
-            --game-buttons-secondary-border: ${game.theme.buttons.secondary.border};
-            --game-buttons-secondary-text: ${game.theme.buttons.secondary.text};
-        `
+                ? `--game-accent: ${game.theme.accent.default};
+                --game-accent-muted: ${game.theme.accent.muted};
+                --game-buttons-primary-background: ${game.theme.buttons.primary.background};
+                --game-buttons-primary-hovered: ${game.theme.buttons.primary.hovered};
+                --game-buttons-primary-border: ${game.theme.buttons.primary.border};
+                --game-buttons-primary-text: ${game.theme.buttons.primary.text};
+                --game-buttons-secondary-background: ${game.theme.buttons.secondary.background};
+                --game-buttons-secondary-hovered: ${game.theme.buttons.secondary.hovered};
+                --game-buttons-secondary-border: ${game.theme.buttons.secondary.border};
+                --game-buttons-secondary-text: ${game.theme.buttons.secondary.text};
+            `
                 : ""}
         >
             <slot />
