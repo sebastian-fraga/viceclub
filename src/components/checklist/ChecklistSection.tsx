@@ -2,8 +2,8 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import { useLocalizedText } from "../../hooks/useLocalizedText";
 import { useTranslation } from "react-i18next";
+import { useLocalizedText } from "../../hooks/useLocalizedText";
 import type { ChecklistSectionData } from "../../types/checklist";
 import { ChecklistItem } from "./ChecklistItem";
 
@@ -44,7 +44,7 @@ export function ChecklistSection({
             }`}
         >
             <h3
-                className="flex items-center gap-2 px-6 py-3 cursor-pointer select-none max-mobile:px-3 max-mobile:py-2.5"
+                className="flex items-center gap-3 px-6 py-3 cursor-pointer select-none max-mobile:px-3 max-mobile:py-2.5"
                 role="button"
                 tabIndex={0}
                 aria-expanded={open}
@@ -59,7 +59,7 @@ export function ChecklistSection({
                 {section.icon && (
                     <img
                         src={`/assets/images/icons/blips/${game}/${section.icon}.webp`}
-                        className="h-5 w-5 shrink-0"
+                        className="h-auto w-7 shrink-0"
                         alt={t("checklist.accessibility.entryIcon")}
                         loading="lazy"
                     />

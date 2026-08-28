@@ -94,23 +94,23 @@ export function ChecklistItem({
                                   key={i}
                                   className={`flex items-center gap-2 text-sm transition-colors duration-200 ${
                                       checked
-                                          ? "text-white/50 line-through decoration-white/30"
+                                          ? "text-indigo-100/50 line-through decoration-white/30"
                                           : i > 0
-                                            ? "text-white/50 text-xs"
-                                            : "text-white/90"
+                                            ? "text-indigo-100/90"
+                                            : "text-indigo-100/90"
                                   }`}
                               >
                                   {entry.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${entry.icon}.webp`}
-                                          className="h-4 w-4 shrink-0"
+                                          className="h-auto w-6 shrink-0"
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}
                                           loading="lazy"
                                       />
                                   )}
-                                  <span className="truncate">
+                                  <span className="truncate font-bold">
                                       {localizedText(entry.text)}
                                   </span>
                               </span>
@@ -119,21 +119,21 @@ export function ChecklistItem({
                               <span
                                   className={`flex items-center gap-2 text-sm transition-colors duration-200 ${
                                       checked
-                                          ? "text-white/50 line-through decoration-white/30"
-                                          : "text-white/90"
+                                          ? "text-indigo-100/50 line-through decoration-white/30"
+                                          : "text-indigo-100/90"
                                   }`}
                               >
                                   {item.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${item.icon}.webp`}
-                                          className="h-4 w-4 shrink-0"
+                                          className="h-auto w-6 shrink-0"
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}
                                           loading="lazy"
                                       />
                                   )}
-                                  <span className="truncate">
+                                  <span className="truncate font-bold">
                                       {localizedText(item.text)}
                                   </span>
                               </span>
