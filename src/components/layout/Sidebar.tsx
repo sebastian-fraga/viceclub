@@ -405,11 +405,15 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                         SECTIONS_METADATA[
                                                             sectionId
                                                         ];
-                                                    const Icon = meta.icon;
+
                                                     const active =
                                                         isActiveGame &&
                                                         activeSection ===
                                                             sectionId;
+
+                                                    const Icon = active
+                                                        ? (meta.activeIcon ?? meta.icon)
+                                                        : meta.icon;
 
                                                     return (
                                                         <Tooltip

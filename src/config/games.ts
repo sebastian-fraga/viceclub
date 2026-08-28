@@ -1,14 +1,19 @@
 import type { Icon } from "@tabler/icons-react";
 import {
     IconClock,
+    IconClockFilled,
     IconDeviceGamepad2,
+    IconDeviceGamepad2Filled,
     IconHome,
+    IconHomeFilled,
     IconListCheck,
     IconMap,
     IconPhoto,
+    IconPhotoFilled,
     IconRadio,
     IconTool,
     IconTrophy,
+    IconTrophyFilled
 } from "@tabler/icons-react";
 
 export type GameId = "III" | "VC" | "SA" | "LCS" | "VCS" | "IV" | "V" | "VI";
@@ -38,12 +43,14 @@ export type SectionId =
 export interface SectionMeta {
     label: string;
     icon: Icon;
+    activeIcon?: Icon
 }
 
 export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     inicio: {
         label: "sidebar.sections.home",
         icon: IconHome,
+        activeIcon: IconHomeFilled,
     },
     "100": {
         label: "sidebar.sections.checklist",
@@ -52,6 +59,7 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     artworks: {
         label: "sidebar.sections.artworks",
         icon: IconPhoto,
+        activeIcon: IconPhotoFilled
     },
     herramientas_y_mods: {
         label: "sidebar.sections.mods",
@@ -60,6 +68,7 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     logros: {
         label: "sidebar.sections.achievements",
         icon: IconTrophy,
+        activeIcon: IconTrophyFilled
     },
     mapa: {
         label: "sidebar.sections.map",
@@ -72,10 +81,12 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     trucos: {
         label: "sidebar.sections.cheats",
         icon: IconDeviceGamepad2,
+        activeIcon: IconDeviceGamepad2Filled,
     },
     timeline: {
         label: "sidebar.sections.timeline",
         icon: IconClock,
+        activeIcon: IconClockFilled,
     },
 };
 
