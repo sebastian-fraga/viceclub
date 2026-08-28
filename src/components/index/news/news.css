@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+i {
+    @apply inline-block mt-3 bg-(--button-bg) rounded-2xl text-slate-50 font-medium py-5.5 px-5
+}
+
+.news-article p a {
+    @apply text-yellow-200 transition-colors font-medium hover:text-yellow-300 underline
+}
