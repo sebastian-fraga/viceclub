@@ -174,7 +174,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
     }
 
     const baseNavButtonStyle = clsx(
-        "flex w-full items-center gap-4 rounded-lg px-2 py-2 transition",
+        "flex w-full items-center gap-4 rounded-lg px-2 py-2 transition max-mobile:p-3",
         showLabels ? "justify-start" : "justify-center",
     );
 
@@ -206,8 +206,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                     stiffness: 280,
                     damping: 28,
                 }}
-                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))]
-    h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0  max-mobile:h-full overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top]"
+                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0  max-mobile:h-full overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top]"
             >
                 {isMobile && (
                     <button
@@ -426,7 +425,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                             {active ? (
                                                                 <span
                                                                     aria-current="page"
-                                                                    className={`flex items-center gap-2 rounded-lg px-2 py-1.5 w-full ${
+                                                                    className={`flex items-center gap-2 max-mobile:gap-3 rounded-lg px-2 py-1.5 max-mobile:p-3 w-full ${
                                                                         showLabels
                                                                             ? "justify-start"
                                                                             : "justify-center"
@@ -436,7 +435,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                                         size={
                                                                             16
                                                                         }
-                                                                        className="shrink-0"
+                                                                        className="shrink-0 max-mobile:size-5"
                                                                     />
 
                                                                     {showLabels && (
@@ -456,7 +455,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                                         game.id,
                                                                         sectionId,
                                                                     )}
-                                                                    className={`flex items-center gap-2 rounded-lg px-2 py-1.5 w-full transition ${
+                                                                    className={`flex items-center gap-2 max-mobile:gap-3 rounded-lg px-2 max-mobile:p-3 py-1.5 w-full transition ${
                                                                         showLabels
                                                                             ? "justify-start"
                                                                             : "justify-center"
@@ -466,7 +465,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                                         size={
                                                                             16
                                                                         }
-                                                                        className="shrink-0"
+                                                                        className="shrink-0 max-mobile:size-5"
                                                                     />
 
                                                                     {showLabels && (
