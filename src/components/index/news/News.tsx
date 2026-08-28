@@ -1,10 +1,10 @@
 import {
+    IconArrowUpRight,
     IconBrandX,
     IconCalendarEvent,
     IconCheck,
     IconChevronDown,
     IconCopy,
-    IconExternalLink,
     IconShare,
     IconUser,
 } from "@tabler/icons-react";
@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 import Title from "../../ui/Title";
 
-import "./news.css"
+import "./news.css";
 
 interface NewsItem {
     slug: string;
@@ -264,7 +264,7 @@ export default function News() {
                                         "index.news.buttons.external",
                                 )}
 
-                                <IconExternalLink />
+                                <IconArrowUpRight />
                             </a>
 
                             <div className="w-full h-px bg-gray-500/20 rounded-2xl my-6" />

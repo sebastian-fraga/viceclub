@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import YouTubeIcon from "@/components/icons/YouTubeIcon";
 
-import { IconExternalLink } from "@tabler/icons-react";
+import { IconArrowUpRight } from "@tabler/icons-react";
 
 interface Trailer {
     name: string;
@@ -122,7 +122,9 @@ export default function TrailerDropdown({
             <button
                 ref={buttonRef}
                 type="button"
-                className={`bg-(--game-buttons-secondary-background) text-(--game-buttons-secondary-text) border border-(--game-buttons-secondary-border) hover:bg-(--game-buttons-secondary-hovered) ${buttonClass}`}
+                className={`bg-(--game-buttons-secondary-background) text-(--game-buttons-secondary-text) border border-(--game-buttons-secondary-border) hover:bg-(--game-buttons-secondary-hovered) ${
+                    isOpen ? "bg-(--game-buttons-secondary-hovered)" : ""
+                } ${buttonClass}`}
                 onClick={handleToggle}
                 aria-expanded={isOpen}
             >
@@ -239,7 +241,7 @@ export default function TrailerDropdown({
                                                     }}
                                                     className="ml-auto"
                                                 >
-                                                    <IconExternalLink className="size-4 max-mobile:size-3.5" />
+                                                    <IconArrowUpRight className="size-4 max-mobile:size-3.5" />
                                                 </motion.div>
                                             </motion.a>
                                         );

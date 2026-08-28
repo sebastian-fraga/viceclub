@@ -5,7 +5,7 @@ import {
 } from "@/config/games";
 import { useGameChecklistProgress } from "@/hooks/useGameChecklistProgress";
 import type { Game } from "@/types/game";
-import { IconExternalLink, IconTools } from "@tabler/icons-react";
+import { IconArrowUpRight, IconTools } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Title from "../ui/Title";
@@ -35,7 +35,7 @@ function getBentoClasses(index: number) {
 
 export default function ExploreSections({ game }: Props) {
     const { t } = useTranslation();
-    const checklistProgress = useGameChecklistProgress(game.id)
+    const checklistProgress = useGameChecklistProgress(game.id);
 
     const sections = GAME_SECTIONS[game.id]
         .filter((id) => id !== "inicio")
@@ -56,7 +56,7 @@ export default function ExploreSections({ game }: Props) {
                     const isUnderConstruction =
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
-                    const isChecklist = section.id === "100"
+                    const isChecklist = section.id === "100";
 
                     const { pattern, isLarge, isWide } = getBentoClasses(index);
                     const featured = isLarge || isWide;
@@ -189,7 +189,7 @@ export default function ExploreSections({ game }: Props) {
                                     className="relative flex items-center gap-2 overflow-hidden text-[11px] text-neutral-500 lowercase max-mobile:text-[10px]"
                                 >
                                     {t("home.buttons.goToSection")}
-                                    <IconExternalLink size={12} />
+                                    <IconArrowUpRight size={12} />
                                 </motion.span>
                             )}
                         </motion.a>

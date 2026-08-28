@@ -26,7 +26,7 @@ import RockstarIcon from "@/components/icons/RockstarIcon";
 import SteamIcon from "@/components/icons/SteamIcon";
 
 import { Tooltip } from "@/components/ui/Tooltip";
-import { IconExternalLink, IconMoodPuzzled } from "@tabler/icons-react";
+import { IconArrowUpRight, IconMoodPuzzled } from "@tabler/icons-react";
 
 interface Props {
     purchase: Game["purchase"];
@@ -184,7 +184,11 @@ export default function PurchaseDropdown({
             <button
                 ref={buttonRef}
                 type="button"
-                className={`bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) hover:bg-(--game-buttons-primary-hovered) hover:drop-shadow-(--game-buttons-primary-hovered) ${buttonClass}`}
+                className={`bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) hover:bg-(--game-buttons-primary-hovered) hover:drop-shadow-(--game-buttons-primary-hovered) ${
+                    isOpen
+                        ? "bg-(--game-buttons-primary-hovered) drop-shadow-(--game-buttons-primary-hovered)"
+                        : ""
+                } ${buttonClass}`}
                 onClick={handleToggle}
                 aria-expanded={isOpen}
             >
@@ -196,7 +200,7 @@ export default function PurchaseDropdown({
                     <AnimatePresence>
                         {isOpen && (
                             <motion.div
-                            layout
+                                layout
                                 initial={{
                                     opacity: 0,
                                     y: -6,
@@ -357,7 +361,7 @@ export default function PurchaseDropdown({
                                                                 }}
                                                                 className="ml-auto"
                                                             >
-                                                                <IconExternalLink className="size-4" />
+                                                                <IconArrowUpRight className="size-4" />
                                                             </motion.div>
                                                         </motion.a>
                                                     );
