@@ -74,14 +74,11 @@ html {
   scroll-behavior: smooth;
 }
 
-html.custom-cursors,
-html.custom-cursors body {
+html.custom-cursors {
   cursor: var(--custom-cursor), auto;
 }
 
-html.custom-cursors *,
-html.custom-cursors *::before,
-html.custom-cursors *::after {
+html.custom-cursors * {
   cursor: inherit;
 }
 
@@ -197,6 +194,7 @@ body {
     border-radius: 12px;
   }
 }
+
 .scrollbar-hide {
   scrollbar-width: none;
   -ms-overflow-style: none;

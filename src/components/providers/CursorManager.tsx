@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import useSettings from "@/hooks/useSettings";
 
@@ -19,45 +19,36 @@ const CUSTOM_CURSORS: Record<string, string> = {
 export default function CursorManager({ gameId }: Props) {
     const { getSetting } = useSettings();
 
-    const [enabled, setEnabled] = useState(
-        getSetting("custom-cursors") as boolean,
-    );
-
-    const cursor = gameId ? CUSTOM_CURSORS[gameId] : undefined;
-
     useEffect(() => {
-        const handleSettingsChange = (event: Event) => {
-            const customEvent = event as CustomEvent;
-            const settings = customEvent.detail;
+        const applyCursor = () => {
+            const root = document.documentElement;
+            const enabled = getSetting("custom-cursors") as boolean;
+            const cursor = gameId ? CUSTOM_CURSORS[gameId] : undefined;
 
-            setEnabled(settings["custom-cursors"]);
+            if (!enabled || !cursor) {
+                root.classList.remove("custom-cursors");
+                root.style.removeProperty("--custom-cursor");
+                return;
+            }
+
+            root.style.setProperty("--custom-cursor", `url("${cursor}")`);
+            root.classList.add("custom-cursors");
+        };
+
+        applyCursor();
+
+        const handleSettingsChange = () => {
+            applyCursor();
         };
 
         window.addEventListener("settings-change", handleSettingsChange);
+        document.addEventListener("astro:after-swap", applyCursor);
 
         return () => {
             window.removeEventListener("settings-change", handleSettingsChange);
+            document.removeEventListener("astro:after-swap", applyCursor);
         };
-    }, []);
-
-    useEffect(() => {
-        const root = document.documentElement;
-
-        if (!enabled || !cursor) {
-            root.style.removeProperty("--custom-cursor");
-            root.classList.remove("custom-cursors");
-            return;
-        }
-
-        root.style.setProperty("--custom-cursor", `url("${cursor}")`);
-
-        root.classList.add("custom-cursors");
-
-        return () => {
-            root.style.removeProperty("--custom-cursor");
-            root.classList.remove("custom-cursors");
-        };
-    }, [enabled, cursor]);
+    }, [gameId, getSetting]);
 
     return null;
 }
