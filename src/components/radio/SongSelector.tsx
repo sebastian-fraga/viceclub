@@ -48,10 +48,12 @@ export function SongSelector({
 
     const genresScroll = useHorizontalScrollMask<HTMLDivElement>();
     const djsScroll = useHorizontalScrollMask<HTMLDivElement>();
+    const playlistsScroll = useHorizontalScrollMask<HTMLDivElement>();
 
     useEffect(() => {
         genresScroll.updateScrollState();
         djsScroll.updateScrollState();
+        playlistsScroll.updateScrollState();
     }, [activePlaylist]);
 
     const updateScrollState = () => {
@@ -193,10 +195,19 @@ export function SongSelector({
                     </div>
 
                     {station.playlists.length > 1 && (
-                        <div className="flex flex-wrap gap-2 shrink-0 max-w-160 max-mobile:max-w-full max-mobile:justify-center">
+                        <div
+                            ref={playlistsScroll.scrollRef}
+                            onScroll={playlistsScroll.handleScroll}
+                            className="flex flex-wrap gap-2 shrink-0 max-w-160 max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide max-mobile:max-w-full"
+                            style={{
+                                maskImage: playlistsScroll.maskImage,
+                                WebkitMaskImage: playlistsScroll.maskImage,
+                            }}
+                        >
                             {station.playlists.map((playlist) => {
                                 const isActive =
                                     playlist.id === activePlaylist.id;
+
                                 return (
                                     <button
                                         key={playlist.id}
@@ -206,7 +217,7 @@ export function SongSelector({
                                         aria-pressed={isActive}
                                         data-active={isActive}
                                         className={clsx(
-                                            "px-4 max-mobile:px-3 py-1.5 rounded-full text-sm max-mobile:text-xs font-medium transition-colors cursor-pointer",
+                                            "shrink-0 px-4 max-mobile:px-3 py-1.5 rounded-full text-sm max-mobile:text-xs font-medium transition-colors cursor-pointer",
                                             "focus-visible:outline-none focus-visible:ring focus-visible:ring-violet-400",
                                             isActive
                                                 ? "bg-violet-400 text-[#2B2939]"
