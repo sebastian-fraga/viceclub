@@ -9,20 +9,20 @@ import {
     IconUser,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 import { useTranslation } from "react-i18next";
 
 import Title from "../../ui/Title";
+
+import "./news.css"
 
 interface NewsItem {
     slug: string;
     title: string | Record<string, string>;
     subtitle: string | Record<string, string>;
     date: string | Record<string, string>;
-    paragraph1: string | Record<string, string>;
-    paragraph2: string | Record<string, string>;
-    paragraph3?: string | Record<string, string>;
+    paragraphs: (string | Record<string, string>)[];
     footerText: string | Record<string, string>;
     link: string;
     linkText?: string | Record<string, string>;
@@ -31,6 +31,8 @@ interface NewsItem {
 }
 
 const STEP = 2;
+const SCROLL_RETRY_DELAY_MS = 50;
+const SCROLL_RETRY_MAX_ATTEMPTS = 20;
 const paragraphClass =
     "text-base sm:text-lg leading-7 text-pretty text-slate-200/90";
 const buttonClass =
@@ -83,13 +85,45 @@ export default function News() {
         });
     }
 
-    function scrollToNews() {
+    function scrollToArticleWhenReady(index: number, attempt = 0) {
+        const target = document.querySelectorAll(".news-article")[index];
+
+        if (!target) {
+            if (attempt < SCROLL_RETRY_MAX_ATTEMPTS) {
+                setTimeout(
+                    () => scrollToArticleWhenReady(index, attempt + 1),
+                    SCROLL_RETRY_DELAY_MS,
+                );
+            }
+
+            return;
+        }
+
+        const headerHeight = parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue(
+                "--header-height",
+            ),
+        );
+
+        const top =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            (Number.isNaN(headerHeight) ? 0 : headerHeight) -
+            16;
+
+        window.scrollTo({
+            top,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollToNews(list: NewsItem[]) {
         const params = new URLSearchParams(window.location.search);
         const slug = params.get("news");
 
         if (!slug) return;
 
-        const index = news.findIndex((n) => n.slug === slug);
+        const index = list.findIndex((n) => n.slug === slug);
 
         if (index === -1) return;
 
@@ -97,25 +131,7 @@ export default function News() {
             setVisibleCount(index + 1);
         }
 
-        setTimeout(() => {
-            const target = document.querySelectorAll(".news-article")[index];
-
-            if (!target) return;
-
-            const headerHeight =
-                document.querySelector("header")?.offsetHeight ?? 0;
-
-            const top =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                headerHeight -
-                16;
-
-            window.scrollTo({
-                top,
-                behavior: "smooth",
-            });
-        }, 100);
+        scrollToArticleWhenReady(index);
     }
 
     useEffect(() => {
@@ -124,33 +140,21 @@ export default function News() {
                 Date.now(),
         )
             .then((res) => res.json())
-            .then((data) => {
+            .then((data: NewsItem[]) => {
                 setNews(data);
 
-                setTimeout(scrollToNews, 300);
+                scrollToNews(data);
             });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
         <section className="w-full max-w-400 flex flex-col items-start">
-            <style>
-                {`
-                    i {
-                        display: inline-block;
-                        margin-block: 12px 0;
-                        background: oklch(58.5% 0.233 277.117 / 0.5);
-                        border-radius: 18px;
-                        color: #ffffffdd;
-                        font-weight: 500;
-                        padding: 22px 20px
-                    }
-                `}
-            </style>
             <div className="flex">
                 <Title label={t("index.titles.news")} />
             </div>
             <AnimatePresence mode="popLayout">
-                {news.slice(0, visibleCount).map((item, index) => (
+                {news.slice(0, visibleCount).map((item, newsIndex) => (
                     <motion.article
                         key={item.slug}
                         layout
@@ -160,12 +164,12 @@ export default function News() {
                         transition={{
                             duration: 0.4,
                             delay:
-                                index >= visibleCount - STEP
-                                    ? (index % STEP) * 0.1
+                                newsIndex >= visibleCount - STEP
+                                    ? (newsIndex % STEP) * 0.1
                                     : 0,
                             ease: "easeOut",
                         }}
-                        className="text-white flex flex-col px-0 py-6 gap-6 md:gap-8 items-start nth-of-type-[1]:mt-4 w-full"
+                        className="news-article text-white flex flex-col px-0 py-6 gap-6 md:gap-8 items-start nth-of-type-[1]:mt-4 w-full"
                     >
                         <div className="flex flex-col gap-4">
                             <h3 className="font-black text-2xl sm:text-3xl leading-tight">
@@ -191,53 +195,62 @@ export default function News() {
                         </div>
 
                         <div className="flex flex-col items-center max-w-300">
-                            <p
-                                className={paragraphClass}
-                                dangerouslySetInnerHTML={{
-                                    __html: translateContent(item.paragraph1),
-                                }}
-                            />
+                            {item.paragraphs.map(
+                                (paragraph, paragraphIndex) => {
+                                    const isFirst = paragraphIndex === 0;
+                                    const needsTopMargin = paragraphIndex >= 2;
 
-                            <div className="w-full my-6">
-                                <img
-                                    src={item.image}
-                                    className="w-full rounded-xl border-slate-500 border-2 drop-shadow-2xl drop-shadow-pink-400/10"
-                                    alt={translateContent(item.title)}
-                                    loading={index >= STEP ? "eager" : "lazy"}
-                                />
+                                    return (
+                                        <Fragment key={paragraphIndex}>
+                                            <p
+                                                className={
+                                                    needsTopMargin
+                                                        ? `${paragraphClass} mt-6`
+                                                        : paragraphClass
+                                                }
+                                                dangerouslySetInnerHTML={{
+                                                    __html: translateContent(
+                                                        paragraph,
+                                                    ),
+                                                }}
+                                            />
 
-                                <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
-                                    <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
+                                            {isFirst && (
+                                                <div className="w-full my-6">
+                                                    <img
+                                                        src={item.image}
+                                                        className="w-full rounded-xl border-slate-500 border-2 drop-shadow-2xl drop-shadow-pink-400/10"
+                                                        alt={translateContent(
+                                                            item.title,
+                                                        )}
+                                                        loading={
+                                                            newsIndex >= STEP
+                                                                ? "eager"
+                                                                : "lazy"
+                                                        }
+                                                    />
 
-                                    <p className="italic pl-2">
-                                        {translateContent(item.footerText)}
-                                    </p>
-                                </div>
-                            </div>
+                                                    <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
+                                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
 
-                            <p
-                                className={paragraphClass}
-                                dangerouslySetInnerHTML={{
-                                    __html: translateContent(item.paragraph2),
-                                }}
-                            />
-
-                            {item.paragraph3 && (
-                                <p
-                                    className={`${paragraphClass} mt-8 mb-4`}
-                                    dangerouslySetInnerHTML={{
-                                        __html: translateContent(
-                                            item.paragraph3,
-                                        ),
-                                    }}
-                                />
+                                                        <p className="italic pl-2">
+                                                            {translateContent(
+                                                                item.footerText,
+                                                            )}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </Fragment>
+                                    );
+                                },
                             )}
 
                             <a
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener"
-                                className="flex items-center gap-2 w-fit mt-6 mx-auto bg-pink-400 text-black font-bold px-8 py-3 rounded-full transition hover:bg-pink-500 hover:text-white shadow-pink-300/10 shadow-xl"
+                                className="flex items-center gap-2 w-fit mt-6 mx-auto bg-pink-400 text-black font-bold px-8 py-3 rounded-full transition hover:bg-pink-500 hover:text-white shadow-pink-300/10 shadow-xl uppercase"
                             >
                                 {translateContent(
                                     item.linkText ??
