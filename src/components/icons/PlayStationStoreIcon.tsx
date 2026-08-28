@@ -22,8 +22,8 @@ export default function PlayStationStoreIcon(props: SVGProps<SVGSVGElement>) {
                     gradientTransform="matrix(76.89, 0, 0, -73.85, 9638, 66141.62)"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop offset="0" stop-color="#01bbef" />
-                    <stop offset="1" stop-color="#0074bc" />
+                    <stop offset="0" stopColor="#01bbef" />
+                    <stop offset="1" stopColor="#0074bc" />
                 </linearGradient>
             </defs>
             <title>PlayStation Store logo - Brandlogos.net</title>
