@@ -232,13 +232,13 @@ export function SongSelector({
                     )}
 
                     <div className="border-t border-purple-400/10 pt-3 flex-1 min-h-0 flex flex-col">
-                        <p className="font-bold text-xl max-mobile:text-lg text-yellow-50 shrink-0">
+                        <p className="mb-1 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-indigo-100">
                             {t("radio.tracks")}
                         </p>
                         <ul
                             ref={scrollRef}
                             onScroll={handleScroll}
-                            className="flex flex-col mt-8 max-mobile:mt-0 overflow-y-auto scroll-radio flex-1 min-h-0"
+                            className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto scroll-radio flex-1 min-h-0"
                             style={{
                                 maskImage,
                                 WebkitMaskImage: maskImage,

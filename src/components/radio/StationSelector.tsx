@@ -55,7 +55,7 @@ export function StationSelector({
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
-            <h3 className="mb-2 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium">
+            <h3 className="mb-3 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-indigo-100">
                 {t("radio.stations")}
             </h3>
             <div
