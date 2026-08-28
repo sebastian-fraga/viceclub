@@ -34,7 +34,7 @@ export const settingsConfig: SettingsSection[] = [
                 name: "settings.sections.general.items.2.name",
                 description: "settings.sections.general.items.2.description",
                 type: "toggle",
-                defaultValue: true,
+                defaultValue: false,
                 icon: IconVolume,
             },
             {

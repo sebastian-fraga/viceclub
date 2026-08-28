@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 import i18n from "@/i18n";
 
 import {
@@ -18,7 +17,6 @@ type SettingsState = Record<string, SettingsValue>;
 
 const getDefaultSettings = (): SettingsState => {
     const defaults: SettingsState = {};
-
     for (const section of settingsConfig) {
         for (const setting of section.settings) {
             if (
@@ -27,32 +25,28 @@ const getDefaultSettings = (): SettingsState => {
             ) {
                 continue;
             }
-
             defaults[setting.id] = setting.defaultValue;
         }
     }
-
     return defaults;
 };
 
 const getValidStoredSettings = (
-    stored: Partial<SettingsState>,
+    stored: Partial<SettingsState> | undefined,
 ): SettingsState => {
     const validSettings: SettingsState = {};
+    if (!stored) return validSettings;
 
     for (const section of settingsConfig) {
         for (const setting of section.settings) {
             if (setting.type === "action") continue;
-
             const value = stored[setting.id];
-
             if (value === undefined) continue;
 
             if (setting.type === "toggle") {
                 if (typeof value === "boolean") {
                     validSettings[setting.id] = value;
                 }
-
                 continue;
             }
 
@@ -62,7 +56,6 @@ const getValidStoredSettings = (
                         validSettings[setting.id] = value;
                         continue;
                     }
-
                     const isValidPlatform = Object.values(
                         platformFamilies,
                     ).some((family) =>
@@ -70,39 +63,53 @@ const getValidStoredSettings = (
                             value as Platform,
                         ),
                     );
-
                     if (isValidPlatform) {
                         validSettings[setting.id] = value;
                     }
-
                     continue;
                 }
 
                 const isValidOption = setting.options.some(
                     (option) => option.value === value,
                 );
-
                 if (isValidOption) {
                     validSettings[setting.id] = value;
                 }
             }
         }
     }
-
     return validSettings;
 };
 
 export default function useSettings() {
-    const [settings, setSettings] = useState<SettingsState>(() => {
-        const storedSettings = loadSettings<SettingsState>();
+    const [settings, setSettings] = useState<SettingsState>(() =>
+        getDefaultSettings(),
+    );
 
-        const validStoredSettings = getValidStoredSettings(storedSettings);
+    useEffect(() => {
+        try {
+            const storedSettings = loadSettings<SettingsState>();
+            const validStoredSettings = getValidStoredSettings(storedSettings);
+            setSettings((prev) => ({ ...prev, ...validStoredSettings }));
+        } catch (err) {
+            console.warn("useSettings: failed to load stored settings", err);
+        }
+    }, []);
 
-        return {
-            ...getDefaultSettings(),
-            ...validStoredSettings,
+    useEffect(() => {
+        const handler = (e: Event) => {
+            const custom = e as CustomEvent<SettingsState>;
+            if (custom?.detail && typeof custom.detail === "object") {
+                setSettings((prev) => ({ ...prev, ...custom.detail }));
+            }
         };
-    });
+        window.addEventListener("settings-change", handler as EventListener);
+        return () =>
+            window.removeEventListener(
+                "settings-change",
+                handler as EventListener,
+            );
+    }, []);
 
     const setSetting = (id: string, value: SettingsValue) => {
         setSettings((prev) => {
@@ -113,22 +120,24 @@ export default function useSettings() {
 
             if (id === "language") {
                 const language = value as Language;
-
                 i18n.changeLanguage(language);
-                localStorage.setItem("language", language);
+                try {
+                    localStorage.setItem("language", language);
+                } catch {}
             }
 
             if (id === "platform-family") {
                 const family = value as PlatformFamily | "default";
                 const platformOptions = getPlatformOptions(family);
-
                 newSettings.platform =
                     platformOptions.length === 1 && platformOptions[0]
                         ? platformOptions[0].value
                         : "default";
             }
 
-            saveSettings(newSettings);
+            try {
+                saveSettings(newSettings);
+            } catch {}
 
             window.dispatchEvent(
                 new CustomEvent("settings-change", {
@@ -142,9 +151,5 @@ export default function useSettings() {
 
     const getSetting = (id: string) => settings[id];
 
-    return {
-        settings,
-        setSetting,
-        getSetting,
-    };
+    return { settings, setSetting, getSetting };
 }

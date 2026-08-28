@@ -24,6 +24,7 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import SettingsModal from "../settings/SettingsModal";
 import { Tooltip } from "../ui/Tooltip";
+import { useSidebarSounds } from "@/hooks/useSidebarSounds";
 
 function gameHref(gameId: GameId, sectionId: SectionId) {
     return `/${gameId.toUpperCase()}/${sectionId}`;
@@ -134,6 +135,8 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         return () =>
             document.removeEventListener("mousedown", handleClickOutside);
     }, [isMobile, mobileOpen, expanded, settingsOpen]);
+
+    useSidebarSounds(asideRef as React.RefObject<HTMLElement>);
 
     const { activeGame, activeSection } = useMemo(() => {
         const match = currentPath.match(/^\/([^/]+)\/?([^/]*)/i);
@@ -446,6 +449,9 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                                 </span>
                                                             ) : (
                                                                 <a
+                                                                    data-game-id={
+                                                                        game.id
+                                                                    }
                                                                     href={gameHref(
                                                                         game.id,
                                                                         sectionId,
