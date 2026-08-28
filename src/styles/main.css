@@ -87,6 +87,10 @@ body {
   background-color: #15151F;
 }
 
+img, a {
+  -webkit-user-drag: none;
+}
+
 .scroll-home-dropdown {
   --sb-track-color: #1c2225;
   --sb-thumb-color: #fbf9c8;
