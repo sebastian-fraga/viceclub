@@ -1,5 +1,5 @@
 ---
-import { APP_VERSION, BUILD } from "@/lib/app/version";
+import { APP_VERSION, COMMIT } from "@/lib/app/version";
 
 import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
 
@@ -68,7 +68,17 @@ const anchorClasses =
         <span class="hidden mobile:inline text-slate-500"> • </span>
 
         <span class="text-slate-300 font-thin">
-            v{APP_VERSION} • Build #{BUILD}
+            v{APP_VERSION} •{" "}
+
+            <a
+                href={`https://github.com/sebastian-fraga/viceclub/commit/${COMMIT}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-slate-100
+            transition underline decoration-slate-600 underline-offset-2"
+            >
+                {COMMIT}
+            </a>
         </span>
     </div>
 </footer>
