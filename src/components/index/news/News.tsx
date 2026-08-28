@@ -105,11 +105,18 @@ export default function News() {
             ),
         );
 
+        const bannerHeight = parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue(
+                "--banner-height",
+            ),
+        );
+
         const top =
             target.getBoundingClientRect().top +
             window.scrollY -
             (Number.isNaN(headerHeight) ? 0 : headerHeight) -
-            16;
+            (Number.isNaN(bannerHeight) ? 0 : bannerHeight) -
+            28;
 
         window.scrollTo({
             top,
