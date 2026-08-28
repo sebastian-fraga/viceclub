@@ -91,7 +91,7 @@ export function StationSelector({
                                     damping: 20,
                                 }}
                                 className={clsx(
-                                    "group relative bg-linear-120 from-[#262438] to-slate-900 border border-gray-400/10 rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer hover:ring hover:ring-pink-100 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-400 overflow-hidden",
+                                    "group relative bg-linear-120 from-[#262438] to-slate-900 rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer  border border-white/7 hover:ring-4 hover:ring-yellow-200 focus-visible:border-yellow-200 outline-none overflow-hidden",
                                     isActive &&
                                         "border-violet-300 bg-[#37344D] border",
                                 )}
