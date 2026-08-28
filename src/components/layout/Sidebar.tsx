@@ -20,11 +20,11 @@ import {
 } from "@/config/games";
 
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useSidebarSounds } from "@/hooks/useSidebarSounds";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import SettingsModal from "../settings/SettingsModal";
 import { Tooltip } from "../ui/Tooltip";
-import { useSidebarSounds } from "@/hooks/useSidebarSounds";
 
 function gameHref(gameId: GameId, sectionId: SectionId) {
     return `/${gameId.toUpperCase()}/${sectionId}`;

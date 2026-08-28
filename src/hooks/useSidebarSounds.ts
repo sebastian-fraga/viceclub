@@ -1,6 +1,6 @@
+import useSettings from "@/hooks/useSettings";
 import { useEffect, useRef } from "react";
 import { useIsMobile } from "./useIsMobile";
-import useSettings from "@/hooks/useSettings";
 
 interface SidebarSoundsOptions {
     selector?: string;

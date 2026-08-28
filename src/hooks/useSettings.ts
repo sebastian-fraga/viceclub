@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import i18n from "@/i18n";
+import { useEffect, useState } from "react";
 
 import {
     getPlatformOptions,
