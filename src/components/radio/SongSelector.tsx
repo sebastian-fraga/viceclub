@@ -122,7 +122,7 @@ export function SongSelector({
                     {onBack && (
                         <button
                             onClick={onBack}
-                            className="hidden max-mobile:flex items-center gap-1 text-sm text-slate-300 hover:text-white -mb-2 cursor-pointer"
+                            className="hidden max-mobile:flex items-center gap-1 text-base text-slate-300 hover:text-white -mb-2 cursor-pointer font-body-condensed"
                         >
                             <IconChevronLeft size={18} />
                             {t("radio.stations")}
