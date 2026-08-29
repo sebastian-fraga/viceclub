@@ -123,14 +123,14 @@ export function PlayerFooter({
             </div>
 
             {hasStation && (
-                <span className="min-w-8 text-xs text-slate-400 tabular-nums">
+                <span className="w-10 shrink-0 text-xs text-slate-400 tabular-nums">
                     {formatTime(currentTime)}
                 </span>
             )}
 
             <div
                 className={clsx(
-                    "group relative h-1.5 flex-1 min-w-0 rounded-full bg-(--button-bg)  overflow-hidden max-mobile:h-2",
+                    "group relative h-1.5 flex-1 min-w-0 rounded-full bg-(--button-bg) overflow-hidden max-mobile:h-2",
                     hasStation ? "cursor-pointer" : "cursor-default opacity-40",
                 )}
                 onClick={handleProgressClick}
@@ -158,7 +158,9 @@ export function PlayerFooter({
                                 "linear-gradient(90deg, transparent 0%, rgba(196,181,253,0.7) 50%, transparent 100%)",
                             backgroundSize: "200% 100%",
                         }}
-                        animate={{ backgroundPosition: ["150% 0%", "-50% 0%"] }}
+                        animate={{
+                            backgroundPosition: ["150% 0%", "-50% 0%"],
+                        }}
                         transition={{
                             duration: 1.2,
                             repeat: Infinity,
@@ -169,10 +171,11 @@ export function PlayerFooter({
             </div>
 
             {hasStation && (
-                <div className="min-w-0 flex items-center gap-1.5 flex-none">
-                    <span className="min-w-8 text-xs text-slate-400 tabular-nums">
+                <div className="flex shrink-0 items-center gap-1.5">
+                    <span className="w-10 text-xs text-slate-400 tabular-nums">
                         {formatTime(duration)}
                     </span>
+
                     <div className="flex items-center gap-1.5 max-mobile:hidden">
                         <button
                             type="button"
@@ -186,6 +189,7 @@ export function PlayerFooter({
                         >
                             <VolumeIcon volume={volume} />
                         </button>
+
                         <input
                             type="range"
                             min={0}
