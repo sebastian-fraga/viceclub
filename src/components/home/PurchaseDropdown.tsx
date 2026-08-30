@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -88,7 +88,7 @@ export default function PurchaseDropdown({
     );
     const [isOpen, setIsOpen] = useState(false);
 
-    const { t } = useTranslation();
+    const t = useT();
 
     const dropdownRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);

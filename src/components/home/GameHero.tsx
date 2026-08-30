@@ -6,14 +6,14 @@ import type { Game } from "@/types/game";
 
 import PurchaseDropdown from "@/components/home/PurchaseDropdown";
 import TrailerDropdown from "@/components/home/TrailerDropdown";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 interface Props {
     game: Game;
 }
 
 export default function GameHero({ game }: Props) {
-    const {t} = useTranslation()
+    const t = useT();
     const { settings } = useSettings();
 
     const buttonClass =

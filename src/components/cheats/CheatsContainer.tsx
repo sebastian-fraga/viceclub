@@ -19,7 +19,7 @@ import { MultiSelector } from "@/components/ui/selector/MultiSelector";
 import Title from "@/components/ui/Title";
 
 import useSettings from "@/hooks/useSettings";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import { getButtonIconPath, getCheatCodes } from "@/utils/cheats";
 
@@ -45,7 +45,7 @@ export const CheatsContainer = ({
     platforms: availablePlatforms,
     game,
 }: CheatsContainerProps) => {
-    const { t: i18n } = useTranslation();
+    const i18n = useT()
     const t = useLocalizedText();
     const { settings } = useSettings();
 

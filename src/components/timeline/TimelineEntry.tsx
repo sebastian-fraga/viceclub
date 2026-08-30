@@ -1,4 +1,5 @@
 import { Tooltip } from "@/components/ui/Tooltip";
+import useT from "@/hooks/useT";
 import {
     formatTimelineDateTime,
     type DateFormat,
@@ -7,7 +8,6 @@ import {
 import { getTimelineIcon } from "@/lib/timeline/timelineIcons";
 import parse from "html-react-parser";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import "./timeline.css";
@@ -63,7 +63,7 @@ export default function TimelineEntry({
     dateFormat,
     locale,
 }: TimelineEntryProps) {
-    const { t } = useTranslation();
+    const t = useT();
 
     const itemsToRender: TimelineEvent[] = events ?? [
         {

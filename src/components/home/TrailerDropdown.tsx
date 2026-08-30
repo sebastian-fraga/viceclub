@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -26,7 +26,7 @@ export default function TrailerDropdown({
     trailers,
     buttonClass,
 }: Props) {
-    const { t } = useTranslation();
+    const t = useT();
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [dropdownPosition, setDropdownPosition] = useState({

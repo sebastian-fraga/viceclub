@@ -1,7 +1,7 @@
+import useT from "@/hooks/useT";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import type { RadioStation } from "./types/types";
 
 interface StationSelectorProps {
@@ -15,7 +15,7 @@ export function StationSelector({
     activeStationId,
     onSelect,
 }: StationSelectorProps) {
-    const { t } = useTranslation();
+    const t = useT();
     const scrollRef = useRef<HTMLDivElement>(null);
     const [canScrollUp, setCanScrollUp] = useState(false);
     const [canScrollDown, setCanScrollDown] = useState(false);

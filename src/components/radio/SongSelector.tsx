@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
@@ -39,7 +39,7 @@ export function SongSelector({
     onBack,
     preventAutoScrollOnMobile = true,
 }: SongSelectorProps) {
-    const { t } = useTranslation();
+    const t = useT()
 
     const scrollRef = useRef<HTMLUListElement>(null);
     const songRefs = useRef<Map<number, HTMLLIElement>>(new Map());

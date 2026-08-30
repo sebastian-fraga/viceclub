@@ -3,7 +3,7 @@ import type { GameId } from "@/config/games";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import CharacterCard, { type Character } from "./CharacterCard";
 
 export default function CharacterGrid({
@@ -13,7 +13,7 @@ export default function CharacterGrid({
     characters: Character[];
     gameId: GameId;
 }) {
-    const { t } = useTranslation();
+    const t = useT();
     const [visibleCount, setVisibleCount] = useState(9);
 
     const visibleCharacters = characters.slice(0, visibleCount);

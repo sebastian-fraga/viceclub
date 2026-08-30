@@ -1,10 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { defaultLanguage } from "@/config/languages";
+import { defaultLanguage, detectBrowserLanguage } from "@/config/languages";
 import { resources } from "@/data/lang";
 
-i18n.use(initReactI18next).init({
+export const i18nReady = i18n.use(initReactI18next).init({
     resources,
     lng: defaultLanguage,
     fallbackLng: defaultLanguage,
@@ -12,5 +12,44 @@ i18n.use(initReactI18next).init({
         escapeValue: false,
     },
 });
+
+function applyUserLanguage() {
+    const stored = localStorage.getItem("viceclub-settings");
+    let targetLanguage: string | null = null;
+
+    if (stored) {
+        try {
+            const settings = JSON.parse(stored);
+            if (
+                typeof settings.language === "string" &&
+                settings.language in resources
+            ) {
+                targetLanguage = settings.language;
+            }
+        } catch {}
+    }
+
+    if (!targetLanguage) {
+        targetLanguage = detectBrowserLanguage();
+    }
+
+    if (targetLanguage) {
+        document.cookie = `language=${targetLanguage}; path=/; max-age=31536000; samesite=lax`;
+
+        if (targetLanguage !== i18n.language) {
+            i18n.changeLanguage(targetLanguage);
+        }
+
+        window.dispatchEvent(
+            new CustomEvent("settings-change", {
+                detail: { language: targetLanguage },
+            }),
+        );
+    }
+}
+
+if (typeof document !== "undefined") {
+    document.addEventListener("astro:page-load", applyUserLanguage);
+}
 
 export default i18n;

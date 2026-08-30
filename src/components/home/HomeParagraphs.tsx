@@ -1,13 +1,10 @@
-import { useTranslation } from "react-i18next";
-
+import useT from "@/hooks/useT";
 interface Props {
     paragraphs: string[];
 }
 
 export default function HomeParagraphs({ paragraphs }: Props) {
-    const { t, ready } = useTranslation();
-
-    if (!ready) return null;
+    const t = useT();
 
     return (
         <div>

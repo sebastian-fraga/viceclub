@@ -1,7 +1,7 @@
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import Title from "../ui/Title";
 
 const GAMES = [
@@ -20,7 +20,7 @@ const FADE_SIZE = 64;
 const EDGE_TOLERANCE = 8;
 
 export default function GameCarousel() {
-    const { t } = useTranslation();
+    const t = useT();
     const scrollerRef = useRef<HTMLDivElement>(null);
 
     const isDragging = useRef(false);

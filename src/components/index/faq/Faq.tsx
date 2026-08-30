@@ -1,9 +1,9 @@
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import Title from "../../ui/Title";
 import FaqAccordion from "./FaqAccordion";
 
 function Faq() {
-    const { t } = useTranslation();
+    const t = useT();
     return (
         <section className="w-full max-w-400 flex flex-col items-start">
             <div>

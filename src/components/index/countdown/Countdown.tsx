@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import CountdownTimer from "./CountdownTimer";
 
@@ -45,7 +45,7 @@ const titleClass =
     "font-black text-[clamp(1rem,3vw,2.5rem)] max-mobile:text-2xl leading-tight bg-linear-to-b from-[#7374f4] via-[#dc8ee4] to-[#e59e7a] bg-clip-text text-transparent text-pretty";
 
 export default function Countdown() {
-    const { t } = useTranslation();
+    const t = useT();
     const [timeLeft, setTimeLeft] = useState<TimeLeft>({
         days: 0,
         hours: 0,

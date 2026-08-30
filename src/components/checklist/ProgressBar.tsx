@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import type { ChecklistProgress } from "../../hooks/useChecklistProgress";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 interface ProgressBarProps {
     progress: ChecklistProgress;
 }
 
 export function ProgressBar({ progress }: ProgressBarProps) {
-    const {t} = useTranslation()
+    const t = useT()
     const { total, count, pct } = progress;
 
     return (

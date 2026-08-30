@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import clsx from "clsx";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import { formatTime } from "./lib/formatTime";
 
 import "./radio.css";
@@ -51,7 +51,7 @@ export function PlayerFooter({
     onSeek,
     onVolumeChange,
 }: PlayerBarProps) {
-    const { t } = useTranslation();
+    const t = useT()
     const hasLoadedOnceRef = useRef(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [hoverRatio, setHoverRatio] = useState<number | null>(null);

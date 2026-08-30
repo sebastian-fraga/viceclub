@@ -1,9 +1,9 @@
 import TimelineEntry from "@/components/timeline/TimelineEntry";
 import Title from "@/components/ui/Title";
+import useLocale from "@/hooks/useLocale";
 import useSettings from "@/hooks/useSettings";
 import type { DateFormat } from "@/lib/timeline/formatTimelineTime";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export interface TimelineSpoiler {
     text: string[];
@@ -51,7 +51,7 @@ interface TimeSettings {
 }
 
 export default function Timeline({ gameCode, initialData }: TimelineProps) {
-    const { t, i18n } = useTranslation();
+    const locale = useLocale();
     const { settings } = useSettings();
 
     const [data, setData] = useState<TimelineData | null>(initialData ?? null);
@@ -183,7 +183,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                             timezone={timeSettings.timezone}
                             timeFormat={timeSettings.timeFormat}
                             dateFormat={timeSettings.dateFormat}
-                            locale={i18n.language}
+                            locale={locale}
                         />
                     </div>
                 );

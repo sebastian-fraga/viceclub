@@ -2,7 +2,6 @@ import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { useCurrentTrack } from "./hooks/useCurrentTrack";
 import { useMediaSession } from "./hooks/useMediaSession";
 import { useRadioSelection } from "./hooks/useRadioSelection";
@@ -18,7 +17,6 @@ interface RadioPlayerProps {
 }
 
 export function RadioPlayer({ stations, game }: RadioPlayerProps) {
-    const { t } = useTranslation();
     const gameInfo = gamesList.find((item) => item.id === game);
     const radio = useRadioSelection(stations);
     const [mobilePanel, setMobilePanel] = useState<"stations" | "songs">(

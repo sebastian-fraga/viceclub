@@ -1,5 +1,5 @@
+import useT from "@/hooks/useT";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 interface Props {
     character: Character;
@@ -54,7 +54,7 @@ function FlagImage({ countryCode }: { countryCode: string }) {
 }
 
 export default function CharacterCard({ character, gameId }: Props) {
-    const { t } = useTranslation();
+    const t = useT();
     const [flipped, setFlipped] = useState(false);
 
     const statusStyle =

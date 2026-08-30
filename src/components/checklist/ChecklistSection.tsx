@@ -2,7 +2,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import { useLocalizedText } from "../../hooks/useLocalizedText";
 import type { ChecklistSectionData } from "../../types/checklist";
 import { ChecklistItem } from "./ChecklistItem";
@@ -22,7 +22,7 @@ export function ChecklistSection({
     onToggleItem,
     onToggleAll,
 }: ChecklistSectionProps) {
-    const { t: i18n } = useTranslation();
+   const i18n = useT()
     const t = useLocalizedText();
     const [open, setOpen] = useState(false);
 

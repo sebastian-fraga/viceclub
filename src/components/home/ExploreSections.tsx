@@ -7,7 +7,7 @@ import { useGameChecklistProgress } from "@/hooks/useGameChecklistProgress";
 import type { Game } from "@/types/game";
 import { IconArrowUpRight, IconTools } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import Title from "../ui/Title";
 
 interface Props {
@@ -34,7 +34,7 @@ function getBentoClasses(index: number) {
 }
 
 export default function ExploreSections({ game }: Props) {
-    const { t } = useTranslation();
+    const t = useT();
     const checklistProgress = useGameChecklistProgress(game.id);
 
     const sections = GAME_SECTIONS[game.id]

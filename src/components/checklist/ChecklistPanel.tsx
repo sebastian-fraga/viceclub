@@ -2,7 +2,7 @@ import Title from "@/components/ui/Title";
 import { gamesList } from "@/config/games";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import {
     useChecklistProgress,
     type ChecklistProgress,
@@ -26,7 +26,7 @@ export function ChecklistPanel({
     sections,
     onProgressChange,
 }: ChecklistPanelProps) {
-    const { t } = useTranslation();
+    const t = useT()
 
     const gameData = gamesList.find((item) => item.id === game);
 

@@ -9,7 +9,6 @@ import FichaTecnica from "../home/FichaTecnica.tsx";
 import GameHero from "../home/GameHero";
 import HomeParagraphs from "../home/HomeParagraphs";
 
-
 export async function getStaticPaths() {
     const gameFiles = import.meta.glob<{ default: Game }>(
         "../../data/games/*.ts",

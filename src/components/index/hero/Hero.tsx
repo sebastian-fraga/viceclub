@@ -1,7 +1,6 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
-
+import useT from "@/hooks/useT";
 const HERO_IMAGES = [
     "/assets/images/hero/1.webp",
     "/assets/images/hero/2.webp",
@@ -27,7 +26,7 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 export default function Hero() {
-    const { t } = useTranslation();
+    const t = useT();
     const shouldReduceMotion = useReducedMotion();
 
     const [deck, setDeck] = useState<string[]>([]);

@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import type { TOptions } from "i18next";
+import useT from "@/hooks/useT";
 
 interface Props {
     label: string;
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function Title({ label, options }: Props) {
-    const { t } = useTranslation();
+    const t = useT();
 
     return (
         <h2 className="text-5xl max-mobile:text-3xl text-white uppercase font-bold tracking-wide relative mb-2 max-mobile:max-w-prose text-pretty font-body-condensed">

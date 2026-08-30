@@ -11,11 +11,12 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import { Fragment, useEffect, useState } from "react";
 
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 
 import Title from "../../ui/Title";
 
 import "./news.css";
+import { useTranslation } from "react-i18next";
 
 interface NewsItem {
     slug: string;
@@ -39,7 +40,8 @@ const buttonClass =
     "flex bg-pink-300 rounded-full px-4 sm:px-6 py-3 cursor-pointer transition hover:bg-pink-400 hover:text-slate-50 gap-2 sm:gap-3 text-black text-sm items-center";
 
 export default function News() {
-    const { t, i18n } = useTranslation();
+    const t = useT();
+    const {i18n} = useTranslation()
     const [news, setNews] = useState<NewsItem[]>([]);
     const [visibleCount, setVisibleCount] = useState(STEP);
     const [copiedSlug, setCopiedSlug] = useState<string | null>(null);

@@ -1,4 +1,5 @@
-import { Trans, useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
+import { Trans } from "react-i18next";
 
 import {
     Accordion,
@@ -109,7 +110,7 @@ const sections = [
 ];
 
 export default function FaqAccordion() {
-    const { t } = useTranslation();
+    const t = useT();
     return (
         <div className="space-y-6 mt-6">
             {sections.map((section) => (

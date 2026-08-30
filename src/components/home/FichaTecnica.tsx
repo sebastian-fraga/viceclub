@@ -1,7 +1,7 @@
 import type { Game } from "@/types/game";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import useT from "@/hooks/useT";
 import Title from "../ui/Title";
 import { Tooltip } from "../ui/Tooltip";
 
@@ -41,7 +41,7 @@ interface CollapsibleRowProps {
 }
 
 function CollapsibleRow({ label, children }: CollapsibleRowProps) {
-    const { t } = useTranslation();
+    const t = useT();
     const [open, setOpen] = useState(false);
 
     return (
@@ -90,7 +90,7 @@ function Row({
     label: string;
     children: React.ReactNode;
 }) {
-    const { t } = useTranslation();
+    const t = useT();
 
     return (
         <div className="flex items-start justify-between gap-3 border-b border-neutral-400/10 py-1.5 max-mobile:gap-2">
@@ -140,7 +140,7 @@ function parseTag(raw: string): { text: string; tag: string | null } {
 }
 
 function AcronymBadge({ tag }: { tag: string }) {
-    const { t } = useTranslation();
+    const t = useT();
 
     const labelKey = ACRONYM_TOOLTIPS[tag.toUpperCase()];
 
@@ -164,7 +164,7 @@ function DateLine({
 }: {
     date: Game["technicalSheet"]["dates"][number]["dates"][number];
 }) {
-    const { t } = useTranslation();
+    const t = useT();
 
     return (
         <span className="inline-flex items-center gap-1.5 text-sm text-neutral-400 max-mobile:text-[11px] pl-4">
@@ -185,7 +185,7 @@ export default function TechSheet({
     engines,
     sales,
 }: TechSheetProps) {
-    const { t } = useTranslation();
+    const t = useT();
     return (
         <motion.section
             className="flex flex-col items-start gap-3 max-mobile:w-full"
