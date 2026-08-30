@@ -206,7 +206,10 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                     stiffness: 280,
                     damping: 28,
                 }}
-                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0  max-mobile:h-full overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top]"
+                style={{
+                    paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
+                }}
+                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0 max-mobile:h-dvh overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top]"
             >
                 {isMobile && (
                     <button
@@ -220,7 +223,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                 )}
                 <nav
                     aria-label={t("sidebar.navigation")}
-                    className="flex flex-col justify-between items-stretch h-full gap-1 max-mobile:pt-16 p-2 mb-8"
+                    className="flex flex-col justify-between items-stretch h-full min-h-0 gap-1 max-mobile:pt-16 p-2"
                 >
                     <div className="flex flex-col items-stretch w-full gap-1">
                         <Tooltip
@@ -291,7 +294,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                             return (
                                 <div
                                     key={game.id}
-                                    className="flex flex-col gap-1 w-full"
+                                    className="flex flex-col gap-1 w-full max-mobile:last:pb-16"
                                 >
                                     <Tooltip
                                         label={game.name}
@@ -412,7 +415,8 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                                             sectionId;
 
                                                     const Icon = active
-                                                        ? (meta.activeIcon ?? meta.icon)
+                                                        ? (meta.activeIcon ??
+                                                          meta.icon)
                                                         : meta.icon;
 
                                                     return (
