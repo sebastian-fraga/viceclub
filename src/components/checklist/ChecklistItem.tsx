@@ -103,7 +103,7 @@ export function ChecklistItem({
                                   {entry.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${entry.icon}.webp`}
-                                          className="h-auto w-6 shrink-0"
+                                          className="h-auto max-w-6 w-auto"
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}
@@ -126,7 +126,7 @@ export function ChecklistItem({
                                   {item.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${item.icon}.webp`}
-                                          className="h-auto w-6 shrink-0"
+                                          className="h-auto max-w-6 w-auto"
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}
