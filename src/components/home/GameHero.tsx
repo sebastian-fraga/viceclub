@@ -67,7 +67,7 @@ export default function GameHero({ game }: Props) {
                             : "justify-end"
                     } max-mobile:px-2 max-mobile:pt-4`}
                 >
-                    <h1 className="text-2xl font-medium tracking-wide max-mobile:text-lg">
+                    <h1 className="text-3xl font-black tracking-wide max-mobile:text-lg">
                         {game.title}
                     </h1>
                 </div>
