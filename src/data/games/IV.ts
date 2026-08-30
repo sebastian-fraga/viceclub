@@ -11,7 +11,7 @@ export const GTAIV: Game = {
         buttons: {
             primary: {
                 background: "#a3a3a3",
-                hovered: "#525252",
+                hovered: "#999696",
                 text: "#000",
             },
             secondary: {
