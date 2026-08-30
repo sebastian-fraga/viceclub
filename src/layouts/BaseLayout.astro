@@ -3,7 +3,6 @@ import { ClientRouter } from "astro:transitions";
 
 import type { Game } from "@/types/game";
 import { defaultLanguage } from "@/config/languages";
-import { resources } from "@/data/lang";
 
 import Sidebar from "../components/layout/Sidebar";
 import Header from "../components/layout/Header.astro";
@@ -25,13 +24,10 @@ interface Props {
 
 const { title, description, canonical, dataGame, game } = Astro.props;
 
-const cookieLang = Astro.cookies.get("language")?.value;
-const lang =
-    cookieLang && cookieLang in resources ? cookieLang : defaultLanguage;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={defaultLanguage}>
     <head>
         <ClientRouter />
         <script>
