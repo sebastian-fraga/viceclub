@@ -4,16 +4,17 @@ import { initReactI18next } from "react-i18next";
 import { defaultLanguage } from "@/config/languages";
 import { resources } from "@/data/lang";
 
-declare global {
-    interface Window {
-        __INITIAL_LANG__?: string;
-    }
+function getCookieLanguage(): string | null {
+    if (typeof document === "undefined") return null;
+
+    const match = document.cookie.match(/(?:^|;\s*)language=([^;]+)/);
+    if (!match) return null;
+
+    const lang = decodeURIComponent(match[1]);
+    return lang in resources ? lang : null;
 }
 
-const initialLanguage =
-    typeof window !== "undefined"
-        ? (window.__INITIAL_LANG__ ?? defaultLanguage)
-        : defaultLanguage;
+const initialLanguage = getCookieLanguage() ?? defaultLanguage;
 
 i18n.use(initReactI18next).init({
     resources,

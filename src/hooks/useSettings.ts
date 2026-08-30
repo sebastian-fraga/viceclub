@@ -122,7 +122,7 @@ export default function useSettings() {
                 const language = value as Language;
                 i18n.changeLanguage(language);
                 try {
-                    localStorage.setItem("language", language);
+                    // localStorage.setItem("language", language);
                 } catch {}
             }
 

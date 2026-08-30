@@ -32,6 +32,12 @@ export default function useSyncLanguage() {
             if (targetLanguage !== i18n.language) {
                 i18n.changeLanguage(targetLanguage);
             }
+
+            window.dispatchEvent(
+                new CustomEvent("settings-change", {
+                    detail: { language: targetLanguage },
+                }),
+            );
         }
     }, []);
 }
