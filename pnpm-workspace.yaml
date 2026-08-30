@@ -1,7 +1,11 @@
 packages:
-  - "."
-  - "studio"
+    - "."
+    - "studio"
 
 allowBuilds:
-  esbuild: true
-  sharp: true
+    esbuild: true
+    sharp: true
+
+overrides:
+    i18next: 26.4.0
+    react-i18next: 17.0.12

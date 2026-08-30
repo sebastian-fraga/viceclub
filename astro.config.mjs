@@ -19,7 +19,7 @@ export default defineConfig({
             allowedHosts: true,
         },
         optimizeDeps: {
-            include: ["astro/toolbar"],
+            include: ["astro/toolbar", "i18next", "react-i18next"],
         },
     },
 });
