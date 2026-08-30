@@ -1,19 +1,21 @@
 import type { ComponentType } from "react";
 
-import PlayStationIcon from "@/components/icons/PlayStationIcon";
-import XboxIcon from "@/components/icons/XboxIcon";
-import NintendoIcon from "@/components/icons/NintendoIcon";
-import WindowsIcon from "@/components/icons/WindowsIcon";
+import NintendoIcon from "@/components/icons/nintendo/NintendoIcon";
+import WindowsIcon from "@/components/icons/pc/WindowsIcon";
+import PlayStationIcon from "@/components/icons/playstation/PlayStationIcon";
+import XboxIcon from "@/components/icons/xbox/XboxIcon";
 
-import PS2Icon from "@/components/icons/PS2Icon";
-import PSPIcon from "@/components/icons/PSPIcon";
-import PS3Icon from "@/components/icons/PS3Icon";
-import PS4Icon from "@/components/icons/PS4Icon";
-import PS5Icon from "@/components/icons/PS5Icon";
+import PS2Icon from "@/components/icons/playstation/PS2Icon";
+import PS3Icon from "@/components/icons/playstation/PS3Icon";
+import PS4Icon from "@/components/icons/playstation/PS4Icon";
+import PS5Icon from "@/components/icons/playstation/PS5Icon";
+import PSPIcon from "@/components/icons/playstation/PSPIcon";
 
-import XboxSeriesIcon from "@/components/icons/XboxSeriesIcon";
+import XboxConsoleIcon from "@/components/icons/xbox/XboxConsoleIcon";
+import Xbox360Icon from "@/components/icons/xbox/Xbox360Icon";
+import XboxSeriesIcon from "@/components/icons/xbox/XboxSeriesIcon";
 
-import SwitchIcon from "@/components/icons/SwitchIcon";
+import SwitchIcon from "@/components/icons/nintendo/SwitchIcon";
 
 export const platformFamilies = {
     playstation: {
@@ -71,8 +73,8 @@ export const platformIcons = {
     ps4: PS4Icon,
     ps5: PS5Icon,
 
-    xbox: XboxIcon,
-    xbox360: XboxIcon,
+    xbox: XboxConsoleIcon,
+    xbox360: Xbox360Icon,
     xboxOne: XboxIcon,
     xboxSeries: XboxSeriesIcon,
 

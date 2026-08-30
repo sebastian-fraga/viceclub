@@ -11,19 +11,19 @@ import {
 } from "@/config/platforms";
 import type { Game } from "@/types/game";
 
-import AndroidIcon from "@/components/icons/AndroidIcon";
-import AppleIcon from "@/components/icons/AppleIcon";
-import PlayStationIcon from "@/components/icons/PlayStationIcon";
-import SwitchIcon from "@/components/icons/SwitchIcon";
-import WindowsIcon from "@/components/icons/WindowsIcon";
-import XboxIcon from "@/components/icons/XboxIcon";
+import SwitchIcon from "@/components/icons/nintendo/SwitchIcon";
+import WindowsIcon from "@/components/icons/pc/WindowsIcon";
+import AndroidIcon from "@/components/icons/phones/AndroidIcon";
+import AppleIcon from "@/components/icons/phones/AppleIcon";
+import PlayStationIcon from "@/components/icons/playstation/PlayStationIcon";
+import XboxIcon from "@/components/icons/xbox/XboxIcon";
 
-import AppStoreIcon from "@/components/icons/AppStoreIcon";
-import GooglePlayIcon from "@/components/icons/GooglePlayIcon";
-import NintendoEShopIcon from "@/components/icons/NintendoEShopIcon";
-import PlayStationStoreIcon from "@/components/icons/PlayStationStoreIcon";
-import RockstarIcon from "@/components/icons/RockstarIcon";
-import SteamIcon from "@/components/icons/SteamIcon";
+import NintendoEShopIcon from "@/components/icons/nintendo/NintendoEShopIcon";
+import RockstarIcon from "@/components/icons/pc/RockstarIcon";
+import SteamIcon from "@/components/icons/pc/SteamIcon";
+import AppStoreIcon from "@/components/icons/phones/AppStoreIcon";
+import GooglePlayIcon from "@/components/icons/phones/GooglePlayIcon";
+import PlayStationStoreIcon from "@/components/icons/playstation/PlayStationStoreIcon";
 
 import { Tooltip } from "@/components/ui/Tooltip";
 import { IconArrowUpRight, IconMoodPuzzled } from "@tabler/icons-react";

@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import CountdownTimer from "./CountdownTimer";
 
-import PlayStation5 from "../../icons/PlayStation5";
-import XboxSeries from "../../icons/XboxSeriesIcon";
+import PS5Icon from "../../icons/playstation/PS5Icon";
+import XboxSeries from "../../icons/xbox/XboxSeriesIcon";
 
 const RELEASE_DATE = new Date("Nov 19, 2026 00:00:00").getTime();
 
@@ -163,7 +163,7 @@ export default function Countdown() {
                                 justify-center
                                 "
                             >
-                                <PlayStation5 />
+                                <PS5Icon />
                             </motion.a>
 
                             <motion.a
