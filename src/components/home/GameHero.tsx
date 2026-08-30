@@ -28,7 +28,7 @@ export default function GameHero({ game }: Props) {
         | "default";
 
     return (
-        <section className="relative min-h-80 w-full rounded-4xl drop-shadow-2xl max-mobile:min-h-44 max-mobile:rounded-3xl">
+        <section className="relative min-h-80 w-full rounded-4xl shadow-2xl shadow-(color:--game-accent)/5 max-mobile:min-h-44 max-mobile:rounded-3xl">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -41,7 +41,7 @@ export default function GameHero({ game }: Props) {
                         game.buttonsPosition === "left"
                             ? "bg-linear-to-b"
                             : "bg-linear-to-b"
-                    } from-transparent via-black/20 via-50% to-black/95`}
+                    } from-transparent via-black/15 via-50% to-black/75`}
                 />
             </motion.div>
 
