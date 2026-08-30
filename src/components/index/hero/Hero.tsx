@@ -127,7 +127,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-linear-to-b from-black/0 from-0% to-[#171723] to-100%" />
             </div>
 
-            <div className="relative z-10 flex flex-col items-start max-mobile:items-center gap-8 px-6 pt-120 max-mobile:pt-80 text-center">
+            <div className="relative z-10 flex flex-col items-start max-mobile:items-center gap-8 px-6 pt-120 max-mobile:pt-60 text-center">
                 <motion.h1
                     initial={{
                         opacity: 0,
