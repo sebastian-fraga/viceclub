@@ -170,7 +170,7 @@ export default function GameCarousel() {
                             onClick={handleCardClick}
                             draggable={false}
                             onDragStart={(e) => e.preventDefault()}
-                            className="group relative block w-56 max-mobile:w-40 shrink-0 snap-start overflow-hidden rounded-xl border-4 border-transparent hover:border-yellow-200 focus-visible:border-yellow-200 outline-none transition-all duration-300 ease-out hover:-translate-y-1.5 active:scale-95"
+                            className="group relative block w-56 max-mobile:w-40 shrink-0 snap-start overflow-hidden rounded-xl border-4 border-transparent hover:border-yellow-200 focus-visible:border-yellow-200 outline-none transition-all duration-300 ease-out hover:-translate-y-1.5 active:scale-95 cursor-grab"
                         >
                             <img
                                 src={`/assets/images/main/boxarts/portada_${game.id}.webp`}
