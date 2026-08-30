@@ -5,5 +5,5 @@ i {
 }
 
 .news-article p a {
-    @apply text-yellow-200 transition-colors font-medium hover:text-yellow-300 underline
+    @apply text-yellow-200 transition-colors font-medium hover:text-yellow-300 hover:underline
 }
