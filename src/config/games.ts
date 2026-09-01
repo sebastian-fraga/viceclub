@@ -13,7 +13,7 @@ import {
     IconRadio,
     IconTool,
     IconTrophy,
-    IconTrophyFilled
+    IconTrophyFilled,
 } from "@tabler/icons-react";
 
 export type GameId = "III" | "VC" | "SA" | "LCS" | "VCS" | "IV" | "V" | "VI";
@@ -43,7 +43,7 @@ export type SectionId =
 export interface SectionMeta {
     label: string;
     icon: Icon;
-    activeIcon?: Icon
+    activeIcon?: Icon;
 }
 
 export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
@@ -59,7 +59,7 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     artworks: {
         label: "sidebar.sections.artworks",
         icon: IconPhoto,
-        activeIcon: IconPhotoFilled
+        activeIcon: IconPhotoFilled,
     },
     herramientas_y_mods: {
         label: "sidebar.sections.mods",
@@ -68,7 +68,7 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
     logros: {
         label: "sidebar.sections.achievements",
         icon: IconTrophy,
-        activeIcon: IconTrophyFilled
+        activeIcon: IconTrophyFilled,
     },
     mapa: {
         label: "sidebar.sections.map",
@@ -91,13 +91,13 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
 };
 
 export const UNFINISHED_SECTIONS: Partial<Record<GameId, SectionId[]>> = {
-    III: ["artworks", "herramientas_y_mods", "logros", "mapa"],
-    VC: ["artworks", "herramientas_y_mods", "logros", "mapa"],
-    SA: ["artworks", "herramientas_y_mods", "logros", "mapa"],
-    LCS: ["artworks", "mapa"],
-    VCS: ["artworks", "mapa"],
-    IV: ["artworks", "herramientas_y_mods", "logros", "mapa"],
-    V: ["artworks", "herramientas_y_mods", "logros", "mapa"],
+    III: ["herramientas_y_mods", "logros", "mapa"],
+    VC: ["herramientas_y_mods", "logros", "mapa"],
+    SA: ["herramientas_y_mods", "logros", "mapa"],
+    LCS: ["mapa"],
+    VCS: ["mapa"],
+    IV: ["herramientas_y_mods", "logros", "mapa"],
+    V: ["herramientas_y_mods", "logros", "mapa"],
 };
 
 export const gamesList: { id: GameId; name: string; fullName: string }[] = [
