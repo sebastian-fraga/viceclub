@@ -51,7 +51,7 @@ src/
 │   ├── home/
 │   ├── index/
 │   ├─── radio/
-│   └── .../
+│   └── ...
 ├── layouts/
 │   ├── BaseLayout.astro
 │   └── ErrorLayout.astro
