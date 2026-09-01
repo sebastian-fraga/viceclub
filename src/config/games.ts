@@ -33,7 +33,7 @@ export type SectionId =
     | "inicio"
     | "100"
     | "artworks"
-    | "herramientas_y_mods"
+    | "herramientas-y-mods"
     | "logros"
     | "mapa"
     | "radio"
@@ -61,7 +61,7 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
         icon: IconPhoto,
         activeIcon: IconPhotoFilled,
     },
-    herramientas_y_mods: {
+    "herramientas-y-mods": {
         label: "sidebar.sections.mods",
         icon: IconTool,
     },
@@ -91,13 +91,13 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
 };
 
 export const UNFINISHED_SECTIONS: Partial<Record<GameId, SectionId[]>> = {
-    III: ["herramientas_y_mods", "logros", "mapa"],
-    VC: ["herramientas_y_mods", "logros", "mapa"],
-    SA: ["herramientas_y_mods", "logros", "mapa"],
+    III: ["herramientas-y-mods", "logros", "mapa"],
+    VC: ["herramientas-y-mods", "logros", "mapa"],
+    SA: ["herramientas-y-mods", "logros", "mapa"],
     LCS: ["mapa"],
     VCS: ["mapa"],
-    IV: ["herramientas_y_mods", "logros", "mapa"],
-    V: ["herramientas_y_mods", "logros", "mapa"],
+    IV: ["herramientas-y-mods", "logros", "mapa"],
+    V: ["herramientas-y-mods", "logros", "mapa"],
 };
 
 export const gamesList: { id: GameId; name: string; fullName: string }[] = [
@@ -131,7 +131,7 @@ const FULL_SECTIONS: SectionId[] = [
     "inicio",
     "100",
     "artworks",
-    "herramientas_y_mods",
+    "herramientas-y-mods",
     "logros",
     "mapa",
     "radio",
