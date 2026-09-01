@@ -1,101 +1,76 @@
-# Vice Club
+![Vice Club banner](public/assets/images/app/banner.png)
 
-![Vice Club Logo](./public/assets/images/app/banner.png)
+GTA III–VI fan site: checklists, radio, maps, timeline and more.
 
-<p align="center">
-  <a href="https://www.viceclub.app/">
-    <img src="https://img.shields.io/badge/VISIT_WEBSITE-FF0080?style=for-the-badge" alt="Visit Website" />
-  </a>
-</p>
+![Last commit](https://img.shields.io/github/last-commit/sebastian-fraga/viceclub)
+![License](https://img.shields.io/github/license/sebastian-fraga/viceclub)
+![Languages](https://img.shields.io/badge/i18n-ES_|_EN_|_FR_|_PT--BR-blue)
 
----
+🔗 [viceclub.app](https://viceclub.app)
 
-## About the Project
+## Preview
 
-**Vice Club** is a fan-made website dedicated to preserving and organizing content from the *Grand Theft Auto* series in a clean, immersive, and highly accessible way.
+<div align="center">
+  <img src="public/assets/images/app/screenshots/preview-index.png" width="49%" />
+  <img src="public/assets/images/app/screenshots/preview-home.png" width="49%" />
+  <img src="public/assets/images/app/screenshots/preview-radio.png" width="49%" />
+  <img src="public/assets/images/app/screenshots/preview-artworks.png" width="49%" />
+</div>
 
-The project aims to recreate the authentic GTA experience directly in the browser — featuring playable radio stations, interactive maps, completion checklists, and richly detailed game information.
+## Tech stack
 
-Continuously updated and expanded, Vice Club keeps growing with new features and content.
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-26A69A?style=flat&logo=i18next&logoColor=white)
+![AWS S3](https://img.shields.io/badge/AWS_S3-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
----
+## Features
 
-## What You'll Find
+| Feature         | Status |
+| --------------- | ------ |
+| 📰 News         | ✅     |
+| 📋 Checklists   | ✅     |
+| 🎨 Artworks     | ✅     |
+| 🛠️ Tools & mods | 🚧     |
+| 🏆 Achievements | 🚧     |
+| 🗺️ Map          | 🚧     |
+| 📻 Radio        | ✅     |
+| 🕒 Timeline     | ✅     |
+| 🎮 Cheats       | ✅     |
 
-### Radio Stations
+## Structure
 
-One of the core features of Vice Club.
+```text
+src/
+├── components/
+│   ├── artworks/
+│   ├── home/
+│   ├── index/
+│   ├─── radio/
+│   └── .../
+├── layouts/
+│   ├── BaseLayout.astro
+│   └── ErrorLayout.astro
+├── pages/
+│   ├── [game].astro
+│   └── static routes
+```
 
-Listen to the original in-game radio stations with:
+## Local development
 
-- Background playback
-- Detailed song information
-- Genre categorization
-- Talk shows and original segments
+```bash
+git clone https://github.com/sebastian-fraga/viceclub.git
+cd viceclub
+pnpm install
+pnpm run dev
+```
 
----
+## Conventions
 
-### Interactive Maps
-
-Carefully designed interactive maps to assist you while playing. They include:
-
-- Collectibles
-- Weapons
-- Properties
-- Points of interest
-
----
-
-### 100% Completion Checklists
-
-Track your progress toward 100% completion directly in the browser.
-
-Progress is saved automatically in your device, so you can continue exactly where you left off (just don't clear your site data).
-
----
-
-### Game Information
-
-Each game has its own dedicated section with well-organized content, including:
-
-- Main and supporting characters
-- Quotes
-- Fact sheets and trivia
-
----
-
-### Cheat Codes
-
-Complete cheat code lists for multiple platforms, with a built-in search function for quick access during gameplay.
-
----
-
-### Mods & Tools
-
-A curated collection of useful community mods, tools, and resources to enhance the PC experience.
-
----
-
-## Built With
-
-![Astro](https://img.shields.io/badge/Astro-E34F26?style=plastic&logo=Astro&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=plastic&logo=css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=plastic&logo=javascript&logoColor=black)
-
-Originally started as a vanilla HTML project, Vice Club later transitioned to **Astro** for better scalability. Much of the site still uses vanilla components where possible.
-
----
-
-## Currently Working On
-
-I'm currently working across multiple areas of the project. You can check the active development status in the [Issues section](https://github.com/sebastian-fraga/viceclub/issues).
-
----
-
-## Disclaimer
-
-Vice Club is an independent website. 
-
-*Grand Theft Auto* and *GTA* are registered trademarks of **Rockstar Games** and **Take-Two Interactive**. 
-
-This website is not affiliated with, sponsored by, or associated with either company.
+- Custom breakpoints: `max-mobile:` for inverse mobile-first overrides
+- Per-game theming via `--game-accent` (CSS custom property)
+- Shared hooks in `useSettings`/`AppContext` for persistence (localStorage)
