@@ -1068,6 +1068,11 @@ export default {
         subtitle:
             "A página solicitada não foi encontrada ou não está disponível.",
         backToHome: "Voltar ao início",
+        underConstruction: {
+            title: "Página em construção",
+            subtitle:
+                "A página solicitada está em construção ou manutenção. Tente novamente mais tarde.",
+        },
     },
     sidebar: {
         close: "Fechar menu",

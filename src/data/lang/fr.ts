@@ -1088,6 +1088,11 @@ export default {
         title: "Erreur 404",
         subtitle: "La page demandée est introuvable ou n’est pas disponible.",
         backToHome: "Retour à l’accueil",
+        underConstruction: {
+            title: "Page en construction",
+            subtitle:
+                "La page demandée est actuellement en construction ou en maintenance. Veuillez réessayer ultérieurement.",
+        },
     },
     settings: {
         title: "Paramètres",

@@ -1067,6 +1067,11 @@ export default {
         title: "Error 404",
         subtitle: "The requested page could not be found or is unavailable.",
         backToHome: "Back to home",
+        underConstruction: {
+            title: "Page Under Construction",
+            subtitle:
+                "The requested page is currently under construction or maintenance. Please try again later.",
+        },
     },
     sidebar: {
         close: "Close menu",
