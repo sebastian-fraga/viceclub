@@ -1,0 +1,25 @@
+---
+import "../styles/main.css";
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+    title?: string;
+}
+
+const { title = "Page Not Found" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <ClientRouter />
+    </head>
+    <body
+        class="min-h-screen bg-[#0a0a0a] bg-linear-to-b from-[#221f3d] via-[#15131a] to-[#0a0a0a]"
+    >
+        <slot />
+    </body>
+</html>
