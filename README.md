@@ -1,6 +1,6 @@
 ![Vice Club banner](public/assets/images/app/banner.png)
 
-GTA III–VI fan site: checklists, radio, maps, timeline and more.
+GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV, GTA V, and GTA VI fan site: cheats, information, artworks, mods, achievements, interactive maps, and more.
 
 ![Last commit](https://img.shields.io/github/last-commit/sebastian-fraga/viceclub)
 ![License](https://img.shields.io/github/license/sebastian-fraga/viceclub?cacheSeconds=1)
