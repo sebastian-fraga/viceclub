@@ -2,10 +2,12 @@
 import type { TimelineData } from "@/components/timeline/Timeline";
 import Timeline from "@/components/timeline/Timeline";
 import { GTAVI } from "@/data/games/VI";
+import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const game = "VI";
 const gameData = GTAVI;
+const gameSeo = seo.VI?.timeline;
 
 let timelineData: TimelineData | null = null;
 
@@ -27,9 +29,11 @@ try {
 ---
 
 <BaseLayout
-    title="Linea de tiempo de GTA 6 – Lista completa de filtraciones e información | Vice Club"
-    description="Línea de tiempo de GTA 6 con toda la información, leaks, noticias y anuncios de Rockstar sobre Grand Theft Auto VI en Vice Club."
-    canonical="https://www.viceclub.app/VI/timeline"
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/timeline`}
     game={gameData}
 >
     <main

@@ -1,12 +1,10 @@
 ---
 import { ChecklistContainer } from "@/components/checklist/ChecklistContainer";
 import type { GameId } from "@/config/games";
+import { seo } from "@/data/seo";
 import type { ChecklistData } from "@/types/checklist";
-import { games } from "../../data/games";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-const game = Astro.params.game as GameId;
-const gameData = games[game as keyof typeof games];
+import { games } from "@/data/games";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
     const checklistModules = import.meta.glob("../../data/checklists/*.json", {
@@ -25,6 +23,10 @@ export function getStaticPaths() {
         }));
 }
 
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const pageSeo = seo[game]?.["100"];
+
 const checklistModules = import.meta.glob("../../data/checklists/*.json", {
     eager: true,
 });
@@ -41,9 +43,11 @@ const data = (checklistEntry[1] as { default: ChecklistData }).default;
 ---
 
 <BaseLayout
-    title={`${gameData.title} | Vice Club`}
-    description={gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/inicio`}
+    title={pageSeo
+        ? `${pageSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={pageSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/100`}
     game={gameData}
 >
     <main

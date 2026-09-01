@@ -1,79 +1,35 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import type { GameId } from "@/config/games";
-import { games } from "../../data/games";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { IconArrowLeft } from "@tabler/icons-react";
+import { games } from "@/data/games";
+import { seo } from "@/data/seo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games).map(([game, gameData]) => ({
-        params: { game },
-        props: { gameData },
-    }));
+    return Object.entries(seo)
+        .filter(([, pages]) => pages?.logros)
+        .map(([game]) => ({
+            params: { game },
+            props: {
+                gameData: games[game as GameId],
+            },
+        }));
 }
 
 const game = Astro.params.game as GameId;
-const gameData = games[game as keyof typeof games];
-
-const metadata = {
-    III: {
-        title: "GTA III Logros y Trofeos | Lista Completa + Guía | Vice Club",
-        description:
-            "Guía completa de logros y trofeos de GTA 3. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto III",
-        bodyClass: "gta-3",
-        heading: "Logros de Grand Theft Auto III",
-        soundDelay: null,
-    },
-    VC: {
-        title: "GTA VC Logros y Trofeos | Lista Completa + Guía | Vice Club",
-        description:
-            "Guía completa de logros y trofeos de GTA VC. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: Vice City",
-        bodyClass: "gta-vc",
-        heading: "Logros de Grand Theft Auto: Vice City",
-        soundDelay: null,
-    },
-    SA: {
-        title: "GTA SA Logros y Trofeos | Lista Completa + Guía | Vice Club",
-        description:
-            "Guía completa de logros y trofeos de GTA SA. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto: San Andreas",
-        bodyClass: "gta-sa",
-        heading: "Logros de Grand Theft Auto: San Andreas",
-        soundDelay: 200,
-    },
-    IV: {
-        title: "GTA IV Logros y Trofeos | Lista Completa + Guía | Vice Club",
-        description:
-            "Guía completa de logros y trofeos de GTA 4, TLAD y TBOGT. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto IV y sus expansiones The Lost and Damned y The Ballad of Gay Tony",
-        bodyClass: "gta-4",
-        heading: "Logros de Grand Theft Auto IV",
-        soundDelay: null,
-    },
-    V: {
-        title: "GTA V Logros y Trofeos | Lista Completa + Guía | Vice Club",
-        description:
-            "Guía completa de logros y trofeos de GTA 5. Lista detallada, requisitos y consejos para desbloquear todos los logros de Grand Theft Auto V",
-        bodyClass: "gta-5",
-        heading: "Logros de Grand Theft Auto V",
-        soundDelay: 400,
-    },
-};
-
-const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+const gameData = games[game];
+const gameSeo = seo[game]?.logros;
 ---
 
 <BaseLayout
-    title={`${gameData.title} | Vice Club`}
-    description={gameData.description.paragraphs[0]}
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
     canonical={`https://www.viceclub.app/${game}/logros`}
     game={gameData}
 >
-    <main class="flex flex-col min-h-screen items-center justify-center">
-        <h2 class="text-4xl font-bold text-white">UNDER CONSTRUCTION</h2>
-        <a
-            class="mt-3 bg-indigo-300 px-8 py-3 text-xl text-indigo-900 font-medium rounded-full flex items-center gap-2 transition-all hover:bg-indigo-400 hover:text-indigo-50"
-            href="/"
-        >
-            <IconArrowLeft />
-            Back
-        </a>
+    <main class="flex min-h-screen flex-col items-center justify-center">
+        <UnderConstruction client:load gameId={game} />
     </main>
 </BaseLayout>

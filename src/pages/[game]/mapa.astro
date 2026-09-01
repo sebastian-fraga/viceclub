@@ -1,102 +1,35 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import type { GameId } from "@/config/games";
-import { games } from "../../data/games";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import { IconArrowLeft } from "@tabler/icons-react";
+import { games } from "@/data/games";
+import { seo } from "@/data/seo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games).map(([game, gameData]) => ({
-        params: { game },
-        props: { gameData },
-    }));
+    return Object.entries(seo)
+        .filter(([, pages]) => pages?.mapa)
+        .map(([game]) => ({
+            params: { game },
+            props: {
+                gameData: games[game as GameId],
+            },
+        }));
 }
 
 const game = Astro.params.game as GameId;
-const gameData = games[game as keyof typeof games];
-
-const metadata = {
-    III: {
-        title: "Mapa Interactivo de GTA III – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA III: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto III.",
-        bodyClass: "gta-3",
-        heading: "Mapa Interactivo de Grand Theft Auto III",
-        toolbarGameId: "GTA III",
-        soundDelay: null,
-    },
-    VC: {
-        title: "Mapa Interactivo de GTA Vice City – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA VC: Todos los coleccionables, ubicaciones y saltos únicos por todo Vice City en Grand Theft Auto: Vice City.",
-        bodyClass: "gta-vc",
-        heading: "Mapa Interactivo de Grand Theft Auto: Vice City",
-        toolbarGameId: "GTA:VC",
-        soundDelay: null,
-    },
-    SA: {
-        title: "Mapa Interactivo de GTA San Andreas – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA San Andreas: Todos los coleccionables, herraduras, ostras, fotos y saltos únicos por todo San Andreas en Grand Theft Auto: San Andreas.",
-        bodyClass: "gta-sa",
-        heading: "Mapa Interactivo de Grand Theft Auto: San Andreas",
-        toolbarGameId: "GTA SA",
-        soundDelay: 200,
-    },
-    LCS: {
-        title: "Mapa Interactivo de GTA Liberty City Stories – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA LCS: Todos los coleccionables, ubicaciones y saltos únicos por todo Liberty City en Grand Theft Auto: Liberty City Stories.",
-        bodyClass: "gta-lcs",
-        heading: "Mapa Interactivo de Grand Theft Auto: Liberty City Stories",
-        toolbarGameId: "GTA:LCS",
-        soundDelay: 200,
-    },
-    VCS: {
-        title: "Mapa Interactivo de GTA Vice City Stories – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA Vice City Stories: Todos los coleccionables, globos rojos y saltos únicos por todo Vice City en Grand Theft Auto: Vice City Stories.",
-        bodyClass: "gta-vcs",
-        heading: "Mapa Interactivo de Grand Theft Auto: Vice City Stories",
-        toolbarGameId: "GTA:VCS",
-        soundDelay: null,
-    },
-    IV: {
-        title: "Mapa Interactivo de GTA IV – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA IV: Todos los coleccionables, ubicaciones, palomas y saltos únicos por todo Liberty City en Grand Theft Auto IV.",
-        bodyClass: "gta-4",
-        heading: "Mapa Interactivo de Grand Theft Auto IV",
-        toolbarGameId: "GTA IV",
-        soundDelay: null,
-    },
-    V: {
-        title: "Mapa Interactivo de GTA V – Todos los Coleccionables | Vice Club",
-        description:
-            "Mapa interactivo de GTA V: Todos los coleccionables, partes de nave, fragmentos de carta y acrobacias por todo Los Santos en Grand Theft Auto V.",
-        bodyClass: "gta-5",
-        heading: "Mapa Interactivo de Grand Theft Auto V",
-        toolbarGameId: "GTA V",
-        soundDelay: 400,
-    },
-};
-
-const meta = metadata[game as keyof typeof metadata] || metadata.VC;
+const gameData = games[game];
+const gameSeo = seo[game]?.mapa;
 ---
 
 <BaseLayout
-    title={`${gameData.title} | Vice Club`}
-    description={gameData.description.paragraphs[0]}
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
     canonical={`https://www.viceclub.app/${game}/mapa`}
     game={gameData}
 >
-    <main class="flex flex-col min-h-screen items-center justify-center">
-        <h2 class="text-4xl font-bold text-white">UNDER CONSTRUCTION</h2>
-        <a
-            class="mt-3 bg-indigo-300 px-8 py-3 text-xl text-indigo-900 font-medium rounded-full flex items-center gap-2 transition-all hover:bg-indigo-400 hover:text-indigo-50"
-            href="/"
-        >
-            <IconArrowLeft />
-            Back
-        </a>
+    <main class="flex min-h-screen flex-col items-center justify-center">
+        <UnderConstruction client:load gameId={game} />
     </main>
 </BaseLayout>

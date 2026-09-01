@@ -1,4 +1,6 @@
 ---
+import { seo } from "@/data/seo";
+
 import GameHome from "@/components/home/GameHome.astro";
 import { games } from "../../data/games";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -12,11 +14,14 @@ export function getStaticPaths() {
 
 const { game } = Astro.params;
 const gameData = games[game as keyof typeof games];
+const gameSeo = seo[game as keyof typeof games]?.inicio;
 ---
 
 <BaseLayout
-    title={`${gameData.title} | Vice Club`}
-    description={gameData.description.paragraphs[0]}
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
     canonical={`https://www.viceclub.app/${game}/inicio`}
     game={gameData}
 >

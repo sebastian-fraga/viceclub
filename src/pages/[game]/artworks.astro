@@ -1,85 +1,40 @@
 ---
 import { getMediaData } from "@/components/artworks/getMediaData";
 import { MediaGallery } from "@/components/artworks/MediaGallery";
+import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
+import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
-console.log(Object.entries(games).map(([g, d]) => [g, !!getMediaData(d.id)]));
 
 export function getStaticPaths() {
     return Object.entries(games)
-        .filter(([_, gameData]) => getMediaData(gameData.id))
+        .filter(([, gameData]) => getMediaData(gameData.id))
         .map(([game]) => ({
             params: { game },
         }));
 }
 
-const { game } = Astro.params;
-
-const gameData = games[game as keyof typeof games];
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const pageSeo = seo[game]?.artworks;
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);
 }
 
 const gameId = gameData.id;
-
 const mediaData = getMediaData(gameId);
 
 if (!mediaData) {
     throw new Error(`Media data not found for ${gameId}`);
 }
-const metadata = {
-    III: {
-        title: "Artworks de GTA III | Vice Club",
-        description:
-            "Todos los artworks de GTA III. Artworks de Claude, personajes secundarios, bandas y más en Grand Theft Auto III.",
-        bodyClass: "gta-3",
-    },
-    VC: {
-        title: "Artworks de GTA VC | Vice Club",
-        description:
-            "Todos los artworks de GTA VC. Artworks de Tommy, personajes secundarios, bandas y más en Grand Theft Auto: Vice City.",
-        bodyClass: "gta-vc",
-    },
-    SA: {
-        title: "Artworks de GTA SA | Vice Club",
-        description:
-            "Todos los artworks de GTA SA. Artworks de CJ, personajes secundarios, bandas y más en Grand Theft Auto: San Andreas.",
-        bodyClass: "gta-sa",
-    },
-    LCS: {
-        title: "Artworks de GTA LCS | Vice Club",
-        description:
-            "Todos los artworks de GTA LCS. Artworks de Toni Cipriani, personajes secundarios, bandas y más en Grand Theft Auto: Liberty City Stories.",
-        bodyClass: "gta-lcs",
-    },
-    VCS: {
-        title: "Artworks de GTA VCS | Vice Club",
-        description:
-            "Todos los artworks de GTA VCS. Artworks de Victor Vance, personajes secundarios, bandas y más en Grand Theft Auto: Vice City Stories.",
-        bodyClass: "gta-vcs",
-    },
-    IV: {
-        title: "Artworks de GTA IV | Vice Club",
-        description:
-            "Todos los artworks de GTA IV. Artworks de Niko Bellic, personajes secundarios, bandas y más en Grand Theft Auto IV.",
-        bodyClass: "gta-4",
-    },
-    V: {
-        title: "Artworks de GTA V | Vice Club",
-        description:
-            "Todos los artworks de GTA V. Artworks de Michael, Franklin, Trevor, personajes secundarios y más en Grand Theft Auto V.",
-        bodyClass: "gta-5",
-    },
-};
-
-const meta = metadata[game as keyof typeof metadata] || metadata.VC;
 ---
 
 <BaseLayout
-    title={meta.title}
-    description={meta.description}
+    title={pageSeo
+        ? `${pageSeo.title} | Vice Club`
+        : `Artworks de ${gameData.title} | Vice Club`}
+    description={pageSeo?.description ?? `Artworks de ${gameData.title}.`}
     canonical={`https://www.viceclub.app/${game}/artworks`}
     game={gameData}
 >
@@ -89,6 +44,4 @@ const meta = metadata[game as keyof typeof metadata] || metadata.VC;
     >
         <MediaGallery client:load gameId={gameId} data={mediaData} />
     </main>
-
-    <fragment slot="scripts"> </fragment>
 </BaseLayout>

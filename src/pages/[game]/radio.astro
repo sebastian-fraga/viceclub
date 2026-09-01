@@ -1,30 +1,29 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-
-import { games } from "../../data/games";
-
 import { getRadioData } from "@/components/radio/lib/getRadioData";
 import { parseRadioData } from "@/components/radio/lib/parseRadioData";
 import RadioPlayer from "@/components/radio/RadioPlayer";
+import type { GameId } from "@/config/games";
+import { games } from "@/data/games";
+import { seo } from "@/data/seo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
     return Object.entries(games)
-        .filter(([_, gameData]) => getRadioData(gameData.id))
+        .filter(([, gameData]) => getRadioData(gameData.id))
         .map(([game]) => ({
             params: { game },
         }));
 }
 
-const { game } = Astro.params;
-
-const gameData = games[game as keyof typeof games];
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const gameSeo = seo[game]?.radio;
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);
 }
 
 const gameId = gameData.id;
-
 const radioDataRaw = getRadioData(gameId);
 
 if (!radioDataRaw) {
@@ -32,66 +31,22 @@ if (!radioDataRaw) {
 }
 
 const stations = parseRadioData(radioDataRaw);
-
-const metadata = {
-    III: {
-        title: "Radios de GTA III – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA 3. Escucha todas las emisoras de Grand Theft Auto III en Vice Club",
-    },
-
-    VC: {
-        title: "Radios de GTA Vice City – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA VC. Escucha todas las emisoras de Grand Theft Auto: Vice City en Vice Club",
-    },
-
-    SA: {
-        title: "Radios de GTA San Andreas – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA SA. Escucha todas las emisoras de Grand Theft Auto: San Andreas en Vice Club",
-    },
-
-    LCS: {
-        title: "Radios de GTA Liberty City Stories – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA LCS. Escucha todas las emisoras de Grand Theft Auto: Liberty City Stories en Vice Club",
-    },
-
-    VCS: {
-        title: "Radios de GTA Vice City Stories – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA VCS. Escucha todas las emisoras de Grand Theft Auto: Vice City Stories en Vice Club",
-    },
-
-    IV: {
-        title: "Radios de GTA IV – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA 4. Escucha todas las emisoras de Grand Theft Auto IV y sus expansiones en Vice Club",
-    },
-
-    V: {
-        title: "Radios de GTA V – Todas las Estaciones y Canciones | Vice Club",
-        description:
-            "Radios de GTA 5. Escucha todas las emisoras de Grand Theft Auto V en Vice Club",
-    },
-};
-
-const meta = metadata[gameId as keyof typeof metadata];
 ---
 
 <BaseLayout
-    title={`${gameData.title} | Vice Club`}
-    description={meta.description}
-    canonical={`https://www.viceclub.app/${gameId}/radio`}
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/radio`}
     game={gameData}
 >
     <main
         style="padding-top: var(--header-height); transition: margin-left 0.3s;"
-        class="ml-0 md:ml-(--sidebar-width) bg-linear-135 from-[#15151F] to-[#1E1E33] flex flex-col gap-16 md:gap-45 pb-20 mt-30"
+        class="ml-0 mt-30 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-20 md:ml-(--sidebar-width) md:gap-45"
     >
         <section
-            class="w-fit max-mobile:w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-8 max-mobile:gap-20 max-mobile:pb-12"
+            class="mx-auto flex w-fit max-w-400 flex-col gap-8 max-mobile:w-full max-mobile:gap-20 max-mobile:px-4 max-mobile:pb-12 mobile:px-6"
         >
             <RadioPlayer client:load stations={stations} game={gameId} />
         </section>

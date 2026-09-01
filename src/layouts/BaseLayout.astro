@@ -75,12 +75,18 @@ const { title, description, canonical, dataGame, game } = Astro.props;
 
         <title>{title}</title>
         <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": title,
+            "description": description,
+            "url": canonical,
+            "isPartOf": {
                 "@type": "WebSite",
                 "name": "Vice Club",
                 "url": "https://www.viceclub.app"
             }
+        }
         </script>
         <style is:global>
             :root {

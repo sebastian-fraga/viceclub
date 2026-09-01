@@ -1,95 +1,41 @@
 ---
-import type { GameId } from "@/config/games";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import { games } from "../../data/games";
-
 import { CheatsContainer } from "@/components/cheats/CheatsContainer";
-import { loadCheats } from "@/lib/cheats/loadCheats.ts";
+import type { GameId } from "@/config/games";
+import { games } from "@/data/games";
+import { seo } from "@/data/seo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { loadCheats } from "@/lib/cheats/loadCheats";
 
 export function getStaticPaths() {
     return Object.entries(games)
-        .filter(([_, gameData]) => loadCheats(gameData.id as GameId))
+        .filter(([, gameData]) => loadCheats(gameData.id as GameId))
         .map(([game]) => ({
             params: { game },
         }));
 }
 
-const { game } = Astro.params;
-
-const gameData = games[game as keyof typeof games];
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const gameSeo = seo[game]?.trucos;
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);
 }
 
 const gameId = gameData.id as GameId;
-const gameKey = String(gameId).toLowerCase();
-
 const cheatsData = loadCheats(gameId);
 
 if (!cheatsData) {
     throw new Error(`Cheats file not found for game: ${gameId}`);
 }
-
-const metadata = {
-    iii: {
-        title: "GTA III Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA 3: Trucos para PlayStation, Xbox, Nintendo Switch y PC.",
-        bodyClass: "gta-3",
-        heading: "Trucos de Grand Theft Auto III",
-    },
-    vc: {
-        title: "GTA VC Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA Vice City: Trucos para PlayStation, Xbox y PC.",
-        bodyClass: "gta-vc",
-        heading: "Trucos de Grand Theft Auto: Vice City",
-    },
-    sa: {
-        title: "GTA SA Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA San Andreas: Trucos para PlayStation, Xbox, Nintendo Switch y PC.",
-        bodyClass: "gta-sa",
-        heading: "Trucos de Grand Theft Auto: San Andreas",
-    },
-    lcs: {
-        title: "GTA LCS Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA Liberty City Stories: Trucos para PlayStation y PC.",
-        bodyClass: "gta-lcs",
-        heading: "Trucos de Grand Theft Auto: Liberty City Stories",
-    },
-    vcs: {
-        title: "GTA VCS Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA Vice City Stories: Trucos para PlayStation y PC.",
-        bodyClass: "gta-vcs",
-        heading: "Trucos de Grand Theft Auto: Vice City Stories",
-    },
-    iv: {
-        title: "GTA IV Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA 4: Trucos para PlayStation, Xbox y PC.",
-        bodyClass: "gta-4",
-        heading: "Trucos de Grand Theft Auto IV",
-    },
-    v: {
-        title: "GTA V Trucos | Lista Completa | Vice Club",
-        description:
-            "Todos los trucos para GTA 5: Trucos para PlayStation, Xbox y PC.",
-        bodyClass: "gta-5",
-        heading: "Trucos de Grand Theft Auto V",
-    },
-};
-
-const meta = metadata[gameKey as keyof typeof metadata] || metadata.vc;
 ---
 
 <BaseLayout
-    title={meta.title}
-    description={meta.description}
-    canonical={`https://www.viceclub.app/${gameKey}/trucos`}
+    title={gameSeo
+        ? `${gameSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={gameSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/trucos`}
     game={gameData}
 >
     <main
