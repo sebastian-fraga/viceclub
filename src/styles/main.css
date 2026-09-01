@@ -1,5 +1,5 @@
-@import './base/typography.css';
 @import "tailwindcss";
+@import './base/typography.css';
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
@@ -52,6 +52,11 @@
   --font-body-condensed: "GTAArtDecoCondensed", sans-serif;
 }
 
+*:focus-visible {
+  outline: 3px solid var(--color-yellow-200);
+  outline-offset: 2px;
+}
+
 body {
   font-family: "GTAArtDeco";
   color: #f4f4f4;
@@ -87,7 +92,8 @@ body {
   background-color: #15151F;
 }
 
-img, a {
+img,
+a {
   -webkit-user-drag: none;
 }
 
