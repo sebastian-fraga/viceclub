@@ -914,6 +914,13 @@ export default {
             entryIcon: "Checklist icon",
         },
     },
+    artworks: {
+        title: "{{fullName}} artworks",
+        categories: {
+            artworks: "Artworks",
+            screenshots: "Screenshots",
+        },
+    },
     radio: {
         title: "Radio Stations of {{fullName}}",
         emptySelector: "No radio station selected",
@@ -1056,6 +1063,11 @@ export default {
             spoilerContent: "Content with spoilers",
         },
     },
+    "404": {
+        title: "Error 404",
+        subtitle: "The requested page could not be found or is unavailable.",
+        backToHome: "Back to home",
+    },
     sidebar: {
         close: "Close menu",
         home: "Home",
@@ -1160,10 +1172,12 @@ export default {
             confirm: "Confirm",
             goBack: "Go back",
             selectPlatform: "Select platform",
+            download: "Download",
         },
         accessibility: {
             prev: "Previous",
             next: "Next",
+            close: "Close",
             gameIcon: "GTA {{game}} logo",
         },
     },

@@ -914,6 +914,13 @@ export default {
             entryIcon: "Icono de checklist",
         },
     },
+    artworks: {
+        title: "Artworks de {{fullName}}",
+        categories: {
+            artworks: "Arte",
+            screenshots: "Capturas de pantalla",
+        },
+    },
     radio: {
         title: "Radios de {{fullName}}",
         emptySelector: "No hay ninguna emisora seleccionada",
@@ -1056,6 +1063,12 @@ export default {
             spoilerContent: "Contenido con spoilers",
         },
     },
+    "404": {
+        title: "Error 404",
+        subtitle:
+            "La página solicitada no fue encontrada o no se encuentra disponible.",
+        backToHome: "Volver a inicio",
+    },
     sidebar: {
         close: "Cerrar menú",
         home: "Inicio",
@@ -1160,10 +1173,12 @@ export default {
             confirm: "Confirmar",
             goBack: "Volver atrás",
             selectPlatform: "Seleccionar plataforma",
+            download: "Descargar",
         },
         accessibility: {
             prev: "Anterior",
             next: "Siguiente",
+            close: "Cerrar",
             gameIcon: "Logo de GTA {{game}}",
         },
     },

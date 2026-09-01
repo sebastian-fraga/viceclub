@@ -914,6 +914,13 @@ export default {
             entryIcon: "Icono de checklist",
         },
     },
+    artworks: {
+        title: "Illustrations de {{fullName}}",
+        categories: {
+            artworks: "Illustrations",
+            screenshots: "Captures d’écran",
+        },
+    },
     radio: {
         title: "Radios de {{fullName}}",
         emptySelector: "Aucune station de radio sélectionnée",
@@ -1068,7 +1075,7 @@ export default {
         sections: {
             home: "Accueil",
             checklist: "Liste des 100 %",
-            artworks: "Artworks",
+            artworks: "Illustrations",
             mods: "Outils et mods",
             achievements: "Succès",
             map: "Carte",
@@ -1076,6 +1083,11 @@ export default {
             cheats: "Codes de triche",
             timeline: "Chronologie",
         },
+    },
+    "404": {
+        title: "Erreur 404",
+        subtitle: "La page demandée est introuvable ou n’est pas disponible.",
+        backToHome: "Retour à l’accueil",
     },
     settings: {
         title: "Paramètres",
@@ -1161,10 +1173,12 @@ export default {
             confirm: "Confirmer",
             goBack: "Retour en arrière",
             selectPlatform: "Sélectionner une plateforme",
+            download: "Télécharger",
         },
         accessibility: {
             prev: "Précédent",
             next: "Suivant",
+            close: "Fermer",
             gameIcon: "Logo de GTA {{game}}",
         },
     },
