@@ -1,0 +1,1110 @@
+{
+    "artworks": {
+        "characters": [
+            {
+                "id": "vc-char-01",
+                "caption": "Tommy Vercetti 01"
+            },
+            {
+                "id": "vc-char-02",
+                "caption": "Tommy Vercetti 02"
+            },
+            {
+                "id": "vc-char-03",
+                "caption": "Sonny Forelli 01"
+            },
+            {
+                "id": "vc-char-04",
+                "caption": "Sonny Forelli 02"
+            },
+            {
+                "id": "vc-char-05",
+                "caption": "Ken Rosenberg 01"
+            },
+            {
+                "id": "vc-char-06",
+                "caption": "Ken Rosenberg 02"
+            },
+            {
+                "id": "vc-char-07",
+                "caption": "Lance Vance"
+            },
+            {
+                "id": "vc-char-08",
+                "caption": "Ricardo Diaz 01"
+            },
+            {
+                "id": "vc-char-09",
+                "caption": "Ricardo Diaz 02"
+            },
+            {
+                "id": "vc-char-10",
+                "caption": "Kent Paul"
+            },
+            {
+                "id": "vc-char-11",
+                "caption": "Avery Carrington 01"
+            },
+            {
+                "id": "vc-char-12",
+                "caption": "Avery Carrington 02"
+            },
+            {
+                "id": "vc-char-13",
+                "caption": "Love Fist"
+            },
+            {
+                "id": "vc-char-14",
+                "caption": "Phil Cassidy"
+            },
+            {
+                "id": "vc-char-15",
+                "caption": "Umberto Robina"
+            },
+            {
+                "id": "vc-char-16",
+                "caption": "Juan Cortez"
+            },
+            {
+                "id": "vc-char-17",
+                "caption": "Mercedes Cortez"
+            },
+            {
+                "id": "vc-char-18",
+                "caption": "Mitch Baker"
+            },
+            {
+                "id": "vc-char-19",
+                "caption": {
+                    "es": "Tía Poulet",
+                    "en": "Auntie Poulet",
+                    "fr": "Tata Poulet",
+                    "pt": "Auntie Poulet"
+                }
+            },
+            {
+                "id": "vc-char-20",
+                "caption": "Steve Scott"
+            },
+            {
+                "id": "vc-char-21",
+                "caption": "Candy Suxxx"
+            },
+            {
+                "id": "vc-char-22",
+                "caption": "Cam Jones"
+            },
+            {
+                "id": "vc-char-23",
+                "caption": "Hilary King"
+            },
+            {
+                "id": "vc-char-24",
+                "caption": {
+                    "es": "Alex Shrub y Laura",
+                    "en": "Alex Shrub and Laura",
+                    "fr": "Alex Shrub et Laura",
+                    "pt": "Alex Shrub e Laura"
+                }
+            },
+            {
+                "id": "vc-char-25",
+                "caption": {
+                    "es": "Pastor Richards 01",
+                    "en": "Pastor Richards 01",
+                    "fr": "Pasteur Richards 01",
+                    "pt": "Pastor Richards 01"
+                }
+            },
+            {
+                "id": "vc-char-26",
+                "caption": {
+                    "es": "Pastor Richards 02",
+                    "en": "Pastor Richards 02",
+                    "fr": "Pasteur Richards 02",
+                    "pt": "Pastor Richards 02"
+                }
+            },
+            {
+                "id": "vc-char-27",
+                "caption": "Pepe"
+            },
+            {
+                "id": "vc-char-28",
+                "caption": "Lazlow"
+            },
+            {
+                "id": "vc-char-29",
+                "caption": "Fernando Martinez"
+            },
+            {
+                "id": "vc-char-30",
+                "caption": "Adam First"
+            },
+            {
+                "id": "vc-char-31",
+                "caption": "Toni"
+            },
+            {
+                "id": "vc-char-32",
+                "caption": "Oliver Biscuit"
+            },
+            {
+                "id": "vc-char-33",
+                "caption": "Mr. Magic"
+            },
+            {
+                "id": "vc-char-34",
+                "caption": "Gonzalez"
+            },
+            {
+                "id": "vc-char-35",
+                "caption": "Earnest Kelly"
+            },
+            {
+                "id": "vc-char-36",
+                "caption": {
+                    "es": "Mellizas 01",
+                    "en": "Twins 01",
+                    "fr": "Jumelles 01",
+                    "pt": "Gêmeas 01"
+                }
+            },
+            {
+                "id": "vc-char-37",
+                "caption": {
+                    "es": "Mellizas 02",
+                    "en": "Twins 02",
+                    "fr": "Jumelles 02",
+                    "pt": "Gêmeas 02"
+                }
+            },
+            {
+                "id": "vc-char-38",
+                "caption": {
+                    "es": "Árbol del crimen",
+                    "en": "Crime tree",
+                    "fr": "Arbre du crime",
+                    "pt": "Árvore do crime"
+                }
+            }
+        ],
+        "wallpapers": [
+            {
+                "id": "vc-wallpapers-01",
+                "caption": "Squalo"
+            },
+            {
+                "id": "vc-wallpapers-02",
+                "caption": "Infernus"
+            },
+            {
+                "id": "vc-wallpapers-03",
+                "caption": "Banshee"
+            },
+            {
+                "id": "vc-wallpapers-04",
+                "caption": {
+                    "es": "Burbujas",
+                    "en": "Bubbles",
+                    "fr": "Bulles",
+                    "pt": "Bolhas"
+                }
+            },
+            {
+                "id": "vc-wallpapers-05",
+                "caption": {
+                    "es": "Persuasión",
+                    "en": "Persuasion",
+                    "fr": "Persuasion",
+                    "pt": "Persuasão"
+                }
+            },
+            {
+                "id": "vc-wallpapers-06",
+                "caption": {
+                    "es": "Atardecer",
+                    "en": "Sunset",
+                    "fr": "Coucher de soleil",
+                    "pt": "Pôr do sol"
+                }
+            },
+            {
+                "id": "vc-wallpapers-07",
+                "caption": {
+                    "es": "Navaja",
+                    "en": "Blade",
+                    "fr": "Lame",
+                    "pt": "Lâmina"
+                }
+            },
+            {
+                "id": "vc-wallpapers-08",
+                "caption": {
+                    "es": "Palmeras",
+                    "en": "Palms",
+                    "fr": "Palmiers",
+                    "pt": "Palmeiras"
+                }
+            },
+            {
+                "id": "vc-wallpapers-09",
+                "caption": {
+                    "es": "Cubo",
+                    "en": "Cube",
+                    "fr": "Cube",
+                    "pt": "Cubo"
+                }
+            }
+        ],
+        "10thanniversary": [
+            {
+                "id": "vc-10th-01",
+                "caption": "Ken Rosenberg"
+            },
+            {
+                "id": "vc-10th-02",
+                "caption": "Lance Vance"
+            },
+            {
+                "id": "vc-10th-03",
+                "caption": "Ricardo Diaz"
+            },
+            {
+                "id": "vc-10th-04",
+                "caption": {
+                    "es": "Mellizas 01",
+                    "en": "Twins 01",
+                    "fr": "Jumelles 01",
+                    "pt": "Gêmeas 01"
+                }
+            },
+            {
+                "id": "vc-10th-05",
+                "caption": {
+                    "es": "Mellizas 02",
+                    "en": "Twins 02",
+                    "fr": "Jumelles 02",
+                    "pt": "Gêmeas 02"
+                }
+            }
+        ]
+    },
+    "screenshots": {
+        "ps2": [
+            {
+                "id": "vc-ps2-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vc-ps2-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vc-ps2-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vc-ps2-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "vc-ps2-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "vc-ps2-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "vc-ps2-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "vc-ps2-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "vc-ps2-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "vc-ps2-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "vc-ps2-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "vc-ps2-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            },
+            {
+                "id": "vc-ps2-13",
+                "caption": {
+                    "es": "Captura 13",
+                    "en": "Screenshot 13",
+                    "fr": "Capture d’écran 13",
+                    "pt": "Captura de tela 13"
+                }
+            },
+            {
+                "id": "vc-ps2-14",
+                "caption": {
+                    "es": "Captura 14",
+                    "en": "Screenshot 14",
+                    "fr": "Capture d’écran 14",
+                    "pt": "Captura de tela 14"
+                }
+            },
+            {
+                "id": "vc-ps2-15",
+                "caption": {
+                    "es": "Captura 15",
+                    "en": "Screenshot 15",
+                    "fr": "Capture d’écran 15",
+                    "pt": "Captura de tela 15"
+                }
+            },
+            {
+                "id": "vc-ps2-16",
+                "caption": {
+                    "es": "Captura 16",
+                    "en": "Screenshot 16",
+                    "fr": "Capture d’écran 16",
+                    "pt": "Captura de tela 16"
+                }
+            },
+            {
+                "id": "vc-ps2-17",
+                "caption": {
+                    "es": "Captura 17",
+                    "en": "Screenshot 17",
+                    "fr": "Capture d’écran 17",
+                    "pt": "Captura de tela 17"
+                }
+            },
+            {
+                "id": "vc-ps2-18",
+                "caption": {
+                    "es": "Captura 18",
+                    "en": "Screenshot 18",
+                    "fr": "Capture d’écran 18",
+                    "pt": "Captura de tela 18"
+                }
+            },
+            {
+                "id": "vc-ps2-19",
+                "caption": {
+                    "es": "Captura 19",
+                    "en": "Screenshot 19",
+                    "fr": "Capture d’écran 19",
+                    "pt": "Captura de tela 19"
+                }
+            },
+            {
+                "id": "vc-ps2-20",
+                "caption": {
+                    "es": "Captura 20",
+                    "en": "Screenshot 20",
+                    "fr": "Capture d’écran 20",
+                    "pt": "Captura de tela 20"
+                }
+            },
+            {
+                "id": "vc-ps2-21",
+                "caption": {
+                    "es": "Captura 21",
+                    "en": "Screenshot 21",
+                    "fr": "Capture d’écran 21",
+                    "pt": "Captura de tela 21"
+                }
+            },
+            {
+                "id": "vc-ps2-22",
+                "caption": {
+                    "es": "Captura 22",
+                    "en": "Screenshot 22",
+                    "fr": "Capture d’écran 22",
+                    "pt": "Captura de tela 22"
+                }
+            }
+        ],
+        "pc": [
+            {
+                "id": "vc-pc-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vc-pc-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vc-pc-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vc-pc-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "vc-pc-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "vc-pc-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "vc-pc-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "vc-pc-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "vc-pc-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "vc-pc-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "vc-pc-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "vc-pc-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            },
+            {
+                "id": "vc-pc-13",
+                "caption": {
+                    "es": "Captura 13",
+                    "en": "Screenshot 13",
+                    "fr": "Capture d’écran 13",
+                    "pt": "Captura de tela 13"
+                }
+            },
+            {
+                "id": "vc-pc-14",
+                "caption": {
+                    "es": "Captura 14",
+                    "en": "Screenshot 14",
+                    "fr": "Capture d’écran 14",
+                    "pt": "Captura de tela 14"
+                }
+            },
+            {
+                "id": "vc-pc-15",
+                "caption": {
+                    "es": "Captura 15",
+                    "en": "Screenshot 15",
+                    "fr": "Capture d’écran 15",
+                    "pt": "Captura de tela 15"
+                }
+            }
+        ],
+        "xbox": [
+            {
+                "id": "vc-xbox-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vc-xbox-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vc-xbox-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vc-xbox-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "vc-xbox-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "vc-xbox-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "vc-xbox-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "vc-xbox-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "vc-xbox-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "vc-xbox-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            }
+        ],
+        "impoundedVehicles": [
+            {
+                "id": "vc-iv-01",
+                "caption": "Admiral"
+            },
+            {
+                "id": "vc-iv-02",
+                "caption": "Banshee"
+            },
+            {
+                "id": "vc-iv-03",
+                "caption": "Blista Compact"
+            },
+            {
+                "id": "vc-iv-04",
+                "caption": "Caddy"
+            },
+            {
+                "id": "vc-iv-05",
+                "caption": "Freeway"
+            },
+            {
+                "id": "vc-iv-06",
+                "caption": "Hermes"
+            },
+            {
+                "id": "vc-iv-07",
+                "caption": "Infernus"
+            },
+            {
+                "id": "vc-iv-08",
+                "caption": "Marquis"
+            },
+            {
+                "id": "vc-iv-09",
+                "caption": "Maverick"
+            },
+            {
+                "id": "vc-iv-10",
+                "caption": "Moonbeam"
+            },
+            {
+                "id": "vc-iv-11",
+                "caption": "PCJ-600"
+            },
+            {
+                "id": "vc-iv-12",
+                "caption": "Rancher"
+            },
+            {
+                "id": "vc-iv-13",
+                "caption": "Regina 01"
+            },
+            {
+                "id": "vc-iv-14",
+                "caption": "Regina 02"
+            },
+            {
+                "id": "vc-iv-15",
+                "caption": "Romero"
+            },
+            {
+                "id": "vc-iv-16",
+                "caption": "Sentinel XS"
+            },
+            {
+                "id": "vc-iv-17",
+                "caption": "Speeder"
+            },
+            {
+                "id": "vc-iv-18",
+                "caption": "Stinger"
+            },
+            {
+                "id": "vc-iv-19",
+                "caption": "Stretch"
+            },
+            {
+                "id": "vc-iv-20",
+                "caption": "Tropic"
+            },
+            {
+                "id": "vc-iv-21",
+                "caption": "Virgo"
+            },
+            {
+                "id": "vc-iv-22",
+                "caption": "Voodoo 01"
+            },
+            {
+                "id": "vc-iv-23",
+                "caption": "Voodoo 02"
+            },
+            {
+                "id": "vc-iv-24",
+                "caption": "Walton"
+            },
+            {
+                "id": "vc-iv-25",
+                "caption": "Washington"
+            }
+        ],
+        "confiscatedWeapons": [
+            {
+                "id": "vc-cw-01",
+                "caption": "Colt Python"
+            },
+            {
+                "id": "vc-cw-02",
+                "caption": {
+                    "es": "Puño americano",
+                    "en": "Brass Knuckles",
+                    "fr": "Poings américains",
+                    "pt": "Socos Ingleses"
+                }
+            },
+            {
+                "id": "vc-cw-03",
+                "caption": {
+                    "es": "Cóctel molotov",
+                    "en": "Molotov Cocktail",
+                    "fr": "Cocktail Molotov",
+                    "pt": "Coquetel Molotov"
+                }
+            },
+            {
+                "id": "vc-cw-04",
+                "caption": "Katana"
+            },
+            {
+                "id": "vc-cw-05",
+                "caption": "PSG1 01"
+            },
+            {
+                "id": "vc-cw-06",
+                "caption": "PSG1 02"
+            },
+            {
+                "id": "vc-cw-07",
+                "caption": "M60"
+            },
+            {
+                "id": "vc-cw-08",
+                "caption": "Mac-10"
+            },
+            {
+                "id": "vc-cw-09",
+                "caption": {
+                    "es": "Lanzacohetes",
+                    "en": "Rocket Launcher",
+                    "fr": "Lance-roquettes",
+                    "pt": "Lança-foguetes"
+                }
+            },
+            {
+                "id": "vc-cw-10",
+                "caption": "Uzi"
+            },
+            {
+                "id": "vc-cw-11",
+                "caption": "S.P.A.S. 12"
+            },
+            {
+                "id": "vc-cw-12",
+                "caption": {
+                    "es": "Lanzallamas",
+                    "en": "Flamethrower",
+                    "fr": "Lance-flammes",
+                    "pt": "Lança-chamas"
+                }
+            },
+            {
+                "id": "vc-cw-13",
+                "caption": {
+                    "es": "Escopeta",
+                    "en": "Shotgun",
+                    "fr": "Fusil à pompe",
+                    "pt": "Escopeta"
+                }
+            },
+            {
+                "id": "vc-cw-14",
+                "caption": {
+                    "es": "Escopeta recortada",
+                    "en": "Sawn-off Shotgun",
+                    "fr": "Fusil à canon scié",
+                    "pt": "Escopeta de Cano Serrado"
+                }
+            },
+            {
+                "id": "vc-cw-15",
+                "caption": "Tec-9"
+            }
+        ],
+        "suspiciousBusinesses": [
+            {
+                "id": "vc-sb-01",
+                "caption": {
+                    "es": "Palo de golf",
+                    "en": "Golf Club",
+                    "fr": "Club de golf",
+                    "pt": "Taco de golfe"
+                }
+            },
+            {
+                "id": "vc-sb-02",
+                "caption": {
+                    "es": "Martillo",
+                    "en": "Hammer",
+                    "fr": "Marteau",
+                    "pt": "Martelo"
+                }
+            },
+            {
+                "id": "vc-sb-03",
+                "caption": {
+                    "es": "Cuchillo de carnicero",
+                    "en": "Meat Cleaver",
+                    "fr": "Couteau de boucher",
+                    "pt": "Faca de açougueiro"
+                }
+            },
+            {
+                "id": "vc-sb-04",
+                "caption": {
+                    "es": "Machete",
+                    "en": "Machete",
+                    "fr": "Machette",
+                    "pt": "Facão"
+                }
+            },
+            {
+                "id": "vc-sb-05",
+                "caption": {
+                    "es": "Destornillador",
+                    "en": "Screwdriver",
+                    "fr": "Tournevis",
+                    "pt": "Chave de fenda"
+                }
+            },
+            {
+                "id": "vc-sb-06",
+                "caption": {
+                    "es": "Cuchillo",
+                    "en": "Knife",
+                    "fr": "Couteau",
+                    "pt": "Faca"
+                }
+            },
+            {
+                "id": "vc-sb-07",
+                "caption": {
+                    "es": "Motosierra",
+                    "en": "Chainsaw",
+                    "fr": "Tronçonneuse",
+                    "pt": "Motosserra"
+                }
+            }
+        ],
+        "viceCityCrimeTree": [
+            {
+                "id": "vc-vcct-01",
+                "caption": {
+                    "es": "Tommy y Kent Paul",
+                    "en": "Tommy and Kent Paul",
+                    "fr": "Tommy et Kent Paul",
+                    "pt": "Tommy e Kent Paul"
+                }
+            },
+            {
+                "id": "vc-vcct-02",
+                "caption": {
+                    "es": "Tommy y Ricardo Diaz 01",
+                    "en": "Tommy and Ricardo Diaz 01",
+                    "fr": "Tommy et Ricardo Diaz 01",
+                    "pt": "Tommy e Ricardo Diaz 01"
+                }
+            },
+            {
+                "id": "vc-vcct-03",
+                "caption": {
+                    "es": "Tommy y Ricardo Diaz 02",
+                    "en": "Tommy and Ricardo Diaz 02",
+                    "fr": "Tommy et Ricardo Diaz 02",
+                    "pt": "Tommy e Ricardo Diaz 02"
+                }
+            },
+            {
+                "id": "vc-vcct-04",
+                "caption": {
+                    "es": "Tommy y Mitch Baker",
+                    "en": "Tommy and Mitch Baker",
+                    "fr": "Tommy et Mitch Baker",
+                    "pt": "Tommy e Mitch Baker"
+                }
+            },
+            {
+                "id": "vc-vcct-05",
+                "caption": "Ken Rosenberg"
+            },
+            {
+                "id": "vc-vcct-06",
+                "caption": "Sonny Forelli"
+            },
+            {
+                "id": "vc-vcct-07",
+                "caption": "Juan Cortez"
+            },
+            {
+                "id": "vc-vcct-08",
+                "caption": "Umberto Robina"
+            },
+            {
+                "id": "vc-vcct-09",
+                "caption": {
+                    "es": "Tía Poulet",
+                    "en": "Auntie Poulet",
+                    "fr": "Tata Poulet",
+                    "pt": "Auntie Poulet"
+                }
+            },
+            {
+                "id": "vc-vcct-10",
+                "caption": "Avery Carrington"
+            },
+            {
+                "id": "vc-vcct-11",
+                "caption": "Phil Cassidy"
+            },
+            {
+                "id": "vc-vcct-12",
+                "caption": "Hilary King"
+            },
+            {
+                "id": "vc-vcct-13",
+                "caption": {
+                    "es": "Pastor Richards",
+                    "en": "Pastor Richards",
+                    "fr": "Pasteur Richards",
+                    "pt": "Pastor Richards"
+                }
+            },
+            {
+                "id": "vc-vcct-14",
+                "caption": "Gonzalez"
+            },
+            {
+                "id": "vc-vcct-15",
+                "caption": {
+                    "es": "Alex Shrub y Candy Suxxx",
+                    "en": "Alex Shrub and Candy Suxxx",
+                    "fr": "Alex Shrub et Candy Suxxx",
+                    "pt": "Alex Shrub e Candy Suxxx"
+                }
+            },
+            {
+                "id": "vc-vcct-16",
+                "caption": "BJ Smith"
+            }
+        ],
+        "kentPauls80sNostalgiaZone": [
+            {
+                "id": "vc-kpnz-01",
+                "caption": "Ocean Beach"
+            },
+            {
+                "id": "vc-kpnz-02",
+                "caption": "Regina"
+            },
+            {
+                "id": "vc-kpnz-03",
+                "caption": "Faggio"
+            },
+            {
+                "id": "vc-kpnz-04",
+                "caption": "Speeder"
+            },
+            {
+                "id": "vc-kpnz-05",
+                "caption": "Stinger"
+            },
+            {
+                "id": "vc-kpnz-06",
+                "caption": "Caddy"
+            }
+        ]
+    }
+}

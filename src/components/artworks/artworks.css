@@ -1,0 +1,10 @@
+::view-transition-old(gallery-image),
+::view-transition-new(gallery-image) {
+    mix-blend-mode: plus-lighter;
+    animation-duration: 0s;
+}
+
+::view-transition-group(gallery-image) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}

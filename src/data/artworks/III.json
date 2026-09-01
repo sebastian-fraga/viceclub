@@ -1,0 +1,876 @@
+{
+    "artworks": {
+        "characters": [
+            {
+                "id": "iii-char-01",
+                "caption": "Claude 01"
+            },
+            {
+                "id": "iii-char-02",
+                "caption": "Claude 02"
+            },
+            {
+                "id": "iii-char-03",
+                "caption": "Catalina"
+            },
+            {
+                "id": "iii-char-04",
+                "caption": "8-Ball"
+            },
+            {
+                "id": "iii-char-05",
+                "caption": "Maria Latore"
+            },
+            {
+                "id": "iii-char-06",
+                "caption": "Misty 01"
+            },
+            {
+                "id": "iii-char-07",
+                "caption": "Misty 02"
+            },
+            {
+                "id": "iii-char-08",
+                "caption": "Joey Leone"
+            },
+            {
+                "id": "iii-char-09",
+                "caption": "Salvatore Leone"
+            },
+            {
+                "id": "iii-char-10",
+                "caption": "Asuka Kasen"
+            },
+            {
+                "id": "iii-char-11",
+                "caption": "Kenji Kasen"
+            },
+            {
+                "id": "iii-char-12",
+                "caption": "Luigi Goterelli"
+            },
+            {
+                "id": "iii-char-13",
+                "caption": "Donald Love"
+            },
+            {
+                "id": "iii-char-14",
+                "caption": "Ray Machowski"
+            },
+            {
+                "id": "iii-char-15",
+                "caption": "Phil Cassidy"
+            },
+            {
+                "id": "iii-char-16",
+                "caption": "El Burro"
+            },
+            {
+                "id": "iii-char-17",
+                "caption": "Miguel"
+            },
+            {
+                "id": "iii-char-18",
+                "caption": {
+                    "es": "Mike \"Labios\" Forelli",
+                    "en": "Mike \"Lips\" Forelli",
+                    "fr": "Mike \"Babines\" Forelli",
+                    "pt": "Mike \"Lips\" Forelli"
+                }
+            },
+            {
+                "id": "iii-char-19",
+                "caption": "Toni Cipriani"
+            },
+            {
+                "id": "iii-char-20",
+                "caption": "Leone"
+            },
+            {
+                "id": "iii-char-21",
+                "caption": {
+                    "es": "Tríada",
+                    "en": "Triad",
+                    "fr": "Triade",
+                    "pt": "Tríade"
+                }
+            },
+            {
+                "id": "iii-char-22",
+                "caption": "Yakuza"
+            },
+            {
+                "id": "iii-char-23",
+                "caption": "Yardie"
+            }
+        ],
+        "10thanniversary": [
+            {
+                "id": "iii-10th-01",
+                "caption": {
+                    "es": "Arte de la portada oficial (Norteamérica)",
+                    "en": "Official cover art (North America)",
+                    "fr": "Illustration de la jaquette officielle (Amérique du Nord)",
+                    "pt": "Arte da capa oficial (América do Norte)"
+                }
+            },
+            {
+                "id": "iii-10th-02",
+                "caption": {
+                    "es": "Arte de la portada oficial (Europa)",
+                    "en": "Official cover art (Europe)",
+                    "fr": "Illustration de la jaquette officielle (Europe)",
+                    "pt": "Arte da capa oficial (Europa)"
+                }
+            },
+            { "id": "iii-10th-03", "caption": "Claude 01" },
+            { "id": "iii-10th-04", "caption": "Claude 02" },
+            { "id": "iii-10th-05", "caption": "Claude 03" },
+            { "id": "iii-10th-06", "caption": "Claude 04" },
+            { "id": "iii-10th-07", "caption": "8-Ball 01" },
+            { "id": "iii-10th-08", "caption": "8-Ball 02" },
+            { "id": "iii-10th-09", "caption": "Maria Latore" },
+            { "id": "iii-10th-10", "caption": "Misty 01" },
+            { "id": "iii-10th-11", "caption": "Misty 02" },
+            { "id": "iii-10th-12", "caption": "Joey Leone" },
+            { "id": "iii-10th-13", "caption": "Salvatore Leone" },
+            { "id": "iii-10th-14", "caption": "Asuka Kasen" },
+            { "id": "iii-10th-15", "caption": "Kenji Kasen 01" },
+            { "id": "iii-10th-16", "caption": "Kenji Kasen 02" },
+            { "id": "iii-10th-17", "caption": "Luigi Goterelli" },
+            { "id": "iii-10th-18", "caption": "Donald Love" },
+            { "id": "iii-10th-19", "caption": "Ray Machowski" },
+            { "id": "iii-10th-20", "caption": "El Burro" },
+            { "id": "iii-10th-21", "caption": "Toni Cipriani" },
+            { "id": "iii-10th-22", "caption": "Leone" }
+        ]
+    },
+    "screenshots": {
+        "ps2": [
+            {
+                "id": "iii-ps2-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "iii-ps2-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "iii-ps2-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "iii-ps2-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "iii-ps2-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "iii-ps2-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "iii-ps2-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "iii-ps2-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "iii-ps2-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "iii-ps2-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "iii-ps2-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "iii-ps2-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            },
+            {
+                "id": "iii-ps2-13",
+                "caption": {
+                    "es": "Captura 13",
+                    "en": "Screenshot 13",
+                    "fr": "Capture d’écran 13",
+                    "pt": "Captura de tela 13"
+                }
+            },
+            {
+                "id": "iii-ps2-14",
+                "caption": {
+                    "es": "Captura 14",
+                    "en": "Screenshot 14",
+                    "fr": "Capture d’écran 14",
+                    "pt": "Captura de tela 14"
+                }
+            },
+            {
+                "id": "iii-ps2-15",
+                "caption": {
+                    "es": "Captura 15",
+                    "en": "Screenshot 15",
+                    "fr": "Capture d’écran 15",
+                    "pt": "Captura de tela 15"
+                }
+            },
+            {
+                "id": "iii-ps2-16",
+                "caption": {
+                    "es": "Captura 16",
+                    "en": "Screenshot 16",
+                    "fr": "Capture d’écran 16",
+                    "pt": "Captura de tela 16"
+                }
+            },
+            {
+                "id": "iii-ps2-17",
+                "caption": {
+                    "es": "Captura 17",
+                    "en": "Screenshot 17",
+                    "fr": "Capture d’écran 17",
+                    "pt": "Captura de tela 17"
+                }
+            },
+            {
+                "id": "iii-ps2-18",
+                "caption": {
+                    "es": "Captura 18",
+                    "en": "Screenshot 18",
+                    "fr": "Capture d’écran 18",
+                    "pt": "Captura de tela 18"
+                }
+            },
+            {
+                "id": "iii-ps2-19",
+                "caption": {
+                    "es": "Captura 19",
+                    "en": "Screenshot 19",
+                    "fr": "Capture d’écran 19",
+                    "pt": "Captura de tela 19"
+                }
+            },
+            {
+                "id": "iii-ps2-20",
+                "caption": {
+                    "es": "Captura 20",
+                    "en": "Screenshot 20",
+                    "fr": "Capture d’écran 20",
+                    "pt": "Captura de tela 20"
+                }
+            },
+            {
+                "id": "iii-ps2-21",
+                "caption": {
+                    "es": "Captura 21",
+                    "en": "Screenshot 21",
+                    "fr": "Capture d’écran 21",
+                    "pt": "Captura de tela 21"
+                }
+            },
+            {
+                "id": "iii-ps2-22",
+                "caption": {
+                    "es": "Captura 22",
+                    "en": "Screenshot 22",
+                    "fr": "Capture d’écran 22",
+                    "pt": "Captura de tela 22"
+                }
+            },
+            {
+                "id": "iii-ps2-23",
+                "caption": {
+                    "es": "Captura 23",
+                    "en": "Screenshot 23",
+                    "fr": "Capture d’écran 23",
+                    "pt": "Captura de tela 23"
+                }
+            },
+            {
+                "id": "iii-ps2-24",
+                "caption": {
+                    "es": "Captura 24",
+                    "en": "Screenshot 24",
+                    "fr": "Capture d’écran 24",
+                    "pt": "Captura de tela 24"
+                }
+            },
+            {
+                "id": "iii-ps2-25",
+                "caption": {
+                    "es": "Captura 25",
+                    "en": "Screenshot 25",
+                    "fr": "Capture d’écran 25",
+                    "pt": "Captura de tela 25"
+                }
+            },
+            {
+                "id": "iii-ps2-26",
+                "caption": {
+                    "es": "Captura 26",
+                    "en": "Screenshot 26",
+                    "fr": "Capture d’écran 26",
+                    "pt": "Captura de tela 26"
+                }
+            },
+            {
+                "id": "iii-ps2-27",
+                "caption": {
+                    "es": "Captura 27",
+                    "en": "Screenshot 27",
+                    "fr": "Capture d’écran 27",
+                    "pt": "Captura de tela 27"
+                }
+            },
+            {
+                "id": "iii-ps2-28",
+                "caption": {
+                    "es": "Captura 28",
+                    "en": "Screenshot 28",
+                    "fr": "Capture d’écran 28",
+                    "pt": "Captura de tela 28"
+                }
+            },
+            {
+                "id": "iii-ps2-29",
+                "caption": {
+                    "es": "Captura 29",
+                    "en": "Screenshot 29",
+                    "fr": "Capture d’écran 29",
+                    "pt": "Captura de tela 29"
+                }
+            },
+            {
+                "id": "iii-ps2-30",
+                "caption": {
+                    "es": "Captura 30",
+                    "en": "Screenshot 30",
+                    "fr": "Capture d’écran 30",
+                    "pt": "Captura de tela 30"
+                }
+            },
+            {
+                "id": "iii-ps2-31",
+                "caption": {
+                    "es": "Captura 31",
+                    "en": "Screenshot 31",
+                    "fr": "Capture d’écran 31",
+                    "pt": "Captura de tela 31"
+                }
+            },
+            {
+                "id": "iii-ps2-32",
+                "caption": {
+                    "es": "Captura 32",
+                    "en": "Screenshot 32",
+                    "fr": "Capture d’écran 32",
+                    "pt": "Captura de tela 32"
+                }
+            },
+            {
+                "id": "iii-ps2-33",
+                "caption": {
+                    "es": "Captura 33",
+                    "en": "Screenshot 33",
+                    "fr": "Capture d’écran 33",
+                    "pt": "Captura de tela 33"
+                }
+            },
+            {
+                "id": "iii-ps2-34",
+                "caption": {
+                    "es": "Captura 34",
+                    "en": "Screenshot 34",
+                    "fr": "Capture d’écran 34",
+                    "pt": "Captura de tela 34"
+                }
+            },
+            {
+                "id": "iii-ps2-35",
+                "caption": {
+                    "es": "Captura 35",
+                    "en": "Screenshot 35",
+                    "fr": "Capture d’écran 35",
+                    "pt": "Captura de tela 35"
+                }
+            },
+            {
+                "id": "iii-ps2-36",
+                "caption": {
+                    "es": "Captura 36",
+                    "en": "Screenshot 36",
+                    "fr": "Capture d’écran 36",
+                    "pt": "Captura de tela 36"
+                }
+            },
+            {
+                "id": "iii-ps2-37",
+                "caption": {
+                    "es": "Captura 37",
+                    "en": "Screenshot 37",
+                    "fr": "Capture d’écran 37",
+                    "pt": "Captura de tela 37"
+                }
+            },
+            {
+                "id": "iii-ps2-38",
+                "caption": {
+                    "es": "Captura 38",
+                    "en": "Screenshot 38",
+                    "fr": "Capture d’écran 38",
+                    "pt": "Captura de tela 38"
+                }
+            },
+            {
+                "id": "iii-ps2-39",
+                "caption": {
+                    "es": "Captura 39",
+                    "en": "Screenshot 39",
+                    "fr": "Capture d’écran 39",
+                    "pt": "Captura de tela 39"
+                }
+            },
+            {
+                "id": "iii-ps2-40",
+                "caption": {
+                    "es": "Captura 40",
+                    "en": "Screenshot 40",
+                    "fr": "Capture d’écran 40",
+                    "pt": "Captura de tela 40"
+                }
+            },
+            {
+                "id": "iii-ps2-41",
+                "caption": {
+                    "es": "Captura 41",
+                    "en": "Screenshot 41",
+                    "fr": "Capture d’écran 41",
+                    "pt": "Captura de tela 41"
+                }
+            },
+            {
+                "id": "iii-ps2-42",
+                "caption": {
+                    "es": "Captura 42",
+                    "en": "Screenshot 42",
+                    "fr": "Capture d’écran 42",
+                    "pt": "Captura de tela 42"
+                }
+            },
+            {
+                "id": "iii-ps2-43",
+                "caption": {
+                    "es": "Captura 43",
+                    "en": "Screenshot 43",
+                    "fr": "Capture d’écran 43",
+                    "pt": "Captura de tela 43"
+                }
+            },
+            {
+                "id": "iii-ps2-44",
+                "caption": {
+                    "es": "Captura 44",
+                    "en": "Screenshot 44",
+                    "fr": "Capture d’écran 44",
+                    "pt": "Captura de tela 44"
+                }
+            },
+            {
+                "id": "iii-ps2-45",
+                "caption": {
+                    "es": "Captura 45",
+                    "en": "Screenshot 45",
+                    "fr": "Capture d’écran 45",
+                    "pt": "Captura de tela 45"
+                }
+            },
+            {
+                "id": "iii-ps2-46",
+                "caption": {
+                    "es": "Captura 46",
+                    "en": "Screenshot 46",
+                    "fr": "Capture d’écran 46",
+                    "pt": "Captura de tela 46"
+                }
+            },
+            {
+                "id": "iii-ps2-47",
+                "caption": {
+                    "es": "Captura 47",
+                    "en": "Screenshot 47",
+                    "fr": "Capture d’écran 47",
+                    "pt": "Captura de tela 47"
+                }
+            },
+            {
+                "id": "iii-ps2-48",
+                "caption": {
+                    "es": "Captura 48",
+                    "en": "Screenshot 48",
+                    "fr": "Capture d’écran 48",
+                    "pt": "Captura de tela 48"
+                }
+            },
+            {
+                "id": "iii-ps2-49",
+                "caption": {
+                    "es": "Captura 49",
+                    "en": "Screenshot 49",
+                    "fr": "Capture d’écran 49",
+                    "pt": "Captura de tela 49"
+                }
+            },
+            {
+                "id": "iii-ps2-50",
+                "caption": {
+                    "es": "Captura 50",
+                    "en": "Screenshot 50",
+                    "fr": "Capture d’écran 50",
+                    "pt": "Captura de tela 50"
+                }
+            },
+            {
+                "id": "iii-ps2-51",
+                "caption": {
+                    "es": "Captura 51",
+                    "en": "Screenshot 51",
+                    "fr": "Capture d’écran 51",
+                    "pt": "Captura de tela 51"
+                }
+            },
+            {
+                "id": "iii-ps2-52",
+                "caption": {
+                    "es": "Captura 52",
+                    "en": "Screenshot 52",
+                    "fr": "Capture d’écran 52",
+                    "pt": "Captura de tela 52"
+                }
+            },
+            {
+                "id": "iii-ps2-53",
+                "caption": {
+                    "es": "Captura 53",
+                    "en": "Screenshot 53",
+                    "fr": "Capture d’écran 53",
+                    "pt": "Captura de tela 53"
+                }
+            },
+            {
+                "id": "iii-ps2-54",
+                "caption": {
+                    "es": "Captura 54",
+                    "en": "Screenshot 54",
+                    "fr": "Capture d’écran 54",
+                    "pt": "Captura de tela 54"
+                }
+            },
+            {
+                "id": "iii-ps2-55",
+                "caption": {
+                    "es": "Captura 55",
+                    "en": "Screenshot 55",
+                    "fr": "Capture d’écran 55",
+                    "pt": "Captura de tela 55"
+                }
+            },
+            {
+                "id": "iii-ps2-56",
+                "caption": {
+                    "es": "Captura 56",
+                    "en": "Screenshot 56",
+                    "fr": "Capture d’écran 56",
+                    "pt": "Captura de tela 56"
+                }
+            },
+            {
+                "id": "iii-ps2-57",
+                "caption": {
+                    "es": "Captura 57",
+                    "en": "Screenshot 57",
+                    "fr": "Capture d’écran 57",
+                    "pt": "Captura de tela 57"
+                }
+            },
+            {
+                "id": "iii-ps2-58",
+                "caption": {
+                    "es": "Captura 58",
+                    "en": "Screenshot 58",
+                    "fr": "Capture d’écran 58",
+                    "pt": "Captura de tela 58"
+                }
+            },
+            {
+                "id": "iii-ps2-59",
+                "caption": {
+                    "es": "Captura 59",
+                    "en": "Screenshot 59",
+                    "fr": "Capture d’écran 59",
+                    "pt": "Captura de tela 59"
+                }
+            },
+            {
+                "id": "iii-ps2-60",
+                "caption": {
+                    "es": "Captura 60",
+                    "en": "Screenshot 60",
+                    "fr": "Capture d’écran 60",
+                    "pt": "Captura de tela 60"
+                }
+            }
+        ],
+        "pc": [
+            {
+                "id": "iii-pc-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "iii-pc-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "iii-pc-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "iii-pc-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "iii-pc-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "iii-pc-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "iii-pc-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "iii-pc-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "iii-pc-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "iii-pc-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            }
+        ],
+        "xbox": [
+            {
+                "id": "iii-xbox-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "iii-xbox-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "iii-xbox-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "iii-xbox-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "iii-xbox-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "iii-xbox-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "iii-xbox-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "iii-xbox-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "iii-xbox-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "iii-xbox-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            }
+        ]
+    }
+}
