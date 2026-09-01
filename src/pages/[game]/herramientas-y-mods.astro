@@ -1,0 +1,35 @@
+---
+import UnderConstruction from "@/components/404/UnderConstruction";
+import type { GameId } from "@/config/games";
+import { games } from "../../data/games";
+import { seo } from "../../data/seo";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export function getStaticPaths() {
+    return Object.entries(seo)
+        .filter(([, pages]) => pages?.["herramientas-y-mods"])
+        .map(([game]) => ({
+            params: { game },
+            props: {
+                gameData: games[game as GameId],
+            },
+        }));
+}
+
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const pageSeo = seo[game]?.["herramientas-y-mods"];
+---
+
+<BaseLayout
+    title={pageSeo
+        ? `${pageSeo.title} | Vice Club`
+        : `${gameData.title} | Vice Club`}
+    description={pageSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${game}/herramientas-y-mods`}
+    game={gameData}
+>
+    <main class="flex min-h-screen flex-col items-center justify-center">
+        <UnderConstruction client:load gameId={game} />
+    </main>
+</BaseLayout>
