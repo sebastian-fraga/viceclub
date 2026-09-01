@@ -4,9 +4,32 @@ import { initReactI18next } from "react-i18next";
 import { defaultLanguage, detectBrowserLanguage } from "@/config/languages";
 import { resources } from "@/data/lang";
 
+function resolveInitialLanguage(): string {
+    if (typeof localStorage === "undefined") return defaultLanguage;
+
+    try {
+        const stored = localStorage.getItem("viceclub-settings");
+
+        if (stored) {
+            const settings = JSON.parse(stored);
+
+            if (
+                typeof settings.language === "string" &&
+                settings.language in resources
+            ) {
+                return settings.language;
+            }
+        }
+    } catch {}
+
+    return detectBrowserLanguage() ?? defaultLanguage;
+}
+
+const initialLanguage = resolveInitialLanguage();
+
 export const i18nReady = i18n.use(initReactI18next).init({
     resources,
-    lng: defaultLanguage,
+    lng: initialLanguage,
     fallbackLng: defaultLanguage,
     interpolation: {
         escapeValue: false,

@@ -1,6 +1,6 @@
+import type { TFunction } from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { TFunction } from "i18next";
 
 import { defaultLanguage } from "@/config/languages";
 import i18n from "@/i18n";
