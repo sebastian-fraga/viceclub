@@ -3,7 +3,7 @@
 GTA III–VI fan site: checklists, radio, maps, timeline and more.
 
 ![Last commit](https://img.shields.io/github/last-commit/sebastian-fraga/viceclub)
-![License](https://img.shields.io/github/license/sebastian-fraga/viceclub)
+![License](https://img.shields.io/github/license/sebastian-fraga/viceclub?cacheSeconds=1)
 ![Languages](https://img.shields.io/badge/i18n-ES_|_EN_|_FR_|_PT--BR-blue)
 
 🔗 [viceclub.app](https://viceclub.app)
