@@ -38,6 +38,8 @@ export function Lightbox({
     canPrev,
 }: Props) {
     const [isClosing, setIsClosing] = useState(false);
+    const [isDownloading, setIsDownloading] = useState(false);
+    const [downloadProgress, setDownloadProgress] = useState(0);
 
     const t = useT();
     const url = getImageUrl(gameId, category, image.section, image.id);
@@ -63,7 +65,12 @@ export function Lightbox({
     }, [isClosing, onClose]);
 
     async function handleDownload() {
+        if (isDownloading) return;
+
         try {
+            setIsDownloading(true);
+            setDownloadProgress(0);
+
             const response = await fetch(url, {
                 cache: "no-store",
             });
@@ -72,7 +79,53 @@ export function Lightbox({
                 throw new Error(`HTTP ${response.status}`);
             }
 
-            const blob = await response.blob();
+            if (!response.body) {
+                throw new Error("ReadableStream is not supported");
+            }
+
+            const contentLength = response.headers.get("content-length");
+
+            if (!contentLength) {
+                const blob = await response.blob();
+
+                const blobUrl = URL.createObjectURL(blob);
+
+                const link = document.createElement("a");
+                link.href = blobUrl;
+                link.download = filename;
+
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+
+                URL.revokeObjectURL(blobUrl);
+
+                setDownloadProgress(100);
+                return;
+            }
+
+            const total = Number(contentLength);
+            let received = 0;
+
+            const reader = response.body.getReader();
+            const chunks: Uint8Array[] = [];
+
+            while (true) {
+                const { done, value } = await reader.read();
+
+                if (done) break;
+
+                if (value) {
+                    chunks.push(value);
+                    received += value.length;
+
+                    setDownloadProgress(
+                        Math.min(Math.round((received / total) * 100), 100),
+                    );
+                }
+            }
+
+            const blob = new Blob(chunks as BlobPart[]);
             const blobUrl = URL.createObjectURL(blob);
 
             const link = document.createElement("a");
@@ -88,6 +141,11 @@ export function Lightbox({
             }, 1000);
         } catch (error) {
             console.error("Download failed:", error);
+        } finally {
+            setTimeout(() => {
+                setIsDownloading(false);
+                setDownloadProgress(0);
+            }, 500);
         }
     }
 
@@ -210,14 +268,65 @@ export function Lightbox({
                     <div className="flex items-center gap-4 max-mobile:w-full max-mobile:justify-between">
                         <button
                             onClick={handleDownload}
-                            className="flex items-center gap-4 rounded-full bg-(--game-buttons-primary-background) cursor-pointer hover:bg-(--game-buttons-primary-hovered) transition duration-400 px-32 py-7 font-black text-3xl text-(--game-buttons-primary-text) max-mobile:flex-1 max-mobile:justify-center max-mobile:px-6 max-mobile:py-3 max-mobile:text-lg"
+                            disabled={isDownloading}
+                            aria-label={t("common.buttons.download")}
+                            className={`flex w-110 items-center justify-center gap-4 rounded-full bg-(--game-buttons-primary-background) cursor-pointer hover:bg-(--game-buttons-primary-hovered) transition duration-400 py-7 font-black text-3xl text-(--game-buttons-primary-text) max-mobile:flex-1 max-mobile:w-auto max-mobile:py-3 max-mobile:text-lg disabled:cursor-wait ${
+                                isDownloading
+                                    ? "mobile:justify-between mobile:px-12"
+                                    : ""
+                            }`}
                         >
-                            {t("common.buttons.download")}
-                            <IconDownload
-                                stroke={3}
-                                size={32}
-                                className="max-mobile:size-5"
-                            />
+                            {isDownloading ? (
+                                <>
+                                    <span className="relative size-9 shrink-0 max-mobile:size-5">
+                                        <svg
+                                            className="size-full -rotate-90"
+                                            viewBox="0 0 36 36"
+                                        >
+                                            <circle
+                                                cx="18"
+                                                cy="18"
+                                                r="15"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="6"
+                                                className="opacity-25"
+                                            />
+
+                                            <circle
+                                                cx="18"
+                                                cy="18"
+                                                r="15"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="6"
+                                                strokeLinecap="round"
+                                                strokeDasharray="94.25"
+                                                strokeDashoffset={
+                                                    94.25 -
+                                                    (94.25 * downloadProgress) /
+                                                        100
+                                                }
+                                                className="transition-[stroke-dashoffset] duration-150"
+                                            />
+                                        </svg>
+                                    </span>
+
+                                    <span className="tabular-nums">
+                                        {downloadProgress}%
+                                    </span>
+                                </>
+                            ) : (
+                                <>
+                                    {t("common.buttons.download")}
+
+                                    <IconDownload
+                                        stroke={3}
+                                        size={32}
+                                        className="max-mobile:size-5"
+                                    />
+                                </>
+                            )}
                         </button>
                     </div>
                 </div>
