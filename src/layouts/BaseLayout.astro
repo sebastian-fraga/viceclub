@@ -12,6 +12,7 @@ import NotificationBanner from "@/components/layout/NotificationBanner";
 import CursorManager from "@/components/providers/CursorManager";
 
 import "../styles/main.css";
+import SmoothScroll from "@/components/providers/SmoothScroll";
 
 interface Props {
     title: string;
@@ -111,6 +112,7 @@ const { title, description, canonical, dataGame, game } = Astro.props;
         />
 
         <CursorManager gameId={game?.id} client:load />
+        <SmoothScroll client:load transition:persist />
 
         <div
             style={game
