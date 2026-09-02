@@ -45,6 +45,9 @@ export function Lightbox({
     const sectionLabel = getSectionLabel(image.section, lang);
     const filename = `${slugify(caption || image.id)}.webp`;
 
+    const mobileButtonsStyles =
+        "hidden max-mobile:flex absolute top-1/2 -translate-y-1/2 items-center justify-center p-2 text-white transition duration-400 disabled:text-white/30 cursor-pointer disabled:cursor-not-allowed";
+
     function handleClose() {
         setIsClosing(true);
     }
@@ -120,10 +123,10 @@ export function Lightbox({
         >
             <div className="mobile:absolute mobile:right-8 mobile:top-8 z-10 flex items-center gap-4 max-mobile:justify-between max-mobile:px-8 max-mobile:pt-4">
                 <div className="w-full flex-col truncate">
-                    <span className="hidden max-mobile:block truncate max-w-50 text-lg font-medium text-violet-200">
+                    <span className="hidden max-mobile:block truncate max-w-50 text-lg max-mobile:text-sm font-medium text-violet-200">
                         {sectionLabel}
                     </span>
-                    <span className="hidden max-mobile:block truncate max-w-50 text-lg font-bold text-violet-100">
+                    <span className="hidden max-mobile:block truncate max-w-50 text-lg max-mobile:text-base font-bold text-violet-100">
                         {caption}
                     </span>
                 </div>
@@ -149,18 +152,24 @@ export function Lightbox({
                     onClick={onPrev}
                     disabled={!canPrev}
                     aria-label={t("common.accessibility.prev")}
-                    className="hidden max-mobile:flex absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center rounded-full p-3 text-white transition duration-400 disabled:text-white/30"
+                    className={`left-2 ${mobileButtonsStyles}`}
                 >
-                    <IconChevronLeft size={24} />
+                    <IconChevronLeft
+                        size={24}
+                        className="drop-shadow-xs drop-shadow-black/40"
+                    />
                 </button>
 
                 <button
                     onClick={onNext}
                     disabled={!canNext}
                     aria-label={t("common.accessibility.next")}
-                    className="hidden max-mobile:flex absolute right-2 top-1/2 -translate-y-1/2 items-center justify-center rounded-full p-3 text-white transition duration-400 disabled:text-white/30"
+                    className={`right-2 ${mobileButtonsStyles}`}
                 >
-                    <IconChevronRight size={24} />
+                    <IconChevronRight
+                        size={24}
+                        className="drop-shadow-xs drop-shadow-black/40"
+                    />
                 </button>
             </div>
 
