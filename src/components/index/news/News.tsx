@@ -259,14 +259,14 @@ export default function News() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener"
-                                className="flex items-center gap-2 w-fit mt-6 mx-auto bg-pink-400 text-black font-bold px-8 py-3 rounded-full transition hover:bg-pink-500 hover:text-white shadow-pink-300/10 shadow-xl uppercase"
+                                className="flex items-center gap-2 w-fit mt-6 mx-auto bg-yellow-200 text-black font-bold px-8 py-3 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group"
                             >
                                 {translateContent(
                                     item.linkText ??
                                         "index.news.buttons.external",
                                 )}
 
-                                <IconArrowUpRight />
+                                <IconArrowUpRight className="group-hover:scale-120 transition duration-300"/>
                             </a>
 
                             <div className="w-full h-px bg-gray-500/20 rounded-2xl my-6" />
