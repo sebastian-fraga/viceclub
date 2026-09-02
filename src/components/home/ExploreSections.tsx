@@ -149,7 +149,7 @@ export default function ExploreSections({ game }: Props) {
                             {isChecklist &&
                                 !isUnderConstruction &&
                                 checklistProgress !== null && (
-                                    <span className="absolute left-4 top-4 z-10 rounded-2xl bg-(--game-accent)/80 px-3 py-1 text-[10px] font-black tabular-nums text-(--game-buttons-primary-text)/90 max-mobile:right-4 max-mobile:left-auto max-mobile:text-[8px]">
+                                    <span className="absolute left-4 top-4 z-10 rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[10px] font-black tabular-nums text-(--game-buttons-primary-text)/90 max-mobile:right-4 max-mobile:left-auto max-mobile:text-[8px]">
                                         {checklistProgress.pct}%
                                     </span>
                                 )}
