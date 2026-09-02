@@ -56,10 +56,12 @@ export function SectionGrid({
 
     return (
         <section className="mx-auto max-mobile:mt-20 first:mobile:mt-30 mobile:mt-50 flex max-w-430 flex-col">
-            <h3 className="mb-8 flex items-center gap-3 text-4xl font-medium text-indigo-50">
-                {getSectionLabel(section, lang)}
+            <h3 className="mb-8 flex items-center gap-3 text-4xl font-medium text-indigo-50 max-mobile:max-w-120 max-mobile:text-2xl">
+                <span className="min-w-0 truncate">
+                    {getSectionLabel(section, lang)}
+                </span>
 
-                <span className="rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
+                <span className="shrink-0 rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
                     {images.length}
                 </span>
             </h3>
@@ -80,7 +82,7 @@ export function SectionGrid({
                         <button
                             key={image.id}
                             onClick={(e) => handleSelect(e, image)}
-                            className="group flex cursor-pointer flex-col overflow-hidden rounded-4xl bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-350 hover:bg-[#2F2E52]"
+                            className="group flex cursor-pointer flex-col overflow-hidden rounded-[20px] bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-350 hover:bg-[#2F2E52]"
                         >
                             <img
                                 ref={(el) => registerThumb(image.id, el)}
@@ -93,8 +95,8 @@ export function SectionGrid({
                                 className="aspect-video w-full shrink-0 object-cover object-top"
                             />
 
-                            <div className="h-32 shrink-0 p-8">
-                                <p className="truncate text-2xl font-medium text-violet-100">
+                            <div className="max-mobile:h-22 h-32 shrink-0 p-8">
+                                <p className="truncate text-2xl max-mobile:text-lg font-medium text-violet-100">
                                     {caption}
                                 </p>
                             </div>
