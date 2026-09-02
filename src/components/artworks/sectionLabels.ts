@@ -19,6 +19,12 @@ export const sectionLabels: Record<string, Caption> = {
         fr: "Captures d’écran PlayStation 2",
         pt: "Capturas de tela da PlayStation 2",
     },
+    ps3: {
+        es: "Capturas de PlayStation 3",
+        en: "PlayStation 3 screenshots",
+        fr: "Captures d’écran PlayStation 3",
+        pt: "Capturas de tela da PlayStation 3",
+    },
     psp: {
         es: "Capturas de PlayStation Portable",
         en: "PlayStation Portable screenshots",
@@ -42,6 +48,24 @@ export const sectionLabels: Record<string, Caption> = {
         en: "Definitive Edition",
         fr: "Definitive Edition",
         pt: "Definitive Edition",
+    },
+    iv: {
+        es: "Personajes de Grand Theft Auto IV",
+        en: "Grand Theft Auto IV characters",
+        fr: "Personnages de Grand Theft Auto IV",
+        pt: "Personagens de Grand Theft Auto IV",
+    },
+    tlad: {
+        es: "Personajes de The Lost and Damned",
+        en: "The Lost and Damned characters",
+        fr: "Personnages de The Lost and Damned",
+        pt: "Personagens de The Lost and Damned",
+    },
+    tbogt: {
+        es: "Personajes de The Ballad of Gay Tony",
+        en: "The Ballad of Gay Tony characters",
+        fr: "Personnages de The Ballad of Gay Tony",
+        pt: "Personagens de The Ballad of Gay Tony",
     },
     vehicles: {
         es: "Vehículos",
