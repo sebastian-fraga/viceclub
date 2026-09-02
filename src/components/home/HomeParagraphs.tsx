@@ -11,7 +11,7 @@ export default function HomeParagraphs({ paragraphs }: Props) {
             {paragraphs.map((paragraph) => (
                 <p
                     key={paragraph}
-                    className="text-xl/9 max-w-[80%] my-8 max-mobile:max-w-full max-mobile:my-5 max-mobile:text-base/7"
+                    className="text-xl/9 max-w-[80%] my-8 max-mobile:max-w-full max-mobile:my-6 max-mobile:text-base/7"
                 >
                     {t(paragraph)}
                 </p>
