@@ -44,6 +44,12 @@ export default function ExploreSections({ game }: Props) {
             ...SECTIONS_METADATA[id],
         }));
 
+    const totalMobileUnits = sections.reduce(
+        (acc, section) => acc + (section.id === "100" ? 2 : 1),
+        0,
+    );
+    const hasOrphanRow = totalMobileUnits % 2 !== 0;
+
     return (
         <section className="flex flex-col gap-3">
             <div className="max-w-fit">
@@ -57,6 +63,10 @@ export default function ExploreSections({ game }: Props) {
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
                     const isChecklist = section.id === "100";
+                    const isLastItem = index === sections.length - 1;
+                    const isLastOrphan =
+                        isLastItem && !isChecklist && hasOrphanRow;
+                    const mobileWide = isChecklist || isLastOrphan;
 
                     const { pattern, isLarge, isWide } = getBentoClasses(index);
                     const featured = isLarge || isWide;
@@ -93,14 +103,22 @@ export default function ExploreSections({ game }: Props) {
                             }}
                             whileHover="hover"
                             whileTap={isUnderConstruction ? undefined : "hover"}
-                            className={`${pattern} max-mobile:row-span-1 group relative flex flex-col overflow-hidden rounded-md border p-4 transition-colors max-mobile:p-3 ${
+                            className={`${pattern} ${
+                                mobileWide
+                                    ? "max-mobile:col-span-2"
+                                    : "max-mobile:col-span-1"
+                            } max-mobile:row-span-1 group relative flex flex-col overflow-hidden rounded-md border p-4 gap-2 transition-colors max-mobile:p-3 ${
                                 isUnderConstruction
                                     ? "cursor-not-allowed border-neutral-400/10 bg-neutral-900/50 opacity-55"
                                     : "cursor-pointer border-neutral-600/50 hover:border-(--game-buttons-primary-hovered)/80 hover:bg-zinc-950/60 bg-neutral-950"
                             } ${
+                                mobileWide
+                                    ? "max-mobile:justify-end max-mobile:items-start max-mobile:text-left"
+                                    : "max-mobile:items-center max-mobile:justify-center max-mobile:text-center"
+                            } ${
                                 featured
-                                    ? "justify-end items-start gap-2 text-left"
-                                    : "items-center justify-center gap-2 text-center"
+                                    ? "sm:justify-end sm:items-start sm:text-left"
+                                    : "sm:items-center sm:justify-center sm:text-center"
                             }`}
                         >
                             {isLarge && (
