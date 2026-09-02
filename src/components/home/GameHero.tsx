@@ -28,7 +28,7 @@ export default function GameHero({ game }: Props) {
         | "default";
 
     return (
-        <section className="relative min-h-80 w-full rounded-4xl shadow-2xl shadow-(color:--game-accent)/5 max-mobile:min-h-44 max-mobile:rounded-3xl">
+        <section className="relative min-h-80 w-full rounded-4xl shadow-2xl shadow-(color:--game-accent)/5 max-mobile:min-h-48 max-mobile:rounded-3xl">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -49,7 +49,7 @@ export default function GameHero({ game }: Props) {
                 initial={{ opacity: 0, y: -24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-                className="absolute inset-x-0 bottom-0 grid grid-cols-[192px_1fr] grid-rows-[1fr_auto] items-center ml-4 max-mobile:grid-cols-[96px_1fr] max-mobile:ml-2 -mb-2.5 max-mobile:-mb-1"
+                className="absolute inset-x-0 bottom-0 grid grid-cols-[192px_1fr] grid-rows-[1fr_auto] items-center ml-4 max-mobile:grid-cols-[96px_1fr] max-mobile:ml-2 -mb-2.5 max-mobile:-mb-0.5"
             >
                 <div className="row-span-2 w-48 self-end object-fit max-mobile:w-24">
                     <img
@@ -67,7 +67,7 @@ export default function GameHero({ game }: Props) {
                             : "justify-end"
                     } max-mobile:px-2 max-mobile:pt-4`}
                 >
-                    <h1 className="text-3xl font-black tracking-wide max-mobile:text-lg">
+                    <h1 className="text-3xl font-black tracking-wide max-mobile:text-lg/5 text-pretty max-mobile:pb-2">
                         {game.title}
                     </h1>
                 </div>
@@ -77,7 +77,7 @@ export default function GameHero({ game }: Props) {
                         game.buttonsPosition === "left"
                             ? "justify-start"
                             : "justify-end"
-                    } max-mobile:px-2 max-mobile:pb-5 max-mobile:gap-2`}
+                    } max-mobile:px-1 max-mobile:pb-5 max-mobile:gap-2`}
                 >
                     <PurchaseDropdown
                         purchase={game.purchase}
