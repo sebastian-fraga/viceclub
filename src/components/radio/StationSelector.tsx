@@ -62,6 +62,7 @@ export function StationSelector({
                 ref={scrollRef}
                 onScroll={handleScroll}
                 className="grid justify-items-center grid-cols-4 max-mobile:grid-cols-2 gap-x-4 gap-y-8 overflow-y-auto h-full min-h-0 p-3 scroll-radio"
+                data-lenis-prevent
                 style={{ maskImage, WebkitMaskImage: maskImage }}
             >
                 {stations.map((station, index) => {

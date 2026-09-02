@@ -1,6 +1,6 @@
+import useT from "@/hooks/useT";
 import { useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import useT from "@/hooks/useT";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -171,7 +171,10 @@ export default function TrailerDropdown({
                                         YouTube
                                     </span>
                                 </div>
-                                <div className="flex flex-col gap-0.5 max-h-50 overflow-y-auto scroll-home-dropdown max-mobile:max-h-40">
+                                <div
+                                    className="flex flex-col gap-0.5 max-h-50 overflow-y-auto scroll-home-dropdown max-mobile:max-h-40"
+                                    data-lenis-prevent
+                                >
                                     {trailers.map((trailer, index) => {
                                         const isLast =
                                             index === trailers.length - 1;

@@ -117,7 +117,10 @@ export default function CharacterCard({ character, gameId }: Props) {
                     </div>
                 </div>
 
-                <div className="absolute inset-0 flex flex-col gap-5 overflow-y-auto rounded-md border border-neutral-400/10 bg-neutral-900 p-4 backface-hidden transform-[rotateY(180deg)] max-mobile:gap-3 max-mobile:p-3">
+                <div
+                    className="absolute inset-0 flex flex-col gap-5 overflow-y-auto rounded-md border border-neutral-400/10 bg-neutral-900 p-4 backface-hidden transform-[rotateY(180deg)] max-mobile:gap-3 max-mobile:p-3"
+                    data-lenis-prevent
+                >
                     <div className="flex items-center gap-2">
                         <p className="text-base font-bold text-neutral-100 max-mobile:text-sm">
                             {character.name}

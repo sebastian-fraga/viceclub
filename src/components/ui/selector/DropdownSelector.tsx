@@ -93,7 +93,10 @@ export default function DropdownSelector<T extends string = string>({
                                 {placeholder}
                             </span>
 
-                            <div className="flex flex-col items-start gap-2 pr-5 max-mobile:pr-4 overflow-y-auto scroll-selector">
+                            <div
+                                className="flex flex-col items-start gap-2 pr-5 max-mobile:pr-4 overflow-y-auto scroll-selector"
+                                data-lenis-prevent
+                            >
                                 {options.map((option) => {
                                     const isSelected =
                                         option.id === selectedOption?.id;

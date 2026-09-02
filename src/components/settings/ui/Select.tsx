@@ -121,6 +121,7 @@ export default function Select({
                                         left: coords.left,
                                     }}
                                     className="fixed min-w-32 bg-[#1c1c28] border border-white/10 rounded-md shadow-lg overflow-hidden z-20100 max-h-60 scroll-settings overflow-y-auto"
+                                    data-lenis-prevent
                                 >
                                     {selectOptions.map((option) => {
                                         const Flag =

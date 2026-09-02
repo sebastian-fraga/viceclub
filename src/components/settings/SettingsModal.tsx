@@ -112,6 +112,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                                     ? "overflow-y-auto scroll-settings scroll-settings-mask"
                                     : "overflow-hidden"
                             }`}
+                            data-lenis-prevent
                         >
                             <AnimatePresence mode="wait" initial={false}>
                                 {currentStep === "main" ? (

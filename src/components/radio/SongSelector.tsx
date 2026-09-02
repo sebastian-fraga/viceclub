@@ -1,3 +1,4 @@
+import useT from "@/hooks/useT";
 import {
     IconChevronLeft,
     IconHeadphones,
@@ -6,7 +7,6 @@ import {
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import useT from "@/hooks/useT";
 
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
@@ -39,7 +39,7 @@ export function SongSelector({
     onBack,
     preventAutoScrollOnMobile = true,
 }: SongSelectorProps) {
-    const t = useT()
+    const t = useT();
 
     const scrollRef = useRef<HTMLUListElement>(null);
     const songRefs = useRef<Map<number, HTMLLIElement>>(new Map());
@@ -239,6 +239,7 @@ export function SongSelector({
                             ref={scrollRef}
                             onScroll={handleScroll}
                             className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto scroll-radio flex-1 min-h-0"
+                            data-lenis-prevent
                             style={{
                                 maskImage,
                                 WebkitMaskImage: maskImage,
