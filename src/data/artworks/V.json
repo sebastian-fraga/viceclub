@@ -1,0 +1,325 @@
+{
+    "artworks": {
+        "storyMode": [
+            {
+                "id": "v-sm-01",
+                "caption": "Michael de Santa 01"
+            },
+            {
+                "id": "v-sm-02",
+                "caption": "Michael de Santa 02"
+            },
+            {
+                "id": "v-sm-03",
+                "caption": "Michael de Santa 03"
+            },
+            {
+                "id": "v-sm-04",
+                "caption": "Michael de Santa 04"
+            },
+            {
+                "id": "v-sm-05",
+                "caption": "Michael de Santa 05"
+            },
+            {
+                "id": "v-sm-06",
+                "caption": "Michael de Santa 06"
+            },
+            {
+                "id": "v-sm-07",
+                "caption": "Michael de Santa 07"
+            },
+            {
+                "id": "v-sm-08",
+                "caption": "Franklin Clinton 01"
+            },
+            {
+                "id": "v-sm-09",
+                "caption": "Franklin Clinton 02"
+            },
+            {
+                "id": "v-sm-10",
+                "caption": "Franklin Clinton 03"
+            },
+            {
+                "id": "v-sm-11",
+                "caption": "Franklin Clinton 04"
+            },
+            {
+                "id": "v-sm-12",
+                "caption": "Franklin Clinton 05"
+            },
+            {
+                "id": "v-sm-13",
+                "caption": "Chop"
+            },
+            {
+                "id": "v-sm-14",
+                "caption": {
+                    "es": "Franklin y Chop",
+                    "en": "Franklin and Chop",
+                    "fr": "Franklin et Chop",
+                    "pt": "Franklin e Chop"
+                }
+            },
+            {
+                "id": "v-sm-15",
+                "caption": {
+                    "es": "Michael y Franklin",
+                    "en": "Michael and Franklin",
+                    "fr": "Michael et Franklin",
+                    "pt": "Michael e Franklin"
+                }
+            },
+            {
+                "id": "v-sm-16",
+                "caption": "Trevor Philips 01"
+            },
+            {
+                "id": "v-sm-17",
+                "caption": "Trevor Philips 02"
+            },
+            {
+                "id": "v-sm-18",
+                "caption": "Trevor Philips 03"
+            },
+            {
+                "id": "v-sm-19",
+                "caption": "Trevor Philips 04"
+            },
+            {
+                "id": "v-sm-20",
+                "caption": "Trevor Philips 05"
+            },
+            {
+                "id": "v-sm-21",
+                "caption": "Trevor Philips 06"
+            },
+            {
+                "id": "v-sm-22",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 01",
+                    "en": "Michael, Franklin and Trevor 01",
+                    "fr": "Michael, Franklin et Trevor 01",
+                    "pt": "Michael, Franklin e Trevor 01"
+                }
+            },
+            {
+                "id": "v-sm-23",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 02",
+                    "en": "Michael, Franklin and Trevor 02",
+                    "fr": "Michael, Franklin et Trevor 02",
+                    "pt": "Michael, Franklin e Trevor 02"
+                }
+            },
+            {
+                "id": "v-sm-24",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 03",
+                    "en": "Michael, Franklin and Trevor 03",
+                    "fr": "Michael, Franklin et Trevor 03",
+                    "pt": "Michael, Franklin e Trevor 03"
+                }
+            },
+            {
+                "id": "v-sm-25",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 04",
+                    "en": "Michael, Franklin and Trevor 04",
+                    "fr": "Michael, Franklin et Trevor 04",
+                    "pt": "Michael, Franklin e Trevor 04"
+                }
+            },
+            {
+                "id": "v-sm-26",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 05",
+                    "en": "Michael, Franklin and Trevor 05",
+                    "fr": "Michael, Franklin et Trevor 05",
+                    "pt": "Michael, Franklin e Trevor 05"
+                }
+            },
+            {
+                "id": "v-sm-27",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 06",
+                    "en": "Michael, Franklin and Trevor 06",
+                    "fr": "Michael, Franklin et Trevor 06",
+                    "pt": "Michael, Franklin e Trevor 06"
+                }
+            },
+            {
+                "id": "v-sm-28",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 07",
+                    "en": "Michael, Franklin and Trevor 07",
+                    "fr": "Michael, Franklin et Trevor 07",
+                    "pt": "Michael, Franklin e Trevor 07"
+                }
+            },
+            {
+                "id": "v-sm-29",
+                "caption": {
+                    "es": "Michael, Franklin y Trevor 08",
+                    "en": "Michael, Franklin and Trevor 08",
+                    "fr": "Michael, Franklin et Trevor 08",
+                    "pt": "Michael, Franklin e Trevor 08"
+                }
+            },
+            {
+                "id": "v-sm-30",
+                "caption": "Lamar Davis"
+            },
+            {
+                "id": "v-sm-31",
+                "caption": "Jimmy de Santa"
+            },
+            {
+                "id": "v-sm-32",
+                "caption": "Tracey de Santa"
+            },
+            {
+                "id": "v-sm-33",
+                "caption": {
+                    "es": "Jimmy y Tracey",
+                    "en": "Jimmy and Tracey",
+                    "fr": "Jimmy et Tracey",
+                    "pt": "Jimmy e Tracey"
+                }
+            },
+            {
+                "id": "v-sm-34",
+                "caption": "Ron Jakowski"
+            },
+            {
+                "id": "v-sm-35",
+                "caption": "Lester Crest"
+            },
+            {
+                "id": "v-sm-36",
+                "caption": "Amanda de Santa"
+            },
+            {
+                "id": "v-sm-37",
+                "caption": "Simeon Yetarian"
+            },
+            {
+                "id": "v-sm-38",
+                "caption": "Wade Hebert"
+            },
+            {
+                "id": "v-sm-39",
+                "caption": "Tonya Wiggins"
+            },
+            {
+                "id": "v-sm-40",
+                "caption": "Tao Cheng"
+            },
+            {
+                "id": "v-sm-41",
+                "caption": "Dave Norton"
+            },
+            {
+                "id": "v-sm-42",
+                "caption": "Devin Weston"
+            },
+            {
+                "id": "v-sm-43",
+                "caption": "Dr. Isiah Friedlander"
+            },
+            {
+                "id": "v-sm-44",
+                "caption": "Lazlow Jones"
+            },
+            {
+                "id": "v-sm-45",
+                "caption": "Denise Clinton"
+            },
+            {
+                "id": "v-sm-46",
+                "caption": "Maude Eccles"
+            },
+            {
+                "id": "v-sm-47",
+                "caption": {
+                    "es": "Mujer en la playa",
+                    "en": "Woman on the beach",
+                    "fr": "Femme sur la plage",
+                    "pt": "Mulher na praia"
+                }
+            },
+            {
+                "id": "v-sm-48",
+                "caption": {
+                    "es": "Mujer arrestada",
+                    "en": "Arrested woman",
+                    "fr": "Femme arrêtée",
+                    "pt": "Mulher presa"
+                }
+            },
+            {
+                "id": "v-sm-49",
+                "caption": {
+                    "es": "Mujer en Vinewood",
+                    "en": "Woman in Vinewood",
+                    "fr": "Femme à Vinewood",
+                    "pt": "Mulher em Vinewood"
+                }
+            },
+            {
+                "id": "v-sm-50",
+                "caption": "Obey 9F"
+            },
+            {
+                "id": "v-sm-51",
+                "caption": "Buzzard"
+            },
+            {
+                "id": "v-sm-52",
+                "caption": {
+                    "es": "El golpe de Paleto",
+                    "en": "The Paleto Score",
+                    "fr": "Le Braquage de Paleto",
+                    "pt": "O Golpe de Paleto"
+                }
+            },
+            {
+                "id": "v-sm-53",
+                "caption": {
+                    "es": "El gran golpe",
+                    "en": "The Big Score",
+                    "fr": "Le Coup du siècle",
+                    "pt": "O Grande Golpe"
+                }
+            },
+            {
+                "id": "v-sm-54",
+                "caption": {
+                    "es": "Robo",
+                    "en": "Robbery",
+                    "fr": "Braquage",
+                    "pt": "Roubo"
+                }
+            },
+            {
+                "id": "v-sm-55",
+                "caption": {
+                    "es": "Bolsa de dinero",
+                    "en": "Money bag",
+                    "fr": "Sac d'argent",
+                    "pt": "Saco de dinheiro"
+                }
+            },
+            {
+                "id": "v-sm-56",
+                "caption": {
+                    "es": "Edición coleccionista",
+                    "en": "Collector's Edition",
+                    "fr": "Édition Collector",
+                    "pt": "Edição de Colecionador"
+                }
+            }
+        ]
+    }
+}

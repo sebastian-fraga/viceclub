@@ -115,4 +115,10 @@ export const sectionLabels: Record<string, Caption> = {
         fr: "Multijoueur",
         pt: "Multijogador",
     },
+    storyMode: {
+        es: "Modo historia",
+        en: "Story mode",
+        fr: "Mode Histoire",
+        pt: "Modo história",
+    },
 };
