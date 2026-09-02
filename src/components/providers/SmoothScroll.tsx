@@ -10,17 +10,23 @@ export default function SmoothScroll() {
             touchMultiplier: 2,
         });
 
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
+        let animationFrame: number;
 
-        document.addEventListener("astro:after-swap", () => {
+        const raf = (time: number) => {
+            lenis.raf(time);
+            animationFrame = requestAnimationFrame(raf);
+        };
+
+        const handleAfterSwap = () => {
             lenis.scrollTo(0, { immediate: true });
-        });
+        };
+
+        animationFrame = requestAnimationFrame(raf);
+        document.addEventListener("astro:after-swap", handleAfterSwap);
 
         return () => {
+            cancelAnimationFrame(animationFrame);
+            document.removeEventListener("astro:after-swap", handleAfterSwap);
             lenis.destroy();
         };
     }, []);
