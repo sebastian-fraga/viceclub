@@ -88,7 +88,7 @@ export default function Select({
                     size={14}
                     className={`text-gray-400 transition-transform duration-200 ${
                         open ? "rotate-180" : ""
-                    }`}
+                    } ${disabled ? "text-white/20" : ""}`}
                 />
             </button>
 
@@ -161,7 +161,7 @@ export default function Select({
                                                     {option.value === value && (
                                                         <IconCheck
                                                             size={12}
-                                                            className="text-purple-300"
+                                                            className="text-purple-300 ml-2"
                                                         />
                                                     )}
                                                 </button>
