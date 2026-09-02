@@ -47,7 +47,7 @@ export default function ExploreSections({ game }: Props) {
     return (
         <section className="flex flex-col gap-3">
             <div className="max-w-fit">
-                <Title label="home.titles.exploreSections" />
+                <Title label="home.titles.exploreSections" align="left" />
             </div>
 
             <div className="mt-8 grid grid-cols-2 auto-rows-25 grid-flow-dense gap-3 sm:grid-cols-4 sm:auto-rows-30 max-mobile:mt-5 max-mobile:gap-2">

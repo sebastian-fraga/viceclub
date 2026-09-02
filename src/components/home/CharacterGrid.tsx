@@ -34,7 +34,7 @@ export default function CharacterGrid({
             }}
         >
             <div className="max-w-fit">
-                <Title label="home.titles.characters" />
+                <Title label="home.titles.characters" align="left" />
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 max-mobile:mt-5 max-mobile:gap-3">

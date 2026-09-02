@@ -200,7 +200,7 @@ export default function TechSheet({
                 ease: "easeOut",
             }}
         >
-            <Title label="home.titles.technicalSheet" />
+            <Title label="home.titles.technicalSheet" align="left" />
 
             <div className="mt-8 w-full max-w-lg rounded-2xl border border-white/20 bg-black/30 p-4 max-mobile:mt-5 max-mobile:p-3 shadow-2xl">
                 <img

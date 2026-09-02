@@ -160,7 +160,7 @@ export default function News() {
     return (
         <section className="w-full max-w-400 flex flex-col items-start">
             <div className="flex">
-                <Title label={t("index.titles.news")} />
+                <Title label={t("index.titles.news")} align="left" />
             </div>
             <AnimatePresence mode="popLayout">
                 {news.slice(0, visibleCount).map((item, newsIndex) => (

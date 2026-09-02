@@ -128,7 +128,7 @@ export default function GameCarousel() {
             id="explore"
         >
             <div className="flex items-center justify-between w-full">
-                <Title label={t("index.titles.carousel")} />
+                <Title label={t("index.titles.carousel")} align="left" />
 
                 <div className="flex gap-4 pr-1">
                     <button
