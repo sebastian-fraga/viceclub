@@ -37,6 +37,12 @@ export const sectionLabels: Record<string, Caption> = {
         fr: "Captures d’écran Xbox",
         pt: "Capturas de tela da Xbox",
     },
+    definitiveEdition: {
+        es: "Edición Definitiva",
+        en: "Definitive Edition",
+        fr: "Definitive Edition",
+        pt: "Definitive Edition",
+    },
     vehicles: {
         es: "Vehículos",
         en: "Vehicles",
