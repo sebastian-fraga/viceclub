@@ -1,6 +1,7 @@
 import { Tooltip } from "@/components/ui/Tooltip";
 import useT from "@/hooks/useT";
 import {
+    formatTimelineDateOnly,
     formatTimelineDateTime,
     type DateFormat,
     type TimeFormat,
@@ -88,7 +89,7 @@ export default function TimelineEntry({
               dateFormat,
               locale,
           ).date
-        : date;
+        : formatTimelineDateOnly(date, dateFormat);
 
     return (
         <article className="timeline-entry flex flex-col">

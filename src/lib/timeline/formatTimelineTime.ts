@@ -13,7 +13,9 @@ const SPANISH_MONTHS: Record<string, number> = {
     dic: 11,
 };
 
-function parseArgentinaDateTime(date: string, time: string): Date | null {
+function parseArgentinaDate(
+    date: string,
+): { day: number; month: number; year: number } | null {
     const parts = date.trim().toLowerCase().split(" ");
     if (parts.length !== 3) return null;
 
@@ -21,14 +23,23 @@ function parseArgentinaDateTime(date: string, time: string): Date | null {
     const month = SPANISH_MONTHS[monthAbbr];
     if (month === undefined) return null;
 
+    return { day: Number(day), month, year: Number(year) };
+}
+
+function parseArgentinaDateTime(date: string, time: string): Date | null {
+    const parsedDate = parseArgentinaDate(date);
+    if (!parsedDate) return null;
+
     const [hours, minutes] = time.split(":").map(Number);
     if (Number.isNaN(hours) || Number.isNaN(minutes)) return null;
 
-    const iso = `${year}-${String(month + 1).padStart(2, "0")}-${String(
-        Number(day),
-    ).padStart(2, "0")}T${String(hours).padStart(2, "0")}:${String(
-        minutes,
-    ).padStart(2, "0")}:00-03:00`;
+    const iso = `${parsedDate.year}-${String(parsedDate.month + 1).padStart(
+        2,
+        "0",
+    )}-${String(parsedDate.day).padStart(2, "0")}T${String(hours).padStart(
+        2,
+        "0",
+    )}:${String(minutes).padStart(2, "0")}:00-03:00`;
 
     const parsed = new Date(iso);
     return Number.isNaN(parsed.getTime()) ? null : parsed;
@@ -40,6 +51,22 @@ export type DateFormat = "DD/MM/YYYY" | "MM/DD/YYYY";
 export interface FormattedTimelineDateTime {
     date: string;
     time: string;
+}
+
+export function formatTimelineDateOnly(
+    date: string,
+    dateFormat: DateFormat,
+): string {
+    const parsed = parseArgentinaDate(date);
+    if (!parsed) return date;
+
+    const day = String(parsed.day).padStart(2, "0");
+    const month = String(parsed.month + 1).padStart(2, "0");
+    const year = parsed.year;
+
+    return dateFormat === "DD/MM/YYYY"
+        ? `${day}/${month}/${year}`
+        : `${month}/${day}/${year}`;
 }
 
 export function formatTimelineDateTime(
