@@ -41,13 +41,25 @@ export const sectionLabels: Record<string, Caption> = {
         es: "Capturas de Xbox",
         en: "Xbox screenshots",
         fr: "Captures d’écran Xbox",
-        pt: "Capturas de tela da Xbox",
+        pt: "Capturas de tela do Xbox",
     },
     definitiveEdition: {
         es: "Edición Definitiva",
         en: "Definitive Edition",
         fr: "Definitive Edition",
         pt: "Definitive Edition",
+    },
+    enhanced: {
+        es: "Capturas de la versión Enhanced",
+        en: "Enhanced version screenshots",
+        fr: "Captures d’écran de la version Enhanced",
+        pt: "Capturas de tela da versão Enhanced",
+    },
+    "e&e": {
+        es: "Capturas de la versión Expanded & Enhanced",
+        en: "Expanded & Enhanced version screenshots",
+        fr: "Captures d’écran de la version Expanded & Enhanced",
+        pt: "Capturas de tela da versão Expanded & Enhanced",
     },
     iv: {
         es: "Personajes de Grand Theft Auto IV",
@@ -120,5 +132,17 @@ export const sectionLabels: Record<string, Caption> = {
         en: "Story mode",
         fr: "Mode Histoire",
         pt: "Modo história",
+    },
+    gtaOnline: {
+        es: "GTA Online",
+        en: "GTA Online",
+        fr: "GTA Online",
+        pt: "GTA Online",
+    },
+    prerelease: {
+        es: "Capturas de prelanzamiento",
+        en: "Pre-release screenshots",
+        fr: "Captures d’écran de pré-lancement",
+        pt: "Capturas de pré-lançamento",
     },
 };

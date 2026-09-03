@@ -320,6 +320,1642 @@
                     "pt": "Edição de Colecionador"
                 }
             }
+        ],
+        "gtaOnline": [
+            {
+                "id": "v-o-01",
+                "caption": {
+                    "es": "Tiroteo",
+                    "en": "Shootout",
+                    "fr": "Fusillade",
+                    "pt": "Tiroteio"
+                }
+            },
+            {
+                "id": "v-o-02",
+                "caption": {
+                    "es": "Francotirador",
+                    "en": "Sniper",
+                    "fr": "Tireur d'élite",
+                    "pt": "Atirador de elite"
+                }
+            },
+            {
+                "id": "v-o-03",
+                "caption": {
+                    "es": "Rifle",
+                    "en": "Rifle",
+                    "fr": "Fusil",
+                    "pt": "Fuzil"
+                }
+            },
+            {
+                "id": "v-o-04",
+                "caption": {
+                    "es": "Robo a tienda",
+                    "en": "Store robbery",
+                    "fr": "Braquage de magasin",
+                    "pt": "Assalto a uma loja"
+                }
+            },
+            {
+                "id": "v-o-05",
+                "caption": {
+                    "es": "Jugadores",
+                    "en": "Players",
+                    "fr": "Joueurs",
+                    "pt": "Jogadores"
+                }
+            },
+            {
+                "id": "v-o-06",
+                "caption": {
+                    "es": "Tiroteo en vehículos",
+                    "en": "Vehicle shootout",
+                    "fr": "Fusillade en véhicule",
+                    "pt": "Tiroteio em veículos"
+                }
+            },
+            {
+                "id": "v-o-07",
+                "caption": {
+                    "es": "Carrera marítima",
+                    "en": "Boat race",
+                    "fr": "Course de bateaux",
+                    "pt": "Corrida de barcos"
+                }
+            },
+            {
+                "id": "v-o-08",
+                "caption": {
+                    "es": "Carrera de ATV",
+                    "en": "ATV race",
+                    "fr": "Course de quad",
+                    "pt": "Corrida de quadriciclo"
+                }
+            },
+            {
+                "id": "v-o-09",
+                "caption": {
+                    "es": "Paracaidismo",
+                    "en": "Parachuting",
+                    "fr": "Saut en parachute",
+                    "pt": "Paraquedismo"
+                }
+            },
+            {
+                "id": "v-o-10",
+                "caption": {
+                    "es": "Combate aéreo con P-996 LAZER",
+                    "en": "P-996 LAZER dogfight",
+                    "fr": "Combat aérien en P-996 LAZER",
+                    "pt": "Combate aéreo com P-996 LAZER"
+                }
+            },
+            {
+                "id": "v-o-11",
+                "caption": {
+                    "es": "Asistencia",
+                    "en": "Assistance",
+                    "fr": "Assistance",
+                    "pt": "Assistência"
+                }
+            },
+            {
+                "id": "v-o-12",
+                "caption": {
+                    "es": "Tarjetas Tiburón 01",
+                    "en": "Shark Cards 01",
+                    "fr": "Paquets de dollars Shark 01",
+                    "pt": "Dinheiro Tubarão 01"
+                }
+            },
+            {
+                "id": "v-o-13",
+                "caption": {
+                    "es": "Tarjetas Tiburón 02",
+                    "en": "Shark Cards 02",
+                    "fr": "Paquets de dollars Shark 02",
+                    "pt": "Dinheiro Tubarão 02"
+                }
+            },
+            {
+                "id": "v-o-14",
+                "caption": {
+                    "es": "Tarjetas Tiburón 03",
+                    "en": "Shark Cards 03",
+                    "fr": "Paquets de dollars Shark 03",
+                    "pt": "Dinheiro Tubarão 03"
+                }
+            },
+            {
+                "id": "v-o-15",
+                "caption": {
+                    "es": "Playero 01",
+                    "en": "Beach Bum 01",
+                    "fr": "Plagiste 01",
+                    "pt": "Praiano 01"
+                }
+            },
+            {
+                "id": "v-o-16",
+                "caption": {
+                    "es": "Playero 02",
+                    "en": "Beach Bum 02",
+                    "fr": "Plagiste 02",
+                    "pt": "Praiano 02"
+                }
+            },
+            {
+                "id": "v-o-17",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Capture 01",
+                    "fr": "Capture 01",
+                    "pt": "Captura 01"
+                }
+            },
+            {
+                "id": "v-o-18",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Capture 02",
+                    "fr": "Capture 02",
+                    "pt": "Captura 02"
+                }
+            },
+            {
+                "id": "v-o-19",
+                "caption": {
+                    "es": "Especial Masacre de San Valentín",
+                    "en": "Valentine's Day Massacre Special",
+                    "fr": "Massacre de la Saint-Valentin",
+                    "pt": "O Massacre do Dia de São Valentim"
+                }
+            },
+            {
+                "id": "v-o-20",
+                "caption": {
+                    "es": "Negocios",
+                    "en": "The Business Update",
+                    "fr": "Business",
+                    "pt": "Atualização Executiva"
+                }
+            },
+            {
+                "id": "v-o-21",
+                "caption": {
+                    "es": "La gran vida 01",
+                    "en": "High Life 01",
+                    "fr": "Vie de rêve 01",
+                    "pt": "Atualização Ostentação 01"
+                }
+            },
+            {
+                "id": "v-o-22",
+                "caption": {
+                    "es": "La gran vida 02",
+                    "en": "High Life 02",
+                    "fr": "Vie de rêve 02",
+                    "pt": "Atualização Ostentação 02"
+                }
+            },
+            {
+                "id": "v-o-23",
+                "caption": {
+                    "es": "\"No soy un hipster\"",
+                    "en": "\"I'm Not a Hipster\"",
+                    "fr": "\"Hipster toi-même\"",
+                    "pt": "\"Não Sou Hipster\""
+                }
+            },
+            {
+                "id": "v-o-24",
+                "caption": {
+                    "es": "Especial Día de la Independencia",
+                    "en": "Independence Day Special",
+                    "fr": "Jour de l'Indépendance",
+                    "pt": "Especial dia da Independência"
+                }
+            },
+            {
+                "id": "v-o-25",
+                "caption": {
+                    "es": "Escuela de vuelo de San Andreas",
+                    "en": "San Andreas Flight School",
+                    "fr": "École de pilotage de San Andreas",
+                    "pt": "Escola de Aviação de San Andreas"
+                }
+            },
+            {
+                "id": "v-o-26",
+                "caption": {
+                    "es": "Último Equipo en Pie",
+                    "en": "Last Team Standing",
+                    "fr": "Extermination",
+                    "pt": "Última Equipe Sobrevivente"
+                }
+            },
+            {
+                "id": "v-o-27",
+                "caption": {
+                    "es": "Sorpresa Festiva",
+                    "en": "Festive Surprise",
+                    "fr": "Surprise festive",
+                    "pt": "Surpresa Festiva"
+                }
+            },
+            {
+                "id": "v-o-28",
+                "caption": {
+                    "es": "Golpes de GTA Online 01",
+                    "en": "Heists 01",
+                    "fr": "Braquages 01",
+                    "pt": "GTA Online: Golpes 01"
+                }
+            },
+            {
+                "id": "v-o-29",
+                "caption": {
+                    "es": "Golpes de GTA Online 02",
+                    "en": "Heists 02",
+                    "fr": "Braquages 02",
+                    "pt": "GTA Online: Golpes 02"
+                }
+            },
+            {
+                "id": "v-o-30",
+                "caption": {
+                    "es": "Golpes de GTA Online 03",
+                    "en": "Heists 03",
+                    "fr": "Braquages 03",
+                    "pt": "GTA Online: Golpes 03"
+                }
+            },
+            {
+                "id": "v-o-31",
+                "caption": {
+                    "es": "Dinero Sucio Parte 1",
+                    "en": "Ill-Gotten Gains Part 1",
+                    "fr": "Le crime paie : Partie 1",
+                    "pt": "Dinheiro Sujo: Parte 1"
+                }
+            },
+            {
+                "id": "v-o-32",
+                "caption": {
+                    "es": "Dinero Sucio Parte 2",
+                    "en": "Ill-Gotten Gains Part 2",
+                    "fr": "Le crime paie : Partie 2",
+                    "pt": "Dinheiro Sujo: Parte 2"
+                }
+            },
+            {
+                "id": "v-o-33",
+                "caption": {
+                    "es": "Eventos del modo Libre 01",
+                    "en": "Freemode Events 01",
+                    "fr": "Événements en mode libre 01",
+                    "pt": "Eventos do Modo Livre 01"
+                }
+            },
+            {
+                "id": "v-o-34",
+                "caption": {
+                    "es": "Eventos del modo Libre 02",
+                    "en": "Freemode Events 02",
+                    "fr": "Événements en mode libre 02",
+                    "pt": "Eventos do Modo Livre 02"
+                }
+            },
+            {
+                "id": "v-o-35",
+                "caption": {
+                    "es": "Eventos del modo Libre 03",
+                    "en": "Freemode Events 03",
+                    "fr": "Événements en mode libre 03",
+                    "pt": "Eventos do Modo Livre 03"
+                }
+            },
+            {
+                "id": "v-o-36",
+                "caption": "Lowriders"
+            },
+            {
+                "id": "v-o-37",
+                "caption": {
+                    "es": "Sorpresa de Halloween",
+                    "en": "Halloween Surprise",
+                    "fr": "Surprise d'Halloween",
+                    "pt": "Surpresa de Halloween"
+                }
+            },
+            {
+                "id": "v-o-38",
+                "caption": {
+                    "es": "Ejecutivos y otros criminales",
+                    "en": "Executives and Other Criminals",
+                    "fr": "Truands en col blanc",
+                    "pt": "Executivos e Outros Criminosos"
+                }
+            },
+            {
+                "id": "v-o-39",
+                "caption": {
+                    "es": "Sorpresa festiva 2015 01",
+                    "en": "Festive Surprise 2015 01",
+                    "fr": "Surprise festive 2015 01",
+                    "pt": "Surpresa Festiva 2015 01"
+                }
+            },
+            {
+                "id": "v-o-40",
+                "caption": {
+                    "es": "Sorpresa festiva 2015 02",
+                    "en": "Festive Surprise 2015 02",
+                    "fr": "Surprise festive 2015 02",
+                    "pt": "Surpresa Festiva 2015 02"
+                }
+            },
+            {
+                "id": "v-o-41",
+                "caption": {
+                    "es": "Mi media naranja",
+                    "en": "Be My Valentine",
+                    "fr": "Bourreau des cœurs",
+                    "pt": "Fica Comigo"
+                }
+            },
+            {
+                "id": "v-o-42",
+                "caption": {
+                    "es": "Lowriders: Custom Classics",
+                    "en": "Lowriders: Custom Classics",
+                    "fr": "Lowriders : on astique les classiques",
+                    "pt": "Lowriders: Clássicos Personalizados"
+                }
+            },
+            {
+                "id": "v-o-43",
+                "caption": {
+                    "es": "Nuevas aventuras de finanzas y crimen",
+                    "en": "Further Adventures in Finance and Felony",
+                    "fr": "Haute finance et basses besognes",
+                    "pt": "Loucas Aventuras à Beira da Lei"
+                }
+            },
+            {
+                "id": "v-o-44",
+                "caption": {
+                    "es": "Cunning Stunts",
+                    "en": "Cunning Stunts",
+                    "fr": "Casse-cou jusqu'au bout",
+                    "pt": "Manobras e Crânios Rachados"
+                }
+            },
+            {
+                "id": "v-o-45",
+                "caption": {
+                    "es": "Moteros",
+                    "en": "Bikers",
+                    "fr": "Motos, boulots, bobos",
+                    "pt": "Motoqueiros"
+                }
+            },
+            {
+                "id": "v-o-46",
+                "caption": {
+                    "es": "Importaciones/Exportaciones",
+                    "en": "Import/Export",
+                    "fr": "Import-export",
+                    "pt": "Importação/Exportação"
+                }
+            },
+            {
+                "id": "v-o-47",
+                "caption": {
+                    "es": "Sorpresa festiva 2016",
+                    "en": "Festive Surprise 2016",
+                    "fr": "Surprise festive 2016",
+                    "pt": "Surpresa Festiva 2016"
+                }
+            },
+            {
+                "id": "v-o-48",
+                "caption": {
+                    "es": "Cunning Stunts: Circuito especial",
+                    "en": "Cunning Stunts: Special Vehicle Circuit",
+                    "fr": "Casse-cou jusqu'au bout : édition spéciale",
+                    "pt": "Manobras e Crânios Rachados: Circuitos Especiais"
+                }
+            },
+            {
+                "id": "v-o-49",
+                "caption": {
+                    "es": "Tráfico de armas",
+                    "en": "Gunrunning",
+                    "fr": "Trafic d'armes",
+                    "pt": "Tráfico de Armas"
+                }
+            },
+            {
+                "id": "v-o-50",
+                "caption": {
+                    "es": "Smuggler's Run",
+                    "en": "Smuggler's Run",
+                    "fr": "Contrebande organisée",
+                    "pt": "Acima da Lei"
+                }
+            },
+            {
+                "id": "v-o-51",
+                "caption": {
+                    "es": "El Golpe del Juicio Final 01",
+                    "en": "The Doomsday Heist 01",
+                    "fr": "Le braquage de la fin du monde 01",
+                    "pt": "O Golpe do Juízo Final 01"
+                }
+            },
+            {
+                "id": "v-o-52",
+                "caption": {
+                    "es": "El Golpe del Juicio Final 02",
+                    "en": "The Doomsday Heist 02",
+                    "fr": "Le braquage de la fin du monde 02",
+                    "pt": "O Golpe do Juízo Final 02"
+                }
+            },
+            {
+                "id": "v-o-53",
+                "caption": {
+                    "es": "El Golpe del Juicio Final 03",
+                    "en": "The Doomsday Heist 03",
+                    "fr": "Le braquage de la fin du monde 03",
+                    "pt": "O Golpe do Juízo Final 03"
+                }
+            },
+            {
+                "id": "v-o-54",
+                "caption": {
+                    "es": "Sorpresa festiva 2017",
+                    "en": "Festive Surprise 2017",
+                    "fr": "Surprise festive 2017",
+                    "pt": "Surpresa Festiva 2017"
+                }
+            },
+            {
+                "id": "v-o-55",
+                "caption": {
+                    "es": "Series de Southern San Andreas Super Sport",
+                    "en": "Southern San Andreas Super Sport Series",
+                    "fr": "On trace à San Andreas",
+                    "pt": "Velozes e Estilosos em San Andreas"
+                }
+            },
+            {
+                "id": "v-o-56",
+                "caption": {
+                    "es": "Carreras de transformación",
+                    "en": "Transform Races",
+                    "fr": "Courses polymorphes",
+                    "pt": "Corridas metamorfose"
+                }
+            },
+            {
+                "id": "v-o-57",
+                "caption": {
+                    "es": "Circuitos Hotring",
+                    "en": "Hotring Circuit",
+                    "fr": "Circuit Hotring",
+                    "pt": "Circuitos Hotring"
+                }
+            },
+            {
+                "id": "v-o-58",
+                "caption": {
+                    "es": "Carreras de Target Assault",
+                    "en": "Target Assault Races",
+                    "fr": "Courses aux points",
+                    "pt": "Corridas de assalto com Alvo"
+                }
+            },
+            {
+                "id": "v-o-59",
+                "caption": {
+                    "es": "After Hours",
+                    "en": "After Hours",
+                    "fr": "Nuits blanches et marché noir",
+                    "pt": "Night na Balada"
+                }
+            },
+            {
+                "id": "v-o-60",
+                "caption": {
+                    "es": "After Hours: Tony Prince",
+                    "en": "After Hours: Tony Prince",
+                    "fr": "Nuits blanches et marché noir: Tony Prince",
+                    "pt": "Night na Balada: Tony Prince"
+                }
+            },
+            {
+                "id": "v-o-61",
+                "caption": {
+                    "es": "After Hours: Solomun",
+                    "en": "After Hours: Solomun",
+                    "fr": "Nuits blanches et marché noir: Solomun",
+                    "pt": "Night na Balada: Solomun"
+                }
+            },
+            {
+                "id": "v-o-62",
+                "caption": {
+                    "es": "After Hours: Tale of Us",
+                    "en": "After Hours: Tale of Us",
+                    "fr": "Nuits blanches et marché noir: Tale of Us",
+                    "pt": "Night na Balada: Tale of Us"
+                }
+            },
+            {
+                "id": "v-o-63",
+                "caption": {
+                    "es": "After Hours: Dixon",
+                    "en": "After Hours: Dixon",
+                    "fr": "Nuits blanches et marché noir: Dixon",
+                    "pt": "Night na Balada: Dixon"
+                }
+            },
+            {
+                "id": "v-o-64",
+                "caption": {
+                    "es": "After Hours: The Black Madonna",
+                    "en": "After Hours: The Black Madonna",
+                    "fr": "Nuits blanches et marché noir: The Black Madonna",
+                    "pt": "Night na Balada: The Black Madonna"
+                }
+            },
+            {
+                "id": "v-o-65",
+                "caption": {
+                    "es": "Arena War",
+                    "en": "Arena War",
+                    "fr": "Guerre d'arène",
+                    "pt": "Arena de Guerra"
+                }
+            },
+            {
+                "id": "v-o-66",
+                "caption": {
+                    "es": "The Diamond Casino & Resort",
+                    "en": "The Diamond Casino & Resort",
+                    "fr": "Le Diamond Casino & Hôtel",
+                    "pt": "The Diamond Casino & Resort"
+                }
+            },
+            {
+                "id": "v-o-67",
+                "caption": {
+                    "es": "Golpe a The Diamond Casino 01",
+                    "en": "The Diamond Casino Heist 01",
+                    "fr": "Le Braquage du Diamond Casino 01",
+                    "pt": "O Golpe do Cassino Diamond 01"
+                }
+            },
+            {
+                "id": "v-o-68",
+                "caption": {
+                    "es": "Golpe a The Diamond Casino 02",
+                    "en": "The Diamond Casino Heist 02",
+                    "fr": "Le Braquage du Diamond Casino 02",
+                    "pt": "O Golpe do Cassino Diamond 02"
+                }
+            },
+            {
+                "id": "v-o-69",
+                "caption": {
+                    "es": "Golpe a The Diamond Casino 03",
+                    "en": "The Diamond Casino Heist 03",
+                    "fr": "Le Braquage du Diamond Casino 03",
+                    "pt": "O Golpe do Cassino Diamond 03"
+                }
+            },
+            {
+                "id": "v-o-70",
+                "caption": {
+                    "es": "Golpe a The Diamond Casino 04",
+                    "en": "The Diamond Casino Heist 04",
+                    "fr": "Le Braquage du Diamond Casino 04",
+                    "pt": "O Golpe do Cassino Diamond 04"
+                }
+            },
+            {
+                "id": "v-o-71",
+                "caption": {
+                    "es": "Los Santos Summer Special 01",
+                    "en": "Los Santos Summer Special 01",
+                    "fr": "Pack Spécial Été à Los Santos 01",
+                    "pt": "Especial de verão em Los Santos 01"
+                }
+            },
+            {
+                "id": "v-o-72",
+                "caption": {
+                    "es": "Los Santos Summer Special 02",
+                    "en": "Los Santos Summer Special 02",
+                    "fr": "Pack Spécial Été à Los Santos 02",
+                    "pt": "Especial de verão em Los Santos 02"
+                }
+            },
+            {
+                "id": "v-o-73",
+                "caption": {
+                    "es": "Golpe a Cayo Perico 01",
+                    "en": "The Cayo Perico Heist 01",
+                    "fr": "Le Braquage de Cayo Perico 01",
+                    "pt": "O Golpe de Cayo Perico 01"
+                }
+            },
+            {
+                "id": "v-o-74",
+                "caption": {
+                    "es": "Golpe a Cayo Perico 02",
+                    "en": "The Cayo Perico Heist 02",
+                    "fr": "Le Braquage de Cayo Perico 02",
+                    "pt": "O Golpe de Cayo Perico 02"
+                }
+            },
+            {
+                "id": "v-o-75",
+                "caption": {
+                    "es": "Los Santos Tuners 01",
+                    "en": "Los Santos Tuners 01",
+                    "fr": "Tuning à Los Santos 01",
+                    "pt": "Los Santos Tuners 01"
+                }
+            },
+            {
+                "id": "v-o-76",
+                "caption": {
+                    "es": "Los Santos Tuners 02",
+                    "en": "Los Santos Tuners 02",
+                    "fr": "Tuning à Los Santos 02",
+                    "pt": "Los Santos Tuners 02"
+                }
+            },
+            {
+                "id": "v-o-77",
+                "caption": {
+                    "es": "Los Santos Tuners 03",
+                    "en": "Los Santos Tuners 03",
+                    "fr": "Tuning à Los Santos 03",
+                    "pt": "Los Santos Tuners 03"
+                }
+            },
+            {
+                "id": "v-o-78",
+                "caption": {
+                    "es": "The Contract 01",
+                    "en": "The Contract 01",
+                    "fr": "Le Contrat 01",
+                    "pt": "The Contract 01"
+                }
+            },
+            {
+                "id": "v-o-79",
+                "caption": {
+                    "es": "The Contract 02",
+                    "en": "The Contract 02",
+                    "fr": "Le Contrat 02",
+                    "pt": "The Contract 02"
+                }
+            },
+            {
+                "id": "v-o-80",
+                "caption": {
+                    "es": "The Contract 03",
+                    "en": "The Contract 03",
+                    "fr": "Le Contrat 03",
+                    "pt": "The Contract 03"
+                }
+            },
+            {
+                "id": "v-o-81",
+                "caption": {
+                    "es": "The Contract: Viajes cortos 01",
+                    "en": "The Contract: Short Trips 01",
+                    "fr": "Le Contrat: Réminiscence 01",
+                    "pt": "The Contract: Baratos Breves 01"
+                }
+            },
+            {
+                "id": "v-o-82",
+                "caption": {
+                    "es": "The Contract: Viajes cortos 02",
+                    "en": "The Contract: Short Trips 02",
+                    "fr": "Le Contrat: Réminiscence 02",
+                    "pt": "The Contract: Baratos Breves 02"
+                }
+            },
+            {
+                "id": "v-o-83",
+                "caption": "GTA Online 01"
+            },
+            {
+                "id": "v-o-84",
+                "caption": "GTA Online 02"
+            },
+            {
+                "id": "v-o-85",
+                "caption": "GTA Online 03"
+            },
+            {
+                "id": "v-o-86",
+                "caption": {
+                    "es": "GTA Online: Ejecutivo",
+                    "en": "GTA Online: Executive",
+                    "fr": "GTA Online: Col blanc",
+                    "pt": "GTA Online: Executivo"
+                }
+            },
+            {
+                "id": "v-o-87",
+                "caption": {
+                    "es": "GTA Online: Traficante de armas",
+                    "en": "GTA Online: Gunrunner",
+                    "fr": "GTA Online: Expert en trafic d'armes",
+                    "pt": "GTA Online: Traficante de armas"
+                }
+            },
+            {
+                "id": "v-o-88",
+                "caption": {
+                    "es": "GTA Online: Club nocturno",
+                    "en": "GTA Online: Nightclub Owner",
+                    "fr": "GTA Online: Patron d’une boîte de nuit",
+                    "pt": "GTA Online: Dono de boate"
+                }
+            },
+            {
+                "id": "v-o-89",
+                "caption": {
+                    "es": "GTA Online: Motero",
+                    "en": "GTA Online: Biker",
+                    "fr": "GTA Online: Motard",
+                    "pt": "GTA Online: Motoqueiro"
+                }
+            },
+            {
+                "id": "v-o-90",
+                "caption": {
+                    "es": "The Criminal Enterprises 01",
+                    "en": "The Criminal Enterprises 01",
+                    "fr": "Entreprises criminelles 01",
+                    "pt": "The Criminal Enterprises 01"
+                }
+            },
+            {
+                "id": "v-o-91",
+                "caption": {
+                    "es": "The Criminal Enterprises 02",
+                    "en": "The Criminal Enterprises 02",
+                    "fr": "Entreprises criminelles 02",
+                    "pt": "The Criminal Enterprises 02"
+                }
+            },
+            {
+                "id": "v-o-92",
+                "caption": "Los Santos Drug Wars"
+            },
+            {
+                "id": "v-o-93",
+                "caption": {
+                    "es": "Los Santos Drug Wars - Última Dosis",
+                    "en": "Los Santos Drug Wars - The Last Dose",
+                    "fr": "Los Santos Drug Wars - Dernière dose",
+                    "pt": "Los Santos Drug Wars - Última Dose"
+                }
+            },
+            {
+                "id": "v-o-94",
+                "caption": "San Andreas Mercenaries"
+            },
+            {
+                "id": "v-o-95",
+                "caption": {
+                    "es": "The Chop Shop",
+                    "en": "The Chop Shop",
+                    "fr": "Casse de haut vol",
+                    "pt": "The Chop Shop"
+                }
+            },
+            {
+                "id": "v-o-96",
+                "caption": {
+                    "es": "Asalto a Cluckin' Bell",
+                    "en": "The Cluckin' Bell Farm Raid",
+                    "fr": "Le raid de l'usine Cluckin' Bell",
+                    "pt": "Invasão ao Aviário Cluckin' Bell"
+                }
+            },
+            {
+                "id": "v-o-97",
+                "caption": {
+                    "es": "Bottom Dollar Bounties",
+                    "en": "Bottom Dollar Bounties",
+                    "fr": "Primes de Bottom Dollar",
+                    "pt": "Bottom Dollar Bounties"
+                }
+            },
+            {
+                "id": "v-o-98",
+                "caption": {
+                    "es": "Agents of Sabotage 01",
+                    "en": "Agents of Sabotage 01",
+                    "fr": "Agents saboteurs 01",
+                    "pt": "Agents of Sabotage 01"
+                }
+            },
+            {
+                "id": "v-o-99",
+                "caption": {
+                    "es": "Agents of Sabotage 02",
+                    "en": "Agents of Sabotage 02",
+                    "fr": "Agents saboteurs 02",
+                    "pt": "Agents of Sabotage 02"
+                }
+            },
+            {
+                "id": "v-o-100",
+                "caption": {
+                    "es": "Óscar Guzmán despega de nuevo",
+                    "en": "Oscar Guzman Flies Again",
+                    "fr": "Oscar Guzman reprend du service",
+                    "pt": "Oscar Guzman Decolando de Novo"
+                }
+            },
+            {
+                "id": "v-o-101",
+                "caption": {
+                    "es": "Money Fronts",
+                    "en": "Money Fronts",
+                    "fr": "Argent sale et affaires propres",
+                    "pt": "Money Fronts"
+                }
+            },
+            {
+                "id": "v-o-102",
+                "caption": {
+                    "es": "A Safehouse in the Hills",
+                    "en": "A Safehouse in the Hills",
+                    "fr": "Une planque au sommet",
+                    "pt": "A Safehouse in the Hills"
+                }
+            },
+            {
+                "id": "v-o-103",
+                "caption": {
+                    "es": "Golpe al Kortz Center",
+                    "en": "The Kortz Center Heist",
+                    "fr": "Le Braquage du Kortz Center",
+                    "pt": "The Kortz Center Heist"
+                }
+            }
+        ]
+    },
+    "screenshots": {
+        "prerelease": [
+            {
+                "id": "v-pr-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "v-pr-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "v-pr-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "v-pr-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "v-pr-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "v-pr-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "v-pr-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "v-pr-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "v-pr-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "v-pr-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "v-pr-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "v-pr-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            },
+            {
+                "id": "v-pr-13",
+                "caption": {
+                    "es": "Captura 13",
+                    "en": "Screenshot 13",
+                    "fr": "Capture d’écran 13",
+                    "pt": "Captura de tela 13"
+                }
+            },
+            {
+                "id": "v-pr-14",
+                "caption": {
+                    "es": "Captura 14",
+                    "en": "Screenshot 14",
+                    "fr": "Capture d’écran 14",
+                    "pt": "Captura de tela 14"
+                }
+            },
+            {
+                "id": "v-pr-15",
+                "caption": {
+                    "es": "Captura 15",
+                    "en": "Screenshot 15",
+                    "fr": "Capture d’écran 15",
+                    "pt": "Captura de tela 15"
+                }
+            },
+            {
+                "id": "v-pr-16",
+                "caption": {
+                    "es": "Captura 16",
+                    "en": "Screenshot 16",
+                    "fr": "Capture d’écran 16",
+                    "pt": "Captura de tela 16"
+                }
+            },
+            {
+                "id": "v-pr-17",
+                "caption": {
+                    "es": "Captura 17",
+                    "en": "Screenshot 17",
+                    "fr": "Capture d’écran 17",
+                    "pt": "Captura de tela 17"
+                }
+            },
+            {
+                "id": "v-pr-18",
+                "caption": {
+                    "es": "Captura 18",
+                    "en": "Screenshot 18",
+                    "fr": "Capture d’écran 18",
+                    "pt": "Captura de tela 18"
+                }
+            },
+            {
+                "id": "v-pr-19",
+                "caption": {
+                    "es": "Captura 19",
+                    "en": "Screenshot 19",
+                    "fr": "Capture d’écran 19",
+                    "pt": "Captura de tela 19"
+                }
+            },
+            {
+                "id": "v-pr-20",
+                "caption": {
+                    "es": "Captura 20",
+                    "en": "Screenshot 20",
+                    "fr": "Capture d’écran 20",
+                    "pt": "Captura de tela 20"
+                }
+            },
+            {
+                "id": "v-pr-21",
+                "caption": {
+                    "es": "Captura 21",
+                    "en": "Screenshot 21",
+                    "fr": "Capture d’écran 21",
+                    "pt": "Captura de tela 21"
+                }
+            },
+            {
+                "id": "v-pr-22",
+                "caption": {
+                    "es": "Captura 22",
+                    "en": "Screenshot 22",
+                    "fr": "Capture d’écran 22",
+                    "pt": "Captura de tela 22"
+                }
+            },
+            {
+                "id": "v-pr-23",
+                "caption": {
+                    "es": "Captura 23",
+                    "en": "Screenshot 23",
+                    "fr": "Capture d’écran 23",
+                    "pt": "Captura de tela 23"
+                }
+            },
+            {
+                "id": "v-pr-24",
+                "caption": {
+                    "es": "Captura 24",
+                    "en": "Screenshot 24",
+                    "fr": "Capture d’écran 24",
+                    "pt": "Captura de tela 24"
+                }
+            },
+            {
+                "id": "v-pr-25",
+                "caption": {
+                    "es": "Captura 25",
+                    "en": "Screenshot 25",
+                    "fr": "Capture d’écran 25",
+                    "pt": "Captura de tela 25"
+                }
+            },
+            {
+                "id": "v-pr-26",
+                "caption": {
+                    "es": "Captura 26",
+                    "en": "Screenshot 26",
+                    "fr": "Capture d’écran 26",
+                    "pt": "Captura de tela 26"
+                }
+            },
+            {
+                "id": "v-pr-27",
+                "caption": {
+                    "es": "Captura 27",
+                    "en": "Screenshot 27",
+                    "fr": "Capture d’écran 27",
+                    "pt": "Captura de tela 27"
+                }
+            }
+        ],
+        "enhanced": [
+            {
+                "id": "v-e-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "v-e-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "v-e-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "v-e-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "v-e-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "v-e-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "v-e-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "v-e-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "v-e-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "v-e-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "v-e-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "v-e-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            },
+            {
+                "id": "v-e-13",
+                "caption": {
+                    "es": "Captura 13",
+                    "en": "Screenshot 13",
+                    "fr": "Capture d’écran 13",
+                    "pt": "Captura de tela 13"
+                }
+            },
+            {
+                "id": "v-e-14",
+                "caption": {
+                    "es": "Captura 14",
+                    "en": "Screenshot 14",
+                    "fr": "Capture d’écran 14",
+                    "pt": "Captura de tela 14"
+                }
+            },
+            {
+                "id": "v-e-15",
+                "caption": {
+                    "es": "Captura 15",
+                    "en": "Screenshot 15",
+                    "fr": "Capture d’écran 15",
+                    "pt": "Captura de tela 15"
+                }
+            },
+            {
+                "id": "v-e-16",
+                "caption": {
+                    "es": "Captura 16",
+                    "en": "Screenshot 16",
+                    "fr": "Capture d’écran 16",
+                    "pt": "Captura de tela 16"
+                }
+            },
+            {
+                "id": "v-e-17",
+                "caption": {
+                    "es": "Captura 17",
+                    "en": "Screenshot 17",
+                    "fr": "Capture d’écran 17",
+                    "pt": "Captura de tela 17"
+                }
+            },
+            {
+                "id": "v-e-18",
+                "caption": {
+                    "es": "Captura 18",
+                    "en": "Screenshot 18",
+                    "fr": "Capture d’écran 18",
+                    "pt": "Captura de tela 18"
+                }
+            },
+            {
+                "id": "v-e-19",
+                "caption": {
+                    "es": "Captura 19",
+                    "en": "Screenshot 19",
+                    "fr": "Capture d’écran 19",
+                    "pt": "Captura de tela 19"
+                }
+            },
+            {
+                "id": "v-e-20",
+                "caption": {
+                    "es": "Captura 20",
+                    "en": "Screenshot 20",
+                    "fr": "Capture d’écran 20",
+                    "pt": "Captura de tela 20"
+                }
+            },
+            {
+                "id": "v-e-21",
+                "caption": {
+                    "es": "Captura 21",
+                    "en": "Screenshot 21",
+                    "fr": "Capture d’écran 21",
+                    "pt": "Captura de tela 21"
+                }
+            },
+            {
+                "id": "v-e-22",
+                "caption": {
+                    "es": "Captura 22",
+                    "en": "Screenshot 22",
+                    "fr": "Capture d’écran 22",
+                    "pt": "Captura de tela 22"
+                }
+            },
+            {
+                "id": "v-e-23",
+                "caption": {
+                    "es": "Captura 23",
+                    "en": "Screenshot 23",
+                    "fr": "Capture d’écran 23",
+                    "pt": "Captura de tela 23"
+                }
+            },
+            {
+                "id": "v-e-24",
+                "caption": {
+                    "es": "Captura 24",
+                    "en": "Screenshot 24",
+                    "fr": "Capture d’écran 24",
+                    "pt": "Captura de tela 24"
+                }
+            },
+            {
+                "id": "v-e-25",
+                "caption": {
+                    "es": "Captura 25",
+                    "en": "Screenshot 25",
+                    "fr": "Capture d’écran 25",
+                    "pt": "Captura de tela 25"
+                }
+            },
+            {
+                "id": "v-e-26",
+                "caption": {
+                    "es": "Captura 26",
+                    "en": "Screenshot 26",
+                    "fr": "Capture d’écran 26",
+                    "pt": "Captura de tela 26"
+                }
+            },
+            {
+                "id": "v-e-27",
+                "caption": {
+                    "es": "Captura 27",
+                    "en": "Screenshot 27",
+                    "fr": "Capture d’écran 27",
+                    "pt": "Captura de tela 27"
+                }
+            },
+            {
+                "id": "v-e-28",
+                "caption": {
+                    "es": "Captura 28",
+                    "en": "Screenshot 28",
+                    "fr": "Capture d’écran 28",
+                    "pt": "Captura de tela 28"
+                }
+            },
+            {
+                "id": "v-e-29",
+                "caption": {
+                    "es": "Captura 29",
+                    "en": "Screenshot 29",
+                    "fr": "Capture d’écran 29",
+                    "pt": "Captura de tela 29"
+                }
+            },
+            {
+                "id": "v-e-30",
+                "caption": {
+                    "es": "Captura 30",
+                    "en": "Screenshot 30",
+                    "fr": "Capture d’écran 30",
+                    "pt": "Captura de tela 30"
+                }
+            },
+            {
+                "id": "v-e-31",
+                "caption": {
+                    "es": "Captura 31",
+                    "en": "Screenshot 31",
+                    "fr": "Capture d’écran 31",
+                    "pt": "Captura de tela 31"
+                }
+            },
+            {
+                "id": "v-e-32",
+                "caption": {
+                    "es": "Captura 32",
+                    "en": "Screenshot 32",
+                    "fr": "Capture d’écran 32",
+                    "pt": "Captura de tela 32"
+                }
+            },
+            {
+                "id": "v-e-33",
+                "caption": {
+                    "es": "Captura 33",
+                    "en": "Screenshot 33",
+                    "fr": "Capture d’écran 33",
+                    "pt": "Captura de tela 33"
+                }
+            },
+            {
+                "id": "v-e-34",
+                "caption": {
+                    "es": "Captura 34",
+                    "en": "Screenshot 34",
+                    "fr": "Capture d’écran 34",
+                    "pt": "Captura de tela 34"
+                }
+            },
+            {
+                "id": "v-e-35",
+                "caption": {
+                    "es": "Captura 35",
+                    "en": "Screenshot 35",
+                    "fr": "Capture d’écran 35",
+                    "pt": "Captura de tela 35"
+                }
+            },
+            {
+                "id": "v-e-36",
+                "caption": {
+                    "es": "Captura 36",
+                    "en": "Screenshot 36",
+                    "fr": "Capture d’écran 36",
+                    "pt": "Captura de tela 36"
+                }
+            },
+            {
+                "id": "v-e-37",
+                "caption": {
+                    "es": "Captura 37",
+                    "en": "Screenshot 37",
+                    "fr": "Capture d’écran 37",
+                    "pt": "Captura de tela 37"
+                }
+            },
+            {
+                "id": "v-e-38",
+                "caption": {
+                    "es": "Captura 38",
+                    "en": "Screenshot 38",
+                    "fr": "Capture d’écran 38",
+                    "pt": "Captura de tela 38"
+                }
+            },
+            {
+                "id": "v-e-39",
+                "caption": {
+                    "es": "Captura 39",
+                    "en": "Screenshot 39",
+                    "fr": "Capture d’écran 39",
+                    "pt": "Captura de tela 39"
+                }
+            },
+            {
+                "id": "v-e-40",
+                "caption": {
+                    "es": "Captura 40",
+                    "en": "Screenshot 40",
+                    "fr": "Capture d’écran 40",
+                    "pt": "Captura de tela 40"
+                }
+            },
+            {
+                "id": "v-e-41",
+                "caption": {
+                    "es": "Captura 41",
+                    "en": "Screenshot 41",
+                    "fr": "Capture d’écran 41",
+                    "pt": "Captura de tela 41"
+                }
+            },
+            {
+                "id": "v-e-42",
+                "caption": {
+                    "es": "Captura 42",
+                    "en": "Screenshot 42",
+                    "fr": "Capture d’écran 42",
+                    "pt": "Captura de tela 42"
+                }
+            },
+            {
+                "id": "v-e-43",
+                "caption": {
+                    "es": "Captura 43",
+                    "en": "Screenshot 43",
+                    "fr": "Capture d’écran 43",
+                    "pt": "Captura de tela 43"
+                }
+            },
+            {
+                "id": "v-e-44",
+                "caption": {
+                    "es": "Captura 44",
+                    "en": "Screenshot 44",
+                    "fr": "Capture d’écran 44",
+                    "pt": "Captura de tela 44"
+                }
+            },
+            {
+                "id": "v-e-45",
+                "caption": {
+                    "es": "Captura 45",
+                    "en": "Screenshot 45",
+                    "fr": "Capture d’écran 45",
+                    "pt": "Captura de tela 45"
+                }
+            },
+            {
+                "id": "v-e-46",
+                "caption": {
+                    "es": "Captura 46",
+                    "en": "Screenshot 46",
+                    "fr": "Capture d’écran 46",
+                    "pt": "Captura de tela 46"
+                }
+            }
+        ],
+        "e&e": [
+            {
+                "id": "v-e&e-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "v-e&e-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "v-e&e-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "v-e&e-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "v-e&e-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "v-e&e-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "v-e&e-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "v-e&e-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            }
         ]
     }
 }
