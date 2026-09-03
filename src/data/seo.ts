@@ -286,6 +286,11 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
             description:
                 "Descubre toda la información de GTA VI: personajes, mapa de Leonida, noticias, novedades, ficha técnica y más en Vice Club.",
         },
+        artworks: {
+            title: "Artworks de GTA VI | Personajes, vehículos y capturas",
+            description:
+                "Descarga artworks y capturas de pantalla de GTA VI con Jason, Lucia, escenarios de Leonida y otros personajes, además de vehículos y armas.",
+        },
         timeline: {
             title: "Línea de tiempo de GTA VI | Filtraciones y noticias",
             description:

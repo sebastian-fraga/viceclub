@@ -89,7 +89,7 @@ export const sectionLabels: Record<string, Caption> = {
         es: "Fondos de pantalla",
         en: "Wallpapers",
         fr: "Fonds d’écran",
-        pt: "Papéis de parede",
+        pt: "Fundos de tela",
     },
     impoundedVehicles: {
         es: "Vehículos incautados",
@@ -144,5 +144,35 @@ export const sectionLabels: Record<string, Caption> = {
         en: "Pre-release screenshots",
         fr: "Captures d’écran de pré-lancement",
         pt: "Capturas de pré-lançamento",
+    },
+    artworksAndWallpapers: {
+        es: "Arte y fondos de pantalla",
+        en: "Artwork & Wallpapers",
+        fr: "Illustrations et fonds d'écran",
+        br: "Ilustrações e fundos de tela",
+    },
+    marketing: {
+        es: "Material promocional",
+        en: "Promotional material",
+        fr: "Matériel promotionnel",
+        pt: "Material promocional",
+    },
+    screenshots: {
+        es: "Capturas de pantalla",
+        en: "Screenshots",
+        fr: "Captures d’écran",
+        pt: "Capturas de tela",
+    },
+    ultimateEdition: {
+        es: "Ventajas de la Ultimate Edition",
+        en: "Ultimate Edition Benefits",
+        fr: "Avantages de l'Édition Ultime",
+        pt: "Benefícios da Ultimate Edition",
+    },
+    viceCity: {
+        es: "Pack Vintage Vice City",
+        en: "Vintage Vice City Pack",
+        fr: "Pack Vintage Vice City",
+        pt: "Pacote Vintage Vice City",
     },
 };
