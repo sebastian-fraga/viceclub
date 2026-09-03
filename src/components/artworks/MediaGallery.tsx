@@ -1,7 +1,7 @@
 import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import { CategorySwitcher } from "./CategorySwitcher";
 import { Lightbox } from "./Lightbox";
 import { flattenCategory } from "./mediaUtils";
@@ -25,6 +25,11 @@ export function MediaGallery({ gameId, data }: Props) {
     const lang = useLocale();
 
     const [category, setCategory] = useState<MediaCategory>("artworks");
+
+    useEffect(() => {
+        document.dispatchEvent(new Event("scroll-to-top"));
+    }, [category]);
+
     const flatImages = useMemo(
         () => flattenCategory(data, category),
         [data, category],

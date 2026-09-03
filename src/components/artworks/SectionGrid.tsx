@@ -82,22 +82,7 @@ export function SectionGrid({
                         <button
                             key={image.id}
                             onClick={(e) => handleSelect(e, image)}
-                            className="
-        fade-card
-        group
-        flex
-        cursor-pointer
-        flex-col
-        overflow-hidden
-        rounded-[20px]
-        bg-[#252644]
-        text-left
-        shadow-xl
-        shadow-(color:--button-bg)/5
-        transition-colors
-        duration-350
-        hover:bg-[#2F2E52]
-    "
+                            className="fade-card group flex cursor-pointer flex-col overflow-hidden rounded-[20px] bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-350 hover:bg-[#2F2E52]"
                         >
                             <img
                                 ref={(el) => registerThumb(image.id, el)}

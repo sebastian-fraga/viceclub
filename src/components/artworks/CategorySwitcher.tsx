@@ -12,6 +12,17 @@ const buttonClass =
 export function CategorySwitcher({ active, onChange }: Props) {
     const t = useT();
 
+    function handleChange(category: MediaCategory) {
+        if (category === active) return;
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+
+        onChange(category);
+    }
+
     return (
         <>
             <div className="pointer-events-none fixed inset-0 z-30 max-mobile:hidden">
