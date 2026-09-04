@@ -217,7 +217,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                         type="button"
                         onClick={() => setMobileOpen(false)}
                         aria-label={t("sidebar.close")}
-                        className="absolute top-3 right-3 z-10 p-2 rounded-lg text-slate-400 hover:text-white bg-white/10 transition"
+                        className="absolute top-3 right-3 z-10 mt-1 p-2 rounded-lg text-slate-400 hover:text-white bg-white/5 transition cursor-pointer"
                     >
                         <IconX size={22} />
                     </button>
@@ -295,7 +295,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                             return (
                                 <div
                                     key={game.id}
-                                    className="flex flex-col gap-1 w-full max-mobile:last:pb-16"
+                                    className="flex flex-col gap-1 w-full max-mobile:last:pb-32"
                                 >
                                     <Tooltip
                                         label={game.name}
