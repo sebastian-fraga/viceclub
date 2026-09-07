@@ -1,4 +1,5 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { games } from "@/data/games";
 import type { GameId } from "@/config/games";
 import type { ChecklistProgress } from "../../hooks/useChecklistProgress";
@@ -17,6 +18,7 @@ export function ChecklistContainer({ game, data }: ChecklistContainerProps) {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const progressByTab = useRef<Record<string, ChecklistProgress>>({});
+
     const handleProgressChange = useCallback(
         (progress: ChecklistProgress, tabId: string) => {
             progressByTab.current[tabId] = progress;
@@ -24,11 +26,43 @@ export function ChecklistContainer({ game, data }: ChecklistContainerProps) {
         [],
     );
 
+    const storageKey = `checklist-active-tab-${game}`;
+
+    useEffect(() => {
+        const saved = localStorage.getItem(storageKey);
+
+        if (saved === null) return;
+
+        const index = Number(saved);
+
+        if (index >= 0 && index < (data.tabs?.length ?? 0)) {
+            setActiveIndex(index);
+        }
+    }, [storageKey, data.tabs?.length]);
+
+    useEffect(() => {
+        localStorage.setItem(storageKey, String(activeIndex));
+    }, [storageKey, activeIndex]);
+
     if (hasTabs && data.tabs) {
         const activeTab = data.tabs[activeIndex];
 
+        const activeVariant = gameData.variants?.find(
+            (variant) =>
+                variant.id.toLowerCase() === activeTab.id.toLowerCase(),
+        );
+
+        const accent =
+            activeVariant?.theme.accent ?? gameData.theme.accent.default;
+
         return (
-            <div className="">
+            <div
+                style={
+                    {
+                        "--game-accent": accent,
+                    } as CSSProperties
+                }
+            >
                 <ChecklistTabs
                     tabs={data.tabs}
                     variants={gameData.variants ?? []}
@@ -51,11 +85,19 @@ export function ChecklistContainer({ game, data }: ChecklistContainerProps) {
     const tabId = data.tabs?.[0]?.id ?? "default";
 
     return (
-        <ChecklistPanel
-            game={game}
-            tabId={tabId}
-            sections={sections}
-            onProgressChange={handleProgressChange}
-        />
+        <div
+            style={
+                {
+                    "--game-accent": gameData.theme.accent.default,
+                } as CSSProperties
+            }
+        >
+            <ChecklistPanel
+                game={game}
+                tabId={tabId}
+                sections={sections}
+                onProgressChange={handleProgressChange}
+            />
+        </div>
     );
 }

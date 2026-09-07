@@ -1,5 +1,5 @@
 import Title from "@/components/ui/Title";
-import { gamesList } from "@/config/games";
+import { games } from "@/data/games";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import useT from "@/hooks/useT";
@@ -12,9 +12,10 @@ import type { ChecklistSectionData } from "../../types/checklist";
 import { launchConfetti } from "../../utils/confetti";
 import { ChecklistSection } from "./ChecklistSection";
 import { ProgressBar } from "./ProgressBar";
+import type { GameId } from "@/config/games";
 
 interface ChecklistPanelProps {
-    game: string;
+    game: GameId;
     tabId: string;
     sections: ChecklistSectionData[];
     onProgressChange?: (progress: ChecklistProgress, tabId: string) => void;
@@ -26,12 +27,18 @@ export function ChecklistPanel({
     sections,
     onProgressChange,
 }: ChecklistPanelProps) {
-    const t = useT()
+    const t = useT();
 
-    const gameData = gamesList.find((item) => item.id === game);
+    const gameData = games[game];
+
+    const activeVariant = gameData.variants?.find(
+        (variant) => variant.id.toLowerCase() === tabId.toLowerCase(),
+    );
 
     const { checked, toggleItem, toggleMany } = useChecklistState(game, tabId);
     const progress = useChecklistProgress(sections, checked);
+
+    // ...
 
     const prevPctRef = useRef<number | null>(null);
     useEffect(() => {
@@ -57,7 +64,7 @@ export function ChecklistPanel({
                 <div className="max-w-fit">
                     <Title
                         label={t("checklist.title", {
-                            fullName: gameData?.fullName,
+                            fullName: activeVariant?.label ?? gameData.title,
                         })}
                     />
                 </div>

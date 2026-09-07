@@ -34,14 +34,14 @@ export const GTAIV: Game = {
             id: "TLAD",
             label: "The Lost and Damned",
             theme: {
-                accent: "#f00",
+                accent: "#D41B23",
             },
         },
         {
             id: "TBOGT",
             label: "The Ballad of Gay Tony",
             theme: {
-                accent: "#f3f",
+                accent: "#F0E95B",
             },
         },
     ],
