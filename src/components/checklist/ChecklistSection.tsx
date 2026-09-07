@@ -1,8 +1,8 @@
 import { Tooltip } from "@/components/ui/Tooltip";
+import useT from "@/hooks/useT";
 import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState } from "react";
-import useT from "@/hooks/useT";
 import { useLocalizedText } from "../../hooks/useLocalizedText";
 import type { ChecklistSectionData } from "../../types/checklist";
 import { ChecklistItem } from "./ChecklistItem";
@@ -22,7 +22,7 @@ export function ChecklistSection({
     onToggleItem,
     onToggleAll,
 }: ChecklistSectionProps) {
-   const i18n = useT()
+    const i18n = useT();
     const t = useLocalizedText();
     const [open, setOpen] = useState(false);
 
@@ -39,8 +39,8 @@ export function ChecklistSection({
         <article
             className={`overflow-hidden rounded-4xl border transition-colors ${
                 allDone
-                    ? "border-(--game-accent)/10 bg-(--game-accent)/5"
-                    : "border-white/10 bg-white/3"
+                    ? "bg-linear-to-br from-(--game-accent)/10 to-(--game-accent)/4 border-(--game-accent)/4 shadow-inner-md"
+                    : "bg-white/3 border-white/10"
             }`}
         >
             <h3
