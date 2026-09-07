@@ -127,7 +127,6 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                         </div>
                         <div className="h-full min-h-0 max-mobile:w-1/2 max-mobile:h-full max-mobile:shrink-0">
                             <SongSelector
-                                isBusy={isBusy}
                                 isPlaying={radio.isPlaying}
                                 station={radio.activeStation}
                                 activePlaylist={radio.activePlaylist}

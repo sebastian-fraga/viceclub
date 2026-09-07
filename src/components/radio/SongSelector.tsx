@@ -17,7 +17,6 @@ import { translateRadioText } from "./lib/translateRadioText";
 import type { Playlist, RadioStation } from "./types/types";
 
 interface SongSelectorProps {
-    isBusy: boolean;
     isPlaying: boolean;
     station: RadioStation | null;
     activePlaylist: Playlist | null;
@@ -29,7 +28,6 @@ interface SongSelectorProps {
 }
 
 export function SongSelector({
-    isBusy,
     isPlaying,
     station,
     activePlaylist,
@@ -105,7 +103,7 @@ export function SongSelector({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className={`${selectorClasses} h-full items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center`}
+                    className={`${selectorClasses} w-170 max-mobile:w-full h-full items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center`}
                 >
                     <IconMusicOff size={42} />
                     <p>{t("radio.emptySelector")}</p>
@@ -129,7 +127,7 @@ export function SongSelector({
                         </button>
                     )}
 
-                    <div className="grid grid-cols-[auto_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 w-full max-w-160 max-mobile:max-w-full shrink-0 items-start">
+                    <div className="grid grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 w-160 max-mobile:w-full shrink-0 items-start">
                         <div className="rounded-2xl border border-violet-300 bg-linear-120 from-[#37344D] to-slate-900 p-2 max-mobile:mx-auto">
                             <img
                                 src={station.image}
@@ -137,8 +135,9 @@ export function SongSelector({
                                 className="w-26 h-26 max-mobile:w-20 max-mobile:h-20 object-contain"
                             />
                         </div>
-                        <div className="flex flex-col gap-2.5 min-w-0 max-mobile:items-center max-mobile:text-center">
-                            <h3 className="text-3xl max-mobile:text-2xl text-white font-medium">
+
+                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:items-center max-mobile:text-center">
+                            <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
                                 {station.displayName}
                             </h3>
 
@@ -146,7 +145,7 @@ export function SongSelector({
                                 <div
                                     ref={genresScroll.scrollRef}
                                     onScroll={genresScroll.handleScroll}
-                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide max-mobile:max-w-full max-w-full gap-2"
+                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide gap-2 w-full min-w-0"
                                     style={{
                                         maskImage: genresScroll.maskImage,
                                         WebkitMaskImage: genresScroll.maskImage,
@@ -157,8 +156,8 @@ export function SongSelector({
                                             key={genre}
                                             className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
                                         >
-                                            <IconMusic className="text-violet-400" />
-                                            <span className="text-violet-200 text-md max-mobile:text-sm whitespace-nowrap">
+                                            <IconMusic className="text-violet-400 shrink-0" />
+                                            <span className="text-violet-200 text-md max-mobile:text-sm truncate">
                                                 {t(`radio.genres.${genre}`, {
                                                     defaultValue: genre,
                                                 })}
@@ -172,7 +171,7 @@ export function SongSelector({
                                 <div
                                     ref={djsScroll.scrollRef}
                                     onScroll={djsScroll.handleScroll}
-                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide max-mobile:max-w-full max-w-full gap-2"
+                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide gap-2 w-full min-w-0"
                                     style={{
                                         maskImage: djsScroll.maskImage,
                                         WebkitMaskImage: djsScroll.maskImage,
@@ -183,8 +182,8 @@ export function SongSelector({
                                             key={dj}
                                             className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
                                         >
-                                            <IconHeadphones className="text-yellow-200" />
-                                            <span className="text-yellow-100 text-md max-mobile:text-sm whitespace-nowrap">
+                                            <IconHeadphones className="text-yellow-200 shrink-0" />
+                                            <span className="text-yellow-100 text-md max-mobile:text-sm truncate">
                                                 {dj}
                                             </span>
                                         </div>
@@ -198,7 +197,7 @@ export function SongSelector({
                         <div
                             ref={playlistsScroll.scrollRef}
                             onScroll={playlistsScroll.handleScroll}
-                            className="flex flex-wrap gap-2 shrink-0 max-w-160 max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide max-mobile:max-w-full"
+                            className="flex flex-wrap gap-2 w-160 max-mobile:w-full max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide"
                             style={{
                                 maskImage: playlistsScroll.maskImage,
                                 WebkitMaskImage: playlistsScroll.maskImage,
@@ -217,7 +216,7 @@ export function SongSelector({
                                         aria-pressed={isActive}
                                         data-active={isActive}
                                         className={clsx(
-                                            "shrink-0 px-4 max-mobile:px-3 py-1.5 rounded-full text-sm max-mobile:text-xs font-medium transition-colors cursor-pointer",
+                                            "shrink-0 px-4 max-mobile:px-3 py-1.5 rounded-full text-sm max-mobile:text-xs font-medium transition-colors cursor-pointer truncate max-w-[25ch]",
                                             "focus-visible:outline-none focus-visible:ring focus-visible:ring-violet-400",
                                             isActive
                                                 ? "bg-violet-400 text-[#2B2939]"
