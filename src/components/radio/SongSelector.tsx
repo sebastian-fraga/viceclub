@@ -273,7 +273,21 @@ export function SongSelector({
                                             className="flex items-center justify-between w-full text-left cursor-pointer transition rounded-2xl hover:bg-white/10 px-5 max-mobile:px-3 py-2 data-[active=true]:bg-violet-400/10 mr-2 max-mobile:mr-0"
                                             data-active={isActive}
                                         >
-                                            <div className="flex items-center gap-3 max-mobile:gap-2 min-w-0">
+                                            <div className="flex items-center gap-4 max-mobile:gap-2 min-w-0">
+                                                {!(isActive && isPlaying) && (
+                                                    <span
+                                                        className={clsx(
+                                                            "shrink-0 text-[12px] font-body-condensed tabular-nums",
+                                                            isActive
+                                                                ? "text-violet-300"
+                                                                : "text-gray-200/80",
+                                                        )}
+                                                    >
+                                                        {String(
+                                                            index + 1,
+                                                        ).padStart(2, "0")}
+                                                    </span>
+                                                )}
                                                 <AnimatePresence>
                                                     {isActive && isPlaying && (
                                                         <motion.div
@@ -319,7 +333,14 @@ export function SongSelector({
                                                         )}
                                                     </span>
 
-                                                    <span className="text-gray-400 text-sm max-mobile:text-xs font-thin truncate max-mobile:max-w-60">
+                                                    <span
+                                                        className={clsx(
+                                                            "text-gray-400 text-sm max-mobile:text-xs font-thin truncate max-mobile:max-w-60",
+                                                            isActive
+                                                                ? "text-violet-200/80"
+                                                                : "text-gray-200",
+                                                        )}
+                                                    >
                                                         {song.artist}
                                                     </span>
                                                 </div>
