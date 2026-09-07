@@ -8,10 +8,10 @@ import {
     IconVolume3,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-import clsx from "clsx";
 import useT from "@/hooks/useT";
+import clsx from "clsx";
 import { formatTime } from "./lib/formatTime";
 
 import "./radio.css";
@@ -51,10 +51,11 @@ export function PlayerFooter({
     onSeek,
     onVolumeChange,
 }: PlayerBarProps) {
-    const t = useT()
+    const t = useT();
+
     const hasLoadedOnceRef = useRef(false);
+
     const [isInitialLoad, setIsInitialLoad] = useState(true);
-    const [hoverRatio, setHoverRatio] = useState<number | null>(null);
     const [dragRatio, setDragRatio] = useState<number | null>(null);
     const [isDragging, setIsDragging] = useState(false);
 
@@ -65,98 +66,154 @@ export function PlayerFooter({
         }
     }, [isLoading]);
 
-    const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
-    const hoverProgress = hoverRatio !== null ? hoverRatio * 100 : null;
+    const progress =
+        duration > 0 ? Math.min(100, (currentTime / duration) * 100) : 0;
+
     const dragProgress = dragRatio !== null ? dragRatio * 100 : null;
+
     const isBusy = isLoading || isSeeking;
     const controlsDisabled = !hasStation || isInitialLoad;
 
-    const getRatioFromEvent = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-        return Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    };
+    const progressBarRef = useRef<HTMLDivElement>(null);
 
-    const handleProgressMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!hasStation) return;
+    const activePointerIdRef = useRef<number | null>(null);
+
+    const getRatioFromClientX = useCallback((clientX: number) => {
+        const element = progressBarRef.current;
+
+        if (!element) return 0;
+
+        const rect = element.getBoundingClientRect();
+
+        return Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    }, []);
+    const releaseActivePointerCapture = useCallback(() => {
+        const element = progressBarRef.current;
+        const pointerId = activePointerIdRef.current;
+
+        if (element && pointerId !== null) {
+            try {
+                if (element.hasPointerCapture(pointerId)) {
+                    element.releasePointerCapture(pointerId);
+                }
+            } catch {
+            }
+        }
+
+        activePointerIdRef.current = null;
+    }, []);
+
+    const handleProgressPointerDown = (
+        e: React.PointerEvent<HTMLDivElement>,
+    ) => {
+        if (!hasStation || duration <= 0 || isDragging) return;
+
+        e.preventDefault();
+
+        activePointerIdRef.current = e.pointerId;
+
+        try {
+            progressBarRef.current?.setPointerCapture(e.pointerId);
+        } catch {
+        }
+
+        const ratio = getRatioFromClientX(e.clientX);
+
         setIsDragging(true);
-        const ratio = getRatioFromEvent(e);
         setDragRatio(ratio);
-        setHoverRatio(null); // clear hover when dragging starts
     };
 
-    const handleProgressMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!hasStation) return;
+    const handleProgressPointerMove = (
+        e: React.PointerEvent<HTMLDivElement>,
+    ) => {
+        if (!hasStation || duration <= 0) return;
+
         if (isDragging) {
-            const ratio = getRatioFromEvent(e);
+            if (e.pointerId !== activePointerIdRef.current) {
+                return;
+            }
+
+            e.preventDefault();
+
+            const ratio = getRatioFromClientX(e.clientX);
             setDragRatio(ratio);
-        } else {
-            setHoverRatio(getRatioFromEvent(e));
+
+            return;
         }
+
+        if (isBusy) return;
     };
 
-    const handleProgressMouseUp = () => {
+    const handleProgressPointerLeave = () => {
+    };
+
+    useEffect(() => {
         if (!isDragging) return;
-        setIsDragging(false);
-        if (dragRatio !== null) {
-            onSeek(dragRatio * duration);
-        }
-        setDragRatio(null);
-    };
 
-    const handleProgressMouseLeave = () => {
-        if (isDragging) {
-            // If we leave while dragging, we cancel the drag because we won't get mouse up?
-            // Alternatively, we could keep dragging and rely on mouse up outside the element.
-            // But for simplicity, we cancel the drag when leaving the element.
+        const handlePointerMove = (e: PointerEvent) => {
+            if (!hasStation || duration <= 0) return;
+
+            const ratio = getRatioFromClientX(e.clientX);
+
+            setDragRatio(ratio);
+        };
+
+        const handlePointerUp = (e: PointerEvent) => {
+            if (!hasStation || duration <= 0) return;
+
+            const ratio = getRatioFromClientX(e.clientX);
+
+            releaseActivePointerCapture();
+
             setIsDragging(false);
             setDragRatio(null);
-        } else {
-            setHoverRatio(null);
-        }
-    };
 
-    const handleProgressTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-        if (!hasStation) return;
-        setIsDragging(true);
-        const ratio = getRatioFromEvent(e);
-        setDragRatio(ratio);
-        setHoverRatio(null);
-    };
+            onSeek(ratio * duration);
+        };
 
-    const handleProgressTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-        if (!hasStation) return;
-        if (isDragging) {
-            e.preventDefault(); // prevent scrolling
-            const ratio = getRatioFromEvent(e);
-            setDragRatio(ratio);
-        }
-    };
+        const handlePointerCancel = () => {
+            releaseActivePointerCapture();
 
-    const handleProgressTouchEnd = () => {
-        if (!isDragging) return;
-        setIsDragging(false);
-        if (dragRatio !== null) {
-            onSeek(dragRatio * duration);
-        }
-        setDragRatio(null);
-    };
+            setIsDragging(false);
+            setDragRatio(null);
+        };
 
-    const handleProgressTouchCancel = handleProgressTouchEnd;
+        window.addEventListener("pointermove", handlePointerMove);
+        window.addEventListener("pointerup", handlePointerUp);
+        window.addEventListener("pointercancel", handlePointerCancel);
+
+        return () => {
+            window.removeEventListener("pointermove", handlePointerMove);
+            window.removeEventListener("pointerup", handlePointerUp);
+            window.removeEventListener("pointercancel", handlePointerCancel);
+        };
+    }, [
+        isDragging,
+        hasStation,
+        duration,
+        getRatioFromClientX,
+        onSeek,
+        releaseActivePointerCapture,
+    ]);
 
     return (
-        <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 max-mobile:px-3 max-mobile:py-2 shadow-2xl shadow-pink-300/5">
-            <div className="flex items-center gap-3.5">
+        <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 shadow-2xl shadow-pink-300/5 max-mobile:w-full max-mobile:max-w-125 max-mobile:px-12 max-mobile:py-5 max-mobile:flex-col max-mobile:gap-4">
+            <div className="flex items-center gap-3.5 max-mobile:gap-4">
                 <button
+                    type="button"
                     onClick={onPrev}
                     disabled={controlsDisabled}
                     aria-label={t("radio.common.prevSong")}
-                    className="text-slate-300 hover:text-white transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:text-slate-300"
+                    className="cursor-pointer text-slate-300 transition-colors hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300"
                 >
-                    <IconPlayerSkipBackFilled size={18} />
+                    <IconPlayerSkipBackFilled
+                        size={18}
+                        className="max-mobile:size-6"
+                    />
                 </button>
 
                 <button
+                    type="button"
                     onClick={onPlayPause}
                     disabled={controlsDisabled}
                     aria-label={
@@ -164,152 +221,178 @@ export function PlayerFooter({
                             ? t("radio.common.pauseSong")
                             : t("radio.common.playSong")
                     }
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-500 text-slate-900 cursor-pointer hover:bg-violet-400 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-violet-500"
+                    className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-violet-500 text-slate-900 transition-colors hover:bg-violet-400 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-violet-500 max-mobile:h-10 max-mobile:w-10"
                 >
                     {isPlaying ? (
-                        <IconPlayerPauseFilled size={16} />
+                        <IconPlayerPauseFilled
+                            size={16}
+                            className="max-mobile:size-6"
+                        />
                     ) : (
-                        <IconPlayerPlayFilled size={16} />
+                        <IconPlayerPlayFilled
+                            size={16}
+                            className="max-mobile:size-6"
+                        />
                     )}
                 </button>
 
                 <button
+                    type="button"
                     onClick={onNext}
                     disabled={controlsDisabled}
                     aria-label={t("radio.common.nextSong")}
-                    className="text-slate-300 hover:text-white transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:text-slate-300"
+                    className="cursor-pointer text-slate-300 transition-colors hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300"
                 >
-                    <IconPlayerSkipForwardFilled size={18} />
+                    <IconPlayerSkipForwardFilled
+                        size={18}
+                        className="max-mobile:size-6"
+                    />
                 </button>
             </div>
 
-            {hasStation && (
-                <span className="w-10 shrink-0 text-xs text-slate-400 tabular-nums">
-                    {formatTime(currentTime)}
-                </span>
-            )}
-
-            <div
-                className={clsx(
-                    "group relative h-1.5 flex-1 min-w-0 rounded-full bg-(--button-bg) overflow-hidden max-mobile:h-2",
-                    hasStation ? "cursor-pointer" : "cursor-default opacity-40",
-                )}
-                // We only handle click if not dragging (to avoid seeking on drag start)
-                onClick={hasStation && !isDragging ? (e: React.MouseEvent<HTMLDivElement>) => {
-                    if (!hasStation) return;
-                    onSeek(getRatioFromEvent(e) * duration);
-                } : undefined}
-                onMouseDown={handleProgressMouseDown}
-                onMouseMove={handleProgressMouseMove}
-                onMouseUp={handleProgressMouseUp}
-                onMouseLeave={handleProgressMouseLeave}
-                onTouchStart={handleProgressTouchStart}
-                onTouchMove={handleProgressTouchMove}
-                onTouchEnd={handleProgressTouchEnd}
-                onTouchCancel={handleProgressTouchCancel}
-                className={isDragging ? "cursor-grabbing" : ""}
-            >
-                {/* Background track */}
-                <div className="absolute top-0 left-0 h-full w-full bg-(--button-bg)" />
-
-                {/* Filled progress (actual progress) */}
-                <motion.div
-                    className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
-                    animate={{ width: `${progress}%` }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                />
-
-                {/* Preview bar (hover or drag) */}
-                {!isBusy && (hoverProgress !== null || dragProgress !== null) && (
-                    <div
-                        className="absolute top-0 left-0 h-full rounded-full"
-                        style={{
-                            width: `${isDragging ? dragProgress : hoverProgress}%`,
-                            backgroundColor: isDragging
-                                ? "rgba(139, 92, 246, 0.6)" // Brighter violet for drag
-                                : "rgba(196,181,253,0.3)", // Lighter for hover
-                            backdropFilter: isDragging ? "blur(2px)" : "none",
-                        }}
-                    />
-                )}
-
-                {/* Thumb (draggable circle) and tooltip */}
-                {isDragging && dragRatio !== null && (
-                    <>
-                        {/* Thumb */}
-                        <div
-                            className="absolute top-1/2 left-[calc(${dragProgress}%_-_6px)] h-[12px] w-[12px] bg-violet-500 rounded-full shadow-lg transform -translate-y-1/2"
-                        />
-                        {/* Tooltip */}
-                        <div
-                            className="absolute bottom-full left-[calc(${dragProgress}%_-_20px)] mb-2 px-2 py-1 text-xs bg-violet-800 text-white rounded-md whitespace-nowrap transform -translate-x-1/2"
-                        >
-                            {formatTime(dragRatio * duration)} / {formatTime(duration)}
-                        </div>
-                    </>
-                )}
-
-                {/* Loading/seeking indicator */}
-                {isBusy && (
-                    <motion.div
-                        className="absolute inset-0"
-                        style={{
-                            background:
-                                "linear-gradient(90deg, transparent 0%, rgba(196,181,253,0.7) 50%, transparent 100%)",
-                            backgroundSize: "200% 100%",
-                        }}
-                        animate={{
-                            backgroundPosition: ["150% 0%", "-50% 0%"],
-                        }}
-                        transition={{
-                            duration: 1.2,
-                            repeat: Infinity,
-                            ease: "linear",
-                        }}
-                    />
-                )}
-            </div>
-
-            {hasStation && (
-                <div className="flex shrink-0 items-center gap-1.5">
-                    <span className="w-10 text-xs text-slate-400 tabular-nums">
-                        {formatTime(duration)}
+            <div className="flex w-full items-center gap-2 max-mobile:gap-6">
+                {hasStation && (
+                    <span className="w-10 shrink-0 max-mobile:text-sm text-xs max-mobile:w-8 max-mobile:text-slate-300 max-mobile:font-bold tabular-nums text-slate-400">
+                        {isDragging && dragRatio !== null ? formatTime(dragRatio * duration) : formatTime(currentTime)}
                     </span>
+                )}
 
-                    <div className="flex items-center gap-1.5 max-mobile:hidden">
-                        <button
-                            type="button"
-                            onClick={() => onVolumeChange(volume > 0 ? 0 : 1)}
-                            className="cursor-pointer text-slate-300 hover:text-white transition-colors"
-                            aria-label={
-                                volume > 0
-                                    ? t("radio.common.mute")
-                                    : t("radio.common.unmute")
-                            }
-                        >
-                            <VolumeIcon volume={volume} />
-                        </button>
+                <div
+                    ref={progressBarRef}
+                    className={clsx(
+                        "group relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-(--button-bg) touch-none select-none max-mobile:h-2",
+                        hasStation
+                            ? "cursor-pointer"
+                            : "cursor-default opacity-40",
+                        isDragging && "cursor-grabbing",
+                    )}
+                    onPointerDown={handleProgressPointerDown}
+                    onPointerMove={handleProgressPointerMove}
+                    onPointerLeave={handleProgressPointerLeave}
+                >
+                    <div className="relative h-1.5 min-w-0 overflow-hidden rounded-full bg-(--button-bg) max-mobile:h-2">
+                        <div className="absolute top-0 left-0 h-full w-full bg-(--button-bg)" />
 
-                        <input
-                            type="range"
-                            min={0}
-                            max={1}
-                            step={0.01}
-                            value={volume}
-                            onChange={(e) =>
-                                onVolumeChange(parseFloat(e.target.value))
-                            }
-                            style={
-                                {
-                                    "--volume": `${volume * 100}%`,
-                                } as React.CSSProperties
-                            }
-                            className="volume-slider"
-                            aria-label={t("radio.common.volume")}
-                        />
+                        {isDragging && dragProgress !== null ? (
+                            <>
+                                <div
+                                    className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
+                                    style={{
+                                        width: `${dragProgress}%`,
+                                    }}
+                                />
+
+                                {dragProgress < progress && (
+                                    <div
+                                        className="absolute top-0 h-full rounded-full"
+                                        style={{
+                                            left: `${dragProgress}%`,
+                                            width: `${progress - dragProgress}%`,
+                                            backgroundColor:
+                                                "rgba(196, 181, 253, 0.3)",
+                                        }}
+                                    />
+                                )}
+                            </>
+                        ) : (
+                            <motion.div
+                                className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
+                                animate={{ width: `${progress}%` }}
+                                transition={{
+                                    duration: 0.3,
+                                    ease: "easeOut",
+                                }}
+                            />
+                        )}
+
+                        {isDragging && dragRatio !== null && (
+                            <>
+                                <div
+                                    className="absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-violet-500 shadow-lg"
+                                    style={{
+                                        left: `calc(${dragProgress}% - 6px)`,
+                                    }}
+                                />
+
+                                <div
+                                    className="absolute bottom-full mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-violet-800 px-2 py-1 text-xs text-white"
+                                    style={{
+                                        left: `${dragProgress}%`,
+                                    }}
+                                >
+                                    {formatTime(dragRatio * duration)} /{" "}
+                                    {formatTime(duration)}
+                                </div>
+                            </>
+                        )}
+
+                        {isBusy && (
+                            <motion.div
+                                className="absolute inset-0"
+                                style={{
+                                    background:
+                                        "linear-gradient(90deg, transparent 0%, rgba(196,181,253,0.7) 50%, transparent 100%)",
+                                    backgroundSize: "200% 100%",
+                                    pointerEvents: "none",
+                                }}
+                                animate={{
+                                    backgroundPosition: ["150% 0%", "-50% 0%"],
+                                }}
+                                transition={{
+                                    duration: 1.2,
+                                    repeat: Infinity,
+                                    ease: "linear",
+                                }}
+                            />
+                        )}
                     </div>
                 </div>
-            )}
+
+                {hasStation && (
+                    <div className="flex shrink-0 items-center gap-1.5">
+                        <span className="w-10 shrink-0 max-mobile:text-sm text-xs max-mobile:w-8 max-mobile:text-slate-300 max-mobile:font-bold  tabular-nums text-slate-400">
+                            {formatTime(duration)}
+                        </span>
+
+                        <div className="flex items-center gap-1.5 max-mobile:hidden">
+                            <button
+                                type="button"
+                                onClick={() =>
+                                    onVolumeChange(volume > 0 ? 0 : 1)
+                                }
+                                className="cursor-pointer text-slate-300 transition-colors hover:text-white"
+                                aria-label={
+                                    volume > 0
+                                        ? t("radio.common.mute")
+                                        : t("radio.common.unmute")
+                                }
+                            >
+                                <VolumeIcon volume={volume} />
+                            </button>
+
+                            <input
+                                type="range"
+                                min={0}
+                                max={1}
+                                step={0.01}
+                                value={volume}
+                                onChange={(e) =>
+                                    onVolumeChange(
+                                        Number.parseFloat(e.target.value),
+                                    )
+                                }
+                                style={
+                                    {
+                                        "--volume": `${volume * 100}%`,
+                                    } as React.CSSProperties
+                                }
+                                className="volume-slider"
+                                aria-label={t("radio.common.volume")}
+                            />
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

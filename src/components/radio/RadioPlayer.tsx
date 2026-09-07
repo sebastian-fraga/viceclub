@@ -10,6 +10,7 @@ import { PlayerFooter } from "./PlayerFooter";
 import { SongSelector } from "./SongSelector";
 import { StationSelector } from "./StationSelector";
 import type { RadioStation } from "./types/types";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface RadioPlayerProps {
     stations: RadioStation[];
@@ -139,20 +140,30 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                     </div>
                 </div>
 
-                <PlayerFooter
-                    isPlaying={radio.isPlaying}
-                    isLoading={radio.isLoading}
-                    isSeeking={radio.isSeeking}
-                    hasStation={radio.activeStation !== null}
-                    currentTime={radio.currentTime}
-                    duration={radio.duration}
-                    volume={radio.volume}
-                    onPlayPause={radio.togglePlay}
-                    onNext={handleNext}
-                    onPrev={handlePrev}
-                    onSeek={radio.seekTo}
-                    onVolumeChange={radio.setVolume}
-                />
+                <AnimatePresence>
+                    {mobilePanel === "songs" && (
+                        <motion.div
+                            initial={{ y: 80, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 80, opacity: 0 }}
+                        >
+                            <PlayerFooter
+                                isPlaying={radio.isPlaying}
+                                isLoading={radio.isLoading}
+                                isSeeking={radio.isSeeking}
+                                hasStation={radio.activeStation !== null}
+                                currentTime={radio.currentTime}
+                                duration={radio.duration}
+                                volume={radio.volume}
+                                onPlayPause={radio.togglePlay}
+                                onNext={handleNext}
+                                onPrev={handlePrev}
+                                onSeek={radio.seekTo}
+                                onVolumeChange={radio.setVolume}
+                            />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </>
     );

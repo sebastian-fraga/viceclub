@@ -1,11 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
+const SEEK_TIMEOUT_MS = 3000;
+
 export function useAudioPlayer() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const isSeekingRef = useRef(false);
     const targetTimeRef = useRef<number | null>(null);
     const pendingSeekRef = useRef<number | null>(null);
     const pendingAutoplayRef = useRef(false);
+    const seekTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -44,10 +47,24 @@ export function useAudioPlayer() {
         }
     }, [volume]);
 
-    const setIsSeeking = (val: boolean) => {
-        isSeekingRef.current = val;
-        setIsSeekingState(val);
-    };
+    const clearSeekTimeout = useCallback(() => {
+        if (seekTimeoutRef.current !== null) {
+            clearTimeout(seekTimeoutRef.current);
+            seekTimeoutRef.current = null;
+        }
+    }, []);
+
+    const setIsSeeking = useCallback(
+        (val: boolean) => {
+            isSeekingRef.current = val;
+            setIsSeekingState(val);
+
+            if (!val) {
+                clearSeekTimeout();
+            }
+        },
+        [clearSeekTimeout],
+    );
 
     const play = useCallback(() => {
         const audio = audioRef.current;
@@ -76,21 +93,40 @@ export function useAudioPlayer() {
         isPlaying ? pause() : play();
     }, [isPlaying, play, pause]);
 
-    const seekTo = useCallback((time: number) => {
-        const audio = audioRef.current;
-        if (!audio) return;
+    const seekTo = useCallback(
+        (time: number) => {
+            const audio = audioRef.current;
+            if (!audio) return;
 
-        if (!isFinite(audio.duration)) {
-            pendingSeekRef.current = time;
-            return;
-        }
+            if (!isFinite(audio.duration)) {
+                pendingSeekRef.current = time;
+                return;
+            }
 
-        const clamped = Math.max(0, Math.min(time, audio.duration));
+            const clamped = Math.max(0, Math.min(time, audio.duration));
 
-        setIsSeeking(true);
-        audio.currentTime = clamped;
-        setCurrentTime(clamped);
-    }, []);
+            const alreadyThere = Math.abs(audio.currentTime - clamped) < 0.15;
+
+            if (alreadyThere) {
+                setCurrentTime(clamped);
+                return;
+            }
+
+            clearSeekTimeout();
+            setIsSeeking(true);
+
+            audio.currentTime = clamped;
+            setCurrentTime(clamped);
+
+            seekTimeoutRef.current = setTimeout(() => {
+                console.warn(
+                    "El evento 'seeked' no llegó a tiempo, liberando isSeeking manualmente.",
+                );
+                setIsSeeking(false);
+            }, SEEK_TIMEOUT_MS);
+        },
+        [clearSeekTimeout, setIsSeeking],
+    );
 
     const seekRelative = useCallback(
         (seconds: number) => {
@@ -116,18 +152,24 @@ export function useAudioPlayer() {
 
             pendingAutoplayRef.current = autoplay;
 
+            clearSeekTimeout();
+            setIsSeeking(false);
+
             setCurrentTime(0);
             setDuration(0);
 
             audio.src = `${src}?v=${Date.now()}`;
             audio.load();
         },
-        [],
+        [clearSeekTimeout, setIsSeeking],
     );
 
     const stop = useCallback(() => {
         const audio = audioRef.current;
         if (!audio) return;
+
+        clearSeekTimeout();
+        setIsSeeking(false);
 
         audio.pause();
         audio.src = "";
@@ -135,7 +177,7 @@ export function useAudioPlayer() {
         setIsPlaying(false);
         setCurrentTime(0);
         setDuration(0);
-    }, []);
+    }, [clearSeekTimeout, setIsSeeking]);
 
     useEffect(() => {
         const audio = new Audio();
@@ -184,6 +226,11 @@ export function useAudioPlayer() {
         const onPlay = () => setIsPlaying(true);
         const onPause = () => setIsPlaying(false);
 
+        const onError = () => {
+            setIsLoading(false);
+            setIsSeeking(false);
+        };
+
         audio.addEventListener("loadstart", onLoadStart);
         audio.addEventListener("canplay", onCanPlay);
         audio.addEventListener("timeupdate", onTimeUpdate);
@@ -192,6 +239,7 @@ export function useAudioPlayer() {
         audio.addEventListener("loadedmetadata", onLoadedMetadata);
         audio.addEventListener("play", onPlay);
         audio.addEventListener("pause", onPause);
+        audio.addEventListener("error", onError);
 
         return () => {
             audio.removeEventListener("loadstart", onLoadStart);
@@ -202,11 +250,13 @@ export function useAudioPlayer() {
             audio.removeEventListener("loadedmetadata", onLoadedMetadata);
             audio.removeEventListener("play", onPlay);
             audio.removeEventListener("pause", onPause);
+            audio.removeEventListener("error", onError);
 
+            clearSeekTimeout();
             audio.pause();
             audioRef.current = null;
         };
-    }, [play, seekTo]);
+    }, [play, seekTo, setIsSeeking, clearSeekTimeout]);
 
     return {
         audioRef,
