@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import type { MediaCategory } from "./types";
 
 interface Props {
@@ -15,10 +16,8 @@ export function CategorySwitcher({ active, onChange }: Props) {
     function handleChange(category: MediaCategory) {
         if (category === active) return;
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+        const scrollToTop = useScrollToTop();
+        scrollToTop();
 
         onChange(category);
     }

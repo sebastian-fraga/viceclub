@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Fragment, useEffect, useState } from "react";
 
 import useT from "@/hooks/useT";
+import { useScrollToPosition } from "@/hooks/useScrollToTop";
 
 import Title from "../../ui/Title";
 
@@ -45,6 +46,7 @@ export default function News() {
     const [news, setNews] = useState<NewsItem[]>([]);
     const [visibleCount, setVisibleCount] = useState(STEP);
     const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+    const scrollToPosition = useScrollToPosition();
 
     function getArticleUrl(slug: string) {
         return `https://viceclub.app?news=${slug}`;
@@ -120,10 +122,7 @@ export default function News() {
             (Number.isNaN(bannerHeight) ? 0 : bannerHeight) -
             28;
 
-        window.scrollTo({
-            top,
-            behavior: "smooth",
-        });
+        scrollToPosition(top);
     }
 
     function scrollToNews(list: NewsItem[]) {
