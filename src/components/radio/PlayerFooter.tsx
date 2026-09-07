@@ -55,6 +55,8 @@ export function PlayerFooter({
     const hasLoadedOnceRef = useRef(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const [hoverRatio, setHoverRatio] = useState<number | null>(null);
+    const [dragRatio, setDragRatio] = useState<number | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
 
     useEffect(() => {
         if (!isLoading && !hasLoadedOnceRef.current) {
@@ -65,23 +67,82 @@ export function PlayerFooter({
 
     const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
     const hoverProgress = hoverRatio !== null ? hoverRatio * 100 : null;
+    const dragProgress = dragRatio !== null ? dragRatio * 100 : null;
     const isBusy = isLoading || isSeeking;
     const controlsDisabled = !hasStation || isInitialLoad;
 
-    const getRatioFromEvent = (e: React.MouseEvent<HTMLDivElement>) => {
+    const getRatioFromEvent = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
-        return Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+        return Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
     };
 
-    const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const handleProgressMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!hasStation) return;
-        onSeek(getRatioFromEvent(e) * duration);
+        setIsDragging(true);
+        const ratio = getRatioFromEvent(e);
+        setDragRatio(ratio);
+        setHoverRatio(null); // clear hover when dragging starts
     };
 
     const handleProgressMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!hasStation) return;
-        setHoverRatio(getRatioFromEvent(e));
+        if (isDragging) {
+            const ratio = getRatioFromEvent(e);
+            setDragRatio(ratio);
+        } else {
+            setHoverRatio(getRatioFromEvent(e));
+        }
     };
+
+    const handleProgressMouseUp = () => {
+        if (!isDragging) return;
+        setIsDragging(false);
+        if (dragRatio !== null) {
+            onSeek(dragRatio * duration);
+        }
+        setDragRatio(null);
+    };
+
+    const handleProgressMouseLeave = () => {
+        if (isDragging) {
+            // If we leave while dragging, we cancel the drag because we won't get mouse up?
+            // Alternatively, we could keep dragging and rely on mouse up outside the element.
+            // But for simplicity, we cancel the drag when leaving the element.
+            setIsDragging(false);
+            setDragRatio(null);
+        } else {
+            setHoverRatio(null);
+        }
+    };
+
+    const handleProgressTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+        if (!hasStation) return;
+        setIsDragging(true);
+        const ratio = getRatioFromEvent(e);
+        setDragRatio(ratio);
+        setHoverRatio(null);
+    };
+
+    const handleProgressTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+        if (!hasStation) return;
+        if (isDragging) {
+            e.preventDefault(); // prevent scrolling
+            const ratio = getRatioFromEvent(e);
+            setDragRatio(ratio);
+        }
+    };
+
+    const handleProgressTouchEnd = () => {
+        if (!isDragging) return;
+        setIsDragging(false);
+        if (dragRatio !== null) {
+            onSeek(dragRatio * duration);
+        }
+        setDragRatio(null);
+    };
+
+    const handleProgressTouchCancel = handleProgressTouchEnd;
 
     return (
         <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 max-mobile:px-3 max-mobile:py-2 shadow-2xl shadow-pink-300/5">
@@ -133,14 +194,24 @@ export function PlayerFooter({
                     "group relative h-1.5 flex-1 min-w-0 rounded-full bg-(--button-bg) overflow-hidden max-mobile:h-2",
                     hasStation ? "cursor-pointer" : "cursor-default opacity-40",
                 )}
-                onClick={handleProgressClick}
+                // We only handle click if not dragging (to avoid seeking on drag start)
+                onClick={hasStation && !isDragging ? (e: React.MouseEvent<HTMLDivElement>) => {
+                    if (!hasStation) return;
+                    onSeek(getRatioFromEvent(e) * duration);
+                } : undefined}
+                onMouseDown={handleProgressMouseDown}
                 onMouseMove={handleProgressMouseMove}
-                onMouseLeave={() => setHoverRatio(null)}
+                onMouseUp={handleProgressMouseUp}
+                onMouseLeave={handleProgressMouseLeave}
+                onTouchStart={handleProgressTouchStart}
+                onTouchMove={handleProgressTouchMove}
+                onTouchEnd={handleProgressTouchEnd}
+                onTouchCancel={handleProgressTouchCancel}
             >
-                {!isBusy && hoverProgress !== null && (
+                {!isBusy && (hoverProgress !== null || dragProgress !== null) && (
                     <div
                         className="absolute top-0 left-0 h-full rounded-full bg-(--button-bg-hover)"
-                        style={{ width: `${hoverProgress}%` }}
+                        style={{ width: `${isDragging ? dragProgress : hoverProgress}%` }}
                     />
                 )}
 
