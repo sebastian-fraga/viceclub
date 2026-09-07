@@ -155,7 +155,7 @@ export function SongSelector({
                                     {activePlaylist.genres.map((genre) => (
                                         <div
                                             key={genre}
-                                            className="flex items-center gap-2 bg-violet-400/20 px-6 max-mobile:px-3 py-1 rounded-lg shrink-0"
+                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
                                         >
                                             <IconMusic className="text-violet-400" />
                                             <span className="text-violet-200 text-md max-mobile:text-sm whitespace-nowrap">
@@ -181,7 +181,7 @@ export function SongSelector({
                                     {activePlaylist.djs.map((dj) => (
                                         <div
                                             key={dj}
-                                            className="flex items-center gap-2 bg-yellow-200/20 px-6 max-mobile:px-3 py-1 rounded-lg shrink-0"
+                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
                                         >
                                             <IconHeadphones className="text-yellow-200" />
                                             <span className="text-yellow-100 text-md max-mobile:text-sm whitespace-nowrap">
