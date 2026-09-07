@@ -1559,7 +1559,7 @@
     },
     "self_actualization_fm": {
         "image": "../assets/images/radios/IV/self.webp",
-        "displayName": "Self Actualizaation FM",
+        "displayName": "Self Actualization FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/self.ogg",
         "dj": "Audrey",
         "genre": "ambient",
