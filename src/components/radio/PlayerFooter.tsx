@@ -207,25 +207,49 @@ export function PlayerFooter({
                 onTouchMove={handleProgressTouchMove}
                 onTouchEnd={handleProgressTouchEnd}
                 onTouchCancel={handleProgressTouchCancel}
+                className={isDragging ? "cursor-grabbing" : ""}
             >
-                {!isBusy && (hoverProgress !== null || dragProgress !== null) && (
-                    <div
-                        className="absolute top-0 left-0 h-full rounded-full"
-                        style={{
-                            width: `${isDragging ? dragProgress : hoverProgress}%`,
-                            backgroundColor: isDragging ? "rgba(139, 92, 246, 0.8)" : "rgba(196,181,253,0.3)", // Brighter violet for drag, lighter for hover
-                            backdropFilter: isDragging ? "blur(2px)" : "none",
-                            borderRadius: "9999px",
-                        }}
-                    />
-                )}
+                {/* Background track */}
+                <div className="absolute top-0 left-0 h-full w-full bg-(--button-bg)" />
 
+                {/* Filled progress (actual progress) */}
                 <motion.div
                     className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
                     animate={{ width: `${progress}%` }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                 />
 
+                {/* Preview bar (hover or drag) */}
+                {!isBusy && (hoverProgress !== null || dragProgress !== null) && (
+                    <div
+                        className="absolute top-0 left-0 h-full rounded-full"
+                        style={{
+                            width: `${isDragging ? dragProgress : hoverProgress}%`,
+                            backgroundColor: isDragging
+                                ? "rgba(139, 92, 246, 0.6)" // Brighter violet for drag
+                                : "rgba(196,181,253,0.3)", // Lighter for hover
+                            backdropFilter: isDragging ? "blur(2px)" : "none",
+                        }}
+                    />
+                )}
+
+                {/* Thumb (draggable circle) and tooltip */}
+                {isDragging && dragRatio !== null && (
+                    <>
+                        {/* Thumb */}
+                        <div
+                            className="absolute top-1/2 left-[calc(${dragProgress}%_-_6px)] h-[12px] w-[12px] bg-violet-500 rounded-full shadow-lg transform -translate-y-1/2"
+                        />
+                        {/* Tooltip */}
+                        <div
+                            className="absolute bottom-full left-[calc(${dragProgress}%_-_20px)] mb-2 px-2 py-1 text-xs bg-violet-800 text-white rounded-md whitespace-nowrap transform -translate-x-1/2"
+                        >
+                            {formatTime(dragRatio * duration)} / {formatTime(duration)}
+                        </div>
+                    </>
+                )}
+
+                {/* Loading/seeking indicator */}
                 {isBusy && (
                     <motion.div
                         className="absolute inset-0"
