@@ -10,6 +10,7 @@ export interface ChecklistItemData {
     icon?: string;
     text?: MaybeLocalizedText;
     texts?: ChecklistTextEntry[];
+    tooltip?: MaybeLocalizedText;
 }
 
 export interface ChecklistSectionData {
