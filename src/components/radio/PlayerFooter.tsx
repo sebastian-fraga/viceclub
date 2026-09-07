@@ -210,8 +210,13 @@ export function PlayerFooter({
             >
                 {!isBusy && (hoverProgress !== null || dragProgress !== null) && (
                     <div
-                        className="absolute top-0 left-0 h-full rounded-full bg-(--button-bg-hover)"
-                        style={{ width: `${isDragging ? dragProgress : hoverProgress}%` }}
+                        className="absolute top-0 left-0 h-full rounded-full"
+                        style={{
+                            width: `${isDragging ? dragProgress : hoverProgress}%`,
+                            backgroundColor: isDragging ? "rgba(139, 92, 246, 0.8)" : "rgba(196,181,253,0.3)", // Brighter violet for drag, lighter for hover
+                            backdropFilter: isDragging ? "blur(2px)" : "none",
+                            borderRadius: "9999px",
+                        }}
                     />
                 )}
 
