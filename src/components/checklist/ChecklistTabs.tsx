@@ -28,7 +28,7 @@ export function ChecklistTabs({
                     <button
                         key={tab.id}
                         onClick={() => onSelect(i)}
-                        className="group relative mt-4 shrink-0 overflow-hidden rounded-2xl border-2 w-110 h-35 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl max-mobile:w-[calc(100vw-4rem)] min-w-0"
+                        className="group relative mt-4 shrink-0 overflow-hidden rounded-2xl border-2 w-110 h-35 transition-all duration-300 hover:scale-[1.02] max-mobile:w-[calc(100vw-4rem)] min-w-0 cursor-pointer"
                         style={{
                             borderColor: isActive
                                 ? "var(--game-accent)"
