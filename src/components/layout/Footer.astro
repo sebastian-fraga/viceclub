@@ -6,7 +6,7 @@ import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
 import Support from "../index/support/Support";
 
 const anchorClasses =
-    "text-black bg-white p-2 mobile:px-6 mobile:py-2 rounded-full transition hover:bg-pink-100";
+    "text-black bg-white p-2 mobile:px-8 mobile:py-3 rounded-full transition";
 ---
 
 <footer
@@ -37,18 +37,21 @@ const anchorClasses =
             <div class="flex items-center gap-3">
                 <a
                     href="https://github.com/sebastian-fraga/viceclub"
-                    class={anchorClasses}
+                    class=`${anchorClasses} hover:bg-pink-100`
                 >
                     <IconBrandGithub stroke={1.5} />
                 </a>
 
-                <a href="https://x.com/ViceClubApp" class={anchorClasses}>
+                <a
+                    href="https://x.com/ViceClubApp"
+                    class=`${anchorClasses} hover:bg-yellow-100`
+                >
                     <IconBrandX stroke={1.5} />
                 </a>
 
                 <a
                     href="mailto:fragasebastian1@gmail.com"
-                    class={anchorClasses}
+                    class=`${anchorClasses} hover:bg-blue-100`
                 >
                     <IconMail stroke={1.5} />
                 </a>
