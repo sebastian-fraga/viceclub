@@ -1,7 +1,7 @@
 import { Tooltip } from "@/components/ui/Tooltip";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import type { ChecklistItemData } from "@/types/checklist";
-import { IconCheck, IconChevronDown } from "@tabler/icons-react";
+import { IconCheck, IconChevronDown, IconInfoCircle, IconInfoSmall } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -133,9 +133,39 @@ export function ChecklistItem({
                                           loading="lazy"
                                       />
                                   )}
-                                  <span className="truncate font-bold">
-                                      {localizedText(item.text)}
-                                  </span>
+                                  <div className="flex flex-1 items-center gap-2 min-w-0">
+                                      <span className="truncate font-bold">
+                                          {localizedText(item.text)}
+                                      </span>
+
+                                      {item.tooltip !== undefined && (
+                                          <Tooltip
+                                              position="bottom"
+                                              mobilePosition="top"
+                                              label={localizedText(
+                                                  item.tooltip,
+                                              )}
+                                          >
+                                              <button
+                                                  type="button"
+                                                  className="shrink-0 text-white/40 transition-colors hover:text-white/80 cursor-help"
+                                                  onClick={(e) =>
+                                                      e.stopPropagation()
+                                                  }
+                                                  aria-label={t(
+                                                      "checklist.accessibility.tooltip",
+                                                  )}
+                                              >
+                                                  <span
+                                                      aria-hidden="true"
+                                                      className="flex h-4 w-4 items-center justify-center text-[17px] leading-none"
+                                                  >
+                                                      ⓘ
+                                                  </span>
+                                              </button>
+                                          </Tooltip>
+                                      )}
+                                  </div>
                               </span>
                           )}
                 </div>

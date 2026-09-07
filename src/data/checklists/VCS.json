@@ -355,7 +355,13 @@
                 },
                 {
                     "id": "ms-13",
-                    "text": "Aprisa*"
+                    "text": "Aprisa",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 }
             ]
         },
@@ -407,7 +413,13 @@
                 },
                 {
                     "id": "mc-02",
-                    "text": "Memorial Hyman, o muere en el intento*"
+                    "text": "Memorial Hyman, o muere en el intento",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 },
                 {
                     "id": "mc-03",
@@ -427,11 +439,23 @@
                 },
                 {
                     "id": "mc-07",
-                    "text": "Fardando en el muelle*"
+                    "text": "Fardando en el muelle",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 },
                 {
                     "id": "mc-08",
-                    "text": "Fardando en el parking*"
+                    "text": "Fardando en el parking",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 },
                 {
                     "id": "mc-09",
@@ -439,7 +463,13 @@
                 },
                 {
                     "id": "mc-10",
-                    "text": "El cochecito leré*"
+                    "text": "El cochecito leré",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 },
                 {
                     "id": "mc-11",
@@ -447,7 +477,13 @@
                 },
                 {
                     "id": "mc-12",
-                    "text": "Criminales con manguitos*"
+                    "text": "Criminales con manguitos",
+                    "tooltip": {
+                        "es": "Solo disponible en la versión de PS2",
+                        "en": "Only available in the PS2 version",
+                        "fr": "Disponible uniquement dans la version PS2",
+                        "pt": "Disponível apenas na versão de PS2"
+                    }
                 }
             ]
         },
