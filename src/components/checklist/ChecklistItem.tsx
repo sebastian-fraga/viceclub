@@ -1,7 +1,7 @@
 import { Tooltip } from "@/components/ui/Tooltip";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import type { ChecklistItemData } from "@/types/checklist";
-import { IconCheck, IconChevronDown, IconInfoCircle, IconInfoSmall } from "@tabler/icons-react";
+import { IconCheck, IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -38,8 +38,10 @@ export function ChecklistItem({
           : "";
     return (
         <li
-            className={`rounded-4xl transition-colors duration-200 ${
-                checked ? "bg-white/2" : "bg-white/5"
+            className={`rounded-4xl border transition-colors duration-200 ${
+                checked
+                    ? "bg-(--game-accent)/6 border-(--game-accent)/10"
+                    : "bg-white/5 border-transparent"
             }`}
             data-id={item.id}
         >
@@ -94,10 +96,8 @@ export function ChecklistItem({
                                   key={i}
                                   className={`flex items-center gap-2 text-sm transition-colors duration-200 ${
                                       checked
-                                          ? "text-indigo-100/50 line-through decoration-white/30"
-                                          : i > 0
-                                            ? "text-indigo-100/90"
-                                            : "text-indigo-100/90"
+                                          ? "text-indigo-100/60 line-through decoration-indigo-100/20"
+                                          : "text-indigo-100/90"
                                   }`}
                               >
                                   {entry.icon && (

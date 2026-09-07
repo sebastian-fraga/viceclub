@@ -44,7 +44,7 @@ export function ChecklistSection({
             }`}
         >
             <h3
-                className="flex items-center gap-3.5 px-6 py-3 cursor-pointer select-none max-mobile:px-3 max-mobile:py-2.5"
+                className="flex items-center gap-3.5 px-6 py-3 cursor-pointer select-none max-mobile:px-3 max-mobile:py-2.5 font-body-condensed"
                 role="button"
                 tabIndex={0}
                 aria-expanded={open}
@@ -69,7 +69,7 @@ export function ChecklistSection({
                 </span>
 
                 <div className="flex items-center gap-3">
-                    <span className="text-xs text-white/60 tabular-nums">
+                    <span className="text-xs text-white/60 tabular-nums font-body-condensed">
                         {doneCount} / {ids.length}
                     </span>
                     <Tooltip

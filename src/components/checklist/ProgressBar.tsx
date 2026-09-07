@@ -14,7 +14,7 @@ export function ProgressBar({ progress }: ProgressBarProps) {
         <div className="mb-2 flex flex-col gap-2 max-mobile:mb-3">
             <div className="flex items-center justify-between text-xs text-white/60">
                 <span className="uppercase">{t("checklist.progress")}</span>
-                <span className="tabular-nums">
+                <span className="tabular-nums font-body-condensed">
                     {count} / {total}
                 </span>
             </div>
@@ -28,7 +28,7 @@ export function ProgressBar({ progress }: ProgressBarProps) {
                 />
             </div>
 
-            <span className="self-end text-xs font-bold text-white/80 tabular-nums">
+            <span className="self-end text-xs font-bold text-white/80 tabular-nums font-body-condensed">
                 {pct}%
             </span>
         </div>
