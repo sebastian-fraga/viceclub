@@ -4,8 +4,10 @@ import { useMap } from "react-leaflet";
 
 export default function FitToContainer({
     bounds,
+    padding = 0,
 }: {
     bounds: LatLngBoundsExpression;
+    padding?: number;
 }) {
     const map = useMap();
     const hasFittedRef = useRef(false);
@@ -16,11 +18,9 @@ export default function FitToContainer({
         const fitMapToBounds = () => {
             try {
                 map.fitBounds(bounds, {
-                    padding: [0, 0],
+                    padding: [padding, padding],
                     maxZoom: 2,
                 });
-
-                map.setMaxBounds(bounds);
             } catch (error) {
                 console.error("Error fitting map to bounds:", error);
             }
@@ -50,7 +50,7 @@ export default function FitToContainer({
 
             map.off("resize", onResize);
         };
-    }, [map, bounds]);
+    }, [map, bounds, padding]);
 
     return null;
 }

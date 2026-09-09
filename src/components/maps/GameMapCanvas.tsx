@@ -39,12 +39,20 @@ export default function GameMapCanvas({
         totalForType: number;
     } | null>(null);
 
-    const MAP_PADDING = 200;
+    const MAP_PADDING = 150;
 
-    const bounds: LatLngBoundsExpression = useMemo(
+    const mapBounds: LatLngBoundsExpression = useMemo(
         () => [
             [-MAP_PADDING, -MAP_PADDING],
             [height + MAP_PADDING, width + MAP_PADDING],
+        ],
+        [height, width],
+    );
+
+    const tileBounds: LatLngBoundsExpression = useMemo(
+        () => [
+            [0, 0],
+            [height, width],
         ],
         [height, width],
     );
@@ -147,7 +155,7 @@ export default function GameMapCanvas({
                     <div className="relative min-h-0 min-w-0 h-full overflow-hidden rounded-4xl bg-slate-800/30 bg-[radial-gradient(color-mix(in_oklab,var(--color-indigo-300)_15%,transparent)_1px,transparent_1px)] bg-size-[22px_22px] shadow-2xl shadow-slate-700/25 max-xl:rounded-3xl max-mobile:mb-0 max-mobile:h-[65vh] max-mobile:min-h-100 max-mobile:max-h-162.5">
                         <MapContainer
                             crs={gameCRS}
-                            maxBounds={bounds}
+                            maxBounds={mapBounds}
                             maxBoundsViscosity={1.0}
                             minZoom={minZoom}
                             maxZoom={maxZoom + 2}
@@ -158,7 +166,7 @@ export default function GameMapCanvas({
                         >
                             <TileLayer
                                 url={tilesUrl}
-                                bounds={bounds}
+                                bounds={tileBounds}
                                 noWrap
                                 tileSize={256}
                                 maxNativeZoom={maxZoom}
@@ -183,7 +191,10 @@ export default function GameMapCanvas({
                                 }
                             />
 
-                            <FitToContainer bounds={bounds} />
+                            <FitToContainer
+                                bounds={tileBounds}
+                                padding={MAP_PADDING}
+                            />
                             <ZoomControls />
 
                             {selectedCollectible && (
