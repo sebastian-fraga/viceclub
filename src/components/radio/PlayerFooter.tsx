@@ -8,7 +8,7 @@ import {
     IconVolume3,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useEffectEvent, useRef, useState } from "react";
 
 import useT from "@/hooks/useT";
 import clsx from "clsx";
@@ -168,7 +168,7 @@ export function PlayerFooter({
             setIsDragging(false);
             setDragRatio(null);
 
-            onSeek(ratio * duration);
+            handleSeekEffect(ratio * duration);
         };
 
         const handlePointerCancel = () => {
@@ -192,9 +192,12 @@ export function PlayerFooter({
         hasStation,
         duration,
         getRatioFromClientX,
-        onSeek,
         releaseActivePointerCapture,
     ]);
+
+    const handleSeekEffect = useEffectEvent((seconds: number) => {
+        onSeek(seconds);
+    });
 
     return (
         <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 shadow-2xl shadow-pink-300/5 max-mobile:w-full max-mobile:max-w-125 max-mobile:px-12 max-mobile:py-5 max-mobile:flex-col max-mobile:gap-4">

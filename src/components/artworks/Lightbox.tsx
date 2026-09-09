@@ -5,7 +5,7 @@ import {
     IconDownload,
     IconX,
 } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
+import { useEffect, useEffectEvent, useState } from "react";
 import {
     getCaption,
     getImageUrl,
@@ -50,6 +50,10 @@ export function Lightbox({
     const mobileButtonsStyles =
         "hidden max-mobile:flex absolute top-1/2 -translate-y-1/2 items-center justify-center p-2 text-white transition duration-400 disabled:text-white/30 cursor-pointer disabled:cursor-not-allowed";
 
+    const handleCloseEffect = useEffectEvent(() => {
+        onClose();
+    });
+
     function handleClose() {
         setIsClosing(true);
     }
@@ -58,11 +62,11 @@ export function Lightbox({
         if (!isClosing) return;
 
         const timeout = setTimeout(() => {
-            onClose();
+            handleCloseEffect();
         }, 400);
 
         return () => clearTimeout(timeout);
-    }, [isClosing, onClose]);
+    }, [isClosing]);
 
     async function handleDownload() {
         if (isDownloading) return;
@@ -159,17 +163,17 @@ export function Lightbox({
         };
     }, []);
 
+    const handleKeyEffect = useEffectEvent((e: KeyboardEvent) => {
+        if (e.key === "Escape") handleClose();
+        if (e.key === "ArrowLeft") onPrev();
+        if (e.key === "ArrowRight") onNext();
+    });
+
     useEffect(() => {
-        function handleKey(e: KeyboardEvent) {
-            if (e.key === "Escape") handleClose();
-            if (e.key === "ArrowLeft") onPrev();
-            if (e.key === "ArrowRight") onNext();
-        }
+        window.addEventListener("keydown", handleKeyEffect);
 
-        window.addEventListener("keydown", handleKey);
-
-        return () => window.removeEventListener("keydown", handleKey);
-    }, [onPrev, onNext]);
+        return () => window.removeEventListener("keydown", handleKeyEffect);
+    }, []);
 
     return (
         <div
