@@ -152,6 +152,8 @@ function AnimatedMarker({
                                 background: meta.color,
                                 borderRadius: "100%",
                                 padding: "2px",
+                                border: "1px solid",
+                                borderColor: `color-mix(in srgb, ${meta.color} 65%, black)`,
                             }}
                         />
                     </motion.div>,
