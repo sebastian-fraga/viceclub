@@ -1,0 +1,12 @@
+{
+    "gameId": "LCS",
+    "mapMeta": {
+        "width": 1920,
+        "height": 1339,
+        "minZoom": 2.5,
+        "maxZoom": 3
+    },
+    "collectibles": {},
+    "challenges": {},
+    "locations": {}
+}

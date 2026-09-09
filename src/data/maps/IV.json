@@ -1,0 +1,12 @@
+{
+    "gameId": "IV",
+    "mapMeta": {
+        "width": 5632,
+        "height": 3632,
+        "minZoom": 3,
+        "maxZoom": 5
+    },
+    "collectibles": {},
+    "challenges": {},
+    "locations": {}
+}

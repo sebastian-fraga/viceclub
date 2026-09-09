@@ -1,0 +1,12 @@
+{
+    "gameId": "VC",
+    "mapMeta": {
+        "width": 3660,
+        "height": 3660,
+        "minZoom": 2,
+        "maxZoom": 4
+    },
+    "collectibles": {},
+    "challenges": {},
+    "locations": {}
+}

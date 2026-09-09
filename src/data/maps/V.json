@@ -1,0 +1,12 @@
+{
+    "gameId": "V",
+    "mapMeta": {
+        "width": 8192,
+        "height": 8192,
+        "minZoom": 2,
+        "maxZoom": 5
+    },
+    "collectibles": {},
+    "challenges": {},
+    "locations": {}
+}

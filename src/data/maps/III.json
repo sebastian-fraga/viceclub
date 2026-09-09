@@ -1,0 +1,12 @@
+{
+    "gameId": "III",
+    "mapMeta": {
+        "width": 4567,
+        "height": 3564,
+        "minZoom": 3,
+        "maxZoom": 5
+    },
+    "collectibles": {},
+    "challenges": {},
+    "locations": {}
+}

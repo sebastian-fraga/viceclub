@@ -1,9 +1,12 @@
 ---
-import UnderConstruction from "@/components/404/UnderConstruction";
+import GameMap from "@/components/maps/GameMap";
+
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import "../../components/maps/map.css";
 
 export function getStaticPaths() {
     return Object.entries(seo)
@@ -29,7 +32,10 @@ const gameSeo = seo[game]?.mapa;
     canonical={`https://www.viceclub.app/${game}/mapa`}
     game={gameData}
 >
-    <main class="flex min-h-screen flex-col items-center justify-center">
-        <UnderConstruction client:load gameId={game} />
+    <main
+        class="ml-0 h-screen bg-linear-135 from-[#15151F] to-[#1E1E33] md:ml-(--sidebar-width)"
+        style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
+    >
+        <GameMap client:only="react" gameId={game} />
     </main>
 </BaseLayout>
