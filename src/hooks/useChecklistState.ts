@@ -29,6 +29,7 @@ export function useChecklistState(game: string, tabId: string) {
                 setChecked({});
             }
         };
+
         window.addEventListener("checklist-progress-reset", handleReset);
 
         return () => {
@@ -36,34 +37,31 @@ export function useChecklistState(game: string, tabId: string) {
         };
     }, [game]);
 
-    const toggleItem = useCallback(
-        (id: string) => {
-            setChecked((prev) => {
-                const next = { ...prev, [id]: !prev[id] };
-                localStorage.setItem(
-                    getStorageKey(game, tabId),
-                    JSON.stringify(next),
-                );
-                return next;
-            });
-        },
-        [game, tabId],
-    );
+    useEffect(() => {
+        localStorage.setItem(
+            getStorageKey(game, tabId),
+            JSON.stringify(checked),
+        );
+    }, [checked, game, tabId]);
 
-    const toggleMany = useCallback(
-        (ids: string[], value: boolean) => {
-            setChecked((prev) => {
-                const next = { ...prev };
-                ids.forEach((id) => (next[id] = value));
-                localStorage.setItem(
-                    getStorageKey(game, tabId),
-                    JSON.stringify(next),
-                );
-                return next;
+    const toggleItem = useCallback((id: string) => {
+        setChecked((prev) => ({
+            ...prev,
+            [id]: !prev[id],
+        }));
+    }, []);
+
+    const toggleMany = useCallback((ids: string[], value: boolean) => {
+        setChecked((prev) => {
+            const next = { ...prev };
+
+            ids.forEach((id) => {
+                next[id] = value;
             });
-        },
-        [game, tabId],
-    );
+
+            return next;
+        });
+    }, []);
 
     return { checked, toggleItem, toggleMany };
 }

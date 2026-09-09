@@ -1,6 +1,7 @@
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import useT from "@/hooks/useT";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 const HERO_IMAGES = [
     "/assets/images/hero/1.webp",
     "/assets/images/hero/2.webp",
@@ -29,46 +30,33 @@ export default function Hero() {
     const t = useT();
     const shouldReduceMotion = useReducedMotion();
 
-    const [deck, setDeck] = useState<string[]>([]);
+    const [deck, setDeck] = useState<string[]>(() => shuffle(HERO_IMAGES));
     const [index, setIndex] = useState(0);
-
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-    useEffect(() => {
-        setDeck(shuffle(HERO_IMAGES));
-    }, []);
 
     useEffect(() => {
         if (shouldReduceMotion || deck.length === 0) return;
 
-        timerRef.current = setInterval(() => {
-            setIndex((prevIndex) => {
-                const nextIndex = prevIndex + 1;
+        const interval = setInterval(() => {
+            if (index + 1 >= deck.length) {
+                const lastImage = deck[deck.length - 1];
 
-                if (nextIndex >= deck.length) {
-                    const lastImage = deck[deck.length - 1];
+                const newDeck = shuffle(HERO_IMAGES);
 
-                    let newDeck = shuffle(HERO_IMAGES);
-
-                    if (newDeck[0] === lastImage && newDeck.length > 1) {
-                        [newDeck[0], newDeck[1]] = [newDeck[1], newDeck[0]];
-                    }
-
-                    setDeck(newDeck);
-
-                    return 0;
+                if (newDeck[0] === lastImage && newDeck.length > 1) {
+                    [newDeck[0], newDeck[1]] = [newDeck[1], newDeck[0]];
                 }
 
-                return nextIndex;
-            });
+                setDeck(newDeck);
+                setIndex(0);
+
+                return;
+            }
+
+            setIndex((prevIndex) => prevIndex + 1);
         }, ROTATE_INTERVAL_MS);
 
-        return () => {
-            if (timerRef.current) {
-                clearInterval(timerRef.current);
-            }
-        };
-    }, [deck, shouldReduceMotion]);
+        return () => clearInterval(interval);
+    }, [deck, index, shouldReduceMotion]);
 
     const currentImage = deck[index] || HERO_IMAGES[0];
 
