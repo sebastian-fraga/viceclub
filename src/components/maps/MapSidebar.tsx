@@ -80,7 +80,7 @@ export default function MapSidebar({
 
     return (
         <>
-            <aside className="mr-12 h-full w-full max-w-140 max-h-full overflow-y-auto rounded-4xl px-6 text-white max-mobile:hidden">
+            <aside className="mr-12 ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto rounded-4xl text-white max-mobile:hidden">
                 {sections.map((section) => {
                     const isCollapsed = collapsed.has(section.key);
 
