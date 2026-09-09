@@ -6,7 +6,7 @@ import type { Game } from "@/types/game";
 import { defaultLanguage } from "@/config/languages";
 
 import Sidebar from "../components/layout/Sidebar";
-import Header from "../components/layout/Header.astro";
+import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer.astro";
 import NotificationBanner from "@/components/layout/NotificationBanner";
 
@@ -106,7 +106,7 @@ const { title, description, canonical, dataGame, game } = Astro.props;
     <body data-game={dataGame} id="top">
         <Analytics/>
         <NotificationBanner client:load transition:persist />
-        <Header transition:persist />
+        <Header transition:persist client:load/>
         <Sidebar
             client:load
             currentPath={Astro.url.pathname}
