@@ -102,7 +102,7 @@ export default function MapSidebar({
                                 <IconChevronDown
                                     size={18}
                                     className={`text-white/50 transition duration-200 group-hover:text-white ${
-                                        isCollapsed ? "-rotate-180" : "rotate-0"
+                                        isCollapsed ? "rotate-0" : "rotate-180"
                                     }`}
                                 />
                             </button>
@@ -212,8 +212,8 @@ export default function MapSidebar({
                                                                 size={18}
                                                                 className={`text-white/50 transition duration-200 group-hover:text-white ${
                                                                     isCollapsed
-                                                                        ? "-rotate-180"
-                                                                        : "rotate-0"
+                                                                        ? "rotate-0"
+                                                                        : "rotate-180"
                                                                 }`}
                                                             />
                                                         </button>
