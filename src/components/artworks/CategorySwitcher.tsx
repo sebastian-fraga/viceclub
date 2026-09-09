@@ -13,10 +13,11 @@ const buttonClass =
 export function CategorySwitcher({ active, onChange }: Props) {
     const t = useT();
 
+    const scrollToTop = useScrollToTop();
+
     function handleChange(category: MediaCategory) {
         if (category === active) return;
 
-        const scrollToTop = useScrollToTop();
         scrollToTop();
 
         onChange(category);
@@ -30,7 +31,7 @@ export function CategorySwitcher({ active, onChange }: Props) {
 
             <div className="pointer-events-auto fixed left-1/2 z-30 flex -translate-x-1/2 justify-center gap-2 mobile:top-[calc(var(--banner-height)+var(--header-height)+20px)] max-mobile:bottom-0 max-mobile:w-full max-mobile:bg-(--button-bg) max-mobile:px-3 max-mobile:pt-6 max-mobile:pb-[calc(3rem+env(safe-area-inset-bottom))]">
                 <button
-                    onClick={() => onChange("artworks")}
+                    onClick={() => handleChange("artworks")}
                     aria-pressed={active === "artworks"}
                     data-active={active === "artworks"}
                     className={`${buttonClass} ${
@@ -43,7 +44,7 @@ export function CategorySwitcher({ active, onChange }: Props) {
                 </button>
 
                 <button
-                    onClick={() => onChange("screenshots")}
+                    onClick={() => handleChange("screenshots")}
                     aria-pressed={active === "screenshots"}
                     data-active={active === "screenshots"}
                     className={`${buttonClass} ${
