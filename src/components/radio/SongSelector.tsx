@@ -127,7 +127,7 @@ export function SongSelector({
                         </button>
                     )}
 
-                    <div className="grid grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 w-160 max-mobile:w-full shrink-0 items-start">
+                    <div className="grid w-160 max-mobile:w-full max-mobile:min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 items-start">
                         <div className="rounded-2xl border border-violet-300 bg-linear-120 from-[#37344D] to-slate-900 p-2 max-mobile:mx-auto">
                             <img
                                 src={station.image}
