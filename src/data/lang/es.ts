@@ -921,6 +921,51 @@ export default {
             screenshots: "Capturas de pantalla",
         },
     },
+    maps: {
+        title: "Mapa interactivo de {{fullName}}",
+        markers: {
+            title: "Marcadores",
+            collectibles: {
+                title: "Coleccionables",
+                tag: "Graffiti",
+                tags: "Graffitis",
+                snapshot: "Fotografía",
+                snapshots: "Fotografías",
+                horseshoe: "Herradura",
+                horseshoes: "Herraduras",
+                oyster: "Ostra",
+                oysters: "Ostras",
+            },
+            challenges: {
+                title: "Desafíos",
+                bmx: "Desafío BMX",
+                nrg: "Desafío NRG-500",
+                chiliad: "The Chiliad Challenge",
+                beatTheCock: "Beat the Cock!",
+            },
+            locations: {
+                title: "Ubicaciones",
+                asset: "Propiedad",
+                assets: "Propiedades",
+            },
+            popup: {
+                notFoundImage: "No se encontró ninguna imagen",
+                completed: "Completado",
+                markAsCompleted: "Marcar como completado",
+                requirements: {
+                    minLevel: "Nivel mínimo de {{skill}}",
+                    availableAfter: "Disponible después de",
+                    unlockedBy: "Se desbloquea al completar",
+                },
+            },
+        },
+        skills: {
+            cycling: "habilidad con bicis",
+        },
+        accessibility: {
+            collectibleImage: "Imagen del coleccionable",
+        },
+    },
     radio: {
         title: "Radios de {{fullName}}",
         emptySelector: "No hay ninguna emisora seleccionada",
@@ -1185,6 +1230,10 @@ export default {
             next: "Siguiente",
             close: "Cerrar",
             gameIcon: "Logo de GTA {{game}}",
+            zoomIn: "Acercar",
+            zoomOut: "Alejar",
+            openSidebar: "Abrir barra lateral",
+            closeSidebar: "Cerrar barra lateral",
         },
     },
 };

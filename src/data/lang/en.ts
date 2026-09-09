@@ -921,6 +921,51 @@ export default {
             screenshots: "Screenshots",
         },
     },
+    maps: {
+        title: "{{fullName}} interactive map",
+        markers: {
+            title: "Markers",
+            collectibles: {
+                title: "Collectibles",
+                tag: "Tag",
+                tags: "Tags",
+                snapshot: "Snapshot",
+                snapshots: "Snapshots",
+                horseshoe: "Horseshoe",
+                horseshoes: "Horseshoes",
+                oyster: "Oyster",
+                oysters: "Oysters",
+            },
+            challenges: {
+                title: "Challenges",
+                bmx: "BMX Challenge",
+                nrg: "NRG-500 Challenge",
+                chiliad: "The Chiliad Challenge",
+                beatTheCock: "Beat the Cock!",
+            },
+            locations: {
+                title: "Locations",
+                asset: "Asset",
+                assets: "Assets",
+            },
+            popup: {
+                notFoundImage: "No image found",
+                completed: "Completed",
+                markAsCompleted: "Mark as completed",
+                requirements: {
+                    minLevel: "Minimum {{skill}} skill required",
+                    availableAfter: "Available after",
+                    unlockedBy: "Unlocked by completing",
+                },
+            },
+        },
+        skills: {
+            cycling: "Cycling",
+        },
+        accessibility: {
+            collectibleImage: "Collectible image",
+        },
+    },
     radio: {
         title: "Radio Stations of {{fullName}}",
         emptySelector: "No radio station selected",
@@ -1184,6 +1229,10 @@ export default {
             next: "Next",
             close: "Close",
             gameIcon: "GTA {{game}} logo",
+            zoomIn: "Zoom in",
+            zoomOut: "Zoom out",
+            openSidebar: "Open sidebar",
+            closeSidebar: "Close sidebar",
         },
     },
 };

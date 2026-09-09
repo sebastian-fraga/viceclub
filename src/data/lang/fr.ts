@@ -921,6 +921,51 @@ export default {
             screenshots: "Captures d’écran",
         },
     },
+    maps: {
+        title: "Carte interactive de {{fullName}}",
+        markers: {
+            title: "Marqueurs",
+            collectibles: {
+                title: "Objets à collectionner",
+                tag: "Tag",
+                tags: "Tags",
+                snapshot: "Photo",
+                snapshots: "Photos",
+                horseshoe: "Fer à cheval",
+                horseshoes: "Fers à cheval",
+                oyster: "Huître",
+                oysters: "Huîtres",
+            },
+            challenges: {
+                title: "Défis",
+                bmx: "Défi BMX",
+                nrg: "Défi NRG-500",
+                chiliad: "The Chiliad Challenge",
+                beatTheCock: "Beat the Cock !",
+            },
+            locations: {
+                title: "Lieux",
+                asset: "Propriété",
+                assets: "Propriétés",
+            },
+            popup: {
+                notFoundImage: "Aucune image trouvée",
+                completed: "Terminé",
+                markAsCompleted: "Marquer comme terminé",
+                requirements: {
+                    minLevel: "Niveau minimum en {{skill}} :",
+                    availableAfter: "Disponible après",
+                    unlockedBy: "Se débloque après avoir terminé",
+                },
+            },
+        },
+        skills: {
+            cycling: "habileté à vélo",
+        },
+        accessibility: {
+            collectibleImage: "Image de l’objet à collectionner",
+        },
+    },
     radio: {
         title: "Radios de {{fullName}}",
         emptySelector: "Aucune station de radio sélectionnée",
@@ -1064,6 +1109,16 @@ export default {
             spoilerContent: "Contenu contenant des spoilers",
         },
     },
+    "404": {
+        title: "Erreur 404",
+        subtitle: "La page demandée est introuvable ou n’est pas disponible.",
+        backToHome: "Retour à l’accueil",
+        underConstruction: {
+            title: "Page en construction",
+            subtitle:
+                "La page demandée est actuellement en construction ou en maintenance. Veuillez réessayer ultérieurement.",
+        },
+    },
     sidebar: {
         close: "Fermer le menu",
         home: "Accueil",
@@ -1082,16 +1137,6 @@ export default {
             radio: "Radio",
             cheats: "Codes de triche",
             timeline: "Chronologie",
-        },
-    },
-    "404": {
-        title: "Erreur 404",
-        subtitle: "La page demandée est introuvable ou n’est pas disponible.",
-        backToHome: "Retour à l’accueil",
-        underConstruction: {
-            title: "Page en construction",
-            subtitle:
-                "La page demandée est actuellement en construction ou en maintenance. Veuillez réessayer ultérieurement.",
         },
     },
     settings: {
@@ -1185,6 +1230,10 @@ export default {
             next: "Suivant",
             close: "Fermer",
             gameIcon: "Logo de GTA {{game}}",
+            zoomIn: "Zoom avant",
+            zoomOut: "Zoom arrière",
+            openSidebar: "Ouvrir la barre latérale",
+            closeSidebar: "Fermer la barre latérale",
         },
     },
 };
