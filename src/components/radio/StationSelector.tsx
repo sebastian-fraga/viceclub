@@ -92,9 +92,9 @@ export function StationSelector({
                                     damping: 20,
                                 }}
                                 className={clsx(
-                                    "group relative bg-linear-120 from-[#262438] to-slate-900 rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer  border border-white/7 hover:ring-4 hover:ring-yellow-200 focus-visible:border-yellow-200 outline-none overflow-hidden",
+                                    "group relative bg-linear-120 from-[#262438] to-slate-900 rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer border border-white/7 hover:ring-4 hover:ring-yellow-200 focus-visible:border-yellow-200 outline-none overflow-hidden",
                                     isActive &&
-                                        "border-violet-300 bg-[#37344D] border",
+                                        "border-violet-300 bg-[#37344D] border ring-4 ring-yellow-200",
                                 )}
                             >
                                 <motion.img
