@@ -404,7 +404,7 @@
                     "text": {
                         "es": "Una gota en el océano",
                         "en": "A Drop in the Ocean",
-                        "fr": "Une goutte d'eau dans l'océan",
+                        "fr": "Rien qu'une goutte dans l'océan",
                         "pt": "A Drop in the Ocean"
                     },
                     "icon": "donald"
@@ -630,7 +630,7 @@
                 "es": "Misiones RC",
                 "en": "RC Toyz Missions",
                 "fr": "Camionnettes Toyz",
-                "pt": "Missões Off-Road"
+                "pt": "Missões de Veículos de Controle Remoto"
             },
             "items": [
                 {
@@ -639,7 +639,7 @@
                         "es": "Masacre de la Mafia",
                         "en": "Mafia Massacre",
                         "fr": "Massacre de la mafia",
-                        "pt": "TOMafia MassacreDO"
+                        "pt": "Mafia Massacre"
                     }
                 },
                 {
@@ -677,7 +677,7 @@
                 "es": "Misiones de puntos de control",
                 "en": "Off-Road Challenges",
                 "fr": "Missions tout-terrain",
-                "pt": "Missões de Veículos de Controle Remoto"
+                "pt": "Missões Off-Road"
             },
             "items": [
                 {
