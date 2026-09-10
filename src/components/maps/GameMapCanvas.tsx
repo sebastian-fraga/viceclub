@@ -219,7 +219,7 @@ export default function GameMapCanvas({
                             )}
 
                             <div className="pointer-events-none absolute inset-0">
-                                <CoordinatesPicker />
+                                <CoordinatesPicker height={height} />
                             </div>
                         </MapContainer>
                     </div>
