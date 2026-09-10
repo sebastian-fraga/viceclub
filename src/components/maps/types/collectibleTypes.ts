@@ -1,4 +1,14 @@
 export const COLLECTIBLE_TYPES = {
+    hiddenPackages_III: {
+        color: "#8BC34A",
+        label: "maps.markers.collectibles.common.hiddenPackages",
+        singularLabel: "maps.markers.collectibles.common.hiddenPackage",
+    },
+    stuntJumps_III: {
+        color: "#F097FE",
+        label: "maps.markers.collectibles.common.stuntJumps",
+        singularLabel: "maps.markers.collectibles.common.stuntJump",
+    },
     tag: {
         color: "#8BC34A",
         label: "maps.markers.collectibles.tags",

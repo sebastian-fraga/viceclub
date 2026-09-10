@@ -6,7 +6,583 @@
         "minZoom": 3,
         "maxZoom": 5
     },
-    "collectibles": {},
-    "challenges": {},
-    "locations": {}
+    "collectibles": {
+        "hiddenPackages_III": [
+            { "id": "1", "x": 3246, "y": 2480 },
+            { "id": "2", "x": 3567, "y": 2226 },
+            { "id": "3", "x": 3368, "y": 2090 },
+            { "id": "4", "x": 3456, "y": 2035 },
+            { "id": "5", "x": 3551, "y": 2006 },
+            { "id": "6", "x": 3557, "y": 1755 },
+            { "id": "7", "x": 3437, "y": 1786 },
+            { "id": "8", "x": 3400, "y": 1764 },
+            {
+                "id": "9",
+                "x": 3338,
+                "y": 1735
+            },
+            {
+                "id": "10",
+                "x": 3454,
+                "y": 1681,
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Últimos deseos",
+                            "en": "Last Requests",
+                            "fr": "Dernières volontés",
+                            "pt": "Last Requests"
+                        }
+                    ]
+                }
+            },
+            { "id": "11", "x": 3725, "y": 1983 },
+            { "id": "12", "x": 3743, "y": 2054 },
+            { "id": "13", "x": 3743, "y": 2161 },
+            { "id": "14", "x": 3807, "y": 2157 },
+            { "id": "15", "x": 3906, "y": 1972 },
+            { "id": "16", "x": 4118, "y": 2093 },
+            { "id": "17", "x": 4207, "y": 2101 },
+            {
+                "id": "18",
+                "x": 3925,
+                "y": 2171,
+                "guide": { "fromX": 3925, "fromY": 1813 }
+            },
+            { "id": "19", "x": 3965, "y": 1816 },
+            { "id": "20", "x": 3854, "y": 1519 },
+            { "id": "21", "x": 4138, "y": 1262 },
+            { "id": "22", "x": 3848, "y": 1205 },
+            { "id": "23", "x": 3805, "y": 1240 },
+            { "id": "24", "x": 3772, "y": 1128 },
+            { "id": "25", "x": 3676, "y": 1102 },
+            { "id": "26", "x": 3453, "y": 1375 },
+            { "id": "27", "x": 3367, "y": 1291 },
+            { "id": "28", "x": 3449, "y": 1279 },
+            { "id": "29", "x": 3600, "y": 1064 },
+            {
+                "id": "30",
+                "x": 3871,
+                "y": 962,
+                "guide": { "fromX": 3695, "fromY": 959 }
+            },
+            { "id": "31", "x": 3532, "y": 844 },
+            { "id": "32", "x": 4153, "y": 816 },
+            { "id": "33", "x": 3436, "y": 746 },
+            { "id": "34", "x": 2412, "y": 2613 },
+            { "id": "35", "x": 2336, "y": 2352 },
+            { "id": "36", "x": 2507, "y": 2318 },
+            { "id": "37", "x": 2233, "y": 1989 },
+            { "id": "38", "x": 2553, "y": 1960 },
+            { "id": "39", "x": 2814, "y": 1859 },
+            { "id": "40", "x": 2784, "y": 1960 },
+            { "id": "41", "x": 2969, "y": 2010 },
+            { "id": "42", "x": 2689, "y": 1728 },
+            { "id": "43", "x": 2689, "y": 1680 },
+            { "id": "44", "x": 2333, "y": 1846 },
+            { "id": "45", "x": 2145, "y": 1702 },
+            { "id": "46", "x": 2201, "y": 1562 },
+            {
+                "id": "47",
+                "x": 2278,
+                "y": 1606,
+                "guide": { "fromX": 2321, "fromY": 1625 }
+            },
+            { "id": "48", "x": 2326, "y": 1575 },
+            {
+                "id": "49",
+                "x": 1900,
+                "y": 1486,
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Una gota en el océano",
+                            "en": "A Drop in the Ocean",
+                            "fr": "Rien qu'une goutte dans l'océan",
+                            "pt": "A Drop in the Ocean"
+                        }
+                    ]
+                }
+            },
+            { "id": "50", "x": 2337, "y": 1305 },
+            { "id": "51", "x": 3008, "y": 1283 },
+            { "id": "52", "x": 2906, "y": 978 },
+            { "id": "53", "x": 2764, "y": 858 },
+            { "id": "54", "x": 2703, "y": 908 },
+            { "id": "55", "x": 2708, "y": 1024 },
+            { "id": "56", "x": 2578, "y": 1066 },
+            { "id": "57", "x": 2256, "y": 852 },
+            { "id": "58", "x": 2398, "y": 726 },
+            { "id": "59", "x": 2479, "y": 683 },
+            { "id": "60", "x": 2549, "y": 699 },
+            { "id": "61", "x": 2519, "y": 529 },
+            { "id": "62", "x": 2871, "y": 431 },
+            { "id": "63", "x": 2641, "y": 319 },
+            { "id": "64", "x": 2441, "y": 268 },
+            { "id": "65", "x": 2158, "y": 391 },
+            { "id": "66", "x": 2223, "y": 403 },
+            { "id": "67", "x": 2230, "y": 470 },
+            { "id": "68", "x": 2094, "y": 523 },
+            { "id": "69", "x": 1988, "y": 376 },
+            { "id": "70", "x": 697, "y": 3034 },
+            { "id": "71", "x": 817, "y": 3082 },
+            { "id": "72", "x": 876, "y": 2927 },
+            { "id": "73", "x": 715, "y": 2741 },
+            { "id": "74", "x": 706, "y": 2718 },
+            {
+                "id": "75",
+                "x": 774,
+                "y": 2436,
+                "guide": { "fromX": 864, "fromY": 2454 }
+            },
+            { "id": "76", "x": 744, "y": 2296 },
+            { "id": "77", "x": 967, "y": 2281 },
+            { "id": "78", "x": 728, "y": 2195 },
+            { "id": "79", "x": 745, "y": 2078 },
+            { "id": "80", "x": 1205, "y": 2028 },
+            { "id": "81", "x": 1218, "y": 2080 },
+            { "id": "82", "x": 1389, "y": 2054 },
+            { "id": "83", "x": 1344, "y": 2690 },
+            { "id": "84", "x": 1385, "y": 2699 },
+            { "id": "85", "x": 1486, "y": 2652 },
+            { "id": "86", "x": 1824, "y": 2696 },
+            { "id": "87", "x": 1997, "y": 2718 },
+            {
+                "id": "88",
+                "x": 1251,
+                "y": 2525,
+                "guide": { "fromX": 1275, "fromY": 2497 }
+            },
+            { "id": "89", "x": 1443, "y": 2390 },
+            { "id": "90", "x": 1568, "y": 2310 },
+            { "id": "91", "x": 1658, "y": 2235 },
+            { "id": "92", "x": 1330, "y": 1342 },
+            { "id": "93", "x": 1294, "y": 1264 },
+            { "id": "94", "x": 1152, "y": 1716 },
+            { "id": "95", "x": 921, "y": 1547 },
+            { "id": "96", "x": 569, "y": 1512 },
+            { "id": "97", "x": 616, "y": 1304 },
+            { "id": "98", "x": 275, "y": 1159 },
+            { "id": "99", "x": 363, "y": 879 },
+            { "id": "100", "x": 1591, "y": 945 }
+        ],
+        "stuntJumps_III": [
+            {
+                "id": "1",
+                "x": 3519,
+                "y": 1638,
+                "guide": { "fromX": 3529, "fromY": 1699 }
+            },
+            {
+                "id": "2",
+                "x": 3249,
+                "y": 1504,
+                "guide": { "fromX": 3250, "fromY": 1586 }
+            },
+            {
+                "id": "3",
+                "x": 4026,
+                "y": 1081,
+                "guide": { "fromX": 4027, "fromY": 1025 }
+            },
+            {
+                "id": "4",
+                "x": 3840,
+                "y": 855,
+                "guide": { "fromX": 3752, "fromY": 852 }
+            },
+            {
+                "id": "5",
+                "x": 3697,
+                "y": 803,
+                "guide": { "fromX": 3835, "fromY": 801 }
+            },
+            {
+                "id": "6",
+                "x": 3853,
+                "y": 1056,
+                "guide": { "fromX": 3723, "fromY": 1026 }
+            },
+            {
+                "id": "7",
+                "x": 3376,
+                "y": 1101,
+                "guide": { "fromX": 3499, "fromY": 1101 }
+            },
+            {
+                "id": "8",
+                "x": 3190,
+                "y": 1108,
+                "guide": { "fromX": 3278, "fromY": 1107 }
+            },
+            {
+                "id": "9",
+                "x": 2849,
+                "y": 1182,
+                "guide": { "fromX": 2850, "fromY": 1067 }
+            },
+            {
+                "id": "10",
+                "x": 2548,
+                "y": 1022,
+                "guide": { "fromX": 2421, "fromY": 1021 }
+            },
+            {
+                "id": "11",
+                "x": 2710,
+                "y": 1226,
+                "guide": { "fromX": 2659, "fromY": 1106 }
+            },
+            {
+                "id": "12",
+                "x": 2611,
+                "y": 1640,
+                "guide": { "fromX": 2605, "fromY": 1517 }
+            },
+            {
+                "id": "13",
+                "x": 857,
+                "y": 1547,
+                "guide": { "fromX": 733, "fromY": 1549 }
+            },
+            {
+                "id": "14",
+                "x": 496,
+                "y": 1397,
+                "guide": { "fromX": 498, "fromY": 1539 }
+            },
+            {
+                "id": "15",
+                "x": 406,
+                "y": 1197,
+                "guide": { "fromX": 584, "fromY": 1199 }
+            },
+            {
+                "id": "16",
+                "x": 781,
+                "y": 1194,
+                "guide": { "fromX": 923, "fromY": 1197 }
+            },
+            {
+                "id": "17",
+                "x": 1292,
+                "y": 2032,
+                "guide": { "fromX": 1342, "fromY": 2214 }
+            },
+            {
+                "id": "18",
+                "x": 1135,
+                "y": 2604,
+                "guide": { "fromX": 890, "fromY": 2623 }
+            },
+            {
+                "id": "19",
+                "x": 687,
+                "y": 2424,
+                "guide": { "fromX": 843, "fromY": 2430 }
+            },
+            {
+                "id": "20",
+                "x": 742,
+                "y": 2384,
+                "guide": { "fromX": 742, "fromY": 2310 }
+            }
+        ]
+    },
+    "sideMissions": {
+        "rampages_III": [
+            {
+                "id": "1",
+                "x": 3918,
+                "y": 1906,
+                "guide": { "fromX": 3806, "fromY": 1815 }
+            },
+            {
+                "id": "2",
+                "x": 3792,
+                "y": 1658,
+                "guide": { "fromX": 3683, "fromY": 1249 }
+            },
+            {
+                "id": "3",
+                "x": 3891,
+                "y": 1356,
+                "guide": { "fromX": 3770, "fromY": 1552 }
+            },
+            {
+                "id": "4",
+                "x": 3638,
+                "y": 1192,
+                "guide": { "fromX": 3493, "fromY": 1007 }
+            },
+            {
+                "id": "5",
+                "x": 3480,
+                "y": 1756,
+                "guide": { "fromX": 3516, "fromY": 1147 }
+            },
+            {
+                "id": "6",
+                "x": 3389,
+                "y": 1255,
+                "guide": { "fromX": 3869, "fromY": 1556 }
+            },
+            {
+                "id": "7",
+                "x": 2480,
+                "y": 1914,
+                "guide": { "fromX": 2808, "fromY": 2112 }
+            },
+            {
+                "id": "8",
+                "x": 2219,
+                "y": 1719,
+                "guide": { "fromX": 2481, "fromY": 1861 }
+            },
+            {
+                "id": "9",
+                "x": 2844,
+                "y": 1433,
+                "guide": { "fromX": 2731, "fromY": 1541 }
+            },
+            {
+                "id": "10",
+                "x": 2268,
+                "y": 1147,
+                "guide": { "fromX": 2416, "fromY": 1579 }
+            },
+            {
+                "id": "11",
+                "x": 2188,
+                "y": 919,
+                "guide": { "fromX": 2130, "fromY": 540 }
+            },
+            {
+                "id": "12",
+                "x": 2553,
+                "y": 726,
+                "guide": { "fromX": 2810, "fromY": 546 }
+            },
+            {
+                "id": "13",
+                "x": 2211,
+                "y": 366,
+                "guide": { "fromX": 2232, "fromY": 825 }
+            },
+            {
+                "id": "14",
+                "x": 1549,
+                "y": 2666,
+                "guide": { "fromX": 761, "fromY": 2504 }
+            },
+            {
+                "id": "15",
+                "x": 1715,
+                "y": 2466,
+                "guide": { "fromX": 1255, "fromY": 2494 }
+            },
+            {
+                "id": "16",
+                "x": 749,
+                "y": 2356,
+                "guide": { "fromX": 759, "fromY": 2254 }
+            },
+            {
+                "id": "17",
+                "x": 1556,
+                "y": 2297,
+                "guide": { "fromX": 1461, "fromY": 1789 }
+            },
+            {
+                "id": "18",
+                "x": 1130,
+                "y": 2109,
+                "guide": { "fromX": 1038, "fromY": 1901 }
+            },
+            {
+                "id": "19",
+                "x": 995,
+                "y": 2044,
+                "guide": { "fromX": 853, "fromY": 2571 }
+            },
+            {
+                "id": "20",
+                "x": 1353,
+                "y": 1491,
+                "guide": { "fromX": 765, "fromY": 1986 }
+            }
+        ],
+        "rcToyz_III": [
+            {
+                "id": "1",
+                "x": 3738,
+                "y": 1912,
+                "description": {
+                    "es": "Masacre de la Mafia",
+                    "en": "Mafia Massacre",
+                    "fr": "Massacre de la mafia",
+                    "pt": "Mafia Massacre"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Las chicas de Luigi",
+                            "en": "Luigi's Girls",
+                            "fr": "Les Filles de Luigi",
+                            "pt": "Luigi's Girls"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "2",
+                "x": 3539,
+                "y": 2149,
+                "description": {
+                    "es": "Destrucción de los Diablos",
+                    "en": "Diablo Destruction",
+                    "fr": "Destruction de Diablo",
+                    "pt": "Diablo Destruction"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Las chicas de Luigi",
+                            "en": "Luigi's Girls",
+                            "fr": "Les Filles de Luigi",
+                            "pt": "Luigi's Girls"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "3",
+                "x": 2742,
+                "y": 605,
+                "description": {
+                    "es": "Calamidad del Casino",
+                    "en": "Casino Calamity",
+                    "fr": "Gaz à tous les étages",
+                    "pt": "Casino Calamity"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Últimos deseos",
+                            "en": "Last Requests",
+                            "fr": "Dernières volontés",
+                            "pt": "Last Requests"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "4",
+                "x": 1457,
+                "y": 2340,
+                "description": {
+                    "es": "Ataque Rumpo",
+                    "en": "Rumpo Rampage",
+                    "fr": "Rumpo Rampage",
+                    "pt": "Rumpo Rampage"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Una gota en el océano",
+                            "en": "A Drop in the Ocean",
+                            "fr": "Rien qu'une goutte dans l'océan",
+                            "pt": "A Drop in the Ocean"
+                        }
+                    ]
+                }
+            }
+        ],
+        "offRoad_III": [
+            {
+                "id": "1",
+                "x": 3924,
+                "y": 1559,
+                "description": {
+                    "es": "Lugar de juegos del patriota",
+                    "en": "Patriot Playground",
+                    "fr": "Terrain de jeu du Patriot",
+                    "pt": "Patriot Playground"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Las chicas de Luigi",
+                            "en": "Luigi's Girls",
+                            "fr": "Les Filles de Luigi",
+                            "pt": "Luigi's Girls"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "2",
+                "x": 2618,
+                "y": 1562,
+                "description": {
+                    "es": "Disturbio de diferentes niveles",
+                    "en": "Multistorey Mayhem",
+                    "fr": "Gaz à tous les étages",
+                    "pt": "Multistorey Mayhem"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Últimos deseos",
+                            "en": "Last Requests",
+                            "fr": "Dernières volontés",
+                            "pt": "Last Requests"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "3",
+                "x": 2341,
+                "y": 1545,
+                "description": {
+                    "es": "Un paseo por el parque",
+                    "en": "A Ride in the Park",
+                    "fr": "Un tour dans le Parc",
+                    "pt": "A Ride in the Park"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Últimos deseos",
+                            "en": "Last Requests",
+                            "fr": "Dernières volontés",
+                            "pt": "Last Requests"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "4",
+                "x": 2007,
+                "y": 2663,
+                "description": {
+                    "es": "Agarrado!",
+                    "en": "Gripped!",
+                    "fr": "Adhérence !",
+                    "pt": "Gripped!"
+                },
+                "requirements": {
+                    "unlockedBy": [
+                        {
+                            "es": "Una gota en el océano",
+                            "en": "A Drop in the Ocean",
+                            "fr": "Rien qu'une goutte dans l'océan",
+                            "pt": "A Drop in the Ocean"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
 }
