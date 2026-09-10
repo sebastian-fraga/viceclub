@@ -1,3 +1,4 @@
+import { SIDE_MISSION_TYPES } from "@/components/maps/types/sideMissionsTypes";
 import { CHALLENGE_TYPES } from "./challengeTypes";
 import { COLLECTIBLE_TYPES } from "./collectibleTypes";
 import { LOCATION_TYPES } from "./locationTypes";
@@ -6,6 +7,10 @@ export const MAP_CATEGORIES = {
     collectibles: {
         label: "maps.markers.collectibles.title",
         types: COLLECTIBLE_TYPES,
+    },
+    sideMissions: {
+        label: "maps.markers.sideMissions.title",
+        types: SIDE_MISSION_TYPES,
     },
     challenges: {
         label: "maps.markers.challenges.title",

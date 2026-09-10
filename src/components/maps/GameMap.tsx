@@ -20,6 +20,7 @@ export default function GameMap({ gameId }: GameMapProps) {
             minZoom={0}
             data={{
                 collectibles: mapData?.collectibles ?? {},
+                sideMissions: mapData?.sideMissions ?? {},
                 challenges: mapData?.challenges ?? {},
                 locations: mapData?.locations ?? {},
             }}
