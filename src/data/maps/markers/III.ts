@@ -3,15 +3,15 @@ export const III_MARKERS = {
         icon: "/assets/images/maps/III/icons/hiddenPackage.webp",
     },
     stuntJumps_III: {
-        icon: "/assets/images/maps/III/icons/hiddenPackage.webp",
+        icon: "/assets/images/maps/common/stuntJump.webp",
     },
     rampages_III: {
-        icon: "/assets/images/maps/III/icons/hiddenPackage.webp",
+        icon: "/assets/images/maps/common/rampage.webp",
     },
-    rcToyz_III: {
-        icon: "/assets/images/maps/III/icons/hiddenPackage.webp",
+    rcMission_III: {
+        icon: "/assets/images/maps/common/rc.webp",
     },
     offRoad_III: {
-        icon: "/assets/images/maps/III/icons/hiddenPackage.webp",
+        icon: "/assets/images/maps/III/icons/offRoad.webp",
     },
 } as const;

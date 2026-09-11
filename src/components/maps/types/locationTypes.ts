@@ -1,8 +1,8 @@
 export const LOCATION_TYPES = {
     assets: {
         color: "#F4C542",
-        label: "maps.markers.locations.assets",
-        singularLabel: "maps.markers.locations.asset",
+        label: "maps.markers.locations.common.assets",
+        singularLabel: "maps.markers.locations.common.asset",
     },
 } as const;
 
