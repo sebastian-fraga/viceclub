@@ -927,26 +927,55 @@ export default {
             title: "Marcadores",
             collectibles: {
                 title: "Coleccionables",
-                tag: "Graffiti",
-                tags: "Graffitis",
-                snapshot: "Fotografía",
-                snapshots: "Fotografías",
-                horseshoe: "Herradura",
-                horseshoes: "Herraduras",
-                oyster: "Ostra",
-                oysters: "Ostras",
+                common: {
+                    hiddenPackages: "Paquetes ocultos",
+                    hiddenPackage: "Paquete oculto",
+                    stuntJumps: "Saltos únicos",
+                    stuntJump: "Salto único",
+                },
+                sa: {
+                    tag: "Graffiti",
+                    tags: "Graffitis",
+                    snapshot: "Fotografía",
+                    snapshots: "Fotografías",
+                    horseshoe: "Herradura",
+                    horseshoes: "Herraduras",
+                    oyster: "Ostra",
+                    oysters: "Ostras",
+                },
+            },
+            sideMissions: {
+                title: "Actividades secundarias",
+                common: {
+                    rampages: "Masacres",
+                    rampage: "Masacre",
+                    offRoadMissions: "Misiones de puntos de control",
+                    offRoadMission: "Misión de puntos de control",
+                    rcMissions: "Misiones de RC",
+                    pizzaBoy: "Misión de repartidor de pizza"
+                },
+                iii: {
+                    rcToyz: "RC Toyz",
+                },
+                vc: {
+                    chopperCheckpoint: "Control de helicóptero",
+                    storeRobberies: "Robos de tiendas",
+                    storeRobbery: "Robo de tienda"
+                }
             },
             challenges: {
                 title: "Desafíos",
-                bmx: "Desafío BMX",
-                nrg: "Desafío NRG-500",
-                chiliad: "The Chiliad Challenge",
-                beatTheCock: "Beat the Cock!",
+                sa: {
+                    bmx: "Desafío BMX",
+                    nrg: "Desafío NRG-500",
+                },
             },
             locations: {
                 title: "Ubicaciones",
-                asset: "Propiedad",
-                assets: "Propiedades",
+                common: {
+                    asset: "Propiedad",
+                    assets: "Propiedades",
+                },
             },
             popup: {
                 notFoundImage: "No se encontró ninguna imagen",
