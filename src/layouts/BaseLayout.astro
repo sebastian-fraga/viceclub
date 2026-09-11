@@ -38,10 +38,19 @@ const { title, description, canonical, dataGame, game } = Astro.props;
 
         <meta name="theme-color" content="#38365d" />
 
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
         <meta name="apple-mobile-web-app-title" content="Vice Club" />
         <link rel="manifest" href="/site.webmanifest" />
 
@@ -79,20 +88,21 @@ const { title, description, canonical, dataGame, game } = Astro.props;
         <meta property="og:type" content="website" />
 
         <title>{title}</title>
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": title,
-            "description": description,
-            "url": canonical,
-            "isPartOf": {
-                "@type": "WebSite",
-                "name": "Vice Club",
-                "url": "https://www.viceclub.app"
-            }
-        }
-        </script>
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                name: title,
+                description: description,
+                url: canonical,
+                isPartOf: {
+                    "@type": "WebSite",
+                    name: "Vice Club",
+                    url: "https://www.viceclub.app",
+                },
+            })}
+        />
         <style is:global>
             :root {
                 --sidebar-width: 88px;
@@ -104,9 +114,9 @@ const { title, description, canonical, dataGame, game } = Astro.props;
     </head>
 
     <body data-game={dataGame} id="top">
-        <Analytics/>
+        <Analytics />
         <NotificationBanner client:load transition:persist />
-        <Header transition:persist client:load/>
+        <Header transition:persist client:load />
         <Sidebar
             client:load
             currentPath={Astro.url.pathname}
