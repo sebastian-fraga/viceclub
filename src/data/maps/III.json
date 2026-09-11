@@ -26,7 +26,7 @@
                 "x": 3454,
                 "y": 1681,
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Últimos deseos",
                             "en": "Last Requests",
@@ -94,7 +94,7 @@
                 "x": 1900,
                 "y": 1486,
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Una gota en el océano",
                             "en": "A Drop in the Ocean",
@@ -412,7 +412,7 @@
                 "guide": { "fromX": 765, "fromY": 1986 }
             }
         ],
-        "rcToyz_III": [
+        "rcMission_III": [
             {
                 "id": "1",
                 "x": 3738,
@@ -424,7 +424,7 @@
                     "pt": "Mafia Massacre"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Las chicas de Luigi",
                             "en": "Luigi's Girls",
@@ -445,7 +445,7 @@
                     "pt": "Diablo Destruction"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Las chicas de Luigi",
                             "en": "Luigi's Girls",
@@ -466,7 +466,7 @@
                     "pt": "Casino Calamity"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Últimos deseos",
                             "en": "Last Requests",
@@ -487,7 +487,7 @@
                     "pt": "Rumpo Rampage"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Una gota en el océano",
                             "en": "A Drop in the Ocean",
@@ -510,7 +510,7 @@
                     "pt": "Patriot Playground"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Las chicas de Luigi",
                             "en": "Luigi's Girls",
@@ -531,7 +531,7 @@
                     "pt": "Multistorey Mayhem"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Últimos deseos",
                             "en": "Last Requests",
@@ -552,7 +552,7 @@
                     "pt": "A Ride in the Park"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Últimos deseos",
                             "en": "Last Requests",
@@ -573,7 +573,7 @@
                     "pt": "Gripped!"
                 },
                 "requirements": {
-                    "unlockedBy": [
+                    "availableAfter": [
                         {
                             "es": "Una gota en el océano",
                             "en": "A Drop in the Ocean",
