@@ -934,14 +934,14 @@ export default {
                     stuntJump: "Salto único",
                 },
                 sa: {
-                    tag: "Graffiti",
                     tags: "Graffitis",
-                    snapshot: "Fotografía",
+                    tag: "Graffiti",
                     snapshots: "Fotografías",
-                    horseshoe: "Herradura",
+                    snapshot: "Fotografía",
                     horseshoes: "Herraduras",
-                    oyster: "Ostra",
+                    horseshoe: "Herradura",
                     oysters: "Ostras",
+                    oyster: "Ostra",
                 },
             },
             sideMissions: {
@@ -960,7 +960,8 @@ export default {
                 vc: {
                     chopperCheckpoint: "Control de helicóptero",
                     storeRobberies: "Robos de tiendas",
-                    storeRobbery: "Robo de tienda"
+                    storeRobbery: "Robo de tienda",
+                    rcMission: "Misión de RC"
                 }
             },
             challenges: {
@@ -973,8 +974,8 @@ export default {
             locations: {
                 title: "Ubicaciones",
                 common: {
-                    asset: "Propiedad",
                     assets: "Propiedades",
+                    asset: "Propiedad",
                 },
             },
             popup: {
