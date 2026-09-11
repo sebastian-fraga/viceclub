@@ -1,3 +1,4 @@
 .leaflet-container {
     background: transparent !important;
+    z-index: 0;
 }
