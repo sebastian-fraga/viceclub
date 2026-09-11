@@ -394,11 +394,11 @@
             "items": [
                 {
                     "id": "rc-01",
-                    "text": "Carreras Bandit RC"
+                    "text": "Carrera Bandit RC"
                 },
                 {
                     "id": "rc-02",
-                    "text": "Recogidas del Helicóptero RC"
+                    "text": "Recogidas del Raider RC"
                 },
                 {
                     "id": "rc-03",
@@ -416,7 +416,7 @@
                 },
                 {
                     "id": "pc-02",
-                    "text": "Prueba PCJ"
+                    "text": "Prueba de PCJ"
                 },
                 {
                     "id": "pc-03",
