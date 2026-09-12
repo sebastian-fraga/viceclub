@@ -45,7 +45,7 @@ export default function Header() {
             <button
                 type="button"
                 id="mobile-menu-toggle"
-                aria-label={i18n("common.accessibilty.openSidebar")}
+                aria-label={i18n("common.accessibility.openSidebar")}
                 aria-expanded="false"
                 className="mobile:hidden max-mobile:flex absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-lg text-slate-200 hover:text-white bg-white/10 transition z-20000 cursor-pointer"
             >
