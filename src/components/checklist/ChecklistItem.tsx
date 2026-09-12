@@ -23,13 +23,20 @@ export function ChecklistItem({
     hasDropdown = false,
     children,
 }: ChecklistItemProps) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const localizedText = useLocalizedText();
     const [open, setOpen] = useState(false);
 
     const toggleDropdown = () => {
         if (hasDropdown) setOpen((prev) => !prev);
     };
+
+    const currentLang = i18n.language.split("-")[0];
+
+    const tooltipText =
+        item.tooltip && typeof item.tooltip === "object"
+            ? item.tooltip[currentLang as keyof typeof item.tooltip]
+            : undefined;
 
     const ariaLabel = item.texts
         ? item.texts.map((e) => localizedText(e.text)).join(" / ")
@@ -138,13 +145,11 @@ export function ChecklistItem({
                                           {localizedText(item.text)}
                                       </span>
 
-                                      {item.tooltip !== undefined && (
+                                      {tooltipText && (
                                           <Tooltip
                                               position="bottom"
                                               mobilePosition="top"
-                                              label={localizedText(
-                                                  item.tooltip,
-                                              )}
+                                              label={tooltipText}
                                           >
                                               <button
                                                   type="button"
