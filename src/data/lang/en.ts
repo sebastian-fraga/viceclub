@@ -1174,6 +1174,10 @@ export default {
             default: "Default",
             select: "Select",
         },
+        error: {
+            importBackup:
+                "Error reading the file. Are you sure it belongs to Vice Club?",
+        },
         sections: {
             general: {
                 title: "General",
@@ -1191,6 +1195,14 @@ export default {
                     },
                     4: {
                         name: "Reduced motion",
+                    },
+                    5: {
+                        name: "Export data",
+                    },
+                    6: {
+                        name: "Import data",
+                        description:
+                            "Load a previous backup and replace your current progress",
                     },
                 },
             },
@@ -1253,6 +1265,8 @@ export default {
             goBack: "Go back",
             selectPlatform: "Select platform",
             download: "Download",
+            export: "Export",
+            import: "Import",
         },
         accessibility: {
             prev: "Previous",

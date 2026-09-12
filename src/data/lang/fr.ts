@@ -1175,6 +1175,10 @@ export default {
             default: "Par défaut",
             select: "Sélectionner",
         },
+        error: {
+            importBackup:
+                "Erreur lors de la lecture du fichier. Êtes-vous sûr qu'il appartient à Vice Club ?",
+        },
         sections: {
             general: {
                 title: "Général",
@@ -1192,6 +1196,14 @@ export default {
                     },
                     4: {
                         name: "Réduire les animations",
+                    },
+                    5: {
+                        name: "Exporter les données",
+                    },
+                    6: {
+                        name: "Importer des données",
+                        description:
+                            "Chargez une sauvegarde antérieure et remplacez votre progression actuelle",
                     },
                 },
             },
@@ -1254,6 +1266,8 @@ export default {
             goBack: "Retour en arrière",
             selectPlatform: "Sélectionner une plateforme",
             download: "Télécharger",
+            export: "Exporter",
+            import: "Importer",
         },
         accessibility: {
             prev: "Précédent",

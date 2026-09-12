@@ -4,10 +4,12 @@ import {
     IconClock,
     IconDeviceGamepad,
     IconDeviceGamepad2,
+    IconDownload,
     IconLanguage,
     IconPointerFilled,
     IconRefreshAlert,
     IconTimezone,
+    IconUpload,
     IconVolume,
 } from "@tabler/icons-react";
 
@@ -52,6 +54,23 @@ export const settingsConfig: SettingsSection[] = [
                 defaultValue: false,
                 icon: IconAccessible,
             },
+            {
+                id: "export-localstorage",
+                name: "settings.sections.general.items.5.name",
+                type: "action",
+                icon: IconDownload,
+                actionLabel: "common.buttons.export",
+                actionIcon: IconDownload,
+            } satisfies ActionSetting,
+            {
+                id: "import-localstorage",
+                name: "settings.sections.general.items.6.name",
+                description: "settings.sections.general.items.6.description",
+                type: "action",
+                icon: IconUpload,
+                actionLabel: "common.buttons.import",
+                actionIcon: IconUpload,
+            } satisfies ActionSetting,
         ],
     },
     {

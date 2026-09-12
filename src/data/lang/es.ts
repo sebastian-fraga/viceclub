@@ -952,7 +952,7 @@ export default {
                     offRoadMissions: "Misiones de puntos de control",
                     offRoadMission: "Misión de puntos de control",
                     rcMissions: "Misiones de RC",
-                    pizzaBoy: "Misión de repartidor de pizza"
+                    pizzaBoy: "Misión de repartidor de pizza",
                 },
                 iii: {
                     rcToyz: "RC Toyz",
@@ -961,8 +961,8 @@ export default {
                     chopperCheckpoint: "Control de helicóptero",
                     storeRobberies: "Robos de tiendas",
                     storeRobbery: "Robo de tienda",
-                    rcMission: "Misión de RC"
-                }
+                    rcMission: "Misión de RC",
+                },
             },
             challenges: {
                 title: "Desafíos",
@@ -1175,6 +1175,10 @@ export default {
             default: "Por defecto",
             select: "Seleccionar",
         },
+        error: {
+            importBackup:
+                "Error al leer el archivo. ¿Estás seguro que pertenece a Vice Club?",
+        },
         sections: {
             general: {
                 title: "General",
@@ -1192,6 +1196,14 @@ export default {
                     },
                     4: {
                         name: "Animaciones reducidas",
+                    },
+                    5: {
+                        name: "Exportar datos",
+                    },
+                    6: {
+                        name: "Importar datos",
+                        description:
+                            "Carga un backup anterior y reemplaza tu progreso actual",
                     },
                 },
             },
@@ -1254,6 +1266,8 @@ export default {
             goBack: "Volver atrás",
             selectPlatform: "Seleccionar plataforma",
             download: "Descargar",
+            export: "Exportar",
+            import: "Importar",
         },
         accessibility: {
             prev: "Anterior",

@@ -27,6 +27,8 @@ export type SelectSetting = BaseSetting & {
 
 export type ActionSetting = BaseSetting & {
     type: "action";
+    actionLabel?: string;
+    actionIcon?: TablerIcon;
 };
 
 export type Setting =
