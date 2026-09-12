@@ -2,7 +2,12 @@
     "sections": [
         {
             "id": "mp",
-            "title": "Misiones principales",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
             "items": [
                 {
                     "id": "mp-01",
@@ -438,7 +443,12 @@
         },
         {
             "id": "mz",
-            "title": "Misiones de Zero",
+            "title": {
+                "es": "Misiones de Zero",
+                "en": "Zero RC shop missions",
+                "fr": "Missions de Zero",
+                "pt": "Missões do Zero"
+            },
             "icon": "zero",
             "items": [
                 {
@@ -457,7 +467,12 @@
         },
         {
             "id": "mwc",
-            "title": "Misiones de Wang Cars",
+            "title": {
+                "es": "Misiones de Wang Cars",
+                "en": "Wang Cars missions",
+                "fr": "Missions de Wang Cars",
+                "pt": "Missões da Wang Cars"
+            },
             "icon": "cesar",
             "items": [
                 {
@@ -480,7 +495,12 @@
         },
         {
             "id": "cal",
-            "title": "Misiones del robo al Casino Calígula",
+            "title": {
+                "es": "Misiones del robo al Casino Calígula",
+                "en": "Caligula's Casino heist missions",
+                "fr": "Missions du braquage du casino Caligula",
+                "pt": "Missões do roubo ao Cassino Calígula"
+            },
             "icon": "robo",
             "items": [
                 {
@@ -515,51 +535,106 @@
         },
         {
             "id": "ms",
-            "title": "Misiones secundarias",
+            "title": {
+                "es": "Misiones secundarias",
+                "en": "Side Missions",
+                "fr": "Missions secondaires",
+                "pt": "Missões secundárias"
+            },
             "items": [
                 {
                     "id": "ms-01",
-                    "text": "50 viajes como taxista"
+                    "text": {
+                        "es": "50 viajes como taxista",
+                        "en": "50 taxi rides completed",
+                        "fr": "50 courses en taxi effectuées",
+                        "pt": "50 corridas de táxi completadas"
+                    }
                 },
                 {
                     "id": "ms-02",
-                    "text": "Nivel 12 de paramédico completado"
+                    "text": {
+                        "es": "Nivel 12 de paramédico completado",
+                        "en": "Paramedic level 12 completed",
+                        "fr": "Niveau 12 de paramédic complété",
+                        "pt": "Nível 12 de paramédico completado"
+                    }
                 },
                 {
                     "id": "ms-03",
-                    "text": "Nivel 12 de vigilante completado"
+                    "text": {
+                        "es": "Nivel 12 de vigilante completado",
+                        "en": "Vigilante level 12 completed",
+                        "fr": "Niveau 12 d'autodéfense complété",
+                        "pt": "Nível 12 de justiciero completado"
+                    }
                 },
                 {
                     "id": "ms-04",
-                    "text": "Nivel 12 de bombero completado"
+                    "text": {
+                        "es": "Nivel 12 de bombero completado",
+                        "en": "Firefighter level 12 completed",
+                        "fr": "Niveau 12 de pompier complété",
+                        "pt": "Nível 12 de bombeiro completado"
+                    }
                 },
                 {
                     "id": "ms-05",
-                    "text": "Nivel 10 de misiones de chulo completado"
+                    "text": {
+                        "es": "Nivel 10 de misiones de chulo completado",
+                        "en": "Pimp level 10 completed",
+                        "fr": "Niveau 10 des missions de proxénète terminé",
+                        "pt": "Nível 10 de missões de cafetão concluído"
+                    }
                 },
                 {
                     "id": "ms-06",
-                    "text": "Nivel 5 de aparcacoches completado"
+                    "text": {
+                        "es": "Nivel 5 de aparcacoches completado",
+                        "en": "Valet level 5 completed",
+                        "fr": "Niveau 5 de voiturier terminé",
+                        "pt": "Nível 5 de manobrista concluído"
+                    }
                 },
                 {
                     "id": "ms-07",
-                    "text": "Nivel 2 de misiones de carga completado"
+                    "text": {
+                        "es": "Nivel 2 de misiones de maquinista completado",
+                        "en": "Freight level 2 completed",
+                        "fr": "Niveau 2 de conducteur de train terminé",
+                        "pt": "Nível 2 de maquinista concluído"
+                    }
                 },
                 {
                     "id": "ms-08",
-                    "text": "Nivel 8 de misiones de camionero completado",
+                    "text": {
+                        "es": "Nivel 8 de misiones de camionero completado",
+                        "en": "Trucking level 8 completed",
+                        "fr": "Niveau 8 de routier complété",
+                        "pt": "Nível 8 de caminhoneiro completado"
+                    },
                     "icon": "camionero"
                 },
                 {
                     "id": "ms-09",
-                    "text": "Nivel 7 de misiones de la cantera completado",
+                    "text": {
+                        "es": "7 misiones de la cantera completadas",
+                        "en": "7 Quarry missions completed",
+                        "fr": "7 missions de la carrière complétées",
+                        "pt": "7 missões da pedreira completadas"
+                    },
                     "icon": "cantera"
                 }
             ]
         },
         {
             "id": "rep",
-            "title": "Misiones de repartidor",
+            "title": {
+                "es": "Misiones de repartidos",
+                "en": "Courier missions",
+                "fr": "Missions de coursier",
+                "pt": "Missões de entregador"
+            },
             "items": [
                 {
                     "id": "rep-01",
@@ -577,7 +652,7 @@
         },
         {
             "id": "cmc",
-            "title": "Carreras del Monte Chiliad",
+            "title": "The Chiliad Challenge",
             "items": [
                 {
                     "id": "cmc-01",
@@ -595,7 +670,12 @@
         },
         {
             "id": "cls",
-            "title": "Carreras de Los Santos",
+            "title": {
+                "es": "Carreras de Los Santos",
+                "en": "Los Santos races",
+                "fr": "Courses de Los Santos",
+                "pt": "Corridas de Los Santos"
+            },
             "icon": "carrera",
             "items": [
                 {
@@ -638,7 +718,12 @@
         },
         {
             "id": "csf",
-            "title": "Carreras de San Fierro",
+            "title": {
+                "es": "Carreras de San Fierro",
+                "en": "San Fierro races",
+                "fr": "Courses de San Fierro",
+                "pt": "Corridas de San Fierro"
+            },
             "icon": "carrera",
             "items": [
                 {
@@ -669,7 +754,12 @@
         },
         {
             "id": "clv",
-            "title": "Carreras de Las Venturas",
+            "title": {
+                "es": "Carreras de Las Venturas",
+                "en": "Las Venturas races",
+                "fr": "Courses de Las Venturas",
+                "pt": "Corridas de Las Venturas"
+            },
             "icon": "carrera",
             "items": [
                 {
@@ -692,7 +782,12 @@
         },
         {
             "id": "ca",
-            "title": "Carreras aéreas",
+            "title": {
+                "es": "Carreras aéreas",
+                "en": "Air Races",
+                "fr": "Courses aériennes",
+                "pt": "Corridas aéreas"
+            },
             "icon": "carrera",
             "items": [
                 {
@@ -723,29 +818,59 @@
         },
         {
             "id": "col",
-            "title": "Coleccionables",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Coletáveis"
+            },
             "items": [
                 {
                     "id": "col-01",
-                    "text": "100 grafitis"
+                    "text": {
+                        "es": "100 grafitis",
+                        "en": "100 tags",
+                        "fr": "100 tags",
+                        "pt": "100 tags"
+                    }
                 },
                 {
                     "id": "col-02",
-                    "text": "50 fotografías"
+                    "text": {
+                        "es": "50 fotografías",
+                        "en": "50 snapshots",
+                        "fr": "50 photos",
+                        "pt": "50 fotografias"
+                    }
                 },
                 {
                     "id": "col-03",
-                    "text": "50 herraduras"
+                    "text": {
+                        "es": "50 herraduras",
+                        "en": "50 horseshoes",
+                        "fr": "50 fers à cheval",
+                        "pt": "50 ferraduras"
+                    }
                 },
                 {
                     "id": "col-04",
-                    "text": "50 ostras"
+                    "text": {
+                        "es": "50 ostras",
+                        "en": "50 oysters",
+                        "fr": "50 huîtres",
+                        "pt": "50 ostras"
+                    }
                 }
             ]
         },
         {
             "id": "imp_1",
-            "title": "Pizarrón de importación (1)",
+            "title": {
+                "es": "Pizarrón de importación (1)",
+                "en": "Import/Export (1)",
+                "fr": "Import/Export (1)",
+                "pt": "Quadro de Importação (1)"
+            },
             "items": [
                 {
                     "id": "imp_1-01",
@@ -791,7 +916,12 @@
         },
         {
             "id": "imp_2",
-            "title": "Pizarrón de importación (2)",
+            "title": {
+                "es": "Pizarrón de importación (2)",
+                "en": "Import/Export (2)",
+                "fr": "Import/Export (2)",
+                "pt": "Quadro de Importação (2)"
+            },
             "items": [
                 {
                     "id": "imp_2-01",
@@ -837,7 +967,12 @@
         },
         {
             "id": "imp_3",
-            "title": "Pizarrón de importación (3)",
+            "title": {
+                "es": "Pizarrón de importación (3)",
+                "en": "Import/Export (3)",
+                "fr": "Import/Export (3)",
+                "pt": "Quadro de Importação (3)"
+            },
             "items": [
                 {
                     "id": "imp_3-01",
@@ -883,7 +1018,12 @@
         },
         {
             "id": "est",
-            "title": "Estadios",
+            "title": {
+                "es": "Estadios",
+                "en": "Stadiums",
+                "fr": "Stades",
+                "pt": "Estádios"
+            },
             "icon": "estadio",
             "items": [
                 {
@@ -896,75 +1036,164 @@
                 },
                 {
                     "id": "est-03",
-                    "text": "Dirt Track (Las Venturas)"
+                    "text": "Dirt Track (Las Venturas)",
+                    "tooltip": {
+                        "es": "Disponible los lunes y miércoles",
+                        "en": "Available on Mondays and Wednesdays",
+                        "fr": "Disponible les lundis et mercredis",
+                        "pt": "Disponível às segundas e quartas"
+                    }
                 },
                 {
                     "id": "est-04",
-                    "text": "Kickstart (Las Venturas)"
+                    "text": "Kickstart (Las Venturas)",
+                    "tooltip": {
+                        "es": "No disponible los lunes y miércoles",
+                        "en": "Not available on Mondays and Wednesdays",
+                        "fr": "Indisponible les lundis et mercredis",
+                        "pt": "Indisponível às segundas e quartas"
+                    }
                 }
             ]
         },
         {
             "id": "esc",
-            "title": "Escuelas de conducción",
+            "title": {
+                "es": "Escuelas de conducción",
+                "en": "Schools",
+                "fr": "Écoles",
+                "pt": "Escolas"
+            },
             "icon": "escuela",
             "items": [
                 {
                     "id": "esc-01",
-                    "text": "Autoescuela de coches"
+                    "text": {
+                        "es": "Autoescuela de coches",
+                        "en": "Driving School",
+                        "fr": "École de conduite",
+                        "pt": "Escola de carros"
+                    }
                 },
                 {
                     "id": "esc-02",
-                    "text": "Escuela de aviación"
+                    "text": {
+                        "es": "Escuela de aviación",
+                        "en": "Flight School",
+                        "fr": "École de pilotage",
+                        "pt": "Escola de aviões"
+                    }
                 },
                 {
                     "id": "esc-03",
-                    "text": "Autoescuela de motos"
+                    "text": {
+                        "es": "Autoescuela de motos",
+                        "en": "Bike School",
+                        "fr": "École de moto",
+                        "pt": "Escola de motocicletas"
+                    }
                 },
                 {
                     "id": "esc-04",
-                    "text": "Escuela náutica"
+                    "text": {
+                        "es": "Escuela náutica",
+                        "en": "Boat School",
+                        "fr": "École de navigation",
+                        "pt": "Escola de barcos"
+                    }
                 }
             ]
         },
         {
             "id": "gym",
-            "title": "Estilos de pelea",
+            "title": {
+                "es": "Estilos de pelea",
+                "en": "Fighting Styles",
+                "fr": "Styles de combat",
+                "pt": "Estilos de luta"
+            },
             "icon": "gimnasio",
             "items": [
                 {
                     "id": "gym-01",
-                    "text": "Boxeo (Los Santos)"
+                    "text": {
+                        "es": "Boxeo (Los Santos)",
+                        "en": "Boxing (Los Santos)",
+                        "fr": "Boxe (Los Santos)",
+                        "pt": "Boxe (Los Santos)"
+                    }
                 },
                 {
                     "id": "gym-02",
-                    "text": "Kung Fu (San Fierro)"
+                    "text": {
+                        "es": "Kung Fu (San Fierro)",
+                        "en": "Kung Fu (San Fierro)",
+                        "fr": "Kung-fu (San Fierro)",
+                        "pt": "Kung Fu (San Fierro)"
+                    }
                 },
                 {
                     "id": "gym-03",
-                    "text": "Kick Boxing (Las Venturas)"
+                    "text": {
+                        "es": "Kick Boxing (Las Venturas)",
+                        "en": "Kickboxing (Las Venturas)",
+                        "fr": "Kick-boxing (Las Venturas)",
+                        "pt": "Kickboxing (Las Venturas)"
+                    }
                 }
             ]
         },
         {
             "id": "misc",
-            "title": "Miscelánea",
+            "title": {
+                "es": "Miscelánea",
+                "en": "Miscellaneous",
+                "fr": "Divers",
+                "pt": "Miscelânea"
+            },
             "items": [
                 {
                     "id": "misc-01",
-                    "text": "Desafío BMX completado"
+                    "text": {
+                        "es": "Desafío BMX completado",
+                        "en": "BMX Challenge completed",
+                        "fr": "Défi BMX terminé",
+                        "pt": "BMX Challenge concluído"
+                    }
                 },
                 {
                     "id": "misc-02",
-                    "text": "Desafío NRG-500 completado"
+                    "text": {
+                        "es": "Desafío NRG-500 completado",
+                        "en": "NRG-500 Challenge completed",
+                        "fr": "Défi NRG-500 terminé",
+                        "pt": "NRG-500 Challenge concluído"
+                    }
                 },
                 {
                     "id": "misc-03",
-                    "text": "Desafío de Ammu-Nation completado"
+                    "text": {
+                        "es": "Desafío de Ammu-Nation completado",
+                        "en": "Ammu-Nation challenge completed",
+                        "fr": "Défi Ammu-Nation terminé",
+                        "pt": "Desafio da Ammu-Nation concluído"
+                    },
+                    "tooltip": {
+                        "es": "Disponible después de Yay Ka-Boom-Boom",
+                        "en": "Available after Yay Ka-Boom-Boom",
+                        "fr": "Disponible après Yay Ka-Boom-Boom",
+                        "pt": "Disponível após Yay Ka-Boom-Boom"
+                    }
                 },
                 {
                     "id": "misc-04",
-                    "text": "Todas las propiedades compradas"
+                    "text": {
+                        "es": "Comprar todos los pisos francos",
+                        "en": "Purchase all the safehouses",
+                        "fr": "Posséder toutes les propriétés",
+                        "pt": "Comprar todas as propriedades"
+                    },
+                    "icon": "propiedad"
                 }
             ]
         }

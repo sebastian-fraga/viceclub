@@ -2,7 +2,12 @@
     "sections": [
         {
             "id": "mp",
-            "title": "Misiones principales",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
             "items": [
                 {
                     "id": "mp-01",
@@ -357,43 +362,111 @@
         },
         {
             "id": "ms",
-            "title": "Misiones secundarias",
+            "title": {
+                "es": "Misiones secundarias",
+                "en": "Side Missions",
+                "fr": "Missions secondaires",
+                "pt": "Missões secundárias"
+            },
             "items": [
                 {
                     "id": "ms-01",
-                    "text": "100 viajes como taxista"
+                    "text": {
+                        "es": "100 viajes como taxista",
+                        "en": "100 taxi rides completed",
+                        "fr": "100 courses en taxi effectuées",
+                        "pt": "100 corridas de táxi completadas"
+                    }
                 },
                 {
                     "id": "ms-02",
-                    "text": "Nivel 12 de paramédico completado"
+                    "text": {
+                        "es": "Nivel 12 de paramédico completado",
+                        "en": "Paramedic level 12 completed",
+                        "fr": "Niveau 12 de paramédic complété",
+                        "pt": "Nível 12 de paramédico completado"
+                    },
+                    "tooltip": {
+                        "es": "Solo requerido hasta el nivel 9 en Android y iOS",
+                        "en": "Only required up to level 9 on Android and iOS",
+                        "fr": "Requis uniquement jusqu'au niveau 9 sur Android et iOS",
+                        "pt": "Necessário apenas até o nível 9 no Android e iOS"
+                    }
                 },
                 {
                     "id": "ms-03",
-                    "text": "Nivel 12 de vigilante completado"
+                    "text": {
+                        "es": "Nivel 12 de vigilante completado",
+                        "en": "Vigilante level 12 completed",
+                        "fr": "Niveau 12 d'autodéfense complété",
+                        "pt": "Nível 12 de justiciero completado"
+                    },
+                    "tooltip": {
+                        "es": "Solo requerido hasta el nivel 9 en Android y iOS",
+                        "en": "Only required up to level 9 on Android and iOS",
+                        "fr": "Requis uniquement jusqu'au niveau 9 sur Android et iOS",
+                        "pt": "Necessário apenas até o nível 9 no Android e iOS"
+                    }
                 },
                 {
                     "id": "ms-04",
-                    "text": "Nivel 12 de bombero completado"
+                    "text": {
+                        "es": "Nivel 12 de bombero completado",
+                        "en": "Firefighter level 12 completed",
+                        "fr": "Niveau 12 de pompier complété",
+                        "pt": "Nível 12 de bombeiro completado"
+                    },
+                    "tooltip": {
+                        "es": "Solo requerido hasta el nivel 9 en Android y iOS",
+                        "en": "Only required up to level 9 on Android and iOS",
+                        "fr": "Requis uniquement jusqu'au niveau 9 sur Android et iOS",
+                        "pt": "Necessário apenas até o nível 9 no Android e iOS"
+                    }
                 },
                 {
                     "id": "ms-05",
-                    "text": "Nivel 10 de repartidor de Noodle Punk completado"
+                    "text": {
+                        "es": "Nivel 10 de repartidor de Noodle Punk completado",
+                        "en": "Noodle Punk level 10 completed",
+                        "fr": "Niveau 10 de Noodle Punk complété",
+                        "pt": "Nível 10 de Noodle Punk completado"
+                    }
                 },
                 {
                     "id": "ms-06",
-                    "text": "Nivel 10 de repartidor de pizzas completado"
+                    "text": {
+                        "es": "Nivel 10 de repartidor de pizzas completado",
+                        "en": "Pizza Boy level 10 completed",
+                        "fr": "Niveau 10 de livreur de pizza complété",
+                        "pt": "Nível 10 de Pizza Boy completado"
+                    }
                 },
                 {
                     "id": "ms-07",
-                    "text": "Nivel 12 de guía turístico completado"
+                    "text": {
+                        "es": "Nivel 12 de guía turístico completado",
+                        "en": "See the Sight Before Your Flight level 12 completed",
+                        "fr": "Niveau 12 de See the Sight Before Your Flight complété",
+                        "pt": "Nível 12 de guia turístico completado"
+                    }
                 },
                 {
                     "id": "ms-08",
-                    "text": "Nivel 6 de vendedor de coches completado"
+                    "text": {
+                        "es": "Nivel 6 de vendedor de coches completado",
+                        "en": "Car Salesman level 6 completed",
+                        "fr": "Niveau 6 de vendeur de voitures complété",
+                        "pt": "Nível 6 de Vendedor de carros completado"
+                    }
                 },
                 {
                     "id": "ms-09",
-                    "text": "40 motos vendidas como vendedor de motos"
+                    "text": {
+                        "es": "40 motos vendidas como vendedor de motos",
+                        "en": "40 bikes sold as Bike Salesman",
+                        "fr": "40 motos vendues en tant que vendeur de motos",
+                        "pt": "40 motos vendidas como vendedor de motos"
+                    }
                 },
                 {
                     "id": "ms-10",
@@ -401,13 +474,23 @@
                 },
                 {
                     "id": "ms-11",
-                    "text": "5 oleadas de Slash TV completadas"
+                    "text": {
+                        "es": "5 oleadas de Slash TV completadas",
+                        "en": "5 Slash TV waves completed",
+                        "fr": "5 niveaux de Slash TV complétés",
+                        "pt": "5 rondas do Slash TV completadas"
+                    }
                 }
             ]
         },
         {
             "id": "mb",
-            "title": "Misiones de basurero",
+            "title": {
+                "es": "Misiones de basurero",
+                "en": "Trash Dash",
+                "fr": "Missions d'éboueur",
+                "pt": "Missões de lixeiro"
+            },
             "items": [
                 {
                     "id": "mb-01",
@@ -424,30 +507,54 @@
             ]
         },
         {
-            "id": "mav",
-            "title": "Misiones de Ángeles Vengadores",
+            "title": {
+                "es": "Misiones de Ángeles Vengadores",
+                "en": "Avenging Angels missions",
+                "fr": "Missions d'Avenging Angels",
+                "pt": "Missões de Avenging Angels"
+            },
             "items": [
                 {
                     "id": "mav-01",
-                    "text": "15 niveles (Portland)"
+                    "text": {
+                        "es": "15 niveles (Portland)",
+                        "en": "15 levels (Portland)",
+                        "fr": "15 niveaux (Portland)",
+                        "pt": "15 níveis (Portland)"
+                    }
                 },
                 {
                     "id": "mav-02",
-                    "text": "15 niveles (Staunton Island)"
+                    "text": {
+                        "es": "15 niveles (Staunton Island)",
+                        "en": "15 levels (Staunton Island)",
+                        "fr": "15 niveaux (Staunton Island)",
+                        "pt": "15 níveis (Staunton Island)"
+                    }
                 },
                 {
                     "id": "mav-03",
-                    "text": "15 niveles (Shoreside Vale)"
+                    "text": {
+                        "es": "15 niveles (Shoreside Vale)",
+                        "en": "15 levels (Shoreside Vale)",
+                        "fr": "15 niveaux (Shoreside Vale)",
+                        "pt": "15 níveis (Shoreside Vale)"
+                    }
                 }
             ]
         },
         {
             "id": "mc",
-            "title": "Misiones de copiloto",
+            "title": {
+                "es": "Misiones de copiloto",
+                "en": "Drive-By challenges",
+                "fr": "Défis de drive-by",
+                "pt": "Desafios de drive-by"
+            },
             "items": [
                 {
                     "id": "mc-01",
-                    "text": "9MM Mayhem"
+                    "text": "9mm Mayhem"
                 },
                 {
                     "id": "mc-02",
@@ -461,7 +568,12 @@
         },
         {
             "id": "rc",
-            "title": "Misiones de RC",
+            "title": {
+                "es": "Misiones RC",
+                "en": "RC Missions",
+                "fr": "Courses RC",
+                "pt": "Corridas de RC"
+            },
             "items": [
                 {
                     "id": "rc-01",
@@ -483,15 +595,26 @@
         },
         {
             "id": "pc",
-            "title": "Misiones de puntos de control",
+            "title": {
+                "es": "Misiones de puntos de control",
+                "en": "Off-Road missions",
+                "fr": "Missions Off-Road",
+                "pt": "Missões Off-Road"
+            },
             "items": [
                 {
                     "id": "pc-01",
-                    "text": "Bumps & Grinds (10 trayectos)"
+                    "text": "Bumps & Grinds",
+                    "tooltip": {
+                        "es": "Completar los 10 recorridos",
+                        "en": "Complete all 10 courses",
+                        "fr": "Terminer les 10 parcours",
+                        "pt": "Completar os 10 percursos"
+                    }
                 },
                 {
                     "id": "pc-02",
-                    "text": "Wong side of the Tracks"
+                    "text": "Wong Side of the Tracks"
                 },
                 {
                     "id": "pc-03",
@@ -499,13 +622,24 @@
                 },
                 {
                     "id": "pc-04",
-                    "text": "Scrapyard Challenge (+20 puntos)"
+                    "text": "Scrapyard Challenge",
+                    "tooltip": {
+                        "es": "Obtener al menos 20 puntos",
+                        "en": "Get at least 20 points",
+                        "fr": "Obtenir au moins 20 points",
+                        "pt": "Obter pelo menos 20 pontos"
+                    }
                 }
             ]
         },
         {
             "id": "car",
-            "title": "Carreras",
+            "title": {
+                "es": "Carreras callejeras",
+                "en": "Street Races",
+                "fr": "Courses de rue",
+                "pt": "Corridas de Rua"
+            },
             "items": [
                 {
                     "id": "car-01",
@@ -605,19 +739,39 @@
         },
         {
             "id": "col",
-            "title": "Coleccionables",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Coletáveis"
+            },
             "items": [
                 {
                     "id": "col-01",
-                    "text": "100 objetos ocultos"
+                    "text": {
+                        "es": "100 objetos ocultos",
+                        "en": "100 hidden packages",
+                        "fr": "100 paquets cachés",
+                        "pt": "100 Pacotes secretos"
+                    }
                 },
                 {
                     "id": "col-02",
-                    "text": "26 saltos únicos"
+                    "text": {
+                        "es": "26 saltos únicos",
+                        "en": "26 unique jumps",
+                        "fr": "26 sauts uniques",
+                        "pt": "26 saltos únicos"
+                    }
                 },
                 {
                     "id": "col-03",
-                    "text": "20 masacres"
+                    "text": {
+                        "es": "20 masacres",
+                        "en": "20 rampages",
+                        "fr": "20 rodéos",
+                        "pt": "20 rampages"
+                    }
                 }
             ]
         }
