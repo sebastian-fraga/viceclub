@@ -1,7 +1,11 @@
 import { Tooltip } from "@/components/ui/Tooltip";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import type { ChecklistItemData } from "@/types/checklist";
-import { IconCheck, IconChevronDown } from "@tabler/icons-react";
+import {
+    IconCheck,
+    IconChevronDown,
+    IconInfoCircle,
+} from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -165,7 +169,7 @@ export function ChecklistItem({
                                                       aria-hidden="true"
                                                       className="flex h-4 w-4 items-center justify-center text-[17px] leading-none"
                                                   >
-                                                      ⓘ
+                                                      <IconInfoCircle />
                                                   </span>
                                               </button>
                                           </Tooltip>
