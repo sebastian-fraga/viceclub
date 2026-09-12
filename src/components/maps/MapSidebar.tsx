@@ -87,24 +87,28 @@ export default function MapSidebar({
                     return (
                         <div
                             key={section.key}
-                            className="group mb-6 last:mb-0 overflow-hidden rounded-3xl bg-(--button-bg) shadow-2xl shadow-(color:--button-bg)/40"
+                            className="mb-6 last:mb-0 overflow-hidden rounded-3xl bg-(--button-bg) shadow-2xl shadow-(color:--button-bg)/40"
                         >
                             <button
                                 type="button"
                                 onClick={() => toggleSection(section.key)}
                                 aria-expanded={!isCollapsed}
-                                className="flex w-full cursor-pointer items-center justify-between px-6 py-4"
+                                className="w-full"
                             >
-                                <span className="font-body-condensed text-[22px] text-white">
-                                    {i18n(section.label)}
-                                </span>
+                                <div className="flex items-center justify-between w-full group cursor-pointer px-6 py-4">
+                                    <span className="font-body-condensed text-[22px] text-white">
+                                        {i18n(section.label)}
+                                    </span>
 
-                                <IconChevronDown
-                                    size={18}
-                                    className={`text-white/50 transition duration-200 group-hover:text-white ${
-                                        isCollapsed ? "rotate-0" : "rotate-180"
-                                    }`}
-                                />
+                                    <IconChevronDown
+                                        size={18}
+                                        className={`text-white/50 transition duration-200 group-hover:text-white ${
+                                            isCollapsed
+                                                ? "rotate-0"
+                                                : "rotate-180"
+                                        }`}
+                                    />
+                                </div>
                             </button>
 
                             <SectionContent
@@ -188,7 +192,7 @@ export default function MapSidebar({
                                                 return (
                                                     <div
                                                         key={section.key}
-                                                        className="group mb-4 overflow-hidden rounded-3xl bg-black/10 last:mb-0"
+                                                        className="mb-4 overflow-hidden rounded-3xl bg-black/10 last:mb-0"
                                                     >
                                                         <button
                                                             type="button"
@@ -210,7 +214,7 @@ export default function MapSidebar({
 
                                                             <IconChevronDown
                                                                 size={18}
-                                                                className={`text-white/50 transition duration-200 group-hover:text-white ${
+                                                                className={`text-white/50 transition duration-200 ${
                                                                     isCollapsed
                                                                         ? "rotate-0"
                                                                         : "rotate-180"
