@@ -2,9 +2,14 @@ import { useTranslation } from "react-i18next";
 
 import type { SelectOption, Setting } from "@/types/settings";
 
+import { IconChevronRight } from "@tabler/icons-react";
 import Select from "./ui/Select";
 import Toggle from "./ui/Toggle";
-import {  IconChevronRight } from "@tabler/icons-react";
+
+export interface SettingStatusMessage {
+    text: string;
+    variant: "error" | "success";
+}
 
 interface Props {
     setting: Setting;
@@ -13,6 +18,7 @@ interface Props {
     onAction?: (id: string) => void;
     options?: SelectOption[];
     disabled?: boolean;
+    statusMessage?: SettingStatusMessage;
 }
 
 export default function SettingItem({
@@ -22,6 +28,7 @@ export default function SettingItem({
     onAction,
     options,
     disabled,
+    statusMessage,
 }: Props) {
     const { t } = useTranslation();
     const Icon = setting.icon;
@@ -48,25 +55,41 @@ export default function SettingItem({
                     />
                 );
 
-            case "action":
+            case "action": {
+                const hasCustomIcon = Boolean(setting.actionIcon);
+                const ActionIcon = setting.actionIcon ?? IconChevronRight;
+
+                const label = t(
+                    setting.actionLabel ??
+                        (setting.destructive
+                            ? "common.buttons.reset"
+                            : "common.buttons.open"),
+                );
+
                 return (
                     <button
                         onClick={() => onAction?.(setting.id)}
                         disabled={disabled}
-                        className={`shrink-0 px-3 py-1.5 text-xs rounded-md transition-colors flex items-center gap-1 not-only-of-type:disabled:cursor-not-allowed cursor-pointer disabled:opacity-40 ${
+                        className={`shrink-0 px-3 py-1.5 text-xs rounded-md transition-colors flex items-center gap-1.5 not-only-of-type:disabled:cursor-not-allowed cursor-pointer disabled:opacity-40 ${
                             setting.destructive
                                 ? "bg-red-500/15 text-red-300 hover:bg-red-500/25"
                                 : "bg-white/10 text-white/80 hover:bg-white/15"
                         }`}
                     >
-                        {t(
-                            setting.destructive
-                                ? "common.buttons.reset"
-                                : "common.buttons.open",
+                        {hasCustomIcon ? (
+                            <>
+                                <ActionIcon size={14} />
+                                {label}
+                            </>
+                        ) : (
+                            <>
+                                {label}
+                                <ActionIcon size={14} />
+                            </>
                         )}
-                        <IconChevronRight size={14}/>
                     </button>
                 );
+            }
         }
     };
 
@@ -75,18 +98,34 @@ export default function SettingItem({
         : "flex items-center justify-between w-full px-4 py-3.5 bg-slate-500/5 rounded-md";
 
     const iconStyles = setting.destructive ? "text-red-400" : "text-indigo-200";
+
+    const descriptionStyles =
+        statusMessage?.variant === "error"
+            ? "text-xs text-red-400 max-mobile:max-w-90 pr-2"
+            : statusMessage?.variant === "success"
+              ? "text-xs text-emerald-400 max-mobile:max-w-90 pr-2"
+              : "text-xs text-gray-400 max-mobile:max-w-90 pr-2";
+
     return (
         <div className={itemStyles}>
             <div className="flex items-center gap-3 min-w-0 flex-1">
-                {Icon && <Icon size={20} className={`${iconStyles} shrink-0`}  />}
+                {Icon && (
+                    <Icon size={20} className={`${iconStyles} shrink-0`} />
+                )}
 
                 <div className="flex flex-col gap-0.5 min-w-0">
                     <span className="text-sm truncate">{t(setting.name)}</span>
 
-                    {setting.description && (
-                        <span className="text-xs text-gray-400 max-mobile:max-w-90 pr-2">
-                            {t(setting.description)}
+                    {statusMessage ? (
+                        <span className={descriptionStyles}>
+                            {statusMessage.text}
                         </span>
+                    ) : (
+                        setting.description && (
+                            <span className={descriptionStyles}>
+                                {t(setting.description)}
+                            </span>
+                        )
                     )}
                 </div>
             </div>

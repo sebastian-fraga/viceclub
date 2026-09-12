@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
@@ -12,8 +12,13 @@ import { settingsConfig } from "@/config/settings";
 
 import useSettings from "@/hooks/useSettings";
 
-import SettingItem from "./SettingItem";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import {
+    downloadLocalStorageBackup,
+    importAllLocalStorage,
+    readFileAsText,
+} from "@/utils/localStorageBackup";
+import SettingItem, { type SettingStatusMessage } from "./SettingItem";
 
 interface Props {
     open: boolean;
@@ -26,18 +31,65 @@ export default function SettingsModal({ open, onClose }: Props) {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const [currentStep, setCurrentStep] = useState<Step>("main");
+    const fileInputRef = useRef<HTMLInputElement>(null);
+
+    const [actionStatus, setActionStatus] = useState<
+        ({ id: string } & SettingStatusMessage) | null
+    >(null);
 
     const handleAction = (id: string) => {
         switch (id) {
             case "reset-checklist":
                 setCurrentStep("reset");
                 break;
+            case "export-localstorage":
+                downloadLocalStorageBackup();
+                break;
+            case "import-localstorage":
+                fileInputRef.current?.click();
+                break;
+        }
+    };
+
+    const handleFileSelected = async (
+        e: React.ChangeEvent<HTMLInputElement>,
+    ) => {
+        const file = e.target.files?.[0];
+        e.target.value = ""; 
+
+        if (!file) return;
+
+        setActionStatus(null);
+
+        try {
+            const text = await readFileAsText(file);
+            const result = importAllLocalStorage(text);
+
+            if (result.success) {
+                window.location.reload();
+                return;
+            }
+
+            setActionStatus({
+                id: "import-localstorage",
+                text: t("settings.error.importBackup"),
+                variant: "error",
+            });
+        } catch {
+            setActionStatus({
+                id: "import-localstorage",
+                text: t("settings.error.importBackup"),
+                variant: "error",
+            });
         }
     };
 
     const handleClose = () => {
         onClose();
-        setTimeout(() => setCurrentStep("main"), 200);
+        setTimeout(() => {
+            setCurrentStep("main");
+            setActionStatus(null);
+        }, 200);
     };
 
     const settingsSections = settingsConfig;
@@ -79,6 +131,14 @@ export default function SettingsModal({ open, onClose }: Props) {
                         onClick={(e) => e.stopPropagation()}
                         className="relative w-[90%] max-w-4xl h-140 rounded-2xl bg-[#15151F] text-white shadow-2xl shadow-black/60 flex flex-col overflow-hidden"
                     >
+                        <input
+                            ref={fileInputRef}
+                            type="file"
+                            accept="application/json"
+                            className="hidden"
+                            onChange={handleFileSelected}
+                        />
+
                         <button
                             type="button"
                             onClick={handleClose}
@@ -157,6 +217,16 @@ export default function SettingsModal({ open, onClose }: Props) {
                                                                       )
                                                                     : undefined;
 
+                                                            const statusMessage =
+                                                                actionStatus?.id ===
+                                                                setting.id
+                                                                    ? {
+                                                                          text: actionStatus.text,
+                                                                          variant:
+                                                                              actionStatus.variant,
+                                                                      }
+                                                                    : undefined;
+
                                                             return (
                                                                 <SettingItem
                                                                     key={
@@ -190,6 +260,9 @@ export default function SettingsModal({ open, onClose }: Props) {
                                                                             "platform" &&
                                                                         platformFamily ===
                                                                             "default"
+                                                                    }
+                                                                    statusMessage={
+                                                                        statusMessage
                                                                     }
                                                                 />
                                                             );
