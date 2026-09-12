@@ -2,360 +2,712 @@
     "sections": [
         {
             "id": "mp",
-            "title": "Misiones principales",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
             "items": [
                 {
                     "id": "mp-01",
-                    "text": "Soldado",
+                    "text": {
+                        "es": "Soldado",
+                        "en": "Soldier",
+                        "fr": "Soldier",
+                        "pt": "Soldier"
+                    },
                     "icon": "martinez"
                 },
                 {
                     "id": "mp-02",
-                    "text": "Limpiando la casa",
+                    "text": {
+                        "es": "Limpiando la casa",
+                        "en": "Cleaning House",
+                        "fr": "Cleaning House",
+                        "pt": "Cleaning House"
+                    },
                     "icon": "martinez"
                 },
                 {
                     "id": "mp-03",
-                    "text": "Degradación moral",
+                    "text": {
+                        "es": "Degradación moral",
+                        "en": "Conduct Unbecoming",
+                        "fr": "Conduct Unbecoming",
+                        "pt": "Conduct Unbecoming"
+                    },
                     "icon": "martinez"
                 },
                 {
                     "id": "mp-04",
-                    "text": "Victoria sobre los Cholos",
+                    "text": {
+                        "es": "Victoria sobre los Cholos",
+                        "en": "Cholo Victory",
+                        "fr": "Cholo Victory",
+                        "pt": "Cholo Victory"
+                    },
                     "icon": "phil"
                 },
                 {
                     "id": "mp-05",
-                    "text": "Adiós al Boomshine",
+                    "text": {
+                        "es": "Adiós al Boomshine",
+                        "en": "Boomshine Blowout",
+                        "fr": "Boomshine Blowout",
+                        "pt": "Boomshine Blowout"
+                    },
                     "icon": "phil"
                 },
                 {
                     "id": "mp-06",
-                    "text": "¡Chorizando a los  Cholos!",
+                    "text": {
+                        "es": "¡Chorizando a los Cholos!",
+                        "en": "Truck Stop",
+                        "fr": "Truck Stop",
+                        "pt": "Truck Stop"
+                    },
                     "icon": "phil"
                 },
                 {
                     "id": "mp-07",
-                    "text": "Paliza",
+                    "text": {
+                        "es": "Paliza",
+                        "en": "Shakedown",
+                        "fr": "Shakedown",
+                        "pt": "Shakedown"
+                    },
                     "icon": "marty"
                 },
                 {
                     "id": "mp-08",
-                    "text": "Embargo a lo largo",
+                    "text": {
+                        "es": "Embargo a lo largo",
+                        "en": "Fear the Repo",
+                        "fr": "Fear the Repo",
+                        "pt": "Fear the Repo"
+                    },
                     "icon": "marty"
                 },
                 {
                     "id": "mp-09",
-                    "text": "Despertando a los vecinos",
+                    "text": {
+                        "es": "Despertando a los vecinos",
+                        "en": "Waking Up the Neighbors",
+                        "fr": "Waking Up the Neighbors",
+                        "pt": "Waking Up the Neighbors"
+                    },
                     "icon": "marty"
                 },
                 {
                     "id": "mp-10",
-                    "text": "¿Dónde queda el burdel?",
+                    "text": {
+                        "es": "¿Dónde queda el burdel?",
+                        "en": "O, Brothel, Where Art Thou?",
+                        "fr": "O, Brothel, Where Art Thou?",
+                        "pt": "O, Brothel, Where Art Thou?"
+                    },
                     "icon": "marty"
                 },
                 {
                     "id": "mp-11",
-                    "text": "¿Tienes protección?",
+                    "text": {
+                        "es": "¿Tienes protección?",
+                        "en": "Got Protection?",
+                        "fr": "Got Protection?",
+                        "pt": "Got Protection?"
+                    },
                     "icon": "marty"
                 },
                 {
                     "id": "mp-12",
-                    "text": "En el punto de la mira",
+                    "text": {
+                        "es": "En el punto de la mira",
+                        "en": "Marked Men",
+                        "fr": "Marked Men",
+                        "pt": "Marked Men"
+                    },
                     "icon": "phil"
                 },
                 {
                     "id": "mp-13",
-                    "text": "Quedada donde los Quads",
+                    "text": {
+                        "es": "Quedada donde los Quads",
+                        "en": "When Funday Comes",
+                        "fr": "When Funday Comes",
+                        "pt": "When Funday Comes"
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-14",
-                    "text": "Limpiando la mierda",
+                    "text": {
+                        "es": "Limpiando la mierda",
+                        "en": "Takin' Out the White-Trash",
+                        "fr": "Takin' Out the White-Trash",
+                        "pt": "Takin' Out the White-Trash"
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-15",
-                    "text": "D.I.V.O.R.C.I.O.",
+                    "text": {
+                        "es": "D.I.V.O.R.C.I.O.",
+                        "en": "D.I.V.O.R.C.E.",
+                        "fr": "D.I.V.O.R.C.E.",
+                        "pt": "D.I.V.O.R.C.E."
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-16",
-                    "text": "Víctor, victorioso",
+                    "text": {
+                        "es": "Víctor, victorioso",
+                        "en": "To Victor, the Spoils",
+                        "fr": "To Victor, the Spoils",
+                        "pt": "To Victor, the Spoils"
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-17",
-                    "text": "Baile sobre ruedas",
+                    "text": {
+                        "es": "Baile sobre ruedas",
+                        "en": "Jive Drive",
+                        "fr": "Jive Drive",
+                        "pt": "Jive Drive"
+                    },
                     "icon": "aeropuerto"
                 },
                 {
                     "id": "mp-18",
-                    "text": "Chorreando churris",
+                    "text": {
+                        "es": "Chorreando churris",
+                        "en": "Hose the Hoes",
+                        "fr": "Hose the Hoes",
+                        "pt": "Hose the Hoes"
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-19",
-                    "text": "Robando la cuna",
+                    "text": {
+                        "es": "Robando la cuna",
+                        "en": "Robbing the Cradle",
+                        "fr": "Robbing the Cradle",
+                        "pt": "Robbing the Cradle"
+                    },
                     "icon": "louise"
                 },
                 {
                     "id": "mp-20",
-                    "text": "Bonito paquete",
+                    "text": {
+                        "es": "Bonito paquete",
+                        "en": "Nice Package",
+                        "fr": "Nice Package",
+                        "pt": "Nice Package"
+                    },
                     "icon": "umberto"
                 },
                 {
                     "id": "mp-21",
-                    "text": "Pelotas",
+                    "text": {
+                        "es": "Pelotas",
+                        "en": "Balls",
+                        "fr": "Balls",
+                        "pt": "Balls"
+                    },
                     "icon": "umberto"
                 },
                 {
                     "id": "mp-22",
-                    "text": "Papi, no la líes",
+                    "text": {
+                        "es": "Papi, no la líes",
+                        "en": "Papi Don't Screech",
+                        "fr": "Papi Don't Screech",
+                        "pt": "Papi Don't Screech"
+                    },
                     "icon": "umberto"
                 },
                 {
                     "id": "mp-23",
-                    "text": "Havana, buenos tiempos",
+                    "text": {
+                        "es": "Havana, buenos tiempos",
+                        "en": "Havana Good Time",
+                        "fr": "Havana Good Time",
+                        "pt": "Havana Good Time"
+                    },
                     "icon": "umberto"
                 },
                 {
                     "id": "mp-24",
-                    "text": "La audición",
+                    "text": {
+                        "es": "La audición",
+                        "en": "The Audition",
+                        "fr": "The Audition",
+                        "pt": "The Audition"
+                    },
                     "icon": "lance"
                 },
                 {
                     "id": "mp-25",
-                    "text": "Dinero gratis",
+                    "text": {
+                        "es": "Dinero gratis",
+                        "en": "Money for Nothing",
+                        "fr": "Money for Nothing",
+                        "pt": "Money for Nothing"
+                    },
                     "icon": "bryan"
                 },
                 {
                     "id": "mp-26",
-                    "text": "Persecución a lo loco",
+                    "text": {
+                        "es": "Persecución a lo loco",
+                        "en": "Caught as an Act",
+                        "fr": "Caught as an Act",
+                        "pt": "Caught as an Act"
+                    },
                     "icon": "lance"
                 },
                 {
                     "id": "mp-27",
-                    "text": "Un soplón del copón",
-                    "icon": "lance"
+                    "text": {
+                        "es": "Saltar y botar",
+                        "en": "Leap and Bound",
+                        "fr": "Leap and Bound",
+                        "pt": "Leap and Bound"
+                    },
+                    "icon": "bryan"
                 },
                 {
                     "id": "mp-28",
-                    "text": "Saltar y botar",
+                    "text": {
+                        "es": "Todo va de culo",
+                        "en": "The Bum Deal",
+                        "fr": "The Bum Deal",
+                        "pt": "The Bum Deal"
+                    },
                     "icon": "bryan"
                 },
                 {
                     "id": "mp-29",
-                    "text": "Todo va de culo",
-                    "icon": "bryan"
+                    "text": {
+                        "es": "Un soplón del copón",
+                        "en": "Snitch Hitch",
+                        "fr": "Snitch Hitch",
+                        "pt": "Snitch Hitch"
+                    },
+                    "icon": "lance"
                 },
                 {
                     "id": "mp-30",
-                    "text": "Subiendo como la espuma",
+                    "text": {
+                        "es": "Subiendo como la espuma",
+                        "en": "From Zero to Hero",
+                        "fr": "From Zero to Hero",
+                        "pt": "From Zero to Hero"
+                    },
                     "icon": "lance"
                 },
                 {
                     "id": "mp-31",
-                    "text": "Unos muertos muy vivos",
+                    "text": {
+                        "es": "Unos muertos muy vivos",
+                        "en": "Brawn of the Dead",
+                        "fr": "Brawn of the Dead",
+                        "pt": "Brawn of the Dead"
+                    },
                     "icon": "lance"
                 },
                 {
                     "id": "mp-32",
-                    "text": "\"Blitzkrieg\"",
+                    "text": {
+                        "es": "\"Blitzkrieg\"",
+                        "en": "Blitzkrieg",
+                        "fr": "Blitzkrieg",
+                        "pt": "Blitzkrieg"
+                    },
                     "icon": "lance"
+                },
+                {
+                    "id": "mp-33",
+                    "text": {
+                        "es": "Rodando en coche",
+                        "en": "Accidents Will Happen",
+                        "fr": "Accidents Will Happen",
+                        "pt": "Accidents Will Happen"
+                    },
+                    "icon": "reni"
                 },
                 {
                     "id": "mp-34",
-                    "text": "Loca pandemia de policía",
-                    "icon": "lance"
+                    "text": {
+                        "es": "Mira al pajarito",
+                        "en": "The Mugshot Longshot",
+                        "fr": "The Mugshot Longshot",
+                        "pt": "The Mugshot Longshot"
+                    },
+                    "icon": "mendez"
                 },
                 {
                     "id": "mp-35",
-                    "text": "Cayendo a pedazos",
-                    "icon": "lance"
+                    "text": {
+                        "es": "Relevo hostil",
+                        "en": "Hostile Takeover",
+                        "fr": "Hostile Takeover",
+                        "pt": "Hostile Takeover"
+                    },
+                    "icon": "mendez"
                 },
                 {
                     "id": "mp-36",
-                    "text": "Lluvia blanca",
-                    "icon": "lance"
+                    "text": {
+                        "es": "Eliminando a los rivales",
+                        "en": "Unfriendly Competition",
+                        "fr": "Unfriendly Competition",
+                        "pt": "Unfriendly Competition"
+                    },
+                    "icon": "mendez"
                 },
                 {
                     "id": "mp-37",
-                    "text": "Donde más duele",
-                    "icon": "lance"
+                    "text": {
+                        "es": "Pendiendo de un hilo",
+                        "en": "High Wire",
+                        "fr": "High Wire",
+                        "pt": "High Wire"
+                    },
+                    "icon": "mendez"
                 },
                 {
                     "id": "mp-38",
-                    "text": "\"Blitzkrieg\" contraataca",
+                    "text": {
+                        "es": "Loca pandemia de policía",
+                        "en": "Turn on, Tune in, Bug out",
+                        "fr": "Turn on, Tune in, Bug out",
+                        "pt": "Turn on, Tune in, Bug out"
+                    },
                     "icon": "lance"
                 },
                 {
                     "id": "mp-39",
-                    "text": "Departamento de objetos perdidos",
-                    "icon": "lance"
+                    "text": {
+                        "es": "La coca del \"Colonel\"",
+                        "en": "The Colonel's Coke",
+                        "fr": "The Colonel's Coke",
+                        "pt": "The Colonel's Coke"
+                    },
+                    "icon": "reni"
                 },
                 {
                     "id": "mp-40",
-                    "text": "Mira al pajarito",
-                    "icon": "mendez"
-                },
-                {
-                    "id": "mp-41",
-                    "text": "Relevo hostil",
-                    "icon": "mendez"
-                },
-                {
-                    "id": "mp-42",
-                    "text": "Eliminando a los rivales",
-                    "icon": "mendez"
-                },
-                {
-                    "id": "mp-43",
-                    "text": "Pendiendo de un hilo",
-                    "icon": "mendez"
-                },
-                {
-                    "id": "mp-44",
-                    "text": "Hasta aquí hemos llegado",
-                    "icon": "mendez"
-                },
-                {
-                    "id": "mp-45",
-                    "text": "El muerto al hoyo...",
-                    "icon": "gonzalez"
-                },
-                {
-                    "id": "mp-46",
-                    "text": "Purple Haze",
-                    "icon": "gonzalez"
-                },
-                {
-                    "id": "mp-47",
-                    "text": "Adiós a las armas",
-                    "icon": "gonzalez"
-                },
-                {
-                    "id": "mp-48",
-                    "text": "Rodando en coche",
-                    "icon": "reni"
-                },
-                {
-                    "id": "mp-49",
-                    "text": "La coca del \"Colonel\"",
-                    "icon": "reni"
-                },
-                {
-                    "id": "mp-50",
                     "text": "Kill Phil",
                     "icon": "reni"
                 },
                 {
-                    "id": "mp-51",
-                    "text": "Di patata",
+                    "id": "mp-41",
+                    "text": {
+                        "es": "Di patata",
+                        "en": "Say Cheese",
+                        "fr": "Say Cheese",
+                        "pt": "Say Cheese"
+                    },
                     "icon": "reni"
                 },
                 {
-                    "id": "mp-52",
+                    "id": "mp-42",
+                    "text": {
+                        "es": "El muerto al hoyo...",
+                        "en": "Home's on the Range",
+                        "fr": "Home's on the Range",
+                        "pt": "Home's on the Range"
+                    },
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-43",
+                    "text": "Purple Haze",
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-44",
                     "text": "Kill Phil: Part 2",
                     "icon": "reni"
                 },
                 {
+                    "id": "mp-45",
+                    "text": {
+                        "es": "Cayendo a pedazos",
+                        "en": "Taking the Fall",
+                        "fr": "Taking the Fall",
+                        "pt": "Taking the Fall"
+                    },
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-46",
+                    "text": {
+                        "es": "Lluvia blanca",
+                        "en": "White Lies",
+                        "fr": "White Lies",
+                        "pt": "White Lies"
+                    },
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-47",
+                    "text": {
+                        "es": "Donde más duele",
+                        "en": "Where it Hurts Most",
+                        "fr": "Where it Hurts Most",
+                        "pt": "Where it Hurts Most"
+                    },
+                    "icon": "lance"
+                },
+                {
+                    "id": "mp-48",
+                    "text": {
+                        "es": "Mete cizaña",
+                        "en": "Steal the Deal",
+                        "fr": "Steal the Deal",
+                        "pt": "Steal the Deal"
+                    },
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-49",
+                    "text": {
+                        "es": "El intercambio",
+                        "en": "The Exchange",
+                        "fr": "The Exchange",
+                        "pt": "The Exchange"
+                    },
+                    "icon": "diaz"
+                },
+                {
+                    "id": "mp-50",
+                    "text": {
+                        "es": "Adiós a las armas",
+                        "en": "Farewell To Arms",
+                        "fr": "Farewell To Arms",
+                        "pt": "Farewell To Arms"
+                    },
+                    "icon": "gonzalez"
+                },
+                {
+                    "id": "mp-51",
+                    "text": {
+                        "es": "Hasta aquí hemos llegado",
+                        "en": "Burning Bridges",
+                        "fr": "Burning Bridges",
+                        "pt": "Burning Bridges"
+                    },
+                    "icon": "mendez"
+                },
+                {
+                    "id": "mp-52",
+                    "text": {
+                        "es": "\"Blitzkrieg\" contraataca",
+                        "en": "Blitzkrieg Strikes Again",
+                        "fr": "Blitzkrieg Strikes Again",
+                        "pt": "Blitzkrieg Strikes Again"
+                    },
+                    "icon": "lance"
+                },
+                {
                     "id": "mp-53",
-                    "text": "Salchicha Schlong",
-                    "icon": "reni"
+                    "text": {
+                        "es": "Departamento de objetos perdidos",
+                        "en": "Lost and Found",
+                        "fr": "Lost and Found",
+                        "pt": "Lost and Found"
+                    },
+                    "icon": "lance"
                 },
                 {
                     "id": "mp-54",
-                    "text": "In The Air Tonight",
-                    "icon": "reni"
-                },
-                {
-                    "id": "mp-55",
-                    "text": "Mete cizaña",
-                    "icon": "diaz"
-                },
-                {
-                    "id": "mp-56",
-                    "text": "El intercambio",
-                    "icon": "diaz"
-                },
-                {
-                    "id": "mp-57",
                     "text": "Domo Arigato Domestoboto",
                     "icon": "diaz"
                 },
                 {
-                    "id": "mp-58",
-                    "text": "Light my Pyre",
+                    "id": "mp-55",
+                    "text": {
+                        "es": "Salchicha Schlong",
+                        "en": "So Long Schlong",
+                        "fr": "So Long Schlong",
+                        "pt": "So Long Schlong"
+                    },
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-56",
+                    "text": "In the Air Tonight",
+                    "icon": "reni"
+                },
+                {
+                    "id": "mp-57",
+                    "text": "Light My Pyre",
                     "icon": "lance"
                 },
                 {
-                    "id": "mp-59",
-                    "text": "Volando alto",
+                    "id": "mp-58",
+                    "text": {
+                        "es": "Volando alto",
+                        "en": "Over the Top",
+                        "fr": "Over the Top",
+                        "pt": "Over the Top"
+                    },
                     "icon": "diaz"
                 },
                 {
-                    "id": "mp-60",
-                    "text": "El último encuentro",
+                    "id": "mp-59",
+                    "text": {
+                        "es": "El último encuentro",
+                        "en": "Last Stand",
+                        "fr": "Last Stand",
+                        "pt": "Last Stand"
+                    },
                     "icon": "diaz"
                 }
             ]
         },
         {
             "id": "ms",
-            "title": "Misiones secundarias",
+            "title": {
+                "es": "Misiones secundarias",
+                "en": "Side Missions",
+                "fr": "Missions secondaires",
+                "pt": "Missões secundárias"
+            },
             "items": [
                 {
                     "id": "ms-01",
-                    "text": "50 clientes o $5000 conseguidos como taxista"
+                    "texts": [
+                        {
+                            "text": {
+                                "es": "50 viajes como taxista",
+                                "en": "50 taxi rides completed",
+                                "fr": "50 courses en taxi effectuées",
+                                "pt": "50 corridas de táxi completadas"
+                            }
+                        },
+                        {
+                            "text": {
+                                "es": "$5000 conseguidos como taxista",
+                                "en": "$5,000 earned as a taxi driver",
+                                "fr": "5 000 $ gagnés comme chauffeur de taxi",
+                                "pt": "$5.000 ganhos como taxista"
+                            }
+                        }
+                    ]
                 },
                 {
                     "id": "ms-02",
-                    "text": "Nivel 15 de paramédico completado"
+                    "text": {
+                        "es": "Nivel 15 de paramédico completado",
+                        "en": "Paramedic level 15 completed",
+                        "fr": "Niveau 15 de paramédic complété",
+                        "pt": "Nível 15 de paramédico completado"
+                    }
                 },
                 {
                     "id": "ms-03",
-                    "text": "Nivel 15 de vigilante completado"
+                    "text": {
+                        "es": "Nivel 15 de vigilante completado",
+                        "en": "Vigilante level 15 completed",
+                        "fr": "Niveau 15 d'autodéfense complété",
+                        "pt": "Nível 15 de justiciero completado"
+                    }
                 },
                 {
                     "id": "ms-04",
-                    "text": "Nivel 15 de bombero completado"
+                    "text": {
+                        "es": "Nivel 15 de bombero completado",
+                        "en": "Firefighter level 15 completed",
+                        "fr": "Niveau 15 de pompier complété",
+                        "pt": "Nível 15 de bombeiro completado"
+                    }
                 },
                 {
                     "id": "ms-05",
-                    "text": "Nivel 15 de rescate aéreo completado"
+                    "text": {
+                        "es": "Nivel 15 de rescate aéreo completado",
+                        "en": "Air Rescue level 15 completed",
+                        "fr": "Niveau 15 de sauvetage aérien complété",
+                        "pt": "Nível 15 de Resgate aéreo completado"
+                    }
                 },
                 {
                     "id": "ms-06",
-                    "text": "Nivel 5 de bombero aéreo completado"
+                    "text": {
+                        "es": "Nivel 5 de bombero aéreo completado",
+                        "en": "Fire Copter level 5 completed",
+                        "fr": "Niveau 5 de Pyrocoptère complété",
+                        "pt": "Nível 5 de helicóptero bombeiro completado"
+                    }
                 },
                 {
                     "id": "ms-07",
-                    "text": "Nivel 15 de vigilante de la playa completado"
+                    "text": {
+                        "es": "Nivel 15 de vigilante de playa completado",
+                        "en": "Beach Patrol level 15 completed",
+                        "fr": "Niveau 15 de Patrouille complété",
+                        "pt": "Nível 15 de Patrulha na praia completado"
+                    }
                 },
                 {
                     "id": "ms-08",
-                    "text": "Nivel 5 de Vistas de Vice City completado"
+                    "text": {
+                        "es": "Nivel 5 de Vistas de Vice City completado",
+                        "en": "Vice Sights level 5 completed",
+                        "fr": "Niveau 5 de Vice Sights complété",
+                        "pt": "Nível 5 de helicóptero turístico completado"
+                    }
                 },
                 {
                     "id": "ms-09",
-                    "text": "5 rondas completadas en el campo de tiro de Phil"
+                    "text": {
+                        "es": "Campo de tiro de Phil completado",
+                        "en": "Phil's Shooting Range completed",
+                        "fr": "Phil's Shooting Range completé",
+                        "pt": "Phil's Shooting Range completado"
+                    }
                 },
                 {
                     "id": "ms-10",
-                    "text": "Golfería"
+                    "text": {
+                        "es": "Golfería completado",
+                        "en": "Swinger's Club completed",
+                        "fr": "Swinger's Club terminé",
+                        "pt": "Swinger's Club completado"
+                    }
                 },
                 {
                     "id": "ms-11",
-                    "text": "Cazador letal"
+                    "text": {
+                        "es": "Cazador letal completado",
+                        "en": "Skywolf completed",
+                        "fr": "Skywolf terminé",
+                        "pt": "Skywolf completado"
+                    }
                 },
                 {
                     "id": "ms-12",
-                    "text": "¡Crash!"
+                    "text": {
+                        "es": "¡Crash! completado",
+                        "en": "Crash! completed",
+                        "fr": "Crash! terminé",
+                        "pt": "Crash! completado"
+                    }
                 },
                 {
                     "id": "ms-13",
-                    "text": "Aprisa",
+                    "text": {
+                        "es": "Aprisa completado",
+                        "en": "Rush! completed",
+                        "fr": "Rush! terminé",
+                        "pt": "Rush! completado"
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -367,53 +719,99 @@
         },
         {
             "id": "iv",
-            "title": "Misiones del Imperio Vance",
+            "title": {
+                "es": "Misiones del Imperio Vance",
+                "en": "Empire Building missions",
+                "fr": "Missions de Empire Building",
+                "pt": "Missões do império"
+            },
             "icon": "imperio",
             "items": [
                 {
                     "id": "iv-01",
-                    "text": "15 trabajos de Extorsión"
+                    "text": {
+                        "es": "15 trabajos de Extorsión completados",
+                        "en": "15 Extortion levels completed",
+                        "fr": "15 missions de Racket terminées",
+                        "pt": "15 níveis de Esquema de Proteção concluídos"
+                    }
                 },
                 {
                     "id": "iv-02",
-                    "text": "15 trabajos de Acaparamiento"
+                    "text": {
+                        "es": "15 trabajos de Acaparamiento completados",
+                        "en": "15 Loan Sharking levels completed",
+                        "fr": "15 missions de Usurier terminées",
+                        "pt": "15 níveis de Agiotagem concluídos"
+                    }
                 },
                 {
                     "id": "iv-03",
-                    "text": "15 trabajos de Prostitución"
+                    "text": {
+                        "es": "15 trabajos de Prostitución completados",
+                        "en": "15 Prostitution levels completed",
+                        "fr": "15 missions de Prostitution terminées",
+                        "pt": "15 níveis de Prostituição concluídos"
+                    }
                 },
                 {
                     "id": "iv-04",
-                    "text": "6 misiones de Drogas"
+                    "text": {
+                        "es": "6 trabajos de Drogas completados",
+                        "en": "6 Drug Running levels completed",
+                        "fr": "6 missions de Drogue terminées",
+                        "pt": "6 níveis de Drogas concluídos"
+                    }
                 },
                 {
                     "id": "iv-05",
-                    "text": "6 misiones de Contrabando"
+                    "text": {
+                        "es": "6 trabajos de Contrabando completados",
+                        "en": "6 Smuggling levels completed",
+                        "fr": "6 missions de Contrebande terminées",
+                        "pt": "6 níveis de Contrabando concluídos"
+                    }
                 },
                 {
                     "id": "iv-06",
-                    "text": "6 misiones de Robos"
+                    "text": {
+                        "es": "6 trabajos de Robos completados",
+                        "en": "6 Robbery levels completed",
+                        "fr": "6 missions de Cambriolage terminées",
+                        "pt": "6 níveis de Assaltos concluídos"
+                    }
                 }
             ]
         },
         {
             "id": "mc",
-            "title": "Misiones contrarreloj",
+            "title": {
+                "es": "Misiones contrarreloj",
+                "en": "Timed missions",
+                "fr": "Missions chronométrées",
+                "pt": "Missões cronometradas"
+            },
             "items": [
                 {
                     "id": "mc-01",
-                    "texts": [
-                        {
-                            "text": "As en tierra, mar y aire"
-                        },
-                        {
-                            "text": "Contrarreloj con varios vehículos"
-                        }
-                    ]
+                    "text": {
+                        "es": "As en tierra, mar y aire",
+                        "en": "Land, Sea And Air Ace",
+                        "fr": "Land, Sea And Air Ace",
+                        "pt": "Land, Sea And Air Ace"
+                    },
+                    "tooltip": {
+                        "es": "Llamada \"Contrarreloj con varios vehículos\" en PSP"
+                    }
                 },
                 {
                     "id": "mc-02",
-                    "text": "Memorial Hyman, o muere en el intento",
+                    "text": {
+                        "es": "Memorial Hyman, o muere en el intento",
+                        "en": "Hyman Memorial O.D.T.",
+                        "fr": "Hyman Memorial O.D.T.",
+                        "pt": "Hyman Memorial O.D.T."
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -423,23 +821,48 @@
                 },
                 {
                     "id": "mc-03",
-                    "text": "Aerodeslizador en Haiti"
+                    "text": {
+                        "es": "Aerodeslizador en Haiti",
+                        "en": "Haiti Hover Race",
+                        "fr": "Haiti Hover Race",
+                        "pt": "Haiti Hover Race"
+                    }
                 },
                 {
                     "id": "mc-04",
-                    "text": "Aerodeslizador en el puerto"
+                    "text": {
+                        "es": "Aerodeslizador en el puerto",
+                        "en": "Harbor Hover Race",
+                        "fr": "Harbor Hover Race",
+                        "pt": "Harbor Hover Race"
+                    }
                 },
                 {
                     "id": "mc-05",
-                    "text": "Fardando en the Point"
+                    "text": {
+                        "es": "Fardando en the Point",
+                        "en": "Playground on the Point",
+                        "fr": "Playground on the Point",
+                        "pt": "Playground on the Point"
+                    }
                 },
                 {
                     "id": "mc-06",
-                    "text": "Fardando en Downtown"
+                    "text": {
+                        "es": "Fardando en Downtown",
+                        "en": "Playground on the Town",
+                        "fr": "Playground on the Town",
+                        "pt": "Playground on the Town"
+                    }
                 },
                 {
                     "id": "mc-07",
-                    "text": "Fardando en el muelle",
+                    "text": {
+                        "es": "Fardando en el muelle",
+                        "en": "Playground on the Dock",
+                        "fr": "Playground on the Dock",
+                        "pt": "Playground on the Dock"
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -449,7 +872,12 @@
                 },
                 {
                     "id": "mc-08",
-                    "text": "Fardando en el parking",
+                    "text": {
+                        "es": "Fardando en el parking",
+                        "en": "Playground on the Park",
+                        "fr": "Playground on the Park",
+                        "pt": "Playground on the Park"
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -459,11 +887,21 @@
                 },
                 {
                     "id": "mc-09",
-                    "text": "Cerco al centro comercial"
+                    "text": {
+                        "es": "Cerco al centro comercial",
+                        "en": "Mashin' up the Mall",
+                        "fr": "Mashin' up the Mall",
+                        "pt": "Mashin' up the Mall"
+                    }
                 },
                 {
                     "id": "mc-10",
-                    "text": "El cochecito leré",
+                    "text": {
+                        "es": "El cochecito leré",
+                        "en": "Caddy Daddy",
+                        "fr": "Caddy Daddy",
+                        "pt": "Caddy Daddy"
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -473,11 +911,21 @@
                 },
                 {
                     "id": "mc-11",
-                    "text": "Criminales con alas"
+                    "text": {
+                        "es": "Criminales con alas",
+                        "en": "Crims On Wings",
+                        "fr": "Crims On Wings",
+                        "pt": "Crims On Wings"
+                    }
                 },
                 {
                     "id": "mc-12",
-                    "text": "Criminales con manguitos",
+                    "text": {
+                        "es": "Criminales con manguitos",
+                        "en": "Crims On Water Wings",
+                        "fr": "Crims On Water Wings",
+                        "pt": "Crims On Water Wings"
+                    },
                     "tooltip": {
                         "es": "Solo disponible en la versión de PS2",
                         "en": "Only available in the PS2 version",
@@ -488,208 +936,163 @@
             ]
         },
         {
-            "id": "pcbmx",
-            "title": "Pruebas contrarreloj (BMX)",
+            "id": "pc",
+            "title": {
+                "es": "Pruebas contrarreloj",
+                "en": "Time Trials",
+                "fr": "Time Trials",
+                "pt": "Provas contra o tempo"
+            },
             "items": [
                 {
-                    "id": "pcbmx-01",
-                    "text": "Carrera 1"
+                    "id": "pc-01",
+                    "text": {
+                        "es": "12 recorridos con la Sánchez completados",
+                        "en": "12 courses with Sanchez completed",
+                        "fr": "12 cours de Sanchez terminés",
+                        "pt": "12 circuitos com Sanchez completados"
+                    }
                 },
                 {
-                    "id": "pcbmx-02",
-                    "text": "Carrera 2"
+                    "id": "pc-02",
+                    "text": {
+                        "es": "8 recorridos con la BMX completados",
+                        "en": "8 courses with BMX completed",
+                        "fr": "8 cours de BMX terminés",
+                        "pt": "8 circuitos com BMX completados"
+                    }
                 },
                 {
-                    "id": "pcbmx-03",
-                    "text": "Carrera 3"
+                    "id": "pc-03",
+                    "text": {
+                        "es": "4 recorridos con el Quad completados",
+                        "en": "4 courses with Quad completed",
+                        "fr": "4 cours de Quad terminés",
+                        "pt": "4 circuitos com Quad completed"
+                    }
                 },
                 {
-                    "id": "pcbmx-04",
-                    "text": "Carrera 4"
-                },
-                {
-                    "id": "pcbmx-05",
-                    "text": "Carrera 5"
-                },
-                {
-                    "id": "pcbmx-06",
-                    "text": "Carrera 6"
-                },
-                {
-                    "id": "pcbmx-07",
-                    "text": "Carrera 7"
-                },
-                {
-                    "id": "pcbmx-08",
-                    "text": "Carrera 8"
-                }
-            ]
-        },
-        {
-            "id": "pcs",
-            "title": "Pruebas contrarreloj (Sánchez)",
-            "items": [
-                {
-                    "id": "pcs-01",
-                    "text": "Carrera 1"
-                },
-                {
-                    "id": "pcs-02",
-                    "text": "Carrera 2"
-                },
-                {
-                    "id": "pcs-03",
-                    "text": "Carrera 3"
-                },
-                {
-                    "id": "pcs-04",
-                    "text": "Carrera 4"
-                },
-                {
-                    "id": "pcs-05",
-                    "text": "Carrera 5"
-                },
-                {
-                    "id": "pcs-06",
-                    "text": "Carrera 6"
-                },
-                {
-                    "id": "pcs-07",
-                    "text": "Carrera 7"
-                },
-                {
-                    "id": "pcs-08",
-                    "text": "Carrera 8"
-                },
-                {
-                    "id": "pcs-09",
-                    "text": "Carrera 9"
-                },
-                {
-                    "id": "pcs-10",
-                    "text": "Carrera 10"
-                },
-                {
-                    "id": "pcs-11",
-                    "text": "Carrera 11"
-                },
-                {
-                    "id": "pcs-12",
-                    "text": "Carrera 12"
-                }
-            ]
-        },
-        {
-            "id": "pcq",
-            "title": "Pruebas contrarreloj (Quad)",
-            "items": [
-                {
-                    "id": "pcq-01",
-                    "text": "Carrera 1"
-                },
-                {
-                    "id": "pcq-02",
-                    "text": "Carrera 2"
-                },
-                {
-                    "id": "pcq-03",
-                    "text": "Carrera 3"
-                },
-                {
-                    "id": "pcq-04",
-                    "text": "Carrera 4"
-                }
-            ]
-        },
-        {
-            "id": "da",
-            "title": "Deporte acuático",
-            "items": [
-                {
-                    "id": "da-01",
-                    "text": "Circuito 1"
-                },
-                {
-                    "id": "da-02",
-                    "text": "Circuito 2"
-                },
-                {
-                    "id": "da-03",
-                    "text": "Circuito 3"
-                },
-                {
-                    "id": "da-04",
-                    "text": "Circuito 4"
-                },
-                {
-                    "id": "da-05",
-                    "text": "Circuito 5"
-                },
-                {
-                    "id": "da-06",
-                    "text": "Circuito 6"
-                },
-                {
-                    "id": "da-07",
-                    "text": "Circuito 7"
-                },
-                {
-                    "id": "da-08",
-                    "text": "Circuito 8"
+                    "id": "pc-04",
+                    "text": {
+                        "es": "8 recorridos en Deporte acúatico completados",
+                        "en": "8 courses in Watersports completed",
+                        "fr": "8 cours de Watersports terminés",
+                        "pt": "8 circuitos de Watersport completados"
+                    }
                 }
             ]
         },
         {
             "id": "tsa",
-            "title": "Turismo (Sunshine Autos)",
+            "title": {
+                "es": "Carreras callejeras (Sunshine Autos)",
+                "en": "Street Races (Sunshine Autos)",
+                "fr": "Courses de rue (Sunshine Autos)",
+                "pt": "Corridas de Rua (Sunshine Autos)"
+            },
             "items": [
                 {
                     "id": "tsa-01",
-                    "text": "Pista de Escobar"
+                    "text": {
+                        "es": "Pista de Escobar",
+                        "en": "Escobar Run-Way",
+                        "fr": "Escobar Run-Way",
+                        "pt": "Escobar Run-Way"
+                    }
                 },
                 {
                     "id": "tsa-02",
-                    "text": "Furia Downtown"
+                    "text": {
+                        "es": "Furia Downtown",
+                        "en": "Downtown Showdown",
+                        "fr": "Downtown Showdown",
+                        "pt": "Downtown Showdown"
+                    }
                 },
                 {
                     "id": "tsa-03",
-                    "text": "Aire Deportivo"
+                    "text": {
+                        "es": "Aire Deportivo",
+                        "en": "Port Sports",
+                        "fr": "Port Sports",
+                        "pt": "Port Sports"
+                    }
                 },
                 {
                     "id": "tsa-04",
-                    "text": "Sabor Latino"
+                    "text": {
+                        "es": "Sabor Latino",
+                        "en": "Rum & Salsa Sting",
+                        "fr": "Rum & Salsa Sting",
+                        "pt": "Rum & Salsa Sting"
+                    }
                 },
                 {
                     "id": "tsa-05",
-                    "text": "Ruedas Cubanas"
+                    "text": {
+                        "es": "Ruedas Cubanas",
+                        "en": "Cuban Wheels",
+                        "fr": "Cuban Wheels",
+                        "pt": "Cuban Wheels"
+                    }
                 }
             ]
         },
         {
-            "id": "tcw",
-            "title": "Turismo (Chunder Wheel)",
+            "id": "tvp",
+            "title": {
+                "es": "Carreras callejeras (Vice Point)",
+                "en": "Street Races (Vice Point)",
+                "fr": "Courses de rue (Vice Point)",
+                "pt": "Corridas de Rua (Vice Point)"
+            },
             "items": [
                 {
-                    "id": "tcw-01",
-                    "text": "Carrera Majara"
+                    "id": "tvp-01",
+                    "text": {
+                        "es": "Carrera Majara",
+                        "en": "Fools Rush",
+                        "fr": "Fools Rush",
+                        "pt": "Fools Rush"
+                    }
                 },
                 {
-                    "id": "tcw-02",
-                    "text": "Apuesta y Gana"
+                    "id": "tvp-02",
+                    "text": {
+                        "es": "Apuesta y Gana",
+                        "en": "High Stakes Highway",
+                        "fr": "High Stakes Highway",
+                        "pt": "High Stakes Highway"
+                    }
                 },
                 {
-                    "id": "tcw-03",
-                    "text": "Asalto al Asfalto"
+                    "id": "tvp-03",
+                    "text": {
+                        "es": "Asalto al Asfalto",
+                        "en": "Asphalt Assault",
+                        "fr": "Asphalt Assault",
+                        "pt": "Asphalt Assault"
+                    }
                 },
                 {
-                    "id": "tcw-04",
-                    "text": "Sobrecarga"
+                    "id": "tvp-04",
+                    "text": {
+                        "es": "Sobrecarga",
+                        "en": "Supercharged Circuit",
+                        "fr": "Supercharged Circuit",
+                        "pt": "Supercharged Circuit"
+                    }
                 }
             ]
         },
         {
             "id": "si_1",
-            "title": "Servicio de incautaciones (1)",
+            "title": {
+                "es": "Servicio de incautaciones (1)",
+                "en": "Civil Asset Forfeiture Impound (1)",
+                "fr": "Civil Asset Forfeiture Impound (1)",
+                "pt": "Lista de Importação / Exportação (1)"
+            },
             "items": [
                 {
                     "id": "si_1-01",
@@ -727,7 +1130,12 @@
         },
         {
             "id": "si_2",
-            "title": "Servicio de incautaciones (2)",
+            "title": {
+                "es": "Servicio de incautaciones (2)",
+                "en": "Civil Asset Forfeiture Impound (2)",
+                "fr": "Civil Asset Forfeiture Impound (2)",
+                "pt": "Lista de Importação / Exportação (2)"
+            },
             "items": [
                 {
                     "id": "si_2-01",
@@ -765,7 +1173,12 @@
         },
         {
             "id": "si_3",
-            "title": "Servicio de incautaciones (3)",
+            "title": {
+                "es": "Servicio de incautaciones (3)",
+                "en": "Civil Asset Forfeiture Impound (3)",
+                "fr": "Civil Asset Forfeiture Impound (3)",
+                "pt": "Lista de Importação / Exportação (3)"
+            },
             "items": [
                 {
                     "id": "si_3-01",
@@ -803,7 +1216,12 @@
         },
         {
             "id": "si_a",
-            "title": "Servicio de incautaciones (Actuáticos)",
+            "title": {
+                "es": "Servicio de incautaciones (Acúaticos)",
+                "en": "Civil Asset Forfeiture Impound (Watercraft)",
+                "fr": "Civil Asset Forfeiture Impound (Bateaux)",
+                "pt": "Lista de Importação / Exportação (Embarcações)"
+            },
             "items": [
                 {
                     "id": "si_a-01",
@@ -841,23 +1259,60 @@
         },
         {
             "id": "col",
-            "title": "Coleccionables",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Coletáveis"
+            },
             "items": [
                 {
                     "id": "col-01",
-                    "text": "99 globos rojos"
+                    "text": {
+                        "es": "99 globos rojos",
+                        "en": "99 red balloons",
+                        "fr": "99 ballons rouges",
+                        "pt": "99 balões vermelhos"
+                    }
                 },
                 {
                     "id": "col-02",
-                    "text": "30 locales para el Imperio Vance"
+                    "text": {
+                        "es": "30 locales del Imperio Vance conquistados",
+                        "en": "30 Empire buildings owned",
+                        "fr": "30 propriétés de l'Empire Vance conquises",
+                        "pt": "30 propriedades do Império Vance conquistadas"
+                    }
                 },
                 {
                     "id": "col-03",
-                    "text": "36 saltos únicos"
+                    "text": {
+                        "es": "36 saltos únicos",
+                        "en": "36 unique jumps",
+                        "fr": "36 sauts uniques",
+                        "pt": "36 saltos únicos"
+                    },
+                    "tooltip": {
+                        "es": "30 en la versión de PSP",
+                        "en": "30 in the PSP version",
+                        "fr": "30 dans la version PSP",
+                        "pt": "30 na versão de PSP"
+                    }
                 },
                 {
                     "id": "col-04",
-                    "text": "35 masacres"
+                    "text": {
+                        "es": "35 masacres",
+                        "en": "35 rampages",
+                        "fr": "35 rodéos",
+                        "pt": "35 rampages"
+                    },
+                    "tooltip": {
+                        "es": "30 en la versión de PSP",
+                        "en": "30 in the PSP version",
+                        "fr": "30 dans la version PSP",
+                        "pt": "30 na versão de PSP"
+                    }
                 }
             ]
         }
