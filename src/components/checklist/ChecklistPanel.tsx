@@ -1,8 +1,9 @@
 import Title from "@/components/ui/Title";
+import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
+import useT from "@/hooks/useT";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import useT from "@/hooks/useT";
 import {
     useChecklistProgress,
     type ChecklistProgress,
@@ -12,7 +13,6 @@ import type { ChecklistSectionData } from "../../types/checklist";
 import { launchConfetti } from "../../utils/confetti";
 import { ChecklistSection } from "./ChecklistSection";
 import { ProgressBar } from "./ProgressBar";
-import type { GameId } from "@/config/games";
 
 interface ChecklistPanelProps {
     game: GameId;
@@ -35,20 +35,37 @@ export function ChecklistPanel({
         (variant) => variant.id.toLowerCase() === tabId.toLowerCase(),
     );
 
-    const { checked, toggleItem, toggleMany } = useChecklistState(game, tabId);
+    const { checked, toggleItem, toggleMany, loaded } = useChecklistState(
+        game,
+        tabId,
+    );
     const progress = useChecklistProgress(sections, checked);
 
-    // ...
-
     const prevPctRef = useRef<number | null>(null);
+    const initializedRef = useRef(false);
+    const prevTabIdRef = useRef(tabId);
+
     useEffect(() => {
         onProgressChange?.(progress, tabId);
+
+        if (prevTabIdRef.current !== tabId) {
+            prevTabIdRef.current = tabId;
+            initializedRef.current = false;
+        }
+
+        if (!loaded) return;
+
+        if (!initializedRef.current) {
+            initializedRef.current = true;
+            prevPctRef.current = progress.pct;
+            return;
+        }
 
         if (progress.pct === 100 && prevPctRef.current !== 100) {
             launchConfetti();
         }
         prevPctRef.current = progress.pct;
-    }, [progress, tabId, onProgressChange]);
+    }, [progress, tabId, onProgressChange, loaded]);
 
     return (
         <div

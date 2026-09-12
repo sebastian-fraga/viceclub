@@ -15,9 +15,12 @@ function loadChecked(game: string, tabId: string): Record<string, boolean> {
 
 export function useChecklistState(game: string, tabId: string) {
     const [checked, setChecked] = useState<Record<string, boolean>>({});
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
+        setLoaded(false);
         setChecked(loadChecked(game, tabId));
+        setLoaded(true);
     }, [game, tabId]);
 
     useEffect(() => {
@@ -38,11 +41,12 @@ export function useChecklistState(game: string, tabId: string) {
     }, [game]);
 
     useEffect(() => {
+        if (!loaded) return;
         localStorage.setItem(
             getStorageKey(game, tabId),
             JSON.stringify(checked),
         );
-    }, [checked, game, tabId]);
+    }, [checked, game, tabId, loaded]);
 
     const toggleItem = useCallback((id: string) => {
         setChecked((prev) => ({
@@ -63,5 +67,5 @@ export function useChecklistState(game: string, tabId: string) {
         });
     }, []);
 
-    return { checked, toggleItem, toggleMany };
+    return { checked, toggleItem, toggleMany, loaded };
 }
