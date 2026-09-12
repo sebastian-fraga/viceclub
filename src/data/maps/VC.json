@@ -419,8 +419,8 @@
                         {
                             "es": "Borrar",
                             "en": "Rub Out",
-                            "fr": "🌴",
-                            "pt": "🌴"
+                            "fr": "Liquidation",
+                            "pt": "Rub Out"
                         }
                     ]
                 }
@@ -435,8 +435,8 @@
                         {
                             "es": "Borrar",
                             "en": "Rub Out",
-                            "fr": "🌴",
-                            "pt": "🌴"
+                            "fr": "Liquidation",
+                            "pt": "Rub Out"
                         }
                     ]
                 }
@@ -452,8 +452,8 @@
                         {
                             "es": "Borrar",
                             "en": "Rub Out",
-                            "fr": "🌴",
-                            "pt": "🌴"
+                            "fr": "Liquidation",
+                            "pt": "Rub Out"
                         }
                     ]
                 }
@@ -466,16 +466,16 @@
                 "description": {
                     "es": "Centro de la ciudad",
                     "en": "Downtown",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Centre",
+                    "pt": "Centro"
                 },
                 "requirements": {
                     "availableAfter": [
                         {
                             "es": "Punto G",
                             "en": "G-Spotlight",
-                            "fr": "🌴",
-                            "pt": "🌴"
+                            "fr": "Projecteur G",
+                            "pt": "G-Spotlight"
                         }
                     ]
                 }
@@ -489,8 +489,8 @@
                 "description": {
                     "es": "Prueba de PCJ",
                     "en": "PCJ Playground",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Terrain de jeu PCJ",
+                    "pt": "PCJ Playground"
                 }
             },
             {
@@ -500,8 +500,8 @@
                 "description": {
                     "es": "Conocircuito",
                     "en": "Cone Crazy",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Cône en folie",
+                    "pt": "Cone Crazy"
                 }
             },
             {
@@ -511,8 +511,8 @@
                 "description": {
                     "es": "Prueba por tierra",
                     "en": "Trial by Dirt",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Sélection par la boue",
+                    "pt": "Trial by Dirt"
                 }
             },
             {
@@ -522,8 +522,8 @@
                 "description": {
                     "es": "Probar pista",
                     "en": "Test Track",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Piste d'essai",
+                    "pt": "Test Track"
                 }
             }
         ],
@@ -535,8 +535,8 @@
                 "description": {
                     "es": "Carrera Bandit RC",
                     "en": "RC Bandit Race",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Course de RC Bandit",
+                    "pt": "RC Bandit Race"
                 }
             },
             {
@@ -546,8 +546,8 @@
                 "description": {
                     "es": "Carrera Barón RC",
                     "en": "RC Baron Race",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Course de RC Baron",
+                    "pt": "RC Baron Race"
                 }
             },
             {
@@ -557,8 +557,8 @@
                 "description": {
                     "es": "Recogidas del Raider RC",
                     "en": "RC Raider Pickup",
-                    "fr": "🌴",
-                    "pt": "🌴"
+                    "fr": "Course de RC Raider",
+                    "pt": "RC Raider Pickup"
                 }
             }
         ],

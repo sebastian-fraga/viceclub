@@ -2,64 +2,129 @@
     "sections": [
         {
             "id": "mp",
-            "title": "Misiones principales",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
             "items": [
                 {
                     "id": "mp-01",
-                    "text": "Al principio..."
+                    "text": {
+                        "es": "Al principio...",
+                        "en": "In The Beginning...",
+                        "fr": "Au début...",
+                        "pt": "In The Beginning..."
+                    }
                 },
                 {
                     "id": "mp-02",
-                    "text": "Un viejo amigo"
+                    "text": {
+                        "es": "Un viejo amigo",
+                        "en": "An Old Friend",
+                        "fr": "Un vieil ami",
+                        "pt": "An Old Friend"
+                    }
                 },
                 {
                     "id": "mp-03",
-                    "text": "La fiesta",
+                    "text": {
+                        "es": "La fiesta",
+                        "en": "The Party",
+                        "fr": "La Fête",
+                        "pt": "The Party"
+                    },
                     "icon": "rosenberg"
                 },
                 {
                     "id": "mp-04",
-                    "text": "Pelea en el callejón trasero",
+                    "text": {
+                        "es": "Pelea en el callejón trasero",
+                        "en": "Back Alley Brawl",
+                        "fr": "Baston de rue",
+                        "pt": "Back Alley Brawl"
+                    },
                     "icon": "rosenberg"
                 },
                 {
                     "id": "mp-05",
-                    "text": "Furia en el jurado",
+                    "text": {
+                        "es": "Furia en el jurado",
+                        "en": "Jury Fury",
+                        "fr": "Jury sous pression",
+                        "pt": "Jury Fury"
+                    },
                     "icon": "rosenberg"
                 },
                 {
                     "id": "mp-06",
-                    "text": "Disturbios",
+                    "text": {
+                        "es": "Disturbios",
+                        "en": "Riot",
+                        "fr": "Émeute",
+                        "pt": "Riot"
+                    },
                     "icon": "rosenberg"
                 },
                 {
                     "id": "mp-07",
-                    "text": "Hierro número cuatro",
+                    "text": {
+                        "es": "Hierro número cuatro",
+                        "en": "Four Iron",
+                        "fr": "Quatre fers",
+                        "pt": "Four Iron"
+                    },
                     "icon": "avery"
                 },
                 {
                     "id": "mp-08",
-                    "text": "Demoledor",
+                    "text": {
+                        "es": "Demoledor",
+                        "en": "Demolition Man",
+                        "fr": "Demolition Man",
+                        "pt": "Demolition Man"
+                    },
                     "icon": "avery"
                 },
                 {
                     "id": "mp-09",
-                    "text": "Cerdo traidor",
+                    "text": {
+                        "es": "Cerdo traidor",
+                        "en": "Treacherous Swine",
+                        "fr": "Salaud de traître",
+                        "pt": "Treacherous Swine"
+                    },
                     "icon": "cortez"
                 },
                 {
                     "id": "mp-10",
-                    "text": "Tiros en el centro comercial",
+                    "text": {
+                        "es": "Tiroteo en el centro comercial",
+                        "en": "Mall Shootout",
+                        "fr": "Fusillade",
+                        "pt": "Mall Shootout"
+                    },
                     "icon": "cortez"
                 },
                 {
                     "id": "mp-11",
-                    "text": "Ángeles guardianes",
+                    "text": {
+                        "es": "Ángeles guardianes",
+                        "en": "Guardian Angels",
+                        "fr": "Anges gardiens",
+                        "pt": "Guardian Angels"
+                    },
                     "icon": "cortez"
                 },
                 {
                     "id": "mp-12",
-                    "text": "La caza",
+                    "text": {
+                        "es": "La caza",
+                        "en": "The Chase",
+                        "fr": "Course-poursuite",
+                        "pt": "The Chase"
+                    },
                     "icon": "diaz"
                 },
                 {
@@ -69,87 +134,172 @@
                 },
                 {
                     "id": "mp-14",
-                    "text": "El barco más rápido",
+                    "text": {
+                        "es": "El barco más rápido",
+                        "en": "The Fastest Boat",
+                        "fr": "SpeedBoat",
+                        "pt": "The Fastest Boat"
+                    },
                     "icon": "diaz"
                 },
                 {
                     "id": "mp-15",
-                    "text": "Oferta y demanda",
+                    "text": {
+                        "es": "Oferta y demanda",
+                        "en": "Supply & Demand",
+                        "fr": "Offre et demande",
+                        "pt": "Supply & Demand"
+                    },
                     "icon": "diaz"
                 },
                 {
                     "id": "mp-16",
-                    "text": "¡Señor, sí, señor!",
+                    "text": {
+                        "es": "¡Señor, sí, señor!",
+                        "en": "Sir, Yes Sir!",
+                        "fr": "Chef, oui, chef !",
+                        "pt": "Sir, Yes Sir!"
+                    },
                     "icon": "cortez"
                 },
                 {
                     "id": "mp-17",
-                    "text": "Dos leves impactos",
+                    "text": {
+                        "es": "Dos leves impactos",
+                        "en": "Two Bit Hit",
+                        "fr": "Funérailles",
+                        "pt": "Two Bit Hit"
+                    },
                     "icon": "avery"
                 },
                 {
                     "id": "mp-18",
-                    "text": "El corredor de la muerte",
+                    "text": {
+                        "es": "El corredor de la muerte",
+                        "en": "Death Row",
+                        "fr": "Couloir de la mort",
+                        "pt": "Death Row"
+                    },
                     "icon": "kent"
                 },
                 {
                     "id": "mp-19",
-                    "text": "¡Todos con las manos arriba!",
+                    "text": {
+                        "es": "¡Todos con las manos arriba!",
+                        "en": "All Hands On Deck!",
+                        "fr": "Sur le pont",
+                        "pt": "All Hands On Deck!"
+                    },
                     "icon": "cortez"
                 },
                 {
                     "id": "mp-20",
-                    "text": "Borrar",
+                    "text": {
+                        "es": "Borrar",
+                        "en": "Rub Out",
+                        "fr": "Liquidation",
+                        "pt": "Rub Out"
+                    },
                     "icon": "vercetti"
                 },
                 {
                     "id": "mp-21",
-                    "text": "Extorsión",
+                    "text": {
+                        "es": "Extorsión",
+                        "en": "Shakedown",
+                        "fr": "Extorsion",
+                        "pt": "Shakedown"
+                    },
                     "icon": "vercetti"
                 },
                 {
                     "id": "mp-22",
-                    "text": "Pelea en el bar",
+                    "text": {
+                        "es": "Pelea en el bar",
+                        "en": "Bar Brawl",
+                        "fr": "Rixe de bar",
+                        "pt": "Bar Brawl"
+                    },
                     "icon": "vercetti"
                 },
                 {
                     "id": "mp-23",
-                    "text": "Tierra de polis",
+                    "text": {
+                        "es": "Tierra de polis",
+                        "en": "Cop Land",
+                        "fr": "CopLand",
+                        "pt": "Cop Land"
+                    },
                     "icon": "vercetti"
                 },
                 {
                     "id": "mp-24",
-                    "text": "El desafío del barco trucado",
+                    "text": {
+                        "es": "El desafío del barco trucado",
+                        "en": "Stunt Boat Challenge",
+                        "fr": "Cascades aquatiques",
+                        "pt": "Stunt Boat Challenge"
+                    },
                     "icon": "cuba"
                 },
                 {
                     "id": "mp-25",
-                    "text": "Carne de cañón",
+                    "text": {
+                        "es": "Carne de cañón",
+                        "en": "Cannon Fodder",
+                        "fr": "Chair à canon",
+                        "pt": "Cannon Fodder"
+                    },
                     "icon": "cuba"
                 },
                 {
                     "id": "mp-26",
-                    "text": "Encuentro naval",
+                    "text": {
+                        "es": "Encuentro naval",
+                        "en": "Naval Engagement",
+                        "fr": "Bataille navale",
+                        "pt": "Naval Engagement"
+                    },
                     "icon": "cuba"
                 },
                 {
                     "id": "mp-27",
-                    "text": "Poción mágica",
+                    "text": {
+                        "es": "Poción mágica",
+                        "en": "Juju Scramble",
+                        "fr": "Juju",
+                        "pt": "Juju Scramble"
+                    },
                     "icon": "haiti"
                 },
                 {
                     "id": "mp-28",
-                    "text": "¡Bombas fuera!",
+                    "text": {
+                        "es": "¡Bombas fuera!",
+                        "en": "Bombs Away!",
+                        "fr": "Bombes !",
+                        "pt": "Bombs Away!"
+                    },
                     "icon": "haiti"
                 },
                 {
                     "id": "mp-29",
-                    "text": "Juego sucio",
+                    "text": {
+                        "es": "Juego sucio",
+                        "en": "Dirty Lickin's",
+                        "fr": "Raclée",
+                        "pt": "Dirty Lickin's"
+                    },
                     "icon": "haiti"
                 },
                 {
                     "id": "mp-30",
-                    "text": "Vudú troyano",
+                    "text": {
+                        "es": "Vudú troyano",
+                        "en": "Trojan Voodoo",
+                        "fr": "Vaudou",
+                        "pt": "Trojan Voodoo"
+                    },
                     "icon": "cuba"
                 },
                 {
@@ -159,32 +309,62 @@
                 },
                 {
                     "id": "mp-32",
-                    "text": "Asesino psicópata",
+                    "text": {
+                        "es": "Asesino psicópata",
+                        "en": "Psycho Killer",
+                        "fr": "Psychopathe",
+                        "pt": "Psycho Killer"
+                    },
                     "icon": "fist"
                 },
                 {
                     "id": "mp-33",
-                    "text": "Moto con llantas de aleación",
+                    "text": {
+                        "es": "Moto con llantas de aleación",
+                        "en": "Alloy Wheels of Steel",
+                        "fr": "Alliage d'acier",
+                        "pt": "Alloy Wheels of Steel"
+                    },
                     "icon": "mitch"
                 },
                 {
                     "id": "mp-34",
-                    "text": "Incitando al macho",
+                    "text": {
+                        "es": "Incitando al macho",
+                        "en": "Messing with the Man",
+                        "fr": "Colère",
+                        "pt": "Messing with the Man"
+                    },
                     "icon": "mitch"
                 },
                 {
                     "id": "mp-35",
-                    "text": "Moto robada",
+                    "text": {
+                        "es": "Moto robada",
+                        "en": "Hog Tied",
+                        "fr": "Bécane",
+                        "pt": "Hog Tied"
+                    },
                     "icon": "mitch"
                 },
                 {
                     "id": "mp-36",
-                    "text": "Gira publicitaria",
+                    "text": {
+                        "es": "Gira publicitaria",
+                        "en": "Publicity Tour",
+                        "fr": "Promo",
+                        "pt": "Publicity Tour"
+                    },
                     "icon": "fist"
                 },
                 {
                     "id": "mp-37",
-                    "text": "Traficante de armas",
+                    "text": {
+                        "es": "Traficante de armas",
+                        "en": "Gun Runner",
+                        "fr": "Trafiquant d'armes",
+                        "pt": "Gun Runner"
+                    },
                     "icon": "phil"
                 },
                 {
@@ -194,122 +374,206 @@
                 },
                 {
                     "id": "mp-39",
-                    "text": "Descubriendo el pastel",
+                    "text": {
+                        "es": "Descubriendo el pastel",
+                        "en": "Spilling the Beans",
+                        "fr": "La mèche est vendue",
+                        "pt": "Spilling the Beans"
+                    },
                     "icon": "imprenta"
                 },
                 {
                     "id": "mp-40",
-                    "text": "Ataca al mensajero",
+                    "text": {
+                        "es": "Ataca al mensajero",
+                        "en": "Hit the Courier",
+                        "fr": "Halte au messager",
+                        "pt": "Hit the Courier"
+                    },
                     "icon": "imprenta"
                 },
                 {
                     "id": "mp-41",
-                    "text": "Liquida al cobrador",
+                    "text": {
+                        "es": "Liquida al cobrador",
+                        "en": "Cap the Collector",
+                        "fr": "L'Encaisseur",
+                        "pt": "Cap the Collector"
+                    },
                     "icon": "imprenta"
                 },
                 {
                     "id": "mp-42",
-                    "text": "Mantén cerca a tus amigos",
+                    "text": {
+                        "es": "Mantén cerca a tus amigos",
+                        "en": "Keep Your Friends Close...",
+                        "fr": "Amis proches",
+                        "pt": "Keep Your Friends Close..."
+                    },
                     "icon": "vercetti"
                 }
             ]
         },
         {
             "id": "ast",
-            "title": "Misiones del astillero",
+            "title": {
+                "es": "Astillero",
+                "en": "Boatyard",
+                "fr": "Chantier naval",
+                "pt": "Estaleiro"
+            },
             "icon": "astillero",
             "items": [
                 {
                     "id": "ast-01",
-                    "text": "El astillero"
-                },
-                {
-                    "id": "ast-02",
                     "text": "Checkpoint Charlie"
                 }
             ]
         },
         {
             "id": "chp",
-            "title": "Misiones de Cherry Popper",
+            "title": {
+                "es": "Cherry Popper",
+                "en": "Cherry Popper Ice Cream Factory",
+                "fr": "Cherry Popper",
+                "pt": "Cherry Popper"
+            },
             "icon": "cherry",
             "items": [
                 {
                     "id": "chp-01",
-                    "text": "Helados Cherry Popper"
-                },
-                {
-                    "id": "chp-02",
-                    "text": "50 entregas seguidas realizadas"
+                    "text": {
+                        "es": "Distrubución",
+                        "en": "Distribution",
+                        "fr": "Distribution",
+                        "pt": "Distribution"
+                    },
+                    "tooltip": {
+                        "es": "Requiere realizar 50 ventas seguidas",
+                        "en": "Requires making 50 sales in a row",
+                        "fr": "Nécessite de réaliser 50 ventes consécutives",
+                        "pt": "Requer realizar 50 vendas seguidas"
+                    }
                 }
             ]
         },
         {
             "id": "ig",
-            "title": "Misiones de Interglobal Films",
+            "title": "Interglobal Films",
             "icon": "estudio",
             "items": [
                 {
                     "id": "ig-01",
-                    "text": "Campaña de reclutamiento"
+                    "text": {
+                        "es": "Campaña de reclutamiento",
+                        "en": "Recruitment Drive",
+                        "fr": "Bout d'essai",
+                        "pt": "Recruitment Drive"
+                    }
                 },
                 {
                     "id": "ig-02",
-                    "text": "Consolador Dodo"
+                    "text": {
+                        "es": "Consolador Dodo",
+                        "en": "Dildo Dodo",
+                        "fr": "Dodo vibro",
+                        "pt": "Dildo Dodo"
+                    }
                 },
                 {
                     "id": "ig-03",
-                    "text": "La foto policial de Marta"
+                    "text": {
+                        "es": "La foto policial de Marta",
+                        "en": "Martha's Mug Shot",
+                        "fr": "Martha",
+                        "pt": "Martha's Mug Shot"
+                    }
                 },
                 {
                     "id": "ig-04",
-                    "text": "Punto G"
+                    "text": {
+                        "es": "Punto G",
+                        "en": "G-Spotlight",
+                        "fr": "Projecteur G",
+                        "pt": "G-Spotlight"
+                    }
                 }
             ]
         },
         {
             "id": "kc",
-            "title": "Misiones de Kaufman Cabs",
+            "title": "Kaufman Cabs",
             "icon": "taxi",
             "items": [
                 {
                     "id": "kc-01",
-                    "text": "Taxis Kaufman"
-                },
-                {
-                    "id": "kc-02",
                     "text": "V.I.P."
                 },
                 {
-                    "id": "kc-03",
-                    "text": "Rivalidad amistosa"
+                    "id": "kc-02",
+                    "text": {
+                        "es": "Rivalidad amistosa",
+                        "en": "Friendly Rivalry",
+                        "fr": "Concurrence amicale",
+                        "pt": "Friendly Rivalry"
+                    }
                 },
                 {
-                    "id": "kc-04",
-                    "text": "Taxigedón"
+                    "id": "kc-03",
+                    "text": {
+                        "es": "Taxigedón",
+                        "en": "Cabmaggedon",
+                        "fr": "Cabmaggedon",
+                        "pt": "Cabmaggedon"
+                    }
                 }
             ]
         },
         {
             "id": "cm",
-            "title": "Misiones del Club Malibú",
+            "title": {
+                "es": "Club Malibú",
+                "en": "Malibu Club",
+                "fr": "Malibu Club",
+                "pt": "Malibu Club"
+            },
             "icon": "malibu",
             "items": [
                 {
                     "id": "cm-01",
-                    "text": "¿Sin escapatoria?"
+                    "text": {
+                        "es": "¿Sin escapatoria?",
+                        "en": "No Escape?",
+                        "fr": "Sans issue",
+                        "pt": "No Escape?"
+                    }
                 },
                 {
                     "id": "cm-02",
-                    "text": "El tirador"
+                    "text": {
+                        "es": "El tirador",
+                        "en": "The Shootist",
+                        "fr": "Le Flingueur",
+                        "pt": "The Shootist"
+                    }
                 },
                 {
                     "id": "cm-03",
-                    "text": "El conductor"
+                    "text": {
+                        "es": "El conductor",
+                        "en": "The Driver",
+                        "fr": "Le Chauffeur",
+                        "pt": "The Driver"
+                    }
                 },
                 {
                     "id": "cm-04",
-                    "text": "El atraco"
+                    "text": {
+                        "es": "El atraco",
+                        "en": "The Job",
+                        "fr": "Hold-up",
+                        "pt": "The Job"
+                    }
                 }
             ]
         },
@@ -320,165 +584,248 @@
             "items": [
                 {
                     "id": "sa-01",
-                    "text": "Coches Sunshine"
+                    "text": {
+                        "es": "Coches Sunshine",
+                        "en": "Sunshine Autos",
+                        "fr": "Sunshine Autos",
+                        "pt": "Sunshine Autos"
+                    }
                 }
             ]
         },
         {
             "id": "pp",
-            "title": "Club Pole Position",
+            "title": {
+                "es": "Club Pole Position",
+                "en": "The Pole Position Club",
+                "fr": "Pole Position Club",
+                "pt": "Pole Position Club"
+            },
             "icon": "pole",
             "items": [
                 {
                     "id": "pp-01",
-                    "text": "$300 gastados en un baile privado"
+                    "text": {
+                        "es": "Club Pole Position",
+                        "en": "Club Pole Position",
+                        "fr": "Strip-club Pole Position",
+                        "pt": "Pole Position Club"
+                    },
+                    "tooltip": {
+                        "es": "Se desbloquea al gastar $300 en un baile privado",
+                        "en": "Unlocked by spending $300 on a private dance",
+                        "fr": "Se débloque en dépensant 300 $ pour une danse privée",
+                        "pt": "Desbloqueia após dar $300 à dançarina"
+                    }
                 }
             ]
         },
         {
             "id": "ms",
-            "title": "Misiones secundarias",
+            "title": {
+                "es": "Misiones secundarias",
+                "en": "Side missions",
+                "fr": "Missions secondaires",
+                "pt": "Missões secundárias"
+            },
             "items": [
                 {
                     "id": "ms-01",
-                    "text": "100 viajes como taxista"
+                    "text": {
+                        "es": "100 viajes como taxista",
+                        "en": "100 taxi rides completed",
+                        "fr": "100 courses en taxi effectuées",
+                        "pt": "100 corridas de táxi completadas"
+                    }
                 },
                 {
                     "id": "ms-02",
-                    "text": "Nivel 12 de paramédico completado"
+                    "text": {
+                        "es": "Nivel 12 de paramédico completado",
+                        "en": "Paramedic level 12 completed",
+                        "fr": "Niveau 12 de paramédic complété",
+                        "pt": "Nível 12 de paramédico completado"
+                    }
                 },
                 {
                     "id": "ms-03",
-                    "text": "Nivel 12 de vigilante completado"
+                    "text": {
+                        "es": "Nivel 12 de vigilante completado",
+                        "en": "Vigilante level 12 completed",
+                        "fr": "Niveau 12 d'autodéfense complété",
+                        "pt": "Nível 12 de justiciero completado"
+                    }
                 },
                 {
                     "id": "ms-04",
-                    "text": "Nivel 12 de bombero completado"
+                    "text": {
+                        "es": "Nivel 12 de bombero completado",
+                        "en": "Firefighter level 12 completed",
+                        "fr": "Niveau 12 de pompier complété",
+                        "pt": "Nível 12 de bombeiro completado"
+                    }
                 },
                 {
                     "id": "ms-05",
-                    "text": "Nivel 10 de repartidor de pizzas completado"
+                    "text": {
+                        "es": "Nivel 10 de repartidor de pizzas completado",
+                        "en": "Pizza Boy level 10 completed",
+                        "fr": "Niveau 10 de livreur de pizza complété",
+                        "pt": "Nível 10 de Pizza Boy completado"
+                    }
                 }
             ]
         },
         {
             "id": "mt",
-            "title": "Misiones telefónicas",
+            "title": {
+                "es": "Misiones telefónicas",
+                "en": "Phone missions",
+                "fr": "Missions téléphoniques",
+                "pt": "Missões telefônicas"
+            },
             "icon": "telefono",
             "items": [
                 {
                     "id": "mt-01",
-                    "text": "Muerte en la carretera"
+                    "text": {
+                        "es": "Muerte en la carretera",
+                        "en": "Road Kill",
+                        "fr": "Accident de la route",
+                        "pt": "Road Kill"
+                    }
                 },
                 {
                     "id": "mt-02",
-                    "text": "Elimina a la esposa"
+                    "text": {
+                        "es": "Elimina a la esposa",
+                        "en": "Waste the Wife",
+                        "fr": "Bute la femme !",
+                        "pt": "Waste the Wife"
+                    }
                 },
                 {
                     "id": "mt-03",
-                    "text": "Autocidio"
+                    "text": {
+                        "es": "Autocidio",
+                        "en": "Autocide",
+                        "fr": "Autocide",
+                        "pt": "Autocide"
+                    }
                 },
                 {
                     "id": "mt-04",
-                    "text": "Comprobar el registro"
+                    "text": {
+                        "es": "Comprobar el registro",
+                        "en": "Check Out at the Check In",
+                        "fr": "Enregistrement",
+                        "pt": "Check Out at the Check In"
+                    }
                 },
                 {
                     "id": "mt-05",
-                    "text": "Cabos sueltos"
+                    "text": {
+                        "es": "Cabos sueltos",
+                        "en": "Loose Ends",
+                        "fr": "Détails",
+                        "pt": "Loose Ends"
+                    }
                 }
             ]
         },
         {
             "id": "rc",
-            "title": "Misiones RC",
+            "title": {
+                "es": "Misiones RC",
+                "en": "RC Missions",
+                "fr": "Courses RC",
+                "pt": "Corridas de RC"
+            },
             "items": [
                 {
                     "id": "rc-01",
-                    "text": "Carrera Bandit RC"
+                    "text": {
+                        "es": "Carrera Bandit RC",
+                        "en": "RC Bandit Race",
+                        "fr": "Course de RC Bandit",
+                        "pt": "RC Bandit Race"
+                    }
                 },
                 {
                     "id": "rc-02",
-                    "text": "Recogidas del Raider RC"
+                    "text": {
+                        "es": "Carrera Barón RC",
+                        "en": "RC Baron Race",
+                        "fr": "Course de RC Baron",
+                        "pt": "RC Baron Race"
+                    }
                 },
                 {
                     "id": "rc-03",
-                    "text": "Carrera Barón RC"
+                    "text": {
+                        "es": "Recogidas del Raider RC",
+                        "en": "RC Raider Pickup",
+                        "fr": "Course de RC Raider",
+                        "pt": "RC Raider Pickup"
+                    }
                 }
             ]
         },
         {
             "id": "pc",
-            "title": "Misiones de puntos de control",
+            "title": {
+                "es": "Misiones de puntos de control",
+                "en": "Off-Road missions",
+                "fr": "Missions Off-Road",
+                "pt": "Missões Off-Road"
+            },
             "items": [
                 {
                     "id": "pc-01",
-                    "text": "Conocircuito"
+                    "text": {
+                        "es": "Prueba de PCJ",
+                        "en": "PCJ Playground",
+                        "fr": "Terrain de jeu PCJ",
+                        "pt": "PCJ Playground"
+                    }
                 },
                 {
                     "id": "pc-02",
-                    "text": "Prueba de PCJ"
+                    "text": {
+                        "es": "Conocircuito",
+                        "en": "Cone Crazy",
+                        "fr": "Cône en folie",
+                        "pt": "Cone Crazy"
+                    }
                 },
                 {
                     "id": "pc-03",
-                    "text": "Probar pista"
+                    "text": {
+                        "es": "Prueba por tierra",
+                        "en": "Trial by Dirt",
+                        "fr": "Sélection par la boue",
+                        "pt": "Trial by Dirt"
+                    }
                 },
                 {
                     "id": "pc-04",
-                    "text": "Prueba por tierra"
-                }
-            ]
-        },
-        {
-            "id": "est",
-            "title": "Estadio",
-            "items": [
-                {
-                    "id": "est-01",
-                    "text": "Bloodring"
-                },
-                {
-                    "id": "est-02",
-                    "text": "Dirtring"
-                },
-                {
-                    "id": "est-03",
-                    "text": "Hotring"
-                }
-            ]
-        },
-        {
-            "id": "csa",
-            "title": "Carreras de Sunshine Autos",
-            "items": [
-                {
-                    "id": "csa-01",
-                    "text": "Velocidad terminal"
-                },
-                {
-                    "id": "csa-02",
-                    "text": "Ocean Drive"
-                },
-                {
-                    "id": "csa-03",
-                    "text": "Carrera por el borde"
-                },
-                {
-                    "id": "csa-04",
-                    "text": "Capital Cruise"
-                },
-                {
-                    "id": "csa-05",
-                    "text": "¡Tour!"
-                },
-                {
-                    "id": "csa-06",
-                    "text": "Aguante en V.C."
+                    "text": {
+                        "es": "Probar pista",
+                        "en": "Test Track",
+                        "fr": "Piste d'essai",
+                        "pt": "Test Track"
+                    }
                 }
             ]
         },
         {
             "id": "ch",
-            "title": "Control de helicóptero",
+            "title": {
+                "es": "Control de helicóptero",
+                "en": "Chopper Checkpoint",
+                "fr": "Point de passage hélico",
+                "pt": "Checkpoint de helicóptero"
+            },
             "items": [
                 {
                     "id": "ch-01",
@@ -494,31 +841,167 @@
                 },
                 {
                     "id": "ch-04",
-                    "text": "Downtown"
+                    "text": {
+                        "es": "Centro de la ciudad",
+                        "en": "Downtown",
+                        "fr": "Centre",
+                        "pt": "Centro"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "est",
+            "title": {
+                "es": "Estadio Hyman Memorial",
+                "en": "Hyman Memorial Stadium",
+                "fr": "Stade Hyman Memorial",
+                "pt": "Estádio Hyman Memorial"
+            },
+            "items": [
+                {
+                    "id": "est-01",
+                    "text": "Bloodring",
+                    "tooltip": {
+                        "es": "Disponible entre las 20:00 y las 00:00",
+                        "en": "Available between 20:00 and 00:00",
+                        "fr": "Disponible entre 20:00 et 00:00",
+                        "pt": "Disponível entre 20:00 e 00:00"
+                    }
+                },
+                {
+                    "id": "est-02",
+                    "text": "Dirtring",
+                    "tooltip": {
+                        "es": "Disponible entre las 20:00 y las 00:00",
+                        "en": "Available between 20:00 and 00:00",
+                        "fr": "Disponible entre 20:00 et 00:00",
+                        "pt": "Disponível entre 20:00 e 00:00"
+                    }
+                },
+                {
+                    "id": "est-03",
+                    "text": "Hotring",
+                    "tooltip": {
+                        "es": "Disponible entre las 20:00 y las 00:00",
+                        "en": "Available between 20:00 and 00:00",
+                        "fr": "Disponible entre 20:00 et 00:00",
+                        "pt": "Disponível entre 20:00 e 00:00"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "csa",
+            "title": {
+                "es": "Carreras callejeras",
+                "en": "Street Races",
+                "fr": "Courses de rue",
+                "pt": "Corridas de Rua"
+            },
+            "items": [
+                {
+                    "id": "csa-01",
+                    "text": {
+                        "es": "Velocidad terminal",
+                        "en": "Terminal Velocity",
+                        "fr": "Vitesse terminale",
+                        "pt": "Terminal Velocity"
+                    }
+                },
+                {
+                    "id": "csa-02",
+                    "text": {
+                        "es": "Ocean Drive",
+                        "en": "Ocean Drive",
+                        "fr": "Sortie à la plage",
+                        "pt": "Ocean Drive"
+                    }
+                },
+                {
+                    "id": "csa-03",
+                    "text": {
+                        "es": "Carrera por el borde",
+                        "en": "Border Run",
+                        "fr": "Passage de frontières",
+                        "pt": "Border Run"
+                    }
+                },
+                {
+                    "id": "csa-04",
+                    "text": {
+                        "es": "Capital Cruise",
+                        "en": "Capital Cruise",
+                        "fr": "Excursion capitale",
+                        "pt": "Capital Cruise"
+                    }
+                },
+                {
+                    "id": "csa-05",
+                    "text": {
+                        "es": "¡Tour!",
+                        "en": "Tour!",
+                        "fr": "Virée !",
+                        "pt": "Tour!"
+                    }
+                },
+                {
+                    "id": "csa-06",
+                    "text": {
+                        "es": "Aguante en V.C.",
+                        "en": "V.C. Endurance",
+                        "fr": "Endurance V.C.",
+                        "pt": "V.C. Endurance"
+                    }
                 }
             ]
         },
         {
             "id": "col",
-            "title": "Coleccionables",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Coletáveis"
+            },
             "items": [
                 {
                     "id": "col-01",
-                    "text": "100 paquetes ocultos"
+                    "text": {
+                        "es": "100 paquetes ocultos",
+                        "en": "100 hidden packages",
+                        "fr": "100 paquets cachés",
+                        "pt": "100 pacotes escondidos"
+                    }
                 },
                 {
                     "id": "col-02",
-                    "text": "36 saltos únicos"
+                    "text": {
+                        "es": "36 saltos únicos",
+                        "en": "36 stunt jumps",
+                        "fr": "36 sauts uniques",
+                        "pt": "36 saltos únicos"
+                    }
                 },
                 {
                     "id": "col-03",
-                    "text": "35 masacres"
+                    "text": {
+                        "es": "35 masacres",
+                        "en": "35 rampages",
+                        "fr": "35 rodéos",
+                        "pt": "35 rampages"
+                    }
                 }
             ]
         },
         {
             "id": "gi_1",
-            "title": "Garaje de importación (1)",
+            "title": {
+                "es": "Garaje de importación (1)",
+                "en": "Import Garage (1)",
+                "fr": "Liste du garage Sunshine Autos (1)",
+                "pt": "Entrega de carros (1)"
+            },
             "items": [
                 {
                     "id": "g1_1-01",
@@ -548,7 +1031,12 @@
         },
         {
             "id": "gi_2",
-            "title": "Garaje de importación (2)",
+            "title": {
+                "es": "Garaje de importación (2)",
+                "en": "Import Garage (2)",
+                "fr": "Liste du garage Sunshine Autos (2)",
+                "pt": "Entrega de carros (2)"
+            },
             "items": [
                 {
                     "id": "gi_2-01",
@@ -560,7 +1048,12 @@
                 },
                 {
                     "id": "gi_2-03",
-                    "text": "Limusina"
+                    "text": {
+                        "es": "Limusina",
+                        "en": "Stretch",
+                        "fr": "Stretch",
+                        "pt": "Stretch"
+                    }
                 },
                 {
                     "id": "gi_2-04",
@@ -578,7 +1071,12 @@
         },
         {
             "id": "gi_3",
-            "title": "Garaje de importación (3)",
+            "title": {
+                "es": "Garaje de importación (3)",
+                "en": "Import Garage (3)",
+                "fr": "Liste du garage Sunshine Autos (3)",
+                "pt": "Entrega de carros (3)"
+            },
             "items": [
                 {
                     "id": "gi_3-01",
@@ -608,7 +1106,12 @@
         },
         {
             "id": "gi_4",
-            "title": "Garaje de importación (4)",
+            "title": {
+                "es": "Garaje de importación (4)",
+                "en": "Import Garage (4)",
+                "fr": "Liste du garage Sunshine Autos (4)",
+                "pt": "Entrega de carros (4)"
+            },
             "items": [
                 {
                     "id": "gi_4-01",
@@ -616,7 +1119,7 @@
                 },
                 {
                     "id": "gi_4-02",
-                    "text": "Pizzaboy"
+                    "text": "Pizza Boy"
                 },
                 {
                     "id": "gi_4-03",
@@ -624,7 +1127,12 @@
                 },
                 {
                     "id": "gi_4-04",
-                    "text": "Mozo de equipaje"
+                    "text": {
+                        "es": "Mozo de equipaje",
+                        "en": "Baggage Handler",
+                        "fr": "Bagagiste ",
+                        "pt": "Baggage Handler"
+                    }
                 },
                 {
                     "id": "gi_4-05",
@@ -638,15 +1146,39 @@
         },
         {
             "id": "misc",
-            "title": "Miscelánea",
+            "title": {
+                "es": "Miscelánea",
+                "en": "Miscellaneous",
+                "fr": "Divers",
+                "pt": "Miscelânea"
+            },
             "items": [
                 {
                     "id": "misc-01",
-                    "text": "15 tiendas robadas"
+                    "text": {
+                        "es": "15 tiendas robadas",
+                        "en": "15 stores robbed",
+                        "fr": "15 magasins braqués",
+                        "pt": "15 lojas assaltadas"
+                    }
                 },
                 {
                     "id": "misc-02",
-                    "text": "+45 puntos en el campo de tiro con rifle"
+                    "text": {
+                        "es": "Completar la galería de tiro con +45 puntos",
+                        "en": "Complete the Shooting Range with at least 45 points",
+                        "fr": "Terminer le stand de tir avec 45 points ou plus",
+                        "pt": "Completar o estande de tiros com 45 pontos ou mais"
+                    }
+                },
+                {
+                    "id": "misc-03",
+                    "text": {
+                        "es": "Comprar todos los pisos francos",
+                        "en": "Purchase all the safehouses",
+                        "fr": "Posséder toutes les propriétés",
+                        "pt": "Comprar todas as propriedades"
+                    }
                 }
             ]
         }
