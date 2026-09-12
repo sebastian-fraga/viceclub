@@ -544,7 +544,7 @@
                         "es": "20 delincuentes abatidos como vigilante (Portland)",
                         "en": "20 criminals killed as vigilante (Portland)",
                         "fr": "20 criminels éliminés en tant que justicier (Portland)",
-                        "pt": "20 criminosos abatidos como vigilante (Portland)"
+                        "pt": "20 criminosos abatidos como justiciero (Portland)"
                     }
                 },
                 {
@@ -553,7 +553,7 @@
                         "es": "20 delincuentes abatidos como vigilante (Staunton Island)",
                         "en": "20 criminals killed as vigilante (Staunton Island)",
                         "fr": "20 criminels éliminés en tant que justicier (Staunton Island)",
-                        "pt": "20 criminosos abatidos como vigilante (Staunton Island)"
+                        "pt": "20 criminosos abatidos como justiciero (Staunton Island)"
                     }
                 },
                 {
@@ -562,7 +562,7 @@
                         "es": "20 delincuentes abatidos como vigilante (Shoreside Vale)",
                         "en": "20 criminals killed as vigilante (Shoreside Vale)",
                         "fr": "20 criminels éliminés en tant que justicier (Shoreside Vale)",
-                        "pt": "20 criminosos abatidos como vigilante (Shoreside Vale)"
+                        "pt": "20 criminosos abatidos como justiciero (Shoreside Vale)"
                     }
                 },
                 {
@@ -675,8 +675,8 @@
             "id": "pc",
             "title": {
                 "es": "Misiones de puntos de control",
-                "en": "Off-Road Challenges",
-                "fr": "Missions tout-terrain",
+                "en": "Off-Road missions",
+                "fr": "Missions Off-Road",
                 "pt": "Missões Off-Road"
             },
             "items": [
@@ -724,7 +724,7 @@
                 "es": "Coleccionables",
                 "en": "Collectibles",
                 "fr": "Objets à collectionner",
-                "pt": "Colecionáveis"
+                "pt": "Coletáveis"
             },
             "items": [
                 {
@@ -732,8 +732,8 @@
                     "text": {
                         "es": "100 paquetes ocultos",
                         "en": "100 hidden packages",
-                        "fr": "100 colis cachés",
-                        "pt": "100 pacotes ocultos"
+                        "fr": "100 paquets cachés",
+                        "pt": "100 Ppacotes escondidos"
                     }
                 },
                 {
@@ -750,8 +750,8 @@
                     "text": {
                         "es": "20 masacres",
                         "en": "20 rampages",
-                        "fr": "20 carnages",
-                        "pt": "20 massacres"
+                        "fr": "20 rodéos",
+                        "pt": "20 rampages"
                     }
                 }
             ]
