@@ -981,7 +981,7 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -993,7 +993,7 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1005,7 +1005,7 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1017,7 +1017,7 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1029,7 +1029,7 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1041,7 +1041,7 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "Clean and Serene",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1053,7 +1053,7 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "It's War",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1065,7 +1065,7 @@
             "status": "ally",
             "statusLabel": "Aliada",
             "firstAppearance": "Coming Down",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1134,7 +1134,7 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "I Luv L.C.",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["do", "us"]
         },
         {
@@ -1146,7 +1146,7 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "I Luv L.C.",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         },
         {
@@ -1158,7 +1158,7 @@
             "status": "ally",
             "statusLabel": "Familia",
             "firstAppearance": "Momma's Boy",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["do"]
         },
         {
@@ -1170,7 +1170,7 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "I Luv L.C.",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["do", "us"]
         },
         {
@@ -1182,7 +1182,7 @@
             "status": "ally",
             "statusLabel": "Amigo",
             "firstAppearance": "I Luv L.C.",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["do", "us"]
         },
         {
@@ -1194,7 +1194,7 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "I Luv L.C.",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["it", "us"]
         },
         {
@@ -1206,7 +1206,7 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Chinese Takeout",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["ae"]
         },
         {
@@ -1218,7 +1218,7 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "Kibbutz Number One",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us", "il"]
         },
         {
@@ -1230,7 +1230,7 @@
             "status": "enemy",
             "statusLabel": "Antagonista",
             "firstAppearance": "Boulevard Baby",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["ru"]
         },
         {
@@ -1242,7 +1242,7 @@
             "status": "ally",
             "statusLabel": "Aliada",
             "firstAppearance": "Blog This!...",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us", "it"]
         },
         {
@@ -1254,7 +1254,7 @@
             "status": "ally",
             "statusLabel": "Aliado",
             "firstAppearance": "Bang Bang",
-            "quote": "",
+            "quote": "🌴",
             "nationalities": ["us"]
         }
     ],
