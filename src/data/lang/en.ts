@@ -910,7 +910,7 @@ export default {
         progress: "Progress",
         markAsCompleted: "Mark as completed",
         markAsUncompleted: "Mark as uncompleted",
-        accessibilty: {
+        accessibility: {
             entryIcon: "Checklist icon",
         },
     },
@@ -945,13 +945,13 @@ export default {
                 },
             },
             sideMissions: {
-                title: "Side Activities",
+                title: "Side missions",
                 common: {
                     rampages: "Rampages",
                     rampage: "Rampage",
                     offRoadMissions: "Off-Road missions",
                     offRoadMission: "Off-Road mission",
-                    rcMissions: "RC missions",
+                    rcMissions: "RC Missions",
                     pizzaBoy: "Pizza Boy mission",
                 },
                 iii: {

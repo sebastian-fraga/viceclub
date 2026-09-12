@@ -910,7 +910,7 @@ export default {
         progress: "Progression",
         markAsCompleted: "Marcar como concluído",
         markAsUncompleted: "Marcar como não concluído",
-        accessibilty: {
+        accessibility: {
             entryIcon: "Ícone de checklist",
         },
     },
@@ -928,10 +928,10 @@ export default {
             collectibles: {
                 title: "Coletáveis",
                 common: {
-                    hiddenPackages: "🌴",
-                    hiddenPackage: "🌴",
-                    stuntJumps: "🌴",
-                    stuntJump: "🌴",
+                    hiddenPackages: "Pacotes escondidos",
+                    hiddenPackage: "Pacote escondido",
+                    stuntJumps: "Saltos únicos",
+                    stuntJump: "Salto único",
                 },
                 sa: {
                     tags: "Tags",
@@ -945,23 +945,23 @@ export default {
                 },
             },
             sideMissions: {
-                title: "🌴",
+                title: "Missões secundárias",
                 common: {
-                    rampages: "🌴",
-                    rampage: "🌴",
-                    offRoadMissions: "🌴",
-                    offRoadMission: "🌴",
-                    rcMissions: "🌴",
-                    pizzaBoy: "🌴",
+                    rampages: "Rampages",
+                    rampage: "Rampage",
+                    offRoadMissions: "Missões Off-Road",
+                    offRoadMission: "Missão Off-Road",
+                    rcMissions: "Corridas de RC",
+                    pizzaBoy: "Missão de Pizza Boy",
                 },
                 iii: {
-                    rcToyz: "🌴",
+                    rcToyz: "RC Toyz",
                 },
                 vc: {
-                    chopperCheckpoint: "🌴",
-                    storeRobberies: "🌴",
-                    storeRobbery: "🌴",
-                    rcMission: "🌴",
+                    chopperCheckpoint: "Checkpoint de helicóptero",
+                    storeRobberies: "Assaltos a lojas",
+                    storeRobbery: "Assalto a loja",
+                    rcMission: "Corrida de RC",
                 },
             },
             challenges: {

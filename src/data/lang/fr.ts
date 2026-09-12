@@ -908,10 +908,10 @@ export default {
     checklist: {
         title: "Liste à 100 % pour {{fullName}}",
         progress: "Progression",
-        markAsCompleted: "Marcar como completado",
-        markAsUncompleted: "Marcar como no completado",
-        accessibilty: {
-            entryIcon: "Icono de checklist",
+        markAsCompleted: "Marquer comme terminé",
+        markAsUncompleted: "Marquer comme non terminé",
+        accessibility: {
+            entryIcon: "Icône de checklist",
         },
     },
     artworks: {
@@ -928,10 +928,10 @@ export default {
             collectibles: {
                 title: "Objets à collectionner",
                 common: {
-                    hiddenPackages: "🌴",
-                    hiddenPackage: "🌴",
-                    stuntJumps: "🌴",
-                    stuntJump: "🌴",
+                    hiddenPackages: "Paquets cachés",
+                    hiddenPackage: "Paquet caché",
+                    stuntJumps: "Sauts uniques",
+                    stuntJump: "Saut unique",
                 },
                 sa: {
                     tags: "Tags",
@@ -945,23 +945,23 @@ export default {
                 },
             },
             sideMissions: {
-                title: "🌴",
+                title: "Missions secondaires",
                 common: {
-                    rampages: "🌴",
-                    rampage: "🌴",
-                    offRoadMissions: "🌴",
-                    offRoadMission: "🌴",
-                    rcMissions: "🌴",
-                    pizzaBoy: "🌴",
+                    rampages: "Rodéos",
+                    rampage: "Rodéo",
+                    offRoadMissions: "Missions Off-Road",
+                    offRoadMission: "Mission Off-Road",
+                    rcMissions: "Courses RC",
+                    pizzaBoy: "Livreur de pizza",
                 },
                 iii: {
                     rcToyz: "🌴",
                 },
                 vc: {
-                    chopperCheckpoint: "🌴",
-                    storeRobberies: "🌴",
-                    storeRobbery: "🌴",
-                    rcMission: "🌴",
+                    chopperCheckpoint: "Point de passage hélico",
+                    storeRobberies: "Braquages de magasins",
+                    storeRobbery: "Braquage de magasin",
+                    rcMission: "Course RC",
                 },
             },
             challenges: {

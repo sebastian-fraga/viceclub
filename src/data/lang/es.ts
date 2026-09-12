@@ -910,7 +910,7 @@ export default {
         progress: "Progreso",
         markAsCompleted: "Marcar como completado",
         markAsUncompleted: "Marcar como no completado",
-        accessibilty: {
+        accessibility: {
             entryIcon: "Icono de checklist",
         },
     },
