@@ -4,10 +4,10 @@ import {
     UNFINISHED_SECTIONS,
 } from "@/config/games";
 import { useGameChecklistProgress } from "@/hooks/useGameChecklistProgress";
+import useT from "@/hooks/useT";
 import type { Game } from "@/types/game";
 import { IconArrowUpRight, IconTools } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import useT from "@/hooks/useT";
 import Title from "../ui/Title";
 
 interface Props {
@@ -58,7 +58,7 @@ export default function ExploreSections({ game }: Props) {
 
             <div className="mt-8 grid grid-cols-2 auto-rows-25 grid-flow-dense gap-3 sm:grid-cols-4 sm:auto-rows-30 max-mobile:mt-5 max-mobile:gap-2">
                 {sections.map((section, index) => {
-                    const IconComponent = section.icon;
+                    const IconComponent = section.activeIcon ?? section.icon;
                     const isUnderConstruction =
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
