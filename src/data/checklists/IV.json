@@ -1052,7 +1052,7 @@
                             "id": "col-02",
                             "text": {
                                 "es": "50 saltos únicos",
-                                "en": "50 unique jumps",
+                                "en": "50 Stunt Jumps",
                                 "fr": "50 sauts uniques",
                                 "pt": "50 saltos únicos"
                             }
@@ -1242,7 +1242,7 @@
                             "text": {
                                 "es": "25 guerras de bandas completadas",
                                 "en": "25 gang wars completed",
-                                "fr": "25 guerres de gangs terminées",
+                                "fr": "25 guerres de gangs terminés",
                                 "pt": "25 guerras de gangues completadas"
                             },
                             "icon": "tlad_banda"
@@ -1597,7 +1597,7 @@
                             "text": {
                                 "es": "8 trabajos de gestión del local completados",
                                 "en": "8 club management jobs completed",
-                                "fr": "8 missions de gestion du club terminées",
+                                "fr": "8 missions de gestion du club terminés",
                                 "pt": "8 trabalhos de gestão do clube completados"
                             },
                             "icon": "tbogt_club"
@@ -1607,7 +1607,7 @@
                             "text": {
                                 "es": "25 guerras de drogas completadas",
                                 "en": "25 drug wars completed",
-                                "fr": "25 guerres de drogue terminées",
+                                "fr": "25 guerres de drogue terminés",
                                 "pt": "25 guerras de drogas completadas"
                             },
                             "icon": "tbogt_drogas"
