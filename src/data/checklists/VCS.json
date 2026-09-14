@@ -732,7 +732,7 @@
                     "text": {
                         "es": "15 trabajos de Extorsión completados",
                         "en": "15 Extortion levels completed",
-                        "fr": "15 missions de Racket terminées",
+                        "fr": "15 missions de Racket terminés",
                         "pt": "15 níveis de Esquema de Proteção concluídos"
                     }
                 },
@@ -741,7 +741,7 @@
                     "text": {
                         "es": "15 trabajos de Acaparamiento completados",
                         "en": "15 Loan Sharking levels completed",
-                        "fr": "15 missions de Usurier terminées",
+                        "fr": "15 missions de Usurier terminés",
                         "pt": "15 níveis de Agiotagem concluídos"
                     }
                 },
@@ -750,7 +750,7 @@
                     "text": {
                         "es": "15 trabajos de Prostitución completados",
                         "en": "15 Prostitution levels completed",
-                        "fr": "15 missions de Prostitution terminées",
+                        "fr": "15 missions de Prostitution terminés",
                         "pt": "15 níveis de Prostituição concluídos"
                     }
                 },
@@ -759,7 +759,7 @@
                     "text": {
                         "es": "6 trabajos de Drogas completados",
                         "en": "6 Drug Running levels completed",
-                        "fr": "6 missions de Drogue terminées",
+                        "fr": "6 missions de Drogue terminés",
                         "pt": "6 níveis de Drogas concluídos"
                     }
                 },
@@ -768,7 +768,7 @@
                     "text": {
                         "es": "6 trabajos de Contrabando completados",
                         "en": "6 Smuggling levels completed",
-                        "fr": "6 missions de Contrebande terminées",
+                        "fr": "6 missions de Contrebande terminés",
                         "pt": "6 níveis de Contrabando concluídos"
                     }
                 },
@@ -777,7 +777,7 @@
                     "text": {
                         "es": "6 trabajos de Robos completados",
                         "en": "6 Robbery levels completed",
-                        "fr": "6 missions de Cambriolage terminées",
+                        "fr": "6 missions de Cambriolage terminés",
                         "pt": "6 níveis de Assaltos concluídos"
                     }
                 }
@@ -958,7 +958,7 @@
                     "text": {
                         "es": "8 recorridos con la BMX completados",
                         "en": "8 courses with BMX completed",
-                        "fr": "8 cours de BMX terminés",
+                        "fr": "8 courses de BMX terminés",
                         "pt": "8 circuitos com BMX completados"
                     }
                 },
@@ -967,8 +967,8 @@
                     "text": {
                         "es": "4 recorridos con el Quad completados",
                         "en": "4 courses with Quad completed",
-                        "fr": "4 cours de Quad terminés",
-                        "pt": "4 circuitos com Quad completed"
+                        "fr": "4 courses en Quad terminés",
+                        "pt": "4 circuitos com Quad completados"
                     }
                 },
                 {
@@ -976,7 +976,7 @@
                     "text": {
                         "es": "8 recorridos en Deporte acúatico completados",
                         "en": "8 courses in Watersports completed",
-                        "fr": "8 cours de Watersports terminés",
+                        "fr": "8 courses de Watersports terminés",
                         "pt": "8 circuitos de Watersport completados"
                     }
                 }
@@ -1288,7 +1288,7 @@
                     "id": "col-03",
                     "text": {
                         "es": "36 saltos únicos",
-                        "en": "36 unique jumps",
+                        "en": "36 Stunt Jumps",
                         "fr": "36 sauts uniques",
                         "pt": "36 saltos únicos"
                     },
