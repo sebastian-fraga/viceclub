@@ -68,6 +68,39 @@ export function Lightbox({
         return () => clearTimeout(timeout);
     }, [isClosing]);
 
+    async function convertToFormat(
+        blob: Blob,
+        format: "image/jpeg" | "image/png",
+        quality = 0.92,
+    ): Promise<Blob> {
+        const bitmap = await createImageBitmap(blob);
+        const canvas = document.createElement("canvas");
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+
+        const ctx = canvas.getContext("2d");
+        if (!ctx) throw new Error("Canvas context not available");
+
+        if (format === "image/jpeg") {
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        ctx.drawImage(bitmap, 0, 0);
+        bitmap.close();
+
+        return new Promise((resolve, reject) => {
+            canvas.toBlob(
+                (result) =>
+                    result
+                        ? resolve(result)
+                        : reject(new Error("Conversion failed")),
+                format,
+                quality,
+            );
+        });
+    }
+
     async function handleDownload() {
         if (isDownloading) return;
 
@@ -75,9 +108,7 @@ export function Lightbox({
             setIsDownloading(true);
             setDownloadProgress(0);
 
-            const response = await fetch(url, {
-                cache: "no-store",
-            });
+            const response = await fetch(url, { cache: "no-store" });
 
             if (!response.ok) {
                 throw new Error(`HTTP ${response.status}`);
@@ -89,60 +120,46 @@ export function Lightbox({
 
             const contentLength = response.headers.get("content-length");
 
+            let blob: Blob;
+
             if (!contentLength) {
-                const blob = await response.blob();
+                blob = await response.blob();
+            } else {
+                const total = Number(contentLength);
+                let received = 0;
 
-                const blobUrl = URL.createObjectURL(blob);
+                const reader = response.body.getReader();
+                const chunks: Uint8Array[] = [];
 
-                const link = document.createElement("a");
-                link.href = blobUrl;
-                link.download = filename;
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
 
-                document.body.appendChild(link);
-                link.click();
-                link.remove();
-
-                URL.revokeObjectURL(blobUrl);
-
-                setDownloadProgress(100);
-                return;
-            }
-
-            const total = Number(contentLength);
-            let received = 0;
-
-            const reader = response.body.getReader();
-            const chunks: Uint8Array[] = [];
-
-            while (true) {
-                const { done, value } = await reader.read();
-
-                if (done) break;
-
-                if (value) {
-                    chunks.push(value);
-                    received += value.length;
-
-                    setDownloadProgress(
-                        Math.min(Math.round((received / total) * 100), 100),
-                    );
+                    if (value) {
+                        chunks.push(value);
+                        received += value.length;
+                        setDownloadProgress(
+                            Math.min(Math.round((received / total) * 100), 100),
+                        );
+                    }
                 }
+
+                blob = new Blob(chunks as BlobPart[]);
             }
 
-            const blob = new Blob(chunks as BlobPart[]);
-            const blobUrl = URL.createObjectURL(blob);
+            // Conversión a JPG (cambiá a "image/png" si preferís PNG)
+            const convertedBlob = await convertToFormat(blob, "image/jpeg");
+            const blobUrl = URL.createObjectURL(convertedBlob);
 
             const link = document.createElement("a");
             link.href = blobUrl;
-            link.download = filename;
+            link.download = filename.replace(/\.\w+$/, ".jpg"); // ajustar extensión real
 
             document.body.appendChild(link);
             link.click();
             link.remove();
 
-            setTimeout(() => {
-                URL.revokeObjectURL(blobUrl);
-            }, 1000);
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
         } catch (error) {
             console.error("Download failed:", error);
         } finally {
