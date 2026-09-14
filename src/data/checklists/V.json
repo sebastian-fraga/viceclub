@@ -2,24 +2,49 @@
     "sections": [
         {
             "id": "mp",
-            "title": "Misiones principales",
+            "title": {
+                "es": "Misiones principales",
+                "en": "Story Missions",
+                "fr": "Missions principales",
+                "pt": "Missões principais"
+            },
             "items": [
                 {
                     "id": "mp-01",
-                    "text": "Prólogo"
+                    "text": {
+                        "es": "Prólogo",
+                        "en": "Prologue",
+                        "fr": "Prologue",
+                        "pt": "Prólogo"
+                    }
                 },
                 {
                     "id": "mp-02",
-                    "text": "Franklin y Lamar"
+                    "text": {
+                        "es": "Franklin y Lamar",
+                        "en": "Franklin and Lamar",
+                        "fr": "Franklin et Lamar",
+                        "pt": "Franklin e Lamar"
+                    }
                 },
                 {
                     "id": "mp-03",
-                    "text": "Embargo",
+                    "text": {
+                        "es": "Embargo",
+                        "en": "Repossession",
+                        "fr": "Saisie",
+                        "pt": "Retomada de Posse"
+                    },
                     "icon": "simeon"
                 },
                 {
                     "id": "mp-04",
-                    "text": "Complicaciones",
+                    "text": {
+                        "es": "Complicaciones",
+                        "en": "Complications",
+                        "fr": "Complications",
+                        "pt": "Agravantes"
+                    },
                     "icon": "simeon"
                 },
                 {
@@ -29,262 +54,512 @@
                 },
                 {
                     "id": "mp-06",
-                    "text": "Stretch el largo",
+                    "text": {
+                        "es": "Stretch el largo",
+                        "en": "The Long Stretch",
+                        "fr": "La route est longue",
+                        "pt": "O Stretch na Área"
+                    },
                     "icon": "franklin"
                 },
                 {
                     "id": "mp-07",
-                    "text": "Padre/Hijo",
+                    "text": {
+                        "es": "Padre/Hijo",
+                        "en": "Father/Son",
+                        "fr": "Père / fils",
+                        "pt": "Pai/Filho"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-08",
-                    "text": "Asesoramiento matrimonial",
+                    "text": {
+                        "es": "Asesoramiento matrimonial",
+                        "en": "Marraige Couseling",
+                        "fr": "Conseil conjugal",
+                        "pt": "Terapia de Casais"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-09",
-                    "text": "La niñita de papá",
+                    "text": {
+                        "es": "La niñita de papá",
+                        "en": "Daddy's Little Girl",
+                        "fr": "La Petite Chérie à son papa",
+                        "pt": "A Garotinha do Papai"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-10",
-                    "text": "Solicitud de amistad",
+                    "text": {
+                        "es": "Solicitud de amistad",
+                        "en": "Friend Request",
+                        "fr": "Demande d'ami",
+                        "pt": "Solicitação de Amizade"
+                    },
                     "icon": "lester"
                 },
                 {
                     "id": "mp-11",
-                    "text": "Ojear la joyería",
+                    "text": {
+                        "es": "Ojear la joyería",
+                        "en": "Casing the Jewel Store",
+                        "fr": "Repérage de la bijouterie",
+                        "pt": "O Reconhecimento da Joalheria"
+                    },
                     "icon": "lester"
                 },
                 {
                     "id": "mp-12",
-                    "text": "El trabajo de la joyería",
+                    "text": {
+                        "es": "El trabajo de la joyería",
+                        "en": "The Jewel Store Job",
+                        "fr": "Casse de la bijouterie",
+                        "pt": "O Golpe à Joalheria"
+                    },
                     "icon": "golpe"
                 },
                 {
                     "id": "mp-13",
-                    "text": "Sr. Philips",
+                    "text": {
+                        "es": "Sr. Philips",
+                        "en": "Mr. Philips",
+                        "fr": "M. Philips",
+                        "pt": "Sr. Philips"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-14",
-                    "text": "Ron, el nervioso",
-                    "icon": "trevor"
+                    "text": {
+                        "es": "Industrias Trevor Philips",
+                        "en": "Trevor Philips Industries",
+                        "fr": "Trevor Philips Industries",
+                        "pt": "Trevor Philips Industries"
+                    },
+                    "icon": "cheng"
                 },
                 {
                     "id": "mp-15",
-                    "text": "El reencuentro",
+                    "text": {
+                        "es": "Ron, el nervioso",
+                        "en": "Nervous Ron",
+                        "fr": "Ron le nerveux",
+                        "pt": "Ron Noiado"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-16",
-                    "text": "Industrias Trevor Philips",
+                    "text": {
+                        "es": "Laberinto de cristal",
+                        "en": "Crystal Maze",
+                        "fr": "Légitime défonce",
+                        "pt": "Labirinto de Cristal"
+                    },
                     "icon": "cheng"
                 },
                 {
                     "id": "mp-17",
-                    "text": "Laberinto de cristal",
-                    "icon": "cheng"
+                    "text": {
+                        "es": "El reencuentro",
+                        "en": "Friends Reunited",
+                        "fr": "Des amis réunis",
+                        "pt": "Um Reencontro de Amigos"
+                    },
+                    "icon": "trevor"
                 },
                 {
                     "id": "mp-18",
-                    "text": "Fama o drama",
+                    "text": {
+                        "es": "Fama o drama",
+                        "en": "Fame or Shame",
+                        "fr": "Star ou Tocard",
+                        "pt": "Fama ou Desgrama"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-19",
-                    "text": "Muerto viviente",
+                    "text": {
+                        "es": "Muerto viviente",
+                        "en": "Dead Man Walking",
+                        "fr": "Trompe-la-mort",
+                        "pt": "A Volta dos que Não Foram"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-20",
-                    "text": "Tres son multitud",
+                    "text": {
+                        "es": "Tres son multitud",
+                        "en": "Three's Company",
+                        "fr": "À trois, c'est mieux",
+                        "pt": "Dois É Bom, Três É Foda"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-21",
-                    "text": "De libro",
+                    "text": {
+                        "es": "De libro",
+                        "en": "By the Book",
+                        "fr": "Dans les règles",
+                        "pt": "Ao Pé da Letra"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-22",
-                    "text": "Asesinato en el hotel",
+                    "text": {
+                        "es": "Asesinato en el hotel",
+                        "en": "The Hotel Assassination",
+                        "fr": "Room Service",
+                        "pt": "O Assassinato no Hotel"
+                    },
                     "icon": "lester_f"
                 },
                 {
                     "id": "mp-23",
-                    "text": "Safari por el barrio",
+                    "text": {
+                        "es": "Safari por el barrio",
+                        "en": "Hood Safari",
+                        "fr": "Poudre aux yeux",
+                        "pt": "Safari na Quebrada"
+                    },
                     "icon": "franklin"
                 },
                 {
                     "id": "mp-24",
-                    "text": "¿Alguien dijo yoga?",
+                    "text": {
+                        "es": "¿Alguien dijo yoga?",
+                        "en": "Did Somebody Say Yoga?",
+                        "fr": "Quelqu'un a parlé de yoga ?",
+                        "pt": "Alguém Falou em Ioga?"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-25",
-                    "text": "Explorar el puerto",
+                    "text": {
+                        "es": "Explorar el puerto",
+                        "en": "Scouting the Port",
+                        "fr": "Port de Los Santos : repérage",
+                        "pt": "O Reconhecimento do Porto"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-26",
-                    "text": "El golpe a Merryweather",
+                    "text": {
+                        "es": "El golpe a Merryweather",
+                        "en": "The Merryweather Heist",
+                        "fr": "Le Coup de Merryweather",
+                        "pt": "O Golpe da Merryweather"
+                    },
                     "icon": "golpe"
                 },
                 {
                     "id": "mp-27",
-                    "text": "Sr. Richards",
+                    "text": {
+                        "es": "Sr. Richards",
+                        "en": "Mr. Richards",
+                        "fr": "M. Richards",
+                        "pt": "Sr. Richards"
+                    },
                     "icon": "solomon"
                 },
                 {
                     "id": "mp-28",
-                    "text": "El bloqueo",
+                    "text": {
+                        "es": "El bloqueo",
+                        "en": "Blitz Play",
+                        "fr": "Mise à sac",
+                        "pt": "Jogada Ensaiada"
+                    },
                     "icon": "golpe"
                 },
                 {
                     "id": "mp-29",
-                    "text": "Me enfrenté a la ley...",
+                    "text": {
+                        "es": "Me enfrenté a la ley...",
+                        "en": "I Fought the Law...",
+                        "fr": "Mort aux vaches",
+                        "pt": "Eu Lutei Contra a Lei..."
+                    },
                     "icon": "devin_m"
                 },
                 {
                     "id": "mp-30",
-                    "text": "Cámara aérea",
+                    "text": {
+                        "es": "Cámara aérea",
+                        "en": "Eye in the Sky",
+                        "fr": "Un œil dans le ciel",
+                        "pt": "Vigilância Aérea"
+                    },
                     "icon": "devin_t"
                 },
                 {
                     "id": "mp-31",
-                    "text": "Infiltrado",
+                    "text": {
+                        "es": "Infiltrado",
+                        "en": "Deep Inside",
+                        "fr": "Silence, on tourne",
+                        "pt": "Infiltrado"
+                    },
                     "icon": "devin_f"
                 },
                 {
                     "id": "mp-32",
-                    "text": "Caída libre",
+                    "text": {
+                        "es": "Caída libre",
+                        "en": "Caida Libre",
+                        "fr": "Atterrissage forcé",
+                        "pt": "Caida Libre"
+                    },
                     "icon": "madrazo"
                 },
                 {
                     "id": "mp-34",
-                    "text": "Leves turbulencias",
+                    "text": {
+                        "es": "Leves turbulencias",
+                        "en": "Minor Turbulence",
+                        "fr": "Turbulence légère",
+                        "pt": "Leve Turbulência"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-35",
-                    "text": "Depredador",
+                    "text": {
+                        "es": "Depredador",
+                        "en": "Predator",
+                        "fr": "Prédateur",
+                        "pt": "Predador"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-36",
-                    "text": "Descarrilado",
+                    "text": {
+                        "es": "Descarrilado",
+                        "en": "Derailed",
+                        "fr": "Déraillement",
+                        "pt": "Descarrilado"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-37",
-                    "text": "Preparación del golpe de Paleto",
+                    "text": {
+                        "es": "Preparación del golpe de Paleto",
+                        "en": "Paleto Score Setup",
+                        "fr": "Paleto Bay - préparations",
+                        "pt": "Esquematizando o Golpe de Paleto"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-38",
-                    "text": "El golpe de Paleto",
+                    "text": {
+                        "es": "El golpe de Paleto",
+                        "en": "The Paleto Score",
+                        "fr": "Coup de Paleto Bay",
+                        "pt": "O Golpe de Paleto Bay"
+                    },
                     "icon": "golpe"
                 },
                 {
                     "id": "mp-39",
-                    "text": "Negocios turbios",
+                    "text": {
+                        "es": "Negocios turbios",
+                        "en": "Monkey Business",
+                        "fr": "Magouilles",
+                        "pt": "Fazendo Macaquices"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-40",
-                    "text": "Club de relax",
+                    "text": {
+                        "es": "Club de relax",
+                        "en": "Hang Ten",
+                        "fr": "Après l'effort, le réconfort",
+                        "pt": "Hang Ten"
+                    },
                     "icon": "trevor"
                 },
                 {
                     "id": "mp-41",
-                    "text": "Investigando el golpe",
-                    "icon": "trevor"
+                    "text": {
+                        "es": "Investigando el golpe",
+                        "en": "Surveying the Score",
+                        "fr": "Reconnaissance",
+                        "pt": "Fitando o Golpe"
+                    },
+                    "icon": "lester"
                 },
                 {
                     "id": "mp-42",
-                    "text": "Planificación del golpe",
-                    "icon": "golpe"
-                },
-                {
-                    "id": "mp-43",
-                    "text": "Desenterrando el pasado",
+                    "text": {
+                        "es": "Desenterrando el pasado",
+                        "en": "Bury the Hatchet",
+                        "fr": "Tête d'enterrement",
+                        "pt": "Águas Passadas"
+                    },
                     "icon": "michael"
                 },
                 {
-                    "id": "mp-44",
-                    "text": "Pack Man",
+                    "id": "mp-43",
+                    "text": {
+                        "es": "Pack Man",
+                        "en": "Pack Man",
+                        "fr": "Convoi dangereux",
+                        "pt": "O Homem do Saco"
+                    },
                     "icon": "devin_f"
                 },
                 {
-                    "id": "mp-45",
-                    "text": "Carne fresca",
+                    "id": "mp-44",
+                    "text": {
+                        "es": "Carne fresca",
+                        "en": "Fresh Meat",
+                        "fr": "Viande fraîche",
+                        "pt": "Carne Fresca"
+                    },
                     "icon": "franklin"
                 },
                 {
+                    "id": "mp-45",
+                    "text": {
+                        "es": "La balada de Rocco",
+                        "en": "The Ballad of Rocco",
+                        "fr": "La Balade de Rocco",
+                        "pt": "A Balada do Rocco"
+                    },
+                    "icon": "solomon"
+                },
+                {
                     "id": "mp-46",
-                    "text": "La balada de Rocco",
+                    "text": {
+                        "es": "Problemas legales",
+                        "en": "Legal Trouble",
+                        "fr": "Démêlés judiciaires",
+                        "pt": "Problemas Legais"
+                    },
                     "icon": "solomon"
                 },
                 {
                     "id": "mp-47",
-                    "text": "Problemas legales",
-                    "icon": "solomon"
+                    "text": {
+                        "es": "Cataclismo",
+                        "en": "Meltdown",
+                        "fr": "Pétage de plomb",
+                        "pt": "O Colapso"
+                    },
+                    "icon": "michael"
                 },
                 {
                     "id": "mp-48",
-                    "text": "Cataclismo",
+                    "text": {
+                        "es": "Reuniendo a la familia",
+                        "en": "Reuniting the Family",
+                        "fr": "Réunion de famille",
+                        "pt": "Reunindo a Família"
+                    },
                     "icon": "michael"
                 },
                 {
                     "id": "mp-49",
-                    "text": "Reuniendo a la familia",
-                    "icon": "michael"
+                    "text": {
+                        "es": "Limpiando el F.I.B.",
+                        "en": "Cleaning out the Bureau",
+                        "fr": "Nettoyage de Bureau",
+                        "pt": "Limpando o FIB"
+                    },
+                    "icon": "fib"
                 },
                 {
                     "id": "mp-50",
-                    "text": "Limpiando el FIB",
+                    "text": {
+                        "es": "Atando cabos",
+                        "en": "The Wrap Up",
+                        "fr": "On remballe",
+                        "pt": "O Encerramento"
+                    },
                     "icon": "fib"
                 },
                 {
                     "id": "mp-51",
-                    "text": "Atando cabos",
-                    "icon": "fib"
-                },
-                {
-                    "id": "mp-52",
-                    "text": "Planes para el arquitecto",
+                    "text": {
+                        "es": "Planes para el arquitecto",
+                        "en": "Architect's Plans",
+                        "fr": "Les Plans de l'architecte",
+                        "pt": "A Planta do Arquiteto"
+                    },
                     "icon": "lester_f"
                 },
                 {
-                    "id": "mp-53",
-                    "text": "Asalto al FIB",
+                    "id": "mp-52",
+                    "text": {
+                        "es": "Asalto al F.I.B.",
+                        "en": "The Bureau Raid",
+                        "fr": "Attaque du FIB",
+                        "pt": "A Invasão do FIB"
+                    },
                     "icon": "golpe"
                 },
                 {
-                    "id": "mp-54",
-                    "text": "Lamar de problemas",
+                    "id": "mp-53",
+                    "text": {
+                        "es": "Lamar de problemas",
+                        "en": "Lamar Down",
+                        "fr": "Lamar est dans la merde",
+                        "pt": "Lamar em Perigo"
+                    },
                     "icon": "franklin"
                 },
                 {
-                    "id": "mp-55",
-                    "text": "El gran golpe",
+                    "id": "mp-54",
+                    "text": {
+                        "es": "El gran golpe",
+                        "en": "The Big Score",
+                        "fr": "Le Coup du siècle",
+                        "pt": "O Grande Golpe"
+                    },
                     "icon": "golpe"
                 },
                 {
-                    "id": "mp-56",
+                    "id": "mp-55",
                     "texts": [
                         {
-                            "text": "Opción sensata",
+                            "text": {
+                                "es": "Opción sensata",
+                                "en": "Something Sensible",
+                                "fr": "La Voix de la raison",
+                                "pt": "Sensatez"
+                            },
                             "icon": "franklin"
                         },
                         {
-                            "text": "Ha llegado la hora",
+                            "text": {
+                                "es": "Ha llegado la hora",
+                                "en": "The Time's Come",
+                                "fr": "Règlements de comptes",
+                                "pt": "A Hora Chegou"
+                            },
                             "icon": "franklin"
                         },
                         {
-                            "text": "La tercera vía",
+                            "text": {
+                                "es": "La tercera vía",
+                                "en": "The Third Way",
+                                "fr": "La Troisième Option",
+                                "pt": "A Opção C"
+                            },
                             "icon": "lester_f"
                         }
                     ]
@@ -293,295 +568,616 @@
         },
         {
             "id": "ma",
-            "title": "Misiones de asesinato",
+            "title": {
+                "es": "Misiones de asesinato",
+                "en": "Assassination Missions",
+                "fr": "Missions d’assassinat",
+                "pt": "Missões de assassinato"
+            },
             "icon": "lester_f",
             "items": [
                 {
                     "id": "ma-01",
-                    "text": "El asesinato múltiple"
+                    "text": {
+                        "es": "El asesinato múltiple",
+                        "en": "The Multi Target Assassination",
+                        "fr": "Tir groupé",
+                        "pt": "O Assassinato Múltiplo"
+                    }
                 },
                 {
                     "id": "ma-02",
-                    "text": "Asesinato de vicio"
+                    "text": {
+                        "es": "Asesinato de vicio",
+                        "en": "The Vice Assassination",
+                        "fr": "Prosti-tueur",
+                        "pt": "O Assassinato da Luxúria"
+                    }
                 },
                 {
                     "id": "ma-03",
-                    "text": "El asesinato del bus"
+                    "text": {
+                        "es": "El asesinato del bus",
+                        "en": "The Bus Assassination",
+                        "fr": "Tickets siouplé",
+                        "pt": "O Assassinato no Ônibus"
+                    }
                 },
                 {
                     "id": "ma-04",
-                    "text": "El asesinato de la obra"
+                    "text": {
+                        "es": "El asesinato de la obra",
+                        "en": "The Construction Assassination",
+                        "fr": "Le Grand Saut",
+                        "pt": "O Assassinato na Construção"
+                    }
                 }
             ]
         },
         {
             "id": "eyl",
-            "title": "Extraños y locos",
+            "title": {
+                "es": "Extraños y locos",
+                "en": "Strangers and Freaks",
+                "fr": "Inconnus et détraqués",
+                "pt": "Estranhos e Doidos"
+            },
             "icon": "unknown",
             "items": [
                 {
                     "id": "eyl-01",
-                    "text": "Movimiento verde - Franklin",
+                    "text": {
+                        "es": "Movimiento verde - Franklin",
+                        "en": "Grass Roots - Franklin",
+                        "fr": "Fais tourner - Franklin",
+                        "pt": "Legalize Já - Franklin"
+                    },
                     "icon": "barry"
                 },
                 {
                     "id": "eyl-02",
-                    "text": "Movimiento verde - La recogida",
+                    "text": {
+                        "es": "Movimiento verde - La recogida",
+                        "en": "Grass Roots - The Pickup",
+                        "fr": "Fais tourner - Le Pickup",
+                        "pt": "Legalize Já - Pega"
+                    },
                     "icon": "barry"
                 },
                 {
                     "id": "eyl-03",
-                    "text": "Movimiento verde - Para el arrastre",
+                    "text": {
+                        "es": "Movimiento verde - Para el arrastre",
+                        "en": "Grass Roots - The Drag",
+                        "fr": "Fais tourner - Le Coup de la panne",
+                        "pt": "Legalize Já - Puxa"
+                    },
                     "icon": "barry"
                 },
                 {
                     "id": "eyl-04",
-                    "text": "Movimiento verde - La fumada",
+                    "text": {
+                        "es": "Movimiento verde - La fumada",
+                        "en": "Grass Roots - The Smoke-In",
+                        "fr": "Fais tourner - La Manifumette",
+                        "pt": "Legalize Já - A Marcha"
+                    },
                     "icon": "barry"
                 },
                 {
                     "id": "eyl-05",
-                    "text": "Paparazzi",
+                    "text": {
+                        "es": "Paparazzi",
+                        "en": "Paparazzo",
+                        "fr": "Paparazzi",
+                        "pt": "Paparazzi"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-06",
-                    "text": "Paparazzi - El video porno",
+                    "text": {
+                        "es": "Paparazzi - El video porno",
+                        "en": "Paparazzo - The Sex Tape",
+                        "fr": "Paparazzi - Sextape",
+                        "pt": "Paparazzi- Vídeo Íntimo"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-07",
-                    "text": "Paparazzi - Socios",
+                    "text": {
+                        "es": "Paparazzi - Socios",
+                        "en": "Paparazzo - The Partnership",
+                        "fr": "Paparazzi - Partenaires",
+                        "pt": "Paparazzi - Parceria"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-08",
-                    "text": "Paparazzi - Colapso",
+                    "text": {
+                        "es": "Paparazzi - Colapso",
+                        "en": "Paparazzo - The Meltdown",
+                        "fr": "Paparazzi - Tout fout le camp",
+                        "pt": "Paparazzi - O chilique"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-09",
-                    "text": "Paparazzi - Alteza",
+                    "text": {
+                        "es": "Paparazzi - Alteza",
+                        "en": "Paparazzo - The Highness",
+                        "fr": "Paparazzi - Deal royal",
+                        "pt": "Paparazzi - Beck Real"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-10",
-                    "text": "Paparazzi - La cruda realidad",
+                    "text": {
+                        "es": "Paparazzi - La cruda realidad",
+                        "en": "Paparazzo - Reality Check",
+                        "fr": "Paparazzi - Retour à la réalité",
+                        "pt": "Paparazzi - Caindo na real"
+                    },
                     "icon": "beverly"
                 },
                 {
                     "id": "eyl-11",
-                    "text": "Gestión de riesgos",
+                    "text": {
+                        "es": "Gestión de riesgos",
+                        "en": "Risk Assessment",
+                        "fr": "Risque calculé",
+                        "pt": "Avaliação de risco"
+                    },
                     "icon": "dom"
                 },
                 {
                     "id": "eyl-12",
-                    "text": "Riesgo de liquidez",
+                    "text": {
+                        "es": "Riesgo de liquidez",
+                        "en": "Liquidity Risk",
+                        "fr": "Le Goût du risque",
+                        "pt": "Risco de liquidez"
+                    },
                     "icon": "dom"
                 },
                 {
                     "id": "eyl-13",
-                    "text": "Riesgo dirigido",
+                    "text": {
+                        "es": "Riesgo dirigido",
+                        "en": "Targeted Risk",
+                        "fr": "Risque-tout",
+                        "pt": "Risco calculado"
+                    },
                     "icon": "dom"
                 },
                 {
                     "id": "eyl-14",
-                    "text": "Riesgo no calculado",
+                    "text": {
+                        "es": "Riesgo no calculado",
+                        "en": "Uncalculated Risk",
+                        "fr": "Risque mal calculé",
+                        "pt": "Risco Incalculável"
+                    },
                     "icon": "dom"
                 },
                 {
                     "id": "eyl-15",
-                    "text": "Cambios",
+                    "text": {
+                        "es": "Cambios",
+                        "en": "Shift Work",
+                        "fr": "Sport Hao risque",
+                        "pt": "Trabalho de Turnos"
+                    },
                     "icon": "unknown"
                 },
                 {
                     "id": "eyl-16",
-                    "text": "Ejercitando demonios - Franklin",
+                    "text": {
+                        "es": "Ejercitando demonios - Franklin",
+                        "en": "Exercising Demons - Franklin",
+                        "fr": "Amoureux du sport - Franklin",
+                        "pt": "Exercitando Demônios- Franklin"
+                    },
                     "icon": "maryann"
                 },
                 {
                     "id": "eyl-17",
-                    "text": "Pasado de rosca",
+                    "text": {
+                        "es": "Pasado de rosca",
+                        "en": "Far Out",
+                        "fr": "Haut perché",
+                        "pt": "Insólito"
+                    },
                     "icon": "omega"
                 },
                 {
                     "id": "eyl-18",
-                    "text": "La última frontera",
+                    "text": {
+                        "es": "La última frontera",
+                        "en": "The Final Frontier",
+                        "fr": "L'Ultime Frontière",
+                        "pt": "A Fronteira Final"
+                    },
                     "icon": "omega"
                 },
                 {
                     "id": "eyl-19",
-                    "text": "Una joven estrella en Vinewood",
+                    "text": {
+                        "es": "Una joven estrella en Vinewood",
+                        "en": "A Starlet in Vinewood",
+                        "fr": "Une starlette à Vinewood",
+                        "pt": "Uma Jovem Estrela em Vinewood"
+                    },
                     "icon": "unknown"
                 },
                 {
                     "id": "eyl-20",
-                    "text": "Pedir favores",
+                    "text": {
+                        "es": "Pedir favores",
+                        "en": "Pulling Favors",
+                        "fr": "O.K., mais juste cette fois",
+                        "pt": "Quebrando Galho"
+                    },
                     "icon": "tonya"
                 },
                 {
                     "id": "eyl-21",
-                    "text": "Otro favor",
+                    "text": {
+                        "es": "Otro favor",
+                        "en": "Pulling Another Favor",
+                        "fr": "C'est bien parce que c'est toi",
+                        "pt": "Quebrando Outro Galho"
+                    },
                     "icon": "tonya"
                 },
                 {
                     "id": "eyl-22",
-                    "text": "Otro favor más",
+                    "text": {
+                        "es": "Otro favor más",
+                        "en": "Pulling Favors Again",
+                        "fr": "C'est la dernière fois",
+                        "pt": "Quebrando Galho De Novo"
+                    },
                     "icon": "tonya"
                 },
                 {
                     "id": "eyl-23",
-                    "text": "Y dale con los favores",
+                    "text": {
+                        "es": "Y dale con los favores",
+                        "en": "Still Pulling Favors",
+                        "fr": "Ça commence à me gonfler",
+                        "pt": "Ainda Quebrando Galho"
+                    },
                     "icon": "tonya"
                 },
                 {
                     "id": "eyl-24",
-                    "text": "Un último favor",
+                    "text": {
+                        "es": "Un último favor",
+                        "en": "Pulling One Last Favor",
+                        "fr": "Plein le cul",
+                        "pt": "Quebrando O Último Galho"
+                    },
                     "icon": "tonya"
                 }
             ]
         },
         {
             "id": "col",
-            "title": "Coleccionables",
+            "title": {
+                "es": "Coleccionables",
+                "en": "Collectibles",
+                "fr": "Objets à collectionner",
+                "pt": "Coletáveis"
+            },
             "items": [
                 {
                     "id": "col-01",
-                    "text": "50 piezas de la nave espacial"
+                    "text": {
+                        "es": "50 piezas de la nave espacial",
+                        "en": "50 Spaceship Parts",
+                        "fr": "50 pièces de vaisseau spatial",
+                        "pt": "50 partes de espaçonave"
+                    }
                 },
                 {
                     "id": "col-02",
-                    "text": "50 fragmentos de la carta"
+                    "text": {
+                        "es": "50 fragmentos de la carta",
+                        "en": "50 Letter Scraps",
+                        "fr": "50 morceaux de lettre",
+                        "pt": "50 fragmentos de cartas"
+                    }
                 },
                 {
                     "id": "col-03",
-                    "text": "25 saltos acrobáticos"
+                    "text": {
+                        "es": "25 saltos acrobáticos",
+                        "en": "25 Stunt Jumps",
+                        "fr": "25 sauts uniques",
+                        "pt": "25 saltos únicos"
+                    }
                 },
                 {
                     "id": "col-04",
-                    "text": "25 vuelos bajo el puente"
+                    "text": {
+                        "es": "25 vuelos bajo el puente",
+                        "en": "25 Under the Bridge flights",
+                        "fr": "25 \"Sous le pont\"",
+                        "pt": "25 voos por baixo de pontes"
+                    }
                 },
                 {
                     "id": "col-05",
-                    "text": "8 vuelos a cuchillo"
+                    "text": {
+                        "es": "8 vuelos a cuchillo",
+                        "en": "8 Knife flights",
+                        "fr": "8 \"Vols sur la tranche\"",
+                        "pt": "8 voos em faca"
+                    }
                 }
             ]
         },
         {
             "id": "ap",
-            "title": "Aficiones y pasatiempos",
+            "title": {
+                "es": "Aficiones y pasatiempos",
+                "en": "Hobbies and Pastimes",
+                "fr": "Hobbies et passe-temps",
+                "pt": "Hobbies e Passatempos"
+            },
             "items": [
                 {
                     "id": "ap-01",
-                    "text": "4 carreras marítimas completadas",
+                    "text": {
+                        "es": "4 carreras marítimas completadas",
+                        "en": "4 Sea Races completed",
+                        "fr": "4 courses nautiques terminés",
+                        "pt": "4 corridas marítimas completadas"
+                    },
                     "icon": "carrera_maritima"
                 },
                 {
                     "id": "ap-02",
-                    "text": "6 carreras todoterreno completadas",
+                    "text": {
+                        "es": "6 carreras todoterreno completadas",
+                        "en": "6 Off-Road Races completed",
+                        "fr": "6 courses tout-terrain terminés",
+                        "pt": "6 corridas Off-Road completadas"
+                    },
                     "icon": "carrera_todoterreno"
                 },
                 {
                     "id": "ap-03",
-                    "text": "5 carreras urbanas completadas",
+                    "text": {
+                        "es": "5 carreras urbanas completadas",
+                        "en": "5 Street Races completed",
+                        "fr": "5 courses de rue terminés",
+                        "pt": "5 corridas de rua completadas"
+                    },
                     "icon": "carrera_urbana"
                 },
                 {
                     "id": "ap-04",
-                    "text": "Desafíos de la galería de tiro completados",
+                    "text": {
+                        "es": "Desafíos de la galería de tiro completados",
+                        "en": "Shooting Range challenges completed",
+                        "fr": "Défis du stand de tir terminés",
+                        "pt": "Desafios do estande de tiro completados"
+                    },
                     "icon": "galeria"
                 },
                 {
                     "id": "ap-05",
-                    "text": "Escuela de vuelo completada",
+                    "text": {
+                        "es": "Escuela de vuelo completada",
+                        "en": "Flight School completed",
+                        "fr": "École de pilotage terminée",
+                        "pt": "Escola de aviação completada"
+                    },
                     "icon": "escuela"
                 },
                 {
                     "id": "ap-06",
-                    "text": "Partida de dardos ganada",
+                    "text": {
+                        "es": "Partida de dardos ganada",
+                        "en": "Darts game won",
+                        "fr": "Partie de fléchettes gagnée",
+                        "pt": "Partida de dardos vencida"
+                    },
                     "icon": "dardos"
                 },
                 {
                     "id": "ap-07",
-                    "text": "Juego de tenis ganado",
+                    "text": {
+                        "es": "Juego de tenis ganado",
+                        "en": "Tennis game won",
+                        "fr": "Partie de tennis gagnée",
+                        "pt": "Partida de tênis vencida"
+                    },
                     "icon": "tenis"
                 },
                 {
                     "id": "ap-08",
-                    "text": "Partida de golf terminada en par o bajo par",
+                    "text": {
+                        "es": "Partida de golf ganada",
+                        "en": "Golf game won",
+                        "fr": "Partie de golf gagnée",
+                        "pt": "Partida de golfe vencida"
+                    },
+                    "tooltip": {
+                        "es": "Terminar 9 hoyos en par o bajo par",
+                        "en": "Finish 9 holes at or below par",
+                        "fr": "Terminer 9 trous avec un score égal ou inférieur au par",
+                        "pt": "Termine 9 buracos no par ou abaixo do par"
+                    },
                     "icon": "golf"
                 },
                 {
                     "id": "ap-09",
-                    "text": "3 triatlones completados",
+                    "text": {
+                        "es": "3 triatlones completados",
+                        "en": "3 Triathlons completed",
+                        "fr": "3 triathlons terminés",
+                        "pt": "3 triatlos completados"
+                    },
                     "icon": "triatlon"
                 },
                 {
                     "id": "ap-10",
-                    "text": "13 saltos en paracaídas completados",
+                    "text": {
+                        "es": "13 saltos en paracaídas completados",
+                        "en": "13 Base Jumps completed",
+                        "fr": "13 sauts en parachute terminés",
+                        "pt": "13 saltos de base completados"
+                    },
                     "icon": "paracaidas"
                 },
                 {
                     "id": "ap-11",
-                    "text": "Paseo con Chop realizado",
+                    "text": {
+                        "es": "Paseo con Chop realizado",
+                        "en": "Walk with Chop made",
+                        "fr": "Promenade avec Chop effectuée",
+                        "pt": "Passeio com Chop realizado"
+                    },
                     "icon": "chop"
                 },
                 {
                     "id": "ap-12",
-                    "text": "Cine visitado",
+                    "text": {
+                        "es": "Cine visitado",
+                        "en": "Cinema visited",
+                        "fr": "Cinéma visité",
+                        "pt": "Cinema visitado"
+                    },
                     "icon": "cine"
                 }
             ]
         },
         {
             "id": "act",
-            "title": "Actividades con amigos",
+            "title": {
+                "es": "Actividades con amigos",
+                "en": "Friend Activities",
+                "fr": "Activités entre amis",
+                "pt": "Atividades com amigos"
+            },
             "items": [
                 {
                     "id": "act-01",
-                    "text": "Bar"
+                    "text": "Bar",
+                    "icon": "bar"
                 },
                 {
                     "id": "act-02",
-                    "text": "Club de striptease"
+                    "text": {
+                        "es": "Club de striptease",
+                        "en": "Strip Club",
+                        "fr": "Strip-Club",
+                        "pt": "Clube de striptease"
+                    },
+                    "icon": "clubstriptease"
                 },
                 {
                     "id": "act-03",
-                    "text": "Cine"
+                    "text": {
+                        "es": "Cine",
+                        "en": "Cinema",
+                        "fr": "Cinéma",
+                        "pt": "Cinema"
+                    },
+                    "icon": "cine"
                 },
                 {
                     "id": "act-04",
-                    "text": "Dardos"
+                    "text": {
+                        "es": "Dardos",
+                        "en": "Darts",
+                        "fr": "Fléchettes",
+                        "pt": "Dardos"
+                    },
+                    "icon": "dardos"
                 }
             ]
         },
         {
             "id": "misc",
-            "title": "Miscelánea",
+            "title": {
+                "es": "Miscelánea",
+                "en": "Miscellaneous",
+                "fr": "Divers",
+                "pt": "Miscelânea"
+            },
             "items": [
                 {
                     "id": "misc-01",
-                    "text": "5 propiedades compradas"
+                    "text": {
+                        "es": "5 propiedades compradas",
+                        "en": "5 properties purchased",
+                        "fr": "5 propriétés achetées",
+                        "pt": "5 propriedades compradas"
+                    },
+                    "icon": "propiedad"
                 },
                 {
                     "id": "misc-02",
-                    "text": "Vehículo comprado por internet"
+                    "text": {
+                        "es": "Vehículo comprado por internet",
+                        "en": "Vehicle purchased from the internet",
+                        "fr": "Véhicule acheté sur Internet",
+                        "pt": "Veículo comprado pela internet"
+                    }
                 },
                 {
                     "id": "misc-03",
-                    "text": "Cita sexual conseguida"
+                    "text": {
+                        "es": "Cita sexual conseguida",
+                        "en": "Booty Call completed",
+                        "fr": "Plan cul réussi",
+                        "pt": "Foda completada"
+                    }
                 },
                 {
                     "id": "misc-04",
-                    "text": "Servicio recibido de una prostituta"
+                    "text": {
+                        "es": "Servicio recibido de una prostituta",
+                        "en": "Prostitute Service received",
+                        "fr": "Service reçu d’une prostituée",
+                        "pt": "Serviço recebido de uma prostituta"
+                    }
                 },
                 {
                     "id": "misc-05",
-                    "text": "Baile privado en el club de striptease"
+                    "text": {
+                        "es": "Baile privado en el club de striptease recibido",
+                        "en": "Private dance received",
+                        "fr": "Danse privée reçue",
+                        "pt": "Dança privada recebida"
+                    }
                 },
                 {
                     "id": "misc-06",
-                    "text": "Tienda robada"
+                    "text": {
+                        "es": "Tienda robada",
+                        "en": "Store robbed",
+                        "fr": "Magasin braqué",
+                        "pt": "Loja assaltada"
+                    },
+                    "icon": "tienda"
+                },
+                {
+                    "id": "misc-07",
+                    "text": {
+                        "es": "14 eventos aleatorios completados",
+                        "en": "14 Random Events completed",
+                        "fr": "14 Événements aléatoires terminés",
+                        "pt": "14 eventos aleatórios completados"
+                    }
                 }
             ]
         }
