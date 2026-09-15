@@ -45,7 +45,6 @@ export const GTAIV: Game = {
             },
         },
     ],
-    buttonsPosition: "left",
     trailers: [
         {
             name: "1",

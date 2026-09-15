@@ -22,7 +22,6 @@ export const GTAIII: Game = {
             },
         },
     },
-    buttonsPosition: "left",
     trailers: [
         {
             name: "1",

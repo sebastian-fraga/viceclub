@@ -42,8 +42,6 @@ export interface Game {
 
     variants?: GameVariant[];
 
-    buttonsPosition: "left" | "right";
-
     trailers: {
         name: string;
         link: string;

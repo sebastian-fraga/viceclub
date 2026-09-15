@@ -22,7 +22,6 @@ export const GTALCS: Game = {
             },
         },
     },
-    buttonsPosition: "left",
     trailers: [
         {
             name: "1",

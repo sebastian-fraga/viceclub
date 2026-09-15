@@ -22,7 +22,6 @@ export const GTAVI: Game = {
             },
         },
     },
-    buttonsPosition: "left",
     trailers: [
         {
             name: "1",

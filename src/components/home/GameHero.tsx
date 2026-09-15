@@ -36,13 +36,7 @@ export default function GameHero({ game }: Props) {
                 className="absolute inset-0 rounded-4xl overflow-hidden bg-cover max-mobile:rounded-3xl max-mobile:bg-position-[80%]"
                 style={{ backgroundImage: `url("${background}")` }}
             >
-                <div
-                    className={`absolute inset-0 ${
-                        game.buttonsPosition === "left"
-                            ? "bg-linear-to-b"
-                            : "bg-linear-to-b"
-                    } from-transparent via-black/15 via-50% to-black/75`}
-                />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/15 via-50% to-black/75" />
             </motion.div>
 
             <motion.div
@@ -60,25 +54,13 @@ export default function GameHero({ game }: Props) {
                     />
                 </div>
 
-                <div
-                    className={`flex px-4 pt-8 ${
-                        game.buttonsPosition === "left"
-                            ? "justify-start"
-                            : "justify-end"
-                    } max-mobile:px-2 max-mobile:pt-4`}
-                >
+                <div className="flex px-4 pt-8  justify-start max-mobile:px-2 max-mobile:pt-4">
                     <h1 className="text-3xl font-black tracking-wide max-mobile:text-lg/5 text-pretty max-mobile:pb-2">
                         {game.title}
                     </h1>
                 </div>
 
-                <div
-                    className={`flex px-3 pb-10 gap-4 ${
-                        game.buttonsPosition === "left"
-                            ? "justify-start"
-                            : "justify-end"
-                    } max-mobile:px-1 max-mobile:pb-5 max-mobile:gap-2`}
-                >
+                <div className="flex px-3 pb-10 gap-4 justify-start max-mobile:px-1 max-mobile:pb-5 max-mobile:gap-2">
                     <PurchaseDropdown
                         purchase={game.purchase}
                         buttonClass={buttonClass}
