@@ -13,8 +13,13 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 ![Languages](https://img.shields.io/badge/i18n-ES_|_EN_|_FR_|_PT--BR-blue)
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/preview.png" alt="Preview" height="32"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/preview-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/preview-light.png">
+    <img alt="Preview" src="public/assets/images/app/readme/titles/preview-light.png" height="32">
+  </picture>
 </div>
 <br>
 
@@ -26,8 +31,13 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 </div>
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/tech-stack.png" alt="Tech Stack" height="32"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/tech-stack-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/tech-stack-light.png">
+    <img alt="Tech stack" src="public/assets/images/app/readme/titles/tech-stack-light.png" height="32">
+  </picture>
 </div>
 <br>
 
@@ -41,8 +51,13 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 ![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/features.png" alt="Features" height="38"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/features-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/features-light.png">
+    <img alt="Features" src="public/assets/images/app/readme/titles/features-light.png" height="32">
+  </picture>
 </div>
 <br>
 
@@ -59,8 +74,13 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 | 🎮 Cheats       | ✅     |
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/structure.png" alt="Structure" height="32"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/structure-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/structure-light.png">
+    <img alt="Structure" src="public/assets/images/app/readme/titles/structure-light.png" height="32">
+  </picture>
 </div>
 <br>
 
@@ -81,8 +101,13 @@ src/
 ```
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/local-development.png" alt="Local development" height="32"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/local-development-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/local-development-light.png">
+    <img alt="Local development" src="public/assets/images/app/readme/titles/local-development-light.png" height="32">
+  </picture>
 </div>
 <br>
 
@@ -94,8 +119,13 @@ pnpm run dev
 ```
 
 <br><br>
+
 <div align="left">
-  <img src="public/assets/images/app/readme/titles/conventions.png" alt="Conventions" height="32"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/conventions-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/conventions-light.png">
+    <img alt="Conventions" src="public/assets/images/app/readme/titles/conventions-light.png" height="32">
+  </picture>
 </div>
 <br>
 
