@@ -143,6 +143,60 @@
                     "fr": "Jason et Lucia (Dazed)",
                     "pt": "Jason e Lucia (Dazed)"
                 }
+            },
+            {
+                "id": "vi-m-02",
+                "caption": {
+                    "es": "Colaboración con artistas 01",
+                    "en": "Collaboration with artists 01",
+                    "fr": "Collaboration avec des artistes 01",
+                    "pt": "Colaboração com artistas 01"
+                }
+            },
+            {
+                "id": "vi-m-03",
+                "caption": {
+                    "es": "Colaboración con artistas 02",
+                    "en": "Collaboration with artists 02",
+                    "fr": "Collaboration avec des artistes 02",
+                    "pt": "Colaboração com artistas 02"
+                }
+            },
+            {
+                "id": "vi-m-04",
+                "caption": {
+                    "es": "Colaboración con artistas 03",
+                    "en": "Collaboration with artists 03",
+                    "fr": "Collaboration avec des artistes 03",
+                    "pt": "Colaboração com artistas 03"
+                }
+            },
+            {
+                "id": "vi-m-05",
+                "caption": {
+                    "es": "Colaboración con artistas 04",
+                    "en": "Collaboration with artists 04",
+                    "fr": "Collaboration avec des artistes 04",
+                    "pt": "Colaboração com artistas 04"
+                }
+            },
+            {
+                "id": "vi-m-06",
+                "caption": {
+                    "es": "Colaboración con artistas 05",
+                    "en": "Collaboration with artists 05",
+                    "fr": "Collaboration avec des artistes 05",
+                    "pt": "Colaboração com artistas 05"
+                }
+            },
+            {
+                "id": "vi-m-07",
+                "caption": {
+                    "es": "Colaboración con artistas 06",
+                    "en": "Collaboration with artists 06",
+                    "fr": "Collaboration avec des artistes 06",
+                    "pt": "Colaboração com artistas 06"
+                }
             }
         ]
     },
