@@ -99,8 +99,6 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
     }, []);
 
     useEffect(() => {
-        if (initialData) return;
-
         let cancelled = false;
 
         async function loadTimeline() {
@@ -108,11 +106,20 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                 const response = await fetch(
                     `https://viceclub.s3.us-east-1.amazonaws.com/${gameCode}/timeline.json?t=${Date.now()}`,
                 );
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
                 const json: TimelineData = await response.json();
-                if (!cancelled) setData(json);
+
+                if (!cancelled) {
+                    setData(json);
+                    setHasError(false);
+                }
             } catch (err) {
                 console.error("Error al cargar el JSON:", err);
-                if (!cancelled) setHasError(true);
+                if (!cancelled && !data) setHasError(true);
             }
         }
 
@@ -121,7 +128,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
         return () => {
             cancelled = true;
         };
-    }, [gameCode, initialData]);
+    }, [gameCode]);
 
     if (!data) {
         return (
@@ -134,14 +141,14 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                     <div className="flex flex-col items-center gap-3 py-16 text-center">
                         <p className="text-slate-400 text-sm">
                             No pudimos cargar la línea de tiempo. Puede ser un
-                            problema temporal.
+                            problema temporal.🌴
                         </p>
                         <button
                             type="button"
                             onClick={() => window.location.reload()}
                             className="rounded-full bg-indigo-300 px-5 py-2 text-sm font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white transition"
                         >
-                            Reintentar
+                            Reintentar🌴
                         </button>
                     </div>
                 )}
