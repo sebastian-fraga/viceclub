@@ -147,13 +147,12 @@ export function Lightbox({
                 blob = new Blob(chunks as BlobPart[]);
             }
 
-            // Conversión a JPG (cambiá a "image/png" si preferís PNG)
             const convertedBlob = await convertToFormat(blob, "image/jpeg");
             const blobUrl = URL.createObjectURL(convertedBlob);
 
             const link = document.createElement("a");
             link.href = blobUrl;
-            link.download = filename.replace(/\.\w+$/, ".jpg"); // ajustar extensión real
+            link.download = filename.replace(/\.\w+$/, ".jpg"); 
 
             document.body.appendChild(link);
             link.click();
