@@ -209,7 +209,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                 style={{
                     paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
                 }}
-                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0 max-mobile:h-dvh overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top]"
+                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0 max-mobile:h-dvh overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-slate-700/40 z-15000 max-mobile:w-full transition-[top] scroll-sidebar"
                 data-lenis-prevent
             >
                 {isMobile && (
