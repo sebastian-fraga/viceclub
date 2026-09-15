@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import './base/typography.css';
+@import './scroll.css';
+@import './typography.css';
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
@@ -59,19 +60,6 @@
 body {
   font-family: "GTAArtDeco";
   color: #f4f4f4;
-
-  &::-webkit-scrollbar {
-    width: 9px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #7c3aed, #a855f7);
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: rgba(30, 15, 60, 0.85)
-  }
 }
 
 html {
@@ -94,123 +82,6 @@ body {
 img,
 a {
   -webkit-user-drag: none;
-}
-
-.scroll-home-dropdown {
-  --sb-track-color: #1c2225;
-  --sb-thumb-color: #fbf9c8;
-  --sb-size: 4px;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-
-  &::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 12px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 12px;
-  }
-}
-
-.scroll-radio {
-  --sb-thumb-color: rgba(251, 249, 200, 0.55);
-  --sb-size: 4px;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--sb-thumb-color) transparent;
-
-  &::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 999px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-}
-
-.scroll-settings {
-  --sb-track-color: #1c222525;
-  --sb-thumb-color: #9a9a9a5e;
-  --sb-size: 4px;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-
-  &::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 12px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 12px;
-  }
-
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
-}
-
-.scroll-settings-mask {
-  mask-image: linear-gradient(to bottom,
-      transparent 0,
-      black 24px,
-      black calc(100% - 24px),
-      transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom,
-      transparent 0,
-      black 24px,
-      black calc(100% - 24px),
-      transparent 100%);
-}
-
-.scroll-selector {
-  scroll-behavior: smooth;
-
-  scrollbar-width: thin;
-  scrollbar-color: #726AA7 transparent;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #726AA7;
-    border-radius: 12px;
-  }
-}
-
-.scrollbar-hide {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 @theme inline {
