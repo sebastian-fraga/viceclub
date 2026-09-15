@@ -80,7 +80,7 @@ export default function MapSidebar({
 
     return (
         <>
-            <aside className="mr-12 ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto rounded-4xl text-white max-mobile:hidden">
+            <aside className="mr-12 ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto  scroll-map rounded-4xl text-white max-mobile:hidden">
                 {sections.map((section) => {
                     const isCollapsed = collapsed.has(section.key);
 
@@ -151,7 +151,7 @@ export default function MapSidebar({
                                 <>
                                     <motion.button
                                         type="button"
-                                        aria-label="Cerrar filtros"
+                                        aria-label="Cerrar filtros🌴"
                                         onClick={() => setIsOpen(false)}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
@@ -177,14 +177,14 @@ export default function MapSidebar({
                                             <button
                                                 type="button"
                                                 onClick={() => setIsOpen(false)}
-                                                aria-label="Cerrar filtros"
+                                                aria-label="Cerrar filtros🌴"
                                                 className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-white/60 transition hover:text-white"
                                             >
                                                 <IconX size={18} />
                                             </button>
                                         </div>
 
-                                        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain touch-pan-y px-4 pb-12">
+                                        <div className="min-h-0 flex-1 overflow-y-auto scroll-map overscroll-contain touch-pan-y px-4 pb-12">
                                             {sections.map((section) => {
                                                 const isCollapsed =
                                                     collapsed.has(section.key);
