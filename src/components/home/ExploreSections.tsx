@@ -1,41 +1,81 @@
+import { getGameMapData } from "@/components/maps/types";
+import { getTypeMeta } from "@/components/maps/types/categories";
 import {
     GAME_SECTIONS,
     SECTIONS_METADATA,
     UNFINISHED_SECTIONS,
 } from "@/config/games";
+import { MAP_MARKERS } from "@/data/maps/markers";
 import { useGameChecklistProgress } from "@/hooks/useGameChecklistProgress";
+import { useGameMapProgress } from "@/hooks/useGameMapProgress";
 import useT from "@/hooks/useT";
 import type { Game } from "@/types/game";
 import { IconArrowUpRight, IconTools } from "@tabler/icons-react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Title from "../ui/Title";
 
 interface Props {
     game: Game;
 }
 
-const BENTO_PATTERN = [
-    "col-span-2 row-span-2",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-2 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-];
+const LARGE_SECTION_IDS = ["100", "mapa"];
 
-function getBentoClasses(index: number) {
-    const pattern = BENTO_PATTERN[index % BENTO_PATTERN.length];
-    const isLarge = pattern.includes("col-span-2 row-span-2");
-    const isWide = pattern.includes("col-span-2 row-span-1");
+function getBentoClasses(sectionId: string) {
+    const isLarge = LARGE_SECTION_IDS.includes(sectionId);
 
-    return { pattern, isLarge, isWide };
+    return {
+        pattern: isLarge ? "col-span-2 row-span-2" : "col-span-1 row-span-1",
+        isLarge,
+    };
 }
 
 export default function ExploreSections({ game }: Props) {
     const t = useT();
     const checklistProgress = useGameChecklistProgress(game.id);
+    const completedMapIds = useGameMapProgress(game.id);
+    const mapData = getGameMapData(game.id);
+
+    const mapProgress = [
+        ...Object.entries(mapData?.collectibles ?? {}),
+        ...Object.entries(mapData?.sideMissions ?? {}),
+        ...Object.entries(mapData?.challenges ?? {}),
+    ].map(([type, items]) => {
+        const total = items.length;
+
+        const completed = items.filter((item) =>
+            completedMapIds.has(`${type}_${item.id}`),
+        ).length;
+
+        return {
+            type,
+            completed,
+            total,
+            pct: total > 0 ? Math.round((completed / total) * 100) : 0,
+            icon: (
+                MAP_MARKERS[game.id as keyof typeof MAP_MARKERS] as
+                    | Record<string, { icon: string }>
+                    | undefined
+            )?.[type]?.icon,
+            meta: getTypeMeta(type),
+        };
+    });
+
+    const pctValue = checklistProgress?.pct ?? 0;
+
+    const [activeMapProgress, setActiveMapProgress] = useState(0);
+
+    useEffect(() => {
+        if (mapProgress.length <= 1) return;
+
+        const interval = setInterval(() => {
+            setActiveMapProgress(
+                (current) => (current + 1) % mapProgress.length,
+            );
+        }, 4500);
+
+        return () => clearInterval(interval);
+    }, [mapProgress.length]);
 
     const sections = GAME_SECTIONS[game.id]
         .filter((id) => id !== "inicio")
@@ -45,9 +85,11 @@ export default function ExploreSections({ game }: Props) {
         }));
 
     const totalMobileUnits = sections.reduce(
-        (acc, section) => acc + (section.id === "100" ? 2 : 1),
+        (acc, section) =>
+            acc + (LARGE_SECTION_IDS.includes(section.id) ? 2 : 1),
         0,
     );
+
     const hasOrphanRow = totalMobileUnits % 2 !== 0;
 
     return (
@@ -59,18 +101,38 @@ export default function ExploreSections({ game }: Props) {
             <div className="mt-8 grid grid-cols-2 auto-rows-25 grid-flow-dense gap-3 sm:grid-cols-4 sm:auto-rows-30 max-mobile:mt-5 max-mobile:gap-2">
                 {sections.map((section, index) => {
                     const IconComponent = section.activeIcon ?? section.icon;
+
                     const isUnderConstruction =
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
-                    const isChecklist = section.id === "100";
+
+                    const isChecklist =
+                        section.id === "100" ||
+                        section.id.includes("checklist");
+
+                    const isMap = section.id === "mapa";
+
+                    const activeProgress = isMap
+                        ? mapProgress[activeMapProgress]
+                        : undefined;
+
                     const isLastItem = index === sections.length - 1;
+
                     const isLastOrphan =
                         isLastItem && !isChecklist && hasOrphanRow;
+
                     const mobileWide = isChecklist || isLastOrphan;
 
-                    const { pattern, isLarge, isWide } = getBentoClasses(index);
-                    const featured = isLarge || isWide;
-                    const iconSize = isLarge ? 30 : isWide ? 26 : 22;
+                    const { pattern, isLarge } = getBentoClasses(section.id);
+
+                    const iconSize = isLarge ? 30 : 22;
+
+                    const progressPercentage = isChecklist
+                        ? pctValue
+                        : activeProgress && activeProgress.total > 0
+                          ? (activeProgress.completed / activeProgress.total) *
+                            100
+                          : 0;
 
                     return (
                         <motion.a
@@ -83,7 +145,9 @@ export default function ExploreSections({ game }: Props) {
                             aria-disabled={isUnderConstruction}
                             tabIndex={isUnderConstruction ? -1 : 0}
                             onClick={(e) => {
-                                if (isUnderConstruction) e.preventDefault();
+                                if (isUnderConstruction) {
+                                    e.preventDefault();
+                                }
                             }}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -112,13 +176,9 @@ export default function ExploreSections({ game }: Props) {
                                     ? "cursor-not-allowed border-neutral-400/10 bg-neutral-900/50 opacity-55"
                                     : "cursor-pointer border-neutral-600/50 hover:border-(--game-buttons-primary-hovered)/80 hover:bg-zinc-950/60 bg-neutral-950"
                             } ${
-                                mobileWide
-                                    ? "max-mobile:justify-end max-mobile:items-start max-mobile:text-left"
-                                    : "max-mobile:items-center max-mobile:justify-center max-mobile:text-center"
-                            } ${
-                                featured
-                                    ? "sm:justify-end sm:items-start sm:text-left"
-                                    : "sm:items-center sm:justify-center sm:text-center"
+                                isLarge
+                                    ? "justify-end items-start text-left"
+                                    : "items-center justify-center text-center"
                             }`}
                         >
                             {isLarge && (
@@ -129,7 +189,7 @@ export default function ExploreSections({ game }: Props) {
                                 />
                             )}
 
-                            {!isUnderConstruction && (isLarge || isWide) && (
+                            {!isUnderConstruction && isLarge && (
                                 <div
                                     className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-15"
                                     style={{
@@ -146,12 +206,39 @@ export default function ExploreSections({ game }: Props) {
                                 </span>
                             )}
 
-                            {isChecklist &&
+                            {isChecklist && !isUnderConstruction && (
+                                <span className="absolute left-4 top-4 z-20 rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide">
+                                    {pctValue}%
+                                </span>
+                            )}
+
+                            {isMap &&
                                 !isUnderConstruction &&
-                                checklistProgress !== null && (
-                                    <span className="absolute left-4 top-4 z-10 rounded-2xl bg-(--game-accent)/80 px-7 py-1.5 text-[13px] font-black tabular-nums text-(--game-buttons-primary-text)/90 max-mobile:right-4 max-mobile:left-auto max-mobile:text-[8px] font-body-condensed tracking-wide">
-                                        {checklistProgress.pct}%
-                                    </span>
+                                activeProgress && (
+                                    <AnimatePresence
+                                        mode="wait"
+                                        initial={false}
+                                    >
+                                        <motion.span
+                                            key={activeProgress.type}
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0 }}
+                                            transition={{
+                                                duration: 0.2,
+                                                ease: "easeOut",
+                                            }}
+                                            className="absolute left-4 top-4 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide"
+                                        >
+                                            <span className="">
+                                                {activeProgress.completed}
+                                            </span>
+                                            <span className="opacity-85">
+                                                /
+                                            </span>
+                                            <span>{activeProgress.total}</span>
+                                        </motion.span>
+                                    </AnimatePresence>
                                 )}
 
                             <IconComponent
@@ -169,36 +256,89 @@ export default function ExploreSections({ game }: Props) {
                                     isUnderConstruction
                                         ? "text-neutral-400"
                                         : "text-neutral-100"
-                                } ${
-                                    isLarge
-                                        ? "text-lg"
-                                        : featured
-                                          ? "text-base"
-                                          : "text-sm"
-                                }`}
+                                } ${isLarge ? "text-lg" : "text-sm"}`}
                             >
                                 {t(section.label)}
                             </span>
 
-                            {isChecklist &&
+                            {isMap &&
                                 !isUnderConstruction &&
-                                checklistProgress !== null &&
-                                (isLarge || isWide) && (
-                                    <div className="relative mt-1 h-1 w-full max-w-42 overflow-hidden rounded-full bg-white/10">
+                                activeProgress && (
+                                    <AnimatePresence
+                                        mode="wait"
+                                        initial={false}
+                                    >
+                                        <motion.div
+                                            key={activeProgress.type}
+                                            initial={{ opacity: 0, x: 20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            exit={{ opacity: 0, x: -20 }}
+                                            transition={{
+                                                duration: 0.25,
+                                                ease: "easeOut",
+                                            }}
+                                            className="relative my-2 flex items-center gap-2.5 text-sm text-neutral-500"
+                                        >
+                                            {activeProgress.icon && (
+                                                <span
+                                                    className="flex size-7 shrink-0 items-center justify-center rounded-full"
+                                                    style={{
+                                                        backgroundColor:
+                                                            activeProgress.meta
+                                                                ?.color,
+                                                    }}
+                                                >
+                                                    <img
+                                                        src={
+                                                            activeProgress.icon
+                                                        }
+                                                        alt=""
+                                                        className="size-5 object-contain"
+                                                    />
+                                                </span>
+                                            )}
+
+                                            <span className="font-body-condensed text-white/80">
+                                                {t(
+                                                    activeProgress.meta
+                                                        ?.label ?? "",
+                                                )}
+                                            </span>
+                                        </motion.div>
+                                    </AnimatePresence>
+                                )}
+
+                            {(isChecklist || isMap) && !isUnderConstruction && (
+                                <div className="relative mt-1 h-1.5 w-full max-w-42">
+                                    <div className="absolute inset-0 overflow-hidden rounded-full bg-white/10">
                                         <div
-                                            className="h-full rounded-full bg-(--game-accent)"
+                                            className="h-full rounded-full bg-(--game-accent) transition-all duration-300 ease-out"
                                             style={{
-                                                width: `${checklistProgress.pct}%`,
+                                                width: `${progressPercentage}%`,
                                             }}
                                         />
                                     </div>
-                                )}
+
+                                    <div
+                                        className="absolute top-1/2 h-3 w-0.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all duration-300 ease-out"
+                                        style={{
+                                            left: `${progressPercentage}%`,
+                                        }}
+                                    />
+                                </div>
+                            )}
 
                             {!isUnderConstruction && (
                                 <motion.span
-                                    initial={{ opacity: 0, height: 0 }}
+                                    initial={{
+                                        opacity: 0,
+                                        height: 0,
+                                    }}
                                     variants={{
-                                        hover: { opacity: 1, height: "auto" },
+                                        hover: {
+                                            opacity: 1,
+                                            height: "auto",
+                                        },
                                     }}
                                     transition={{
                                         duration: 0.2,
