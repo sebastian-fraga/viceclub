@@ -1,8 +1,14 @@
 import Lenis from "lenis";
 import { useEffect } from "react";
+import useSettings from "@/hooks/useSettings"; 
 
 export default function SmoothScroll() {
+    const { getSetting } = useSettings();
+    const reducedAnimations = getSetting("reduced-animations") as boolean;
+
     useEffect(() => {
+        if (reducedAnimations) return; 
+
         const lenis = new Lenis({
             duration: 1.25,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -36,7 +42,7 @@ export default function SmoothScroll() {
             document.removeEventListener("scroll-to-top", handleScrollToTop);
             lenis.destroy();
         };
-    }, []);
+    }, [reducedAnimations]);
 
     return null;
 }
