@@ -11,7 +11,7 @@ import { gamesList } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
 import { CRS, Transformation, type LatLngBoundsExpression } from "leaflet";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 
 export default function GameMapCanvas({
@@ -123,6 +123,19 @@ export default function GameMapCanvas({
             return new Set();
         }
     });
+
+    useEffect(() => {
+        const handleMapReset = (e: Event) => {
+            const detail = (e as CustomEvent<{ games: string[] }>).detail;
+            if (!detail?.games?.includes(gameId)) return;
+
+            setCompletedIds(new Set());
+        };
+
+        window.addEventListener("map-progress-reset", handleMapReset);
+        return () =>
+            window.removeEventListener("map-progress-reset", handleMapReset);
+    }, [gameId]);
 
     const toggleCollectible = (id: string) => {
         setCompletedIds((prev) => {

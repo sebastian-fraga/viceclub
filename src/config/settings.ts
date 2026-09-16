@@ -119,7 +119,7 @@ export const settingsConfig: SettingsSection[] = [
                 type: "action",
                 icon: IconRefreshAlert,
                 destructive: true,
-            },
+            } satisfies ActionSetting,
         ],
     },
     {
