@@ -10,6 +10,7 @@ import Title from "@/components/ui/Title";
 import { gamesList } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
+import { motion } from "framer-motion";
 import {
     CRS,
     Transformation,
@@ -231,7 +232,12 @@ export default function GameMapCanvas({
                 />
             </div>
 
-            <div className="flex min-h-0 min-w-0 w-full max-w-460 flex-1 gap-3 px-12 pb-12 max-2xl:px-8 max-2xl:pb-8 max-xl:px-6 max-xl:pb-6 max-lg:px-4 max-lg:pb-4 max-mobile:flex-col max-mobile:gap-3 max-mobile:px-3 max-mobile:pb-0">
+            <motion.div
+                initial={{ opacity: 0, y: -16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="flex min-h-0 min-w-0 w-full max-w-460 flex-1 gap-3 px-12 pb-12 max-2xl:px-8 max-2xl:pb-8 max-xl:px-6 max-xl:pb-6 max-lg:px-4 max-lg:pb-4 max-mobile:flex-col max-mobile:gap-3 max-mobile:px-3 max-mobile:pb-0"
+            >
                 <div className="relative min-h-0 min-w-0 flex-1 max-mobile:flex-none">
                     <div className="relative min-h-0 min-w-0 h-full overflow-hidden rounded-4xl bg-slate-800/30 bg-[radial-gradient(color-mix(in_oklab,var(--color-indigo-300)_15%,transparent)_1px,transparent_1px)] bg-size-[22px_22px] shadow-2xl shadow-slate-700/25 max-xl:rounded-3xl max-mobile:mb-0 max-mobile:h-[65vh] max-mobile:min-h-100 max-mobile:max-h-162.5">
                         <MapContainer
@@ -317,7 +323,7 @@ export default function GameMapCanvas({
                         onToggleType={handleToggleType}
                     />
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
