@@ -12,6 +12,6 @@ export const III_MARKERS = {
         icon: "/assets/images/maps/common/rc.webp",
     },
     offRoad_III: {
-        icon: "/assets/images/maps/III/icons/offRoad.webp",
+        icon: "/assets/images/maps/common/offRoad.webp",
     },
 } as const;

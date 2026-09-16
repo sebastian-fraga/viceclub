@@ -15,7 +15,7 @@ export const VC_MARKERS = {
         icon: "/assets/images/maps/VC/icons/chopperCheckpoint.webp",
     },
     offRoad_VC: {
-        icon: "/assets/images/maps/III/icons/offRoad.webp",
+        icon: "/assets/images/maps/common/offRoad.webp",
     },
     rcMission_VC: {
         icon: "/assets/images/maps/common/rc.webp",
