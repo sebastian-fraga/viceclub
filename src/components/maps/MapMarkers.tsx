@@ -120,7 +120,7 @@ function AnimatedMarker({
                         initial={false}
                         animate={{
                             scale: currentScale,
-                            opacity: isCompleted && !isSelected ? 0.4 : 1,
+                            opacity: isCompleted ? 0.2 : 1,
                         }}
                         whileHover={{ scale: currentScale * 1.15 }}
                         transition={{
