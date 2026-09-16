@@ -672,7 +672,9 @@
                         "en": "Pizza Boy level 10 completed",
                         "fr": "Niveau 10 de livreur de pizza complété",
                         "pt": "Nível 10 de Pizza Boy completado"
-                    }
+                    },
+                    "mapSlug": "pizzaBoy",
+                    "mapMarker": "1"
                 }
             ]
         },
@@ -749,7 +751,9 @@
                         "en": "RC Bandit Race",
                         "fr": "Course de RC Bandit",
                         "pt": "RC Bandit Race"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "rc-02",
@@ -758,7 +762,9 @@
                         "en": "RC Baron Race",
                         "fr": "Course de RC Baron",
                         "pt": "RC Baron Race"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "rc-03",
@@ -767,7 +773,9 @@
                         "en": "RC Raider Pickup",
                         "fr": "Course de RC Raider",
                         "pt": "RC Raider Pickup"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "3"
                 }
             ]
         },
@@ -787,7 +795,9 @@
                         "en": "PCJ Playground",
                         "fr": "Terrain de jeu PCJ",
                         "pt": "PCJ Playground"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "pc-02",
@@ -796,7 +806,9 @@
                         "en": "Cone Crazy",
                         "fr": "Cône en folie",
                         "pt": "Cone Crazy"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "pc-03",
@@ -805,7 +817,9 @@
                         "en": "Trial by Dirt",
                         "fr": "Sélection par la boue",
                         "pt": "Trial by Dirt"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "pc-04",
@@ -814,7 +828,9 @@
                         "en": "Test Track",
                         "fr": "Piste d'essai",
                         "pt": "Test Track"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -829,15 +845,21 @@
             "items": [
                 {
                     "id": "ch-01",
-                    "text": "Ocean Beach"
+                    "text": "Ocean Beach",
+                    "mapSlug": "chopperCheckpoint",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ch-02",
-                    "text": "Vice Point"
+                    "text": "Vice Point",
+                    "mapSlug": "chopperCheckpoint",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "ch-03",
-                    "text": "Little Haiti"
+                    "text": "Little Haiti",
+                    "mapSlug": "chopperCheckpoint",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "ch-04",
@@ -846,7 +868,9 @@
                         "en": "Downtown",
                         "fr": "Centre",
                         "pt": "Centro"
-                    }
+                    },
+                    "mapSlug": "chopperCheckpoint",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -972,7 +996,8 @@
                         "en": "100 hidden packages",
                         "fr": "100 paquets cachés",
                         "pt": "100 pacotes escondidos"
-                    }
+                    },
+                    "mapSlug": "hiddenPackages"
                 },
                 {
                     "id": "col-02",
@@ -981,7 +1006,8 @@
                         "en": "36 Stunt Jumps",
                         "fr": "36 sauts uniques",
                         "pt": "36 saltos únicos"
-                    }
+                    },
+                    "mapSlug": "stuntJumps"
                 },
                 {
                     "id": "col-03",
@@ -990,7 +1016,8 @@
                         "en": "35 rampages",
                         "fr": "35 rodéos",
                         "pt": "35 rampages"
-                    }
+                    },
+                    "mapSlug": "rampages"
                 }
             ]
         },
@@ -1160,7 +1187,8 @@
                         "en": "15 stores robbed",
                         "fr": "15 magasins braqués",
                         "pt": "15 lojas assaltadas"
-                    }
+                    },
+                    "mapSlug": "storeRobbery"
                 },
                 {
                     "id": "misc-02",

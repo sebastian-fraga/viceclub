@@ -640,7 +640,9 @@
                         "en": "Mafia Massacre",
                         "fr": "Massacre de la mafia",
                         "pt": "Mafia Massacre"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "rc-02",
@@ -649,7 +651,9 @@
                         "en": "Diablo Destruction",
                         "fr": "Destruction de Diablo",
                         "pt": "Diablo Destruction"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "rc-03",
@@ -658,7 +662,9 @@
                         "en": "Casino Calamity",
                         "fr": "Gaz à tous les étages",
                         "pt": "Casino Calamity"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "rc-04",
@@ -667,7 +673,9 @@
                         "en": "Rumpo Rampage",
                         "fr": "Rumpo Rampage",
                         "pt": "Rumpo Rampage"
-                    }
+                    },
+                    "mapSlug": "rcMission",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -687,16 +695,20 @@
                         "en": "Patriot Playground",
                         "fr": "Terrain de jeu du Patriot",
                         "pt": "Patriot Playground"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "pc-02",
                     "text": {
-                        "es": "Agarrado!",
-                        "en": "Gripped!",
-                        "fr": "Adhérence !",
-                        "pt": "Gripped!"
-                    }
+                        "es": "Disturbio de diferentes niveles",
+                        "en": "Multistorey Mayhem",
+                        "fr": "Gaz à tous les étages",
+                        "pt": "Multistorey Mayhem"
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "pc-03",
@@ -705,16 +717,21 @@
                         "en": "A Ride in the Park",
                         "fr": "Un tour dans le Parc",
                         "pt": "A Ride in the Park"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "3"
                 },
+
                 {
                     "id": "pc-04",
                     "text": {
-                        "es": "Disturbio de diferentes niveles",
-                        "en": "Multistorey Mayhem",
-                        "fr": "Gaz à tous les étages",
-                        "pt": "Multistorey Mayhem"
-                    }
+                        "es": "Agarrado!",
+                        "en": "Gripped!",
+                        "fr": "Adhérence !",
+                        "pt": "Gripped!"
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -734,7 +751,8 @@
                         "en": "100 hidden packages",
                         "fr": "100 paquets cachés",
                         "pt": "100 pacotes escondidos"
-                    }
+                    },
+                    "mapSlug": "hiddenPackages"
                 },
                 {
                     "id": "col-02",
@@ -743,7 +761,8 @@
                         "en": "20 Stunt Jumps",
                         "fr": "20 sauts uniques",
                         "pt": "20 saltos únicos"
-                    }
+                    },
+                    "mapSlug": "stuntJumps"
                 },
                 {
                     "id": "col-03",
@@ -752,7 +771,8 @@
                         "en": "20 rampages",
                         "fr": "20 rodéos",
                         "pt": "20 rampages"
-                    }
+                    },
+                    "mapSlug": "rampages"
                 }
             ]
         },

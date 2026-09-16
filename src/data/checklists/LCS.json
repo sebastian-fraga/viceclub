@@ -430,7 +430,9 @@
                         "en": "Noodle Punk level 10 completed",
                         "fr": "Niveau 10 de Noodle Punk complété",
                         "pt": "Nível 10 de Noodle Punk completado"
-                    }
+                    },
+                    "mapSlug": "noodlePunk",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-06",
@@ -439,7 +441,9 @@
                         "en": "Pizza Boy level 10 completed",
                         "fr": "Niveau 10 de livreur de pizza complété",
                         "pt": "Nível 10 de Pizza Boy completado"
-                    }
+                    },
+                    "mapSlug": "pizzaBoy",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-07",
@@ -448,7 +452,9 @@
                         "en": "See the Sight Before Your Flight level 12 completed",
                         "fr": "Niveau 12 de See the Sight Before Your Flight complété",
                         "pt": "Nível 12 de guia turístico completado"
-                    }
+                    },
+                    "mapSlug": "seeTheSightBeforeYouFlight",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-08",
@@ -457,7 +463,9 @@
                         "en": "Car Salesman level 6 completed",
                         "fr": "Niveau 6 de vendeur de voitures complété",
                         "pt": "Nível 6 de Vendedor de carros completado"
-                    }
+                    },
+                    "mapSlug": "carSalesman",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-09",
@@ -466,11 +474,15 @@
                         "en": "40 bikes sold as Bike Salesman",
                         "fr": "40 motos vendues en tant que vendeur de motos",
                         "pt": "40 motos vendidas como vendedor de motos"
-                    }
+                    },
+                    "mapSlug": "bikeSalesman",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-10",
-                    "text": "Karmageddon"
+                    "text": "Karmageddon",
+                    "mapSlug": "karmageddon",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-11",
@@ -479,7 +491,9 @@
                         "en": "5 Slash TV waves completed",
                         "fr": "5 niveaux de Slash TV complétés",
                         "pt": "5 rondas do Slash TV completadas"
-                    }
+                    },
+                    "mapSlug": "slashTv",
+                    "mapMarker": "1"
                 }
             ]
         },
@@ -494,15 +508,21 @@
             "items": [
                 {
                     "id": "mb-01",
-                    "text": "Portland"
+                    "text": "Portland",
+                    "mapSlug": "trashDash",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "mb-02",
-                    "text": "Staunton Island"
+                    "text": "Staunton Island",
+                    "mapSlug": "trashDash",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "mb-03",
-                    "text": "Shoreside Vale"
+                    "text": "Shoreside Vale",
+                    "mapSlug": "trashDash",
+                    "mapMarker": "3"
                 }
             ]
         },
@@ -554,15 +574,21 @@
             "items": [
                 {
                     "id": "mc-01",
-                    "text": "9mm Mayhem"
+                    "text": "9mm Mayhem",
+                    "mapSlug": "driveBy",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "mc-02",
-                    "text": "Scooter Shooter"
+                    "text": "Scooter Shooter",
+                    "mapSlug": "driveBy",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "mc-03",
-                    "text": "AWOL Angel"
+                    "text": "AWOL Angel",
+                    "mapSlug": "driveBy",
+                    "mapMarker": "3"
                 }
             ]
         },
@@ -577,19 +603,27 @@
             "items": [
                 {
                     "id": "rc-01",
-                    "text": "RC Triad Take-down"
+                    "text": "Thrashin' RC",
+                    "mapSlug": "rcMission",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "rc-02",
-                    "text": "Thrashin' RC"
+                    "text": "RC Triad Take-Down",
+                    "mapSlug": "rcMission",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "rc-03",
-                    "text": "Ragin' RC"
+                    "text": "Ragin' RC",
+                    "mapSlug": "rcMission",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "rc-04",
-                    "text": "Chasin' RC"
+                    "text": "Chasin' RC",
+                    "mapSlug": "rcMission",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -610,25 +644,33 @@
                         "en": "Complete all 10 courses",
                         "fr": "Terminer les 10 parcours",
                         "pt": "Completar os 10 percursos"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "pc-02",
-                    "text": "Wong Side of the Tracks"
-                },
-                {
-                    "id": "pc-03",
-                    "text": "Go Go Faggio"
-                },
-                {
-                    "id": "pc-04",
                     "text": "Scrapyard Challenge",
                     "tooltip": {
                         "es": "Obtener al menos 20 puntos",
                         "en": "Get at least 20 points",
                         "fr": "Obtenir au moins 20 points",
                         "pt": "Obter pelo menos 20 pontos"
-                    }
+                    },
+                    "mapSlug": "offRoad",
+                    "mapMarker": "2"
+                },
+                {
+                    "id": "pc-03",
+                    "text": "Wong Side of the Tracks",
+                    "mapSlug": "offRoad",
+                    "mapMarker": "3"
+                },
+                {
+                    "id": "pc-04",
+                    "text": "Go Go Faggio",
+                    "mapSlug": "offRoad",
+                    "mapMarker": "4"
                 }
             ]
         },
@@ -643,27 +685,39 @@
             "items": [
                 {
                     "id": "car-01",
-                    "text": "Low-Rider Rumble"
+                    "text": "Low-Rider Rumble",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "car-02",
-                    "text": "Deimos Dash"
+                    "text": "Red Light Racing",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "car-03",
-                    "text": "Wi-Cheetah Run"
+                    "text": "Deimos Dash",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "car-04",
-                    "text": "Red Light Racing"
+                    "text": "Torrington TT",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "4"
                 },
                 {
                     "id": "car-05",
-                    "text": "Gangsta GP"
+                    "text": "Wi-Cheetah Run",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "5"
                 },
                 {
                     "id": "car-06",
-                    "text": "Torrington TT"
+                    "text": "Gangsta GP",
+                    "mapSlug": "streetRaces",
+                    "mapMarker": "6"
                 }
             ]
         },
@@ -753,7 +807,8 @@
                         "en": "100 hidden packages",
                         "fr": "100 paquets cachés",
                         "pt": "100 Pacotes secretos"
-                    }
+                    },
+                    "mapSlug": "hiddenPackages"
                 },
                 {
                     "id": "col-02",
@@ -762,7 +817,8 @@
                         "en": "26 Stunt Jumps",
                         "fr": "26 sauts uniques",
                         "pt": "26 saltos únicos"
-                    }
+                    },
+                    "mapSlug": "stuntJumps"
                 },
                 {
                     "id": "col-03",
@@ -771,7 +827,8 @@
                         "en": "20 rampages",
                         "fr": "20 rodéos",
                         "pt": "20 rampages"
-                    }
+                    },
+                    "mapSlug": "rampages"
                 }
             ]
         }

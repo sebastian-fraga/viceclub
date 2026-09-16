@@ -630,7 +630,7 @@
         {
             "id": "rep",
             "title": {
-                "es": "Misiones de repartidos",
+                "es": "Misiones de repartidor",
                 "en": "Courier missions",
                 "fr": "Missions de coursier",
                 "pt": "Missões de entregador"
@@ -638,15 +638,21 @@
             "items": [
                 {
                     "id": "rep-01",
-                    "text": "Los Santos"
+                    "text": "Los Santos",
+                    "mapSlug": "assets",
+                    "mapMarker": "7"
                 },
                 {
                     "id": "rep-02",
-                    "text": "San Fierro"
+                    "text": "San Fierro",
+                    "mapSlug": "assets",
+                    "mapMarker": "8"
                 },
                 {
                     "id": "rep-03",
-                    "text": "Las Venturas"
+                    "text": "Las Venturas",
+                    "mapSlug": "assets",
+                    "mapMarker": "9"
                 }
             ]
         },
@@ -656,15 +662,21 @@
             "items": [
                 {
                     "id": "cmc-01",
-                    "text": "Scotch Bonnet Yellow"
+                    "text": "Scotch Bonnet Yellow",
+                    "mapSlug": "chiliad",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "cmc-02",
-                    "text": "Birdseye Winder Yellow"
+                    "text": "Birdseye Winder Yellow",
+                    "mapSlug": "chiliad",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "cmc-03",
-                    "text": "Cobra Run"
+                    "text": "Cobra Run",
+                    "mapSlug": "chiliad",
+                    "mapMarker": "3"
                 }
             ]
         },
@@ -832,7 +844,8 @@
                         "en": "100 tags",
                         "fr": "100 tags",
                         "pt": "100 tags"
-                    }
+                    },
+                    "mapSlug": "tag"
                 },
                 {
                     "id": "col-02",
@@ -841,7 +854,8 @@
                         "en": "50 snapshots",
                         "fr": "50 photos",
                         "pt": "50 fotografias"
-                    }
+                    },
+                    "mapSlug": "snapshot"
                 },
                 {
                     "id": "col-03",
@@ -850,7 +864,8 @@
                         "en": "50 horseshoes",
                         "fr": "50 fers à cheval",
                         "pt": "50 ferraduras"
-                    }
+                    },
+                    "mapSlug": "horseshoe"
                 },
                 {
                     "id": "col-04",
@@ -859,7 +874,8 @@
                         "en": "50 oysters",
                         "fr": "50 huîtres",
                         "pt": "50 ostras"
-                    }
+                    },
+                    "mapSlug": "oyster"
                 }
             ]
         },
@@ -1159,7 +1175,9 @@
                         "en": "BMX Challenge completed",
                         "fr": "Défi BMX terminé",
                         "pt": "BMX Challenge concluído"
-                    }
+                    },
+                    "mapSlug": "bmx",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "misc-02",
@@ -1168,7 +1186,9 @@
                         "en": "NRG-500 Challenge completed",
                         "fr": "Défi NRG-500 terminé",
                         "pt": "NRG-500 Challenge concluído"
-                    }
+                    },
+                    "mapSlug": "nrg",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "misc-03",
