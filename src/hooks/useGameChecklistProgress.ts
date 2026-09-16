@@ -17,6 +17,8 @@ export function useGameChecklistProgress(
     }, [game]);
 
     useEffect(() => {
+        recalculate();
+
         const handleReset = (event: Event) => {
             const { games } = (event as CustomEvent<{ games: string[] }>)
                 .detail;
