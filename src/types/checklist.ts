@@ -11,6 +11,8 @@ export interface ChecklistItemData {
     text?: MaybeLocalizedText;
     texts?: ChecklistTextEntry[];
     tooltip?: MaybeLocalizedText;
+    mapSlug?: string;
+    mapMarker?: string;
 }
 
 export interface ChecklistSectionData {

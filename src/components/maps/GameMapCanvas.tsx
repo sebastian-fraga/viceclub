@@ -81,72 +81,89 @@ export default function GameMapCanvas({
     );
 
     const [hiddenTypes, setHiddenTypes] = useState<Set<string>>(() => {
-    if (typeof window === "undefined") return new Set();
+        if (typeof window === "undefined") return new Set();
 
-    const searchParams = new URLSearchParams(window.location.search);
-    const typeParam = searchParams.get("type");
-    const markerParam = searchParams.get("marker");
+        const searchParams = new URLSearchParams(window.location.search);
+        const typeParam = searchParams.get("type");
+        const markerParam = searchParams.get("marker");
 
-    if (!typeParam || markerParam) return new Set();
+        if (!typeParam || markerParam) return new Set();
 
-    const allTypes = Object.values(data).flatMap((typesRecord) =>
-        typesRecord ? Object.keys(typesRecord) : [],
-    );
+        const allTypes = Object.values(data).flatMap((typesRecord) =>
+            typesRecord ? Object.keys(typesRecord) : [],
+        );
 
-    const targetType = allTypes.find(
-        (type) => type === typeParam || type === `${typeParam}_${gameId}`,
-    );
+        const targetType = allTypes.find(
+            (type) => type === typeParam || type === `${typeParam}_${gameId}`,
+        );
 
-    if (!targetType) return new Set();
+        if (!targetType) return new Set();
 
-    return new Set(allTypes.filter((type) => type !== targetType));
-});
+        return new Set(allTypes.filter((type) => type !== targetType));
+    });
 
-const [markerParam] = useState<string | null>(() => {
-    if (typeof window === "undefined") return null;
+    const [markerParam] = useState<string | null>(() => {
+        if (typeof window === "undefined") return null;
 
-    return new URLSearchParams(window.location.search).get("marker");
-});
+        return new URLSearchParams(window.location.search).get("marker");
+    });
 
-const selectedMarker = useMemo(() => {
-    if (!markerParam) return null;
+    const selectedMarker = useMemo(() => {
+        if (!markerParam) return null;
 
-    const typeParam = new URLSearchParams(window.location.search).get(
-        "type",
-    );
+        const typeParam = new URLSearchParams(window.location.search).get(
+            "type",
+        );
 
-    if (!typeParam) return null;
+        if (!typeParam) return null;
 
-    const allTypes = Object.values(data).flatMap((typesRecord) =>
-        typesRecord ? Object.entries(typesRecord) : [],
-    );
+        const allTypes = Object.values(data).flatMap((typesRecord) =>
+            typesRecord ? Object.entries(typesRecord) : [],
+        );
 
-    const [type, collectibles] =
-        allTypes.find(
-            ([type]) =>
-                type === typeParam || type === `${typeParam}_${gameId}`,
-        ) ?? [];
+        const [type, collectibles] =
+            allTypes.find(
+                ([type]) =>
+                    type === typeParam || type === `${typeParam}_${gameId}`,
+            ) ?? [];
 
-    if (!type || !collectibles) return null;
+        if (!type || !collectibles) return null;
 
-    const collectible = collectibles.find(
-        (item) => item.id === markerParam,
-    );
+        const collectible = collectibles.find(
+            (item) => item.id === markerParam,
+        );
 
-    if (!collectible) return null;
+        if (!collectible) return null;
 
-    return {
-        type,
-        collectible,
-        totalForType: collectibles.length,
-    };
-}, [data, gameId, markerParam]);
+        return {
+            type,
+            collectible,
+            totalForType: collectibles.length,
+        };
+    }, [data, gameId, markerParam]);
 
-useEffect(() => {
-    if (!selectedMarker) return;
+    useEffect(() => {
+        if (!selectedMarker) return;
 
-    setSelectedCollectible(selectedMarker);
-}, [selectedMarker]);
+        setSelectedCollectible(selectedMarker);
+    }, [selectedMarker]);
+
+    useEffect(() => {
+        if (!selectedMarker || !mapRef.current) return;
+
+        const map = mapRef.current;
+
+        const frame = requestAnimationFrame(() => {
+            const latlng: [number, number] = [
+                height - selectedMarker.collectible.y,
+                selectedMarker.collectible.x,
+            ];
+
+            map.setView(latlng, maxZoom);
+        });
+
+        return () => cancelAnimationFrame(frame);
+    }, [selectedMarker, height, maxZoom]);
 
     const handleToggleType = (type: string) => {
         setHiddenTypes((prev) => {

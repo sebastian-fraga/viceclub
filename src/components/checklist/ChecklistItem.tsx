@@ -4,7 +4,10 @@ import type { ChecklistItemData } from "@/types/checklist";
 import {
     IconCheck,
     IconChevronDown,
+    IconExternalLink,
     IconInfoCircle,
+    IconMap2,
+    IconMapPin,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -47,6 +50,12 @@ export function ChecklistItem({
         : item.text
           ? localizedText(item.text)
           : "";
+
+    const mapUrl = item.mapSlug
+        ? `/${game}/mapa?type=${item.mapSlug}${
+              item.mapMarker ? `&marker=${item.mapMarker}` : ""
+          }`
+        : null;
     return (
         <li
             className={`rounded-4xl border transition-colors duration-200 ${
@@ -172,6 +181,24 @@ export function ChecklistItem({
                                                       <IconInfoCircle />
                                                   </span>
                                               </button>
+                                          </Tooltip>
+                                      )}
+
+                                      {mapUrl && (
+                                          <Tooltip
+                                              position="bottom"
+                                              label="Ver en el mapa🌴"
+                                          >
+                                              <a
+                                                  href={mapUrl}
+                                                  className="shrink-0 text-white/40 transition-colors hover:text-white/80"
+                                                  onClick={(e) =>
+                                                      e.stopPropagation()
+                                                  }
+                                                  aria-label="Ver en el mapa🌴"
+                                              >
+                                                  <IconExternalLink size={16} />
+                                              </a>
                                           </Tooltip>
                                       )}
                                   </div>
