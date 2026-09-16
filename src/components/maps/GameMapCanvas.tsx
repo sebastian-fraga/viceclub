@@ -10,8 +10,13 @@ import Title from "@/components/ui/Title";
 import { gamesList } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
-import { CRS, Transformation, type LatLngBoundsExpression } from "leaflet";
-import { useEffect, useMemo, useState } from "react";
+import {
+    CRS,
+    Transformation,
+    type LatLngBoundsExpression,
+    type Map as LeafletMap,
+} from "leaflet";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 
 export default function GameMapCanvas({
@@ -38,6 +43,9 @@ export default function GameMapCanvas({
         collectible: CollectibleData;
         totalForType: number;
     } | null>(null);
+
+    const mapRef = useRef<LeafletMap | null>(null);
+    const popupRef = useRef<HTMLDivElement>(null);
 
     const MAP_PADDING = 150;
 
@@ -137,6 +145,66 @@ export default function GameMapCanvas({
             window.removeEventListener("map-progress-reset", handleMapReset);
     }, [gameId]);
 
+    useEffect(() => {
+        if (!selectedCollectible) return;
+
+        const map = mapRef.current;
+        const popupEl = popupRef.current;
+        if (!map || !popupEl) return;
+
+        const frame = requestAnimationFrame(() => {
+            const mapRect = map.getContainer().getBoundingClientRect();
+            const popupRect = popupEl.getBoundingClientRect();
+
+            const MARGIN = 32;
+            const forbidden = {
+                left: popupRect.left - mapRect.left - MARGIN,
+                top: popupRect.top - mapRect.top - MARGIN,
+                right: popupRect.right - mapRect.left + MARGIN,
+                bottom: popupRect.bottom - mapRect.top + MARGIN,
+            };
+
+            const latlng: [number, number] = [
+                height - selectedCollectible.collectible.y,
+                selectedCollectible.collectible.x,
+            ];
+            const point = map.latLngToContainerPoint(latlng);
+
+            const isHidden =
+                point.x > forbidden.left &&
+                point.x < forbidden.right &&
+                point.y > forbidden.top &&
+                point.y < forbidden.bottom;
+
+            if (!isHidden) return;
+            const distToLeft = point.x - forbidden.left;
+            const distToRight = forbidden.right - point.x;
+            const distToTop = point.y - forbidden.top;
+            const distToBottom = forbidden.bottom - point.y;
+            const minDist = Math.min(
+                distToLeft,
+                distToRight,
+                distToTop,
+                distToBottom,
+            );
+
+            let targetX = point.x;
+            let targetY = point.y;
+
+            if (minDist === distToLeft) targetX = forbidden.left;
+            else if (minDist === distToRight) targetX = forbidden.right;
+            else if (minDist === distToTop) targetY = forbidden.top;
+            else targetY = forbidden.bottom;
+
+            map.panBy([point.x - targetX, point.y - targetY], {
+                animate: true,
+                duration: 0.35,
+            });
+        });
+
+        return () => cancelAnimationFrame(frame);
+    }, [selectedCollectible, height]);
+
     const toggleCollectible = (id: string) => {
         setCompletedIds((prev) => {
             const next = new Set(prev);
@@ -167,6 +235,7 @@ export default function GameMapCanvas({
                 <div className="relative min-h-0 min-w-0 flex-1 max-mobile:flex-none">
                     <div className="relative min-h-0 min-w-0 h-full overflow-hidden rounded-4xl bg-slate-800/30 bg-[radial-gradient(color-mix(in_oklab,var(--color-indigo-300)_15%,transparent)_1px,transparent_1px)] bg-size-[22px_22px] shadow-2xl shadow-slate-700/25 max-xl:rounded-3xl max-mobile:mb-0 max-mobile:h-[65vh] max-mobile:min-h-100 max-mobile:max-h-162.5">
                         <MapContainer
+                            ref={mapRef}
                             crs={gameCRS}
                             maxBounds={mapBounds}
                             maxBoundsViscosity={1.0}
@@ -212,6 +281,7 @@ export default function GameMapCanvas({
 
                             {selectedCollectible && (
                                 <MapMarkerPopup
+                                    ref={popupRef}
                                     collectible={
                                         selectedCollectible.collectible
                                     }
