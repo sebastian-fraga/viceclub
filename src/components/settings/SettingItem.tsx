@@ -70,7 +70,7 @@ export default function SettingItem({
                     <button
                         onClick={() => onAction?.(setting.id)}
                         disabled={disabled}
-                        className={`shrink-0 px-3 py-1.5 text-xs rounded-md transition-colors flex items-center gap-1.5 not-only-of-type:disabled:cursor-not-allowed cursor-pointer disabled:opacity-40 ${
+                        className={`shrink-0 px-3 py-1.5 text-xs rounded-md transition-colors flex items-center gap-1 not-only-of-type:disabled:cursor-not-allowed cursor-pointer disabled:opacity-40 group ${
                             setting.destructive
                                 ? "bg-red-500/15 text-red-300 hover:bg-red-500/25"
                                 : "bg-white/10 text-white/80 hover:bg-white/15"
@@ -84,7 +84,14 @@ export default function SettingItem({
                         ) : (
                             <>
                                 {label}
-                                <ActionIcon size={14} />
+                                <ActionIcon
+                                    size={14}
+                                    className={
+                                        setting.destructive
+                                            ? "text-red-300/60 group-hover:text-red-300/80 transition-colors"
+                                            : ""
+                                    }
+                                />
                             </>
                         )}
                     </button>
