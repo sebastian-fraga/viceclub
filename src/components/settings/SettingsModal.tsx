@@ -3,7 +3,10 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
-import { ResetProgressContent } from "@/components/settings/ResetProgressContent";
+import {
+    ResetProgressContent,
+    type ResetTarget,
+} from "@/components/settings/ResetProgressContent";
 
 import { IconChevronLeft, IconX } from "@tabler/icons-react";
 
@@ -31,6 +34,7 @@ export default function SettingsModal({ open, onClose }: Props) {
     const { t } = useTranslation();
     const isMobile = useIsMobile();
     const [currentStep, setCurrentStep] = useState<Step>("main");
+    const [resetTarget, setResetTarget] = useState<ResetTarget>("checklist");
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const [actionStatus, setActionStatus] = useState<
@@ -40,6 +44,11 @@ export default function SettingsModal({ open, onClose }: Props) {
     const handleAction = (id: string) => {
         switch (id) {
             case "reset-checklist":
+                setResetTarget("checklist");
+                setCurrentStep("reset");
+                break;
+            case "reset-map":
+                setResetTarget("map");
                 setCurrentStep("reset");
                 break;
             case "export-localstorage":
@@ -55,7 +64,7 @@ export default function SettingsModal({ open, onClose }: Props) {
         e: React.ChangeEvent<HTMLInputElement>,
     ) => {
         const file = e.target.files?.[0];
-        e.target.value = ""; 
+        e.target.value = "";
 
         if (!file) return;
 
@@ -281,6 +290,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                                         transition={{ duration: 0.15 }}
                                     >
                                         <ResetProgressContent
+                                            target={resetTarget}
                                             onCancel={() =>
                                                 setCurrentStep("main")
                                             }

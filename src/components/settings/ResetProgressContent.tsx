@@ -1,15 +1,22 @@
 import { gamesList, type GameId } from "@/config/games";
-import { resetChecklistProgress } from "@/utils/resetChecklistProgress";
+import {
+    resetChecklistProgress,
+    resetMapProgress,
+} from "@/utils/resetProgress";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { GameSelector } from "./ui/GameSelector";
 
+export type ResetTarget = "checklist" | "map";
+
 interface ResetProgressContentProps {
+    target: ResetTarget;
     onCancel: () => void;
     onSuccess: () => void;
 }
 
 export function ResetProgressContent({
+    target,
     onCancel,
     onSuccess,
 }: ResetProgressContentProps) {
@@ -18,7 +25,13 @@ export function ResetProgressContent({
 
     const handleConfirm = () => {
         if (selected.length === 0) return;
-        resetChecklistProgress(selected);
+
+        if (target === "checklist") {
+            resetChecklistProgress(selected);
+        } else {
+            resetMapProgress(selected);
+        }
+
         onSuccess();
     };
 
