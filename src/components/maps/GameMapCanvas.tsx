@@ -80,7 +80,73 @@ export default function GameMapCanvas({
         [gameId],
     );
 
-    const [hiddenTypes, setHiddenTypes] = useState<Set<string>>(new Set());
+    const [hiddenTypes, setHiddenTypes] = useState<Set<string>>(() => {
+    if (typeof window === "undefined") return new Set();
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const typeParam = searchParams.get("type");
+    const markerParam = searchParams.get("marker");
+
+    if (!typeParam || markerParam) return new Set();
+
+    const allTypes = Object.values(data).flatMap((typesRecord) =>
+        typesRecord ? Object.keys(typesRecord) : [],
+    );
+
+    const targetType = allTypes.find(
+        (type) => type === typeParam || type === `${typeParam}_${gameId}`,
+    );
+
+    if (!targetType) return new Set();
+
+    return new Set(allTypes.filter((type) => type !== targetType));
+});
+
+const [markerParam] = useState<string | null>(() => {
+    if (typeof window === "undefined") return null;
+
+    return new URLSearchParams(window.location.search).get("marker");
+});
+
+const selectedMarker = useMemo(() => {
+    if (!markerParam) return null;
+
+    const typeParam = new URLSearchParams(window.location.search).get(
+        "type",
+    );
+
+    if (!typeParam) return null;
+
+    const allTypes = Object.values(data).flatMap((typesRecord) =>
+        typesRecord ? Object.entries(typesRecord) : [],
+    );
+
+    const [type, collectibles] =
+        allTypes.find(
+            ([type]) =>
+                type === typeParam || type === `${typeParam}_${gameId}`,
+        ) ?? [];
+
+    if (!type || !collectibles) return null;
+
+    const collectible = collectibles.find(
+        (item) => item.id === markerParam,
+    );
+
+    if (!collectible) return null;
+
+    return {
+        type,
+        collectible,
+        totalForType: collectibles.length,
+    };
+}, [data, gameId, markerParam]);
+
+useEffect(() => {
+    if (!selectedMarker) return;
+
+    setSelectedCollectible(selectedMarker);
+}, [selectedMarker]);
 
     const handleToggleType = (type: string) => {
         setHiddenTypes((prev) => {
