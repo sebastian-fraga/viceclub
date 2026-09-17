@@ -21,6 +21,7 @@ export default function GameMap({ gameId }: GameMapProps) {
             data={{
                 collectibles: mapData?.collectibles ?? {},
                 sideMissions: mapData?.sideMissions ?? {},
+                timeTrials: mapData?.timeTrials ?? {},
                 challenges: mapData?.challenges ?? {},
                 locations: mapData?.locations ?? {},
             }}

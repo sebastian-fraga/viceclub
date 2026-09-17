@@ -2,6 +2,7 @@ import { SIDE_MISSION_TYPES } from "@/components/maps/types/sideMissionsTypes";
 import { CHALLENGE_TYPES } from "./challengeTypes";
 import { COLLECTIBLE_TYPES } from "./collectibleTypes";
 import { LOCATION_TYPES } from "./locationTypes";
+import { TIME_TRIALS_TYPES } from "@/components/maps/types/timeTrialsTypes";
 
 export const MAP_CATEGORIES = {
     collectibles: {
@@ -11,6 +12,10 @@ export const MAP_CATEGORIES = {
     sideMissions: {
         label: "maps.markers.sideMissions.title",
         types: SIDE_MISSION_TYPES,
+    },
+    timeTrials: {
+        label: "🌴",
+        types: TIME_TRIALS_TYPES,
     },
     challenges: {
         label: "maps.markers.challenges.title",

@@ -53,6 +53,7 @@ export interface GameMapData {
     mapMeta: GameMapMeta;
     collectibles?: Record<string, CollectibleData[]>;
     sideMissions?: Record<string, CollectibleData[]>;
+    timeTrials?: Record<string, CollectibleData[]>;
     challenges?: Record<string, CollectibleData[]>;
     locations?: Record<string, CollectibleData[]>;
 }
