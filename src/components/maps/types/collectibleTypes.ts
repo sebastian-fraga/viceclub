@@ -40,22 +40,22 @@ export const COLLECTIBLE_TYPES = {
         singularLabel: "maps.markers.collectibles.sa.oyster",
     },
     hiddenPackages_LCS: {
-        color: "#82DFA4",
+        color: "#FFF58D",
         label: "maps.markers.collectibles.common.hiddenPackages",
         singularLabel: "maps.markers.collectibles.common.hiddenPackage",
     },
     stuntJumps_LCS: {
-        color: "#97E4FE",
+        color: "#FE9797",
         label: "maps.markers.collectibles.common.stuntJumps",
         singularLabel: "maps.markers.collectibles.common.stuntJump",
     },
     redBalloons: {
-        color: "#FE9797",
+        color: "#FA9B9C",
         label: "🌴",
         singularLabel: "🌴",
     },
     stuntJumps_VCS: {
-        color: "#F6C7C7",
+        color: "#57AADA",
         label: "maps.markers.collectibles.common.stuntJumps",
         singularLabel: "maps.markers.collectibles.common.stuntJump",
     },

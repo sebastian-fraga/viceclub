@@ -1,6 +1,6 @@
 export const LCS_MARKERS = {
     hiddenPackages_LCS: {
-        icon: "/assets/images/maps/LCS/hiddenPackage.webp",
+        icon: "/assets/images/maps/LCS/icons/hiddenPackage.webp",
     },
     stuntJumps_LCS: {
         icon: "/assets/images/maps/common/stuntJump.webp",
@@ -15,16 +15,16 @@ export const LCS_MARKERS = {
         icon: "/assets/images/maps/common/pizzaBoy.webp",
     },
     seeTheSightBeforeYouFlight: {
-        icon: "/assets/images/maps/LCS/icons/seeTheSightBeforeYouFlight.webp",
+        icon: "/assets/images/maps/common/plane.webp",
     },
     carSalesman: {
-        icon: "/assets/images/maps/LCS/icons/carSalesman.webp",
+        icon: "/assets/images/maps/common/key.webp",
     },
     bikeSalesman: {
-        icon: "/assets/images/maps/LCS/icons/bikeSalesman.webp",
+        icon: "/assets/images/maps/common/key.webp",
     },
     karmageddon: {
-        icon: "/assets/images/maps/LCS/icons/karmageddon.webp",
+        icon: "/assets/images/maps/common/crash.webp",
     },
     slashTv: {
         icon: "/assets/images/maps/LCS/icons/slashTv.webp",

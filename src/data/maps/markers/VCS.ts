@@ -18,7 +18,7 @@ export const VCS_MARKERS = {
         icon: "/assets/images/maps/VCS/icons/fireCopter.webp",
     },
     viceSights: {
-        icon: "/assets/images/maps/VCS/icons/viceSights.webp",
+        icon: "/assets/images/maps/common/plane.webp",
     },
     swingersClub: {
         icon: "/assets/images/maps/VCS/icons/swingersClub.webp",
@@ -27,12 +27,12 @@ export const VCS_MARKERS = {
         icon: "/assets/images/maps/VCS/icons/skywolf.webp",
     },
     crash: {
-        icon: "/assets/images/maps/VCS/icons/crash.webp",
+        icon: "/assets/images/maps/common/crash.webp",
     },
     rush: {
-        icon: "/assets/images/maps/VCS/icons/rush.webp",
+        icon: "/assets/images/maps/common/crash.webp",
     },
     timedMissions: {
-        icon: "/assets/images/maps/VCS/icons/rush.webp",
+        icon: "/assets/images/maps/VCS/icons/timedMission.webp",
     },
 } as const;

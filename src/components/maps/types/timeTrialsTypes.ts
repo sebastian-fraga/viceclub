@@ -1,6 +1,6 @@
 export const TIME_TRIALS_TYPES = {
     timedMissions: {
-        color: "#0F3048",
+        color: "#091044",
         label: "🌴",
         singularLabel: "🌴",
     },
