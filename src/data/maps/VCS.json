@@ -186,70 +186,280 @@
                     "pt": "Disponível apenas no PS2"
                 }
             },
-            { "id": "12", "x": 0, "y": 0 },
-            { "id": "13", "x": 0, "y": 0 },
-            { "id": "14", "x": 0, "y": 0 },
-            { "id": "15", "x": 0, "y": 0 },
-            { "id": "16", "x": 0, "y": 0 },
-            { "id": "17", "x": 0, "y": 0 },
-            { "id": "18", "x": 0, "y": 0 },
-            { "id": "19", "x": 0, "y": 0 },
-            { "id": "20", "x": 0, "y": 0 },
-            { "id": "21", "x": 0, "y": 0 },
-            { "id": "22", "x": 0, "y": 0 },
-            { "id": "23", "x": 0, "y": 0 },
-            { "id": "24", "x": 0, "y": 0 },
-            { "id": "25", "x": 0, "y": 0 },
-            { "id": "26", "x": 0, "y": 0 },
-            { "id": "27", "x": 0, "y": 0 },
-            { "id": "28", "x": 0, "y": 0 },
-            { "id": "29", "x": 0, "y": 0 },
-            { "id": "30", "x": 0, "y": 0 },
-            { "id": "31", "x": 0, "y": 0 },
-            { "id": "32", "x": 0, "y": 0 },
-            { "id": "33", "x": 0, "y": 0 },
-            { "id": "34", "x": 0, "y": 0 },
-            { "id": "35", "x": 0, "y": 0 },
-            { "id": "36", "x": 0, "y": 0 }
+            {
+                "id": "12",
+                "x": 1792,
+                "y": 1386,
+                "guide": { "fromX": 1741, "fromY": 1321 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "13",
+                "x": 973,
+                "y": 1821,
+                "guide": { "fromX": 978, "fromY": 1915 }
+            },
+            {
+                "id": "14",
+                "x": 1126,
+                "y": 2026,
+                "guide": { "fromX": 1127, "fromY": 2096 }
+            },
+            {
+                "id": "15",
+                "x": 1177,
+                "y": 2389,
+                "guide": { "fromX": 1161, "fromY": 2304 }
+            },
+            {
+                "id": "16",
+                "x": 1464,
+                "y": 2423,
+                "guide": { "fromX": 1392, "fromY": 2416 }
+            },
+            {
+                "id": "17",
+                "x": 1386,
+                "y": 2553,
+                "guide": { "fromX": 1459, "fromY": 2602 }
+            },
+            {
+                "id": "18",
+                "x": 1239,
+                "y": 2911,
+                "guide": { "fromX": 1219, "fromY": 2851 }
+            },
+            {
+                "id": "19",
+                "x": 1326,
+                "y": 2751,
+                "guide": { "fromX": 1403, "fromY": 2747 }
+            },
+            {
+                "id": "20",
+                "x": 1199,
+                "y": 3195,
+                "guide": { "fromX": 1201, "fromY": 3152 }
+            },
+            {
+                "id": "21",
+                "x": 1634,
+                "y": 3381,
+                "guide": { "fromX": 1685, "fromY": 3378 }
+            },
+            {
+                "id": "22",
+                "x": 1951,
+                "y": 3016,
+                "guide": { "fromX": 1981, "fromY": 3078 }
+            },
+            {
+                "id": "23",
+                "x": 2455,
+                "y": 3154,
+                "guide": { "fromX": 2501, "fromY": 3100 }
+            },
+            {
+                "id": "24",
+                "x": 2634,
+                "y": 3273,
+                "guide": { "fromX": 2556, "fromY": 3277 }
+            },
+            {
+                "id": "25",
+                "x": 2749,
+                "y": 2945,
+                "guide": { "fromX": 2814, "fromY": 2947 }
+            },
+            {
+                "id": "26",
+                "x": 2437,
+                "y": 2597,
+                "guide": { "fromX": 2435, "fromY": 2552 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "27",
+                "x": 2839,
+                "y": 2452,
+                "guide": { "fromX": 2866, "fromY": 2401 }
+            },
+            {
+                "id": "28",
+                "x": 2725,
+                "y": 1825,
+                "guide": { "fromX": 2743, "fromY": 1886 }
+            },
+            {
+                "id": "29",
+                "x": 2584,
+                "y": 1655,
+                "guide": { "fromX": 2581, "fromY": 1704 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "30",
+                "x": 2483,
+                "y": 1053,
+                "guide": { "fromX": 2436, "fromY": 967 }
+            },
+            {
+                "id": "31",
+                "x": 2302,
+                "y": 963,
+                "guide": { "fromX": 2299, "fromY": 1024 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "32",
+                "x": 2422,
+                "y": 504,
+                "guide": { "fromX": 2436, "fromY": 560 }
+            },
+            {
+                "id": "33",
+                "x": 2236,
+                "y": 2396,
+                "guide": { "fromX": 2268, "fromY": 2452 }
+            },
+            {
+                "id": "34",
+                "x": 1946,
+                "y": 680,
+                "guide": { "fromX": 1945, "fromY": 732 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "35",
+                "x": 2567,
+                "y": 179,
+                "guide": { "fromX": 2561, "fromY": 219 }
+            },
+            {
+                "id": "36",
+                "x": 2770,
+                "y": 199,
+                "guide": { "fromX": 2756, "fromY": 157 }
+            }
         ]
     },
     "sideMissions": {
         "rampages_VCS": [
-            { "id": "1", "x": 0, "y": 0 },
-            { "id": "2", "x": 0, "y": 0 },
-            { "id": "3", "x": 0, "y": 0 },
-            { "id": "4", "x": 0, "y": 0 },
-            { "id": "5", "x": 0, "y": 0 },
-            { "id": "6", "x": 0, "y": 0 },
-            { "id": "7", "x": 0, "y": 0 },
-            { "id": "8", "x": 0, "y": 0 },
-            { "id": "9", "x": 0, "y": 0 },
-            { "id": "10", "x": 0, "y": 0 },
-            { "id": "11", "x": 0, "y": 0 },
-            { "id": "12", "x": 0, "y": 0 },
-            { "id": "13", "x": 0, "y": 0 },
-            { "id": "14", "x": 0, "y": 0 },
-            { "id": "15", "x": 0, "y": 0 },
-            { "id": "16", "x": 0, "y": 0 },
-            { "id": "17", "x": 0, "y": 0 },
-            { "id": "18", "x": 0, "y": 0 },
-            { "id": "19", "x": 0, "y": 0 },
-            { "id": "20", "x": 0, "y": 0 },
-            { "id": "21", "x": 0, "y": 0 },
-            { "id": "22", "x": 0, "y": 0 },
-            { "id": "23", "x": 0, "y": 0 },
-            { "id": "24", "x": 0, "y": 0 },
-            { "id": "25", "x": 0, "y": 0 },
-            { "id": "26", "x": 0, "y": 0 },
-            { "id": "27", "x": 0, "y": 0 },
-            { "id": "28", "x": 0, "y": 0 },
-            { "id": "29", "x": 0, "y": 0 },
-            { "id": "30", "x": 0, "y": 0 },
-            { "id": "31", "x": 0, "y": 0 },
-            { "id": "32", "x": 0, "y": 0 },
-            { "id": "33", "x": 0, "y": 0 },
-            { "id": "34", "x": 0, "y": 0 },
-            { "id": "35", "x": 0, "y": 0 }
+            { "id": "1", "x": 1132, "y": 1179 },
+            { "id": "2", "x": 1384, "y": 1204 },
+            { "id": "3", "x": 1110, "y": 1299 },
+            { "id": "4", "x": 1020, "y": 1453 },
+            { "id": "5", "x": 1069, "y": 1922 },
+            { "id": "6", "x": 1361, "y": 2175 },
+            { "id": "7", "x": 1403, "y": 2571 },
+            { "id": "8", "x": 1694, "y": 2661 },
+            { "id": "9", "x": 1624, "y": 2748 },
+            { "id": "10", "x": 1587, "y": 2773 },
+            { "id": "11", "x": 1348, "y": 2751 },
+            { "id": "12", "x": 1215, "y": 3294 },
+            { "id": "13", "x": 1215, "y": 3294 },
+            { "id": "14", "x": 1574, "y": 3117 },
+            {
+                "id": "15",
+                "x": 1737,
+                "y": 3335,
+                "guide": { "fromX": 1735, "fromY": 3121 }
+            },
+            { "id": "16", "x": 1907, "y": 3152 },
+            { "id": "17", "x": 2481, "y": 3277 },
+            { "id": "18", "x": 2710, "y": 3286 },
+            { "id": "19", "x": 2826, "y": 2591 },
+            { "id": "20", "x": 2391, "y": 2287 },
+            { "id": "21", "x": 2415, "y": 2176 },
+            { "id": "22", "x": 2536, "y": 1686 },
+            { "id": "23", "x": 2352, "y": 1409 },
+            { "id": "24", "x": 2623, "y": 1216 },
+            { "id": "25", "x": 2426, "y": 1009 },
+            { "id": "26", "x": 2290, "y": 930 },
+            { "id": "27", "x": 2257, "y": 691 },
+            { "id": "28", "x": 2180, "y": 670 },
+            { "id": "29", "x": 2320, "y": 445 },
+            { "id": "30", "x": 2338, "y": 336 },
+            {
+                "id": "31",
+                "x": 2694,
+                "y": 3048,
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "32",
+                "x": 2268,
+                "y": 3051,
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "33",
+                "x": 1701,
+                "y": 1359,
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "34",
+                "x": 1184,
+                "y": 1357,
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            {
+                "id": "35",
+                "x": 2372,
+                "y": 386,
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            }
         ],
         "airRescue": [{ "id": "1", "x": 2064, "y": 959 }],
         "beachPatrol": [{ "id": "1", "x": 3078, "y": 1649 }],
