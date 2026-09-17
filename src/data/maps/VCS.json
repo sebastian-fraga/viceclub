@@ -6,7 +6,438 @@
         "minZoom": 2,
         "maxZoom": 4
     },
-    "collectibles": {},
-    "challenges": {},
-    "locations": {}
+    "collectibles": {
+        "redBalloons": [
+            { "id": "1", "x": 467, "y": 1743 },
+            { "id": "2", "x": 628, "y": 1629 },
+            { "id": "3", "x": 439, "y": 1400 },
+            {
+                "id": "4",
+                "x": 796,
+                "y": 1092,
+                "guide": { "fromX": 822, "fromY": 1070 }
+            },
+            { "id": "5", "x": 982, "y": 872 },
+            { "id": "6", "x": 967, "y": 642 },
+            { "id": "7", "x": 1101, "y": 545 },
+            { "id": "8", "x": 1384, "y": 402 },
+            { "id": "9", "x": 1573, "y": 637 },
+            { "id": "10", "x": 1199, "y": 815 },
+            { "id": "11", "x": 1399, "y": 1014 },
+            { "id": "12", "x": 1380, "y": 1212 },
+            { "id": "13", "x": 1390, "y": 1302 },
+            { "id": "14", "x": 1101, "y": 1288 },
+            { "id": "15", "x": 1081, "y": 1473 },
+            { "id": "16", "x": 1029, "y": 1590 },
+            { "id": "17", "x": 1206, "y": 1577 },
+            { "id": "18", "x": 1735, "y": 1501 },
+            { "id": "19", "x": 1910, "y": 1310 },
+            { "id": "20", "x": 1270, "y": 1782 },
+            { "id": "21", "x": 1052, "y": 1852 },
+            { "id": "22", "x": 1034, "y": 1895 },
+            { "id": "23", "x": 951, "y": 2054 },
+            { "id": "24", "x": 1053, "y": 2064 },
+            { "id": "25", "x": 1315, "y": 1993 },
+            { "id": "26", "x": 1319, "y": 2144 },
+            { "id": "27", "x": 1125, "y": 2223 },
+            { "id": "28", "x": 1412, "y": 2264 },
+            { "id": "29", "x": 1455, "y": 2358 },
+            { "id": "30", "x": 1419, "y": 2559 },
+            { "id": "31", "x": 1597, "y": 2617 },
+            { "id": "32", "x": 1549, "y": 2664 },
+            { "id": "33", "x": 1745, "y": 2796 },
+            { "id": "34", "x": 1727, "y": 2884 },
+            { "id": "35", "x": 1794, "y": 2920 },
+            { "id": "36", "x": 1478, "y": 2855 },
+            { "id": "37", "x": 1346, "y": 2785 },
+            { "id": "38", "x": 1483, "y": 3067 },
+            { "id": "39", "x": 1014, "y": 3472 },
+            { "id": "40", "x": 1353, "y": 3309 },
+            { "id": "41", "x": 1382, "y": 3415 },
+            { "id": "42", "x": 1344, "y": 3495 },
+            { "id": "43", "x": 1607, "y": 3396 },
+            { "id": "44", "x": 1681, "y": 3120 },
+            { "id": "45", "x": 1800, "y": 3251 },
+            { "id": "46", "x": 1949, "y": 3270 },
+            { "id": "47", "x": 1927, "y": 3071 },
+            { "id": "48", "x": 2236, "y": 3179 },
+            { "id": "49", "x": 2297, "y": 3117 },
+            { "id": "50", "x": 2155, "y": 2981 },
+            { "id": "51", "x": 2324, "y": 2879 },
+            { "id": "52", "x": 2552, "y": 2951 },
+            { "id": "53", "x": 2466, "y": 3197 },
+            { "id": "54", "x": 2795, "y": 3276 },
+            { "id": "55", "x": 2662, "y": 3039 },
+            { "id": "56", "x": 2679, "y": 2999 },
+            { "id": "57", "x": 2880, "y": 2851 },
+            { "id": "58", "x": 2784, "y": 2723 },
+            { "id": "59", "x": 2592, "y": 2665 },
+            { "id": "60", "x": 2369, "y": 2495 },
+            { "id": "61", "x": 2453, "y": 2331 },
+            { "id": "62", "x": 2564, "y": 2316 },
+            { "id": "63", "x": 2676, "y": 2465 },
+            { "id": "64", "x": 2693, "y": 2556 },
+            { "id": "65", "x": 2826, "y": 2546 },
+            { "id": "66", "x": 2850, "y": 2407 },
+            { "id": "67", "x": 2753, "y": 2384 },
+            { "id": "68", "x": 2737, "y": 2211 },
+            { "id": "69", "x": 2645, "y": 2198 },
+            { "id": "70", "x": 2719, "y": 2054 },
+            { "id": "71", "x": 2805, "y": 2024 },
+            { "id": "72", "x": 2831, "y": 1814 },
+            { "id": "73", "x": 2749, "y": 1604 },
+            { "id": "74", "x": 2604, "y": 1674 },
+            { "id": "75", "x": 2519, "y": 1637 },
+            { "id": "76", "x": 2495, "y": 1563 },
+            { "id": "77", "x": 2402, "y": 1335 },
+            { "id": "78", "x": 2560, "y": 1470 },
+            { "id": "79", "x": 2652, "y": 1477 },
+            { "id": "80", "x": 2698, "y": 1352 },
+            { "id": "81", "x": 2708, "y": 1304 },
+            { "id": "82", "x": 2653, "y": 1198 },
+            { "id": "83", "x": 2539, "y": 941 },
+            { "id": "84", "x": 2521, "y": 945 },
+            { "id": "85", "x": 2447, "y": 1030 },
+            { "id": "86", "x": 2193, "y": 1030 },
+            { "id": "87", "x": 2050, "y": 821 },
+            { "id": "88", "x": 1989, "y": 747 },
+            { "id": "89", "x": 2122, "y": 500 },
+            { "id": "90", "x": 2160, "y": 518 },
+            { "id": "91", "x": 2173, "y": 440 },
+            { "id": "92", "x": 2226, "y": 355 },
+            { "id": "93", "x": 2269, "y": 680 },
+            { "id": "94", "x": 2224, "y": 799 },
+            { "id": "95", "x": 2424, "y": 642 },
+            { "id": "96", "x": 2491, "y": 619 },
+            { "id": "97", "x": 2352, "y": 409 },
+            { "id": "98", "x": 2374, "y": 356 },
+            { "id": "99", "x": 2749, "y": 181 }
+        ],
+        "stuntJumps_VCS": [
+            {
+                "id": "1",
+                "x": 852,
+                "y": 1454,
+                "guide": { "fromX": 907, "fromY": 1413 }
+            },
+            {
+                "id": "2",
+                "x": 981,
+                "y": 1401,
+                "guide": { "fromX": 981, "fromY": 1332 }
+            },
+            {
+                "id": "3",
+                "x": 566,
+                "y": 1114,
+                "guide": { "fromX": 529, "fromY": 1161 }
+            },
+            {
+                "id": "4",
+                "x": 984,
+                "y": 675,
+                "guide": { "fromX": 1027, "fromY": 757 }
+            },
+            {
+                "id": "5",
+                "x": 1320,
+                "y": 552,
+                "guide": { "fromX": 1245, "fromY": 594 }
+            },
+            {
+                "id": "6",
+                "x": 1256,
+                "y": 628,
+                "guide": { "fromX": 1289, "fromY": 691 }
+            },
+            {
+                "id": "7",
+                "x": 1515,
+                "y": 544,
+                "guide": { "fromX": 1502, "fromY": 634 }
+            },
+            {
+                "id": "8",
+                "x": 1504,
+                "y": 716,
+                "guide": { "fromX": 1543, "fromY": 699 }
+            },
+            {
+                "id": "9",
+                "x": 1467,
+                "y": 1021,
+                "guide": { "fromX": 1462, "fromY": 968 }
+            },
+            {
+                "id": "10",
+                "x": 1464,
+                "y": 1090,
+                "guide": { "fromX": 1495, "fromY": 1091 }
+            },
+            {
+                "id": "11",
+                "x": 1179,
+                "y": 1216,
+                "guide": { "fromX": 1182, "fromY": 1175 },
+                "description": {
+                    "es": "Solo disponible en PS2",
+                    "en": "Only available on PS2",
+                    "fr": "Disponible uniquement sur PS2",
+                    "pt": "Disponível apenas no PS2"
+                }
+            },
+            { "id": "12", "x": 0, "y": 0 },
+            { "id": "13", "x": 0, "y": 0 },
+            { "id": "14", "x": 0, "y": 0 },
+            { "id": "15", "x": 0, "y": 0 },
+            { "id": "16", "x": 0, "y": 0 },
+            { "id": "17", "x": 0, "y": 0 },
+            { "id": "18", "x": 0, "y": 0 },
+            { "id": "19", "x": 0, "y": 0 },
+            { "id": "20", "x": 0, "y": 0 },
+            { "id": "21", "x": 0, "y": 0 },
+            { "id": "22", "x": 0, "y": 0 },
+            { "id": "23", "x": 0, "y": 0 },
+            { "id": "24", "x": 0, "y": 0 },
+            { "id": "25", "x": 0, "y": 0 },
+            { "id": "26", "x": 0, "y": 0 },
+            { "id": "27", "x": 0, "y": 0 },
+            { "id": "28", "x": 0, "y": 0 },
+            { "id": "29", "x": 0, "y": 0 },
+            { "id": "30", "x": 0, "y": 0 },
+            { "id": "31", "x": 0, "y": 0 },
+            { "id": "32", "x": 0, "y": 0 },
+            { "id": "33", "x": 0, "y": 0 },
+            { "id": "34", "x": 0, "y": 0 },
+            { "id": "35", "x": 0, "y": 0 },
+            { "id": "36", "x": 0, "y": 0 }
+        ]
+    },
+    "sideMissions": {
+        "rampages_VCS": [
+            { "id": "1", "x": 0, "y": 0 },
+            { "id": "2", "x": 0, "y": 0 },
+            { "id": "3", "x": 0, "y": 0 },
+            { "id": "4", "x": 0, "y": 0 },
+            { "id": "5", "x": 0, "y": 0 },
+            { "id": "6", "x": 0, "y": 0 },
+            { "id": "7", "x": 0, "y": 0 },
+            { "id": "8", "x": 0, "y": 0 },
+            { "id": "9", "x": 0, "y": 0 },
+            { "id": "10", "x": 0, "y": 0 },
+            { "id": "11", "x": 0, "y": 0 },
+            { "id": "12", "x": 0, "y": 0 },
+            { "id": "13", "x": 0, "y": 0 },
+            { "id": "14", "x": 0, "y": 0 },
+            { "id": "15", "x": 0, "y": 0 },
+            { "id": "16", "x": 0, "y": 0 },
+            { "id": "17", "x": 0, "y": 0 },
+            { "id": "18", "x": 0, "y": 0 },
+            { "id": "19", "x": 0, "y": 0 },
+            { "id": "20", "x": 0, "y": 0 },
+            { "id": "21", "x": 0, "y": 0 },
+            { "id": "22", "x": 0, "y": 0 },
+            { "id": "23", "x": 0, "y": 0 },
+            { "id": "24", "x": 0, "y": 0 },
+            { "id": "25", "x": 0, "y": 0 },
+            { "id": "26", "x": 0, "y": 0 },
+            { "id": "27", "x": 0, "y": 0 },
+            { "id": "28", "x": 0, "y": 0 },
+            { "id": "29", "x": 0, "y": 0 },
+            { "id": "30", "x": 0, "y": 0 },
+            { "id": "31", "x": 0, "y": 0 },
+            { "id": "32", "x": 0, "y": 0 },
+            { "id": "33", "x": 0, "y": 0 },
+            { "id": "34", "x": 0, "y": 0 },
+            { "id": "35", "x": 0, "y": 0 }
+        ],
+        "airRescue": [{ "id": "1", "x": 2064, "y": 959 }],
+        "beachPatrol": [{ "id": "1", "x": 3078, "y": 1649 }],
+        "fireCopter": [{ "id": "1", "x": 1469, "y": 2893 }],
+        "viceSights": [{ "id": "1", "x": 984, "y": 1114 }],
+        "swingersClub": [{ "id": "1", "x": 2340, "y": 2535 }],
+        "skywolf": [{ "id": "1", "x": 1054, "y": 817 }],
+        "crash": [{ "id": "1", "x": 2147, "y": 2867 }],
+        "rush": [{ "id": "1", "x": 1290, "y": 455 }]
+    },
+    "timeTrials": {
+        "timedMissions": [
+            {
+                "id": "1",
+                "x": 2777,
+                "y": 158,
+                "description": {
+                    "es": "As en tierra, mar y aire",
+                    "en": "Land, Sea And Air Ace",
+                    "fr": "Course air-terre-mer",
+                    "pt": "Land, Sea And Air Ace"
+                }
+            },
+            {
+                "id": "2",
+                "x": 439,
+                "y": 758,
+                "description": {
+                    "es": "Memorial Hyman, o muere en el intento",
+                    "en": "Hyman Memorial O.D.T.",
+                    "fr": "Course commémorative",
+                    "pt": "Hyman Memorial O.D.T."
+                }
+            },
+            {
+                "id": "3",
+                "x": 1060,
+                "y": 1901,
+                "description": {
+                    "es": "Aerodeslizador en Haiti",
+                    "en": "Haiti Hover Race",
+                    "fr": "Course d'aéroglisseurs à Haïti",
+                    "pt": "Haiti Hover Race"
+                }
+            },
+            {
+                "id": "4",
+                "x": 1998,
+                "y": 231,
+                "description": {
+                    "es": "Aerodeslizador en el puerto",
+                    "en": "Harbor Hover Race",
+                    "fr": "Course d'aéroglisseurs sur le port",
+                    "pt": "Harbor Hover Race"
+                }
+            },
+            {
+                "id": "5",
+                "x": 2616,
+                "y": 2929,
+                "description": {
+                    "es": "Fardando en the Point",
+                    "en": "Playground on the Point",
+                    "fr": "Course effrénée",
+                    "pt": "Playground on the Point"
+                }
+            },
+            {
+                "id": "6",
+                "x": 1662,
+                "y": 2789,
+                "description": {
+                    "es": "Fardando en Downtown",
+                    "en": "Playground on the Town",
+                    "fr": "Course dans la ville",
+                    "pt": "Playground on the Town"
+                }
+            },
+            {
+                "id": "7",
+                "x": 1433,
+                "y": 678,
+                "description": {
+                    "es": "Fardando en el muelle",
+                    "en": "Playground on the Dock",
+                    "fr": "Course sur les docks",
+                    "pt": "Playground on the Dock"
+                }
+            },
+            {
+                "id": "8",
+                "x": 2394,
+                "y": 655,
+                "description": {
+                    "es": "Fardando en el parking",
+                    "en": "Playground on the Park",
+                    "fr": "Course dans le parc",
+                    "pt": "Playground on the Park"
+                }
+            },
+            {
+                "id": "9",
+                "x": 2673,
+                "y": 3188,
+                "description": {
+                    "es": "Cerco al centro comercial",
+                    "en": "Mashin' up the Mall",
+                    "fr": "Saccage de centre commercial",
+                    "pt": "Mashin' up the Mall"
+                }
+            },
+            {
+                "id": "10",
+                "x": 2363,
+                "y": 2263,
+                "description": {
+                    "es": "El cochecito leré",
+                    "en": "Caddy Daddy",
+                    "fr": "Maître du caddie",
+                    "pt": "Caddy Daddy"
+                }
+            },
+            {
+                "id": "11",
+                "x": 959,
+                "y": 837,
+                "description": {
+                    "es": "Criminales con alas",
+                    "en": "Crims On Wings",
+                    "fr": "Course aérienne",
+                    "pt": "Crims On Wings"
+                }
+            },
+            {
+                "id": "12",
+                "x": 2877,
+                "y": 139,
+                "description": {
+                    "es": "Criminales con manguitos",
+                    "en": "Crims On Water Wings",
+                    "fr": "Course sur l'eau",
+                    "pt": "Crims On Water Wings"
+                }
+            },
+            {
+                "id": "13",
+                "x": 1679,
+                "y": 3368,
+                "description": {
+                    "es": "Contrarreloj con Sánchez",
+                    "en": "Sanchez Time Trial",
+                    "fr": "Contre la montre Sanchez",
+                    "pt": "Sanchez Time Trial"
+                }
+            },
+            {
+                "id": "14",
+                "x": 1825,
+                "y": 3533,
+                "description": {
+                    "es": "Contrarreloj con BMX",
+                    "en": "BMX Time Trial",
+                    "fr": "Contre la montre BMX",
+                    "pt": "BMX Time Trial"
+                }
+            },
+            {
+                "id": "15",
+                "x": 1818,
+                "y": 3352,
+                "description": {
+                    "es": "Contrarreloj con Quad",
+                    "en": "Quad Time Trial",
+                    "fr": "Contre la montre quad",
+                    "pt": "Quad Time Trial"
+                }
+            },
+            {
+                "id": "16",
+                "x": 2118,
+                "y": 3002,
+                "description": {
+                    "es": "Deporte acúatico",
+                    "en": "Watersports",
+                    "fr": "Sports nautiques",
+                    "pt": "Watersports"
+                }
+            }
+        ]
+    }
 }

@@ -15,6 +15,11 @@ export const CHALLENGE_TYPES = {
         color: "#E94B4B",
         label: "Beat the Cock!",
     },
+    driveBy: {
+        color: "#E94B4B",
+        label: "🌴",
+        singularLabel: "🌴",
+    },
 } as const;
 
 export type ChallengeType = keyof typeof CHALLENGE_TYPES;

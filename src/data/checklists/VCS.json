@@ -635,25 +635,31 @@
                         "en": "Air Rescue level 15 completed",
                         "fr": "Niveau 15 de sauvetage aérien complété",
                         "pt": "Nível 15 de Resgate aéreo completado"
-                    }
+                    },
+                    "mapSlug": "airRescue",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-06",
-                    "text": {
-                        "es": "Nivel 5 de bombero aéreo completado",
-                        "en": "Fire Copter level 5 completed",
-                        "fr": "Niveau 5 de Pyrocoptère complété",
-                        "pt": "Nível 5 de helicóptero bombeiro completado"
-                    }
-                },
-                {
-                    "id": "ms-07",
                     "text": {
                         "es": "Nivel 15 de vigilante de playa completado",
                         "en": "Beach Patrol level 15 completed",
                         "fr": "Niveau 15 de Patrouille complété",
                         "pt": "Nível 15 de Patrulha na praia completado"
-                    }
+                    },
+                    "mapSlug": "beachPatrol",
+                    "mapMarker": "1"
+                },
+                {
+                    "id": "ms-07",
+                    "text": {
+                        "es": "Nivel 5 de bombero aéreo completado",
+                        "en": "Fire Copter level 5 completed",
+                        "fr": "Niveau 5 de Pyrocoptère complété",
+                        "pt": "Nível 5 de helicóptero bombeiro completado"
+                    },
+                    "mapSlug": "fireCopter",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-08",
@@ -662,7 +668,9 @@
                         "en": "Vice Sights level 5 completed",
                         "fr": "Niveau 5 de Vice Sights complété",
                         "pt": "Nível 5 de helicóptero turístico completado"
-                    }
+                    },
+                    "mapSlug": "viceSights",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-09",
@@ -680,7 +688,9 @@
                         "en": "Swinger's Club completed",
                         "fr": "Swinger's Club terminé",
                         "pt": "Swinger's Club completado"
-                    }
+                    },
+                    "mapSlug": "swingersClub",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-11",
@@ -689,7 +699,9 @@
                         "en": "Skywolf completed",
                         "fr": "Skywolf terminé",
                         "pt": "Skywolf completado"
-                    }
+                    },
+                    "mapSlug": "skywolf",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-12",
@@ -698,7 +710,9 @@
                         "en": "Crash! completed",
                         "fr": "Crash! terminé",
                         "pt": "Crash! completado"
-                    }
+                    },
+                    "mapSlug": "crash",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "ms-13",
@@ -713,7 +727,9 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "rush",
+                    "mapMarker": "1"
                 }
             ]
         },
@@ -797,19 +813,21 @@
                     "text": {
                         "es": "As en tierra, mar y aire",
                         "en": "Land, Sea And Air Ace",
-                        "fr": "Land, Sea And Air Ace",
+                        "fr": "Course air-terre-mer",
                         "pt": "Land, Sea And Air Ace"
                     },
                     "tooltip": {
                         "es": "Llamada \"Contrarreloj con varios vehículos\" en PSP"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "1"
                 },
                 {
                     "id": "mc-02",
                     "text": {
                         "es": "Memorial Hyman, o muere en el intento",
                         "en": "Hyman Memorial O.D.T.",
-                        "fr": "Hyman Memorial O.D.T.",
+                        "fr": "Course commémorative",
                         "pt": "Hyman Memorial O.D.T."
                     },
                     "tooltip": {
@@ -817,50 +835,60 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "2"
                 },
                 {
                     "id": "mc-03",
                     "text": {
                         "es": "Aerodeslizador en Haiti",
                         "en": "Haiti Hover Race",
-                        "fr": "Haiti Hover Race",
+                        "fr": "Course d'aéroglisseurs à Haïti",
                         "pt": "Haiti Hover Race"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "3"
                 },
                 {
                     "id": "mc-04",
                     "text": {
                         "es": "Aerodeslizador en el puerto",
                         "en": "Harbor Hover Race",
-                        "fr": "Harbor Hover Race",
+                        "fr": "Course d'aéroglisseurs sur le port",
                         "pt": "Harbor Hover Race"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "4"
                 },
                 {
                     "id": "mc-05",
                     "text": {
                         "es": "Fardando en the Point",
                         "en": "Playground on the Point",
-                        "fr": "Playground on the Point",
+                        "fr": "Course effrénée",
                         "pt": "Playground on the Point"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "5"
                 },
                 {
                     "id": "mc-06",
                     "text": {
                         "es": "Fardando en Downtown",
                         "en": "Playground on the Town",
-                        "fr": "Playground on the Town",
+                        "fr": "Course dans la ville",
                         "pt": "Playground on the Town"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "6"
                 },
                 {
                     "id": "mc-07",
                     "text": {
                         "es": "Fardando en el muelle",
                         "en": "Playground on the Dock",
-                        "fr": "Playground on the Dock",
+                        "fr": "Course sur les docks",
                         "pt": "Playground on the Dock"
                     },
                     "tooltip": {
@@ -868,14 +896,16 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "7"
                 },
                 {
                     "id": "mc-08",
                     "text": {
                         "es": "Fardando en el parking",
                         "en": "Playground on the Park",
-                        "fr": "Playground on the Park",
+                        "fr": "Course dans le parc",
                         "pt": "Playground on the Park"
                     },
                     "tooltip": {
@@ -883,23 +913,27 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "8"
                 },
                 {
                     "id": "mc-09",
                     "text": {
                         "es": "Cerco al centro comercial",
                         "en": "Mashin' up the Mall",
-                        "fr": "Mashin' up the Mall",
+                        "fr": "Saccage de centre commercial",
                         "pt": "Mashin' up the Mall"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "9"
                 },
                 {
                     "id": "mc-10",
                     "text": {
                         "es": "El cochecito leré",
                         "en": "Caddy Daddy",
-                        "fr": "Caddy Daddy",
+                        "fr": "Maître du caddie",
                         "pt": "Caddy Daddy"
                     },
                     "tooltip": {
@@ -907,23 +941,27 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "10"
                 },
                 {
                     "id": "mc-11",
                     "text": {
                         "es": "Criminales con alas",
                         "en": "Crims On Wings",
-                        "fr": "Crims On Wings",
+                        "fr": "Course aérienne",
                         "pt": "Crims On Wings"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "11"
                 },
                 {
                     "id": "mc-12",
                     "text": {
                         "es": "Criminales con manguitos",
                         "en": "Crims On Water Wings",
-                        "fr": "Crims On Water Wings",
+                        "fr": "Course sur l'eau",
                         "pt": "Crims On Water Wings"
                     },
                     "tooltip": {
@@ -931,7 +969,9 @@
                         "en": "Only available in the PS2 version",
                         "fr": "Disponible uniquement dans la version PS2",
                         "pt": "Disponível apenas na versão de PS2"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "12"
                 }
             ]
         },
@@ -951,7 +991,9 @@
                         "en": "12 courses with Sanchez completed",
                         "fr": "12 cours de Sanchez terminés",
                         "pt": "12 circuitos com Sanchez completados"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "13"
                 },
                 {
                     "id": "pc-02",
@@ -960,7 +1002,9 @@
                         "en": "8 courses with BMX completed",
                         "fr": "8 courses de BMX terminés",
                         "pt": "8 circuitos com BMX completados"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "14"
                 },
                 {
                     "id": "pc-03",
@@ -969,16 +1013,20 @@
                         "en": "4 courses with Quad completed",
                         "fr": "4 courses en Quad terminés",
                         "pt": "4 circuitos com Quad completados"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "15"
                 },
                 {
                     "id": "pc-04",
                     "text": {
                         "es": "8 recorridos en Deporte acúatico completados",
                         "en": "8 courses in Watersports completed",
-                        "fr": "8 courses de Watersports terminés",
+                        "fr": "8 courses de Sports nautiques terminés",
                         "pt": "8 circuitos de Watersport completados"
-                    }
+                    },
+                    "mapSlug": "timedMissions",
+                    "mapMarker": "16"
                 }
             ]
         },
@@ -1273,7 +1321,8 @@
                         "en": "99 red balloons",
                         "fr": "99 ballons rouges",
                         "pt": "99 balões vermelhos"
-                    }
+                    },
+                    "mapSlug": "redBalloons"
                 },
                 {
                     "id": "col-02",
@@ -1297,7 +1346,8 @@
                         "en": "30 in the PSP version",
                         "fr": "30 dans la version PSP",
                         "pt": "30 na versão de PSP"
-                    }
+                    },
+                    "mapSlug": "stuntJumps"
                 },
                 {
                     "id": "col-04",
@@ -1312,7 +1362,8 @@
                         "en": "30 in the PSP version",
                         "fr": "30 dans la version PSP",
                         "pt": "30 na versão de PSP"
-                    }
+                    },
+                    "mapSlug": "rampages"
                 }
             ]
         }
