@@ -49,8 +49,7 @@ export const SIDE_MISSION_TYPES = {
     },
     noodlePunk: {
         color: "#4E7A9F",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.lcs.noodlePunk",
     },
     pizzaBoy_LCS: {
         color: "#AD291C",
@@ -58,36 +57,31 @@ export const SIDE_MISSION_TYPES = {
     },
     seeTheSightBeforeYouFlight: {
         color: "#C6AD77",
-        label: "🌴",
+        label: "maps.markers.sideMissions.lcs.touristGuide",
     },
     carSalesman: {
         color: "#06FBFF",
-        label: "🌴",
+        label: "maps.markers.sideMissions.lcs.carSalesman",
     },
     bikeSalesman: {
         color: "#7EBBC8",
-        label: "🌴",
+        label: "maps.markers.sideMissions.lcs.bikeSalesman",
     },
     karmageddon: {
         color: "#D60133",
-        label: "🌴",
+        label: "Karmageddon",
     },
     slashTv: {
         color: "#21295F",
-        label: "🌴",
+        label: "Slash TV",
     },
     trashDash: {
         color: "#115A17",
-        label: "🌴",
-        singularLabel: "🌴",
-    },
-    driveBy: {
-        color: "#8C0B0B",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.lcs.trashDash",
+        singularLabel: "maps.markers.sideMissions.lcs.trashDashSingular",
     },
     rcMission_LCS: {
-        color: "#FFFDA3",
+        color: "rgb(174 255 163)",
         label: "maps.markers.sideMissions.common.rcMissions",
         singularLabel: "maps.markers.sideMissions.vc.rcMission",
     },
@@ -98,8 +92,8 @@ export const SIDE_MISSION_TYPES = {
     },
     streetRaces_LCS: {
         color: "#3A3A3A",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.common.streetRaces",
+        singularLabel: "maps.markers.sideMissions.common.race",
     },
     rampages_VCS: {
         color: "#C87AE6",
@@ -108,43 +102,35 @@ export const SIDE_MISSION_TYPES = {
     },
     airRescue: {
         color: "#E32F2F",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.airRescue",
     },
     beachPatrol: {
         color: "#FFDFA8",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.beachPatrol",
     },
     fireCopter: {
         color: "#9ABDE5",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.fireCopter",
     },
     viceSights: {
         color: "#504BDA",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.touristGuide",
     },
     swingersClub: {
         color: "#6DF059",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.swingersClub",
     },
     skywolf: {
         color: "rgb(248 248 53)",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.skywolf",
     },
     crash: {
         color: "#693C86",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.crash",
     },
     rush: {
         color: "#171818",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.sideMissions.vcs.rush",
     },
 } as const;
 

@@ -2,6 +2,7 @@ import TimelineEntry from "@/components/timeline/TimelineEntry";
 import Title from "@/components/ui/Title";
 import useLocale from "@/hooks/useLocale";
 import useSettings from "@/hooks/useSettings";
+import useT from "@/hooks/useT";
 import type { DateFormat } from "@/lib/timeline/formatTimelineTime";
 import { useEffect, useState } from "react";
 
@@ -52,6 +53,7 @@ interface TimeSettings {
 
 export default function Timeline({ gameCode, initialData }: TimelineProps) {
     const locale = useLocale();
+    const i18n = useT()
     const { settings } = useSettings();
 
     const [data, setData] = useState<TimelineData | null>(initialData ?? null);
@@ -138,17 +140,16 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                 </div>
 
                 {hasError && (
-                    <div className="flex flex-col items-center gap-3 py-16 text-center">
+                    <div className="flex flex-col items-center gap-6 py-22 text-center">
                         <p className="text-slate-400 text-sm">
-                            No pudimos cargar la línea de tiempo. Puede ser un
-                            problema temporal.🌴
+                            {i18n("timeline.errorMessage")}
                         </p>
                         <button
                             type="button"
                             onClick={() => window.location.reload()}
-                            className="rounded-full bg-indigo-300 px-5 py-2 text-sm font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white transition"
+                            className="rounded-full bg-indigo-300 px-8 py-2.5 text-base font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white transition"
                         >
-                            Reintentar🌴
+                            {i18n("common.buttons.retry")}
                         </button>
                     </div>
                 )}

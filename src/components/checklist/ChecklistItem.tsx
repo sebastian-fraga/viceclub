@@ -6,8 +6,6 @@ import {
     IconChevronDown,
     IconExternalLink,
     IconInfoCircle,
-    IconMap2,
-    IconMapPin,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -187,7 +185,7 @@ export function ChecklistItem({
                                       {mapUrl && (
                                           <Tooltip
                                               position="bottom"
-                                              label="Ver en el mapa🌴"
+                                              label={t("checklist.mapLocation")}
                                           >
                                               <a
                                                   href={mapUrl}
@@ -195,7 +193,9 @@ export function ChecklistItem({
                                                   onClick={(e) =>
                                                       e.stopPropagation()
                                                   }
-                                                  aria-label="Ver en el mapa🌴"
+                                                  aria-label={t(
+                                                      "checklist.mapLocation",
+                                                  )}
                                               >
                                                   <IconExternalLink size={16} />
                                               </a>

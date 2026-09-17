@@ -910,6 +910,7 @@ export default {
         progress: "Progress",
         markAsCompleted: "Mark as completed",
         markAsUncompleted: "Mark as uncompleted",
+        mapLocation: "View location on map",
         accessibility: {
             entryIcon: "Checklist icon",
         },
@@ -943,6 +944,10 @@ export default {
                     oysters: "Oysters",
                     oyster: "Oyster",
                 },
+                vcs: {
+                    redBalloons: "Red balloons",
+                    redBalloon: "Red balloon",
+                },
             },
             sideMissions: {
                 title: "Side missions",
@@ -953,6 +958,8 @@ export default {
                     offRoadMission: "Off-Road mission",
                     rcMissions: "RC Missions",
                     pizzaBoy: "Pizza Boy mission",
+                    streetRaces: "Street races",
+                    race: "Race",
                 },
                 iii: {
                     rcToyz: "RC Toyz",
@@ -963,12 +970,38 @@ export default {
                     storeRobbery: "Store Robbery",
                     rcMission: "RC Mission",
                 },
+                lcs: {
+                    noodlePunk: "Noodle Punk mission",
+                    touristGuide: "See the Sight Before Your Flight",
+                    carSalesman: "Car salesman",
+                    bikeSalesman: "Bike salesman",
+                    trashDash: "Trash Dash",
+                    trashDashSingular: "Trash Dash",
+                },
+                vcs: {
+                    airRescue: "Air rescue",
+                    beachPatrol: "Beach patrol",
+                    fireCopter: "Fire Copter",
+                    touristGuide: "Vice Sights",
+                    swingersClub: "Swinger's Club",
+                    skywolf: "Skywolf",
+                    crash: "Crash!",
+                    rush: "Rush",
+                },
+            },
+            timeTrials: {
+                title: "Time trials",
+                timeTrial: "Time trial",
             },
             challenges: {
                 title: "Challenges",
                 sa: {
                     bmx: "BMX Challenge",
                     nrg: "NRG-500 Challenge",
+                },
+                lcs: {
+                    driveBys: "Drive-by challenges",
+                    driveBy: "Drive-by challenge",
                 },
             },
             locations: {
@@ -1121,6 +1154,7 @@ export default {
         titles: {
             vi: "Grand Theft Auto VI Timeline",
         },
+        errorMessage: "We couldn't load the timeline. Please try again later.",
         buttons: {
             showSpoilers: "Read spoilers",
             hideSpoilers: "Hide",
@@ -1267,6 +1301,7 @@ export default {
             download: "Download",
             export: "Export",
             import: "Import",
+            retry: "Retry",
         },
         accessibility: {
             prev: "Previous",
@@ -1277,6 +1312,8 @@ export default {
             zoomOut: "Zoom out",
             openSidebar: "Open sidebar",
             closeSidebar: "Close sidebar",
+            openMenu: "Open menu",
+            closeMenu: "Close menu",
         },
     },
 };

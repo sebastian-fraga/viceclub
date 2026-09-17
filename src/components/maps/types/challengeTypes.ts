@@ -17,8 +17,8 @@ export const CHALLENGE_TYPES = {
     },
     driveBy: {
         color: "#E94B4B",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.challenges.lcs.driveBys",
+        singularLabel: "maps.markers.challenges.lcs.driveBy",
     },
 } as const;
 

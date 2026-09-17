@@ -51,8 +51,8 @@ export const COLLECTIBLE_TYPES = {
     },
     redBalloons: {
         color: "#FA9B9C",
-        label: "🌴",
-        singularLabel: "🌴",
+        label: "maps.markers.collectibles.vcs.redBalloons",
+        singularLabel: "maps.markers.collectibles.vcs.redBalloon",
     },
     stuntJumps_VCS: {
         color: "#57AADA",

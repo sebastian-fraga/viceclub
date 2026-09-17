@@ -910,6 +910,7 @@ export default {
         progress: "Progression",
         markAsCompleted: "Marcar como concluído",
         markAsUncompleted: "Marcar como não concluído",
+        mapLocation: "Ver localização no mapa",
         accessibility: {
             entryIcon: "Ícone de checklist",
         },
@@ -943,6 +944,10 @@ export default {
                     oysters: "Ostras",
                     oyster: "Ostra",
                 },
+                vcs: {
+                    redBalloons: "Balões vermelhos",
+                    redBalloon: "Balão vermelho",
+                },
             },
             sideMissions: {
                 title: "Missões secundárias",
@@ -953,6 +958,8 @@ export default {
                     offRoadMission: "Missão Off-Road",
                     rcMissions: "Corridas de RC",
                     pizzaBoy: "Missão de Pizza Boy",
+                    streetRaces: "Corridas de rua",
+                    race: "Corrida",
                 },
                 iii: {
                     rcToyz: "RC Toyz",
@@ -963,12 +970,38 @@ export default {
                     storeRobbery: "Assalto a loja",
                     rcMission: "Corrida de RC",
                 },
+                lcs: {
+                    noodlePunk: "Noodle Punk",
+                    touristGuide: "Guia turístico",
+                    carSalesman: "Vendedor de carros",
+                    bikeSalesman: "Vendedor de motos",
+                    trashDash: "Missões de lixeiro",
+                    trashDashSingular: "Lixeiro",
+                },
+                vcs: {
+                    airRescue: "Resgate aéreo",
+                    beachPatrol: "Patrulha na praia",
+                    fireCopter: "Helicóptero bombeiro",
+                    touristGuide: "Helicóptero turístico",
+                    swingersClub: "Swinger's Club",
+                    skywolf: "Skywolf",
+                    crash: "Crash!",
+                    rush: "Rush",
+                },
+            },
+            timeTrials: {
+                title: "Provas contra o tempo",
+                timeTrial: "Prova contra o tempo",
             },
             challenges: {
                 title: "Desafios",
                 sa: {
                     bmx: "BMX Challenge",
                     nrg: "NRG-500 Challenge",
+                },
+                lcs: {
+                    driveBys: "Desafios de drive-by",
+                    driveBy: "Desafio de drive-by",
                 },
             },
             locations: {
@@ -1121,6 +1154,8 @@ export default {
         titles: {
             vi: "Linha do tempo de Grand Theft Auto VI",
         },
+        errorMessage:
+            "Não foi possível carregar a linha do tempo. Tente novamente mais tarde.",
         buttons: {
             showSpoilers: "Ler spoilers",
             hideSpoilers: "Ocultar",
@@ -1268,6 +1303,7 @@ export default {
             download: "Baixar",
             export: "Exportar",
             import: "Importar",
+            retry: "Tentar novamente",
         },
         accessibility: {
             prev: "Anterior",
@@ -1278,6 +1314,8 @@ export default {
             zoomOut: "Diminuir zoom",
             openSidebar: "Abrir barra lateral",
             closeSidebar: "Fechar barra lateral",
+            openMenu: "Abrir menu",
+            closeMenu: "Fechar menu",
         },
     },
 };

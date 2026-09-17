@@ -33,6 +33,7 @@ export default function MapSidebar({
     const markers = MAP_MARKERS[gameId as keyof typeof MAP_MARKERS];
 
     const i18n = useT();
+    const t = useT();
 
     const sections = (Object.keys(MAP_CATEGORIES) as MapCategory[])
         .map((categoryKey) => ({
@@ -151,7 +152,9 @@ export default function MapSidebar({
                                 <>
                                     <motion.button
                                         type="button"
-                                        aria-label="Cerrar filtros🌴"
+                                        aria-label={t(
+                                            "common.accessibility.closeMenu",
+                                        )}
                                         onClick={() => setIsOpen(false)}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
@@ -177,7 +180,9 @@ export default function MapSidebar({
                                             <button
                                                 type="button"
                                                 onClick={() => setIsOpen(false)}
-                                                aria-label="Cerrar filtros🌴"
+                                                aria-label={t(
+                                                    "common.accessibility.closeMenu",
+                                                )}
                                                 className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg text-white/60 transition hover:text-white"
                                             >
                                                 <IconX size={18} />

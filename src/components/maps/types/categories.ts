@@ -14,7 +14,7 @@ export const MAP_CATEGORIES = {
         types: SIDE_MISSION_TYPES,
     },
     timeTrials: {
-        label: "🌴",
+        label: "maps.markers.timeTrials.title",
         types: TIME_TRIALS_TYPES,
     },
     challenges: {
