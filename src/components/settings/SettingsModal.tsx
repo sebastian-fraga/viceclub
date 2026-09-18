@@ -132,6 +132,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                     exit={{ opacity: 0 }}
                     className="fixed inset-0 z-20000 flex items-center justify-center bg-black/70"
                     onClick={handleClose}
+                    data-lenis-prevent
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
