@@ -210,7 +210,7 @@ export const CheatsContainer = ({
                                                 : "bg-(--button-bg)/20 opacity-50 cursor-not-allowed"
                                         }`}
                                     >
-                                        <h3 className="text-lg font-medium text-violet-50">
+                                        <h3 className="text-xl text-violet-50 font-body-condensed">
                                             {t(cheat.title)}
                                         </h3>
 
@@ -237,7 +237,7 @@ export const CheatsContainer = ({
                                                         return isText ? (
                                                             <kbd
                                                                 key={`${button}-${index}`}
-                                                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15"
+                                                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15"
                                                             >
                                                                 {value}
                                                             </kbd>
@@ -256,17 +256,19 @@ export const CheatsContainer = ({
                                                 )
                                             ) : (
                                                 <span className="text-xs text-zinc-500">
-                                                    {i18n("cheats.notAvailable")}
+                                                    {i18n(
+                                                        "cheats.notAvailable",
+                                                    )}
                                                 </span>
                                             )}
                                         </div>
 
-                                        <div className="flex flex-col gap-0">
+                                        <div className="flex flex-col gap-0.5">
                                             {platformNotes?.map(
                                                 (platformNote, index) => (
                                                     <div
                                                         key={index}
-                                                        className={`font-body-condensed tracking-wide mt-2 rounded-2xl text-sm cheat-note-entry ${
+                                                        className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin ${
                                                             platformNote.noteType ===
                                                             "warning"
                                                                 ? "text-red-100"
