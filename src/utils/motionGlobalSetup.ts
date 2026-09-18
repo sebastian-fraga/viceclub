@@ -1,9 +1,22 @@
 import { loadSettings } from "@/hooks/useSettingsStorage";
 import { MotionGlobalConfig } from "framer-motion";
 
+function setReducedAnimations(enabled: boolean) {
+    MotionGlobalConfig.skipAnimations = enabled;
+
+    if (enabled) {
+        document.documentElement.setAttribute(
+            "data-reduced-animations",
+            "true",
+        );
+    } else {
+        document.documentElement.removeAttribute("data-reduced-animations");
+    }
+}
+
 function applyReducedAnimations() {
     const stored = loadSettings<{ "reduced-animations"?: boolean }>();
-    MotionGlobalConfig.skipAnimations = stored?.["reduced-animations"] === true;
+    setReducedAnimations(stored?.["reduced-animations"] === true);
 }
 
 applyReducedAnimations();
@@ -11,8 +24,6 @@ applyReducedAnimations();
 window.addEventListener("settings-change", (e) => {
     const detail = (e as CustomEvent).detail;
     if (detail && "reduced-animations" in detail) {
-        MotionGlobalConfig.skipAnimations = Boolean(
-            detail["reduced-animations"],
-        );
+        setReducedAnimations(Boolean(detail["reduced-animations"]));
     }
 });
