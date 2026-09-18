@@ -15,30 +15,32 @@ interface DateValue {
     tag?: string;
 }
 
+export interface GameTheme {
+    accent: {
+        default: string;
+        muted: string;
+    };
+    buttons: {
+        primary: {
+            background: string;
+            hovered?: string;
+            border?: string;
+            text: string;
+        };
+        secondary: {
+            background: string;
+            hovered?: string;
+            border?: string;
+            text: string;
+        };
+    };
+}
+
 export interface Game {
     id: GameId;
     title: string;
 
-    theme: {
-        accent: {
-            default: string;
-            muted: string;
-        };
-        buttons: {
-            primary: {
-                background: string;
-                hovered?: string;
-                border?: string;
-                text: string;
-            };
-            secondary: {
-                background: string;
-                hovered?: string;
-                border?: string;
-                text: string;
-            };
-        };
-    };
+    theme: GameTheme;
 
     variants?: GameVariant[];
 
@@ -82,7 +84,22 @@ export interface Game {
 export interface GameVariant {
     id: string;
     label: string;
-    theme: {
-        accent: string;
+    theme: GameTheme;
+    description: {
+        paragraphs: string[];
+    };
+    technicalSheet?: {
+        title: string;
+        developers: string[];
+        publisher: string;
+        producer: string;
+        writers: string[];
+        platforms: string[];
+        dates: {
+            platforms: string[];
+            dates: DateValue[];
+        }[];
+        engines: string[];
+        sales?: string;
     };
 }

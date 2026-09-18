@@ -27,24 +27,138 @@ export const GTAIV: Game = {
             id: "IV",
             label: "GTA IV",
             theme: {
-                accent: "#e5e5e5",
+                accent: {
+                    default: "#e5e5e5",
+                    muted: "",
+                },
+                buttons: {
+                    primary: {
+                        background: "#a3a3a3",
+                        hovered: "#999696",
+                        text: "#000",
+                    },
+                    secondary: {
+                        background: "#00000000",
+                        border: "#ffffff80",
+                        hovered: "#ffffff26",
+                        text: "#fff",
+                    },
+                },
+            },
+            description: {
+                paragraphs: [
+                    "home.iv.paragraphs.1",
+                    "home.iv.paragraphs.2",
+                    "home.iv.paragraphs.3",
+                    "home.iv.paragraphs.4",
+                ],
+            },
+            technicalSheet: {
+                title: "GTA IV",
+                developers: ["Rockstar North"],
+                publisher: "Rockstar Games",
+                producer: "Leslie Benzies",
+                writers: ["Dan Houser", "Rupert Humphries"],
+                platforms: ["PlayStation 3", "Xbox 360", "Microsoft Windows"],
+                dates: [
+                    {
+                        platforms: ["PlayStation 3", "Xbox 360"],
+                        dates: [
+                            {
+                                key: "home.iv.technicalSheet.dates.0",
+                            },
+                        ],
+                    },
+                    {
+                        platforms: ["Microsoft Windows"],
+                        dates: [
+                            {
+                                key: "home.iv.technicalSheet.dates.1",
+                                tag: "NA",
+                            },
+                            {
+                                key: "home.iv.technicalSheet.dates.2",
+                                tag: "EU",
+                            },
+                        ],
+                    },
+                ],
+                engines: ["RAGE"],
+
+                sales: "home.iv.technicalSheet.sales",
             },
         },
         {
             id: "TLAD",
             label: "The Lost and Damned",
             theme: {
-                accent: "#D41B23",
+                accent: {
+                    default: "#D41B23",
+                    muted: "",
+                },
+                buttons: {
+                    primary: {
+                        background: "#D41B23",
+                        hovered: "#b8171e",
+                        text: "#fff",
+                    },
+                    secondary: {
+                        background: "#00000000",
+                        border: "#ffffff80",
+                        hovered: "#ffffff26",
+                        text: "#fff",
+                    },
+                },
+            },
+            description: {
+                paragraphs: [
+                    "home.tlad.paragraphs.1",
+                    "home.tlad.paragraphs.2",
+                    "home.tlad.paragraphs.3",
+                    "home.tlad.paragraphs.4",
+                ],
             },
         },
         {
             id: "TBOGT",
             label: "The Ballad of Gay Tony",
             theme: {
-                accent: "#F0E95B",
+                accent: {
+                    default: "#F0E95B",
+                    muted: "",
+                },
+                buttons: {
+                    primary: {
+                        background: "#F0E95B",
+                        hovered: "#d8d04f",
+                        text: "#000",
+                    },
+                    secondary: {
+                        background: "#00000000",
+                        border: "#ffffff80",
+                        hovered: "#ffffff26",
+                        text: "#fff",
+                    },
+                },
+            },
+            description: {
+                paragraphs: [
+                    "home.tbogt.paragraphs.1",
+                    "home.tbogt.paragraphs.2",
+                    "home.tbogt.paragraphs.3",
+                    "home.tbogt.paragraphs.4",
+                ],
             },
         },
     ],
+    description: {
+        paragraphs: [
+            "home.iv.paragraphs.1",
+            "home.iv.paragraphs.2",
+            "home.iv.paragraphs.3",
+            "home.iv.paragraphs.4",
+        ],
+    },
     trailers: [
         {
             name: "1",
@@ -100,14 +214,6 @@ export const GTAIV: Game = {
             ],
         },
     ],
-    description: {
-        paragraphs: [
-            "home.iv.paragraphs.1",
-            "home.iv.paragraphs.2",
-            "home.iv.paragraphs.3",
-            "home.iv.paragraphs.4",
-        ],
-    },
     technicalSheet: {
         title: "GTA IV",
         developers: ["Rockstar North"],

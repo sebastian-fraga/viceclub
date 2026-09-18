@@ -22,8 +22,8 @@ export interface Character {
         | "unknown"
         | string;
     firstAppearance: string;
-    quote: string;
-    nationalities: string[];
+    quote?: string;
+    nationalities?: string[];
 }
 
 const STATUS_STYLES: Record<string, string> = {
