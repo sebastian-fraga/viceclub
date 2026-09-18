@@ -81,7 +81,10 @@ export default function MapSidebar({
 
     return (
         <>
-            <aside className="mr-12 ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto  scroll-map rounded-4xl text-white max-mobile:hidden">
+            <aside
+                className="mr-auto ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto shadow-2xl shadow-(-color:red-400) scroll-map rounded-4xl text-white max-mobile:hidden"
+                data-lenis-prevent
+            >
                 {sections.map((section) => {
                     const isCollapsed = collapsed.has(section.key);
 
@@ -189,7 +192,10 @@ export default function MapSidebar({
                                             </button>
                                         </div>
 
-                                        <div className="min-h-0 flex-1 overflow-y-auto scroll-map overscroll-contain touch-pan-y px-4 pb-12">
+                                        <div
+                                            className="min-h-0 flex-1 overflow-y-auto scroll-map overscroll-contain touch-pan-y px-4 pb-12"
+                                            data-lenis-prevent
+                                        >
                                             {sections.map((section) => {
                                                 const isCollapsed =
                                                     collapsed.has(section.key);
