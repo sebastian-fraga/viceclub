@@ -1,17 +1,16 @@
 import Title from "@/components/ui/Title";
-import type { GameId } from "@/config/games";
+import useT from "@/hooks/useT";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import useT from "@/hooks/useT";
 import CharacterCard, { type Character } from "./CharacterCard";
 
 export default function CharacterGrid({
     characters,
-    gameId,
+    variantId,
 }: {
     characters: Character[];
-    gameId: GameId;
+    variantId: string;
 }) {
     const t = useT();
     const [visibleCount, setVisibleCount] = useState(9);
@@ -58,7 +57,10 @@ export default function CharacterGrid({
                                     : 0,
                         }}
                     >
-                        <CharacterCard character={character} gameId={gameId} />
+                        <CharacterCard
+                            character={character}
+                            variantId={variantId}
+                        />
                     </motion.div>
                 ))}
             </div>

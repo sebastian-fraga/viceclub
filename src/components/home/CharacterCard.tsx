@@ -3,7 +3,7 @@ import { useState } from "react";
 
 interface Props {
     character: Character;
-    gameId: string;
+    variantId: string;
 }
 
 export interface Character {
@@ -53,7 +53,7 @@ function FlagImage({ countryCode }: { countryCode: string }) {
     );
 }
 
-export default function CharacterCard({ character, gameId }: Props) {
+export default function CharacterCard({ character, variantId }: Props) {
     const t = useT();
     const [flipped, setFlipped] = useState(false);
 
@@ -111,7 +111,7 @@ export default function CharacterCard({ character, gameId }: Props) {
 
                         <p className="text-xs text-neutral-400 max-mobile:text-[11px]">
                             {t(
-                                `home.${gameId.toLocaleLowerCase()}.characters.${character.id}.role`,
+                                `home.${variantId.toLocaleLowerCase()}.characters.${character.id}.role`,
                             )}
                         </p>
                     </div>
@@ -153,7 +153,7 @@ export default function CharacterCard({ character, gameId }: Props) {
 
                             <dd className="text-right font-medium text-neutral-200 truncate">
                                 {t(
-                                    `home.${gameId.toLocaleLowerCase()}.characters.${character.id}.mission`,
+                                    `home.${variantId.toLocaleLowerCase()}.characters.${character.id}.mission`,
                                 )}
                             </dd>
                         </div>
@@ -162,7 +162,7 @@ export default function CharacterCard({ character, gameId }: Props) {
                     <p className="mt-auto text-sm italic leading-relaxed text-neutral-400 max-mobile:text-xs max-mobile:leading-normal">
                         “
                         {t(
-                            `home.${gameId.toLocaleLowerCase()}.characters.${character.id}.quote`,
+                            `home.${variantId.toLocaleLowerCase()}.characters.${character.id}.quote`,
                         )}
                         ”
                     </p>

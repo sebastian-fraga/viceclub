@@ -7,6 +7,7 @@ import { Tooltip } from "../ui/Tooltip";
 
 interface TechSheetProps {
     game: string;
+    variantId: string;
     title: string;
     developers: string[];
     publisher: string;
@@ -176,6 +177,7 @@ function DateLine({
 
 export default function TechSheet({
     game,
+    variantId,
     title,
     developers,
     publisher,
@@ -204,8 +206,8 @@ export default function TechSheet({
 
             <div className="mt-8 w-full max-w-lg rounded-2xl border border-white/20 bg-black/30 p-4 max-mobile:mt-5 max-mobile:p-3 shadow-2xl">
                 <img
-                    src={`/assets/images/main/boxarts/portada_${game}.webp`}
-                    alt={`Portada de ${title}`}
+                    src={`/assets/images/main/boxarts/portada_${variantId}.webp`}
+                    alt={`Portada de ${title}🌴`}
                     className="mx-auto mb-4 block w-full max-mobile:mb-3"
                 />
 

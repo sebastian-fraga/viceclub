@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { type Platform, type PlatformFamily } from "@/config/platforms";
 import useSettings from "@/hooks/useSettings";
@@ -40,6 +40,9 @@ export default function GameHero({ game, variantId, onVariantChange }: Props) {
         (variant) => variant.id === variantId,
     );
 
+    const activeTrailers = selectedVariant?.trailers ?? game.trailers;
+    const activePurchase = selectedVariant?.purchase ?? game.purchase;
+
     const title =
         variantId === game.id
             ? game.title
@@ -54,23 +57,27 @@ export default function GameHero({ game, variantId, onVariantChange }: Props) {
                 />
             )}
             <div className="relative min-h-80 w-full rounded-4xl shadow-2xl shadow-(color:--game-accent)/5 max-mobile:min-h-48 max-mobile:rounded-3xl">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="absolute inset-0 rounded-4xl overflow-hidden bg-cover max-mobile:rounded-3xl max-mobile:bg-position-[80%]"
-                    style={{ backgroundImage: `url("${background}")` }}
-                >
-                    <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/15 via-50% to-black/75" />
-                </motion.div>
+                <AnimatePresence initial={false} mode="sync">
+                    <motion.div
+                        key={variantId}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        className="absolute inset-0 overflow-hidden rounded-4xl bg-cover max-mobile:rounded-3xl max-mobile:bg-position-[80%]"
+                        style={{ backgroundImage: `url("${background}")` }}
+                    >
+                        <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/15 via-50% to-black/75" />
+                    </motion.div>
+                </AnimatePresence>
 
                 <motion.div
                     initial={{ opacity: 0, y: -24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-                    className="absolute inset-x-0 bottom-0 flex items-center ml-4 gap-4 max-mobile:ml-2 max-mobile:gap-2 px-5"
+                    className="absolute inset-x-0 bottom-0 flex items-center ml-4 gap-4 max-mobile:ml-2 max-mobile:gap-2 max-mobile:pb-4 px-5"
                 >
-                    <div className="w-44 max-mobile:w-24">
+                    <div className="w-44 max-mobile:w-18">
                         <img
                             src={gameIcon}
                             alt={t("common.accessibility.gameIcon", {
@@ -87,7 +94,7 @@ export default function GameHero({ game, variantId, onVariantChange }: Props) {
 
                         <div className="flex gap-4 max-mobile:gap-2">
                             <PurchaseDropdown
-                                purchase={game.purchase}
+                                purchase={activePurchase}
                                 buttonClass={buttonClass}
                                 preferredPlatform={preferredPlatform}
                                 preferredPlatformFamily={
@@ -96,8 +103,8 @@ export default function GameHero({ game, variantId, onVariantChange }: Props) {
                             />
 
                             <TrailerDropdown
-                                gameId={game.id}
-                                trailers={game.trailers}
+                                variantId={variantId}
+                                trailers={activeTrailers}
                                 buttonClass={buttonClass}
                             />
                         </div>

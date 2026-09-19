@@ -85,6 +85,16 @@ export interface GameVariant {
     id: string;
     label: string;
     theme: GameTheme;
+    trailers?: {
+        name: string;
+        link: string;
+    }[];
+    purchase?: {
+        platform: PlatformFamily | "android" | "ios";
+        label: string;
+        stores: Store[];
+    }[];
+
     description: {
         paragraphs: string[];
     };

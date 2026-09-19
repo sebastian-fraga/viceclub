@@ -21,7 +21,7 @@ const { game } = Astro.props;
 ---
 
 <div
-    class="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-22 max-mobile:gap-8 mb-12 mt-8"
+    class="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 mb-12 mt-8"
 >
     <GamePage client:load game={game} charactersData={charactersData} />
 </div>

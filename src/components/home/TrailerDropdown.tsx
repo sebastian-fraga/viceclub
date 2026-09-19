@@ -14,18 +14,14 @@ interface Trailer {
 }
 
 interface Props {
-    gameId: string;
+    variantId: string;
     trailers: Trailer[];
     buttonClass: string;
 }
 
 const VIEWPORT_MARGIN = 16;
 
-export default function TrailerDropdown({
-    gameId,
-    trailers,
-    buttonClass,
-}: Props) {
+export default function TrailerDropdown({ variantId, trailers, buttonClass }: Props) {
     const t = useT();
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
@@ -122,7 +118,7 @@ export default function TrailerDropdown({
             <button
                 ref={buttonRef}
                 type="button"
-                className={`bg-(--game-buttons-secondary-background) text-(--game-buttons-secondary-text) border border-(--game-buttons-secondary-border) hover:bg-(--game-buttons-secondary-hovered) ${
+                className={`bg-(--game-buttons-secondary-background) text-(--game-buttons-secondary-text) border border-(--game-buttons-secondary-border) hover:bg-(--game-buttons-secondary-hovered) max-mobile:backdrop-blur-[2px] ${
                     isOpen ? "bg-(--game-buttons-secondary-hovered)" : ""
                 } ${buttonClass}`}
                 onClick={handleToggle}
@@ -160,14 +156,14 @@ export default function TrailerDropdown({
                                     top: dropdownPosition.top,
                                     left: dropdownPosition.left,
                                 }}
-                                className="z-50 max-w-120 rounded-2xl bg-black pt-2 max-mobile:max-w-[calc(100vw-2rem)]"
+                                className="z-50 max-w-120 rounded-2xl bg-(--button-bg) pt-2 max-mobile:max-w-[calc(100vw-2rem)]"
                                 ref={dropdownContentRef}
                             >
                                 <div className="flex items-center gap-3 px-6 border-b pb-2 pt-1 border-white/10 max-mobile:gap-2 max-mobile:px-4">
                                     <div className="w-6 max-mobile:w-5">
                                         <YouTubeIcon />
                                     </div>
-                                    <span className="font-black text-base max-mobile:text-sm">
+                                    <span className="font-black text-xl font-body-condensed max-mobile:text-sm">
                                         YouTube
                                     </span>
                                 </div>
@@ -215,11 +211,11 @@ export default function TrailerDropdown({
                                                 <span
                                                     className="truncate"
                                                     title={t(
-                                                        `home.${gameId.toLocaleLowerCase()}.trailers.${trailer.name}`,
+                                                        `home.${variantId.toLocaleLowerCase()}.trailers.${trailer.name}`,
                                                     )}
                                                 >
                                                     {t(
-                                                        `home.${gameId.toLocaleLowerCase()}.trailers.${trailer.name}`,
+                                                        `home.${variantId.toLocaleLowerCase()}.trailers.${trailer.name}`,
                                                     )}
                                                 </span>
 

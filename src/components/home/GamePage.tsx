@@ -23,6 +23,9 @@ function GamePage({ game, charactersData }: Props) {
 
     const activeDescription = selectedVariant?.description ?? game.description;
 
+    const activeTechnicalSheet =
+        selectedVariant?.technicalSheet ?? game.technicalSheet;
+
     const characters = charactersData[variantId] ?? [];
     return (
         <div
@@ -48,32 +51,36 @@ function GamePage({ game, charactersData }: Props) {
                         activeTheme.buttons.secondary.text,
                 } as React.CSSProperties
             }
+            className="flex flex-col gap-22 max-mobile:gap-8"
         >
-            <GameHero
-                game={game}
-                variantId={variantId}
-                onVariantChange={setVariantId}
-            />
+            <div>
+                <GameHero
+                    game={game}
+                    variantId={variantId}
+                    onVariantChange={setVariantId}
+                />
 
-            <HomeParagraphs paragraphs={activeDescription.paragraphs} />
+                <HomeParagraphs paragraphs={activeDescription.paragraphs} />
+            </div>
 
             <div className="grid grid-cols-2 max-mobile:grid-cols-1 w-full gap-0 max-mobile:gap-8">
                 <div className="flex justify-start">
                     <FichaTecnica
                         game={game.id}
-                        title={game.technicalSheet.title}
-                        developers={game.technicalSheet.developers}
-                        publisher={game.technicalSheet.publisher}
-                        producer={game.technicalSheet.producer}
-                        writers={game.technicalSheet.writers}
-                        platforms={game.technicalSheet.platforms}
-                        dates={game.technicalSheet.dates}
-                        engines={game.technicalSheet.engines}
-                        sales={game.technicalSheet.sales}
+                        variantId={variantId}
+                        title={activeTechnicalSheet.title}
+                        developers={activeTechnicalSheet.developers}
+                        publisher={activeTechnicalSheet.publisher}
+                        producer={activeTechnicalSheet.producer}
+                        writers={activeTechnicalSheet.writers}
+                        platforms={activeTechnicalSheet.platforms}
+                        dates={activeTechnicalSheet.dates}
+                        engines={activeTechnicalSheet.engines}
+                        sales={activeTechnicalSheet.sales}
                     />
                 </div>
 
-                <CharacterGrid characters={characters} gameId={game.id} />
+                <CharacterGrid characters={characters} variantId={variantId} />
             </div>
 
             <div>
