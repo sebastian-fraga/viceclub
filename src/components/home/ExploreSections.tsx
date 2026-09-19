@@ -21,11 +21,21 @@ interface Props {
 
 const LARGE_SECTION_IDS = ["100", "mapa"];
 
+function isChecklistId(sectionId: string) {
+    return sectionId === "100" || sectionId.includes("checklist");
+}
+
+function isMobileWide(sectionId: string) {
+    return isChecklistId(sectionId) || sectionId === "mapa";
+}
+
 function getBentoClasses(sectionId: string) {
     const isLarge = LARGE_SECTION_IDS.includes(sectionId);
 
     return {
-        pattern: isLarge ? "col-span-2 row-span-2" : "col-span-1 row-span-1",
+        pattern: isLarge
+            ? "sm:col-span-2 sm:row-span-2"
+            : "sm:col-span-1 sm:row-span-1",
         isLarge,
     };
 }
@@ -85,8 +95,7 @@ export default function ExploreSections({ game }: Props) {
         }));
 
     const totalMobileUnits = sections.reduce(
-        (acc, section) =>
-            acc + (LARGE_SECTION_IDS.includes(section.id) ? 2 : 1),
+        (acc, section) => acc + (isMobileWide(section.id) ? 2 : 1),
         0,
     );
 
@@ -98,7 +107,7 @@ export default function ExploreSections({ game }: Props) {
                 <Title label="home.titles.exploreSections" align="left" />
             </div>
 
-            <div className="mt-8 grid grid-cols-2 auto-rows-25 grid-flow-dense gap-3 sm:grid-cols-4 sm:auto-rows-30 max-mobile:mt-5 max-mobile:gap-2">
+            <div className="mt-8 grid grid-cols-2 auto-rows-auto grid-flow-dense gap-3 sm:grid-cols-4 sm:auto-rows-30 max-mobile:mt-5 max-mobile:gap-2">
                 {sections.map((section, index) => {
                     const IconComponent = section.activeIcon ?? section.icon;
 
@@ -106,9 +115,7 @@ export default function ExploreSections({ game }: Props) {
                         UNFINISHED_SECTIONS[game.id]?.includes(section.id) ??
                         false;
 
-                    const isChecklist =
-                        section.id === "100" ||
-                        section.id.includes("checklist");
+                    const isChecklist = isChecklistId(section.id);
 
                     const isMap = section.id === "mapa";
 
@@ -119,11 +126,14 @@ export default function ExploreSections({ game }: Props) {
                     const isLastItem = index === sections.length - 1;
 
                     const isLastOrphan =
-                        isLastItem && !isChecklist && hasOrphanRow;
+                        isLastItem && !isMobileWide(section.id) && hasOrphanRow;
 
-                    const mobileWide = isChecklist || isLastOrphan;
+                    const mobileWide = isMobileWide(section.id) || isLastOrphan;
 
                     const { pattern, isLarge } = getBentoClasses(section.id);
+
+                    const hasBadge =
+                        (isChecklist || isMap) && !isUnderConstruction;
 
                     const iconSize = isLarge ? 30 : 22;
 
@@ -133,6 +143,9 @@ export default function ExploreSections({ game }: Props) {
                           ? (activeProgress.completed / activeProgress.total) *
                             100
                           : 0;
+
+                    const bentoBadge =
+                        "absolute left-4 top-4 max-mobile:left-3 max-mobile:top-3 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide";
 
                     return (
                         <motion.a
@@ -168,10 +181,10 @@ export default function ExploreSections({ game }: Props) {
                             whileHover="hover"
                             whileTap={isUnderConstruction ? undefined : "hover"}
                             className={`${pattern} ${
-                                mobileWide
-                                    ? "max-mobile:col-span-2"
-                                    : "max-mobile:col-span-1"
-                            } max-mobile:row-span-1 group relative flex flex-col overflow-hidden rounded-md border p-4 gap-2 transition-colors max-mobile:p-3 ${
+                                mobileWide ? "col-span-2" : "col-span-1"
+                            } min-h-28 sm:min-h-0 group relative flex flex-col overflow-hidden rounded-md border p-4 gap-2 transition-colors max-mobile:p-3 ${
+                                hasBadge ? "pt-12 max-mobile:pt-16 sm:pt-4" : ""
+                            } ${
                                 isUnderConstruction
                                     ? "cursor-not-allowed border-neutral-400/10 bg-neutral-900/50 opacity-55"
                                     : "cursor-pointer border-neutral-600/50 hover:border-(--game-buttons-primary-hovered)/80 hover:bg-zinc-950/60 bg-neutral-950"
@@ -185,7 +198,7 @@ export default function ExploreSections({ game }: Props) {
                                 <IconComponent
                                     size={200}
                                     stroke={1}
-                                    className="pointer-events-none absolute -bottom-8 -right-8 text-neutral-100/4"
+                                    className="pointer-events-none absolute -bottom-8 -right-8 text-neutral-100/4 max-mobile:size-32"
                                 />
                             )}
 
@@ -207,7 +220,7 @@ export default function ExploreSections({ game }: Props) {
                             )}
 
                             {isChecklist && !isUnderConstruction && (
-                                <span className="absolute left-4 top-4 z-20 rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide">
+                                <span className={bentoBadge}>
                                     {pctValue}%
                                 </span>
                             )}
@@ -228,7 +241,7 @@ export default function ExploreSections({ game }: Props) {
                                                 duration: 0.2,
                                                 ease: "easeOut",
                                             }}
-                                            className="absolute left-4 top-4 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide"
+                                            className={bentoBadge}
                                         >
                                             <span className="">
                                                 {activeProgress.completed}
@@ -243,7 +256,7 @@ export default function ExploreSections({ game }: Props) {
 
                             <IconComponent
                                 size={iconSize}
-                                stroke={1.6}
+                                stroke={2}
                                 className={`relative max-mobile:size-4.5 ${
                                     isUnderConstruction
                                         ? "text-neutral-500"
