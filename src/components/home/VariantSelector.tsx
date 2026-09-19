@@ -12,7 +12,7 @@ export default function VariantSelector({
     onChange,
 }: Props) {
     return (
-        <div className="flex gap-4">
+        <div className="flex gap-4 overflow-x-auto scroll-home-variant-selector">
             {variants.map((variant) => (
                 <button
                     key={variant.id}

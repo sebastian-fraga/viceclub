@@ -14,8 +14,8 @@ body {
     }
 }
 
-.scroll-home-dropdown {
-    --sb-track-color: #1c2225;
+.scroll-home-dropdown, .scroll-home-variant-selector {
+    --sb-track-color: #1C222524;
     --sb-thumb-color: #fbf9c8;
     --sb-size: 4px;
 
