@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import type { CSSProperties } from "react";
-import { games } from "@/data/games";
 import type { GameId } from "@/config/games";
+import { games } from "@/data/games";
+import type { CSSProperties } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChecklistProgress } from "../../hooks/useChecklistProgress";
 import type { ChecklistData } from "../../types/checklist";
 import { ChecklistPanel } from "./ChecklistPanel";
@@ -12,7 +12,10 @@ interface ChecklistContainerProps {
     data: ChecklistData;
 }
 
-export function ChecklistContainer({ game, data }: ChecklistContainerProps) {
+export function ChecklistContainer({
+    game,
+    data,
+}: ChecklistContainerProps) {
     const gameData = games[game];
     const hasTabs = Boolean(data.tabs && data.tabs.length > 1);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -47,13 +50,13 @@ export function ChecklistContainer({ game, data }: ChecklistContainerProps) {
     if (hasTabs && data.tabs) {
         const activeTab = data.tabs[activeIndex];
 
-        const activeVariant = gameData.variants?.find(
+        const variantData = gameData.variants?.find(
             (variant) =>
                 variant.id.toLowerCase() === activeTab.id.toLowerCase(),
         );
 
         const accent =
-            activeVariant?.theme.accent ?? gameData.theme.accent.default;
+            variantData?.theme.accent.default ?? gameData.theme.accent.default;
 
         return (
             <div
