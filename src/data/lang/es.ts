@@ -601,8 +601,8 @@ export default {
             technicalSheet: {
                 dates: {
                     0: "29 de abril de 2008",
-                    1: "2 de diciembre de 2008 (NA)",
-                    2: "3 de diciembre de 2008 (EU)",
+                    1: "2 de diciembre de 2008",
+                    2: "3 de diciembre de 2008",
                 },
                 sales: "25M de copias (noviembre de 2012)",
             },
@@ -706,6 +706,175 @@ export default {
                     role: "Don de la Familia Pegorino, antagonista",
                     mission: "Pegorino's Pride",
                     quote: "Todo el mundo jode a todo el mundo.",
+                },
+            },
+        },
+        tlad: {
+            trailers: {
+                1: "Tráiler debut",
+                2: "Tráiler 2",
+                3: "Tráiler: Johnny Klebitz",
+                4: "Tráiler: Billy Grey",
+                5: "Tráiler: Mac",
+                6: "Tráiler 1: Episodes from Liberty City",
+                7: "Tráiler 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Lost and Damned es el primer contenido descargable (DLC) para Grand Theft Auto IV, desarrollado por Rockstar North y publicado por Rockstar Games originalmente de forma exclusiva para Xbox 360 el 17 de febrero de 2009, y posteriormente lanzado para PlayStation 3 y Microsoft Windows el 13 de abril de 2010 bajo el nombre de Grand Theft Auto: Episodes from Liberty City",
+                2: "En The Lost and Damned controlaremos a Johnny Klebitz, vicepresidente del club de moteros The Lost. La historia cuenta los conflictos internos en los que se ve sumida la banda, teniendo que lidiar con guerras de pandillas con sus rivales Angels of Death.",
+                3: "En cuanto a nuevo contenido, el juego ofrece 22 nuevas misiones, 7 nuevas armas, 25 nuevos vehículos y diversas actividades para realizar en el mapa, como guerras de bandas, carreras de motos y pulsos.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "17 de febrero de 2009",
+                    1: "13 de abril de 2010",
+                    2: "16 de abril de 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Vicepresidente de The Lost M.C., protagonista",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Presidente de The Lost M.C., antagonista",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Tesorero de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Secretario de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Líder de ruta de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Armero de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Miembro de The Lost M.C.",
+                    mission: "It's War",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Miembra de The Lost M.C., ex novia de Johnny",
+                    mission: "Coming Down",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Traficante de drogas en Liberty City",
+                    mission: "Buyer's Market",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Miembro de Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Miembro de Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Congresista de Liberty City",
+                    mission: "Politics",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Capo de la Familia Pegorino",
+                    mission: "Action/Reaction",
+                    quote: "🌴",
+                },
+            },
+        },
+        tbogt: {
+            trailers: {
+                1: "Tráiler 1: 'You'll Always Be the King of this Town'",
+                2: "Tráiler 2: 'Meet: Tony Prince'",
+                3: "Tráiler 3: 'Meet: Yusuf Amir'",
+                4: "Tráiler 4: 'Meet: Luis Lopez'",
+                5: "Tráiler 1: Episodes from Liberty City",
+                6: "Tráiler 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Ballad of Gay Tony es el segundo contenido descargable (DLC) para Grand Theft Auto IV, desarrollado por Rockstar North y publicado por Rockstar Games originalmente de forma exclusiva para Xbox 360 el 29 de octubre de 2009, y posteriormente lanzado para PlayStation 3 y Microsoft Windows el 13 de abril de 2010 bajo el nombre de Grand Theft Auto: Episodes from Liberty City",
+                2: 'En The Ballad of Gay Tony controlaremos a Luis Fernando Lopez, guardaespaldas y socio del empresario nocturno Anthony "Gay Tony" Prince. La historia sigue los problemas financieros y criminales de Tony, mientras Luis intenta mantener a flote los negocios de su jefe entre deudas, pandillas y la mafia.',
+                3: "En cuanto a nuevo contenido, el juego introduce 26 nuevas misiones, armas exclusivas como el lanzagranadas explosivo y el fusil de francotirador avanzado, nuevos vehículos y actividades como clubes nocturnos, paracaidismo y peleas en jaula.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "29 de octubre de 2009",
+                    1: "13 de abril de 2010",
+                    2: "16 de abril de 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Empresario, aliado de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Madre de Luis",
+                    mission: "Momma's Boy",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Amigo de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Amigo de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Miembro de la Familia Ancelotti",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Desarrollador inmobiliario en Liberty City",
+                    mission: "Chinese Takeout",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Inversor, hermano de Brucie",
+                    mission: "Kibbutz Number One",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Mafioso ruso",
+                    mission: "Boulevard Baby",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Hija de Don Ancelotti, aliada",
+                    mission: "Blog This!...",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Pareja de Tony Prince",
+                    mission: "Bang Bang",
+                    quote: "🌴",
                 },
             },
         },
@@ -1283,6 +1452,7 @@ export default {
             original: "Original",
             "10th": "Edición Décimo aniversario",
             DE: "Edición Definitiva",
+            TCE: "The Complete Edition",
             E: "Versión Enhanced",
             L: "Versión Legacy",
             "E&E": "Versión Expanded & Enhanced",

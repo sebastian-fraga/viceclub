@@ -709,6 +709,175 @@ export default {
                 },
             },
         },
+        tlad: {
+            trailers: {
+                1: "Bande-annonce de lancement",
+                2: "Bande-annonce 2",
+                3: "Bande-annonce : Johnny Klebitz",
+                4: "Bande-annonce : Billy Grey",
+                5: "Bande-annonce : Mac",
+                6: "Bande-annonce 1 : Episodes from Liberty City",
+                7: "Bande-annonce 2 : Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Lost and Damned est le premier contenu téléchargeable (DLC) de Grand Theft Auto IV, développé par Rockstar North et publié par Rockstar Games, initialement sorti en exclusivité sur Xbox 360 le 17 février 2009, puis sur PlayStation 3 et Microsoft Windows le 13 avril 2010 sous le nom de Grand Theft Auto: Episodes from Liberty City",
+                2: "Dans The Lost and Damned, nous incarnons Johnny Klebitz, vice-président du club de motards The Lost. L'histoire suit les conflits internes qui secouent le gang, qui doit faire face à des guerres de gangs contre ses rivaux, les Angels of Death.",
+                3: "En termes de nouveau contenu, le jeu propose 22 nouvelles missions, 7 nouvelles armes, 25 nouveaux véhicules et diverses activités à effectuer sur la carte, comme des guerres de gangs, des courses de motos et des bras de fer.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "17 février 2009",
+                    1: "13 avril 2010",
+                    2: "16 avril 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Vice-président de The Lost M.C., protagoniste",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Président de The Lost M.C., antagoniste",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Trésorier de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Secrétaire de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Chef de route de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Armurier de The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Membre de The Lost M.C.",
+                    mission: "It's War",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Membre de The Lost M.C., ex-petite amie de Johnny",
+                    mission: "Coming Down",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Dealer de drogue à Liberty City",
+                    mission: "Buyer's Market",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Membre des Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Membre des Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Congrèsiste de Liberty City",
+                    mission: "Politics",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Capitaine de la famille Pegorino",
+                    mission: "Action/Reaction",
+                    quote: "🌴",
+                },
+            },
+        },
+        tbogt: {
+            trailers: {
+                1: "Bande-annonce 1 : 'You'll Always Be the King of this Town'",
+                2: "Bande-annonce 2 : 'Meet: Tony Prince'",
+                3: "Bande-annonce 3 : 'Meet: Yusuf Amir'",
+                4: "Bande-annonce 4 : 'Meet: Luis Lopez'",
+                5: "Bande-annonce 1 : Episodes from Liberty City",
+                6: "Bande-annonce 2 : Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Ballad of Gay Tony est le deuxième contenu téléchargeable (DLC) de Grand Theft Auto IV, développé par Rockstar North et publié par Rockstar Games, initialement sorti en exclusivité sur Xbox 360 le 29 octobre 2009, puis sur PlayStation 3 et Microsoft Windows le 13 avril 2010 sous le nom de Grand Theft Auto: Episodes from Liberty City",
+                2: "Dans The Ballad of Gay Tony, nous incarnons Luis Fernando Lopez, garde du corps et associé de l'entrepreneur de la vie nocturne Anthony \"Gay Tony\" Prince. L'histoire suit les problèmes financiers et criminels de Tony, tandis que Luis tente de maintenir les affaires de son patron à flot malgré les dettes, les gangs et la mafia.",
+                3: "En termes de nouveau contenu, le jeu introduit 26 nouvelles missions, des armes exclusives comme le lance-grenades explosif et le fusil de précision avancé, de nouveaux véhicules et des activités comme les boîtes de nuit, le parachutisme et les combats en cage.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "29 octobre 2009",
+                    1: "13 avril 2010",
+                    2: "16 avril 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Protagoniste",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Entrepreneur, allié de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Mère de Luis",
+                    mission: "Momma's Boy",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Ami de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Ami de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Membre de la famille Ancelotti",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Promoteur immobilier à Liberty City",
+                    mission: "Chinese Takeout",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Investisseur, frère de Brucie",
+                    mission: "Kibbutz Number One",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Mafieux russe",
+                    mission: "Boulevard Baby",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Fille de Don Ancelotti, alliée",
+                    mission: "Blog This!...",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Compagne de Tony Prince",
+                    mission: "Bang Bang",
+                    quote: "🌴",
+                },
+            },
+        },
         v: {
             trailers: {
                 1: "Bande-annonce 1",
@@ -988,10 +1157,10 @@ export default {
                     crash: "Crash!",
                     rush: "Rush",
                 },
-                timeTrials: {
-                    title: "Épreuves contre la montre",
-                    timeTrial: "Épreuve contre la montre",
-                },
+            },
+            timeTrials: {
+                title: "Épreuves contre la montre",
+                timeTrial: "Épreuve contre la montre",
             },
             challenges: {
                 title: "Défis",
@@ -1283,6 +1452,7 @@ export default {
             original: "Original",
             "10th": "Édition du 10e anniversaire",
             DE: "Definitive Edition",
+            TCE: "The Complete Edition",
             E: "Version Enhanced",
             L: "Version Legacy",
             "E&E": "Version Expanded & Enhanced",

@@ -709,6 +709,175 @@ export default {
                 },
             },
         },
+        tlad: {
+            trailers: {
+                1: "Debut Trailer",
+                2: "Trailer 2",
+                3: "Trailer: Johnny Klebitz",
+                4: "Trailer: Billy Grey",
+                5: "Trailer: Mac",
+                6: "Trailer 1: Episodes from Liberty City",
+                7: "Trailer 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Lost and Damned is the first downloadable content (DLC) for Grand Theft Auto IV, developed by Rockstar North and published by Rockstar Games, originally released exclusively for Xbox 360 on February 17, 2009, and later released for PlayStation 3 and Microsoft Windows on April 13, 2010, under the name Grand Theft Auto: Episodes from Liberty City",
+                2: "In The Lost and Damned, we control Johnny Klebitz, vice president of The Lost motorcycle club. The story follows the internal conflicts that engulf the gang, as they have to deal with gang wars against their rivals, the Angels of Death.",
+                3: "As for new content, the game offers 22 new missions, 7 new weapons, 25 new vehicles, and various activities to take part in across the map, such as gang wars, motorcycle races, and arm wrestling.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "February 17, 2009",
+                    1: "April 13, 2010",
+                    2: "April 16, 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Vice president of The Lost M.C., protagonist",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "President of The Lost M.C., antagonist",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Treasurer of The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Secretary of The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Road captain of The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Armorer of The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Member of The Lost M.C.",
+                    mission: "It's War",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Member of The Lost M.C., Johnny's ex-girlfriend",
+                    mission: "Coming Down",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Drug dealer in Liberty City",
+                    mission: "Buyer's Market",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Member of the Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Member of the Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Liberty City congressman",
+                    mission: "Politics",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Caporegime of the Pegorino crime family",
+                    mission: "Action/Reaction",
+                    quote: "🌴",
+                },
+            },
+        },
+        tbogt: {
+            trailers: {
+                1: "Trailer 1: 'You'll Always Be the King of this Town'",
+                2: "Trailer 2: 'Meet: Tony Prince'",
+                3: "Trailer 3: 'Meet: Yusuf Amir'",
+                4: "Trailer 4: 'Meet: Luis Lopez'",
+                5: "Trailer 1: Episodes from Liberty City",
+                6: "Trailer 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Ballad of Gay Tony is the second downloadable content (DLC) for Grand Theft Auto IV, developed by Rockstar North and published by Rockstar Games, originally released exclusively for Xbox 360 on October 29, 2009, and later released for PlayStation 3 and Microsoft Windows on April 13, 2010, under the name Grand Theft Auto: Episodes from Liberty City",
+                2: "In The Ballad of Gay Tony, we control Luis Fernando Lopez, bodyguard and business partner of nightlife entrepreneur Anthony \"Gay Tony\" Prince. The story follows Tony's financial and criminal troubles, as Luis tries to keep his boss's businesses afloat amid debts, gangs, and the mafia.",
+                3: "As for new content, the game introduces 26 new missions, exclusive weapons such as the explosive grenade launcher and advanced sniper rifle, new vehicles, and activities such as nightclubs, base jumping, and cage fighting.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "October 29, 2009",
+                    1: "April 13, 2010",
+                    2: "April 16, 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Protagonist",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Entrepreneur, Luis's ally",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Luis's mother",
+                    mission: "Momma's Boy",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Luis's friend",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Luis's friend",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Member of the Ancelotti crime family",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Real estate developer in Liberty City",
+                    mission: "Chinese Takeout",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Investor, Brucie's brother",
+                    mission: "Kibbutz Number One",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Russian mobster",
+                    mission: "Boulevard Baby",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Don Ancelotti's daughter, ally",
+                    mission: "Blog This!...",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Tony Prince's partner",
+                    mission: "Bang Bang",
+                    quote: "🌴",
+                },
+            },
+        },
         v: {
             trailers: {
                 1: "Trailer 1",
@@ -1281,6 +1450,7 @@ export default {
             original: "Original",
             "10th": "10th Anniversary Edition",
             DE: "Definitive Edition",
+            TCE: "The Complete Edition",
             E: "Enhanced Edition",
             L: "Legacy Edition",
             "E&E": "Expanded & Enhanced Edition",

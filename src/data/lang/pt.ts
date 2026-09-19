@@ -709,6 +709,175 @@ export default {
                 },
             },
         },
+        tlad: {
+            trailers: {
+                1: "Trailer de estreia",
+                2: "Trailer 2",
+                3: "Trailer: Johnny Klebitz",
+                4: "Trailer: Billy Grey",
+                5: "Trailer: Mac",
+                6: "Trailer 1: Episodes from Liberty City",
+                7: "Trailer 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Lost and Damned é o primeiro conteúdo para download (DLC) de Grand Theft Auto IV, desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado originalmente como exclusivo para Xbox 360 em 17 de fevereiro de 2009, e posteriormente lançado para PlayStation 3 e Microsoft Windows em 13 de abril de 2010 sob o nome Grand Theft Auto: Episodes from Liberty City",
+                2: "Em The Lost and Damned, controlamos Johnny Klebitz, vice-presidente do clube de motociclistas The Lost. A história acompanha os conflitos internos que assolam a gangue, que precisa lidar com guerras de gangues contra seus rivais, os Angels of Death.",
+                3: "Quanto ao novo conteúdo, o jogo oferece 22 novas missões, 7 novas armas, 25 novos veículos e diversas atividades para realizar pelo mapa, como guerras de gangues, corridas de motos e queda de braço.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "17 de fevereiro de 2009",
+                    1: "13 de abril de 2010",
+                    2: "16 de abril de 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Vice-presidente da The Lost M.C., protagonista",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Presidente da The Lost M.C., antagonista",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Tesoureiro da The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Secretário da The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Líder de estrada da The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Armeiro da The Lost M.C.",
+                    mission: "Clean and Serene",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Membro da The Lost M.C.",
+                    mission: "It's War",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Membra da The Lost M.C., ex-namorada de Johnny",
+                    mission: "Coming Down",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Traficante de drogas em Liberty City",
+                    mission: "Buyer's Market",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Membro dos Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Membro dos Uptown Riders",
+                    mission: "Hit the Pipe",
+                    quote: "🌴",
+                },
+                12: {
+                    role: "Congressista de Liberty City",
+                    mission: "Politics",
+                    quote: "🌴",
+                },
+                13: {
+                    role: "Capo da Família Pegorino",
+                    mission: "Action/Reaction",
+                    quote: "🌴",
+                },
+            },
+        },
+        tbogt: {
+            trailers: {
+                1: "Trailer 1: 'You'll Always Be the King of this Town'",
+                2: "Trailer 2: 'Meet: Tony Prince'",
+                3: "Trailer 3: 'Meet: Yusuf Amir'",
+                4: "Trailer 4: 'Meet: Luis Lopez'",
+                5: "Trailer 1: Episodes from Liberty City",
+                6: "Trailer 2: Episodes from Liberty City",
+            },
+            paragraphs: {
+                1: "Grand Theft Auto: The Ballad of Gay Tony é o segundo conteúdo para download (DLC) de Grand Theft Auto IV, desenvolvido pela Rockstar North e publicado pela Rockstar Games, lançado originalmente como exclusivo para Xbox 360 em 29 de outubro de 2009, e posteriormente lançado para PlayStation 3 e Microsoft Windows em 13 de abril de 2010 sob o nome Grand Theft Auto: Episodes from Liberty City",
+                2: 'Em The Ballad of Gay Tony, controlamos Luis Fernando Lopez, guarda-costas e sócio do empresário da vida noturna Anthony "Gay Tony" Prince. A história acompanha os problemas financeiros e criminais de Tony, enquanto Luis tenta manter os negócios de seu chefe à tona em meio a dívidas, gangues e à máfia.',
+                3: "Quanto ao novo conteúdo, o jogo introduz 26 novas missões, armas exclusivas como o lançador de granadas explosivo e o rifle de precisão avançado, novos veículos e atividades como boates, paraquedismo e lutas em jaulas.",
+            },
+            technicalSheet: {
+                dates: {
+                    0: "29 de outubro de 2009",
+                    1: "13 de abril de 2010",
+                    2: "16 de abril de 2010",
+                },
+            },
+            characters: {
+                1: {
+                    role: "Protagonista",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                2: {
+                    role: "Empresário, aliado de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                3: {
+                    role: "Mãe de Luis",
+                    mission: "Momma's Boy",
+                    quote: "🌴",
+                },
+                4: {
+                    role: "Amigo de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                5: {
+                    role: "Amigo de Luis",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                6: {
+                    role: "Membro da Família Ancelotti",
+                    mission: "I Luv L.C.",
+                    quote: "🌴",
+                },
+                7: {
+                    role: "Desenvolvedor imobiliário em Liberty City",
+                    mission: "Chinese Takeout",
+                    quote: "🌴",
+                },
+                8: {
+                    role: "Investidor, irmão de Brucie",
+                    mission: "Kibbutz Number One",
+                    quote: "🌴",
+                },
+                9: {
+                    role: "Mafioso russo",
+                    mission: "Boulevard Baby",
+                    quote: "🌴",
+                },
+                10: {
+                    role: "Filha de Don Ancelotti, aliada",
+                    mission: "Blog This!...",
+                    quote: "🌴",
+                },
+                11: {
+                    role: "Companheira de Tony Prince",
+                    mission: "Bang Bang",
+                    quote: "🌴",
+                },
+            },
+        },
         v: {
             trailers: {
                 1: "Trailer 1",
@@ -828,7 +997,7 @@ export default {
                 },
                 18: {
                     role: "Amigo de Trevor",
-                    mimission: "🌴",
+                    mission: "🌴",
                     quote: "🌴",
                 },
                 19: {
@@ -1283,6 +1452,7 @@ export default {
             original: "Original",
             "10th": "Edição de 10º aniversário",
             DE: "Definitive Edition",
+            TCE: "The Complete Edition",
             E: "Versão Enhanced",
             L: "Versão Legacy",
             "E&E": "Versão Expanded & Enhanced",
