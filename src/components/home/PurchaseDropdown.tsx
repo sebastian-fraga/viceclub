@@ -56,6 +56,7 @@ const storeIcons = {
 const editionLabels: Record<string, string> = {
     "10th": "10th",
     DE: "DE",
+    TCE: "The Complete Edition",
     E: "E",
     L: "L",
     "E&E": "E&E",
@@ -86,6 +87,14 @@ export default function PurchaseDropdown({
     const selectedPlatformData = purchase.find(
         (platform) => platform.platform === selectedPlatform,
     );
+
+    useLayoutEffect(() => {
+        const preferred = purchase.find(
+            (platform) => platform.platform === resolvedFamily,
+        );
+
+        setSelectedPlatform(preferred?.platform ?? purchase[0]?.platform);
+    }, [purchase, resolvedFamily]);
     const [isOpen, setIsOpen] = useState(false);
 
     const t = useT();
@@ -225,7 +234,7 @@ export default function PurchaseDropdown({
                                     top: dropdownPosition.top,
                                     left: dropdownPosition.left,
                                 }}
-                                className="z-50 max-w-80 w-full rounded-2xl bg-zinc-950 border border-black/40 pt-4 max-mobile:max-w-[calc(100vw-2rem)] max-mobile:pt-3"
+                                className="z-50 max-w-80 w-full rounded-2xl bg-(--button-bg) pt-4 max-mobile:max-w-[calc(100vw-2rem)] max-mobile:pt-3 shadow-2xl"
                                 ref={dropdownContentRef}
                             >
                                 <div
