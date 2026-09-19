@@ -110,13 +110,105 @@ export const GTAIV: Game = {
                     },
                 },
             },
+            trailers: [
+                {
+                    name: "1",
+                    link: "https://www.youtube.com/watch?v=FW2sTQuz6l8",
+                },
+                {
+                    name: "2",
+                    link: "https://www.youtube.com/watch?v=tshPSxS9dGY",
+                },
+                {
+                    name: "3",
+                    link: "https://www.youtube.com/watch?v=0ZY9evuTOUE",
+                },
+                {
+                    name: "4",
+                    link: "https://www.youtube.com/watch?v=qbIzfyuRY-A",
+                },
+                {
+                    name: "5",
+                    link: "https://www.youtube.com/watch?v=fZ24THhprFQ",
+                },
+                {
+                    name: "6",
+                    link: "https://www.youtube.com/watch?v=Oaa846BQzsk",
+                },
+                {
+                    name: "7",
+                    link: "https://www.youtube.com/watch?v=GK5xAtCXVf0",
+                },
+            ],
+            purchase: [
+                {
+                    platform: "pc",
+                    label: "PC",
+                    stores: [
+                        {
+                            name: "Steam",
+                            icon: "steam",
+                            link: "https://store.steampowered.com/app/12210/Grand_Theft_Auto_IV_The_Complete_Edition/",
+                            extra: "TCE",
+                        },
+                        {
+                            name: "Rockstar Games Launcher",
+                            icon: "rgl",
+                            link: "https://store.rockstargames.com/game/buy-grand-theft-auto-iv/",
+                            extra: "TCE",
+                        },
+                    ],
+                },
+                {
+                    platform: "xbox",
+                    label: "Xbox",
+                    stores: [
+                        {
+                            name: "Xbox",
+                            icon: "xbox",
+                            link: "https://www.xbox.com/games/store/gta-iv-the-lost-and-damned/btfvlwb7fg8h",
+                        },
+                    ],
+                },
+            ],
             description: {
                 paragraphs: [
                     "home.tlad.paragraphs.1",
                     "home.tlad.paragraphs.2",
                     "home.tlad.paragraphs.3",
-                    "home.tlad.paragraphs.4",
                 ],
+            },
+            technicalSheet: {
+                title: "TLAD",
+                developers: ["Rockstar North"],
+                publisher: "Rockstar Games",
+                producer: "Leslie Benzies",
+                writers: ["Dan Houser", "Rupert Humphries"],
+                platforms: ["Xbox 360", "PlayStation 3", "Microsoft Windows"],
+                dates: [
+                    {
+                        platforms: ["Xbox 360"],
+                        dates: [
+                            {
+                                key: "home.tlad.technicalSheet.dates.0",
+                            },
+                        ],
+                    },
+                    {
+                        platforms: ["PlayStation 3", "Microsoft Windows"],
+                        dates: [
+                            {
+                                key: "home.tlad.technicalSheet.dates.1",
+                                tag: "NA",
+                            },
+                            {
+                                key: "home.tlad.technicalSheet.dates.2",
+                                tag: "EU",
+                            },
+                        ],
+                    },
+                ],
+                engines: ["RAGE"],
             },
         },
         {
@@ -141,13 +233,101 @@ export const GTAIV: Game = {
                     },
                 },
             },
+            trailers: [
+                {
+                    name: "1",
+                    link: "https://www.youtube.com/watch?v=fcDY7SCLWcc",
+                },
+                {
+                    name: "2",
+                    link: "https://www.youtube.com/watch?v=RnKqwWin6jo",
+                },
+                {
+                    name: "3",
+                    link: "https://www.youtube.com/watch?v=3NaYcBl314M",
+                },
+                {
+                    name: "4",
+                    link: "https://www.youtube.com/watch?v=LMKvTd7aNsU",
+                },
+                {
+                    name: "5",
+                    link: "https://www.youtube.com/watch?v=Oaa846BQzsk",
+                },
+                {
+                    name: "6",
+                    link: "https://www.youtube.com/watch?v=GK5xAtCXVf0",
+                },
+            ],
+            purchase: [
+                {
+                    platform: "pc",
+                    label: "PC",
+                    stores: [
+                        {
+                            name: "Steam",
+                            icon: "steam",
+                            link: "https://store.steampowered.com/app/12210/Grand_Theft_Auto_IV_The_Complete_Edition/",
+                            extra: "TCE",
+                        },
+                        {
+                            name: "Rockstar Games Launcher",
+                            icon: "rgl",
+                            link: "https://store.rockstargames.com/game/buy-grand-theft-auto-iv/",
+                            extra: "TCE",
+                        },
+                    ],
+                },
+                {
+                    platform: "xbox",
+                    label: "Xbox",
+                    stores: [
+                        {
+                            name: "Xbox",
+                            icon: "xbox",
+                            link: "https://www.xbox.com/games/store/grand-theft-auto-the-ballad-of-gay-tony/bvblsm9ldmz0",
+                        },
+                    ],
+                },
+            ],
             description: {
                 paragraphs: [
                     "home.tbogt.paragraphs.1",
                     "home.tbogt.paragraphs.2",
                     "home.tbogt.paragraphs.3",
-                    "home.tbogt.paragraphs.4",
                 ],
+            },
+            technicalSheet: {
+                title: "TBOGT",
+                developers: ["Rockstar North"],
+                publisher: "Rockstar Games",
+                producer: "Leslie Benzies",
+                writers: ["Dan Houser", "Rupert Humphries"],
+                platforms: ["Xbox 360", "PlayStation 3", "Microsoft Windows"],
+                dates: [
+                    {
+                        platforms: ["Xbox 360"],
+                        dates: [
+                            {
+                                key: "home.tbogt.technicalSheet.dates.0",
+                            },
+                        ],
+                    },
+                    {
+                        platforms: ["PlayStation 3", "Microsoft Windows"],
+                        dates: [
+                            {
+                                key: "home.tbogt.technicalSheet.dates.1",
+                                tag: "NA",
+                            },
+                            {
+                                key: "home.tbogt.technicalSheet.dates.2",
+                                tag: "EU",
+                            },
+                        ],
+                    },
+                ],
+                engines: ["RAGE"],
             },
         },
     ],
