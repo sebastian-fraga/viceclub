@@ -23,4 +23,7 @@ export const VC_MARKERS = {
     storeRobbery_VC: {
         icon: "/assets/images/maps/VC/icons/storeRobbery.webp",
     },
+    safehouses_VC: {
+        icon: "/assets/images/maps/common/safehouse.webp",
+    },
 } as const;
