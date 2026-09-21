@@ -1176,6 +1176,8 @@ export default {
             locations: {
                 title: "Locations",
                 common: {
+                    safehouses: "Safehouses",
+                    safehouse: "Safehouse",
                     assets: "Assets",
                     asset: "Asset",
                 },

@@ -1176,6 +1176,8 @@ export default {
             locations: {
                 title: "Ubicaciones",
                 common: {
+                    safehouses: "Pisos francos",
+                    safehouse: "Piso franco",
                     assets: "Propiedades",
                     asset: "Propiedad",
                 },
