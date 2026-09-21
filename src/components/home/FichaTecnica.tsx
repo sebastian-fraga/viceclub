@@ -108,7 +108,7 @@ function Row({
 
 function PlatformChip({ label }: { label: string }) {
     return (
-        <span className="rounded-full bg-neutral-100 px-3 py-1 text-sm font-medium text-neutral-800 max-mobile:px-2 mb-1 max-mobile:py-0.5 max-mobile:text-xs">
+        <span className="rounded-full bg-neutral-100 px-4.5 py-1.5 text-sm font-bold text-neutral-800 max-mobile:px-2 mb-1 max-mobile:py-0.5 max-mobile:text-xs">
             {label}
         </span>
     );
@@ -266,7 +266,7 @@ export default function TechSheet({
                 </dl>
 
                 <CollapsibleRow label="home.technicalSheet.releaseDate">
-                    <div className="flex flex-col gap-5.5">
+                    <div className="flex flex-col gap-5.5 mt-2">
                         {dates.map((entry, i) => (
                             <div key={i} className="flex flex-col gap-1">
                                 <div className="flex flex-wrap gap-1.5">
