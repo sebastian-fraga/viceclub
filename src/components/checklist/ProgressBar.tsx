@@ -21,7 +21,7 @@ export function ProgressBar({ progress }: ProgressBarProps) {
                 </span>
             </div>
 
-            <div className="relative h-2 w-full">
+            <div className="relative h-2.5 w-full">
                 <div className="absolute inset-0 overflow-hidden rounded-full bg-white/10">
                     <motion.div
                         className="h-full rounded-full bg-(--game-accent)"
