@@ -5,7 +5,7 @@ import {
     IconCheck,
     IconChevronDown,
     IconExternalLink,
-    IconInfoCircle,
+    IconProgressAlert,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -58,10 +58,10 @@ export function ChecklistItem({
         : null;
     return (
         <li
-            className={`rounded-4xl border transition-colors duration-200 ${
+            className={`group rounded-4xl transition duration-500 ${
                 checked
-                    ? "bg-(--game-accent)/6 border-(--game-accent)/10"
-                    : "bg-white/5 border-transparent"
+                    ? "bg-(--game-accent)/6 hover:bg-(--game-accent)/15"
+                    : "bg-(--button-bg)/15 hover:bg-(--button-bg)/30"
             }`}
             data-id={item.id}
         >
@@ -130,14 +130,14 @@ export function ChecklistItem({
                                           loading="lazy"
                                       />
                                   )}
-                                  <span className="truncate font-bold">
+                                  <span className="truncate font-bold group-hover:text-white">
                                       {localizedText(entry.text)}
                                   </span>
                               </span>
                           ))
                         : item.text && (
                               <span
-                                  className={`flex items-center gap-2 text-sm transition-colors duration-200 ${
+                                  className={`flex items-center gap-2 text-sm transition-colors duration-200 group-hover:text-white/80 ${
                                       checked
                                           ? "text-indigo-100/50 line-through decoration-white/30"
                                           : "text-indigo-100/90"
@@ -178,7 +178,7 @@ export function ChecklistItem({
                                                       aria-hidden="true"
                                                       className="flex h-4 w-4 items-center justify-center text-[17px] leading-none"
                                                   >
-                                                      <IconInfoCircle />
+                                                      <IconProgressAlert />
                                                   </span>
                                               </button>
                                           </Tooltip>
