@@ -17,6 +17,7 @@ import Title from "../ui/Title";
 
 interface Props {
     game: Game;
+    variantId: string;
 }
 
 const LARGE_SECTION_IDS = ["100", "mapa"];
@@ -40,11 +41,11 @@ function getBentoClasses(sectionId: string) {
     };
 }
 
-export default function ExploreSections({ game }: Props) {
+export default function ExploreSections({ game, variantId }: Props) {
     const t = useT();
     const checklistProgress = useGameChecklistProgress(game.id);
-    const completedMapIds = useGameMapProgress(game.id);
-    const mapData = getGameMapData(game.id);
+    const completedMapIds = useGameMapProgress(game.id, variantId);
+    const mapData = getGameMapData(game.id, variantId);
 
     const mapProgress = [
         ...Object.entries(mapData?.collectibles ?? {}),
@@ -147,14 +148,17 @@ export default function ExploreSections({ game }: Props) {
                     const bentoBadge =
                         "absolute left-4 top-4 max-mobile:left-3 max-mobile:top-3 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide";
 
+                    const hasVariants = Boolean(game.variants?.length);
+
+                    const sectionHref =
+                        hasVariants &&
+                        (section.id === "100" || section.id === "mapa")
+                            ? `/${game.id}/${section.id}?variant=${variantId}`
+                            : `/${game.id}/${section.id}`;
                     return (
                         <motion.a
                             key={section.id}
-                            href={
-                                isUnderConstruction
-                                    ? undefined
-                                    : `/${game.id}/${section.id}`
-                            }
+                            href={isUnderConstruction ? undefined : sectionHref}
                             aria-disabled={isUnderConstruction}
                             tabIndex={isUnderConstruction ? -1 : 0}
                             onClick={(e) => {
@@ -220,9 +224,7 @@ export default function ExploreSections({ game }: Props) {
                             )}
 
                             {isChecklist && !isUnderConstruction && (
-                                <span className={bentoBadge}>
-                                    {pctValue}%
-                                </span>
+                                <span className={bentoBadge}>{pctValue}%</span>
                             )}
 
                             {isMap &&

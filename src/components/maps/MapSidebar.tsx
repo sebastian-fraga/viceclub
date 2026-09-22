@@ -67,8 +67,6 @@ export default function MapSidebar({
         });
     };
 
-    if (sections.length === 0) return null;
-
     useEffect(() => {
         if (!isOpen) return;
 
@@ -78,6 +76,8 @@ export default function MapSidebar({
             document.body.style.overflow = "";
         };
     }, [isOpen]);
+
+    if (sections.length === 0) return null;
 
     return (
         <>

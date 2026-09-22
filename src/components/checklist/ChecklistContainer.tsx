@@ -1,3 +1,4 @@
+import VariantSelector from "@/components/home/VariantSelector";
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
 import type { CSSProperties } from "react";
@@ -5,20 +6,48 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { ChecklistProgress } from "../../hooks/useChecklistProgress";
 import type { ChecklistData } from "../../types/checklist";
 import { ChecklistPanel } from "./ChecklistPanel";
-import { ChecklistTabs } from "./ChecklistTabs";
 
 interface ChecklistContainerProps {
     game: GameId;
+    variantId: string;
     data: ChecklistData;
 }
 
 export function ChecklistContainer({
     game,
+    variantId,
     data,
 }: ChecklistContainerProps) {
     const gameData = games[game];
     const hasTabs = Boolean(data.tabs && data.tabs.length > 1);
-    const [activeIndex, setActiveIndex] = useState(0);
+
+    const [activeVariantId, setActiveVariantId] = useState(() => {
+        if (typeof window === "undefined") {
+            return variantId;
+        }
+
+        const variant = new URLSearchParams(window.location.search).get(
+            "variant",
+        );
+
+        return (
+            gameData.variants?.find(
+                (item) => item.id.toLowerCase() === variant?.toLowerCase(),
+            )?.id ?? variantId
+        );
+    });
+
+    useEffect(() => {
+        const url = new URL(window.location.href);
+
+        if (activeVariantId === game) {
+            url.searchParams.delete("variant");
+        } else {
+            url.searchParams.set("variant", activeVariantId);
+        }
+
+        window.history.replaceState({}, "", url);
+    }, [activeVariantId, game]);
 
     const progressByTab = useRef<Record<string, ChecklistProgress>>({});
 
@@ -29,26 +58,11 @@ export function ChecklistContainer({
         [],
     );
 
-    const storageKey = `checklist-active-tab-${game}`;
-
-    useEffect(() => {
-        const saved = localStorage.getItem(storageKey);
-
-        if (saved === null) return;
-
-        const index = Number(saved);
-
-        if (index >= 0 && index < (data.tabs?.length ?? 0)) {
-            setActiveIndex(index);
-        }
-    }, [storageKey, data.tabs?.length]);
-
-    useEffect(() => {
-        localStorage.setItem(storageKey, String(activeIndex));
-    }, [storageKey, activeIndex]);
-
     if (hasTabs && data.tabs) {
-        const activeTab = data.tabs[activeIndex];
+        const activeTab =
+            data.tabs.find(
+                (tab) => tab.id.toLowerCase() === activeVariantId.toLowerCase(),
+            ) ?? data.tabs[0];
 
         const variantData = gameData.variants?.find(
             (variant) =>
@@ -66,16 +80,18 @@ export function ChecklistContainer({
                     } as CSSProperties
                 }
             >
-                <ChecklistTabs
-                    tabs={data.tabs}
-                    variants={gameData.variants ?? []}
-                    activeIndex={activeIndex}
-                    onSelect={setActiveIndex}
-                />
+                <div className="my-4 flex justify-center">
+                    <VariantSelector
+                        variants={gameData.variants ?? []}
+                        selected={activeVariantId}
+                        onChange={setActiveVariantId}
+                    />
+                </div>
 
                 <ChecklistPanel
                     key={activeTab.id}
                     game={game}
+                    variantId={activeTab.id}
                     tabId={activeTab.id}
                     sections={activeTab.sections}
                     onProgressChange={handleProgressChange}
@@ -97,6 +113,7 @@ export function ChecklistContainer({
         >
             <ChecklistPanel
                 game={game}
+                variantId={variantId}
                 tabId={tabId}
                 sections={sections}
                 onProgressChange={handleProgressChange}

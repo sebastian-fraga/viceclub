@@ -10,6 +10,7 @@ import { ChecklistItem } from "./ChecklistItem";
 interface ChecklistSectionProps {
     section: ChecklistSectionData;
     game: string;
+    variantId: string;
     checked: Record<string, boolean>;
     onToggleItem: (id: string) => void;
     onToggleAll: (ids: string[], value: boolean) => void;
@@ -18,6 +19,7 @@ interface ChecklistSectionProps {
 export function ChecklistSection({
     section,
     game,
+    variantId,
     checked,
     onToggleItem,
     onToggleAll,
@@ -116,6 +118,7 @@ export function ChecklistSection({
                                     key={item.id}
                                     item={item}
                                     game={game}
+                                    variantId={variantId}
                                     checked={!!checked[item.id]}
                                     onToggle={onToggleItem}
                                 />

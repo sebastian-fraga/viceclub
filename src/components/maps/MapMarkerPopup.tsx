@@ -171,7 +171,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
             >
                 <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
                     <div className="flex items-center gap-2">
-                        <span className="font-body-condensed text-lg">
+                        <span className="font-body-condensed text-lg max-w-60 truncate">
                             {displayLabel}
                         </span>
 

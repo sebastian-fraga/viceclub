@@ -16,6 +16,7 @@ import { ProgressBar } from "./ProgressBar";
 
 interface ChecklistPanelProps {
     game: GameId;
+    variantId: string;
     tabId: string;
     sections: ChecklistSectionData[];
     onProgressChange?: (progress: ChecklistProgress, tabId: string) => void;
@@ -23,6 +24,7 @@ interface ChecklistPanelProps {
 
 export function ChecklistPanel({
     game,
+    variantId,
     tabId,
     sections,
     onProgressChange,
@@ -103,6 +105,7 @@ export function ChecklistPanel({
                         <ChecklistSection
                             section={section}
                             game={game}
+                            variantId={variantId}
                             checked={checked}
                             onToggleItem={toggleItem}
                             onToggleAll={toggleMany}

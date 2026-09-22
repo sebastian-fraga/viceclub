@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export function useGameMapProgress(gameId: string) {
-    const storageKey = `completed_collectibles_${gameId}`;
+export function useGameMapProgress(gameId: string, variantId: string) {
+    const storageKey = `completed_collectibles_${gameId}_${variantId}`;
 
     const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
         if (typeof window === "undefined") return new Set();
@@ -14,6 +14,16 @@ export function useGameMapProgress(gameId: string) {
             return new Set();
         }
     });
+
+    useEffect(() => {
+        try {
+            const saved = localStorage.getItem(storageKey);
+
+            setCompletedIds(saved ? new Set(JSON.parse(saved)) : new Set());
+        } catch {
+            setCompletedIds(new Set());
+        }
+    }, [storageKey]);
 
     useEffect(() => {
         const handleMapReset = (e: Event) => {

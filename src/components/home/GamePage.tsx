@@ -84,7 +84,7 @@ function GamePage({ game, charactersData }: Props) {
             </div>
 
             <div>
-                <ExploreSections game={game} />
+                <ExploreSections game={game} variantId={variantId} />
             </div>
         </div>
     );

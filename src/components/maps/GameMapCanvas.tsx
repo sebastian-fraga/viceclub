@@ -22,6 +22,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 
 export default function GameMapCanvas({
     gameId,
+    variantId,
     width,
     height,
     minZoom,
@@ -29,6 +30,7 @@ export default function GameMapCanvas({
     data,
 }: {
     gameId: string;
+    variantId?: string;
     width: number;
     height: number;
     minZoom: number;
@@ -202,7 +204,7 @@ export default function GameMapCanvas({
         return result;
     }, [data, hiddenTypes]);
 
-    const storageKey = `completed_collectibles_${gameId}`;
+    const storageKey = `completed_collectibles_${gameId}_${variantId}`;
 
     const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
         if (typeof window === "undefined") return new Set();
@@ -215,6 +217,16 @@ export default function GameMapCanvas({
             return new Set();
         }
     });
+
+    useEffect(() => {
+        try {
+            const saved = localStorage.getItem(storageKey);
+
+            setCompletedIds(saved ? new Set(JSON.parse(saved)) : new Set());
+        } catch {
+            setCompletedIds(new Set());
+        }
+    }, [storageKey]);
 
     useEffect(() => {
         const handleMapReset = (e: Event) => {

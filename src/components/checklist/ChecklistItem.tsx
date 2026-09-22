@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 interface ChecklistItemProps {
     item: ChecklistItemData;
     game: string;
+    variantId: string;
     checked: boolean;
     onToggle: (id: string) => void;
     hasDropdown?: boolean;
@@ -23,6 +24,7 @@ interface ChecklistItemProps {
 export function ChecklistItem({
     item,
     game,
+    variantId,
     checked,
     onToggle,
     hasDropdown = false,
@@ -50,7 +52,7 @@ export function ChecklistItem({
           : "";
 
     const mapUrl = item.mapSlug
-        ? `/${game}/mapa?type=${item.mapSlug}${
+        ? `/${game}/mapa?variant=${variantId}&type=${item.mapSlug}${
               item.mapMarker ? `&marker=${item.mapMarker}` : ""
           }`
         : null;
