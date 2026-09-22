@@ -54,6 +54,11 @@ const data = (checklistEntry[1] as { default: ChecklistData }).default;
         class="ml-0 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-12 md:ml-(--sidebar-width) md:gap-45"
         style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
     >
-        <ChecklistContainer game={game} data={data} client:load />
+        <ChecklistContainer
+            game={game}
+            variantId={game}
+            data={data}
+            client:load
+        />
     </main>
 </BaseLayout>
