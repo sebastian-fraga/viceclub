@@ -11,6 +11,9 @@ export const SA_MARKERS = {
     oyster: {
         icon: "/assets/images/maps/SA/icons/oyster.webp",
     },
+    stuntJumps_SA: {
+        icon: "/assets/images/maps/common/stuntJump.webp",
+    },
     bmx: {
         icon: "/assets/images/maps/SA/icons/challenge.webp",
     },

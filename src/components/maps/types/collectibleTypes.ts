@@ -39,6 +39,11 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.sa.oysters",
         singularLabel: "maps.markers.collectibles.sa.oyster",
     },
+    stuntJumps_SA: {
+        color: "#334CB0",
+        label: "maps.markers.collectibles.common.stuntJumps",
+        singularLabel: "maps.markers.collectibles.common.stuntJump",
+    },
     hiddenPackages_LCS: {
         color: "#FFF58D",
         label: "maps.markers.collectibles.common.hiddenPackages",
