@@ -59,6 +59,21 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.common.stuntJumps",
         singularLabel: "maps.markers.collectibles.common.stuntJump",
     },
+    flyingRats: {
+        color: "#FEDDDD",
+        label: "maps.markers.collectibles.iv.flyingRats",
+        singularLabel: "maps.markers.collectibles.iv.flyingRat",
+    },
+    seagulls: {
+        color: "#A4D5F1",
+        label: "maps.markers.collectibles.iv.seagulls",
+        singularLabel: "maps.markers.collectibles.iv.seagull",
+    },
+    stuntJumps_IV: {
+        color: "#97FE9F",
+        label: "maps.markers.collectibles.common.stuntJumps",
+        singularLabel: "maps.markers.collectibles.common.stuntJump",
+    },
 } as const;
 
 export type CollectibleType = keyof typeof COLLECTIBLE_TYPES;

@@ -132,6 +132,16 @@ export const SIDE_MISSION_TYPES = {
         color: "#171818",
         label: "maps.markers.sideMissions.vcs.rush",
     },
+    randomCharacters: {
+        color: "#B2FBE0",
+        label: "maps.markers.sideMissions.iv.randomCharacters",
+        singularLabel: "maps.markers.sideMissions.iv.randomCharacter",
+    },
+    steviesCars: {
+        color: "#8D9EA8",
+        label: "maps.markers.sideMissions.iv.steviesCars",
+        singularLabel: "maps.markers.sideMissions.iv.steviesCar",
+    },
 } as const;
 
 export type SideMissionType = keyof typeof SIDE_MISSION_TYPES;
