@@ -1117,6 +1117,12 @@ export default {
                     redBalloons: "Ballons rouges",
                     redBalloon: "Ballon rouge",
                 },
+                iv: {
+                    flyingRats: "Rats volants",
+                    flyingRat: "Rat volant",
+                    seagulls: "Mouettes",
+                    seagull: "Mouette",
+                },
             },
             sideMissions: {
                 title: "Missions secondaires",
@@ -1156,6 +1162,12 @@ export default {
                     skywolf: "Skywolf",
                     crash: "Crash!",
                     rush: "Rush",
+                },
+                iv: {
+                    randomCharacters: "Personnages aléatoires",
+                    randomCharacter: "Personnage aléatoire",
+                    steviesCars: "Voitures de Stevie",
+                    steviesCar: "Voiture de Stevie",
                 },
             },
             timeTrials: {
