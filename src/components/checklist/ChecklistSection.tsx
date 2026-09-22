@@ -39,14 +39,14 @@ export function ChecklistSection({
 
     return (
         <article
-            className={`overflow-hidden rounded-4xl border transition-colors ${
+            className={`overflow-hidden rounded-2xl transition duration-400 shadow-2xl ${
                 allDone
-                    ? "bg-linear-to-br from-(--game-accent)/10 to-(--game-accent)/4 border-(--game-accent)/4 shadow-inner-md"
-                    : "bg-white/3 border-white/10"
+                    ? "bg-linear-to-br from-(--game-accent)/10 to-(--game-accent)/4 shadow-inner-md shadow-(color:--game-accent)/5 hover:from-(--game-accent)/20 hover:to-(--game-accent)/10"
+                    : "bg-(--button-bg)/20 hover:bg-(--button-bg)/50 shadow-(color:--button-bg-hover)/5"
             }`}
         >
             <h3
-                className="flex items-center gap-3.5 px-6 py-3 cursor-pointer select-none max-mobile:px-3 max-mobile:py-2.5 font-body-condensed"
+                className="flex items-center gap-3.5 px-6 py-3 cursor-pointer select-none max-mobile:px-5 max-mobile:py-2.5 font-body-condensed"
                 role="button"
                 tabIndex={0}
                 aria-expanded={open}
@@ -66,7 +66,7 @@ export function ChecklistSection({
                         loading="lazy"
                     />
                 )}
-                <span className="flex-1 text-lg font-bold text-white/90 max-mobile:text-[13px]">
+                <span className="flex-1 text-lg font-bold text-white/90 max-mobile:text-[16px] truncate">
                     {t(section.title)}
                 </span>
 
@@ -85,7 +85,7 @@ export function ChecklistSection({
                         <button
                             className={`flex h-6 w-6 items-center justify-center rounded-full border transition-all cursor-pointer hover:brightness-80 ${
                                 allDone
-                                    ? "border-(--game-accent) bg-(--game-accent) text-black"
+                                    ? "border-none bg-(--game-accent) text-black"
                                     : "border-white/20 text-white/40"
                             }`}
                             onClick={handleCheckAll}

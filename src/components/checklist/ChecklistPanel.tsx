@@ -90,7 +90,7 @@ export function ChecklistPanel({
                 <ProgressBar progress={progress} />
             </motion.div>
 
-            <div className="flex flex-col gap-3 max-mobile:gap-2">
+            <div className="flex flex-col gap-4 max-mobile:gap-2">
                 {sections.map((section, index) => (
                     <motion.div
                         key={section.id}
