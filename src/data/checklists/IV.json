@@ -529,7 +529,8 @@
                                 "en": "30 Stevie's cars",
                                 "fr": "30 voitures de Stevie",
                                 "pt": "30 carros do Stevie"
-                            }
+                            },
+                            "mapSlug": "steviesCars"
                         },
                         {
                             "id": "ms-03",
@@ -638,67 +639,99 @@
                     "items": [
                         {
                             "id": "per-01",
-                            "text": "Brian (1)"
+                            "text": "Brian (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "1"
                         },
                         {
                             "id": "per-02",
-                            "text": "Brian (2)"
+                            "text": "Brian (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "2"
                         },
                         {
                             "id": "per-03",
-                            "text": "Brian (3)"
+                            "text": "Brian (3)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "3"
                         },
                         {
                             "id": "per-04",
-                            "text": "Badman"
+                            "text": "Badman",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "4"
                         },
                         {
                             "id": "per-05",
-                            "text": "Mel"
+                            "text": "Mel",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "5"
                         },
                         {
                             "id": "per-06",
-                            "text": "Ilyena Faustin"
+                            "text": "Hossan",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "6"
                         },
                         {
                             "id": "per-07",
-                            "text": "Hossan"
+                            "text": "Ilyena Faustin",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "7"
                         },
                         {
                             "id": "per-08",
-                            "text": "Sara (1)"
+                            "text": "Pathos (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "8"
                         },
                         {
                             "id": "per-09",
-                            "text": "Sara (2)"
+                            "text": "Pathos (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "9"
                         },
                         {
                             "id": "per-10",
-                            "text": "Pathos (1)"
+                            "text": "Sara (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "10"
                         },
                         {
                             "id": "per-11",
-                            "text": "Pathos (2)"
+                            "text": "Sara (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "11"
                         },
                         {
                             "id": "per-12",
-                            "text": "Marnie (1)"
+                            "text": "Marnie (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "16"
                         },
                         {
                             "id": "per-13",
-                            "text": "Marnie (2)"
+                            "text": "Marnie (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "17"
                         },
                         {
                             "id": "per-14",
-                            "text": "Eddie Low (1)"
+                            "text": "Eddie Low (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "14"
                         },
                         {
                             "id": "per-15",
-                            "text": "Eddie Low (2)"
+                            "text": "Eddie Low (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "15"
                         },
                         {
                             "id": "per-16",
-                            "text": "Gracie"
+                            "text": "Gracie",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "18"
                         }
                     ]
                 },
@@ -1046,7 +1079,8 @@
                                 "en": "200 flying rats",
                                 "fr": "200 rats volants",
                                 "pt": "200 ratos voadores"
-                            }
+                            },
+                            "mapSlug": "flyingRats"
                         },
                         {
                             "id": "col-02",
@@ -1055,7 +1089,8 @@
                                 "en": "50 Stunt Jumps",
                                 "fr": "50 sauts uniques",
                                 "pt": "50 saltos únicos"
-                            }
+                            },
+                            "mapSlug": "stuntJumps"
                         }
                     ]
                 }
@@ -1198,15 +1233,21 @@
                     "items": [
                         {
                             "id": "tlad_per-01",
-                            "text": "Malc (1)"
+                            "text": "Dave Grossman",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "1"
                         },
                         {
                             "id": "tlad_per-02",
-                            "text": "Malc (2)"
+                            "text": "Malc (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "2"
                         },
                         {
                             "id": "tlad_per-03",
-                            "text": "Dave Grossman"
+                            "text": "Malc (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "3"
                         }
                     ]
                 },
@@ -1400,7 +1441,8 @@
                                 "en": "50 seagulls",
                                 "fr": "50 mouettes",
                                 "pt": "50 gaivotas"
-                            }
+                            },
+                            "mapSlug": "seagulls"
                         }
                     ]
                 }
@@ -1563,23 +1605,33 @@
                     "items": [
                         {
                             "id": "tbogt_per-01",
-                            "text": "Arnaud (1)"
+                            "text": "Arnaud (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "1"
                         },
                         {
                             "id": "tbogt_per-02",
-                            "text": "Arnaud (2)"
+                            "text": "Arnaud (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "2"
                         },
                         {
                             "id": "tbogt_per-03",
-                            "text": "Daisie"
+                            "text": "Daisy",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "3"
                         },
                         {
                             "id": "tbogt_per-04",
-                            "text": "Margot (1)"
+                            "text": "Margot (1)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "4"
                         },
                         {
                             "id": "tbogt_per-05",
-                            "text": "Margot (2)"
+                            "text": "Margot (2)",
+                            "mapSlug": "randomCharacters",
+                            "mapMarker": "5"
                         }
                     ]
                 },
@@ -1802,7 +1854,8 @@
                                 "en": "50 seagulls",
                                 "fr": "50 mouettes",
                                 "pt": "50 gaivotas"
-                            }
+                            },
+                            "mapSlug": "seagulls"
                         },
                         {
                             "id": "tbogt_col-02",
