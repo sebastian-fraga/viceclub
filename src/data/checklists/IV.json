@@ -1673,6 +1673,16 @@
                                 "pt": "3 triatlos vencidos"
                             },
                             "icon": "tbogt_triatlon"
+                        },
+                        {
+                            "id": "tbogt_ms-04",
+                            "text": {
+                                "es": "15 saltos base completados",
+                                "en": "15 base jumps completed",
+                                "fr": "15 sauts en parachute terminés",
+                                "pt": "15 saltos base completados"
+                            },
+                            "icon": "salto_base"
                         }
                     ]
                 },
@@ -1856,15 +1866,6 @@
                                 "pt": "50 gaivotas"
                             },
                             "mapSlug": "seagulls"
-                        },
-                        {
-                            "id": "tbogt_col-02",
-                            "text": {
-                                "es": "15 saltos base",
-                                "en": "15 base jumps",
-                                "fr": "15 sauts en parachute",
-                                "pt": "15 saltos base"
-                            }
                         }
                     ]
                 }
