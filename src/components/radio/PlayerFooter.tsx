@@ -8,7 +8,13 @@ import {
     IconVolume3,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { useCallback, useEffect, useEffectEvent, useRef, useState } from "react";
+import {
+    useCallback,
+    useEffect,
+    useEffectEvent,
+    useRef,
+    useState,
+} from "react";
 
 import useT from "@/hooks/useT";
 import clsx from "clsx";
@@ -96,8 +102,7 @@ export function PlayerFooter({
                 if (element.hasPointerCapture(pointerId)) {
                     element.releasePointerCapture(pointerId);
                 }
-            } catch {
-            }
+            } catch {}
         }
 
         activePointerIdRef.current = null;
@@ -114,8 +119,7 @@ export function PlayerFooter({
 
         try {
             progressBarRef.current?.setPointerCapture(e.pointerId);
-        } catch {
-        }
+        } catch {}
 
         const ratio = getRatioFromClientX(e.clientX);
 
@@ -144,8 +148,7 @@ export function PlayerFooter({
         if (isBusy) return;
     };
 
-    const handleProgressPointerLeave = () => {
-    };
+    const handleProgressPointerLeave = () => {};
 
     useEffect(() => {
         if (!isDragging) return;
@@ -200,7 +203,7 @@ export function PlayerFooter({
     });
 
     return (
-        <div className="flex items-center gap-4 rounded-2xl bg-linear-to-t from-[#231e3f] from-20% to-(--button-bg) px-5 py-3.5 shadow-2xl shadow-pink-300/5 max-mobile:w-full max-mobile:max-w-125 max-mobile:px-12 max-mobile:py-5 max-mobile:flex-col max-mobile:gap-4">
+        <div className="flex items-center gap-8 max-mobile:gap-4 rounded-full max-mobile:rounded-4xl bg-linear-to-t from-(--button-bg) from-20% to-(--button-bg-hover) px-8 py-3.5 shadow-2xl shadow-pink-300/5 max-mobile:w-full max-mobile:max-w-125 max-mobile:px-10 max-mobile:py-5 max-mobile:flex-col">
             <div className="flex items-center gap-3.5 max-mobile:gap-4">
                 <button
                     type="button"
@@ -255,8 +258,10 @@ export function PlayerFooter({
 
             <div className="flex w-full items-center gap-2 max-mobile:gap-6">
                 {hasStation && (
-                    <span className="w-10 shrink-0 max-mobile:text-sm text-xs max-mobile:w-8 max-mobile:text-slate-300 max-mobile:font-bold tabular-nums text-slate-400">
-                        {isDragging && dragRatio !== null ? formatTime(dragRatio * duration) : formatTime(currentTime)}
+                    <span className="w-10 shrink-0 text-xs font-thin tabular-nums text-slate-300 max-mobile:w-6">
+                        {isDragging && dragRatio !== null
+                            ? formatTime(dragRatio * duration)
+                            : formatTime(currentTime)}
                     </span>
                 )}
 
@@ -274,7 +279,7 @@ export function PlayerFooter({
                     onPointerLeave={handleProgressPointerLeave}
                 >
                     <div className="relative h-1.5 min-w-0 overflow-hidden rounded-full bg-(--button-bg) max-mobile:h-2">
-                        <div className="absolute top-0 left-0 h-full w-full bg-(--button-bg)" />
+                        <div className="absolute top-0 left-0 h-full w-full bg-gray-900/15" />
 
                         {isDragging && dragProgress !== null ? (
                             <>
@@ -353,48 +358,43 @@ export function PlayerFooter({
 
                 {hasStation && (
                     <div className="flex shrink-0 items-center gap-1.5">
-                        <span className="w-10 shrink-0 max-mobile:text-sm text-xs max-mobile:w-8 max-mobile:text-slate-300 max-mobile:font-bold  tabular-nums text-slate-400">
+                        <span className="w-10 shrink-0 text-xs font-thin tabular-nums text-slate-300 max-mobile:w-6">
                             {formatTime(duration)}
                         </span>
-
-                        <div className="flex items-center gap-1.5 max-mobile:hidden">
-                            <button
-                                type="button"
-                                onClick={() =>
-                                    onVolumeChange(volume > 0 ? 0 : 1)
-                                }
-                                className="cursor-pointer text-slate-300 transition-colors hover:text-white"
-                                aria-label={
-                                    volume > 0
-                                        ? t("radio.common.mute")
-                                        : t("radio.common.unmute")
-                                }
-                            >
-                                <VolumeIcon volume={volume} />
-                            </button>
-
-                            <input
-                                type="range"
-                                min={0}
-                                max={1}
-                                step={0.01}
-                                value={volume}
-                                onChange={(e) =>
-                                    onVolumeChange(
-                                        Number.parseFloat(e.target.value),
-                                    )
-                                }
-                                style={
-                                    {
-                                        "--volume": `${volume * 100}%`,
-                                    } as React.CSSProperties
-                                }
-                                className="volume-slider"
-                                aria-label={t("radio.common.volume")}
-                            />
-                        </div>
                     </div>
                 )}
+            </div>
+            <div className="flex items-center gap-1.5 max-mobile:hidden">
+                <button
+                    type="button"
+                    onClick={() => onVolumeChange(volume > 0 ? 0 : 1)}
+                    className="cursor-pointer text-slate-300 transition-colors hover:text-white"
+                    aria-label={
+                        volume > 0
+                            ? t("radio.common.mute")
+                            : t("radio.common.unmute")
+                    }
+                >
+                    <VolumeIcon volume={volume} />
+                </button>
+
+                <input
+                    type="range"
+                    min={0}
+                    max={1}
+                    step={0.01}
+                    value={volume}
+                    onChange={(e) =>
+                        onVolumeChange(Number.parseFloat(e.target.value))
+                    }
+                    style={
+                        {
+                            "--volume": `${volume * 100}%`,
+                        } as React.CSSProperties
+                    }
+                    className="volume-slider"
+                    aria-label={t("radio.common.volume")}
+                />
             </div>
         </div>
     );

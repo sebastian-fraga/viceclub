@@ -6,8 +6,9 @@ import {
     IconMusicOff,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
+import { useDragToScroll } from "./hooks/useDragToScroll";
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
 import clsx from "clsx";
@@ -48,10 +49,15 @@ export function SongSelector({
     const djsScroll = useHorizontalScrollMask<HTMLDivElement>();
     const playlistsScroll = useHorizontalScrollMask<HTMLDivElement>();
 
+    const genresDrag = useDragToScroll<HTMLDivElement>();
+    const djsDrag = useDragToScroll<HTMLDivElement>();
+    const playlistsDrag = useDragToScroll<HTMLDivElement>();
+
     useEffect(() => {
         genresScroll.updateScrollState();
         djsScroll.updateScrollState();
         playlistsScroll.updateScrollState();
+        updateScrollState();
     }, [activePlaylist]);
 
     const updateScrollState = () => {
@@ -62,6 +68,18 @@ export function SongSelector({
     };
 
     const handleScroll = () => updateScrollState();
+
+    const updateAllMasksRef = useRef(() => {});
+    updateAllMasksRef.current = () => {
+        updateScrollState();
+        genresScroll.updateScrollState();
+        djsScroll.updateScrollState();
+        playlistsScroll.updateScrollState();
+    };
+
+    const handleCardMount = useCallback((el: HTMLDivElement | null) => {
+        if (el) updateAllMasksRef.current();
+    }, []);
 
     useEffect(() => {
         if (currentIndex === -1) return;
@@ -92,7 +110,7 @@ export function SongSelector({
     const maskImage = `linear-gradient(to bottom, ${maskParts.join(", ")})`;
 
     const selectorClasses =
-        "text-gray-300/80 flex flex-col rounded-2xl bg-linear-to-b from-[#231e3f] from-20% to-[var(--button-bg)] shadow-2xl shadow-pink-300/5";
+        "text-gray-300/80 flex flex-col rounded-4xl bg-linear-to-br from-[var(--button-bg-hover)] from-20% to-[var(--button-bg)] shadow-2xl shadow-pink-300/5";
 
     return (
         <AnimatePresence mode="wait">
@@ -103,7 +121,7 @@ export function SongSelector({
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className={`${selectorClasses} w-170 max-mobile:w-full h-full items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center`}
+                    className={`${selectorClasses} w-full min-w-0 h-full items-center justify-center gap-4 max-mobile:px-12 max-mobile:text-center`}
                 >
                     <IconMusicOff size={42} />
                     <p>{t("radio.emptySelector")}</p>
@@ -111,7 +129,8 @@ export function SongSelector({
             ) : (
                 <motion.div
                     key={station.id}
-                    className={`${selectorClasses} px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5 h-full min-h-0`}
+                    ref={handleCardMount}
+                    className={`${selectorClasses} px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5 h-full min-h-0 w-full min-w-0 @container`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -127,8 +146,8 @@ export function SongSelector({
                         </button>
                     )}
 
-                    <div className="grid w-160 max-mobile:w-full max-mobile:min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 items-start">
-                        <div className="rounded-2xl border border-violet-300 bg-linear-120 from-[#37344D] to-slate-900 p-2 max-mobile:mx-auto">
+                    <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
+                        <div className="rounded-2xl bg-linear-120 from-[#37344D] to-slate-900 p-2 max-mobile:mx-auto">
                             <img
                                 src={station.image}
                                 alt={station.displayName}
@@ -136,7 +155,7 @@ export function SongSelector({
                             />
                         </div>
 
-                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:items-center max-mobile:text-center">
+                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:items-center max-mobile:mx-auto max-mobile:text-center">
                             <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
                                 {station.displayName}
                             </h3>
@@ -145,7 +164,8 @@ export function SongSelector({
                                 <div
                                     ref={genresScroll.scrollRef}
                                     onScroll={genresScroll.handleScroll}
-                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide gap-2 w-full min-w-0"
+                                    {...genresDrag}
+                                    className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
                                     style={{
                                         maskImage: genresScroll.maskImage,
                                         WebkitMaskImage: genresScroll.maskImage,
@@ -154,10 +174,10 @@ export function SongSelector({
                                     {activePlaylist.genres.map((genre) => (
                                         <div
                                             key={genre}
-                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
+                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full"
                                         >
                                             <IconMusic className="text-violet-400 shrink-0" />
-                                            <span className="text-violet-200 text-md max-mobile:text-sm truncate">
+                                            <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
                                                 {t(`radio.genres.${genre}`, {
                                                     defaultValue: genre,
                                                 })}
@@ -171,7 +191,8 @@ export function SongSelector({
                                 <div
                                     ref={djsScroll.scrollRef}
                                     onScroll={djsScroll.handleScroll}
-                                    className="flex flex-wrap max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide gap-2 w-full min-w-0"
+                                    {...djsDrag}
+                                    className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
                                     style={{
                                         maskImage: djsScroll.maskImage,
                                         WebkitMaskImage: djsScroll.maskImage,
@@ -180,10 +201,10 @@ export function SongSelector({
                                     {activePlaylist.djs.map((dj) => (
                                         <div
                                             key={dj}
-                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0"
+                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full"
                                         >
                                             <IconHeadphones className="text-yellow-200 shrink-0" />
-                                            <span className="text-yellow-100 text-md max-mobile:text-sm truncate">
+                                            <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
                                                 {dj}
                                             </span>
                                         </div>
@@ -197,7 +218,8 @@ export function SongSelector({
                         <div
                             ref={playlistsScroll.scrollRef}
                             onScroll={playlistsScroll.handleScroll}
-                            className="flex flex-wrap gap-2 w-160 max-mobile:w-full max-mobile:flex-nowrap max-mobile:overflow-x-auto max-mobile:scrollbar-hide"
+                            {...playlistsDrag}
+                            className="flex flex-wrap gap-2 w-full min-w-0 @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain"
                             style={{
                                 maskImage: playlistsScroll.maskImage,
                                 WebkitMaskImage: playlistsScroll.maskImage,
@@ -235,6 +257,7 @@ export function SongSelector({
                             {t("radio.tracks")}
                         </p>
                         <ul
+                            key={activePlaylist.id}
                             ref={scrollRef}
                             onScroll={handleScroll}
                             className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto scroll-radio flex-1 min-h-0"

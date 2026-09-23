@@ -31,7 +31,7 @@ export function StationSelector({
 
     if (stations.length === 0) {
         return (
-            <div className="flex flex-col px-4 py-6 rounded-2xl bg-[#24222E] text-slate-50">
+            <div className="flex flex-col px-4 py-6 rounded-full bg-linear-to-br from-(--button-bg-hover) from-20% to-(--button-bg) text-slate-50">
                 <h3 className="mb-4 text-2xl font-medium">
                     {t("radio.stations")}
                 </h3>
@@ -50,7 +50,7 @@ export function StationSelector({
 
     return (
         <motion.div
-            className="flex flex-col pl-4 py-6 rounded-2xl bg-linear-to-b from-[#231e3f] from-20% to-(--button-bg) shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
+            className="flex flex-col pl-4 py-6 rounded-4xl bg-linear-to-bl from-(--button-bg-hover) from-20% to-(--button-bg) shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
@@ -61,7 +61,7 @@ export function StationSelector({
             <div
                 ref={scrollRef}
                 onScroll={handleScroll}
-                className="grid justify-items-center grid-cols-4 max-mobile:grid-cols-2 gap-x-4 gap-y-8 overflow-y-auto h-full min-h-0 p-3 scroll-radio"
+                className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-4 gap-y-8 overflow-y-auto h-full min-h-0 p-3 scroll-radio"
                 data-lenis-prevent
                 style={{ maskImage, WebkitMaskImage: maskImage }}
             >

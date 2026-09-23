@@ -109,7 +109,7 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                 <div className="relative h-160 max-mobile:h-[70vh] max-mobile:overflow-hidden">
                     <div
                         className={clsx(
-                            "grid grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-4 h-full w-full transition-transform duration-300 ease-out",
+                            "grid grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] gap-4 h-full w-full transition-transform duration-300 ease-out",
                             "max-mobile:flex max-mobile:gap-0 max-mobile:h-full max-mobile:w-[200%]",
                             mobilePanel === "songs"
                                 ? "max-mobile:-translate-x-1/2"

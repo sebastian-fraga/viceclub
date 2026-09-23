@@ -1,12 +1,12 @@
 .volume-slider {
     width: 6rem;
-    height: 4px;
+    height: 6px;
     appearance: none;
     cursor: pointer;
     border-radius: 9999px;
     background: linear-gradient(to right,
             var(--color-violet-500) var(--volume),
-            var(--button-bg-hover) var(--volume));
+            color-mix(in srgb, var(--color-gray-900) 15%, transparent) var(--volume));
 }
 
 .volume-slider::-webkit-slider-runnable-track {
