@@ -33,7 +33,7 @@ const gameSeo = seo[game]?.mapa;
     game={gameData}
 >
     <main
-        class="ml-0 h-screen bg-linear-135 from-[#15151F] to-[#1E1E33] md:ml-(--sidebar-width)"
+        class="ml-0 h-screen bg-linear-135 from-[#15151F] to-[#1E1E33] md:ml-(--sidebar-width) max-mobile:mb-12"
         style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
     >
         <GameMap client:only="react" gameId={game} />
