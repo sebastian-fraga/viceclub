@@ -1,4 +1,3 @@
-
 import type { ChecklistData } from "../types/checklist";
 
 export interface ChecklistProgress {
@@ -10,9 +9,14 @@ export interface ChecklistProgress {
 export function getChecklistProgress(
     game: string,
     data: ChecklistData,
+    variantId?: string,
 ): ChecklistProgress {
     const tabs = data.tabs?.length
-        ? data.tabs
+        ? variantId
+            ? data.tabs.filter(
+                  (tab) => tab.id.toLowerCase() === variantId.toLowerCase(),
+              )
+            : data.tabs
         : [{ id: "default", sections: data.sections ?? [] }];
 
     let total = 0;
@@ -20,6 +24,7 @@ export function getChecklistProgress(
 
     tabs.forEach((tab) => {
         let checked: Record<string, boolean> = {};
+
         try {
             const raw = localStorage.getItem(
                 `viceclub_checklist_${game}_${tab.id}`,
@@ -32,7 +37,10 @@ export function getChecklistProgress(
         tab.sections.forEach((section) => {
             section.items.forEach((item) => {
                 total += 1;
-                if (checked[item.id]) count += 1;
+
+                if (checked[item.id]) {
+                    count += 1;
+                }
             });
         });
     });

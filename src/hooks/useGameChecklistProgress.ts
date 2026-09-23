@@ -7,14 +7,16 @@ import { useCallback, useEffect, useState } from "react";
 
 export function useGameChecklistProgress(
     game: string,
+    variantId?: string,
 ): ChecklistProgress | null {
     const [progress, setProgress] = useState<ChecklistProgress | null>(null);
 
     const recalculate = useCallback(() => {
         const data = getChecklistData(game);
         if (!data) return;
-        setProgress(getChecklistProgress(game, data));
-    }, [game]);
+
+        setProgress(getChecklistProgress(game, data, variantId));
+    }, [game, variantId]);
 
     useEffect(() => {
         recalculate();
@@ -27,6 +29,7 @@ export function useGameChecklistProgress(
                 recalculate();
             }
         };
+
         window.addEventListener("checklist-progress-reset", handleReset);
 
         return () => {

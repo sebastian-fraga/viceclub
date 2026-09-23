@@ -43,7 +43,7 @@ function getBentoClasses(sectionId: string) {
 
 export default function ExploreSections({ game, variantId }: Props) {
     const t = useT();
-    const checklistProgress = useGameChecklistProgress(game.id);
+    const checklistProgress = useGameChecklistProgress(game.id, variantId);
     const completedMapIds = useGameMapProgress(game.id, variantId);
     const mapData = getGameMapData(game.id, variantId);
 
