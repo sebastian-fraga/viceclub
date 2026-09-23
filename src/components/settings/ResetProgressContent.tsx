@@ -6,6 +6,7 @@ import {
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { GameSelector } from "./ui/GameSelector";
+import clsx from "clsx";
 
 export type ResetTarget = "checklist" | "map";
 
@@ -46,6 +47,8 @@ export function ResetProgressContent({
         }
     };
 
+    const buttonStyle = "px-5 py-2 text-sm rounded-2xl transition cursor-pointer duration-300"
+
     return (
         <div className="w-full h-full flex flex-col justify-between gap-4 py-1">
             <div className="flex items-center gap-4 shrink-0 justify-between mt-2">
@@ -71,7 +74,10 @@ export function ResetProgressContent({
                 <button
                     type="button"
                     onClick={onCancel}
-                    className="px-4 py-2 text-sm rounded-lg border border-white/10 text-slate-300 hover:bg-white/5 transition cursor-pointer"
+                    className={clsx(
+                        buttonStyle,
+                        "border border-white/10 text-slate-300 hover:bg-white/5",
+                    )}
                 >
                     {t("common.buttons.cancel")}
                 </button>
@@ -79,7 +85,10 @@ export function ResetProgressContent({
                     type="button"
                     onClick={handleConfirm}
                     disabled={selected.length === 0}
-                    className="px-4 py-2 text-sm font-medium rounded-lg bg-purple-500 hover:bg-purple-600 disabled:opacity-50 disabled:hover:bg-purple-600 text-white transition cursor-pointer"
+                    className={clsx(
+                        buttonStyle,
+                        "font-medium bg-indigo-400 hover:bg-indigo-500 disabled:opacity-50 disabled:hover:bg-purple-600 text-white",
+                    )}
                 >
                     {t("common.buttons.accept")}
                 </button>

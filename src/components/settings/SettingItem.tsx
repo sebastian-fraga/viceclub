@@ -104,7 +104,7 @@ export default function SettingItem({
         ? "flex items-center justify-between w-full px-4 py-3.5 bg-red-500/5 rounded-md text-red-200"
         : "flex items-center justify-between w-full px-4 py-3.5 bg-slate-500/5 rounded-md";
 
-    const iconStyles = setting.destructive ? "text-red-400" : "text-indigo-200";
+    const iconStyles = setting.destructive ? "text-red-400" : "text-pink-200";
 
     const descriptionStyles =
         statusMessage?.variant === "error"

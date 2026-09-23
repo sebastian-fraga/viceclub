@@ -36,7 +36,7 @@ export function GameSelector({ selected, onChange }: GameSelectorProps) {
                             onChange={() => toggleGame(game.id)}
                         />
 
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded border border-white/25 bg-white/5 transition-colors peer-checked:border-indigo-800 peer-checked:bg-indigo-900 max-mobile:h-3.5 max-mobile:w-3.5">
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded border border-white/25 bg-white/5 transition-colors peer-checked:border-none peer-checked:bg-indigo-500 max-mobile:h-3.5 max-mobile:w-3.5">
                             {isChecked && (
                                 <svg
                                     viewBox="0 0 24 24"
@@ -52,7 +52,7 @@ export function GameSelector({ selected, onChange }: GameSelectorProps) {
 
                         <img
                             src={`/assets/images/icons/games/logos/${game.id}.webp`}
-                            alt={`Logo de GTA ${game.id}`}
+                            alt={`Logo de GTA ${game.id}🌴`}
                             className="w-12 shrink-0 object-contain max-mobile:w-8"
                         />
 
