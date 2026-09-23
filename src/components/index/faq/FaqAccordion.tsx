@@ -82,7 +82,7 @@ const sections = [
                         components={{
                             1: (
                                 <a
-                                    href="mailto:contacto@viceclub.app"
+                                    href="mailto:contact@viceclub.app"
                                     className={anchorClasses}
                                 />
                             ),
