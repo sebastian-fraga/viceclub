@@ -250,7 +250,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                     aria-current="page"
                                     className={clsx(
                                         baseNavButtonStyle,
-                                        "bg-indigo-500/10 text-indigo-300 cursor-default",
+                                        "bg-(--button-bg-hover)/60 text-indigo-300 cursor-default",
                                     )}
                                 >
                                     <IconHomeFilled size={20} />
@@ -300,7 +300,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                         <div className="h-px bg-white/10 my-2 mx-1" />
 
                         {showLabels && (
-                            <span className="px-2 py-1.5 text-[10px] font-medium uppercase tracking-widest text-slate-500">
+                            <span className="px-2 py-1.5 text-[14px] font-body-condensed uppercase text-indigo-200/50">
                                 {t("sidebar.games")}
                             </span>
                         )}
@@ -350,7 +350,9 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                             <IconLayoutSidebarRightExpand
                                                 size={20}
                                             />
-                                            <span className="text-sm">{t("sidebar.collapse")}</span>
+                                            <span className="text-sm">
+                                                {t("sidebar.collapse")}
+                                            </span>
                                         </div>
                                     ) : (
                                         <IconLayoutSidebarLeftExpand

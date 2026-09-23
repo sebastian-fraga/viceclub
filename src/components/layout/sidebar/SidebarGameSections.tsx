@@ -79,7 +79,7 @@ function SidebarGameSections({
                                             showLabels
                                                 ? "justify-start"
                                                 : "justify-center",
-                                            "bg-indigo-500/10 text-indigo-300 font-medium cursor-default",
+                                            "bg-(--button-bg)/30 text-indigo-200/90 font-medium cursor-default hover:bg-(--button-bg)/30",
                                         )}
                                     >
                                         <Icon
@@ -102,7 +102,7 @@ function SidebarGameSections({
                                             showLabels
                                                 ? "justify-start"
                                                 : "justify-center",
-                                            "text-slate-500 hover:bg-white/5 hover:text-slate-300",
+                                            "text-indigo-200/50 hover:text-indigo-200 hover:bg-(--button-bg)/30",
                                         )}
                                     >
                                         <Icon

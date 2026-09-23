@@ -29,13 +29,13 @@ function SidebarGameButton({
                 aria-expanded={isOpen}
                 aria-current={isActiveGame ? "page" : undefined}
                 className={clsx(
-                    "group flex items-center gap-2 rounded-full px-2 py-1 w-full transition cursor-pointer",
+                    "group flex items-center gap-2 rounded-2xl px-2 py-1 w-full transition cursor-pointer",
                     showLabels ? "justify-start" : "justify-center",
                     isActiveGame
-                        ? "bg-indigo-500/10"
+                        ? "bg-(--button-bg)/70"
                         : isOpen
-                          ? "bg-white/5"
-                          : "hover:bg-white/5",
+                          ? "bg-(--button-bg)/30"
+                          : "hover:bg-(--button-bg)/40",
                 )}
             >
                 <img
@@ -44,8 +44,8 @@ function SidebarGameButton({
                     className={clsx(
                         "w-12 h-12 shrink-0 object-contain transition",
                         isActiveGame
-                            ? "opacity-100 drop-shadow-md drop-shadow-indigo-500/30"
-                            : "opacity-80 hover:opacity-100",
+                            ? "opacity-100 drop-shadow-md drop-shadow-indigo-300/30"
+                            : "opacity-80 hover:opacity-100 drop-shadow-md drop-shadow-indigo-300/15",
                     )}
                     loading="lazy"
                 />
