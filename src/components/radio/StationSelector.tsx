@@ -61,7 +61,7 @@ export function StationSelector({
             <div
                 ref={scrollRef}
                 onScroll={handleScroll}
-                className="grid justify-items-center 2xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-x-4 gap-y-8 overflow-y-auto h-full min-h-0 p-3 scroll-radio"
+                className="grid justify-items-center 2xl:grid-cols-3 grid-cols-2 gap-x-4 gap-y-8 overflow-y-auto h-full min-h-0 p-3 scroll-radio"
                 data-lenis-prevent
                 style={{ maskImage, WebkitMaskImage: maskImage }}
             >
