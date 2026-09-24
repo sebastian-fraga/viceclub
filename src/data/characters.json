@@ -50,7 +50,7 @@
         },
         {
             "id": "5",
-            "name": "María Latore",
+            "name": "Maria Latore",
             "role": "home.iii.characters.5.role",
             "image": "../assets/images/characters/III/maria.webp",
             "age": "home.characters.unknown",
@@ -161,6 +161,7 @@
         {
             "id": "6",
             "name": "Coronel Cortez",
+            "nameKey": "home.vc.characters.6.name",
             "role": "home.vc.characters.6.role",
             "image": "../assets/images/characters/VC/cortez.webp",
             "age": "home.characters.unknown",
@@ -197,6 +198,7 @@
         {
             "id": "9",
             "name": "Tía Poulet",
+            "nameKey": "home.vc.characters.9.name",
             "role": "home.vc.characters.9.role",
             "image": "../assets/images/characters/VC/poulet.webp",
             "age": "home.characters.unknown",
@@ -598,7 +600,7 @@
         },
         {
             "id": "2",
-            "name": "Sargento Martinez",
+            "name": "Jerry Martinez",
             "role": "home.vcs.characters.2.role",
             "image": "../assets/images/characters/VCS/martinez.webp",
             "age": "home.characters.unknown",
@@ -671,6 +673,7 @@
         {
             "id": "8",
             "name": "Hermanos Mendez",
+            "nameKey": "home.vcs.characters.8.name",
             "role": "home.vcs.characters.8.role",
             "image": "../assets/images/characters/VCS/mendez.webp",
             "age": "home.characters.unknown",

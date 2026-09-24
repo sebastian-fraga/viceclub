@@ -9,6 +9,7 @@ interface Props {
 export interface Character {
     id: string;
     name: string;
+    nameKey?: string;
     role: string;
     image: string;
     age: number | string;
@@ -36,15 +37,21 @@ const STATUS_STYLES: Record<string, string> = {
     unknown: "bg-neutral-700/80 text-neutral-50",
 };
 
-function FlagImage({ countryCode }: { countryCode: string }) {
-    const code = countryCode.toLowerCase();
+function FlagImage({ nationality }: { nationality: string }) {
+    if (nationality === "unknown") {
+        return (
+            <span className="flex h-3 w-4 shrink-0 items-center justify-center rounded-xs bg-neutral-700 text-[9px] text-neutral-300 ring-1 ring-white/10">
+                ?
+            </span>
+        );
+    }
+
+    const code = nationality.toLowerCase();
 
     return (
         <img
             src={`https://flagcdn.com/w40/${code}.png`}
             srcSet={`https://flagcdn.com/w80/${code}.png 2x`}
-            alt={countryCode.toUpperCase()}
-            title={countryCode.toUpperCase()}
             width={20}
             height={14}
             loading="lazy"
@@ -62,6 +69,10 @@ export default function CharacterCard({ character, variantId }: Props) {
 
     const toggle = () => setFlipped((prev) => !prev);
 
+    const characterName = character.nameKey
+        ? t(character.nameKey)
+        : character.name;
+
     return (
         <div className="h-90 w-full perspective-distant max-mobile:h-72">
             <div
@@ -72,7 +83,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                     flipped
                         ? "characters.accessibility.showLess"
                         : "characters.accessibility.showMore",
-                    { name: character.name },
+                    { name: characterName },
                 )}
                 onClick={toggle}
                 onKeyDown={(e) => {
@@ -90,7 +101,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                     <div className="relative flex-1 overflow-hidden">
                         <img
                             src={character.image}
-                            alt={character.name}
+                            alt={characterName}
                             className="h-full w-full object-cover"
                             loading="lazy"
                         />
@@ -106,7 +117,7 @@ export default function CharacterCard({ character, variantId }: Props) {
 
                     <div className="p-3 max-mobile:p-2">
                         <p className="text-sm font-bold text-neutral-100 max-mobile:text-xs">
-                            {character.name}
+                            {characterName}
                         </p>
 
                         <p className="text-xs text-neutral-400 max-mobile:text-[11px]">
@@ -123,12 +134,15 @@ export default function CharacterCard({ character, variantId }: Props) {
                 >
                     <div className="flex items-center gap-2">
                         <p className="text-base font-bold text-neutral-100 max-mobile:text-sm">
-                            {character.name}
+                            {characterName}
                         </p>
 
                         <div className="flex items-center gap-1">
-                            {character.nationalities?.map((n) => (
-                                <FlagImage key={n} countryCode={n} />
+                            {character.nationalities?.map((nationality) => (
+                                <FlagImage
+                                    key={nationality}
+                                    nationality={nationality}
+                                />
                             ))}
                         </div>
                     </div>
