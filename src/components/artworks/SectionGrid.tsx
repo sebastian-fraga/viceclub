@@ -55,7 +55,7 @@ export function SectionGrid({
     }
 
     return (
-        <section className="mx-auto max-mobile:mt-20 first:mobile:mt-30 mobile:mt-50 flex max-w-430 flex-col">
+        <section className="mx-auto w-full max-mobile:mt-20 first:mobile:mt-30 mobile:mt-50 flex max-w-430 flex-col">
             <h3 className="mb-8 flex items-center gap-3 text-4xl font-medium text-indigo-50 max-mobile:max-w-120 max-mobile:text-2xl">
                 <span className="min-w-0 truncate">
                     {getSectionLabel(section, lang)}
@@ -66,7 +66,7 @@ export function SectionGrid({
                 </span>
             </h3>
 
-            <div className="grid grid-cols-3 gap-x-6 gap-y-8 max-mobile:grid-cols-1">
+            <div className="grid w-full grid-cols-3 gap-x-6 gap-y-8 max-mobile:grid-cols-1">
                 {images.map((image, index) => {
                     const url = getImageUrl(
                         gameId,
@@ -82,7 +82,7 @@ export function SectionGrid({
                         <button
                             key={image.id}
                             onClick={(e) => handleSelect(e, image)}
-                            className="fade-card group flex cursor-pointer flex-col overflow-hidden rounded-[20px] bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-350 hover:bg-[#2F2E52]"
+                            className="fade-card group flex cursor-pointer flex-col overflow-hidden rounded-[20px] bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-300 hover:bg-[#302f58]"
                         >
                             <img
                                 ref={(el) => registerThumb(image.id, el)}
