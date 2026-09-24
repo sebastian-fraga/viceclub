@@ -1123,6 +1123,12 @@ export default {
                     seagulls: "Gaivotas",
                     seagull: "Gaivota",
                 },
+                v: {
+                    spaceshipParts: "Partes de espaçonave",
+                    spaceshipPart: "Parte de espaçonave",
+                    letterScraps: "Fragmentos de cartas",
+                    letterScrap: "Fragmento de carta",
+                },
             },
             sideMissions: {
                 title: "Missões secundárias",
@@ -1183,6 +1189,12 @@ export default {
                 lcs: {
                     driveBys: "Desafios de drive-by",
                     driveBy: "Desafio de drive-by",
+                },
+                v: {
+                    underTheBridgeChallenges: "Under the bridge challenges",
+                    underTheBridge: "Under the bridge challenge",
+                    knifeFlights: "Knife flights",
+                    knifeFlight: "Knife flight",
                 },
             },
             locations: {

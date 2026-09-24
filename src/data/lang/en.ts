@@ -1123,6 +1123,12 @@ export default {
                     seagulls: "Seagulls",
                     seagull: "Seagull",
                 },
+                v: {
+                    spaceshipParts: "Spaceship parts",
+                    spaceshipPart: "Spaceship part",
+                    letterScraps: "Letter scraps",
+                    letterScrap: "Letter scrap",
+                },
             },
             sideMissions: {
                 title: "Side missions",
@@ -1183,6 +1189,12 @@ export default {
                 lcs: {
                     driveBys: "Drive-by challenges",
                     driveBy: "Drive-by challenge",
+                },
+                v: {
+                    underTheBridgeChallenges: "Voos por baixo de pontes",
+                    underTheBridge: "Voo por baixo de ponte",
+                    knifeFlights: "Voos em faca",
+                    knifeFlight: "Voo em faca",
                 },
             },
             locations: {

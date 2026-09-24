@@ -1123,6 +1123,12 @@ export default {
                     seagulls: "Mouettes",
                     seagull: "Mouette",
                 },
+                v: {
+                    spaceshipParts: "Pièces de vaisseau spatial",
+                    spaceshipPart: "Pièce de vaisseau spatial",
+                    letterScraps: "Morceaux de lettre",
+                    letterScrap: "Morceau de lettre",
+                },
             },
             sideMissions: {
                 title: "Missions secondaires",
@@ -1183,6 +1189,12 @@ export default {
                 lcs: {
                     driveBys: "Défis de drive-by",
                     driveBy: "Défi de drive-by",
+                },
+                v: {
+                    underTheBridgeChallenges: "Défis Sous le pont",
+                    underTheBridge: "Défi Sous le pont",
+                    knifeFlights: "Défis Vols sur la tranche",
+                    knifeFlight: "Défi Vols sur la tranche",
                 },
             },
             locations: {
