@@ -36,7 +36,7 @@ export default function CharacterGrid({
                 <Title label="home.titles.characters" align="left" />
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 max-mobile:mt-5 max-mobile:gap-3">
+            <div className="mt-8 grid gap-4 max-mobile:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 max-mobile:mt-5 max-mobile:gap-3">
                 {visibleCharacters.map((character, index) => (
                     <motion.div
                         key={character.id}
