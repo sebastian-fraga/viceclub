@@ -259,6 +259,7 @@ export default {
                     quote: "¿Estos haitianos creen que pueden enfrentarse a RICARDO DIAZ?",
                 },
                 6: {
+                    name: "Coronel Cortez",
                     role: "Jefe de la organización criminal Cortez",
                     mission: "La fiesta",
                     quote: "🌴",
@@ -274,6 +275,7 @@ export default {
                     quote: "🌴",
                 },
                 9: {
+                    name: "Tía Poulet",
                     role: "Líder de la banda haitiana",
                     mission: "Poción mágica",
                     quote: "🌴",
@@ -547,7 +549,7 @@ export default {
                     quote: "🌴",
                 },
                 6: {
-                    role: "Líder de los cubanos (Cabrones)",
+                    role: "Líder de los cubanos",
                     mission: "Bonito paquete",
                     quote: "🌴",
                 },
@@ -557,6 +559,7 @@ export default {
                     quote: "🌴",
                 },
                 8: {
+                    name: "Hermanos Méndez",
                     role: "Traficantes de drogas en Vice City",
                     mission: "Mira al pajarito",
                     quote: "🌴",

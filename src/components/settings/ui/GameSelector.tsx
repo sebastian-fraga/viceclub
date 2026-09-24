@@ -1,5 +1,6 @@
 import type { GameId } from "@/config/games";
 import { gamesList } from "@/config/games";
+import useT from "@/hooks/useT";
 
 interface GameSelectorProps {
     selected: GameId[];
@@ -14,6 +15,8 @@ export function GameSelector({ selected, onChange }: GameSelectorProps) {
             onChange([...selected, id]);
         }
     };
+
+    const t = useT();
 
     return (
         <div className="grid h-full grid-cols-2 gap-1.5 rounded-2xl border border-white/10 bg-black/20 p-2">
@@ -52,7 +55,9 @@ export function GameSelector({ selected, onChange }: GameSelectorProps) {
 
                         <img
                             src={`/assets/images/icons/games/logos/${game.id}.webp`}
-                            alt={`Logo de GTA ${game.id}🌴`}
+                            alt={t("common.accessibility.gameIcon", {
+                                game: game.id,
+                            })}
                             className="w-12 shrink-0 object-contain max-mobile:w-8"
                         />
 
