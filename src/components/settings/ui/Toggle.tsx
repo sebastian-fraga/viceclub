@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import type { Setting } from "@/types/settings";
 
@@ -10,15 +10,17 @@ interface Props {
 }
 
 export default function Toggle({ setting, value, onChange }: Props) {
+    const { t } = useTranslation();
+
     return (
         <button
             type="button"
             role="switch"
             aria-checked={value}
-            aria-label={setting.name}
+            aria-label={t(setting.name)}
             onClick={() => onChange(!value)}
-            className={`relative w-10 h-6 rounded-full shrink-0 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer ${
-                value ? "bg-purple-400" : "bg-white/10"
+            className={`relative w-10 h-6 rounded-full shrink-0 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-black cursor-pointer after:content-[''] after:absolute after:-inset-2 ${
+                value ? "bg-indigo-400" : "bg-white/10"
             }`}
         >
             <motion.span

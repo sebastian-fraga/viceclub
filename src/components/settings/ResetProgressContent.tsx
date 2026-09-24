@@ -47,18 +47,19 @@ export function ResetProgressContent({
         }
     };
 
-    const buttonStyle = "px-5 py-2 text-sm rounded-2xl transition cursor-pointer duration-300"
+    const buttonStyle =
+        "px-5 py-2 max-mobile:py-2.5 max-mobile:flex-1 text-sm rounded-2xl transition cursor-pointer duration-300";
 
     return (
         <div className="w-full h-full flex flex-col justify-between gap-4 py-1">
-            <div className="flex items-center gap-4 shrink-0 justify-between mt-2">
+            <div className="flex items-center gap-4 shrink-0 justify-between mt-2 max-mobile:flex-col max-mobile:items-start max-mobile:gap-1">
                 <p className="text-sm text-white/60">
                     {t("settings.resetProgress.description")}
                 </p>
                 <button
                     type="button"
                     onClick={handleToggleAll}
-                    className="text-xs text-slate-400 hover:text-white underline underline-offset-4 shrink-0 transition cursor-pointer"
+                    className="text-xs text-slate-400 hover:text-white underline underline-offset-4 shrink-0 transition cursor-pointer py-1.5 -my-1.5"
                 >
                     {isAllSelected
                         ? t("common.buttons.unselectAll")
@@ -66,11 +67,11 @@ export function ResetProgressContent({
                 </button>
             </div>
 
-            <div className="flex-1 min-h-0">
+            <div className="flex-1 min-h-0 overflow-y-auto scroll-settings px-1 -mx-1">
                 <GameSelector selected={selected} onChange={setSelected} />
             </div>
 
-            <div className="flex justify-end gap-3 mt-auto pt-4 shrink-0">
+            <div className="flex justify-end gap-3 mt-auto pt-4 max-mobile:pt-2 shrink-0">
                 <button
                     type="button"
                     onClick={onCancel}
@@ -87,7 +88,7 @@ export function ResetProgressContent({
                     disabled={selected.length === 0}
                     className={clsx(
                         buttonStyle,
-                        "font-medium bg-indigo-400 hover:bg-indigo-500 disabled:opacity-50 disabled:hover:bg-purple-600 text-white",
+                        "font-medium bg-indigo-400 hover:bg-indigo-500 disabled:opacity-50 disabled:hover:bg-indigo-400 disabled:cursor-not-allowed text-white",
                     )}
                 >
                     {t("common.buttons.accept")}

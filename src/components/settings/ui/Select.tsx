@@ -1,13 +1,19 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
-import { IconCheck, IconChevronDown } from "@tabler/icons-react";
+import { IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { BR, ES, FR, GB } from "country-flag-icons/react/3x2";
 
 import type { SelectOption, SelectSetting } from "@/types/settings";
+
+const MENU_MARGIN = 8;
+const MENU_GAP = 4;
+const ROW_HEIGHT = 44;
+const MENU_MAX_HEIGHT = 240;
+const MENU_MIN_WIDTH = 208;
 
 interface Props {
     setting: SelectSetting;
@@ -15,6 +21,15 @@ interface Props {
     onChange: (value: string) => void;
     options?: SelectOption[];
     disabled?: boolean;
+}
+
+interface MenuCoords {
+    top?: number;
+    bottom?: number;
+    right: number;
+    maxWidth: number;
+    maxHeight: number;
+    openUp: boolean;
 }
 
 export default function Select({
@@ -26,7 +41,13 @@ export default function Select({
 }: Props) {
     const { t } = useTranslation();
     const [open, setOpen] = useState(false);
-    const [coords, setCoords] = useState({ top: 0, left: 0, openUp: false });
+    const [coords, setCoords] = useState<MenuCoords>({
+        top: 0,
+        right: MENU_MARGIN,
+        maxWidth: MENU_MIN_WIDTH,
+        maxHeight: MENU_MAX_HEIGHT,
+        openUp: false,
+    });
     const buttonRef = useRef<HTMLButtonElement>(null);
     const selectOptions = options ?? setting.options;
 
@@ -45,16 +66,40 @@ export default function Select({
         if (!open || !buttonRef.current) return;
 
         const rect = buttonRef.current.getBoundingClientRect();
-        const menuHeight = selectOptions.length * 32 + 8;
-        const spaceBelow = window.innerHeight - rect.bottom;
-        const openUp = spaceBelow < menuHeight && rect.top > menuHeight;
+        const contentHeight = selectOptions.length * ROW_HEIGHT;
+
+        const spaceBelow =
+            window.innerHeight - rect.bottom - MENU_GAP - MENU_MARGIN;
+        const spaceAbove = rect.top - MENU_GAP - MENU_MARGIN;
+
+        const openUp = contentHeight > spaceBelow && spaceAbove > spaceBelow;
+        const available = openUp ? spaceAbove : spaceBelow;
+
+        const maxHeight = Math.max(0, Math.min(MENU_MAX_HEIGHT, available));
+
+        const right = Math.max(MENU_MARGIN, window.innerWidth - rect.right);
+        const maxWidth = window.innerWidth - right - MENU_MARGIN;
 
         setCoords({
-            top: openUp ? rect.top - menuHeight - 4 : rect.bottom + 4,
-            left: rect.right - 128,
+            top: openUp ? undefined : rect.bottom + MENU_GAP,
+            bottom: openUp
+                ? window.innerHeight - rect.top + MENU_GAP
+                : undefined,
+            right,
+            maxWidth,
+            maxHeight,
             openUp,
         });
     }, [open, selectOptions]);
+
+    useEffect(() => {
+        if (!open) return;
+
+        const close = () => setOpen(false);
+        window.addEventListener("resize", close);
+
+        return () => window.removeEventListener("resize", close);
+    }, [open]);
 
     const SelectedFlag = selectedOption
         ? flags[selectedOption.value.toUpperCase() as keyof typeof flags]
@@ -69,10 +114,10 @@ export default function Select({
                 aria-haspopup="listbox"
                 aria-expanded={open}
                 onClick={() => setOpen((prev) => !prev)}
-                className={`flex items-center gap-2 px-2.5 py-1.5 text-xs rounded-md transition-colors ${
+                className={`group flex items-center justify-center gap-2 px-3.5 py-2 max-mobile:py-2.5 text-xs rounded-full min-w-30 max-mobile:min-w-0 transition-colors ${
                     disabled
-                        ? "text-white/30 bg-white/5 cursor-not-allowed"
-                        : "text-white bg-white/10 hover:bg-white/15 cursor-pointer"
+                        ? "text-indigo-100/30 bg-(--button-bg)/40 cursor-not-allowed"
+                        : "text-indigo-100 bg-(--button-bg) hover:bg-(--button-bg-hover) cursor-pointer"
                 }`}
             >
                 {SelectedFlag && (
@@ -86,7 +131,7 @@ export default function Select({
 
                 <IconChevronDown
                     size={14}
-                    className={`text-gray-400 transition-transform duration-200 ${
+                    className={`text-gray-400 transition-colors duration-200 group-hover:text-indigo-200 ${
                         open ? "rotate-180" : ""
                     } ${disabled ? "text-white/20" : ""}`}
                 />
@@ -118,17 +163,19 @@ export default function Select({
                                     transition={{ duration: 0.15 }}
                                     style={{
                                         top: coords.top,
-                                        left: coords.left,
+                                        bottom: coords.bottom,
+                                        right: coords.right,
+                                        minWidth: Math.min(
+                                            MENU_MIN_WIDTH,
+                                            coords.maxWidth,
+                                        ),
+                                        maxWidth: coords.maxWidth,
+                                        maxHeight: coords.maxHeight,
                                     }}
-                                    className="fixed min-w-32 bg-[#1c1c28] border border-white/10 rounded-md shadow-lg overflow-hidden z-20100 max-h-60 scroll-settings overflow-y-auto"
+                                    className="fixed bg-[#1c1c28] rounded-md shadow-lg overflow-hidden z-20100 scroll-settings overflow-y-auto"
                                     data-lenis-prevent
                                 >
                                     {selectOptions.map((option) => {
-                                        const Flag =
-                                            flags[
-                                                option.value.toUpperCase() as keyof typeof flags
-                                            ];
-
                                         return (
                                             <li
                                                 key={option.value}
@@ -143,27 +190,28 @@ export default function Select({
                                                         onChange(option.value);
                                                         setOpen(false);
                                                     }}
-                                                    className="flex items-center justify-between w-full px-3 py-1.5 text-xs text-left text-gray-200 hover:bg-white/5 transition-colors cursor-pointer"
+                                                    className={`flex items-center justify-between w-full px-3 py-3.5 text-xs text-left duration-200 transition-colors cursor-pointer ${
+                                                        option.value === value
+                                                            ? "bg-(--button-bg) text-white"
+                                                            : "text-gray-200 hover:bg-(--button-bg-hover)/40 group"
+                                                    }`}
                                                 >
                                                     <div className="flex items-center gap-2">
-                                                        {Flag && (
-                                                            <Flag
-                                                                title={
-                                                                    option.label
-                                                                }
-                                                                className="w-5 h-auto"
-                                                            />
-                                                        )}
-                                                        <span>
+                                                        <span className="font-medium px-3">
                                                             {t(option.label)}
                                                         </span>
                                                     </div>
-                                                    {option.value === value && (
-                                                        <IconCheck
-                                                            size={12}
-                                                            className="text-purple-300 ml-2"
-                                                        />
-                                                    )}
+
+                                                    <input
+                                                        type="radio"
+                                                        checked={
+                                                            option.value ===
+                                                            value
+                                                        }
+                                                        readOnly
+                                                        tabIndex={-1}
+                                                        className="appearance-none w-4 h-4 rounded-full border-2 border-indigo-300/25 bg-[#1c1c28] relative cursor-pointer transition-colors duration-150 checked:border-indigo-300/80 group-hover:border-indigo-300 before:absolute before:inset-1 before:rounded-full before:bg-indigo-300/80 before:scale-0 checked:before:scale-200 before:transition-transform before:duration-150"
+                                                    />
                                                 </button>
                                             </li>
                                         );

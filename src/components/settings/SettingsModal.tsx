@@ -130,7 +130,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-20000 flex items-center justify-center bg-black/70"
+                    className="fixed inset-0 z-20000 flex items-center justify-center bg-black/85"
                     onClick={handleClose}
                     data-lenis-prevent
                 >
@@ -139,7 +139,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative w-[90%] max-w-4xl h-140 rounded-2xl bg-[#15151F] text-white shadow-2xl shadow-black/60 flex flex-col overflow-hidden"
+                        className="relative w-[90%] max-mobile:w-[94%] max-w-4xl h-150 max-h-[90dvh] rounded-2xl bg-[#15151F] text-white shadow-2xl shadow-black/60 flex flex-col overflow-hidden"
                     >
                         <input
                             ref={fileInputRef}
@@ -158,7 +158,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                             <IconX size={20} />
                         </button>
 
-                        <div className="flex items-center gap-3 px-6 pt-6 shrink-0">
+                        <div className="flex items-center gap-3 pl-6 pr-12 pt-6 max-mobile:pl-4 max-mobile:pt-4 shrink-0">
                             {currentStep === "reset" && (
                                 <button
                                     type="button"
@@ -169,7 +169,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                                     <IconChevronLeft size={22} />
                                 </button>
                             )}
-                            <h2 className="text-2xl font-bold font-body-condensed">
+                            <h2 className="text-2xl max-mobile:text-xl leading-tight font-bold font-body-condensed">
                                 {currentStep === "main" && t("settings.title")}
                                 {currentStep === "reset" &&
                                     t("settings.resetProgress.name")}
@@ -177,9 +177,9 @@ export default function SettingsModal({ open, onClose }: Props) {
                         </div>
 
                         <div
-                            className={`flex-1 min-h-0 w-full px-6 pb-6 ${
+                            className={`flex-1 min-h-0 w-full px-6 pb-6 max-mobile:px-3 max-mobile:pb-4 ${
                                 currentStep === "main"
-                                    ? "overflow-y-auto scroll-settings scroll-settings-mask"
+                                    ? "overflow-y-auto overflow-x-hidden scroll-settings scroll-settings-mask"
                                     : "overflow-hidden"
                             }`}
                             data-lenis-prevent
@@ -196,13 +196,13 @@ export default function SettingsModal({ open, onClose }: Props) {
                                         {settingsSections.map((section) => (
                                             <section
                                                 key={section.id}
-                                                className="flex flex-col mb-4"
+                                                className="flex flex-col mb-4 px-2 max-mobile:px-0"
                                             >
-                                                <h3 className="text-xs text-gray-300 tracking-wide pl-1 mt-4 mb-1.5 uppercase">
+                                                <h3 className="text-xs text-gray-300/80 tracking-wide pl-1 mt-4 first:mt-6 mb-1.5 uppercase">
                                                     {t(section.name)}
                                                 </h3>
 
-                                                <article className="flex flex-col gap-1.5">
+                                                <article className="flex flex-col gap-1">
                                                     {section.settings
                                                         .filter(
                                                             (setting) =>
