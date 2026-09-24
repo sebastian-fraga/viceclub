@@ -68,7 +68,7 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 | 🎨 Artworks     | ✅     |
 | 🛠️ Tools & mods | 🚧     |
 | 🏆 Achievements | 🚧     |
-| 🗺️ Map          | 🚧     |
+| 🗺️ Map          | ✅     |
 | 📻 Radio        | ✅     |
 | 🕒 Timeline     | ✅     |
 | 🎮 Cheats       | ✅     |
