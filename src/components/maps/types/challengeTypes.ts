@@ -20,6 +20,16 @@ export const CHALLENGE_TYPES = {
         label: "maps.markers.challenges.lcs.driveBys",
         singularLabel: "maps.markers.challenges.lcs.driveBy",
     },
+    underTheBridge: {
+        color: "#ff9d26",
+        label: "maps.markers.challenges.v.underTheBridgeChallenges",
+        singularLabel: "maps.markers.challenges.v.underTheBridge",
+    },
+    knifeFlights: {
+        color: "#44B8BE",
+        label: "maps.markers.challenges.v.knifeFlights",
+        singularLabel: "maps.markers.challenges.v.knifeFlight",
+    },
 } as const;
 
 export type ChallengeType = keyof typeof CHALLENGE_TYPES;

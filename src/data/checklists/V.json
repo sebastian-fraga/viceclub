@@ -882,7 +882,8 @@
                         "en": "50 Spaceship Parts",
                         "fr": "50 pièces de vaisseau spatial",
                         "pt": "50 partes de espaçonave"
-                    }
+                    },
+                    "mapSlug": "spaceshipParts"
                 },
                 {
                     "id": "col-02",
@@ -890,8 +891,9 @@
                         "es": "50 fragmentos de la carta",
                         "en": "50 Letter Scraps",
                         "fr": "50 morceaux de lettre",
-                        "pt": "50 fragmentos de cartas"
-                    }
+                        "pt": "50 fragmentos de carta"
+                    },
+                    "mapSlug": "letterScraps"
                 },
                 {
                     "id": "col-03",
@@ -900,7 +902,8 @@
                         "en": "25 Stunt Jumps",
                         "fr": "25 sauts uniques",
                         "pt": "25 saltos únicos"
-                    }
+                    },
+                    "mapSlug": "stuntJumps"
                 },
                 {
                     "id": "col-04",
@@ -909,7 +912,8 @@
                         "en": "25 Under the Bridge flights",
                         "fr": "25 \"Sous le pont\"",
                         "pt": "25 voos por baixo de pontes"
-                    }
+                    },
+                    "mapSlug": "underTheBridge"
                 },
                 {
                     "id": "col-05",
@@ -918,7 +922,8 @@
                         "en": "8 Knife flights",
                         "fr": "8 \"Vols sur la tranche\"",
                         "pt": "8 voos em faca"
-                    }
+                    },
+                    "mapSlug": "knifeFlights"
                 }
             ]
         },
