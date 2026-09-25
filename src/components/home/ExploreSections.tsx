@@ -186,12 +186,12 @@ export default function ExploreSections({ game, variantId }: Props) {
                             whileTap={isUnderConstruction ? undefined : "hover"}
                             className={`${pattern} ${
                                 mobileWide ? "col-span-2" : "col-span-1"
-                            } min-h-28 sm:min-h-0 group relative flex flex-col overflow-hidden rounded-md border p-4 gap-2 transition-colors max-mobile:p-3 ${
+                            } min-h-28 sm:min-h-0 group relative flex flex-col overflow-hidden rounded-md p-4 gap-2 transition-all duration-300 max-mobile:p-3 ${
                                 hasBadge ? "pt-12 max-mobile:pt-16 sm:pt-4" : ""
                             } ${
                                 isUnderConstruction
-                                    ? "cursor-not-allowed border-neutral-400/10 bg-neutral-900/50 opacity-55"
-                                    : "cursor-pointer border-neutral-600/50 hover:border-(--game-buttons-primary-hovered)/80 hover:bg-zinc-950/60 bg-neutral-950"
+                                    ? "cursor-not-allowed bg-(--button-bg)/40 opacity-55"
+                                    : "cursor-pointer bg-(--button-bg) hover:bg-(--button-bg-hover) hover:shadow-[0_6px_18px_-17px_var(--game-buttons-primary-hovered)]"
                             } ${
                                 isLarge
                                     ? "justify-end items-start text-left"
@@ -217,7 +217,7 @@ export default function ExploreSections({ game, variantId }: Props) {
                             )}
 
                             {isUnderConstruction && (
-                                <span className="absolute right-2 top-2 z-10 rounded-2xl border border-red-800/50 bg-red-950/40 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-red-300/80 max-mobile:text-[8px] flex items-center gap-2">
+                                <span className="absolute right-2 top-2 z-10 flex items-center gap-2 rounded-2xl bg-red-950/70 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-red-300 backdrop-blur-sm max-mobile:text-[8px]">
                                     <IconTools size={12} />
                                     {t("common.buttons.underConstruction")}
                                 </span>
@@ -359,7 +359,7 @@ export default function ExploreSections({ game, variantId }: Props) {
                                         duration: 0.2,
                                         ease: "easeOut",
                                     }}
-                                    className="relative flex items-center gap-2 overflow-hidden text-[11px] text-neutral-500 lowercase max-mobile:text-[10px]"
+                                    className="relative flex items-center gap-2 overflow-hidden text-[11px] text-neutral-500 lowercase max-mobile:text-[10px] group-hover:text-white/90"
                                 >
                                     {t("home.buttons.goToSection")}
                                     <IconArrowUpRight size={12} />

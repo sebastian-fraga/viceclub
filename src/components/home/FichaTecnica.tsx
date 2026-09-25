@@ -46,14 +46,14 @@ function CollapsibleRow({ label, children }: CollapsibleRowProps) {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="border-b border-neutral-400/10 last:border-none">
+        <div className="overflow-hidden rounded-lg bg-(--button-bg-hover)/40">
             <button
                 type="button"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
-                className="flex w-full items-center justify-between py-2 text-left cursor-pointer"
+                className="flex w-full cursor-pointer items-center justify-between px-3 py-2.5 text-left"
             >
-                <span className="text-sm font-thin text-neutral-300 max-mobile:text-xs">
+                <span className="shrink-0 text-neutral-300 text-base font-body-condensed">
                     {t(label)}
                 </span>
 
@@ -73,10 +73,10 @@ function CollapsibleRow({ label, children }: CollapsibleRowProps) {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <div className="pb-3">{children}</div>
+                        <div className="px-3 pb-3">{children}</div>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -94,8 +94,8 @@ function Row({
     const t = useT();
 
     return (
-        <div className="flex items-start justify-between gap-3 border-b border-neutral-400/10 py-1.5 max-mobile:gap-2">
-            <dt className="shrink-0 text-neutral-300 font-thin max-mobile:text-xs">
+        <div className="flex items-start justify-between gap-3 rounded-md bg-(--button-bg-hover)/40 px-3 py-2 max-mobile:gap-2">
+            <dt className="shrink-0 text-neutral-300 text-base font-body-condensed">
                 {t(label)}
             </dt>
 
@@ -108,7 +108,7 @@ function Row({
 
 function PlatformChip({ label }: { label: string }) {
     return (
-        <span className="rounded-full bg-neutral-100 px-4.5 py-1.5 text-sm font-bold text-neutral-800 max-mobile:px-2 mb-1 max-mobile:py-0.5 max-mobile:text-xs">
+        <span className="mb-1 rounded-full bg-neutral-100 px-4.5 py-1.5 text-sm font-bold text-neutral-800 max-mobile:px-2 max-mobile:py-0.5 max-mobile:text-xs">
             {label}
         </span>
     );
@@ -146,7 +146,7 @@ function AcronymBadge({ tag }: { tag: string }) {
     const labelKey = ACRONYM_TOOLTIPS[tag.toUpperCase()];
 
     const badge = (
-        <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded cursor-help">
+        <span className="cursor-help rounded bg-white/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/90">
             {tag}
         </span>
     );
@@ -168,7 +168,7 @@ function DateLine({
     const t = useT();
 
     return (
-        <span className="inline-flex items-center gap-1.5 text-sm text-neutral-400 max-mobile:text-[11px] pl-4">
+        <span className="inline-flex items-center gap-1.5 pl-4 text-sm text-neutral-400 max-mobile:text-[11px]">
             {t(date.key)}
             {date.tag && <AcronymBadge tag={date.tag} />}
         </span>
@@ -204,14 +204,14 @@ export default function TechSheet({
         >
             <Title label="home.titles.technicalSheet" align="left" />
 
-            <div className="mt-8 w-full max-w-lg rounded-2xl border border-white/20 bg-black/30 p-4 max-mobile:mt-5 max-mobile:p-3 shadow-2xl">
+            <div className="mt-8 w-full max-w-lg rounded-2xl bg-(--button-bg) p-4 shadow-2xl shadow-black/40 max-mobile:mt-5 max-mobile:p-3">
                 <img
                     src={`/assets/images/main/boxarts/portada_${variantId}.webp`}
                     alt={`Portada de ${title}🌴`}
-                    className="mx-auto mb-4 block w-full max-mobile:mb-3"
+                    className="mx-auto mb-4 block w-full rounded-lg max-mobile:mb-3"
                 />
 
-                <dl className="flex flex-col gap-0 text-sm">
+                <dl className="flex flex-col gap-1.5 text-sm">
                     <Row
                         label={
                             developers.length > 1
@@ -265,23 +265,25 @@ export default function TechSheet({
                     )}
                 </dl>
 
-                <CollapsibleRow label="home.technicalSheet.releaseDate">
-                    <div className="flex flex-col gap-5.5 mt-2">
-                        {dates.map((entry, i) => (
-                            <div key={i} className="flex flex-col gap-1">
-                                <div className="flex flex-wrap gap-1.5">
-                                    {entry.platforms.map((p) => (
-                                        <PlatformChip key={p} label={p} />
+                <div className="mt-1.5">
+                    <CollapsibleRow label="home.technicalSheet.releaseDate">
+                        <div className="mt-2 flex flex-col gap-5.5">
+                            {dates.map((entry, i) => (
+                                <div key={i} className="flex flex-col gap-1">
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {entry.platforms.map((p) => (
+                                            <PlatformChip key={p} label={p} />
+                                        ))}
+                                    </div>
+
+                                    {entry.dates.map((date) => (
+                                        <DateLine key={date.key} date={date} />
                                     ))}
                                 </div>
-
-                                {entry.dates.map((date) => (
-                                    <DateLine key={date.key} date={date} />
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </CollapsibleRow>
+                            ))}
+                        </div>
+                    </CollapsibleRow>
+                </div>
             </div>
         </motion.section>
     );
