@@ -217,7 +217,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                             <div className="flex flex-col gap-2 h-48 max-mobile:h-32 w-full items-center justify-center rounded-2xl border border-(--button-bg)/60 bg-(--button-bg-hover) text-sm text-white/40">
                                 <IconPhotoOff />
                                 <span>
-                                    {i18n("maps.markers.popup.notFoundImage")}
+                                    {i18n("common.other.notFoundImage")}
                                 </span>
                             </div>
                         )}

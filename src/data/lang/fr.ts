@@ -1210,7 +1210,6 @@ export default {
                 },
             },
             popup: {
-                notFoundImage: "Aucune image trouvée",
                 completed: "Terminé",
                 markAsCompleted: "Marquer comme terminé",
                 requirements: {
@@ -1515,6 +1514,9 @@ export default {
             closeSidebar: "Fermer la barre latérale",
             openMenu: "Ouvrir le menu",
             closeMenu: "Fermer le menu",
+        },
+        other: {
+            notFoundImage: "Aucune image trouvée",
         },
     },
 };
