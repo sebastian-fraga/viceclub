@@ -2,7 +2,7 @@ import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 
 import useT from "@/hooks/useT";
-import Title from "../ui/Title";
+import Title from "../../ui/Title";
 
 const GAMES = [
     { id: "III", name: "GTA III" },
