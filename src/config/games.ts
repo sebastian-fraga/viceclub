@@ -91,13 +91,13 @@ export const SECTIONS_METADATA: Record<SectionId, SectionMeta> = {
 };
 
 export const UNFINISHED_SECTIONS: Partial<Record<GameId, SectionId[]>> = {
-    III: ["herramientas-y-mods", "logros"],
-    VC: ["herramientas-y-mods", "logros"],
-    SA: ["herramientas-y-mods", "logros"],
+    III: ["logros"],
+    VC: ["logros"],
+    SA: ["logros"],
     LCS: [],
     VCS: [],
-    IV: ["herramientas-y-mods", "logros"],
-    V: ["herramientas-y-mods", "logros"],
+    IV: ["logros"],
+    V: ["logros"],
 };
 
 export const gamesList: { id: GameId; name: string; fullName: string }[] = [
