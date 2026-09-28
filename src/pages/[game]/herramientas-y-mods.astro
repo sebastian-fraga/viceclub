@@ -1,24 +1,25 @@
 ---
-import UnderConstruction from "@/components/404/UnderConstruction";
+import ModsContainer from "@/components/mods/ModsContainer";
+
 import type { GameId } from "@/config/games";
-import { games } from "../../data/games";
-import { seo } from "../../data/seo";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import { games } from "@/data/games";
+import { GAME_MODS } from "@/data/mods";
+import { seo } from "@/data/seo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(seo)
-        .filter(([, pages]) => pages?.["herramientas-y-mods"])
-        .map(([game]) => ({
-            params: { game },
-            props: {
-                gameData: games[game as GameId],
-            },
-        }));
+    return Object.entries(GAME_MODS).map(([game]) => ({
+        params: { game },
+        props: {
+            gameData: games[game as GameId],
+        },
+    }));
 }
 
-const game = Astro.params.game as GameId;
-const gameData = games[game];
-const pageSeo = seo[game]?.["herramientas-y-mods"];
+const game = Astro.params.game as keyof typeof GAME_MODS;
+const gameData = games[game as GameId];
+const modsData = GAME_MODS[game];
+const pageSeo = seo[game as GameId]?.["herramientas-y-mods"];
 ---
 
 <BaseLayout
@@ -29,7 +30,10 @@ const pageSeo = seo[game]?.["herramientas-y-mods"];
     canonical={`https://www.viceclub.app/${game}/herramientas-y-mods`}
     game={gameData}
 >
-    <main class="flex min-h-screen flex-col items-center justify-center">
-        <UnderConstruction client:load gameId={game} />
+    <main
+        class="ml-0 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-12 md:ml-(--sidebar-width) md:gap-45"
+        style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
+    >
+        <ModsContainer client:load gameId={game} mods={modsData.mods} />
     </main>
 </BaseLayout>

@@ -58,7 +58,7 @@ body {
     }
 }
 
-.scroll-settings, .scroll-sidebar {
+.scroll-settings, .scroll-sidebar, .scroll-mod {
     --sb-track-color: #1c222525;
     --sb-thumb-color: #9a9a9a5e;
     --sb-size: 4px;
