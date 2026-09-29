@@ -1094,6 +1094,27 @@ export default {
             screenshots: "Capturas de pantalla",
         },
     },
+    mods: {
+        title: "Herramientas y mods para {{fullName}}",
+        seeMod: "Ver mod",
+        createdBy: "Creado por",
+        categories: {
+            all: "Todos",
+            essentials: "Esenciales",
+            utils: "Utilidades",
+            gameplay: "Jugabilidad",
+            graphics: "Gráficos",
+            totalConversion: "Conversión total",
+            other: "Otros",
+        },
+        modal: {
+            requirements: "Requisitos",
+            install: "Instalación",
+            screenshots: "Capturas",
+            moreInfo: "Más información",
+            download: "Descargar",
+        },
+    },
     maps: {
         title: "Mapa interactivo de {{fullName}}",
         markers: {
