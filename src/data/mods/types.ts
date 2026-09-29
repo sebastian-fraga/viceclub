@@ -1,25 +1,31 @@
+import type { MaybeLocalizedText } from "@/types/localizedText";
 import type { ModCategoryId } from "./categories";
 
 export interface ModInstallStep {
-    title: string;
-    description: string;
+    title: MaybeLocalizedText;
+    description: MaybeLocalizedText;
 }
 
 export interface ModEntry {
     id: string;
     title: string;
     category: ModCategoryId;
-    shortDescription: string;
-    description: string;
+    shortDescription: MaybeLocalizedText;
+    description: MaybeLocalizedText;
     version?: string;
     author: string | string[];
-    requirements?: string[];
+    requirements?: ModRequirementsData;
     installSteps: ModInstallStep[];
     coverImage: string;
     screenshots: string[];
     moreInfoUrl: string;
     downloadUrl: string;
     isFeatured?: boolean;
+}
+
+export interface ModRequirementsData {
+    gameVersion?: string;
+    mods?: string[];
 }
 
 export interface GameModsFile {

@@ -1,5 +1,6 @@
 import ModCategory from "@/components/mods/ModCategory";
 import type { ModEntry } from "@/data/mods/types";
+import { useLocalizedText } from "@/hooks/useLocalizedText";
 import useT from "@/hooks/useT";
 
 interface Props {
@@ -9,18 +10,19 @@ interface Props {
 
 export default function FeaturedMod({ mod, onSelect }: Props) {
     const i18n = useT();
+    const localizedText = useLocalizedText();
     return (
         <>
             <article className="min-h-100 grid grid-cols-2 shadow-2xl shadow-(color:--button-bg)/20 rounded-3xl">
                 <div className="flex flex-col pl-12 pt-12 pb-10 gap-4 bg-(--button-bg) rounded-l-3xl">
                     <span className="text-(--game-accent) text-sm font-medium">
-                        Destacado🌴
+                        {i18n("common.other.featured")}
                     </span>
                     <h3 className="text-3xl font-body-condensed">
                         {mod.title}
                     </h3>
                     <span className="max-w-110 text-pretty text-white/85 font-thin">
-                        {mod.shortDescription}
+                        {localizedText(mod.shortDescription)}
                     </span>
                     <div className="mt-auto">
                         <button

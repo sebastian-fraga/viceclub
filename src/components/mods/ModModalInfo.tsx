@@ -1,5 +1,6 @@
 import ModCategory from "@/components/mods/ModCategory";
 import type { ModEntry } from "@/data/mods/types";
+import { useLocalizedText } from "@/hooks/useLocalizedText";
 
 import { IconUser, IconVersions } from "@tabler/icons-react";
 
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export default function ModModalInfo({ mod }: Props) {
+    const localizedText = useLocalizedText();
     return (
         <div className="flex flex-col gap-4">
             <div className="flex flex-col items-start gap-2">
@@ -42,9 +44,12 @@ export default function ModModalInfo({ mod }: Props) {
                 </div>
             </div>
 
-            <span className="text-gray-200/90 text-sm/6.5 max-w-180 text-pretty ml-1">
-                {mod.description}
-            </span>
+            <span
+                className="text-gray-200/90 text-sm/6.5 max-w-180 text-pretty ml-1"
+                dangerouslySetInnerHTML={{
+                    __html: localizedText(mod.description),
+                }}
+            ></span>
         </div>
     );
 }
