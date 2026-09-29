@@ -1,26 +1,19 @@
-import { MOD_CATEGORIES } from "@/data/mods/categories";
+import ModCategory from "@/components/mods/ModCategory";
 import type { ModEntry } from "@/data/mods/types";
-import useT from "@/hooks/useT";
-import { IconTag, IconUser, IconVersions } from "@tabler/icons-react";
+
+import { IconUser, IconVersions } from "@tabler/icons-react";
 
 interface Props {
     mod: ModEntry;
 }
 
 export default function ModModalInfo({ mod }: Props) {
-    const i18n = useT();
-    const modCategory = MOD_CATEGORIES[mod.category];
     return (
         <div className="flex flex-col gap-4">
             <div className="flex flex-col items-start gap-2">
                 <div className="flex w-full justify-between items-center">
                     <p className="font-body-condensed text-4xl">{mod.title}</p>
-                    <div className="flex items-center text-indigo-200 font-medium gap-1.5 bg-(--button-bg) px-4 py-1.5 rounded-full">
-                        <IconTag size={14} stroke={2.5} />
-                        <span className="text-xs">
-                            {i18n(modCategory.label)}
-                        </span>
-                    </div>
+                    <ModCategory mod={mod} />
                 </div>
                 <div className="flex gap-4 justify-end text-xs text-slate-200/80">
                     {mod.version && (
@@ -39,7 +32,11 @@ export default function ModModalInfo({ mod }: Props) {
                             stroke={2.5}
                             className="text-(--game-accent)"
                         />
-                        <span className="font-medium">{mod.author} </span>
+                        <span className="font-medium">
+                            {Array.isArray(mod.author)
+                                ? mod.author.join(", ")
+                                : mod.author}{" "}
+                        </span>
                     </div>
                     <div></div>
                 </div>

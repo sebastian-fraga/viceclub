@@ -1,3 +1,4 @@
+import ModCategory from "@/components/mods/ModCategory";
 import type { ModEntry } from "@/data/mods/types";
 import useT from "@/hooks/useT";
 
@@ -7,13 +8,13 @@ interface Props {
 }
 
 export default function FeaturedMod({ mod, onSelect }: Props) {
-    const i18n = useT()
+    const i18n = useT();
     return (
         <>
             <article className="min-h-100 grid grid-cols-2 shadow-2xl shadow-(color:--button-bg)/20 rounded-3xl">
                 <div className="flex flex-col pl-12 pt-12 pb-10 gap-4 bg-(--button-bg) rounded-l-3xl">
                     <span className="text-(--game-accent) text-sm font-medium">
-                        Destacado
+                        Destacado🌴
                     </span>
                     <h3 className="text-3xl font-body-condensed">
                         {mod.title}
@@ -30,7 +31,11 @@ export default function FeaturedMod({ mod, onSelect }: Props) {
                         </button>
                     </div>
                 </div>
-                <div className="bg-radial-[at_-40%_-40%] from-(--game-accent)/40 to-50% to-(--button-bg-hover)/30 rounded-r-3xl"></div>
+                <div className="bg-radial-[at_-40%_-40%] from-(--game-accent)/40 to-50% to-(--button-bg-hover)/30 rounded-r-3xl relative">
+                    <div className="absolute top-6 right-6">
+                        <ModCategory mod={mod} />
+                    </div>
+                </div>
             </article>
         </>
     );
