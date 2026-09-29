@@ -373,10 +373,10 @@ const mods: GameModsFile = {
                 pt: "Permite instalar e remover mods facilmente, sem modificar os arquivos originais do jogo",
             },
             description: {
-                es: "Herramienta que permite cargar mods en GTA Vice City de forma simple y segura. En lugar de reemplazar los archivos del juego, el plugin carga automáticamente los mods colocados en la carpeta <code>modloader</code>. Para quitarlos, basta con eliminarlos de esa carpeta, y el juego original permanece intacto.",
-                en: "A tool that allows mods to be loaded in GTA Vice City in a simple and safe way. Instead of replacing the game's files, the plugin automatically loads any mods placed in the <code>modloader</code> folder. To remove them, they simply need to be deleted from that folder, and the original game remains untouched.",
-                fr: "Un outil qui permet de charger des mods dans GTA Vice City de façon simple et sûre. Au lieu de remplacer les fichiers du jeu, le plugin charge automatiquement les mods placés dans le dossier <code>modloader</code>. Pour les retirer, il suffit de les supprimer de ce dossier, et le jeu d'origine reste intact.",
-                pt: "Uma ferramenta que permite carregar mods no GTA Vice City de forma simples e segura. Em vez de substituir os arquivos do jogo, o plugin carrega automaticamente os mods colocados na pasta <code>modloader</code>. Para removê-los, basta apagá-los dessa pasta, e o jogo original permanece intacto.",
+                es: "Herramienta que permite cargar mods en GTA Vice City de forma simple y segura. En lugar de reemplazar los archivos del juego, el plugin carga automáticamente los mods colocados en la carpeta <code>modloader/</code>. Para quitarlos, basta con eliminarlos de esa carpeta, y el juego original permanece intacto.",
+                en: "A tool that allows mods to be loaded in GTA Vice City in a simple and safe way. Instead of replacing the game's files, the plugin automatically loads any mods placed in the <code>modloader/</code> folder. To remove them, they simply need to be deleted from that folder, and the original game remains untouched.",
+                fr: "Un outil qui permet de charger des mods dans GTA Vice City de façon simple et sûre. Au lieu de remplacer les fichiers du jeu, le plugin charge automatiquement les mods placés dans le dossier <code>modloader/</code>. Pour les retirer, il suffit de les supprimer de ce dossier, et le jeu d'origine reste intact.",
+                pt: "Uma ferramenta que permite carregar mods no GTA Vice City de forma simples e segura. Em vez de substituir os arquivos do jogo, o plugin carrega automaticamente os mods colocados na pasta <code>modloader/</code>. Para removê-los, basta apagá-los dessa pasta, e o jogo original permanece intacto.",
             },
             version: "0.3.10",
             author: ["thelink2012"],
@@ -434,10 +434,10 @@ const mods: GameModsFile = {
                         pt: "Mover os arquivos",
                     },
                     description: {
-                        es: "Colocar el archivo <code>modloader.asi</code> dentro de la carpeta <code>scripts/</code> y la carpeta <code>modloader</code> en la carpeta raíz del juego.",
-                        en: "Place the <code>modloader.asi</code> file inside the <code>scripts/</code> folder, and the <code>modloader</code> folder in the game's root folder.",
-                        fr: "Placer le fichier <code>modloader.asi</code> dans le dossier <code>scripts/</code> et le dossier <code>modloader</code> dans le dossier racine du jeu.",
-                        pt: "Coloque o arquivo <code>modloader.asi</code> dentro da pasta <code>scripts/</code> e a pasta <code>modloader</code> na pasta raiz do jogo.",
+                        es: "Colocar el archivo <code>modloader.asi</code> dentro de la carpeta <code>scripts/</code> y la carpeta <code>modloader/</code> en la carpeta raíz del juego.",
+                        en: "Place the <code>modloader.asi</code> file inside the <code>scripts/</code> folder, and the <code>modloader/</code> folder in the game's root folder.",
+                        fr: "Placer le fichier <code>modloader.asi</code> dans le dossier <code>scripts/</code> et le dossier <code>modloader/</code> dans le dossier racine du jeu.",
+                        pt: "Coloque o arquivo <code>modloader.asi</code> dentro da pasta <code>scripts/</code> e a pasta <code>modloader/</code> na pasta raiz do jogo.",
                     },
                 },
             ],
@@ -537,10 +537,24 @@ const mods: GameModsFile = {
             id: "skygfx",
             title: "SkyGFX",
             category: "graphics",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Lleva a la versión de PC de Vice City los gráficos de PS2 y elementos visuales de Xbox",
+                en: "Brings PS2 graphics and Xbox visual features to the PC version of Vice City",
+                fr: "Apporte à la version PC de Vice City les graphismes de la PS2 et des éléments visuels de la Xbox",
+                pt: "Traz para a versão de PC do Vice City os gráficos do PS2 e elementos visuais do Xbox",
+            },
+            description: {
+                es: "Mod que acerca el apartado gráfico de la versión de PC de GTA Vice City al de las consolas. Reproduce con fidelidad el aspecto de PS2 y suma elementos de la versión de Xbox, como reflejos más detallados en los vehículos y una iluminación de contorno en los personajes. Todas las funciones pueden activarse, desactivarse y ajustarse desde un archivo de configuración.",
+                en: "A mod that brings the graphics of the PC version of GTA Vice City closer to those of the consoles. It faithfully reproduces the look of the PS2 version and adds elements from the Xbox version, such as more detailed reflections on vehicles and rim lighting on characters. All features can be enabled, disabled, and adjusted from a configuration file.",
+                fr: "Mod qui rapproche les graphismes de la version PC de GTA Vice City de ceux des consoles. Il reproduit fidèlement l'aspect de la version PS2 et ajoute des éléments de la version Xbox, comme des reflets plus détaillés sur les véhicules et un éclairage de contour sur les personnages. Toutes les fonctions peuvent être activées, désactivées et ajustées depuis un fichier de configuration.",
+                pt: "Mod que aproxima o visual da versão de PC do GTA Vice City ao dos consoles. Reproduz com fidelidade o aspecto da versão de PS2 e adiciona elementos da versão de Xbox, como reflexos mais detalhados nos veículos e uma iluminação de contorno nos personagens. Todas as funções podem ser ativadas, desativadas e ajustadas a partir de um arquivo de configuração.",
+            },
             version: "3.0b",
             author: ["aap"],
+            requirements: {
+                gameVersion: "1.0",
+                mods: ["ultimate-asi-loader"],
+            },
             installSteps: [
                 {
                     title: "",
@@ -551,7 +565,7 @@ const mods: GameModsFile = {
             screenshots: ["", "", ""],
             moreInfoUrl:
                 "https://gtaforums.com/topic/750681-skygfx-ps2-xbox-and-mobile-graphics-for-pc/",
-            downloadUrl: "",
+            downloadUrl: "https://github.com/aap/skygfx_vc/releases/",
         },
         {
             id: "ginput",
