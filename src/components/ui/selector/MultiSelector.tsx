@@ -1,4 +1,5 @@
 import DropdownSelector from "@/components/ui/selector/DropdownSelector";
+import useT from "@/hooks/useT";
 import type { ComponentType, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -27,7 +28,7 @@ export interface MultiSelectorProps<
     selectedPrimaryId: T1;
     selectedSecondaryId?: T2;
     onSelectPrimary: (id: T1) => void;
-    onSelectSecondary: (id: T2) => void;
+    onSelectSecondary?: (id: T2) => void;
     className?: string;
 }
 
@@ -41,7 +42,8 @@ export function MultiSelector<
     onSelectPrimary,
     onSelectSecondary,
 }: MultiSelectorProps<T1, T2>) {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
+    const i18n = useT();
     const activePrimary = options.find(
         (option) => option.id === selectedPrimaryId,
     );
@@ -55,7 +57,7 @@ export function MultiSelector<
 
     return (
         <div className="flex flex-col gap-4 w-full">
-            <div className="flex flex-wrap gap-3 max-mobile:gap-2">
+            <div className="flex flex-wrap gap-3 max-mobile:flex-nowrap max-mobile:gap-2 max-mobile:overflow-x-auto max-mobile:px-1 max-mobile:py-1">
                 {options.map((option) => {
                     const isSelected = option.id === selectedPrimaryId;
 
@@ -64,13 +66,13 @@ export function MultiSelector<
                             key={option.id}
                             type="button"
                             onClick={() => onSelectPrimary(option.id)}
-                            className={`flex items-center gap-5 max-mobile:gap-3 px-10 max-mobile:px-5 py-4 max-mobile:py-2.5 rounded-full transition-all cursor-pointer select-none text-xl max-mobile:text-base font-bold ${
+                            className={`flex items-center gap-5 max-mobile:gap-3 px-6 max-mobile:px-5 py-4 max-mobile:py-2.5 rounded-full transition-all cursor-pointer select-none whitespace-nowrap max-mobile:shrink-0 text-xl max-mobile:text-base font-bold ${
                                 isSelected
                                     ? "bg-(--game-accent) text-(--game-buttons-primary-text) shadow-md shadow-yellow-500/10 scale-[1.02]"
                                     : "hover:text-(--game-accent)"
                             }`}
                         >
-                            <span>{option.label}</span>
+                            <span>{i18n(option.label)}</span>
                         </button>
                     );
                 })}
@@ -83,7 +85,7 @@ export function MultiSelector<
                             placeholder={t("common.buttons.selectPlatform")}
                             options={activePrimary.subOptions}
                             selectedOption={activeSecondary}
-                            onSelect={onSelectSecondary}
+                            onSelect={(id) => onSelectSecondary?.(id)}
                             disabled={activePrimary.subOptions.length === 1}
                         />
                     </div>
