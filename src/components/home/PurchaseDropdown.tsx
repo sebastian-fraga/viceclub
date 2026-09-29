@@ -403,7 +403,7 @@ export default function PurchaseDropdown({
                                                 <IconMoodPuzzled className="text-white/80" />
                                                 <span className="text-white">
                                                     {t(
-                                                        "home.buttons.notAvailable",
+                                                        "common.other.notAvailable",
                                                     )}
                                                 </span>
                                             </div>

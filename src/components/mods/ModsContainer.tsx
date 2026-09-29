@@ -76,8 +76,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                         <div className="flex flex-col justify-center items-center gap-4 bg-(--button-bg)/80 py-20 rounded-2xl">
                             <IconMoodPuzzled />
                             <p>
-                                No hay mods para esta categoría. Pero los habrá
-                                pronto.
+                                {i18n("common.other.notAvailable")}
                             </p>
                         </div>
                     )}

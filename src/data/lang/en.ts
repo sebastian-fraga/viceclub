@@ -89,7 +89,6 @@ export default {
     home: {
         buttons: {
             purchase: "Buy now",
-            notAvailable: "No content available",
             trailers: "Watch trailers",
             goToSection: "Go to section",
         },
@@ -1538,6 +1537,7 @@ export default {
         other: {
             featured: "Featured",
             notFoundImage: "No image found",
+            notAvailable: "No content available",
         },
     },
 };

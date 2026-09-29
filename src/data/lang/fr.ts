@@ -89,7 +89,6 @@ export default {
     home: {
         buttons: {
             purchase: "Acheter",
-            notAvailable: "Aucun contenu disponible",
             trailers: "Voir les bandes-annonces",
             goToSection: "Aller à la section",
         },
@@ -1540,6 +1539,7 @@ export default {
         other: {
             featured: "En vedette",
             notFoundImage: "Aucune image trouvée",
+            notAvailable: "Aucun contenu disponible",
         },
     },
 };
