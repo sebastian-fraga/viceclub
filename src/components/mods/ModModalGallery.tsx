@@ -12,17 +12,22 @@ export default function ModModalGallery({ screenshots }: Props) {
             <span className="font-body-condensed text-2xl">
                 {i18n("mods.modal.screenshots")}
             </span>
-            <div className="grid grid-cols-3 gap-2">
-                {screenshots.map((screenshot) => (
-                    <div key={screenshot} className="py-4">
+            <div className="grid grid-cols-3 max-mobile:grid-cols-1 gap-2">
+                {screenshots.map((screenshot, index) => (
+                    <div
+                        key={`${index}-${screenshot}`}
+                        className="py-4 max-mobile:py-1"
+                    >
                         {screenshot ? (
                             <img
                                 src={screenshot}
-                                alt="🌴"
-                                className="aspect-video"
+                                alt={`${i18n("mods.modal.screenshots")} ${index + 1}`}
+                                loading="lazy"
+                                decoding="async"
+                                className="aspect-video w-full rounded-2xl object-cover"
                             />
                         ) : (
-                            <div className="aspect-video flex flex-col gap-2 w-full items-center justify-center rounded-2xl bg-(--button-bg) bg-linear-to-br from-(--button-bg) via-(--button-bg-hover)/40 to-(--button-bg-hover) text-xs text-slate-300/80 h-40">
+                            <div className="aspect-video flex w-full flex-col items-center justify-center gap-2 rounded-2xl bg-(--button-bg) bg-linear-to-br from-(--button-bg) via-(--button-bg-hover)/40 to-(--button-bg-hover) text-xs text-slate-300/80">
                                 <IconPhotoOff />
                                 <span>
                                     {i18n("common.other.notFoundImage")}

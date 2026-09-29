@@ -54,7 +54,6 @@ export default function ModModal({
         };
     }, [open]);
 
-    // Al saltar a otro mod (desde un requisito), volver al inicio del contenido
     useEffect(() => {
         scrollRef.current?.scrollTo({ top: 0 });
     }, [mod.id]);
@@ -100,7 +99,7 @@ export default function ModModal({
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="mod-dialog min-w-200 mx-auto bg-[#14141e] my-auto text-white shadow-2xl rounded-2xl pb-4"
+            className="mod-dialog w-full max-w-200 max-mobile:max-w-[95vw] max-h-[90dvh] max-mobile:max-h-[95dvh] open:flex open:flex-col mx-auto my-auto bg-[#14141e] text-white shadow-2xl rounded-2xl pb-4 overflow-hidden"
             data-lenis-prevent
         >
             <button
@@ -113,12 +112,12 @@ export default function ModModal({
             </button>
             <div
                 ref={scrollRef}
-                className="relative flex max-h-[70vh] flex-col gap-6 overflow-y-scroll scroll-mod"
+                className="relative flex flex-1 min-h-0 flex-col gap-6 overflow-y-scroll scroll-mod"
             >
-                <div className="min-h-50 bg-slate-900/50"></div>
+                <div className="min-h-50 max-mobile:min-h-32 bg-slate-900/50"></div>
                 <div
                     key={mod.id}
-                    className="px-12 pt-4 pb-12 flex flex-col gap-8"
+                    className="px-12 pt-4 pb-12 flex flex-col gap-8 max-mobile:px-4"
                 >
                     <ModModalInfo mod={mod} />
                     <div className="px-2 pb-12 flex flex-col gap-8">
@@ -148,7 +147,7 @@ export default function ModModal({
                     </div>
                 </div>
             </div>
-            <div className="flex items-center justify-end px-12 pt-3 pb-3">
+            <div className="flex shrink-0 items-center justify-end px-12 max-mobile:px-4 pt-3 pb-3">
                 <ModModalButtons
                     moreInfoUrl={mod.moreInfoUrl}
                     downloadUrl={mod.downloadUrl}

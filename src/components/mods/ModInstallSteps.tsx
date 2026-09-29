@@ -23,9 +23,9 @@ export default function ModInstallSteps({ installSteps }: Props) {
                                 {localizedText(step.title)}
                             </span>
                             <span
-                                className="text-[14px] text-white/70"
+                                className="text-[14px] text-white/70 wrap-break-word"
                                 dangerouslySetInnerHTML={{
-                                    __html: (localizedText(step.description)),
+                                    __html: localizedText(step.description),
                                 }}
                             />
                         </div>

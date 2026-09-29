@@ -51,7 +51,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-col gap-8 w-full max-w-6xl mx-auto px-4 text-white"
+                className="flex flex-col gap-8 w-full max-w-6xl mx-auto px-4 text-white max-mobile:gap-8"
             >
                 <div className="mb-12 mt-6 max-w-fit">
                     <Title

@@ -1,4 +1,4 @@
-import type { ModEntry, ModRequirementsData } from "@/data/mods/types"; // ajustá la ruta
+import type { ModEntry, ModRequirementsData } from "@/data/mods/types";
 import useT from "@/hooks/useT";
 import { IconArrowUpRight, IconDeviceGamepad2 } from "@tabler/icons-react";
 
@@ -13,7 +13,7 @@ const CHIP_BASE =
 
 const VERSION_CHIP = `${CHIP_BASE} bg-white/5 text-slate-300 cursor-default`;
 
-const MOD_CHIP = `${CHIP_BASE} group bg-(--button-bg) text-indigo-100 cursor-pointer transition-[filter] hover:brightness-125 focus-visible:outline-2 focus-visible:outline-indigo-300`;
+const MOD_CHIP = `${CHIP_BASE} bg-(--button-bg) text-indigo-100 cursor-pointer transition-[filter] hover:brightness-125 focus-visible:outline-2 focus-visible:outline-indigo-300`;
 
 export default function ModRequirements({
     requirements,
@@ -49,9 +49,7 @@ export default function ModRequirements({
                         className={MOD_CHIP}
                     >
                         {mod.title}
-                        <IconArrowUpRight
-                            size={14}
-                        />
+                        <IconArrowUpRight size={14} />
                     </button>
                 ))}
             </div>
