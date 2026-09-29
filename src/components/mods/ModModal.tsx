@@ -5,6 +5,7 @@ import ModModalInfo from "@/components/mods/ModModalInfo";
 import ModRequirements from "@/components/mods/ModRequirements";
 import type { ModEntry } from "@/data/mods/types";
 import { IconX } from "@tabler/icons-react";
+import { motion, useIsPresent } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface Props {
@@ -15,12 +16,11 @@ interface Props {
 
 export default function ModModal({ open, onClose, mod }: Props) {
     const dialogRef = useRef<HTMLDialogElement>(null);
+    const isPresent = useIsPresent();
 
     useEffect(() => {
         if (open) {
             dialogRef.current?.showModal();
-        } else {
-            dialogRef.current?.close();
         }
     }, [open]);
 
@@ -59,11 +59,30 @@ export default function ModModal({ open, onClose, mod }: Props) {
     }
 
     return (
-        <dialog
+        <motion.dialog
             ref={dialogRef}
-            onClose={onClose}
+            onCancel={(event) => {
+                event.preventDefault();
+                onClose();
+            }}
             onClick={handleClick}
-            className="min-w-200 mx-auto bg-[#14141e] my-auto backdrop:bg-black/50 text-white shadow-2xl rounded-2xl"
+            data-closing={!isPresent}
+            variants={{
+                visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+                },
+                hidden: {
+                    opacity: 0,
+                    y: 24,
+                    transition: { duration: 0.3, ease: "easeIn" },
+                },
+            }}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="mod-dialog min-w-200 mx-auto bg-[#14141e] my-auto text-white shadow-2xl rounded-2xl"
             data-lenis-prevent
         >
             <button
@@ -78,20 +97,28 @@ export default function ModModal({ open, onClose, mod }: Props) {
                 <div className="min-h-50 bg-slate-900/50"></div>
                 <div className="px-12 pt-4 pb-12 flex flex-col gap-8">
                     <ModModalInfo mod={mod} />
-                    {mod.requirements && (
+                    <div className="px-2 pb-12 flex flex-col gap-8">
+                        {mod.requirements && (
+                            <div className="flex flex-col gap-4">
+                                <ModRequirements
+                                    requirements={mod.requirements}
+                                />
+                            </div>
+                        )}
                         <div className="flex flex-col gap-4">
-                            <ModRequirements requirements={mod.requirements} />
+                            {mod.installSteps && (
+                                <ModInstallSteps
+                                    installSteps={mod.installSteps}
+                                />
+                            )}
                         </div>
-                    )}
-                    <div className="flex flex-col gap-4">
-                        {mod.installSteps && (
-                            <ModInstallSteps installSteps={mod.installSteps} />
-                        )}
-                    </div>
-                    <div className="flex flex-col gap-4">
-                        {mod.screenshots && (
-                            <ModModalGallery screenshots={mod.screenshots} />
-                        )}
+                        <div className="flex flex-col gap-4">
+                            {mod.screenshots && (
+                                <ModModalGallery
+                                    screenshots={mod.screenshots}
+                                />
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,6 +128,6 @@ export default function ModModal({ open, onClose, mod }: Props) {
                     downloadUrl={mod.downloadUrl}
                 />
             </div>
-        </dialog>
+        </motion.dialog>
     );
 }

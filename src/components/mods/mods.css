@@ -4,3 +4,19 @@ code {
     @apply bg-(--button-bg) rounded-2xl px-2 mx-px py-0.75 text-indigo-200 tracking-wider;
     font-family: var(--font-body-condensed);
 }
+
+dialog.mod-dialog::backdrop {
+    background: rgb(0 0 0 / 0.5);
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+@starting-style {
+    dialog.mod-dialog::backdrop {
+        opacity: 0;
+    }
+}
+
+dialog.mod-dialog[data-closing="true"]::backdrop {
+    opacity: 0;
+}
