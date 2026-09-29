@@ -5,15 +5,30 @@ import { IconTag } from "@tabler/icons-react";
 
 interface Props {
     mod: ModEntry;
+    compact?: boolean;
+    className?: string;
 }
 
-export default function ModCategory({ mod }: Props) {
+export default function ModCategory({
+    mod,
+    compact = false,
+    className = "",
+}: Props) {
     const i18n = useT();
     const modCategory = MOD_CATEGORIES[mod.category];
+
+    if (!modCategory) return null;
+
     return (
-        <div className="flex items-center text-indigo-200 font-medium gap-1.5 bg-(--button-bg-hover) px-4 py-1.5 rounded-full">
-            <IconTag size={14} stroke={2.5} />
-            <span className="text-xs">{i18n(modCategory.label)}</span>
+        <div
+            className={`flex items-center text-indigo-200 font-medium gap-1.5 bg-(--button-bg-hover) rounded-full ${
+                compact ? "px-3 py-1" : "px-4 py-1.5"
+            } ${className}`}
+        >
+            <IconTag size={compact ? 12 : 14} stroke={2.5} />
+            <span className={compact ? "text-[11px]" : "text-xs"}>
+                {i18n(modCategory.label)}
+            </span>
         </div>
     );
 }
