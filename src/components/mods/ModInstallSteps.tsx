@@ -17,11 +17,11 @@ export default function ModInstallSteps({ installSteps }: Props) {
                 {installSteps.map((step, index) => (
                     <li key={index}>
                         <div className="flex flex-col gap-0.5 ml-2">
-                            <span className="text-[15px] font-black">
+                            <span className="text-[16px] font-black">
                                 {step.title}
                             </span>
                             <span
-                                className="text-[12px] text-white/70"
+                                className="text-[14px] text-white/70"
                                 dangerouslySetInnerHTML={{
                                     __html: step.description,
                                 }}
