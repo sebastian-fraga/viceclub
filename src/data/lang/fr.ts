@@ -1108,6 +1108,7 @@ export default {
             other: "Autres",
         },
         modal: {
+            gameVersion: "Version",
             requirements: "Prérequis",
             install: "Installation",
             screenshots: "Captures d’écran",
@@ -1537,6 +1538,7 @@ export default {
             closeMenu: "Fermer le menu",
         },
         other: {
+            featured: "En vedette",
             notFoundImage: "Aucune image trouvée",
         },
     },
