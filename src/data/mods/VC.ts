@@ -6,7 +6,7 @@ const mods: GameModsFile = {
         {
             id: "silent-patch",
             title: "Silent Patch",
-            category: "utils",
+            category: "essentials",
             shortDescription:
                 "Parche de correcciones que mejora la estabilidad, compatibilidad y funcionamiento de GTA Vice City sin alterar su versión original",
             description:
@@ -50,7 +50,7 @@ const mods: GameModsFile = {
         {
             id: "widescreen-fix",
             title: "Widescreen Fix",
-            category: "utils",
+            category: "essentials",
             shortDescription:
                 "Añade compatibilidad adecuada con pantallas panorámicas y ultrapanorámicas",
             description:
@@ -88,6 +88,196 @@ const mods: GameModsFile = {
             moreInfoUrl: "https://fusionfix.io/wfp#gtavc",
             downloadUrl:
                 "https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavc",
+        },
+        {
+            id: "tightened-vice",
+            title: "Tightened Vice",
+            category: "totalConversion",
+            shortDescription: "",
+            description: "",
+            version: "2.5",
+            author: ["_Rob_"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl: "",
+            downloadUrl: "",
+        },
+        {
+            id: "mod-loader",
+            title: "Mod Loader",
+            category: "essentials",
+            shortDescription: "",
+            description: "",
+            version: "0.3.10",
+            author: ["thelink2012"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl: "",
+            downloadUrl: "",
+        },
+        {
+            id: "framerate-vigilante",
+            title: "Framerate Vigilante",
+            category: "essentials",
+            shortDescription: "",
+            description: "",
+            author: ["JuniorDjjr"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl:
+                "https://www.mixmods.com.br/2022/08/iii-vc-sa-framerate-vigilante/",
+            downloadUrl: "",
+        },
+        {
+            id: "skygfx",
+            title: "SkyGFX",
+            category: "graphics",
+            shortDescription: "",
+            description: "",
+            version: "3.0b",
+            author: ["aap"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl:
+                "https://gtaforums.com/topic/750681-skygfx-ps2-xbox-and-mobile-graphics-for-pc/",
+            downloadUrl: "",
+        },
+        {
+            id: "ginput",
+            title: "GInput",
+            category: "essentials",
+            shortDescription: "",
+            description: "",
+            author: ["Silent"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl: "",
+            downloadUrl: "",
+        },
+        {
+            id: "magic-txd",
+            title: "Magic.TXD",
+            category: "utils",
+            shortDescription: "",
+            description: "",
+            author: ["DK22Pac", "The_GTA"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl: "",
+            downloadUrl: "",
+        },
+        {
+            id: "renderhook",
+            title: "RenderHook",
+            category: "graphics",
+            shortDescription: "",
+            description: "",
+            author: ["PetkaGTA"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl: "",
+            downloadUrl: "",
+        },
+        {
+            id: "project2dfx",
+            title: "Project2DFX",
+            category: "graphics",
+            shortDescription: "",
+            description: "",
+            author: ["ThirteenAG"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl:
+                "https://github.com/ThirteenAG/III.VC.SA.IV.Project2DFX/releases/tag/gtavc",
+            downloadUrl: "",
+        },
+        {
+            id: "mixsets",
+            title: "MixSets",
+            category: "gameplay",
+            shortDescription: "",
+            description: "",
+            version: "1.0.3",
+            author: ["Junior_Djjr"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl:
+                "https://www.mixmods.com.br/2021/04/vc-mixsets-v1-0-3/",
+            downloadUrl: "",
+        },
+        {
+            id: "open-limit-adjuster",
+            title: "Open Limit Adjuster",
+            category: "essentials",
+            shortDescription: "",
+            description: "",
+            version: "1.7",
+            author: ["LINK/2012", "ThirteenAG", "Blackbird88"],
+            installSteps: [
+                {
+                    title: "",
+                    description: "",
+                },
+            ],
+            coverImage: "",
+            screenshots: ["", "", ""],
+            moreInfoUrl:
+                "https://www.mixmods.com.br/2022/10/open-limit-adjuster/",
+            downloadUrl: "",
         },
     ],
 };
