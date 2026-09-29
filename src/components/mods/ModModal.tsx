@@ -12,11 +12,24 @@ interface Props {
     open: boolean;
     onClose: () => void;
     mod: ModEntry;
+    allMods: ModEntry[];
+    onSelectMod: (id: string) => void;
 }
 
-export default function ModModal({ open, onClose, mod }: Props) {
+export default function ModModal({
+    open,
+    onClose,
+    mod,
+    allMods,
+    onSelectMod,
+}: Props) {
     const dialogRef = useRef<HTMLDialogElement>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
     const isPresent = useIsPresent();
+
+    const hasRequirements =
+        !!mod.requirements?.gameVersion ||
+        (mod.requirements?.mods?.length ?? 0) > 0;
 
     useEffect(() => {
         if (open) {
@@ -40,6 +53,11 @@ export default function ModModal({ open, onClose, mod }: Props) {
             body.style.touchAction = "";
         };
     }, [open]);
+
+    // Al saltar a otro mod (desde un requisito), volver al inicio del contenido
+    useEffect(() => {
+        scrollRef.current?.scrollTo({ top: 0 });
+    }, [mod.id]);
 
     function handleClick(event: React.MouseEvent<HTMLDialogElement>) {
         const rect = dialogRef.current?.getBoundingClientRect();
@@ -82,7 +100,7 @@ export default function ModModal({ open, onClose, mod }: Props) {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            className="mod-dialog min-w-200 mx-auto bg-[#14141e] my-auto text-white shadow-2xl rounded-2xl"
+            className="mod-dialog min-w-200 mx-auto bg-[#14141e] my-auto text-white shadow-2xl rounded-2xl pb-4"
             data-lenis-prevent
         >
             <button
@@ -93,15 +111,23 @@ export default function ModModal({ open, onClose, mod }: Props) {
             >
                 <IconX size={20} />
             </button>
-            <div className="relative flex max-h-[70vh] flex-col gap-6 overflow-y-scroll scroll-mod">
+            <div
+                ref={scrollRef}
+                className="relative flex max-h-[70vh] flex-col gap-6 overflow-y-scroll scroll-mod"
+            >
                 <div className="min-h-50 bg-slate-900/50"></div>
-                <div className="px-12 pt-4 pb-12 flex flex-col gap-8">
+                <div
+                    key={mod.id}
+                    className="px-12 pt-4 pb-12 flex flex-col gap-8"
+                >
                     <ModModalInfo mod={mod} />
                     <div className="px-2 pb-12 flex flex-col gap-8">
-                        {mod.requirements && (
+                        {hasRequirements && (
                             <div className="flex flex-col gap-4">
                                 <ModRequirements
                                     requirements={mod.requirements}
+                                    allMods={allMods}
+                                    onSelectMod={onSelectMod}
                                 />
                             </div>
                         )}

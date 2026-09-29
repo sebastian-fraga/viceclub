@@ -18,7 +18,7 @@ interface Props {
 }
 
 export default function ModsContainer({ gameId, mods }: Props) {
-    const [selectedMod, setSelectedMod] = useState<ModEntry | null>(null);
+    const [selectedModId, setSelectedModId] = useState<string | null>(null);
 
     const [selectedCategory, setSelectedCategory] = useState<
         ModCategoryId | "all"
@@ -32,12 +32,18 @@ export default function ModsContainer({ gameId, mods }: Props) {
     const i18n = useT();
     const gameInfo = gamesList.find((item) => item.id === gameId);
 
+    const selectedMod = mods.find((mod) => mod.id === selectedModId) ?? null;
+
     const featuredMod = mods.find((mod) => mod.isFeatured);
     const normalMods = mods.filter(
         (mod) =>
             !mod.isFeatured &&
             (selectedCategory === "all" || selectedCategory === mod.category),
     );
+
+    function handleSelectMod(mod: ModEntry) {
+        setSelectedModId(mod.id);
+    }
 
     return (
         <>
@@ -55,7 +61,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                     />
                 </div>
                 {featuredMod && (
-                    <FeaturedMod mod={featuredMod} onSelect={setSelectedMod} />
+                    <FeaturedMod mod={featuredMod} onSelect={handleSelectMod} />
                 )}
                 <div className="mt-12 mb-2">
                     <MultiSelector<ModCategoryId | "all">
@@ -65,7 +71,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                     />
                 </div>
                 <div className="">
-                    <ModsGrid mods={normalMods} onSelect={setSelectedMod} />
+                    <ModsGrid mods={normalMods} onSelect={handleSelectMod} />
                     {normalMods.length === 0 && (
                         <div className="flex flex-col justify-center items-center gap-4 bg-(--button-bg)/80 py-20 rounded-2xl">
                             <IconMoodPuzzled />
@@ -82,8 +88,10 @@ export default function ModsContainer({ gameId, mods }: Props) {
                     {selectedMod && (
                         <ModModal
                             open={true}
-                            onClose={() => setSelectedMod(null)}
+                            onClose={() => setSelectedModId(null)}
                             mod={selectedMod}
+                            allMods={mods}
+                            onSelectMod={setSelectedModId}
                         />
                     )}
                 </AnimatePresence>
