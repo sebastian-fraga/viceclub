@@ -1,7 +1,8 @@
 export const MOD_CATEGORIES = {
+    essentials: { id: "essentials", label: "mods.categories.essentials" },
     utils: { id: "utils", label: "mods.categories.utils" },
-    trainers: { id: "trainers", label: "mods.categories.trainers" },
-    scripts: { id: "scripts", label: "mods.categories.scripts" },
+    gameplay: { id: "gameplay", label: "mods.categories.gameplay" },
+    graphics: { id: "graphics", label: "mods.categories.graphics" },
     totalConversion: {
         id: "totalConversion",
         label: "mods.categories.totalConversion",
