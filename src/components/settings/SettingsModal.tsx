@@ -21,6 +21,8 @@ import {
     importAllLocalStorage,
     readFileAsText,
 } from "@/utils/localStorageBackup";
+
+import openPageInProduction from "@/utils/openPageInProduction";
 import SettingItem, { type SettingStatusMessage } from "./SettingItem";
 
 interface Props {
@@ -56,6 +58,9 @@ export default function SettingsModal({ open, onClose }: Props) {
                 break;
             case "import-localstorage":
                 fileInputRef.current?.click();
+                break;
+            case "open-page-production":
+                openPageInProduction();
                 break;
         }
     };
@@ -193,93 +198,101 @@ export default function SettingsModal({ open, onClose }: Props) {
                                         exit={{ opacity: 0, x: -20 }}
                                         transition={{ duration: 0.15 }}
                                     >
-                                        {settingsSections.map((section) => (
-                                            <section
-                                                key={section.id}
-                                                className="flex flex-col mb-4 px-2 max-mobile:px-0"
-                                            >
-                                                <h3 className="text-xs text-gray-300/80 tracking-wide pl-1 mt-4 first:mt-6 mb-1.5 uppercase">
-                                                    {t(section.name)}
-                                                </h3>
+                                        {settingsSections
+                                            .filter(
+                                                (section) =>
+                                                    !(
+                                                        import.meta.env.PROD &&
+                                                        section.hideOnProduction
+                                                    ),
+                                            )
+                                            .map((section) => (
+                                                <section
+                                                    key={section.id}
+                                                    className="flex flex-col mb-4 px-2 max-mobile:px-0"
+                                                >
+                                                    <h3 className="text-xs text-gray-300/80 tracking-wide pl-1 mt-4 first:mt-6 mb-1.5 uppercase">
+                                                        {t(section.name)}
+                                                    </h3>
 
-                                                <article className="flex flex-col gap-1">
-                                                    {section.settings
-                                                        .filter(
-                                                            (setting) =>
-                                                                !(
-                                                                    isMobile &&
-                                                                    setting.hideOnMobile
-                                                                ),
-                                                        )
-                                                        .map((setting) => {
-                                                            const platformFamily =
-                                                                settings[
-                                                                    "platform-family"
-                                                                ] as
-                                                                    | PlatformFamily
-                                                                    | "default";
+                                                    <article className="flex flex-col gap-1">
+                                                        {section.settings
+                                                            .filter(
+                                                                (setting) =>
+                                                                    !(
+                                                                        isMobile &&
+                                                                        setting.hideOnMobile
+                                                                    ),
+                                                            )
+                                                            .map((setting) => {
+                                                                const platformFamily =
+                                                                    settings[
+                                                                        "platform-family"
+                                                                    ] as
+                                                                        | PlatformFamily
+                                                                        | "default";
 
-                                                            const options =
-                                                                setting.id ===
-                                                                "platform"
-                                                                    ? getPlatformOptions(
-                                                                          platformFamily,
-                                                                      )
-                                                                    : undefined;
+                                                                const options =
+                                                                    setting.id ===
+                                                                    "platform"
+                                                                        ? getPlatformOptions(
+                                                                              platformFamily,
+                                                                          )
+                                                                        : undefined;
 
-                                                            const statusMessage =
-                                                                actionStatus?.id ===
-                                                                setting.id
-                                                                    ? {
-                                                                          text: actionStatus.text,
-                                                                          variant:
-                                                                              actionStatus.variant,
-                                                                      }
-                                                                    : undefined;
+                                                                const statusMessage =
+                                                                    actionStatus?.id ===
+                                                                    setting.id
+                                                                        ? {
+                                                                              text: actionStatus.text,
+                                                                              variant:
+                                                                                  actionStatus.variant,
+                                                                          }
+                                                                        : undefined;
 
-                                                            return (
-                                                                <SettingItem
-                                                                    key={
-                                                                        setting.id
-                                                                    }
-                                                                    setting={
-                                                                        setting
-                                                                    }
-                                                                    value={
-                                                                        settings[
+                                                                return (
+                                                                    <SettingItem
+                                                                        key={
+                                                                            setting.id
+                                                                        }
+                                                                        setting={
                                                                             setting
-                                                                                .id
-                                                                        ]
-                                                                    }
-                                                                    onChange={(
-                                                                        value,
-                                                                    ) =>
-                                                                        setSetting(
-                                                                            setting.id,
+                                                                        }
+                                                                        value={
+                                                                            settings[
+                                                                                setting
+                                                                                    .id
+                                                                            ]
+                                                                        }
+                                                                        onChange={(
                                                                             value,
-                                                                        )
-                                                                    }
-                                                                    onAction={
-                                                                        handleAction
-                                                                    }
-                                                                    options={
-                                                                        options
-                                                                    }
-                                                                    disabled={
-                                                                        setting.id ===
-                                                                            "platform" &&
-                                                                        platformFamily ===
-                                                                            "default"
-                                                                    }
-                                                                    statusMessage={
-                                                                        statusMessage
-                                                                    }
-                                                                />
-                                                            );
-                                                        })}
-                                                </article>
-                                            </section>
-                                        ))}
+                                                                        ) =>
+                                                                            setSetting(
+                                                                                setting.id,
+                                                                                value,
+                                                                            )
+                                                                        }
+                                                                        onAction={
+                                                                            handleAction
+                                                                        }
+                                                                        options={
+                                                                            options
+                                                                        }
+                                                                        disabled={
+                                                                            setting.id ===
+                                                                                "platform" &&
+                                                                            platformFamily ===
+                                                                                "default"
+                                                                        }
+                                                                        statusMessage={
+                                                                            statusMessage
+                                                                        }
+                                                                    />
+                                                                );
+                                                            })}
+                                                    </article>
+                                                </section>
+                                            ))}
                                     </motion.div>
                                 ) : (
                                     <motion.div

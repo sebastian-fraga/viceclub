@@ -39,6 +39,7 @@ export type Setting =
 export type SettingsSection = {
     id: string;
     name: string;
+    hideOnProduction?: boolean;
     settings: Setting[];
 };
 

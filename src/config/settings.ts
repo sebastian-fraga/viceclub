@@ -1,5 +1,6 @@
 import {
     IconAccessible,
+    IconBrowserPlus,
     IconCalendar,
     IconClock,
     IconDeviceGamepad,
@@ -168,6 +169,19 @@ export const settingsConfig: SettingsSection[] = [
                     },
                 ],
             },
+        ],
+    },
+    {
+        id: "dev",
+        name: "settings.sections.dev.title",
+        hideOnProduction: true,
+        settings: [
+            {
+                id: "open-page-production",
+                name: "settings.sections.dev.openPage",
+                type: "action",
+                icon: IconBrowserPlus,
+            } satisfies ActionSetting,
         ],
     },
 ];
