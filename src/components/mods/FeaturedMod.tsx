@@ -1,14 +1,16 @@
 import ModCategory from "@/components/mods/ModCategory";
+import type { GameId } from "@/config/games";
 import type { ModEntry } from "@/data/mods/types";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import useT from "@/hooks/useT";
 
 interface Props {
+    gameId: GameId;
     mod: ModEntry;
     onSelect: (mod: ModEntry) => void;
 }
 
-export default function FeaturedMod({ mod, onSelect }: Props) {
+export default function FeaturedMod({ gameId, mod, onSelect }: Props) {
     const i18n = useT();
     const localizedText = useLocalizedText();
 
@@ -36,6 +38,20 @@ export default function FeaturedMod({ mod, onSelect }: Props) {
             </div>
 
             <div className="relative bg-radial-[at_-40%_-40%] from-(--game-accent)/40 to-50% to-(--button-bg-hover)/30 max-mobile:min-h-40">
+                {mod.coverImage ? (
+                    <img
+                        src={mod.coverImage}
+                        alt={mod.title}
+                        className="absolute inset-0 size-full object-cover"
+                    />
+                ) : (
+                    <img
+                        src={`/assets/images/games/${gameId}/hero.webp`}
+                        alt={mod.title}
+                        className="absolute inset-0 size-full object-cover"
+                    />
+                )}
+
                 <div className="absolute top-6 right-6">
                     <ModCategory mod={mod} />
                 </div>

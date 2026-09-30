@@ -3,12 +3,14 @@ import ModModalButtons from "@/components/mods/ModModalButtons";
 import ModModalGallery from "@/components/mods/ModModalGallery";
 import ModModalInfo from "@/components/mods/ModModalInfo";
 import ModRequirements from "@/components/mods/ModRequirements";
+import type { GameId } from "@/config/games";
 import type { ModEntry } from "@/data/mods/types";
 import { IconX } from "@tabler/icons-react";
 import { motion, useIsPresent } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface Props {
+    gameId: GameId;
     open: boolean;
     onClose: () => void;
     mod: ModEntry;
@@ -17,6 +19,7 @@ interface Props {
 }
 
 export default function ModModal({
+    gameId,
     open,
     onClose,
     mod,
@@ -114,7 +117,21 @@ export default function ModModal({
                 ref={scrollRef}
                 className="relative flex flex-1 min-h-0 flex-col gap-6 overflow-y-scroll scroll-mod"
             >
-                <div className="min-h-50 max-mobile:min-h-32 bg-slate-900/50"></div>
+                <div className="min-h-50 max-mobile:min-h-32 bg-slate-900/50 relative">
+                    {mod.coverImage ? (
+                        <img
+                            src={mod.coverImage}
+                            alt={mod.title}
+                            className="absolute inset-0 size-full object-cover"
+                        />
+                    ) : (
+                        <img
+                            src={`/assets/images/games/${gameId}/hero.webp`}
+                            alt={mod.title}
+                            className="absolute inset-0 size-full object-cover"
+                        />
+                    )}
+                </div>
                 <div
                     key={mod.id}
                     className="px-12 pt-4 pb-12 flex flex-col gap-8 max-mobile:px-4"

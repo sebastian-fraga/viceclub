@@ -61,7 +61,11 @@ export default function ModsContainer({ gameId, mods }: Props) {
                     />
                 </div>
                 {featuredMod && (
-                    <FeaturedMod mod={featuredMod} onSelect={handleSelectMod} />
+                    <FeaturedMod
+                        gameId={gameId}
+                        mod={featuredMod}
+                        onSelect={handleSelectMod}
+                    />
                 )}
                 <div className="mt-12 mb-2">
                     <MultiSelector<ModCategoryId | "all">
@@ -75,9 +79,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                     {normalMods.length === 0 && (
                         <div className="flex flex-col justify-center items-center gap-4 bg-(--button-bg)/80 py-20 rounded-2xl">
                             <IconMoodPuzzled />
-                            <p>
-                                {i18n("common.other.notAvailable")}
-                            </p>
+                            <p>{i18n("common.other.notAvailable")}</p>
                         </div>
                     )}
                 </div>
@@ -86,6 +88,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                 <AnimatePresence>
                     {selectedMod && (
                         <ModModal
+                            gameId={gameId}
                             open={true}
                             onClose={() => setSelectedModId(null)}
                             mod={selectedMod}
