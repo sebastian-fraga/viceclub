@@ -3,6 +3,7 @@ import type { ModEntry } from "@/data/mods/types";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import useT from "@/hooks/useT";
 import { IconArrowUpRight, IconUser } from "@tabler/icons-react";
+import { flushSync } from "react-dom";
 
 interface Props {
     mod: ModEntry;
@@ -13,10 +14,32 @@ export default function ModCard({ mod, onSelect }: Props) {
     const i18n = useT();
     const localizedText = useLocalizedText();
 
+    function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
+        const card = e.currentTarget;
+
+        const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (!document.startViewTransition || reduceMotion) {
+            onSelect(mod);
+            return;
+        }
+
+        card.style.viewTransitionName = "mod-dialog";
+
+        const transition = document.startViewTransition(() => {
+            flushSync(() => onSelect(mod));
+            card.style.viewTransitionName = "";
+        });
+
+        transition.ready.catch((err) => console.error("VT ready failed:", err));
+    }
+
     return (
         <button
             className="group bg-(--button-bg)/80 rounded-2xl p-6 min-h-48 max-w-110 hover:bg-(--button-bg-hover) cursor-pointer transition-colors duration-400 shadow-2xl shadow-(color:--button-bg)/15 flex flex-col text-left focus-visible:outline-2 focus-visible:outline-(--game-accent)"
-            onClick={() => onSelect(mod)}
+            onClick={handleClick}
         >
             <div className="flex flex-col gap-4 flex-1">
                 <div className="flex items-start justify-between gap-3">

@@ -8,7 +8,7 @@ code {
 dialog.mod-dialog::backdrop {
     background: rgb(0 0 0 / 0.5);
     opacity: 1;
-    transition: opacity 0.1s ease;
+    transition: opacity 0.3s ease;
 }
 
 @starting-style {
@@ -19,4 +19,16 @@ dialog.mod-dialog::backdrop {
 
 dialog.mod-dialog[data-closing="true"]::backdrop {
     opacity: 0;
+}
+
+::view-transition-group(mod-dialog) {
+    animation-duration: 0.45s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 16px;
+    overflow: clip;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.45s;
 }

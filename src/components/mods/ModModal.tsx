@@ -7,7 +7,7 @@ import type { GameId } from "@/config/games";
 import type { ModEntry } from "@/data/mods/types";
 import { IconX } from "@tabler/icons-react";
 import { motion, useIsPresent } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 
 interface Props {
     gameId: GameId;
@@ -17,6 +17,9 @@ interface Props {
     allMods: ModEntry[];
     onSelectMod: (id: string) => void;
 }
+
+const supportsVT =
+    typeof document !== "undefined" && "startViewTransition" in document;
 
 export default function ModModal({
     gameId,
@@ -34,7 +37,7 @@ export default function ModModal({
         !!mod.requirements?.gameVersion ||
         (mod.requirements?.mods?.length ?? 0) > 0;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (open) {
             dialogRef.current?.showModal();
         }
@@ -87,6 +90,7 @@ export default function ModModal({
             }}
             onClick={handleClick}
             data-closing={!isPresent}
+            style={{ viewTransitionName: "mod-dialog" }}
             variants={{
                 visible: {
                     opacity: 1,
@@ -99,7 +103,7 @@ export default function ModModal({
                     transition: { duration: 0.3, ease: "easeIn" },
                 },
             }}
-            initial="hidden"
+            initial={supportsVT ? false : "hidden"}
             animate="visible"
             exit="hidden"
             className="mod-dialog w-full max-w-200 max-mobile:max-w-[95vw] max-h-[90dvh] max-mobile:max-h-[95dvh] open:flex open:flex-col mx-auto my-auto bg-[#14141e] text-white shadow-2xl rounded-2xl pb-4 overflow-hidden"
