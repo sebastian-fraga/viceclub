@@ -70,13 +70,13 @@ export default function FeaturedMod({ gameId, mod, onSelect }: Props) {
                     <img
                         src={mod.coverImage}
                         alt={mod.title}
-                        className="absolute inset-0 size-full object-cover"
+                        className="absolute inset-0 size-full object-cover object-right"
                     />
                 ) : (
                     <img
                         src={`/assets/images/games/${gameId}/hero.webp`}
                         alt={mod.title}
-                        className="absolute inset-0 size-full object-cover"
+                        className="absolute inset-0 size-full object-cover object-right"
                     />
                 )}
 
