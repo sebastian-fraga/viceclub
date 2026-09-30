@@ -1142,8 +1142,8 @@ export default {
                     redBalloon: "Globo rojo",
                 },
                 iv: {
-                    flyingRats: "Ratos voadores",
-                    flyingRat: "Rato voador",
+                    flyingRats: "Ratas voladoras",
+                    flyingRat: "Rata voladora",
                     seagulls: "Gaviotas",
                     seagull: "Gaviota",
                 },
