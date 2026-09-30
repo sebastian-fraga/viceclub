@@ -1,7 +1,7 @@
+import useT from "@/hooks/useT";
 import type { Game } from "@/types/game";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import useT from "@/hooks/useT";
 import Title from "../ui/Title";
 import { Tooltip } from "../ui/Tooltip";
 
@@ -18,6 +18,9 @@ interface TechSheetProps {
     engines: string[];
     sales?: string;
 }
+
+const LABEL_STYLES =
+    "text-[11px] font-semibold uppercase tracking-wide text-neutral-300/85 max-mobile:text-[10px]";
 
 function ChevronIcon() {
     return (
@@ -51,11 +54,9 @@ function CollapsibleRow({ label, children }: CollapsibleRowProps) {
                 type="button"
                 onClick={() => setOpen((prev) => !prev)}
                 aria-expanded={open}
-                className="flex w-full cursor-pointer items-center justify-between px-3 py-2.5 text-left"
+                className="flex w-full cursor-pointer items-center justify-between px-3 py-3 text-left"
             >
-                <span className="shrink-0 text-neutral-300 text-base font-body-condensed">
-                    {t(label)}
-                </span>
+                <span className={`shrink-0 ${LABEL_STYLES}`}>{t(label)}</span>
 
                 <motion.span
                     animate={{ rotate: open ? 180 : 0 }}
@@ -94,12 +95,10 @@ function Row({
     const t = useT();
 
     return (
-        <div className="flex items-start justify-between gap-3 rounded-md bg-(--button-bg-hover)/40 px-3 py-2 max-mobile:gap-2">
-            <dt className="shrink-0 text-neutral-300 text-base font-body-condensed">
-                {t(label)}
-            </dt>
+        <div className="flex items-start justify-between gap-3 rounded-md bg-(--button-bg-hover)/40 px-3 py-2.5 max-mobile:gap-2">
+            <dt className={`shrink-0 pt-1 ${LABEL_STYLES}`}>{t(label)}</dt>
 
-            <dd className="text-right font-bold max-mobile:text-xs">
+            <dd className="text-right text-base font-bold leading-snug text-neutral-50 max-mobile:text-sm">
                 {children}
             </dd>
         </div>
@@ -108,7 +107,7 @@ function Row({
 
 function PlatformChip({ label }: { label: string }) {
     return (
-        <span className="mb-1 rounded-full bg-neutral-100 px-4.5 py-1.5 text-sm font-bold text-neutral-800 max-mobile:px-2 max-mobile:py-0.5 max-mobile:text-xs">
+        <span className="rounded-full bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) px-5 py-1 text-sm font-body-condensed max-mobile:px-4 max-mobile:text-[14px]">
             {label}
         </span>
     );
@@ -146,7 +145,7 @@ function AcronymBadge({ tag }: { tag: string }) {
     const labelKey = ACRONYM_TOOLTIPS[tag.toUpperCase()];
 
     const badge = (
-        <span className="cursor-help rounded bg-white/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/90">
+        <span className="cursor-help rounded bg-white/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/90">
             {tag}
         </span>
     );
@@ -168,10 +167,25 @@ function DateLine({
     const t = useT();
 
     return (
-        <span className="inline-flex items-center gap-1.5 pl-4 text-sm text-neutral-400 max-mobile:text-[11px]">
+        <span className="inline-flex items-center gap-2 text-sm font-medium tabular-nums text-neutral-100 max-mobile:text-xs">
             {t(date.key)}
             {date.tag && <AcronymBadge tag={date.tag} />}
         </span>
+    );
+}
+
+function SalesValue({ value }: { value: string }) {
+    const { text, tag } = parseTag(value);
+
+    return (
+        <>
+            <span className="text-(--game-accent)">{text}</span>
+            {tag && (
+                <span className="block text-xs font-medium text-neutral-300">
+                    {tag}
+                </span>
+            )}
+        </>
     );
 }
 
@@ -261,24 +275,34 @@ export default function TechSheet({
                     </Row>
 
                     {sales && (
-                        <Row label="home.technicalSheet.sales">{t(sales)}</Row>
+                        <Row label="home.technicalSheet.sales">
+                            <SalesValue value={t(sales)} />
+                        </Row>
                     )}
                 </dl>
 
                 <div className="mt-1.5">
                     <CollapsibleRow label="home.technicalSheet.releaseDate">
-                        <div className="mt-2 flex flex-col gap-5.5">
+                        <div className="mt-2 flex flex-col gap-5">
                             {dates.map((entry, i) => (
-                                <div key={i} className="flex flex-col gap-1">
+                                <div
+                                    key={i}
+                                    className="flex flex-col gap-2 pl-3"
+                                >
                                     <div className="flex flex-wrap gap-1.5">
                                         {entry.platforms.map((p) => (
                                             <PlatformChip key={p} label={p} />
                                         ))}
                                     </div>
 
-                                    {entry.dates.map((date) => (
-                                        <DateLine key={date.key} date={date} />
-                                    ))}
+                                    <div className="flex flex-col gap-1">
+                                        {entry.dates.map((date) => (
+                                            <DateLine
+                                                key={date.key}
+                                                date={date}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
