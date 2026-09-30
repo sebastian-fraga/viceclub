@@ -156,63 +156,77 @@
             {
                 "id": "vi-m-02",
                 "caption": {
-                    "es": "Colaboración con artistas 01",
-                    "en": "Collaboration with artists 01",
-                    "fr": "Collaboration avec des artistes 01",
-                    "pt": "Colaboração com artistas 01"
+                    "es": "Jason y Lucia (The Album)",
+                    "en": "Jason and Lucia (The Album)",
+                    "fr": "Jason et Lucia (The Album)",
+                    "pt": "Jason e Lucia (The Album)"
                 }
             },
             {
                 "id": "vi-m-03",
                 "caption": {
-                    "es": "Colaboración con artistas 02",
-                    "en": "Collaboration with artists 02",
-                    "fr": "Collaboration avec des artistes 02",
-                    "pt": "Colaboração com artistas 02"
+                    "es": "Jason y Lucia (Game Informer)",
+                    "en": "Jason and Lucia (Game Informer)",
+                    "fr": "Jason et Lucia (Game Informer)",
+                    "pt": "Jason e Lucia (Game Informer)"
                 }
             },
             {
                 "id": "vi-m-04",
                 "caption": {
-                    "es": "Colaboración con artistas 03",
-                    "en": "Collaboration with artists 03",
-                    "fr": "Collaboration avec des artistes 03",
-                    "pt": "Colaboração com artistas 03"
+                    "es": "The Album - Artistas 01",
+                    "en": "The Album - Artists 01",
+                    "fr": "The Album - Artistes 01",
+                    "pt": "The Album - Artistas 01"
                 }
             },
             {
                 "id": "vi-m-05",
                 "caption": {
-                    "es": "Colaboración con artistas 04",
-                    "en": "Collaboration with artists 04",
-                    "fr": "Collaboration avec des artistes 04",
-                    "pt": "Colaboração com artistas 04"
+                    "es": "The Album - Artistas 02",
+                    "en": "The Album - Artists 02",
+                    "fr": "The Album - Artistes 02",
+                    "pt": "The Album - Artistas 02"
                 }
             },
             {
                 "id": "vi-m-06",
                 "caption": {
-                    "es": "Colaboración con artistas 05",
-                    "en": "Collaboration with artists 05",
-                    "fr": "Collaboration avec des artistes 05",
-                    "pt": "Colaboração com artistas 05"
+                    "es": "The Album - Artistas 03",
+                    "en": "The Album - Artists 03",
+                    "fr": "The Album - Artistes 03",
+                    "pt": "The Album - Artistas 03"
                 }
             },
             {
                 "id": "vi-m-07",
                 "caption": {
-                    "es": "Colaboración con artistas 06",
-                    "en": "Collaboration with artists 06",
-                    "fr": "Collaboration avec des artistes 06",
-                    "pt": "Colaboração com artistas 06"
+                    "es": "The Album - Artistas 04",
+                    "en": "The Album - Artists 04",
+                    "fr": "The Album - Artistes 04",
+                    "pt": "The Album - Artistas 04"
                 }
             },
             {
                 "id": "vi-m-08",
-                "caption": "The Album"
+                "caption": {
+                    "es": "The Album - Artistas 05",
+                    "en": "The Album - Artists 05",
+                    "fr": "The Album - Artistes 05",
+                    "pt": "The Album - Artistas 05"
+                }
             },
             {
                 "id": "vi-m-09",
+                "caption": {
+                    "es": "The Album - Artistas 06",
+                    "en": "The Album - Artists 06",
+                    "fr": "The Album - Artistes 06",
+                    "pt": "The Album - Artistas 06"
+                }
+            },
+            {
+                "id": "vi-m-10",
                 "caption": {
                     "es": "The Album - Vinilo de edición limitada",
                     "en": "The Album - Limited-Edition Vinyl",
@@ -221,7 +235,7 @@
                 }
             },
             {
-                "id": "vi-m-10",
+                "id": "vi-m-11",
                 "caption": {
                     "es": "The Album - Vinilo",
                     "en": "The Album - Vinyl",
@@ -230,7 +244,7 @@
                 }
             },
             {
-                "id": "vi-m-11",
+                "id": "vi-m-12",
                 "caption": "The Album - CD"
             }
         ]
@@ -1340,6 +1354,116 @@
                     "en": "Vintage Vice City Weapon Pattern",
                     "fr": "Motif d'arme Vintage Vice City",
                     "pt": "Padronagem de arma de Vintage Vice City"
+                }
+            }
+        ],
+        "gameInformer": [
+            {
+                "id": "vi-gi-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vi-gi-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vi-gi-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vi-gi-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "vi-gi-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "vi-gi-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "vi-gi-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "vi-gi-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "vi-gi-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "vi-gi-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "vi-gi-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "vi-gi-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
                 }
             }
         ]
