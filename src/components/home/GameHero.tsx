@@ -88,7 +88,7 @@ export default function GameHero({ game, variantId, onVariantChange }: Props) {
                     </div>
 
                     <div className="flex min-w-0 flex-1 flex-col items-start gap-4 max-mobile:gap-2 ">
-                        <h1 className="px-1 text-3xl font-black tracking-wide text-pretty max-mobile:text-lg/5">
+                        <h1 className="px-1 text-3xl font-black tracking-wide text-pretty max-mobile:text-base/5">
                             {title}
                         </h1>
 
