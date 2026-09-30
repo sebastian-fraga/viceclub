@@ -18,7 +18,7 @@ function AccordionItem({
 }: React.ComponentProps<typeof AccordionPrimitive.Item>) {
     return (
         <AccordionPrimitive.Item
-            className={cn("border-b last:border-b-0", className)}
+            className={cn("", className)}
             data-slot="accordion-item"
             {...props}
         />
@@ -31,10 +31,16 @@ function AccordionTrigger({
     ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
     return (
-        <AccordionPrimitive.Header className="flex">
+        <AccordionPrimitive.Header className="flex my-4">
             <AccordionPrimitive.Trigger
                 className={cn(
-                    "flex flex-1 items-center justify-between gap-4 rounded-md py-4 text-left font-semibold text-sm outline-none transition-all hover:underline focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180 group",
+                    "group flex flex-1 cursor-pointer items-center justify-between gap-4 rounded-full px-5 py-4 text-left font-semibold text-sm outline-none",
+                    "bg-(--button-bg)/40 shadow-2xl shadow-(color:--button-bg)/20",
+                    "transition-colors duration-400 hover:bg-(--button-bg-hover)/70",
+                    "data-[state=open]:bg-(--button-bg-hover)",
+                    "focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
+                    "disabled:pointer-events-none disabled:opacity-50",
+                    "[&[data-state=open]>svg]:rotate-180",
                     className,
                 )}
                 data-slot="accordion-trigger"
@@ -43,7 +49,7 @@ function AccordionTrigger({
                 {children}
                 <IconChevronDown
                     aria-hidden="true"
-                    className="pointer-events-none shrink-0 opacity-60 transition-all duration-200     group-hover:opacity-100"
+                    className="pointer-events-none shrink-0 opacity-60 transition-all duration-200 group-hover:opacity-100"
                     size={16}
                 />
             </AccordionPrimitive.Trigger>

@@ -115,7 +115,7 @@ export default function FaqAccordion() {
         <div className="space-y-6 mt-6">
             {sections.map((section) => (
                 <div key={section.title}>
-                    <h2 className="mb-4 text-2xl font-bold">
+                    <h2 className="mb-8 text-2xl font-bold">
                         {t(section.title)}
                     </h2>
 
@@ -128,21 +128,21 @@ export default function FaqAccordion() {
                             <AccordionItem
                                 key={item.id}
                                 value={item.id}
-                                className="border-b border-white/10 py-4 transition-colors group"
+                                className="transition-colors duration-500 group last:mb-8"
                             >
-                                <AccordionTrigger className="py-2 text-[15px] leading-6 hover:no-underline">
-                                    <span className="flex items-center gap-5 cursor-pointer">
+                                <AccordionTrigger className="py-4 px-6 text-[15px] leading-6 hover:no-underline cursor-pointer">
+                                    <span className="flex items-center gap-5">
                                         <item.icon
                                             size={16}
-                                            className="shrink-0 opacity-60"
+                                            className="shrink-0 opacity-90 text-yellow-200"
                                         />
-                                        <span className="text-lg tracking-wide font-medium">
+                                        <span className="text-lg tracking-wide font-medium text-yellow-50 max-mobile:text-sm">
                                             {t(item.title)}
                                         </span>
                                     </span>
                                 </AccordionTrigger>
 
-                                <AccordionContent className="max-w-full pl-1 pr-22 pb-4 text-neutral-300 text-sm/6 pretty">
+                                <AccordionContent className="max-w-full pl-6 pr-12 pb-4 text-sm/7 text-pretty text-white/75">
                                     {typeof item.content === "string"
                                         ? t(item.content)
                                         : item.content}

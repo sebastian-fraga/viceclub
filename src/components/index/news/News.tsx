@@ -32,21 +32,27 @@ interface NewsItem {
     author: string;
 }
 
+const NEWS_URL = "https://viceclub.s3.us-east-1.amazonaws.com/news.json";
 const STEP = 2;
 const SCROLL_RETRY_DELAY_MS = 50;
 const SCROLL_RETRY_MAX_ATTEMPTS = 20;
 const paragraphClass =
-    "text-base sm:text-lg leading-7 text-pretty text-slate-200/90";
+    "max-mobile:text-base/7 text-lg/8 text-pretty text-slate-200/90";
 const buttonClass =
-    "flex bg-pink-300 rounded-full px-4 sm:px-6 py-3 cursor-pointer transition hover:bg-pink-400 hover:text-slate-50 gap-2 sm:gap-3 text-black text-sm items-center";
+    "flex bg-pink-300 rounded-full px-4 sm:px-6 py-3 cursor-pointer transition hover:bg-pink-400 hover:text-slate-50 gap-2 sm:gap-3 text-black text-sm items-center duration-200";
 
 export default function News() {
     const t = useT();
-    const {i18n} = useTranslation()
+    const { i18n } = useTranslation();
     const [news, setNews] = useState<NewsItem[]>([]);
     const [visibleCount, setVisibleCount] = useState(STEP);
     const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
+    const [canShare, setCanShare] = useState(false);
     const scrollToPosition = useScrollToPosition();
+
+    useEffect(() => {
+        setCanShare(typeof navigator !== "undefined" && "share" in navigator);
+    }, []);
 
     function getArticleUrl(slug: string) {
         return `https://viceclub.app?news=${slug}`;
@@ -71,7 +77,11 @@ export default function News() {
     async function copyLink(slug: string, title: string) {
         const text = `${title}\n${getArticleUrl(slug)}`;
 
-        await navigator.clipboard.writeText(text);
+        try {
+            await navigator.clipboard.writeText(text);
+        } catch {
+            return;
+        }
 
         setCopiedSlug(slug);
 
@@ -80,13 +90,14 @@ export default function News() {
         }, 1000);
     }
 
-    function shareNative(title: string, slug: string) {
-        if (!navigator.share) return;
-
-        navigator.share({
-            title,
-            url: getArticleUrl(slug),
-        });
+    async function shareNative(title: string, slug: string) {
+        try {
+            await navigator.share({
+                title,
+                url: getArticleUrl(slug),
+            });
+        } catch {
+        }
     }
 
     function scrollToArticleWhenReady(index: number, attempt = 0) {
@@ -143,16 +154,29 @@ export default function News() {
     }
 
     useEffect(() => {
-        fetch(
-            "https://viceclub.s3.us-east-1.amazonaws.com/news.json?nocache=" +
-                Date.now(),
-        )
-            .then((res) => res.json())
+        const controller = new AbortController();
+
+        fetch(NEWS_URL, {
+            cache: "no-cache",
+            signal: controller.signal,
+        })
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+                return res.json();
+            })
             .then((data: NewsItem[]) => {
                 setNews(data);
 
                 scrollToNews(data);
+            })
+            .catch((err) => {
+                if (err.name !== "AbortError") {
+                    console.error("No se pudieron cargar las noticias:", err);
+                }
             });
+
+        return () => controller.abort();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -180,7 +204,7 @@ export default function News() {
                         className="news-article text-white flex flex-col px-0 py-6 gap-6 md:gap-8 items-start nth-of-type-[1]:mt-4 w-full"
                     >
                         <div className="flex flex-col gap-4">
-                            <h3 className="font-black text-2xl sm:text-3xl leading-tight">
+                            <h3 className="max-mobile:text-3xl text-4xl font-body-condensed text-pretty">
                                 {translateContent(item.title)}
                             </h3>
 
@@ -190,12 +214,12 @@ export default function News() {
 
                             <div className="flex flex-wrap gap-3 sm:gap-4 text-sm sm:text-base">
                                 <h4 className="flex gap-2">
-                                    <IconUser size={18} />
+                                    <IconUser size={18} className="text-yellow-200"/>
                                     {item.author}
                                 </h4>
 
                                 <h4 className="flex gap-2">
-                                    <IconCalendarEvent size={18} />
+                                    <IconCalendarEvent size={18} className="text-yellow-200"/>
 
                                     {translateContent(item.date)}
                                 </h4>
@@ -213,7 +237,7 @@ export default function News() {
                                             <p
                                                 className={
                                                     needsTopMargin
-                                                        ? `${paragraphClass} mt-6`
+                                                        ? `${paragraphClass} mt-8`
                                                         : paragraphClass
                                                 }
                                                 dangerouslySetInnerHTML={{
@@ -227,19 +251,19 @@ export default function News() {
                                                 <div className="w-full my-6">
                                                     <img
                                                         src={item.image}
-                                                        className="w-full rounded-xl border-slate-500 border-2 drop-shadow-2xl drop-shadow-pink-400/10"
+                                                        className="w-full rounded-4xl drop-shadow-2xl drop-shadow-pink-400/20"
                                                         alt={translateContent(
                                                             item.title,
                                                         )}
                                                         loading={
-                                                            newsIndex >= STEP
+                                                            newsIndex < STEP
                                                                 ? "eager"
                                                                 : "lazy"
                                                         }
                                                     />
 
                                                     <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
-                                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
+                                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-yellow-200/80"></div>
 
                                                         <p className="italic pl-2">
                                                             {translateContent(
@@ -260,12 +284,11 @@ export default function News() {
                                 rel="noopener"
                                 className="flex items-center gap-2 w-fit mt-6 mx-auto bg-yellow-200 text-black font-bold px-8 py-3 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group"
                             >
-                                {translateContent(
-                                    item.linkText ??
-                                        "index.news.buttons.external",
-                                )}
+                                {item.linkText
+                                    ? translateContent(item.linkText)
+                                    : t("index.news.buttons.external")}
 
-                                <IconArrowUpRight className="group-hover:scale-120 transition duration-300"/>
+                                <IconArrowUpRight className="group-hover:scale-120 transition duration-300" />
                             </a>
 
                             <div className="w-full h-px bg-gray-500/20 rounded-2xl my-6" />
@@ -362,20 +385,22 @@ export default function News() {
                                     </div>
                                 </button>
 
-                                <button
-                                    className={buttonClass}
-                                    onClick={() =>
-                                        shareNative(
-                                            translateContent(item.title),
-                                            item.slug,
-                                        )
-                                    }
-                                >
-                                    <IconShare />
-                                    <span className="hidden sm:inline">
-                                        {t("index.news.buttons.more")}
-                                    </span>
-                                </button>
+                                {canShare && (
+                                    <button
+                                        className={buttonClass}
+                                        onClick={() =>
+                                            shareNative(
+                                                translateContent(item.title),
+                                                item.slug,
+                                            )
+                                        }
+                                    >
+                                        <IconShare />
+                                        <span className="hidden sm:inline">
+                                            {t("index.news.buttons.more")}
+                                        </span>
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </motion.article>
@@ -394,14 +419,12 @@ export default function News() {
                             y: -12,
                             transition: { duration: 0.15 },
                         }}
-                        whileHover={{ scale: 1.04 }}
-                        whileTap={{ scale: 0.96 }}
                         transition={{
                             type: "spring",
                             stiffness: 300,
                             damping: 20,
                         }}
-                        className="bg-pink-400 text-black font-bold text-base sm:text-lg px-8 sm:px-12 py-3 rounded-full flex items-center gap-4 w-full max-w-90 mx-auto mt-4 justify-center transition-colors hover:bg-pink-500 hover:text-white shadow-pink-300/10 shadow-xl cursor-pointer"
+                        className="bg-pink-400 text-pink-50 font-bold text-base sm:text-lg px-8 sm:px-12 py-3 rounded-full flex items-center gap-4 w-full max-w-90 mx-auto mt-4 justify-center transition-colors hover:bg-pink-500 hover:text-white shadow-pink-300/10 shadow-xl cursor-pointer duration-400"
                         onClick={() => setVisibleCount((prev) => prev + STEP)}
                     >
                         <motion.span
