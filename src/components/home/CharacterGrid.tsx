@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import CharacterCard, { type Character } from "./CharacterCard";
 
+const PAGE_SIZE = 6;
+
 export default function CharacterGrid({
     characters,
     variantId,
@@ -13,7 +15,7 @@ export default function CharacterGrid({
     variantId: string;
 }) {
     const t = useT();
-    const [visibleCount, setVisibleCount] = useState(9);
+    const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
     const visibleCharacters = characters.slice(0, visibleCount);
     const hasMore = visibleCount < characters.length;
@@ -36,39 +38,42 @@ export default function CharacterGrid({
                 <Title label="home.titles.characters" align="left" />
             </div>
 
-            <div className="mt-8 grid gap-4 max-mobile:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 max-mobile:mt-5 max-mobile:gap-3">
-                {visibleCharacters.map((character, index) => (
-                    <motion.div
-                        key={character.id}
-                        initial={{
-                            opacity: 0,
-                            y: 15,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        transition={{
-                            duration: 0.35,
-                            ease: "easeOut",
-                            delay:
-                                index >= visibleCount - 9
-                                    ? (index - (visibleCount - 9)) * 0.05
-                                    : 0,
-                        }}
-                    >
-                        <CharacterCard
-                            character={character}
-                            variantId={variantId}
-                        />
-                    </motion.div>
-                ))}
+            <div className="@container mt-8 max-mobile:mt-5">
+                <div className="grid grid-cols-1 gap-4 @lg:grid-cols-2 max-mobile:gap-8">
+                    {visibleCharacters.map((character, index) => (
+                        <motion.div
+                            key={character.id}
+                            initial={{
+                                opacity: 0,
+                                y: 15,
+                            }}
+                            animate={{
+                                opacity: 1,
+                                y: 0,
+                            }}
+                            transition={{
+                                duration: 0.35,
+                                ease: "easeOut",
+                                delay:
+                                    index >= visibleCount - PAGE_SIZE
+                                        ? (index - (visibleCount - PAGE_SIZE)) *
+                                          0.05
+                                        : 0,
+                            }}
+                        >
+                            <CharacterCard
+                                character={character}
+                                variantId={variantId}
+                            />
+                        </motion.div>
+                    ))}
+                </div>
             </div>
 
             {hasMore && (
                 <motion.button
                     type="button"
-                    onClick={() => setVisibleCount((prev) => prev + 9)}
+                    onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
                     whileTap={{ scale: 0.96 }}
                     className="mt-8 flex cursor-pointer items-center gap-3 self-center rounded-full bg-(--game-buttons-primary-background) px-12 py-4 text-xl font-bold text-(--game-buttons-primary-text) transition hover:bg-(--game-buttons-primary-hovered) hover:text-white max-mobile:mt-5 max-mobile:px-6 max-mobile:py-3 max-mobile:text-base shadow-2xl"
                 >
