@@ -8,44 +8,44 @@ type PageSeo = {
 export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
     III: {
         inicio: {
-            title: "GTA 3 (GTA III): trucos, mapa, lista del 100% y más",
+            title: "GTA 3: trucos, mapa, lista del 100% y más",
             description:
-                "Mapa interactivo de Liberty City, trucos, todas las emisoras, trofeos, ficha técnica de GTA 3 (GTA III) y más. Toda la información en Vice Club",
+                "Mapa interactivo de Liberty City, trucos, todas las emisoras, trofeos, ficha técnica de GTA 3 y más. Toda la información en Vice Club",
         },
         "100": {
-            title: "Checklist 100% de GTA 3 (GTA III) | Misiones y coleccionables",
+            title: "Checklist 100% de GTA 3 | Misiones y coleccionables",
             description:
-                "Rastrea tu progreso en GTA 3 (GTA III): misiones de la historia, coleccionables y trabajos secundarios para completar el 100% del juego.",
+                "Rastrea tu progreso en GTA 3: misiones de la historia, coleccionables y trabajos secundarios para completar el 100% del juego.",
         },
         artworks: {
-            title: "Artworks de GTA 3 (GTA III) | Personajes y vehículos",
+            title: "Artworks de GTA 3 | Personajes y vehículos",
             description:
-                "Descarga artworks y capturas de GTA 3 (GTA III) con Claude, Catalina, Salvatore Leone y otros personajes, además de vehículos, escenarios y armas.",
+                "Descarga artworks y capturas de GTA 3 con Claude, Catalina, Salvatore Leone y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 3 (GTA III)",
+            title: "Mods y herramientas para GTA 3",
             description:
-                "Explora herramientas y mods para la versión de PC de GTA 3 (GTA III): fixes, mejoras de jugabilidad y modificaciones esenciales.",
+                "Lista de los mejores mods y herramientas para la versión de PC de GTA 3: Silent Patch, fixes, mods de conversión total y más.",
         },
         logros: {
-            title: "Guía de logros y trofeos para GTA 3 (GTA III)",
+            title: "Guía de logros y trofeos para GTA 3",
             description:
-                "Consulta todos los logros y trofeos de GTA 3 (GTA III), sus requisitos y cómo desbloquearlos para completar el juego al 100%.",
+                "Consulta todos los logros y trofeos de GTA 3, sus requisitos y cómo desbloquearlos para completar el juego al 100%.",
         },
         mapa: {
-            title: "Mapa interactivo de GTA 3 (GTA III)",
+            title: "Mapa interactivo de GTA 3",
             description:
-                "Explora el mapa interactivo de Liberty City en GTA 3 (GTA III) y encuentra paquetes ocultos, saltos únicos, misiones secundarias y más.",
+                "Explora el mapa interactivo de Liberty City en GTA 3 y encuentra paquetes ocultos, saltos únicos, misiones secundarias y más.",
         },
         radio: {
-            title: "Radios de GTA 3 (GTA III)",
+            title: "Radios de GTA 3",
             description:
-                "Escucha las emisoras de GTA 3 (GTA III) y sus canciones, incluyendo Flashback FM, MSX, Double Clef FM y muchas más.",
+                "Escucha las emisoras de GTA 3 y sus canciones, incluyendo Flashback FM, MSX, Double Clef FM y muchas más.",
         },
         trucos: {
-            title: "Trucos de GTA 3 (GTA III)",
+            title: "Trucos de GTA 3",
             description:
-                "Descubre todos los trucos de GTA 3 (GTA III) para PlayStation 2, Xbox, PC y la Edición Definitiva, con códigos para cada plataforma.",
+                "Descubre todos los trucos de GTA 3 para PlayStation 2, Xbox, PC y la Edición Definitiva, con códigos para cada plataforma.",
         },
     },
     VC: {
@@ -65,9 +65,9 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
                 "Descarga artworks y capturas de GTA Vice City con Tommy, Lance, Ken Rosenberg y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA Vice City",
+            title: "Mods y herramientas para GTA 3",
             description:
-                "Explora herramientas y mods para la versión de PC de GTA Vice City: fixes, mejoras de jugabilidad y modificaciones esenciales.",
+                "Lista de los mejores mods y herramientas para la versión de PC de GTA Vice City: Silent Patch, fixes, mods de conversión total y más.",
         },
         logros: {
             title: "Guía de logros y trofeos para GTA Vice City",
@@ -107,9 +107,9 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
                 "Descarga artworks y capturas de GTA San Andreas con CJ, Big Smoke, Sweet, Ryder, Tenpenny y otros personajes, además de vehículos y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA San Andreas",
+            title: "Mods y herramientas para GTA 3",
             description:
-                "Explora herramientas y mods para la versión de PC de GTA San Andreas: fixes, mejoras de jugabilidad y modificaciones esenciales.",
+                "Lista de los mejores mods y herramientas para la versión de PC de GTA San Andreas: Silent Patch, fixes, mods de conversión total y más.",
         },
         logros: {
             title: "Guía de logros y trofeos para GTA San Andreas",
@@ -198,103 +198,103 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
     },
     IV: {
         inicio: {
-            title: "GTA 4 (GTA IV): trucos, mapa, lista del 100% y más",
+            title: "GTA 4: trucos, mapa, lista del 100% y más",
             description:
-                "Mapa interactivo de Liberty City, trucos, todas las emisoras, trofeos, ficha técnica de GTA 4 (GTA IV), The Lost and Damned, The Ballad of Gay Tony y más. Toda la información en Vice Club.",
+                "Mapa interactivo de Liberty City, trucos, todas las emisoras, trofeos, ficha técnica de GTA 4, The Lost and Damned, The Ballad of Gay Tony y más. Toda la información en Vice Club.",
         },
         "100": {
-            title: "Checklist 100% de GTA 4 (GTA IV) | Misiones y coleccionables",
+            title: "Checklist 100% de GTA 4 | Misiones y coleccionables",
             description:
-                "Rastrea tu progreso en GTA 4 (GTA IV) y sus expansiones: misiones de la historia, coleccionables y trabajos secundarios para completar el 100% de cada juego.",
+                "Rastrea tu progreso en GTA 4 y sus expansiones: misiones de la historia, coleccionables y trabajos secundarios para completar el 100% de cada juego.",
         },
         artworks: {
-            title: "Artworks de GTA 4 (GTA IV) | Personajes y vehículos",
+            title: "Artworks de GTA 4 | Personajes y vehículos",
             description:
-                "Descarga artworks y capturas de GTA 4 (GTA IV) con Niko, Roman, Dimitri y otros personajes, además de vehículos, escenarios y armas.",
+                "Descarga artworks y capturas de GTA 4 con Niko, Roman, Dimitri y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 4 (GTA IV)",
+            title: "Mods y herramientas para GTA 3",
             description:
-                "Explora herramientas y mods para la versión de PC de GTA 4 (GTA IV): fixes, mejoras de jugabilidad y modificaciones esenciales.",
+                "Lista de los mejores mods y herramientas para la versión de PC de GTA 3: Fusion Fix, parches, mods de conversión total y más.",
         },
         logros: {
-            title: "Guía de logros y trofeos para GTA 4 (GTA IV)",
+            title: "Guía de logros y trofeos para GTA 4",
             description:
-                "Consulta todos los logros y trofeos de GTA 4 (GTA IV), The Lost and Damned y The Ballad of Gay Tony, sus requisitos y cómo desbloquearlos.",
+                "Consulta todos los logros y trofeos de GTA 4, The Lost and Damned y The Ballad of Gay Tony, sus requisitos y cómo desbloquearlos.",
         },
         mapa: {
-            title: "Mapa interactivo de GTA 4 (GTA IV)",
+            title: "Mapa interactivo de GTA 4",
             description:
-                "Explora el mapa interactivo de Liberty City en GTA 4 (GTA IV) y encuentra ratas voladoras, saltos únicos, vehículos de Stevie, gaviotas y más.",
+                "Explora el mapa interactivo de Liberty City en GTA 4 y encuentra ratas voladoras, saltos únicos, vehículos de Stevie, gaviotas y más.",
         },
         radio: {
-            title: "Radios de GTA 4 (GTA IV)",
+            title: "Radios de GTA 4",
             description:
-                "Escucha las emisoras de GTA 4 (GTA IV) y sus canciones, incluyendo San Juan Sounds, Electro-Choc, Radio Broker y muchas más.",
+                "Escucha las emisoras de GTA 4 y sus canciones, incluyendo San Juan Sounds, Electro-Choc, Radio Broker y muchas más.",
         },
         trucos: {
-            title: "Trucos de GTA 4 (GTA IV)",
+            title: "Trucos de GTA 4",
             description:
-                "Descubre todos los trucos de GTA 4 (GTA IV) y sus expansiones The Lost and Damned y The Ballad of Gay Tony, con códigos de celular para cada juego.",
+                "Descubre todos los trucos de GTA 4 y sus expansiones The Lost and Damned y The Ballad of Gay Tony, con códigos de celular para cada juego.",
         },
     },
     V: {
         inicio: {
-            title: "GTA 5 (GTA V): trucos, mapa, lista del 100% y más",
+            title: "GTA 5: trucos, mapa, lista del 100% y más",
             description:
-                "Mapa interactivo de Los Santos y Blaine County, trucos, todas las emisoras, trofeos, ficha técnica de GTA 5 (GTA V) y más. Toda la información en Vice Club",
+                "Mapa interactivo de Los Santos y Blaine County, trucos, todas las emisoras, trofeos, ficha técnica de GTA 5 y más. Toda la información en Vice Club",
         },
         "100": {
-            title: "Checklist 100% de GTA 5 (GTA V) | Misiones y coleccionables",
+            title: "Checklist 100% de GTA 5 | Misiones y coleccionables",
             description:
-                "Rastrea tu progreso en GTA 5 (GTA V): misiones de la historia, coleccionables y trabajos secundarios para completar el 100% del juego.",
+                "Rastrea tu progreso en GTA 5: misiones de la historia, coleccionables y trabajos secundarios para completar el 100% del juego.",
         },
         artworks: {
-            title: "Artworks de GTA 5 (GTA V) | Personajes y vehículos",
+            title: "Artworks de GTA 5 | Personajes y vehículos",
             description:
-                "Descarga artworks y capturas de GTA 5 (GTA V) con Michael, Franklin, Trevor y otros personajes, además de vehículos, escenarios y armas.",
+                "Descarga artworks y capturas de GTA 5 con Michael, Franklin, Trevor y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 5 (GTA V)",
+            title: "Mods y herramientas para GTA 5",
             description:
-                "Explora herramientas y mods para la versión de PC de GTA 5 (GTA V): fixes, mejoras de jugabilidad y modificaciones esenciales.",
+                "Explora herramientas y mods para la versión de PC de GTA 5: fixes, mejoras de jugabilidad y modificaciones esenciales.",
         },
         logros: {
-            title: "Guía de logros y trofeos para GTA 5 (GTA V)",
+            title: "Guía de logros y trofeos para GTA 5",
             description:
-                "Consulta todos los logros y trofeos de GTA 5 (GTA V), sus requisitos y cómo desbloquearlos para completar el juego al 100%.",
+                "Consulta todos los logros y trofeos de GTA 5, sus requisitos y cómo desbloquearlos para completar el juego al 100%.",
         },
         mapa: {
-            title: "Mapa interactivo de GTA 5 (GTA V)",
+            title: "Mapa interactivo de GTA 5",
             description:
-                "Explora el mapa interactivo de Los Santos y Blaine County en GTA 5 (GTA V) y encuentra coleccionables, saltos únicos, vuelos a cuchillo y más.",
+                "Explora el mapa interactivo de Los Santos y Blaine County en GTA 5 y encuentra coleccionables, saltos únicos, vuelos a cuchillo y más.",
         },
         radio: {
-            title: "Radios de GTA 5 (GTA V)",
+            title: "Radios de GTA 5",
             description:
-                "Escucha las emisoras de GTA 5 (GTA V) y sus canciones, incluyendo Non-Stop Pop FM, Los Santos Rock Radio y muchas más.",
+                "Escucha las emisoras de GTA 5 y sus canciones, incluyendo Non-Stop Pop FM, Los Santos Rock Radio y muchas más.",
         },
         trucos: {
-            title: "Trucos de GTA 5 (GTA V)",
+            title: "Trucos de GTA 5",
             description:
-                "Descubre todos los trucos de GTA 5 (GTA V) para PlayStation 3, Xbox 360, PC y la versión remasterizada, con códigos para cada plataforma.",
+                "Descubre todos los trucos de GTA 5 para PlayStation 3, Xbox 360, PC y la versión remasterizada, con códigos para cada plataforma.",
         },
     },
     VI: {
         inicio: {
-            title: "GTA 6 (GTA VI): información, mapa, noticias y más",
+            title: "GTA 6: información, mapa, noticias y más",
             description:
-                "Toda la información de GTA 6 (GTA VI): personajes, mapa de Leonida, noticias, novedades y ficha técnica en Vice Club.",
+                "Toda la información de GTA 6: personajes, mapa de Leonida, noticias, novedades y ficha técnica en Vice Club.",
         },
         artworks: {
-            title: "Artworks de GTA 6 (GTA VI) | Personajes y vehículos",
+            title: "Artworks de GTA 6 | Personajes y vehículos",
             description:
-                "Descarga artworks y capturas de GTA 6 (GTA VI) con Jason, Lucia, escenarios de Leonida, vehículos y armas.",
+                "Descarga artworks y capturas de GTA 6 con Jason, Lucia, escenarios de Leonida, vehículos y armas.",
         },
         timeline: {
-            title: "Línea de tiempo de GTA 6 (GTA VI) | Filtraciones y noticias",
+            title: "Línea de tiempo de GTA 6 | Filtraciones y noticias",
             description:
-                "Línea de tiempo de GTA 6 (GTA VI) con filtraciones, noticias, rumores e información oficial desde su anuncio.",
+                "Línea de tiempo de GTA 6 con filtraciones, noticias, rumores e información oficial desde su anuncio.",
         },
     },
 };
