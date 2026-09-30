@@ -1487,6 +1487,10 @@ export default {
                     },
                 },
             },
+            dev: {
+                title: "Development",
+                openPage: "Open current page in production",
+            },
         },
         resetProgress: {
             name: "Reset progress",
@@ -1521,6 +1525,7 @@ export default {
             export: "Export",
             import: "Import",
             retry: "Retry",
+            open: "Open",
         },
         accessibility: {
             prev: "Previous",

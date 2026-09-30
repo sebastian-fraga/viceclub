@@ -1489,6 +1489,10 @@ export default {
                     },
                 },
             },
+            dev: {
+                title: "Desarrollo",
+                openPage: "Abrir página actual en producción"
+            },
         },
         resetProgress: {
             name: "Reiniciar progreso",
@@ -1523,6 +1527,7 @@ export default {
             export: "Exportar",
             import: "Importar",
             retry: "Reiniciar",
+            open: "Abrir",
         },
         accessibility: {
             prev: "Anterior",
