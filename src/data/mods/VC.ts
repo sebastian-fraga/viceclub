@@ -80,10 +80,10 @@ const mods: GameModsFile = {
                 },
                 {
                     title: {
-                        es: "(OPCIONAL)",
-                        en: "(OPTIONAL)",
-                        fr: "(FACULTATIF)",
-                        pt: "(OPCIONAL)",
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
                     },
                     description: {
                         es: "Editar el archivo <code>SilentPatchVC.ini</code> abriéndolo desde el bloc de notas para ajustar parámetros del mod",
@@ -553,12 +553,106 @@ const mods: GameModsFile = {
             author: ["aap"],
             requirements: {
                 gameVersion: "1.0",
-                mods: ["ultimate-asi-loader"],
+                mods: ["mod-loader"],
             },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>SkyGfx_III_VC_3.0b.zip</code> en GitHub.",
+                        en: "Download the <code>SkyGfx_III_VC_3.0b.zip</code> file from GitHub.",
+                        fr: "Télécharger le fichier <code>SkyGfx_III_VC_3.0b.zip</code> depuis GitHub.",
+                        pt: "Baixe o arquivo <code>SkyGfx_III_VC_3.0b.zip</code> no GitHub.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego.",
+                        en: "Open the game's root installation folder in File Explorer.",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé.",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover los archivos",
+                        en: "Move the files",
+                        fr: "Déplacer les fichiers",
+                        pt: "Mover os arquivos",
+                    },
+                    description: {
+                        es: "Colocar los archivos <code>rwd3d9.dll</code> y <code>d3d8to9.dll</code> en la carpeta raíz del juego.",
+                        en: "Place the <code>rwd3d9.dll</code> and <code>d3d8to9.dll</code> files in the game's root folder.",
+                        fr: "Placer les fichiers <code>rwd3d9.dll</code> et <code>d3d8to9.dll</code> dans le dossier racine du jeu.",
+                        pt: "Coloque os arquivos <code>rwd3d9.dll</code> e <code>d3d8to9.dll</code> na pasta raiz do jogo.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover los archivos",
+                        en: "Move the files",
+                        fr: "Déplacer les fichiers",
+                        pt: "Mover os arquivos",
+                    },
+                    description: {
+                        es: "Colocar el archivo <code>skygfx.asi</code> dentro de la carpeta <code>modloader/</code>.",
+                        en: "Place the <code>skygfx.asi</code> file inside the <code>modloader/</code> folder.",
+                        fr: "Placer le fichier <code>skygfx.asi</code> dans le dossier <code>modloader/</code>.",
+                        pt: "Coloque o arquivo <code>skygfx.asi</code> dentro da pasta <code>modloader/</code>.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Abrir la carpeta VC/",
+                        en: "Open the VC/ folder",
+                        fr: "Ouvrir le dossier VC/",
+                        pt: "Abrir a pasta VC/",
+                    },
+                    description: {
+                        es: "Abrir la carpeta <code>VC/</code> del mod descargado. Dentro, copiar el archivo <code>skygfx.ini</code> dentro de <code>modloader/</code> y la carpeta <code>neo/</code> en la carpeta raíz del juego.",
+                        en: "Open the <code>VC/</code> folder of the downloaded mod. Inside it, copy the <code>skygfx.ini</code> file into <code>modloader/</code> and the <code>neo/</code> folder into the game's root folder.",
+                        fr: "Ouvrir le dossier <code>VC/</code> du mod téléchargé. À l'intérieur, copier le fichier <code>skygfx.ini</code> dans <code>modloader/</code> et le dossier <code>neo/</code> dans le dossier racine du jeu.",
+                        pt: "Abra a pasta <code>VC/</code> do mod baixado. Dentro dela, copie o arquivo <code>skygfx.ini</code> para <code>modloader/</code> e a pasta <code>neo/</code> para a pasta raiz do jogo.",
+                    },
+                },
+                {
+                    title: {
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
+                    },
+                    description: {
+                        es: "Editar el archivo <code>skygfx.ini</code> abriéndolo desde el bloc de notas para ajustar parámetros del mod",
+                        en: "Edit the <code>skygfx.ini</code> file using Notepad to adjust the mod's settings.",
+                        fr: "Modifier le fichier <code>skygfx.ini</code> avec le Bloc-notes afin d’ajuster les paramètres du mod.",
+                        pt: "Edite o arquivo <code>skygfx.ini</code> usando o Bloco de Notas para ajustar as configurações do mod.",
+                    },
                 },
             ],
             coverImage: "",
@@ -571,37 +665,208 @@ const mods: GameModsFile = {
             id: "ginput",
             title: "GInput",
             category: "essentials",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Añade soporte completo para mandos, con vibración y controles iguales a los de consola",
+                en: "Adds full controller support, with vibration and console-accurate controls",
+                fr: "Ajoute une prise en charge complète des manettes, avec vibrations et commandes identiques à celles des consoles",
+                pt: "Adiciona suporte completo a controles, com vibração e comandos idênticos aos dos consoles",
+            },
+            description: {
+                es: "Mod que reescribe el sistema de controles de GTA Vice City para que los mandos funcionen como en las versiones de consola. Añade la vibración, algo que se había eliminado de todas las versiones de PC, y cinco esquemas de controles: los cuatro de PS2 y uno inspirado en GTA IV. Los mensajes de ayuda muestran los botones del mando (de PlayStation o de Xbox, a elección) en lugar de las teclas, y el juego alterna automáticamente entre teclado y mando según el último dispositivo utilizado. Incluye además un archivo de configuración con numerosas opciones.",
+                en: "A mod that rewrites the control system of GTA Vice City so that gamepads work just like in the console versions. It adds vibration, something that was removed from every PC version, and five control schemes: the four from the PS2 version and one inspired by GTA IV. In-game help messages show the gamepad's buttons (either PlayStation or Xbox, as chosen) instead of keyboard keys, and the game automatically switches between keyboard and gamepad depending on the last device used. It also includes a configuration file with numerous options.",
+                fr: "Mod qui réécrit le système de commandes de GTA Vice City pour que les manettes fonctionnent comme sur les versions console. Il ajoute les vibrations, une fonction supprimée de toutes les versions PC, ainsi que cinq schémas de commandes : les quatre de la version PS2 et un inspiré de GTA IV. Les messages d'aide affichent les boutons de la manette (PlayStation ou Xbox, au choix) à la place des touches du clavier, et le jeu passe automatiquement du clavier à la manette selon le dernier périphérique utilisé. Il inclut aussi un fichier de configuration proposant de nombreuses options.",
+                pt: "Mod que reescreve o sistema de controles do GTA Vice City para que os controles funcionem como nas versões de console. Adiciona a vibração, algo que foi removido de todas as versões de PC, e cinco esquemas de comandos: os quatro da versão de PS2 e um inspirado no GTA IV. As mensagens de ajuda mostram os botões do controle (de PlayStation ou de Xbox, à escolha) no lugar das teclas, e o jogo alterna automaticamente entre teclado e controle conforme o último dispositivo utilizado. Também inclui um arquivo de configuração com diversas opções.",
+            },
             author: ["Silent"],
+            requirements: {
+                mods: ["ultimate-asi-loader"],
+            },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo en la página de Silent.",
+                        en: "Download the file from Silent's website.",
+                        fr: "Télécharger le fichier depuis le site de Silent.",
+                        pt: "Baixe o arquivo no site do Silent.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego.",
+                        en: "Open the game's root installation folder in File Explorer.",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé.",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover los archivos",
+                        en: "Move the files",
+                        fr: "Déplacer les fichiers",
+                        pt: "Mover os arquivos",
+                    },
+                    description: {
+                        es: "Colocar los archivos <code>GInputVC.asi</code> y <code>GInputVC.ini</code> en la carpeta raíz del juego.",
+                        en: "Place the <code>GInputVC.asi</code> and <code>GInputVC.ini</code> files in the game's root folder.",
+                        fr: "Placer les fichiers <code>GInputVC.asi</code> et <code>GInputVC.ini</code> dans le dossier racine du jeu.",
+                        pt: "Coloque os arquivos <code>GInputVC.asi</code> e <code>GInputVC.ini</code> na pasta raiz do jogo.",
+                    },
+                },
+                {
+                    title: {
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
+                    },
+                    description: {
+                        es: "Mover la carpeta <code>models/</code> a la raíz del juego para reemplazar los cuadros de texto con botones nativos de cada control.",
+                        en: "Move the <code>models/</code> folder to the game's root folder to replace the text boxes with native buttons for each control.",
+                        fr: "Déplacer le dossier <code>models/</code> dans le dossier racine du jeu afin de remplacer les zones de texte par les boutons natifs de chaque commande.",
+                        pt: "Mova a pasta <code>models/</code> para a pasta raiz do jogo para substituir as caixas de texto pelos botões nativos de cada controle.",
+                    },
+                },
+                {
+                    title: {
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
+                    },
+                    description: {
+                        es: "Editar el archivo <code>GInputVC.ini</code> abriéndolo desde el Bloc de notas para ajustar parámetros del mod.",
+                        en: "Edit the <code>GInputVC.ini</code> file using Notepad to adjust the mod's settings.",
+                        fr: "Modifier le fichier <code>GInputVC.ini</code> avec le Bloc-notes afin d’ajuster les paramètres du mod.",
+                        pt: "Edite o arquivo <code>GInputVC.ini</code> usando o Bloco de Notas para ajustar as configurações do mod.",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
-            moreInfoUrl: "",
-            downloadUrl: "",
+            moreInfoUrl: "https://gtaforums.com/topic/562765-ginput/",
+            downloadUrl: "https://silentsblog.com/mods/gta-vc/#ginput",
         },
         {
             id: "magic-txd",
             title: "Magic.TXD",
             category: "utils",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Programa para abrir y editar las texturas (archivos TXD) de GTA Vice City",
+                en: "A program for opening and editing GTA Vice City textures (TXD files)",
+                fr: "Programme pour ouvrir et modifier les textures (fichiers TXD) de GTA Vice City",
+                pt: "Programa para abrir e editar as texturas (arquivos TXD) do GTA Vice City",
+            },
+            description: {
+                es: "Programa utilizado para abrir, ver y editar archivos TXD, el formato en el que GTA Vice City guarda sus texturas. Permite, entre otras cosas, cambiar el tamaño de las texturas, quitarlas y ajustar sus propiedades. Es una herramienta muy utilizada por la comunidad para crear y modificar texturas de mods.",
+                en: "A program used to open, view, and edit TXD files, the format in which GTA Vice City stores its textures. Among other things, it allows textures to be resized, removed, and have their properties adjusted. It is a tool widely used by the community to create and modify mod textures.",
+                fr: "Programme utilisé pour ouvrir, visualiser et modifier les fichiers TXD, le format dans lequel GTA Vice City stocke ses textures. Il permet, entre autres, de redimensionner les textures, de les supprimer et d'ajuster leurs propriétés. C'est un outil très utilisé par la communauté pour créer et modifier les textures des mods.",
+                pt: "Programa usado para abrir, visualizar e editar arquivos TXD, o formato em que o GTA Vice City guarda suas texturas. Permite, entre outras coisas, redimensionar as texturas, removê-las e ajustar suas propriedades. É uma ferramenta muito usada pela comunidade para criar e modificar texturas de mods.",
+            },
             author: ["DK22Pac", "The_GTA"],
+            version: "1.1",
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el programa",
+                        en: "Download the program",
+                        fr: "Télécharger le programme",
+                        pt: "Baixar o programa",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>1.1 RC3 Win7+</code> desde la página de GTAForums.",
+                        en: "Download the <code>1.1 RC3 Win7+</code> file from the GTAForums page.",
+                        fr: "Télécharger le fichier <code>1.1 RC3 Win7+</code> depuis la page de GTAForums.",
+                        pt: "Baixe o arquivo <code>1.1 RC3 Win7+</code> na página do GTAForums.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Instalar el programa",
+                        en: "Install the program",
+                        fr: "Installer le programme",
+                        pt: "Instalar o programa",
+                    },
+                    description: {
+                        es: "Hacer doble clic en el archivo <code>setup_11_rc3.exe</code> y seguir con la instalación.",
+                        en: "Double-click the <code>setup_11_rc3.exe</code> file and follow the installation steps.",
+                        fr: "Double-cliquer sur le fichier <code>setup_11_rc3.exe</code> et suivre l'installation.",
+                        pt: "Clique duas vezes no arquivo <code>setup_11_rc3.exe</code> e siga com a instalação.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Abrir el programa",
+                        en: "Open the program",
+                        fr: "Ouvrir le programme",
+                        pt: "Abrir o programa",
+                    },
+                    description: {
+                        es: "Una vez completada la instalación, abrir la carpeta del programa, ubicada por defecto en <code>C:\\Program Files\\Magic TXD</code>, y hacer doble clic en el archivo <code>magictxd.exe</code>.",
+                        en: "Once the installation is complete, open the program's folder, located by default at <code>C:\\Program Files\\Magic TXD</code>, and double-click the <code>magictxd.exe</code> file.",
+                        fr: "Une fois l'installation terminée, ouvrir le dossier du programme, situé par défaut dans <code>C:\\Program Files\\Magic TXD</code>, et double-cliquer sur le fichier <code>magictxd.exe</code>.",
+                        pt: "Após a conclusão da instalação, abra a pasta do programa, localizada por padrão em <code>C:\\Program Files\\Magic TXD</code>, e clique duas vezes no arquivo <code>magictxd.exe</code>.",
+                    },
+                },
+                {
+                    title: {
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
+                    },
+                    description: {
+                        es: "Para crear un acceso directo, hacer clic derecho sobre <code>magictxd.exe</code> y elegir Enviar a → Escritorio (crear acceso directo). En Windows 11 puede ser necesario pulsar antes <code>Mostrar más opciones</code>.",
+                        en: "To create a shortcut, right-click <code>magictxd.exe</code> and choose Send to → Desktop (create shortcut). On Windows 11, you may need to click <code>Show more options</code> first.",
+                        fr: "Pour créer un raccourci, faire un clic droit sur <code>magictxd.exe</code> et choisir Envoyer vers → Bureau (créer un raccourci). Sous Windows 11, il peut être nécessaire de cliquer d'abord sur <code>Afficher plus d'options</code>.",
+                        pt: "Para criar um atalho, clique com o botão direito em <code>magictxd.exe</code> e escolha Enviar para → Área de trabalho (criar atalho). No Windows 11, pode ser necessário clicar antes em <code>Mostrar mais opções</code>.",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
-            moreInfoUrl: "",
-            downloadUrl: "",
+            moreInfoUrl:
+                "https://gtaforums.com/topic/851436-relopensrc-magictxd/",
+            downloadUrl: "https://www.gtagarage.com/mods/show.php?id=27862",
         },
         {
             id: "renderhook",
