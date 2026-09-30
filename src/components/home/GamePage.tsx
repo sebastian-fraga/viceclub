@@ -51,7 +51,7 @@ function GamePage({ game, charactersData }: Props) {
                         activeTheme.buttons.secondary.text,
                 } as React.CSSProperties
             }
-            className="flex flex-col gap-22 max-mobile:gap-8"
+            className="flex flex-col gap-22 max-mobile:gap-16"
         >
             <div>
                 <GameHero
@@ -63,7 +63,7 @@ function GamePage({ game, charactersData }: Props) {
                 <HomeParagraphs paragraphs={activeDescription.paragraphs} />
             </div>
 
-            <div className="grid grid-cols-2 max-mobile:grid-cols-1 w-full gap-0 max-mobile:gap-8">
+            <div className="grid grid-cols-2 max-mobile:grid-cols-1 w-full gap-0 max-mobile:gap-22">
                 <div className="flex justify-start">
                     <FichaTecnica
                         game={game.id}
