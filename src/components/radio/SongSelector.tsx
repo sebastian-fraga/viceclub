@@ -155,7 +155,7 @@ export function SongSelector({
                             />
                         </div>
 
-                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:items-center max-mobile:mx-auto max-mobile:text-center">
+                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:gap-4 max-mobile:items-center">
                             <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
                                 {station.displayName}
                             </h3>
@@ -174,7 +174,7 @@ export function SongSelector({
                                     {activePlaylist.genres.map((genre) => (
                                         <div
                                             key={genre}
-                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full"
+                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
                                         >
                                             <IconMusic className="text-violet-400 shrink-0" />
                                             <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
@@ -201,7 +201,7 @@ export function SongSelector({
                                     {activePlaylist.djs.map((dj) => (
                                         <div
                                             key={dj}
-                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full"
+                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
                                         >
                                             <IconHeadphones className="text-yellow-200 shrink-0" />
                                             <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
