@@ -6,10 +6,11 @@ import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import { MOD_CATEGORIES, type ModCategoryId } from "@/data/mods/categories";
 import type { ModEntry } from "@/data/mods/types";
+import { useModParam } from "./hooks/useModParam";
 import useT from "@/hooks/useT";
 import { IconMoodPuzzled } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./mods.css";
 
 interface Props {
@@ -18,7 +19,7 @@ interface Props {
 }
 
 export default function ModsContainer({ gameId, mods }: Props) {
-    const [selectedModId, setSelectedModId] = useState<string | null>(null);
+    const { modId, open, close } = useModParam();
 
     const [selectedCategory, setSelectedCategory] = useState<
         ModCategoryId | "all"
@@ -32,7 +33,11 @@ export default function ModsContainer({ gameId, mods }: Props) {
     const i18n = useT();
     const gameInfo = gamesList.find((item) => item.id === gameId);
 
-    const selectedMod = mods.find((mod) => mod.id === selectedModId) ?? null;
+    const selectedMod = mods.find((mod) => mod.id === modId) ?? null;
+
+    useEffect(() => {
+        if (modId && !selectedMod) close();
+    }, [modId, selectedMod, close]);
 
     const featuredMod = mods.find((mod) => mod.isFeatured);
     const normalMods = mods.filter(
@@ -43,7 +48,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
     normalMods.sort((a, b) => a.title.localeCompare(b.title));
 
     function handleSelectMod(mod: ModEntry) {
-        setSelectedModId(mod.id);
+        open(mod.id);
     }
 
     return (
@@ -91,10 +96,10 @@ export default function ModsContainer({ gameId, mods }: Props) {
                         <ModModal
                             gameId={gameId}
                             open={true}
-                            onClose={() => setSelectedModId(null)}
+                            onClose={close}
                             mod={selectedMod}
                             allMods={mods}
-                            onSelectMod={setSelectedModId}
+                            onSelectMod={open}
                         />
                     )}
                 </AnimatePresence>
