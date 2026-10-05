@@ -57,7 +57,7 @@ export default function FeaturedMod({ gameId, mod, onSelect }: Props) {
 
                 <div className="mt-auto">
                     <button
-                        className="cursor-pointer rounded-full bg-(--game-buttons-primary-background) px-8 py-2.5 text-base font-medium text-(--game-buttons-primary-text) transition-colors duration-400 hover:bg-(--game-buttons-primary-hovered)"
+                        className="cursor-pointer font-black rounded-full bg-(--game-buttons-primary-background) px-8 py-2.5 text-base text-(--game-buttons-primary-text) transition-colors duration-400 hover:bg-(--game-buttons-primary-hovered)"
                         onClick={handleClick}
                     >
                         {i18n("mods.seeMod")}
