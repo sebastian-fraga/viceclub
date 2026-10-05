@@ -23,6 +23,7 @@ import {
 } from "@/utils/localStorageBackup";
 
 import openPageInProduction from "@/utils/openPageInProduction";
+import openPageInPageSpeed from "@/utils/openPageInPageSpeed";
 import SettingItem, { type SettingStatusMessage } from "./SettingItem";
 
 interface Props {
@@ -61,6 +62,9 @@ export default function SettingsModal({ open, onClose }: Props) {
                 break;
             case "open-page-production":
                 openPageInProduction();
+                break;
+            case "open-page-performance":
+                openPageInPageSpeed();
                 break;
         }
     };

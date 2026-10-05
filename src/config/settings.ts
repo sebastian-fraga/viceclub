@@ -6,6 +6,7 @@ import {
     IconDeviceGamepad,
     IconDeviceGamepad2,
     IconDownload,
+    IconGauge,
     IconLanguage,
     IconPointerFilled,
     IconRefreshAlert,
@@ -178,9 +179,15 @@ export const settingsConfig: SettingsSection[] = [
         settings: [
             {
                 id: "open-page-production",
-                name: "settings.sections.dev.openPage",
+                name: "settings.sections.dev.openPageProduction",
                 type: "action",
                 icon: IconBrowserPlus,
+            } satisfies ActionSetting,
+            {
+                id: "open-page-performance",
+                name: "settings.sections.dev.openPagePerformance",
+                type: "action",
+                icon: IconGauge,
             } satisfies ActionSetting,
         ],
     },

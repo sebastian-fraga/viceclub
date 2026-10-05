@@ -1367,7 +1367,7 @@ export default {
     cheats: {
         title: "Trucos de {{fullName}}",
         notAvailable: "No disponible para esta plataforma",
-        requiresMod: "Requiere tener {{mod}} instalado"
+        requiresMod: "Requiere tener {{mod}} instalado",
     },
     timeline: {
         titles: {
@@ -1492,7 +1492,8 @@ export default {
             },
             dev: {
                 title: "Desarrollo",
-                openPage: "Abrir página actual en producción"
+                openPageProduction: "Abrir página actual en producción",
+                openPagePerformance: "Analizar página actual de producción en PageSpeed",
             },
         },
         resetProgress: {

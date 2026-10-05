@@ -1492,7 +1492,9 @@ export default {
             },
             dev: {
                 title: "Desenvolvimento",
-                openPage: "Abrir página atual em produção",
+                openPageProduction: "Abrir página atual em produção",
+                openPagePerformance:
+                    "Analisar a página atual de produção no PageSpeed",
             },
         },
         resetProgress: {

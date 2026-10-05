@@ -1367,7 +1367,7 @@ export default {
     cheats: {
         title: "Cheats for {{fullName}}",
         notAvailable: "Not available on this platform",
-        requiresMod: "Requires installing {{mod}}"
+        requiresMod: "Requires installing {{mod}}",
     },
     timeline: {
         titles: {
@@ -1490,7 +1490,9 @@ export default {
             },
             dev: {
                 title: "Development",
-                openPage: "Open current page in production",
+                openPageProduction: "Open current page in production",
+                openPagePerformance:
+                    "Analyze current production page in PageSpeed",
             },
         },
         resetProgress: {
