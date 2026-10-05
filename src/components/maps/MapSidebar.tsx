@@ -138,7 +138,7 @@ export default function MapSidebar({
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
                             transition={{ duration: 0.2 }}
-                            className="fixed bottom-12 left-1/2 z-1100 flex -translate-x-1/2 items-center gap-2 rounded-full bg-(--button-bg)/95 px-5 py-3 font-body-condensed text-base text-white shadow-2xl shadow-black/40 backdrop-blur-md cursor-pointer hover:bg-(--button-bg-hover) transition duration-300"
+                            className="fixed bottom-12 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-(--button-bg)/95 px-5 py-3 font-body-condensed text-base text-white shadow-2xl shadow-black/40 backdrop-blur-md cursor-pointer hover:bg-(--button-bg-hover) transition duration-300"
                         >
                             <IconFilter size={18} />
                             <span className="uppercase">

@@ -19,6 +19,7 @@ import {
     type Map as LeafletMap,
 } from "leaflet";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 
 function FocusOnMarker({
@@ -138,7 +139,9 @@ export default function GameMapCanvas({
         return new URLSearchParams(window.location.search).get("marker");
     });
 
-    const [isolated, setIsolated] = useState<boolean>(() => Boolean(markerParam));
+    const [isolated, setIsolated] = useState<boolean>(() =>
+        Boolean(markerParam),
+    );
 
     const selectedMarker = useMemo(() => {
         if (!markerParam) return null;
@@ -211,9 +214,7 @@ export default function GameMapCanvas({
         > = {};
 
         if (isolated && selectedMarker) {
-            for (const [categoryKey, typesRecord] of Object.entries(
-                data,
-            ) as [
+            for (const [categoryKey, typesRecord] of Object.entries(data) as [
                 MapCategory,
                 Record<string, CollectibleData[]> | undefined,
             ][]) {
@@ -386,7 +387,7 @@ export default function GameMapCanvas({
                             zoomSnap={0.5}
                             zoomControl={false}
                             attributionControl={false}
-                            className="h-full w-full bg-slate-900/70"
+                            className="h-full w-full bg-slate-900/70 z-0 "
                         >
                             <TileLayer
                                 url={tilesUrl}
@@ -426,36 +427,72 @@ export default function GameMapCanvas({
                                 padding={MAP_PADDING}
                             />
 
-                            <FocusOnMarker target={focusTarget} zoom={maxZoom} />
+                            <FocusOnMarker
+                                target={focusTarget}
+                                zoom={maxZoom}
+                            />
 
                             <ZoomControls />
 
                             {selectedCollectible && (
-                                <MapMarkerPopup
-                                    ref={popupRef}
-                                    collectible={
-                                        selectedCollectible.collectible
-                                    }
-                                    type={selectedCollectible.type}
-                                    totalForType={
-                                        selectedCollectible.totalForType
-                                    }
-                                    isCompleted={completedIds.has(
-                                        `${selectedCollectible.type}_${selectedCollectible.collectible.id}`,
-                                    )}
-                                    onToggleComplete={() =>
-                                        toggleCollectible(
+                                <div className="max-mobile:hidden">
+                                    <MapMarkerPopup
+                                        ref={popupRef}
+                                        collectible={
+                                            selectedCollectible.collectible
+                                        }
+                                        type={selectedCollectible.type}
+                                        totalForType={
+                                            selectedCollectible.totalForType
+                                        }
+                                        isCompleted={completedIds.has(
                                             `${selectedCollectible.type}_${selectedCollectible.collectible.id}`,
-                                        )
-                                    }
-                                    onClose={() => setSelectedCollectible(null)}
-                                />
+                                        )}
+                                        onToggleComplete={() =>
+                                            toggleCollectible(
+                                                `${selectedCollectible.type}_${selectedCollectible.collectible.id}`,
+                                            )
+                                        }
+                                        onClose={() =>
+                                            setSelectedCollectible(null)
+                                        }
+                                    />
+                                </div>
                             )}
 
                             <div className="pointer-events-none absolute inset-0">
                                 <CoordinatesPicker height={height} />
                             </div>
                         </MapContainer>
+
+                        {selectedCollectible &&
+                            typeof document !== "undefined" &&
+                            document.getElementById("map-main") &&
+                            createPortal(
+                                <div className="hidden max-mobile:block">
+                                    <MapMarkerPopup
+                                        collectible={
+                                            selectedCollectible.collectible
+                                        }
+                                        type={selectedCollectible.type}
+                                        totalForType={
+                                            selectedCollectible.totalForType
+                                        }
+                                        isCompleted={completedIds.has(
+                                            `${selectedCollectible.type}_${selectedCollectible.collectible.id}`,
+                                        )}
+                                        onToggleComplete={() =>
+                                            toggleCollectible(
+                                                `${selectedCollectible.type}_${selectedCollectible.collectible.id}`,
+                                            )
+                                        }
+                                        onClose={() =>
+                                            setSelectedCollectible(null)
+                                        }
+                                    />
+                                </div>,
+                                document.getElementById("map-main")!,
+                            )}
                     </div>
                 </div>
 
