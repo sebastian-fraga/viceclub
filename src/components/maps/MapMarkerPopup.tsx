@@ -226,10 +226,10 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                     <button
                         type="button"
                         onClick={() => onToggleComplete(collectible.id)}
-                        className={`flex items-center justify-center gap-2 w-full rounded-full px-4 py-3 font-medium text-sm transition duration-300 cursor-pointer ${
+                        className={`flex items-center justify-center gap-2 w-full rounded-full border px-4 py-3 font-medium text-sm transition-colors duration-300 cursor-pointer ${
                             isCompleted
-                                ? "bg-(--game-buttons-secondary-background) text-(--game-buttons-secondary-text) border border-(--game-buttons-secondary-border)/20 hover:bg-(--game-buttons-secondary-hovered)"
-                                : "bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) hover:bg-(--game-buttons-primary-hovered)"
+                                ? "bg-(--game-buttons-primary-background)/5 text-(--game-buttons-secondary-text) border-(--game-buttons-secondary-border)/20 hover:bg-(--game-buttons-secondary-hovered)"
+                                : "bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) border-transparent hover:bg-(--game-buttons-primary-hovered)"
                         }`}
                     >
                         {isCompleted ? (
