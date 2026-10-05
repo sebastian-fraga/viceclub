@@ -330,132 +330,139 @@ export default function PurchaseDropdown({
                                     })}
                                 </div>
 
-                                <AnimatePresence
-                                    mode="popLayout"
-                                    custom={direction}
-                                >
-                                    <motion.div
-                                        key={selectedPlatform}
-                                        variants={listVariants}
-                                        exit="exit"
-                                        className="flex flex-col gap-0.5"
+                                <motion.div layout className="overflow-hidden">
+                                    <AnimatePresence
+                                        mode="wait"
+                                        custom={direction}
                                     >
-                                        {selectedPlatformData?.stores
-                                            ?.length ? (
-                                            selectedPlatformData.stores.map(
-                                                (store, index) => {
-                                                    const isLast =
-                                                        index ===
-                                                        selectedPlatformData
-                                                            .stores.length -
-                                                            1;
-
-                                                    const Icon =
-                                                        storeIcons[store.icon];
-
-                                                    const link = (
-                                                        <motion.a
-                                                            href={store.link}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            variants={
-                                                                itemVariants
-                                                            }
-                                                            custom={{
-                                                                index,
-                                                                direction,
-                                                            }}
-                                                            initial="hidden"
-                                                            animate="visible"
-                                                            whileHover="hover"
-                                                            whileTap="hover"
-                                                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
-                                                                isLast
-                                                                    ? "pb-4 rounded-b-2xl max-mobile:pb-3"
-                                                                    : ""
-                                                            }`}
-                                                        >
-                                                            <Icon className="size-5 max-mobile:size-4" />
-
-                                                            <span className="flex items-center gap-1.5">
-                                                                {store.name}
-
-                                                                {store.extra && (
-                                                                    <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded">
-                                                                        {
-                                                                            store.extra
-                                                                        }
-                                                                    </span>
-                                                                )}
-                                                            </span>
-
-                                                            <motion.div
-                                                                variants={{
-                                                                    hidden: {
-                                                                        opacity: 0,
-                                                                        x: 8,
-                                                                    },
-                                                                    visible: {
-                                                                        opacity: 0,
-                                                                        x: 8,
-                                                                    },
-                                                                    exit: {
-                                                                        opacity: 0,
-                                                                        x: 8,
-                                                                    },
-                                                                    hover: {
-                                                                        opacity: 1,
-                                                                        x: 0,
-                                                                    },
+                                        <motion.div
+                                            key={selectedPlatform}
+                                            variants={listVariants}
+                                            exit="exit"
+                                            className="flex flex-col gap-0.5"
+                                        >
+                                            {selectedPlatformData?.stores
+                                                ?.length ? (
+                                                selectedPlatformData.stores.map(
+                                                    (store, index) => {
+                                                        const isLast =
+                                                            index ===
+                                                            selectedPlatformData
+                                                                .stores.length -
+                                                                1;
+                                                        const Icon =
+                                                            storeIcons[
+                                                                store.icon
+                                                            ];
+                                                        const link = (
+                                                            <motion.a
+                                                                href={
+                                                                    store.link
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                variants={
+                                                                    itemVariants
+                                                                }
+                                                                custom={{
+                                                                    index,
+                                                                    direction,
                                                                 }}
-                                                                className="ml-auto"
+                                                                initial="hidden"
+                                                                animate="visible"
+                                                                whileHover="hover"
+                                                                whileTap="hover"
+                                                                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
+                                                                    isLast
+                                                                        ? "pb-4 rounded-b-2xl max-mobile:pb-3"
+                                                                        : ""
+                                                                }`}
                                                             >
-                                                                <IconArrowUpRight className="size-4" />
-                                                            </motion.div>
-                                                        </motion.a>
-                                                    );
-
-                                                    return store.extra ? (
-                                                        <Tooltip
-                                                            key={store.link}
-                                                            position="right"
-                                                            label={
-                                                                editionLabels[
-                                                                    store.extra
-                                                                ]
-                                                                    ? t(
-                                                                          `common.editionLabels.${store.extra}`,
-                                                                      )
-                                                                    : store.extra
-                                                            }
-                                                        >
-                                                            {link}
-                                                        </Tooltip>
-                                                    ) : (
-                                                        <div key={store.link}>
-                                                            {link}
-                                                        </div>
-                                                    );
-                                                },
-                                            )
-                                        ) : (
-                                            <motion.div
-                                                custom={{ index: 0, direction }}
-                                                variants={itemVariants}
-                                                initial="hidden"
-                                                animate="visible"
-                                                className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs"
-                                            >
-                                                <IconMoodPuzzled className="text-white/80" />
-                                                <span className="text-white">
-                                                    {t(
-                                                        "common.other.notAvailable",
-                                                    )}
-                                                </span>
-                                            </motion.div>
-                                        )}
-                                    </motion.div>
-                                </AnimatePresence>
+                                                                <Icon className="size-5 max-mobile:size-4" />
+                                                                <span className="flex items-center gap-1.5">
+                                                                    {store.name}
+                                                                    {store.extra && (
+                                                                        <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded">
+                                                                            {
+                                                                                store.extra
+                                                                            }
+                                                                        </span>
+                                                                    )}
+                                                                </span>
+                                                                <motion.div
+                                                                    variants={{
+                                                                        hidden: {
+                                                                            opacity: 0,
+                                                                            x: 8,
+                                                                        },
+                                                                        visible:
+                                                                            {
+                                                                                opacity: 0,
+                                                                                x: 8,
+                                                                            },
+                                                                        exit: {
+                                                                            opacity: 0,
+                                                                            x: 8,
+                                                                        },
+                                                                        hover: {
+                                                                            opacity: 1,
+                                                                            x: 0,
+                                                                        },
+                                                                    }}
+                                                                    className="ml-auto"
+                                                                >
+                                                                    <IconArrowUpRight className="size-4" />
+                                                                </motion.div>
+                                                            </motion.a>
+                                                        );
+                                                        return store.extra ? (
+                                                            <Tooltip
+                                                                key={store.link}
+                                                                position="right"
+                                                                label={
+                                                                    editionLabels[
+                                                                        store
+                                                                            .extra
+                                                                    ]
+                                                                        ? t(
+                                                                              `common.editionLabels.${store.extra}`,
+                                                                          )
+                                                                        : store.extra
+                                                                }
+                                                            >
+                                                                {link}
+                                                            </Tooltip>
+                                                        ) : (
+                                                            <div
+                                                                key={store.link}
+                                                            >
+                                                                {link}
+                                                            </div>
+                                                        );
+                                                    },
+                                                )
+                                            ) : (
+                                                <motion.div
+                                                    custom={{
+                                                        index: 0,
+                                                        direction,
+                                                    }}
+                                                    variants={itemVariants}
+                                                    initial="hidden"
+                                                    animate="visible"
+                                                    className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs"
+                                                >
+                                                    <IconMoodPuzzled className="text-white/80" />
+                                                    <span className="text-white">
+                                                        {t(
+                                                            "common.other.notAvailable",
+                                                        )}
+                                                    </span>
+                                                </motion.div>
+                                            )}
+                                        </motion.div>
+                                    </AnimatePresence>
+                                </motion.div>
                             </motion.div>
                         )}
                     </AnimatePresence>,
