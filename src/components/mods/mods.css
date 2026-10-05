@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 code {
-    @apply bg-(--button-bg) rounded-2xl px-2 mx-px py-0.75 text-indigo-200 tracking-wide;
+    @apply bg-(--button-bg) rounded-2xl px-2 mx-px py-0.75 text-indigo-200 tracking-wide whitespace-nowrap;
     font-family: var(--font-body-condensed);
 }
 
