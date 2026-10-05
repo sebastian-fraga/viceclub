@@ -1367,6 +1367,7 @@ export default {
     cheats: {
         title: "Cheats for {{fullName}}",
         notAvailable: "Not available on this platform",
+        requiresMod: "Requires installing {{mod}}"
     },
     timeline: {
         titles: {

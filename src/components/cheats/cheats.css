@@ -3,3 +3,11 @@
 .cheat-note-entry b {
     @apply text-red-200
 }
+
+.cheat-link {
+    @apply text-red-200 font-bold underline hover:text-red-300 transition-colors flex items-center gap-1;
+
+    & span {
+        @apply flex items-center gap-0.5
+    }
+}

@@ -1367,6 +1367,7 @@ export default {
     cheats: {
         title: "Trapaças de {{fullName}}",
         notAvailable: "Não disponível para esta plataforma",
+        requiresMod: "Requer a instalação de {{mod}}",
     },
     timeline: {
         titles: {

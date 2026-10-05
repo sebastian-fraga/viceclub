@@ -1368,6 +1368,7 @@ export default {
     cheats: {
         title: "Codes de triche de {{fullName}}",
         notAvailable: "Non disponible sur cette plateforme",
+        requiresMod: "Nécessite l'installation de {{mod}}",
     },
     timeline: {
         titles: {

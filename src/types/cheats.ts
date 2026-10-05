@@ -9,7 +9,8 @@ export type CheatNoteType = "info" | "warning";
 
 export interface PlatformNotes {
     platforms: PlatformId[];
-    note: LocalizedText;
+    note?: LocalizedText;
+    requiresMod?: string;
     noteType?: CheatNoteType;
 }
 

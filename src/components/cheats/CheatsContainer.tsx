@@ -11,6 +11,7 @@ import {
 } from "@/config/platforms";
 
 import { games } from "@/data/games";
+import { GAME_MODS } from "@/data/mods";
 
 import type { Cheat, CheatsFile } from "@/types/cheats";
 
@@ -22,6 +23,7 @@ import useSettings from "@/hooks/useSettings";
 import useT from "@/hooks/useT";
 
 import { getButtonIconPath, getCheatCodes } from "@/utils/cheats";
+import { linkifyNote } from "./utils/linkifyNote.ts";
 
 import "./cheats.css";
 
@@ -32,6 +34,7 @@ import {
     getInitialPlatform,
     getPlatformEdition,
 } from "@/utils/platformSelector";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
 interface CheatsContainerProps {
@@ -45,7 +48,7 @@ export const CheatsContainer = ({
     platforms: availablePlatforms,
     game,
 }: CheatsContainerProps) => {
-    const i18n = useT()
+    const i18n = useT();
     const t = useLocalizedText();
     const { settings } = useSettings();
 
@@ -201,6 +204,7 @@ export const CheatsContainer = ({
                                     );
 
                                 const isAvailable = codeButtons.length > 0;
+
                                 return (
                                     <div
                                         key={cheat.id}
@@ -265,23 +269,77 @@ export const CheatsContainer = ({
 
                                         <div className="flex flex-col gap-0.5">
                                             {platformNotes?.map(
-                                                (platformNote, index) => (
-                                                    <div
-                                                        key={index}
-                                                        className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin ${
-                                                            platformNote.noteType ===
-                                                            "warning"
-                                                                ? "text-red-100"
-                                                                : "text-blue-100"
-                                                        }`}
-                                                    >
-                                                        {parse(
-                                                            t(
-                                                                platformNote.note,
-                                                            ),
-                                                        )}
-                                                    </div>
-                                                ),
+                                                (platformNote, index) => {
+                                                    const mod =
+                                                        platformNote.requiresMod
+                                                            ? GAME_MODS[
+                                                                  game as keyof typeof GAME_MODS
+                                                              ]?.mods.find(
+                                                                  (mod) =>
+                                                                      mod.id ===
+                                                                      platformNote.requiresMod,
+                                                              )
+                                                            : undefined;
+
+                                                    let noteContent =
+                                                        platformNote.note
+                                                            ? t(
+                                                                  platformNote.note,
+                                                              )
+                                                            : "";
+
+                                                    if (
+                                                        platformNote.requiresMod &&
+                                                        mod
+                                                    ) {
+                                                        noteContent = i18n(
+                                                            "cheats.requiresMod",
+                                                            {
+                                                                mod: linkifyNote(
+                                                                    game,
+                                                                    mod.title,
+                                                                    mod.id,
+                                                                ),
+                                                            },
+                                                        );
+                                                    }
+
+                                                    return (
+                                                        <div
+                                                            key={index}
+                                                            className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex items-center gap-1 ${
+                                                                platformNote.noteType ===
+                                                                "warning"
+                                                                    ? "text-red-100"
+                                                                    : "text-blue-100"
+                                                            }`}
+                                                        >
+                                                            {parse(
+                                                                noteContent,
+                                                                {
+                                                                    replace: (
+                                                                        domNode,
+                                                                    ) => {
+                                                                        if (
+                                                                            domNode.type ===
+                                                                                "tag" &&
+                                                                            domNode.name ===
+                                                                                "icon-arrow-up-right"
+                                                                        ) {
+                                                                            return (
+                                                                                <IconArrowUpRight
+                                                                                    size={
+                                                                                        16
+                                                                                    }
+                                                                                />
+                                                                            );
+                                                                        }
+                                                                    },
+                                                                },
+                                                            )}
+                                                        </div>
+                                                    );
+                                                },
                                             )}
                                         </div>
                                     </div>

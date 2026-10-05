@@ -1367,6 +1367,7 @@ export default {
     cheats: {
         title: "Trucos de {{fullName}}",
         notAvailable: "No disponible para esta plataforma",
+        requiresMod: "Requiere tener {{mod}} instalado"
     },
     timeline: {
         titles: {

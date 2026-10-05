@@ -5746,12 +5746,7 @@
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
-                        "note": {
-                            "ES": "Solo funcionará al tener el SilentPatch instalado.",
-                            "EN": "It will only work with SilentPatch installed.",
-                            "FR": "Cela ne fonctionnera qu'avec SilentPatch installé.",
-                            "PT": "Só funcionará com o SilentPatch instalado."
-                        },
+                        "requiresMod": "silentpatch",
                         "noteType": "warning"
                     }
                 ],
