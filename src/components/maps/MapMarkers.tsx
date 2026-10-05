@@ -128,12 +128,7 @@ function AnimatedMarker({
                             stiffness: 350,
                             damping: 25,
                         }}
-                        style={{
-                            width: "42px",
-                            height: "42px",
-                            borderRadius: "100%",
-                            cursor: "pointer",
-                        }}
+                        className="size-10 max-mobile:size-8 rounded-full cursor-pointer"
                     >
                         <motion.img
                             src={marker.icon}
