@@ -1,5 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+    useCallback,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useState,
+} from "react";
 import { createPortal } from "react-dom";
 
 interface TooltipProps {
@@ -13,6 +19,8 @@ interface TooltipProps {
 
 const GAP = 16;
 const MOBILE_BREAKPOINT = 660;
+
+let hideActiveTooltip: (() => void) | null = null;
 
 export function Tooltip({
     label,
@@ -32,6 +40,26 @@ export function Tooltip({
     const triggerRef = useRef<HTMLDivElement>(null);
 
     const mobileEnabled = mobilePosition !== undefined;
+
+    const hide = useCallback(() => {
+        setIsVisible(false);
+    }, []);
+
+    const show = useCallback(() => {
+        if (hideActiveTooltip && hideActiveTooltip !== hide) {
+            hideActiveTooltip();
+        }
+        hideActiveTooltip = hide;
+        setIsVisible(true);
+    }, [hide]);
+
+    useEffect(() => {
+        return () => {
+            if (hideActiveTooltip === hide) {
+                hideActiveTooltip = null;
+            }
+        };
+    }, [hide]);
 
     useEffect(() => {
         const mediaQuery = window.matchMedia(
@@ -53,9 +81,15 @@ export function Tooltip({
 
     useEffect(() => {
         if (isMobile && !mobileEnabled) {
-            setIsVisible(false);
+            hide();
         }
-    }, [isMobile, mobileEnabled]);
+    }, [isMobile, mobileEnabled, hide]);
+
+    useEffect(() => {
+        if (disabled) {
+            hide();
+        }
+    }, [disabled, hide]);
 
     const effectivePosition =
         isMobile && mobilePosition ? mobilePosition : position;
@@ -112,7 +146,7 @@ export function Tooltip({
         if (!isVisible) return;
 
         const handleScroll = () => {
-            setIsVisible(false);
+            hide();
         };
 
         window.addEventListener("scroll", handleScroll, true);
@@ -120,7 +154,29 @@ export function Tooltip({
         return () => {
             window.removeEventListener("scroll", handleScroll, true);
         };
-    }, [isVisible]);
+    }, [isVisible, hide]);
+
+    useEffect(() => {
+        if (!isVisible || isMobile) return;
+
+        const handlePointerMove = (event: PointerEvent) => {
+            if (event.pointerType !== "mouse") return;
+
+            const target = event.target as Node;
+
+            if (triggerRef.current && !triggerRef.current.contains(target)) {
+                hide();
+            }
+        };
+
+        document.addEventListener("pointermove", handlePointerMove);
+        window.addEventListener("blur", hide);
+
+        return () => {
+            document.removeEventListener("pointermove", handlePointerMove);
+            window.removeEventListener("blur", hide);
+        };
+    }, [isVisible, isMobile, hide]);
 
     useEffect(() => {
         if (!isVisible || !isMobile || !mobileEnabled) {
@@ -131,7 +187,7 @@ export function Tooltip({
             const target = event.target as Node;
 
             if (triggerRef.current && !triggerRef.current.contains(target)) {
-                setIsVisible(false);
+                hide();
             }
         };
 
@@ -140,7 +196,7 @@ export function Tooltip({
         return () => {
             document.removeEventListener("pointerdown", handleOutsidePointer);
         };
-    }, [isVisible, isMobile, mobileEnabled]);
+    }, [isVisible, isMobile, mobileEnabled, hide]);
 
     useEffect(() => {
         if (!isVisible || !isMobile || !mobileEnabled) {
@@ -149,7 +205,7 @@ export function Tooltip({
 
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "Escape") {
-                setIsVisible(false);
+                hide();
             }
         };
 
@@ -158,7 +214,7 @@ export function Tooltip({
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [isVisible, isMobile, mobileEnabled]);
+    }, [isVisible, isMobile, mobileEnabled, hide]);
 
     const initialOffset = isTop
         ? { y: 4 }
@@ -181,20 +237,24 @@ export function Tooltip({
             <div
                 ref={triggerRef}
                 className="relative inline-flex h-auto"
-                style={{isolation: "isolate"}}
+                style={{ isolation: "isolate" }}
                 onPointerEnter={(e) => {
                     if (!isMobile && e.pointerType === "mouse" && !disabled) {
-                        setIsVisible(true);
+                        show();
                     }
                 }}
                 onPointerLeave={(e) => {
                     if (!isMobile && e.pointerType === "mouse") {
-                        setIsVisible(false);
+                        hide();
                     }
                 }}
                 onPointerDownCapture={() => {
                     if (isMobile && mobileEnabled && !disabled) {
-                        setIsVisible((prev) => !prev);
+                        if (isVisible) {
+                            hide();
+                        } else {
+                            show();
+                        }
                     }
                 }}
             >
