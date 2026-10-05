@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import useT from "@/hooks/useT";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 
 import {
     getPlatformFamily,
@@ -64,6 +64,40 @@ const editionLabels: Record<string, string> = {
 
 const VIEWPORT_MARGIN = 16;
 
+const STAGGER = 0.045;
+const SLIDE = 16;
+
+interface ItemCustom {
+    index: number;
+    direction: number;
+}
+
+const itemVariants: Variants = {
+    hidden: ({ direction }: ItemCustom) => ({
+        opacity: 0,
+        x: direction * SLIDE,
+        y: direction === 0 ? 6 : 0,
+    }),
+    visible: ({ index }: ItemCustom) => ({
+        opacity: 1,
+        x: 0,
+        y: 0,
+        transition: {
+            duration: 0.22,
+            ease: "easeOut" as const,
+            delay: 0.06 + index * STAGGER,
+        },
+    }),
+};
+
+const listVariants: Variants = {
+    exit: (direction: number) => ({
+        opacity: 0,
+        x: direction * -SLIDE,
+        transition: { duration: 0.12, ease: "easeIn" as const },
+    }),
+};
+
 export default function PurchaseDropdown({
     purchase,
     buttonClass,
@@ -93,9 +127,25 @@ export default function PurchaseDropdown({
             (platform) => platform.platform === resolvedFamily,
         );
 
+        setDirection(0);
         setSelectedPlatform(preferred?.platform ?? purchase[0]?.platform);
     }, [purchase, resolvedFamily]);
     const [isOpen, setIsOpen] = useState(false);
+    const [direction, setDirection] = useState(0);
+
+    const handleSelectPlatform = (platform: typeof selectedPlatform) => {
+        if (platform === selectedPlatform) return;
+
+        const fromIndex = purchase.findIndex(
+            (item) => item.platform === selectedPlatform,
+        );
+        const toIndex = purchase.findIndex(
+            (item) => item.platform === platform,
+        );
+
+        setDirection(toIndex > fromIndex ? 1 : -1);
+        setSelectedPlatform(platform);
+    };
 
     const t = useT();
 
@@ -128,7 +178,10 @@ export default function PurchaseDropdown({
     };
 
     const handleToggle = () => {
-        if (!isOpen) computePosition();
+        if (!isOpen) {
+            computePosition();
+            setDirection(0);
+        }
         setIsOpen((previous) => !previous);
     };
 
@@ -253,7 +306,7 @@ export default function PurchaseDropdown({
                                                 key={platform.platform}
                                                 type="button"
                                                 onClick={() =>
-                                                    setSelectedPlatform(
+                                                    handleSelectPlatform(
                                                         platform.platform,
                                                     )
                                                 }
@@ -277,16 +330,14 @@ export default function PurchaseDropdown({
                                     })}
                                 </div>
 
-                                <AnimatePresence mode="popLayout">
+                                <AnimatePresence
+                                    mode="popLayout"
+                                    custom={direction}
+                                >
                                     <motion.div
                                         key={selectedPlatform}
-                                        initial={{ opacity: 0, scale: 0.97 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 1.02 }}
-                                        transition={{
-                                            duration: 0.15,
-                                            ease: "easeOut",
-                                        }}
+                                        variants={listVariants}
+                                        exit="exit"
                                         className="flex flex-col gap-0.5"
                                     >
                                         {selectedPlatformData?.stores
@@ -307,29 +358,18 @@ export default function PurchaseDropdown({
                                                             href={store.link}
                                                             target="_blank"
                                                             rel="noopener noreferrer"
+                                                            variants={
+                                                                itemVariants
+                                                            }
+                                                            custom={{
+                                                                index,
+                                                                direction,
+                                                            }}
                                                             initial="hidden"
                                                             animate="visible"
-                                                            exit="exit"
                                                             whileHover="hover"
                                                             whileTap="hover"
-                                                            variants={{
-                                                                hidden: {
-                                                                    opacity: 0,
-                                                                    y: 4,
-                                                                },
-                                                                visible: {
-                                                                    opacity: 1,
-                                                                    y: 0,
-                                                                },
-                                                                exit: {
-                                                                    opacity: 0,
-                                                                    y: -4,
-                                                                },
-                                                            }}
-                                                            transition={{
-                                                                duration: 0.15,
-                                                            }}
-                                                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-all hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
+                                                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
                                                                 isLast
                                                                     ? "pb-4 rounded-b-2xl max-mobile:pb-3"
                                                                     : ""
@@ -399,14 +439,20 @@ export default function PurchaseDropdown({
                                                 },
                                             )
                                         ) : (
-                                            <div className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs">
+                                            <motion.div
+                                                custom={{ index: 0, direction }}
+                                                variants={itemVariants}
+                                                initial="hidden"
+                                                animate="visible"
+                                                className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs"
+                                            >
                                                 <IconMoodPuzzled className="text-white/80" />
                                                 <span className="text-white">
                                                     {t(
                                                         "common.other.notAvailable",
                                                     )}
                                                 </span>
-                                            </div>
+                                            </motion.div>
                                         )}
                                     </motion.div>
                                 </AnimatePresence>
