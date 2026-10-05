@@ -82,7 +82,7 @@ export default function MapSidebar({
     return (
         <>
             <aside
-                className="mr-auto ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto shadow-2xl shadow-(-color:red-400) scroll-map rounded-4xl text-white max-mobile:hidden"
+                className="mr-auto ml-4 h-full w-full max-w-160 min-h-0 max-h-full overflow-y-auto scroll-map rounded-4xl text-white max-mobile:hidden"
                 data-lenis-prevent
             >
                 {sections.map((section) => {
@@ -175,8 +175,8 @@ export default function MapSidebar({
                                         }}
                                         className="fixed inset-x-0 bottom-0 z-1110 flex max-h-[85dvh] flex-col overflow-hidden rounded-t-4xl bg-(--button-bg) text-white shadow-2xl shadow-black/50"
                                     >
-                                        <div className="flex shrink-0 items-center justify-between bg-(--button-bg) px-6 pt-3 pb-3">
-                                            <span className="font-body-condensed text-xl text-white">
+                                        <div className="flex shrink-0 items-center justify-between bg-(--button-bg) px-6 pt-4 pb-3">
+                                            <span className="font-body-condensed uppercase text-2xl text-white">
                                                 {i18n("maps.markers.title")}
                                             </span>
 
