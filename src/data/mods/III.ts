@@ -4,7 +4,7 @@ const mods: GameModsFile = {
     gameId: "III",
     mods: [
         {
-            id: "silent-patch",
+            id: "silentpatch",
             title: "Silent Patch",
             category: "essentials",
             shortDescription: {
