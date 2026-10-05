@@ -11,32 +11,37 @@ const anchorClasses =
 
 <footer
     style="transition: margin-left 0.3s;"
-    class="ml-0 mobile:ml-(--sidebar-width) py-5 text-neutral-50 gap-4 flex flex-col border-t border-t-slate-800"
+    class="ml-0 mobile:ml-(--sidebar-width) pt-10 pb-22 text-neutral-50 gap-10 flex flex-col border-t border-t-slate-800 overflow-hidden"
 >
     <div
-        class="flex flex-col mobile:flex-row items-center justify-between w-full gap-6 px-4 mobile:px-12"
+        class="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-4 mobile:px-18"
     >
-        <div
-            class="flex items-center gap-4 drop-shadow-lg drop-shadow-cyan-500/15"
-        >
-            <img
-                src="/assets/images/app/logo.webp"
-                alt="Logo de Vice Club"
-                class="w-24 mobile:w-auto max-mobile:w-12"
-                loading="lazy"
-            />
-            <span
-                class="select-none text-center font-body-condensed text-2xl transition-all duration-200 ease-in-out [-webkit-text-stroke:1px_#00000077] [-webkit-text-fill-color:transparent] max-mobile:text-[2.3em] bg-linear-to-br from-blue-300 to-blue-500 bg-clip-text text-transparent"
-                >VICE CLUB</span
+        <div class="relative flex items-center gap-4 shrink-0">
+            <div
+                class="absolute inset-0 z-0 bg-linear-to-r from-pink-700/40 via-yellow-300/40 to-blue-500/40 blur-3xl"
             >
+            </div>
+
+            <img
+                class="relative z-1 w-[4em] max-mobile:w-15"
+                src="/assets/images/app/logo.webp"
+                alt="Vice Club Logo"
+            />
+
+            <span
+                class="relative z-1 select-none text-center font-body-condensed text-5xl tracking-tight text-blue-400 [-webkit-text-stroke:2px_#101525aa] max-mobile:text-[2.3em]"
+            >
+                VICE CLUB
+            </span>
         </div>
 
         <div
-            class="flex flex-col mobile:flex-row items-center gap-6 mobile:gap-10"
+            class="flex flex-wrap items-center justify-center lg:justify-end gap-x-10 gap-y-6"
         >
-            <div class="flex items-center gap-3">
+            <nav aria-label="Redes" class="flex items-center gap-3">
                 <a
                     href="https://github.com/sebastian-fraga/viceclub"
+                    aria-label="GitHub"
                     class=`${anchorClasses} hover:bg-pink-100`
                 >
                     <IconBrandGithub stroke={1.5} />
@@ -44,6 +49,7 @@ const anchorClasses =
 
                 <a
                     href="https://x.com/ViceClubApp"
+                    aria-label="X"
                     class=`${anchorClasses} hover:bg-yellow-100`
                 >
                     <IconBrandX stroke={1.5} />
@@ -51,18 +57,19 @@ const anchorClasses =
 
                 <a
                     href="mailto:contact@viceclub.app"
+                    aria-label="Email"
                     class=`${anchorClasses} hover:bg-blue-100`
                 >
                     <IconMail stroke={1.5} />
                 </a>
-            </div>
+            </nav>
 
-            <Support client:load />
+            <Support />
         </div>
     </div>
 
     <div
-        class="flex flex-col mobile:flex-row items-center justify-center gap-2 mobile:gap-3 border-t border-slate-700/20 pt-4 pb-2 text-sm text-center"
+        class="flex flex-col mobile:flex-row items-center justify-center gap-2 mobile:gap-3 text-base text-center"
     >
         <span class="text-slate-300 font-extrabold">
             © {new Date().getFullYear()} VICE CLUB
