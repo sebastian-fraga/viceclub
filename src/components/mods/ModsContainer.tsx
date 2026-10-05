@@ -40,6 +40,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
             !mod.isFeatured &&
             (selectedCategory === "all" || selectedCategory === mod.category),
     );
+    normalMods.sort((a, b) => a.title.localeCompare(b.title));
 
     function handleSelectMod(mod: ModEntry) {
         setSelectedModId(mod.id);
