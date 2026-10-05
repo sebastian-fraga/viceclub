@@ -18,7 +18,7 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/preview-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/preview-light.png">
-    <img alt="Preview" src="public/assets/images/app/readme/titles/preview-light.png" height="32">
+    <img alt="Preview" src="public/assets/images/app/readme/titles/preview-light.png" height="48">
   </picture>
 </div>
 <br>
@@ -36,7 +36,7 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/tech-stack-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/tech-stack-light.png">
-    <img alt="Tech stack" src="public/assets/images/app/readme/titles/tech-stack-light.png" height="32">
+    <img alt="Tech stack" src="public/assets/images/app/readme/titles/tech-stack-light.png" height="48">
   </picture>
 </div>
 <br>
@@ -56,7 +56,7 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/features-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/features-light.png">
-    <img alt="Features" src="public/assets/images/app/readme/titles/features-light.png" height="32">
+    <img alt="Features" src="public/assets/images/app/readme/titles/features-light.png" height="48">
   </picture>
 </div>
 <br>
@@ -79,7 +79,7 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/structure-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/structure-light.png">
-    <img alt="Structure" src="public/assets/images/app/readme/titles/structure-light.png" height="32">
+    <img alt="Structure" src="public/assets/images/app/readme/titles/structure-light.png" height="48">
   </picture>
 </div>
 <br>
@@ -106,7 +106,7 @@ src/
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/local-development-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/local-development-light.png">
-    <img alt="Local development" src="public/assets/images/app/readme/titles/local-development-light.png" height="32">
+    <img alt="Local development" src="public/assets/images/app/readme/titles/local-development-light.png" height="48">
   </picture>
 </div>
 <br>
@@ -124,11 +124,12 @@ pnpm run dev
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/conventions-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/conventions-light.png">
-    <img alt="Conventions" src="public/assets/images/app/readme/titles/conventions-light.png" height="32">
+    <img alt="Conventions" src="public/assets/images/app/readme/titles/conventions-light.png" height="48">
   </picture>
 </div>
 <br>
 
 - Custom breakpoints: `max-mobile:` for inverse mobile-first overrides
 - Per-game theming via `--game-accent` (CSS custom property)
-- Shared hooks in `useSettings`/`AppContext` for persistence (localStorage)
+- Shared hooks in `useSettings` for persistence (localStorage)
+- Developer settings section in `SettingsModal` with development-only options (more options planned in the future)
