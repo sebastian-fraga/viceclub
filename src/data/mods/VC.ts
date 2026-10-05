@@ -872,78 +872,372 @@ const mods: GameModsFile = {
             id: "renderhook",
             title: "RenderHook",
             category: "graphics",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Reemplaza el motor de renderizado por uno basado en DirectX 11, con ray tracing y shaders modernos",
+                en: "Replaces the rendering engine with a DirectX 11-based one, with ray tracing and modern shaders",
+                fr: "Remplace le moteur de rendu par un moteur basé sur DirectX 11, avec ray tracing et shaders modernes",
+                pt: "Substitui o motor de renderização por um baseado em DirectX 11, com ray tracing e shaders modernos",
+            },
+            description: {
+                es: "RenderHook reemplaza el motor de renderizado original del juego por uno basado en DirectX 11, con soporte para ray tracing. Esto permite sumar iluminación dinámica, reflejos y sombras realistas, además de shaders modernos que mejoran notablemente la calidad visual sin alterar el gameplay.",
+                en: "RenderHook replaces the game's original rendering engine with one based on DirectX 11, with ray tracing support. This adds dynamic lighting, realistic reflections and shadows, plus modern shaders that noticeably improve visual quality without altering gameplay.",
+                fr: "RenderHook remplace le moteur de rendu d'origine du jeu par un moteur basé sur DirectX 11, compatible avec le ray tracing. Il ajoute un éclairage dynamique, des reflets et des ombres réalistes, ainsi que des shaders modernes qui améliorent nettement la qualité visuelle sans modifier le gameplay.",
+                pt: "O RenderHook substitui o motor de renderização original do jogo por um baseado em DirectX 11, com suporte a ray tracing. Isso adiciona iluminação dinâmica, reflexos e sombras realistas, além de shaders modernos que melhoram bastante a qualidade visual sem alterar a jogabilidade.",
+            },
             author: ["PetkaGTA"],
+            requirements: {
+                mods: ["mod-loader"],
+            },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>VC_-_RenderHook_Raytracing.7z</code>",
+                        en: "Download the <code>VC_-_RenderHook_Raytracing.7z</code>",
+                        fr: "Télécharger le fichier <code>VC_-_RenderHook_Raytracing.7z</code>",
+                        pt: "Baixe o arquivo <code>VC_-_RenderHook_Raytracing.7z</code>",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego",
+                        en: "Open the game's root installation folder in File Explorer",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover todos los archivos",
+                        en: "Move all the files",
+                        fr: "Déplacer tous les fichiers",
+                        pt: "Mover todos os arquivos",
+                    },
+                    description: {
+                        es: "Colocar y reemplazar todos los archivos en la carpeta del juego",
+                        en: "Copy all the files into the game folder and overwrite when prompted",
+                        fr: "Copier tous les fichiers dans le dossier du jeu et les remplacer lorsque c’est demandé",
+                        pt: "Copie todos os arquivos para a pasta do jogo e substitua quando solicitado",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
-            moreInfoUrl: "",
-            downloadUrl: "",
+            moreInfoUrl:
+                "https://www.mixmods.com.br/2021/01/iii-vc-renderhook-raytracing-rtx-graphics/",
+            downloadUrl:
+                "https://sharemods.com/ssrjsxpkql8i/VC_-_RenderHook_Raytracing.7z.html",
         },
         {
             id: "project2dfx",
             title: "Project2DFX",
             category: "graphics",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Añade coronas de luz a farolas y semáforos y amplía la distancia de dibujado de objetos lejanos.",
+                en: "Adds light coronas to street lamps and traffic lights and extends the draw distance of distant objects.",
+                fr: "Ajoute des coronas lumineuses aux lampadaires et feux de circulation et étend la distance d'affichage des objets lointains.",
+                pt: "Adiciona coronas de luz a postes e semáforos e amplia a distância de renderização de objetos distantes.",
+            },
+            description: {
+                es: "Project2DFX agrega coronas de luz (halos luminosos) a farolas, semáforos y otros elementos del mapa, y amplía la distancia de dibujado de los objetos lejanos (LOD) para que la ciudad se vea más completa a la distancia. No modifica el gameplay y funciona como un complemento visual ligero, ya que se carga como un script a través del ASI Loader.",
+                en: "Project2DFX adds light coronas (glowing halos) to street lamps, traffic lights and other map elements, and extends the draw distance of distant objects (LOD) so the city looks more complete from afar. It does not change gameplay and works as a lightweight visual add-on, since it is loaded as a script through the ASI Loader.",
+                fr: "Project2DFX ajoute des coronas lumineuses (halos) aux lampadaires, feux de circulation et autres éléments de la carte, et étend la distance d'affichage des objets lointains (LOD) pour que la ville paraisse plus complète au loin. Il ne modifie pas le gameplay et fonctionne comme un complément visuel léger, car il est chargé comme un script via l'ASI Loader.",
+                pt: "O Project2DFX adiciona coronas de luz (halos luminosos) a postes, semáforos e outros elementos do mapa, e amplia a distância de renderização dos objetos distantes (LOD) para que a cidade pareça mais completa à distância. Não altera a jogabilidade e funciona como um complemento visual leve, pois é carregado como um script pelo ASI Loader.",
+            },
             author: ["ThirteenAG"],
+            requirements: {
+                mods: ["widescreen-fix", "ultimate-asi-loader"],
+                gameVersion: "1.0",
+            },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>VC.Project2DFX.zip</code>",
+                        en: "Download the <code>VC.Project2DFX.zip</code>",
+                        fr: "Télécharger le fichier <code>VC.Project2DFX.zip</code>",
+                        pt: "Baixe o arquivo <code>VC.Project2DFX.zip</code>",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego",
+                        en: "Open the game's root installation folder in File Explorer",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover todos los archivos",
+                        en: "Move all the files",
+                        fr: "Déplacer tous les fichiers",
+                        pt: "Mover todos os arquivos",
+                    },
+                    description: {
+                        es: "Colocar todos los archivos dentro de la carpeta <code>scripts/</code> del juego",
+                        en: "Place all the files inside the game's <code>scripts/</code> folder",
+                        fr: "Placer tous les fichiers dans le dossier <code>scripts/</code> du jeu",
+                        pt: "Coloque todos os arquivos dentro da pasta <code>scripts/</code> do jogo",
+                    },
+                },
+                {
+                    title: {
+                        es: "OPCIONAL",
+                        en: "OPTIONAL",
+                        fr: "FACULTATIF",
+                        pt: "OPCIONAL",
+                    },
+                    description: {
+                        es: "Editar los archivos <code>III.VC.SA.LimitAdjuster.ini</code> y <code>VCLodLights.ini</code> abriéndolos desde el Bloc de notas para ajustar parámetros del mod.",
+                        en: "Edit the <code>III.VC.SA.LimitAdjuster.ini</code> and <code>VCLodLights.ini</code> files by opening them in Notepad to adjust the mod's settings.",
+                        fr: "Modifier les fichiers <code>III.VC.SA.LimitAdjuster.ini</code> et <code>VCLodLights.ini</code> en les ouvrant avec le Bloc-notes pour ajuster les paramètres du mod.",
+                        pt: "Edite os arquivos <code>III.VC.SA.LimitAdjuster.ini</code> e <code>VCLodLights.ini</code> abrindo-os no Bloco de Notas para ajustar os parâmetros do mod.",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
             moreInfoUrl:
                 "https://github.com/ThirteenAG/III.VC.SA.IV.Project2DFX/releases/tag/gtavc",
-            downloadUrl: "",
+            downloadUrl:
+                "https://github.com/ThirteenAG/III.VC.SA.IV.Project2DFX/releases/tag/gtavc",
         },
         {
             id: "mixsets",
             title: "MixSets",
             category: "gameplay",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Reúne en un archivo de configuración decenas de ajustes, correcciones y opciones de gameplay del juego.",
+                en: "Gathers dozens of game settings, fixes and gameplay options into a single configuration file.",
+                fr: "Regroupe dans un seul fichier de configuration des dizaines de réglages, corrections et options de gameplay.",
+                pt: "Reúne em um único arquivo de configuração dezenas de ajustes, correções e opções de jogabilidade.",
+            },
+            description: {
+                es: "MixSets es un conjunto de ajustes que se controlan desde un único archivo de configuración (<code>Mix Sets.ini</code>). Permite activar, desactivar o modificar decenas de parámetros del juego, como correcciones de errores, comportamiento de vehículos y peatones, y otras opciones de gameplay, sin necesidad de instalar un mod distinto para cada cambio. Se carga a través de Mod Loader.",
+                en: "MixSets is a set of tweaks controlled from a single configuration file (<code>Mix Sets.ini</code>). It lets you enable, disable or modify dozens of game parameters, such as bug fixes, vehicle and pedestrian behavior, and other gameplay options, without installing a separate mod for each change. It is loaded through Mod Loader.",
+                fr: "MixSets est un ensemble de réglages contrôlés depuis un seul fichier de configuration (<code>Mix Sets.ini</code>). Il permet d'activer, de désactiver ou de modifier des dizaines de paramètres du jeu, comme des corrections de bugs, le comportement des véhicules et des piétons, et d'autres options de gameplay, sans installer un mod distinct pour chaque changement. Il est chargé via Mod Loader.",
+                pt: "O MixSets é um conjunto de ajustes controlados a partir de um único arquivo de configuração (<code>Mix Sets.ini</code>). Ele permite ativar, desativar ou modificar dezenas de parâmetros do jogo, como correções de bugs, comportamento de veículos e pedestres e outras opções de jogabilidade, sem precisar instalar um mod separado para cada mudança. É carregado através do Mod Loader.",
+            },
             version: "1.0.3",
             author: ["Junior_Djjr"],
+            requirements: {
+                mods: ["mod-loader"],
+            },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>VC_-_MixSets.7z</code>",
+                        en: "Download the <code>VC_-_MixSets.7z</code>",
+                        fr: "Télécharger le fichier <code>VC_-_MixSets.7z</code>",
+                        pt: "Baixe o arquivo <code>VC_-_MixSets.7z</code>",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego",
+                        en: "Open the game's root installation folder in File Explorer",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover todos los archivos",
+                        en: "Move all the files",
+                        fr: "Déplacer tous les fichiers",
+                        pt: "Mover todos os arquivos",
+                    },
+                    description: {
+                        es: "Abrir <code>EN/</code> y mover la carpeta <code>MixSets/</code> al <code>modloader/</code> del juego",
+                        en: "Open <code>EN/</code> and move the <code>MixSets/</code> folder into the game's <code>modloader/</code> folder",
+                        fr: "Ouvrir <code>EN/</code> et déplacer le dossier <code>MixSets/</code> dans le dossier <code>modloader/</code> du jeu",
+                        pt: "Abra <code>EN/</code> e mova a pasta <code>MixSets/</code> para a pasta <code>modloader/</code> do jogo",
+                    },
+                },
+                {
+                    title: {
+                        es: "Editar parámetros",
+                        en: "Edit settings",
+                        fr: "Modifier les paramètres",
+                        pt: "Editar parâmetros",
+                    },
+                    description: {
+                        es: "Editar el archivo <code>cleo/Mix Sets.ini</code> abriéndolo desde el Bloc de notas para ajustar parámetros del mod.",
+                        en: "Edit the <code>cleo/Mix Sets.ini</code> file by opening it in Notepad to adjust the mod's settings.",
+                        fr: "Modifier le fichier <code>cleo/Mix Sets.ini</code> en l'ouvrant avec le Bloc-notes pour ajuster les paramètres du mod.",
+                        pt: "Edite o arquivo <code>cleo/Mix Sets.ini</code> abrindo-o no Bloco de Notas para ajustar os parâmetros do mod.",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
             moreInfoUrl:
                 "https://www.mixmods.com.br/2021/04/vc-mixsets-v1-0-3/",
-            downloadUrl: "",
+            downloadUrl:
+                "https://sharemods.com/ixbdaq70icmm/VC_-_MixSets.7z.html",
         },
         {
             id: "open-limit-adjuster",
             title: "Open Limit Adjuster",
             category: "essentials",
-            shortDescription: "",
-            description: "",
+            shortDescription: {
+                es: "Elimina o amplía los límites internos del motor del juego, evitando crasheos al usar mods.",
+                en: "Removes or raises the game engine's internal limits, preventing crashes when using mods.",
+                fr: "Supprime ou relève les limites internes du moteur du jeu, évitant les plantages lorsqu'on utilise de mods.",
+                pt: "Remove ou amplia os limites internos do motor do jogo, evitando travamentos ao usar mods.",
+            },
+            description: {
+                es: "Open Limit Adjuster modifica los límites internos del motor del juego, como la cantidad máxima de objetos, modelos, texturas o vehículos que se pueden cargar a la vez. Al ampliarlos o hacerlos dinámicos, evita crasheos y errores que aparecen al instalar muchos mods o contenido pesado. No cambia el gameplay y es una base recomendada para cualquier configuración con varios mods. Se carga a través de Mod Loader.",
+                en: "Open Limit Adjuster modifies the game engine's internal limits, such as the maximum number of objects, models, textures or vehicles that can be loaded at once. By raising them or making them dynamic, it prevents the crashes and errors that appear when installing many mods or heavy content. It does not change gameplay and is a recommended base for any setup with several mods. It is loaded through Mod Loader.",
+                fr: "Open Limit Adjuster modifie les limites internes du moteur du jeu, comme le nombre maximal d'objets, de modèles, de textures ou de véhicules pouvant être chargés simultanément. En les relevant ou en les rendant dynamiques, il évite les plantages et erreurs qui surviennent lors de l'installation de nombreux mods ou de contenus lourds. Il ne modifie pas le gameplay et constitue une base recommandée pour toute configuration comportant plusieurs mods. Il est chargé via Mod Loader.",
+                pt: "O Open Limit Adjuster modifica os limites internos do motor do jogo, como a quantidade máxima de objetos, modelos, texturas ou veículos que podem ser carregados ao mesmo tempo. Ao ampliá-los ou torná-los dinâmicos, evita travamentos e erros que aparecem ao instalar muitos mods ou conteúdo pesado. Não altera a jogabilidade e é uma base recomendada para qualquer configuração com vários mods. É carregado através do Mod Loader.",
+            },
             version: "1.7",
             author: ["LINK/2012", "ThirteenAG", "Blackbird88"],
+            requirements: {
+                mods: ["mod-loader"]
+            },
             installSteps: [
                 {
-                    title: "",
-                    description: "",
+                    title: {
+                        es: "Descargar el mod",
+                        en: "Download the mod",
+                        fr: "Télécharger le mod",
+                        pt: "Baixar o mod",
+                    },
+                    description: {
+                        es: "Descargar el archivo <code>Open_Limit_Adjuster.zip</code>",
+                        en: "Download the <code>Open_Limit_Adjuster.zip</code>",
+                        fr: "Télécharger le fichier <code>Open_Limit_Adjuster.zip</code>",
+                        pt: "Baixe o arquivo <code>Open_Limit_Adjuster.zip</code>",
+                    },
+                },
+                {
+                    title: {
+                        es: "Extraer la carpeta",
+                        en: "Extract the folder",
+                        fr: "Extraire le dossier",
+                        pt: "Extrair a pasta",
+                    },
+                    description: {
+                        es: "Extraer la carpeta descargada con un programa como WinRAR o 7-Zip.",
+                        en: "Extract the downloaded folder using a program such as WinRAR or 7-Zip.",
+                        fr: "Extraire le dossier téléchargé avec un programme comme WinRAR ou 7-Zip.",
+                        pt: "Extraia a pasta baixada usando um programa como WinRAR ou 7-Zip.",
+                    },
+                },
+                {
+                    title: {
+                        es: "Localizar la carpeta del juego",
+                        en: "Locate the game folder",
+                        fr: "Localiser le dossier du jeu",
+                        pt: "Localizar a pasta do jogo",
+                    },
+                    description: {
+                        es: "Abrir en el explorador de archivos la carpeta raíz donde esté instalado el juego",
+                        en: "Open the game's root installation folder in File Explorer",
+                        fr: "Ouvrir dans l’Explorateur de fichiers le dossier racine où le jeu est installé",
+                        pt: "Abra no Explorador de Arquivos a pasta raiz onde o jogo está instalado",
+                    },
+                },
+                {
+                    title: {
+                        es: "Mover todos los archivos",
+                        en: "Move all the files",
+                        fr: "Déplacer tous les fichiers",
+                        pt: "Mover todos os arquivos",
+                    },
+                    description: {
+                        es: "Mover la carpeta <code>Open Limit Adjuster/</code> al <code>modloader/</code> del juego",
+                        en: "",
+                        fr: "",
+                        pt: "",
+                    },
                 },
             ],
             coverImage: "",
             screenshots: ["", "", ""],
             moreInfoUrl:
                 "https://www.mixmods.com.br/2022/10/open-limit-adjuster/",
-            downloadUrl: "",
+            downloadUrl:
+                "https://sharemods.com/a8lp92fm5jz4/Open_Limit_Adjuster.zip.html",
         },
     ],
 };
