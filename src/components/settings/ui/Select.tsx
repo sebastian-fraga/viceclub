@@ -145,6 +145,7 @@ export default function Select({
                                 <div
                                     className="fixed inset-0 z-20050"
                                     onClick={() => setOpen(false)}
+                                    data-lenis-prevent
                                 />
 
                                 <motion.ul
@@ -172,7 +173,7 @@ export default function Select({
                                         maxWidth: coords.maxWidth,
                                         maxHeight: coords.maxHeight,
                                     }}
-                                    className="fixed bg-[#1c1c28] rounded-md shadow-lg overflow-hidden z-20100 scroll-settings overflow-y-auto"
+                                    className="fixed bg-[#1c1c28] rounded-lg shadow-2xl overflow-hidden z-20100 scroll-settings overflow-y-auto"
                                     data-lenis-prevent
                                 >
                                     {selectOptions.map((option) => {
