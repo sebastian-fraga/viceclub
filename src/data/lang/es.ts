@@ -1450,12 +1450,15 @@ export default {
                         name: "Cursores personalizados",
                     },
                     4: {
-                        name: "Animaciones reducidas",
+                        name: "Brillo del cursor",
                     },
                     5: {
-                        name: "Exportar datos",
+                        name: "Animaciones reducidas",
                     },
                     6: {
+                        name: "Exportar datos",
+                    },
+                    7: {
                         name: "Importar datos",
                         description:
                             "Carga un backup anterior y reemplaza tu progreso actual",

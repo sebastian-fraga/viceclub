@@ -1450,12 +1450,15 @@ export default {
                         name: "Curseurs personnalisés",
                     },
                     4: {
-                        name: "Réduire les animations",
+                        name: "Halo du curseur",
                     },
                     5: {
-                        name: "Exporter les données",
+                        name: "Réduire les animations",
                     },
                     6: {
+                        name: "Exporter les données",
+                    },
+                    7: {
                         name: "Importer des données",
                         description:
                             "Chargez une sauvegarde antérieure et remplacez votre progression actuelle",

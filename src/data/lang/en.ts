@@ -1448,12 +1448,15 @@ export default {
                         name: "Custom cursors",
                     },
                     4: {
-                        name: "Reduced motion",
+                        name: "Cursor glow",
                     },
                     5: {
-                        name: "Export data",
+                        name: "Reduced motion",
                     },
                     6: {
+                        name: "Export data",
+                    },
+                    7: {
                         name: "Import data",
                         description:
                             "Load a previous backup and replace your current progress",
