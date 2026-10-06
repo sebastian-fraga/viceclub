@@ -1,0 +1,78 @@
+---
+
+---
+
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<style>
+    #cursor-glow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 2500px;
+        height: 2500px;
+        margin: -1250px 0 0 -1250px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        will-change: transform;
+        background: radial-gradient(
+            circle,
+            rgba(52, 45, 126, 0.18) 0%,
+            rgba(52, 45, 126, 0.11) 30%,
+            rgba(52, 45, 126, 0.05) 55%,
+            rgba(52, 45, 126, 0) 72%
+        );
+        mix-blend-mode: screen;
+    }
+
+    @media (hover: none), (pointer: coarse) {
+        #cursor-glow {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    function init(el: HTMLElement) {
+        let targetX = window.innerWidth / 2;
+        let targetY = window.innerHeight / 2;
+        let currentX = targetX;
+        let currentY = targetY;
+        const EASE = 0.021; // cursor tracking smoothness. lower value = slower
+
+        window.addEventListener(
+            "pointermove",
+            (e: PointerEvent) => {
+                targetX = e.clientX;
+                targetY = e.clientY;
+                el.style.opacity = "1";
+            },
+            { passive: true },
+        );
+
+        document.addEventListener("pointerleave", () => {
+            el.style.opacity = "0";
+        });
+
+        function tick() {
+            currentX += (targetX - currentX) * EASE;
+            currentY += (targetY - currentY) * EASE;
+            el.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+            requestAnimationFrame(tick);
+        }
+        tick();
+    }
+
+    const glow = document.getElementById("cursor-glow");
+    const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (glow && isFinePointer && !prefersReducedMotion) {
+        init(glow);
+    }
+</script>
