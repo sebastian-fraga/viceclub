@@ -210,7 +210,7 @@ export const CheatsContainer = ({
                                         key={cheat.id}
                                         className={`rounded-3xl p-7 max-mobile:p-4 flex flex-col gap-2 transition-opacity ${
                                             isAvailable
-                                                ? "bg-(--button-bg)/40 shadow-2xl shadow-violet-400/5"
+                                                ? "bg-(--button-bg)/70 shadow-2xl shadow-violet-400/5"
                                                 : "bg-(--button-bg)/20 opacity-50 cursor-not-allowed"
                                         }`}
                                     >
@@ -307,7 +307,7 @@ export const CheatsContainer = ({
                                                     return (
                                                         <div
                                                             key={index}
-                                                            className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex items-center gap-1 ${
+                                                            className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex flex-wrap items-center gap-1 ${
                                                                 platformNote.noteType ===
                                                                 "warning"
                                                                     ? "text-red-100"
