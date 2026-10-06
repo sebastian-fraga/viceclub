@@ -119,6 +119,7 @@ export default {
             },
             age: "Âge",
             firstAppearance: "Première apparition",
+            portrayedBy: "Interprété par",
             unknown: "Inconnue",
             loadMore: "Charger plus",
         },

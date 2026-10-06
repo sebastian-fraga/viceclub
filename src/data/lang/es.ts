@@ -119,6 +119,7 @@ export default {
             },
             age: "Edad",
             firstAppearance: "Primera aparición",
+            portrayedBy: "Interpretado por",
             unknown: "Desconocida",
             loadMore: "Cargar más",
         },
@@ -1493,7 +1494,8 @@ export default {
             dev: {
                 title: "Desarrollo",
                 openPageProduction: "Abrir página actual en producción",
-                openPagePerformance: "Analizar página actual de producción en PageSpeed",
+                openPagePerformance:
+                    "Analizar página actual de producción en PageSpeed",
             },
         },
         resetProgress: {
