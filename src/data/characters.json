@@ -9,6 +9,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.iii.characters.1.mission",
+            "portrayedBy": "Hunter Platin",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1066291/",
             "quote": "home.iii.characters.1.quote",
             "nationalities": ["us"]
         },
@@ -21,6 +23,8 @@
             "status": "femaleEnemy",
             "statusLabel": "home.characters.statusLabel.femaleEnemy",
             "firstAppearance": "home.characters.iii.2.mission",
+            "portrayedBy": "Cynthia Farrell",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1067487/",
             "quote": "home.iii.characters.2.quote",
             "nationalities": ["co", "do"]
         },
@@ -33,6 +37,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iii.characters.3.mission",
+            "portrayedBy": "Guru",
+            "portrayedByUrl": "https://www.imdb.com/name/nm9248148/",
             "quote": "home.iii.characters.3.quote",
             "nationalities": ["us"]
         },
@@ -45,6 +51,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iii.characters.4.mission",
+            "portrayedBy": "Frank Vincent",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0898634/",
             "quote": "home.iii.characters.4.quote",
             "nationalities": ["it", "us"]
         },
@@ -57,6 +65,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.iii.characters.5.mission",
+            "portrayedBy": "Debi Mazar",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000529/",
             "quote": "home.iii.characters.5.quote",
             "nationalities": ["us", "it"]
         },
@@ -69,6 +79,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.iii.characters.6.mission",
+            "portrayedBy": "Lianna Pai",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0656657/",
             "quote": "home.iii.characters.6.quote",
             "nationalities": ["jp"]
         },
@@ -81,6 +93,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iii.characters.7.mission",
+            "portrayedBy": "Robert Loggia",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0005162/",
             "quote": "home.iii.characters.7.quote",
             "nationalities": ["us"]
         },
@@ -93,6 +107,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iii.characters.8.mission",
+            "portrayedBy": "Kyle MacLachlan",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001492/",
             "quote": "home.iii.characters.8.quote",
             "nationalities": ["us"]
         }
@@ -107,6 +123,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.vc.characters.1.mission",
+            "portrayedBy": "Ray Liotta",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000501/",
             "quote": "home.vc.characters.1.quote",
             "nationalities": ["us"]
         },
@@ -119,6 +137,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vc.characters.2.mission",
+            "portrayedBy": "Tom Sizemore",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001744/",
             "quote": "home.vc.characters.2.quote",
             "nationalities": ["it", "us"]
         },
@@ -131,6 +151,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.3.mission",
+            "portrayedBy": "William Fichtner",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001209/",
             "quote": "home.vc.characters.3.quote",
             "nationalities": ["us"]
         },
@@ -143,6 +165,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vc.characters.4.mission",
+            "portrayedBy": "Philip Michael Thomas",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0859365/",
             "quote": "home.vc.characters.4.quote",
             "nationalities": ["us", "do"]
         },
@@ -155,6 +179,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vc.characters.5.mission",
+            "portrayedBy": "Luis Guzmán",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0350079/",
             "quote": "home.vc.characters.5.quote",
             "nationalities": ["cu"]
         },
@@ -168,6 +194,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.6.mission",
+            "portrayedBy": "Robert Davi",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001108/",
             "quote": "home.vc.characters.6.quote",
             "nationalities": ["unknown"]
         },
@@ -180,6 +208,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.7.mission",
+            "portrayedBy": "Danny Dyer",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0245705/",
             "quote": "home.vc.characters.7.quote",
             "nationalities": ["gb"]
         },
@@ -192,6 +222,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.8.mission",
+            "portrayedBy": "Burt Reynolds",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000608/",
             "quote": "home.vc.characters.8.quote",
             "nationalities": ["us"]
         },
@@ -205,6 +237,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.vc.characters.9.mission",
+            "portrayedBy": "Youree Dell Harris",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1268733/bio/",
             "quote": "home.vc.characters.9.quote",
             "nationalities": ["ht"]
         },
@@ -217,6 +251,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.10.mission",
+            "portrayedBy": "Danny Trejo",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001803/",
             "quote": "home.vc.characters.10.quote",
             "nationalities": ["cu"]
         },
@@ -229,6 +265,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vc.characters.11.mission",
+            "portrayedBy": "Gary Busey",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000997/",
             "quote": "home.vc.characters.11.quote",
             "nationalities": ["us"]
         },
@@ -241,6 +279,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.vc.characters.12.mission",
+            "portrayedBy": "Fairuza Balk",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000103/",
             "quote": "home.vc.characters.12.quote",
             "nationalities": ["unknown"]
         }
@@ -255,6 +295,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.sa.characters.1.mission",
+            "portrayedBy": "Young Maylay",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1727632/",
             "quote": "home.sa.characters.1.quote",
             "nationalities": ["us"]
         },
@@ -267,6 +309,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.2.mission",
+            "portrayedBy": "Faizon Love",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0522324/",
             "quote": "home.sa.characters.2.quote",
             "nationalities": ["us"]
         },
@@ -279,6 +323,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.3.mission",
+            "portrayedBy": "Clifton Powell",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0694066/",
             "quote": "home.sa.characters.3.quote",
             "nationalities": ["us"]
         },
@@ -291,6 +337,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.4.mission",
+            "portrayedBy": "MC Eiht",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0563810/",
             "quote": "home.sa.characters.4.quote",
             "nationalities": ["us"]
         },
@@ -303,6 +351,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.5.mission",
+            "portrayedBy": "Jas Anderson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1750624/",
             "quote": "home.sa.characters.5.quote",
             "nationalities": ["us"]
         },
@@ -315,6 +365,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.sa.characters.6.mission",
+            "portrayedBy": "Yolanda Whittaker",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0926469/",
             "quote": "home.sa.characters.6.quote",
             "nationalities": ["us"]
         },
@@ -327,6 +379,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.7.mission",
+            "portrayedBy": "Clifton Collins Jr.",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0004286/",
             "quote": "home.sa.characters.7.quote",
             "nationalities": ["mx"]
         },
@@ -339,6 +393,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.sa.characters.8.mission",
+            "portrayedBy": "Heather Alicia Simms",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0799967/",
             "quote": "home.sa.characters.8.quote",
             "nationalities": ["us"]
         },
@@ -351,6 +407,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.9.mission",
+            "portrayedBy": "Samuel L. Jackson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000168/",
             "quote": "home.sa.characters.9.quote",
             "nationalities": ["us"]
         },
@@ -363,6 +421,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.10.mission",
+            "portrayedBy": "Chris Penn",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001606/",
             "quote": "home.sa.characters.10.quote",
             "nationalities": ["us", "pl"]
         },
@@ -375,6 +435,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.11.mission",
+            "portrayedBy": "Peter Fonda",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001228/",
             "quote": "home.sa.characters.11.quote",
             "nationalities": ["us"]
         },
@@ -387,6 +449,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.12.mission",
+            "portrayedBy": "James Yaegashi",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0944853/",
             "quote": "home.sa.characters.12.quote",
             "nationalities": ["cn"]
         },
@@ -399,6 +463,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.13.mission",
+            "portrayedBy": "Charlie Murphy",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0614151/",
             "quote": "home.sa.characters.13.quote",
             "nationalities": ["us"]
         },
@@ -411,6 +477,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.sa.characters.14.mission",
+            "portrayedBy": "Kid Frost",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0296528/",
             "quote": "home.sa.characters.14.quote",
             "nationalities": ["mx"]
         },
@@ -423,6 +491,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.15.mission",
+            "portrayedBy": "James Woods",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000249/",
             "quote": "home.sa.characters.15.quote",
             "nationalities": ["us"]
         },
@@ -435,6 +505,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.sa.characters.16.mission",
+            "portrayedBy": "Ice-T",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001384/",
             "quote": "home.sa.characters.16.quote",
             "nationalities": ["us"]
         }
@@ -449,6 +521,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.lcs.characters.1.mission",
+            "portrayedBy": "Danny Mastrogiorgio",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0557850/",
             "quote": "home.lcs.characters.1.quote",
             "nationalities": ["us", "it"]
         },
@@ -461,6 +535,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.lcs.characters.2.mission",
+            "portrayedBy": "Frank Vincent",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0898634/",
             "quote": "home.lcs.characters.2.quote",
             "nationalities": ["it"]
         },
@@ -473,6 +549,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.3.mission",
+            "portrayedBy": "Joe Lo Truglio",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0516266/",
             "quote": "home.lcs.characters.3.quote",
             "nationalities": ["us", "it"]
         },
@@ -485,6 +563,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.4.mission",
+            "portrayedBy": "Greg Romero Wilson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1034313/",
             "quote": "home.lcs.characters.4.quote",
             "nationalities": ["us", "ie"]
         },
@@ -497,6 +577,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.5.mission",
+            "portrayedBy": "Duccio Faggella",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1220672/",
             "quote": "home.lcs.characters.5.quote",
             "nationalities": ["it"]
         },
@@ -509,6 +591,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.lcs.characters.6.mission",
+            "portrayedBy": "Fiona Gallagher",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0302378/",
             "quote": "home.lcs.characters.6.quote",
             "nationalities": ["us", "it"]
         },
@@ -521,6 +605,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.lcs.characters.7.mission",
+            "portrayedBy": "Will Janowitz",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1052666/",
             "quote": "home.lcs.characters.7.quote",
             "nationalities": ["us"]
         },
@@ -533,6 +619,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.8.mission",
+            "portrayedBy": "Jeff Gurner",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0348669/",
             "quote": "home.lcs.characters.8.quote",
             "nationalities": ["us", "it"]
         },
@@ -545,6 +633,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.lcs.characters.9.mission",
+            "portrayedBy": "Peter Appel",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0032216/",
             "quote": "home.lcs.characters.9.quote",
             "nationalities": ["us"]
         },
@@ -557,6 +647,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.10.mission",
+            "portrayedBy": "Peter Bradbury",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0102905/",
             "quote": "home.lcs.characters.10.quote",
             "nationalities": ["us"]
         },
@@ -569,6 +661,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.lcs.characters.11.mission",
+            "portrayedBy": "Hana Moon",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2060636/",
             "quote": "home.lcs.characters.11.quote",
             "nationalities": ["jp"]
         },
@@ -581,6 +675,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.lcs.characters.12.mission",
+            "portrayedBy": "Keenan Shimizu",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0793661/",
             "quote": "home.lcs.characters.12.quote",
             "nationalities": ["jp"]
         }
@@ -595,6 +691,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.vcs.characters.1.mission",
+            "portrayedBy": "Dorian Missick",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0592923/",
             "quote": "home.vcs.characters.1.quote",
             "nationalities": ["do", "us"]
         },
@@ -607,6 +705,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vcs.characters.2.mission",
+            "portrayedBy": "Felix Solis",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0813101/",
             "quote": "home.vcs.characters.2.quote",
             "nationalities": ["mx", "us"]
         },
@@ -619,6 +719,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vcs.characters.3.mission",
+            "portrayedBy": "Gary Busey",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0000997/",
             "quote": "home.vcs.characters.3.quote",
             "nationalities": ["us"]
         },
@@ -631,6 +733,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.vcs.characters.4.mission",
+            "portrayedBy": "Chelsey Rives",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2449731/",
             "quote": "home.vcs.characters.4.quote",
             "nationalities": ["us"]
         },
@@ -643,6 +747,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vcs.characters.5.mission",
+            "portrayedBy": "Philip Michael Thomas",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0859365/",
             "quote": "home.vcs.characters.5.quote",
             "nationalities": ["us", "do"]
         },
@@ -655,6 +761,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.vcs.characters.6.mission",
+            "portrayedBy": "Danny Trejo",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0001803/",
             "quote": "home.vcs.characters.6.quote",
             "nationalities": ["cu"]
         },
@@ -667,6 +775,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vcs.characters.7.mission",
+            "portrayedBy": "Daniel Oreskes",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0649729/",
             "quote": "home.vcs.characters.7.quote",
             "nationalities": ["us"]
         },
@@ -692,6 +802,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.vcs.characters.9.mission",
+            "portrayedBy": "Barbara Rosenblat",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0742381/",
             "quote": "home.vcs.characters.9.quote",
             "nationalities": ["de"]
         },
@@ -704,6 +816,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.vcs.characters.10.mission",
+            "portrayedBy": "Jorge Pupo",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0700664/",
             "quote": "home.vcs.characters.10.quote",
             "nationalities": ["co"]
         },
@@ -716,6 +830,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.vcs.characters.11.mission",
+            "portrayedBy": "Luis Guzmán",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0350079/",
             "quote": "home.vcs.characters.11.quote",
             "nationalities": ["cu"]
         },
@@ -742,6 +858,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.iv.characters.1.mission",
+            "portrayedBy": "Michael Hollick",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2396647/",
             "quote": "home.iv.characters.1.quote",
             "nationalities": ["rs"]
         },
@@ -754,6 +872,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.2.mission",
+            "portrayedBy": "Jason Zumwalt",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2371148/",
             "quote": "home.iv.characters.2.quote",
             "nationalities": ["rs"]
         },
@@ -766,6 +886,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.iv.characters.3.mission",
+            "portrayedBy": "Elena Hurst",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0403675/",
             "quote": "home.iv.characters.3.quote",
             "nationalities": ["us", "pr"]
         },
@@ -778,6 +900,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iv.characters.4.mission",
+            "portrayedBy": "Misha Kuznetsov",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1296172/",
             "quote": "home.iv.characters.4.quote",
             "nationalities": ["ru"]
         },
@@ -790,6 +914,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iv.characters.5.mission",
+            "portrayedBy": "Karel Roden",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0734558/",
             "quote": "home.iv.characters.5.quote",
             "nationalities": ["ru"]
         },
@@ -802,6 +928,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iv.characters.6.mission",
+            "portrayedBy": "Moti Margolin",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2463380/",
             "quote": "home.iv.characters.6.quote",
             "nationalities": ["ru"]
         },
@@ -814,6 +942,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.7.mission",
+            "portrayedBy": "Coolie Ranx",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2993375/",
             "quote": "home.iv.characters.7.quote",
             "nationalities": ["jm"]
         },
@@ -826,6 +956,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.8.mission",
+            "portrayedBy": "Timothy Adams",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0011401/",
             "quote": "home.iv.characters.8.quote",
             "nationalities": ["us", "il"]
         },
@@ -838,6 +970,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iv.characters.9.mission",
+            "portrayedBy": "Charleigh Parker",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0662128/",
             "quote": "home.iv.characters.9.quote",
             "nationalities": ["pr"]
         },
@@ -850,6 +984,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.10.mission",
+            "portrayedBy": "Ryan Johnston",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0426833/",
             "quote": "home.iv.characters.10.quote",
             "nationalities": ["ie"]
         },
@@ -862,6 +998,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.11.mission",
+            "portrayedBy": "PJ Sosko",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0815336/",
             "quote": "home.iv.characters.11.quote",
             "nationalities": ["ie"]
         },
@@ -874,6 +1012,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.12.mission",
+            "portrayedBy": "George Feaster",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0269929/",
             "quote": "home.iv.characters.12.quote",
             "nationalities": ["ie"]
         },
@@ -886,6 +1026,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.13.mission",
+            "portrayedBy": "Thomas Lyons",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0529183/",
             "quote": "home.iv.characters.13.quote",
             "nationalities": ["ie"]
         },
@@ -898,6 +1040,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iv.characters.14.mission",
+            "portrayedBy": "Postell Pringle",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1515982/",
             "quote": "home.iv.characters.14.quote",
             "nationalities": ["us"]
         },
@@ -910,6 +1054,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.15.mission",
+            "portrayedBy": "Devin Richards",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0724057/",
             "quote": "home.iv.characters.15.quote",
             "nationalities": ["us"]
         },
@@ -922,6 +1068,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.16.mission",
+            "portrayedBy": "Timothy J. Alex",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2366090/",
             "quote": "home.iv.characters.16.quote",
             "nationalities": ["rs"]
         },
@@ -934,6 +1082,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iv.characters.17.mission",
+            "portrayedBy": "Michael Medeiros",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0575486/",
             "quote": "home.iv.characters.17.quote",
             "nationalities": ["rs"]
         },
@@ -946,6 +1096,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.iv.characters.18.mission",
+            "portrayedBy": "Joe Barbara",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0053222/",
             "quote": "home.iv.characters.18.quote",
             "nationalities": ["it", "us"]
         },
@@ -958,6 +1110,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.iv.characters.19.mission",
+            "portrayedBy": "Frank Bonsangue",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1076073/",
             "quote": "home.iv.characters.19.quote",
             "nationalities": ["ie", "it", "us"]
         },
@@ -970,6 +1124,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.iv.characters.20.mission",
+            "portrayedBy": "Anthony Patellis",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0665414/",
             "quote": "home.iv.characters.20.quote",
             "nationalities": ["it", "us"]
         }
@@ -984,6 +1140,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.tlad.characters.1.mission",
+            "portrayedBy": "Scott Hill",
+            "portrayedByUrl": "https://www.imdb.com/name/nm3009548/",
             "quote": "home.tlad.characters.1.quote",
             "nationalities": ["us"]
         },
@@ -996,6 +1154,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.tlad.characters.2.mission",
+            "portrayedBy": "Lou Sumrall",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0838917/",
             "quote": "home.tlad.characters.2.quote",
             "nationalities": ["us"]
         },
@@ -1008,6 +1168,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.3.mission",
+            "portrayedBy": "Chris McKinney",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0571858/",
             "quote": "home.tlad.characters.3.quote",
             "nationalities": ["us"]
         },
@@ -1020,6 +1182,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.tlad.characters.4.mission",
+            "portrayedBy": "Adrian Martinez",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0553440/",
             "quote": "home.tlad.characters.4.quote",
             "nationalities": ["us"]
         },
@@ -1032,6 +1196,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.5.mission",
+            "portrayedBy": "Keith Randolph Smith",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0808912/",
             "quote": "home.tlad.characters.5.quote",
             "nationalities": ["us"]
         },
@@ -1044,6 +1210,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.6.mission",
+            "portrayedBy": "Josh Burrow",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0123227/",
             "quote": "home.tlad.characters.6.quote",
             "nationalities": ["us"]
         },
@@ -1056,6 +1224,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.7.mission",
+            "portrayedBy": "Jay Patterson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0666256/",
             "quote": "home.tlad.characters.7.quote",
             "nationalities": ["us"]
         },
@@ -1068,6 +1238,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.tlad.characters.8.mission",
+            "portrayedBy": "Traci Godfrey",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0324036/",
             "quote": "home.tlad.characters.8.quote",
             "nationalities": ["us"]
         },
@@ -1080,6 +1252,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.tlad.characters.9.mission",
+            "portrayedBy": "Charleigh Parker",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0662128/",
             "quote": "home.tlad.characters.9.quote",
             "nationalities": ["pr"]
         },
@@ -1092,6 +1266,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.10.mission",
+            "portrayedBy": "Walter Mudu",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1067234/",
             "quote": "home.tlad.characters.10.quote",
             "nationalities": ["us"]
         },
@@ -1104,6 +1280,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tlad.characters.11.mission",
+            "portrayedBy": "Craig muMs Grant",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0196185/",
             "quote": "home.tlad.characters.11.quote",
             "nationalities": ["us"]
         },
@@ -1116,6 +1294,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.tlad.characters.12.mission",
+            "portrayedBy": "John Lantz",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0487221/",
             "quote": "home.tlad.characters.12.quote",
             "nationalities": ["us"]
         },
@@ -1128,6 +1308,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.tlad.characters.13.mission",
+            "portrayedBy": "Joe Barbara",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0053222/",
             "quote": "home.tlad.characters.13.quote",
             "nationalities": ["it", "us"]
         }
@@ -1142,6 +1324,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.tbogt.characters.1.mission",
+            "portrayedBy": "Mario D'Leon",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1595951/",
             "quote": "home.tbogt.characters.1.quote",
             "nationalities": ["do", "us"]
         },
@@ -1154,6 +1338,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tbogt.characters.2.mission",
+            "portrayedBy": "David Kenner",
+            "portrayedByUrl": "https://www.imdb.com/name/nm3363430/",
             "quote": "home.tbogt.characters.2.quote",
             "nationalities": ["us"]
         },
@@ -1166,6 +1352,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.tbogt.characters.3.mission",
+            "portrayedBy": "Lucia Armendariz",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1477782/",
             "quote": "home.tbogt.characters.3.quote",
             "nationalities": ["do"]
         },
@@ -1178,18 +1366,22 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tbogt.characters.4.mission",
+            "portrayedBy": "Jaime Fernandez",
+            "portrayedByUrl": "https://www.imdb.com/name/nm3687887/",
             "quote": "home.tbogt.characters.4.quote",
             "nationalities": ["do", "us"]
         },
         {
             "id": "5",
-            "name": "Hernique Bardas",
+            "name": "Henrique Bardas",
             "role": "home.tbogt.characters.5.role",
             "image": "../assets/images/characters/TBOGT/henrique.webp",
             "age": "home.characters.unknown",
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tbogt.characters.5.mission",
+            "portrayedBy": "J. Salome Martinez",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1813199/",
             "quote": "home.tbogt.characters.5.quote",
             "nationalities": ["do", "us"]
         },
@@ -1202,6 +1394,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.tbogt.characters.6.mission",
+            "portrayedBy": "Gregory Siff",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0797373/",
             "quote": "home.tbogt.characters.6.quote",
             "nationalities": ["it", "us"]
         },
@@ -1214,6 +1408,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tbogt.characters.7.mission",
+            "portrayedBy": "Omid Djalili",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0229084/",
             "quote": "home.tbogt.characters.7.quote",
             "nationalities": ["ae"]
         },
@@ -1226,6 +1422,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.tbogt.characters.8.mission",
+            "portrayedBy": "Jeff Gurner",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0348669/",
             "quote": "home.tbogt.characters.8.quote",
             "nationalities": ["us", "il"]
         },
@@ -1238,6 +1436,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.tbogt.characters.9.mission",
+            "portrayedBy": "Vitali Baganov",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0046518/",
             "quote": "home.tbogt.characters.9.quote",
             "nationalities": ["ru"]
         },
@@ -1250,6 +1450,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.tbogt.characters.10.mission",
+            "portrayedBy": "Rebecca Benhayon",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2998366/",
             "quote": "home.tbogt.characters.10.quote",
             "nationalities": ["us", "it"]
         },
@@ -1262,6 +1464,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.tbogt.characters.11.mission",
+            "portrayedBy": "Robert Youells",
+            "portrayedByUrl": "https://www.imdb.com/name/nm3604717/",
             "quote": "home.tbogt.characters.11.quote",
             "nationalities": ["us"]
         }
@@ -1276,6 +1480,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.v.characters.1.mission",
+            "portrayedBy": "Ned Luke",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0902623/",
             "quote": "home.v.characters.1.quote",
             "nationalities": ["us"]
         },
@@ -1288,6 +1494,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.v.characters.2.mission",
+            "portrayedBy": "Shawn Fonteno",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1062259/",
             "quote": "home.v.characters.2.quote",
             "nationalities": ["us"]
         },
@@ -1300,6 +1508,8 @@
             "status": "main",
             "statusLabel": "home.characters.statusLabel.protagonist",
             "firstAppearance": "home.v.characters.3.mission",
+            "portrayedBy": "Steven Ogg",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1476804/",
             "quote": "home.v.characters.3.quote",
             "nationalities": ["ca"]
         },
@@ -1312,6 +1522,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.4.mission",
+            "portrayedBy": "Jay Klaitz",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1828101/",
             "quote": "home.v.characters.4.quote",
             "nationalities": ["us"]
         },
@@ -1324,6 +1536,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.v.characters.5.mission",
+            "portrayedBy": "Ryan Woodle",
+            "portrayedByUrl": "https://www.imdb.com/name/nm2411962/",
             "quote": "home.v.characters.5.quote",
             "nationalities": ["us"]
         },
@@ -1336,6 +1550,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.6.mission",
+            "portrayedBy": "Slink Johnson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm3834526/",
             "quote": "home.v.characters.6.quote",
             "nationalities": ["us"]
         },
@@ -1348,6 +1564,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.7.mission",
+            "portrayedBy": "Julian Gamble",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0303792/",
             "quote": "home.v.characters.7.quote",
             "nationalities": ["us"]
         },
@@ -1360,6 +1578,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.v.characters.8.mission",
+            "portrayedBy": "Robert T. Bogue",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0091931/",
             "quote": "home.v.characters.8.quote",
             "nationalities": ["us"]
         },
@@ -1372,6 +1592,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.v.characters.9.mission",
+            "portrayedBy": "Jonathan Walker",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0907897/",
             "quote": "home.v.characters.9.quote",
             "nationalities": ["us"]
         },
@@ -1384,6 +1606,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.v.characters.10.mission",
+            "portrayedBy": "Hassan Johnson",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0425215/",
             "quote": "home.v.characters.10.quote",
             "nationalities": ["us"]
         },
@@ -1396,6 +1620,8 @@
             "status": "maleEnemy",
             "statusLabel": "home.characters.statusLabel.maleEnemy",
             "firstAppearance": "home.v.characters.11.mission",
+            "portrayedBy": "George Cheung",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0156475/",
             "quote": "home.v.characters.11.quote",
             "nationalities": ["cn"]
         },
@@ -1408,6 +1634,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.v.characters.12.mission",
+            "portrayedBy": "Vicki van Tassel",
+            "portrayedByUrl": "https://www.imdb.com/name/nm4188384/",
             "quote": "home.v.characters.12.quote",
             "nationalities": ["us"]
         },
@@ -1420,6 +1648,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.13.mission",
+            "portrayedBy": "Danny Tamberelli",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0848543/",
             "quote": "home.v.characters.13.quote",
             "nationalities": ["us"]
         },
@@ -1432,6 +1662,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.v.characters.14.mission",
+            "portrayedBy": "Michal Sinnott",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0495115/",
             "quote": "home.v.characters.14.quote",
             "nationalities": ["us"]
         },
@@ -1444,6 +1676,8 @@
             "status": "neutral",
             "statusLabel": "home.characters.statusLabel.neutral",
             "firstAppearance": "home.v.characters.15.mission",
+            "portrayedBy": "Alfredo Huereca",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0400070/",
             "quote": "home.v.characters.15.quote",
             "nationalities": ["mx"]
         },
@@ -1456,6 +1690,8 @@
             "status": "femaleAlly",
             "statusLabel": "home.characters.statusLabel.femaleAlly",
             "firstAppearance": "home.v.characters.16.mission",
+            "portrayedBy": "Olivia Negrón",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0624505/",
             "quote": "home.v.characters.16.quote",
             "nationalities": ["mx"]
         },
@@ -1468,6 +1704,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.17.mission",
+            "portrayedBy": "David Mogentale",
+            "portrayedByUrl": "https://www.imdb.com/name/nm1181966/",
             "quote": "home.v.characters.17.quote",
             "nationalities": ["us"]
         },
@@ -1480,6 +1718,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.18.mission",
+            "portrayedBy": "Matthew Maher",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0536866/",
             "quote": "home.v.characters.18.quote",
             "nationalities": ["us"]
         },
@@ -1492,6 +1732,8 @@
             "status": "maleAlly",
             "statusLabel": "home.characters.statusLabel.maleAlly",
             "firstAppearance": "home.v.characters.19.mission",
+            "portrayedBy": "Joel Rooks",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0740272/",
             "quote": "home.v.characters.19.quote",
             "nationalities": ["us"]
         },
@@ -1504,6 +1746,8 @@
             "status": "femaleEnemy",
             "statusLabel": "home.characters.statusLabel.femaleEnemy",
             "firstAppearance": "home.v.characters.20.mission",
+            "portrayedBy": "Elizabeth Mason",
+            "portrayedByUrl": "https://www.imdb.com/name/nm4146732/",
             "quote": "home.v.characters.20.quote",
             "nationalities": ["al", "il"]
         }
@@ -1540,6 +1784,8 @@
             "status": "unknown",
             "statusLabel": "home.characters.statusLabel.unknown",
             "firstAppearance": "home.vi.characters.3.mission",
+            "portrayedBy": "Stephen Root",
+            "portrayedByUrl": "https://www.imdb.com/name/nm0740535/",
             "quote": "home.vi.characters.3.quote"
         },
         {

@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import { useState } from "react";
 
 interface Props {
@@ -23,6 +24,8 @@ export interface Character {
         | "unknown"
         | string;
     firstAppearance: string;
+    portrayedBy?: string;
+    portrayedByUrl?: string;
     quote?: string;
     nationalities?: string[];
 }
@@ -36,6 +39,9 @@ const STATUS_STYLES: Record<string, string> = {
     neutral: "bg-neutral-500/80 text-neutral-50",
     unknown: "bg-neutral-500/80 text-neutral-50",
 };
+
+const LABEL_STYLES =
+    "text-[11px] font-semibold uppercase tracking-wide text-neutral-300/85 max-mobile:text-[10px]";
 
 function FlagImage({ nationality }: { nationality: string }) {
     if (nationality === "unknown") {
@@ -116,8 +122,8 @@ export default function CharacterCard({ character, variantId }: Props) {
                         </span>
                     </div>
 
-                    <div className="relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_28%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-500 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3">
-                        <p className="text-sm font-bold tracking-tight text-neutral-50 max-mobile:text-xs">
+                    <div className="relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_28%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3">
+                        <p className="text-xl font-body-condensed tracking-tight text-neutral-50 max-mobile:text-lg">
                             {characterName}
                         </p>
 
@@ -134,7 +140,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                     data-lenis-prevent
                 >
                     <div className="flex items-center gap-2">
-                        <p className="text-base font-bold tracking-tight text-neutral-50 max-mobile:text-sm">
+                        <p className="text-xl font-body-condensed tracking-tight text-neutral-50 max-mobile:text-base">
                             {characterName}
                         </p>
 
@@ -150,7 +156,7 @@ export default function CharacterCard({ character, variantId }: Props) {
 
                     <dl className="flex flex-col gap-2 text-sm max-mobile:text-xs">
                         <div className="flex items-start justify-between gap-3 rounded-md bg-(--button-bg-hover) px-3 py-2.5 max-mobile:py-2">
-                            <dt className="shrink-0 max-w-20 text-[12px] font-body-condensed uppercase tracking-wide text-neutral-200">
+                            <dt className={LABEL_STYLES}>
                                 {t("home.characters.age")}
                             </dt>
 
@@ -162,7 +168,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                         </div>
 
                         <div className="flex items-center justify-between gap-3 rounded-md bg-(--button-bg-hover) px-3 py-2.5 max-mobile:py-2">
-                            <dt className="shrink-0 max-w-20 text-[12px] font-body-condensed uppercase tracking-wide text-neutral-200">
+                            <dt className={LABEL_STYLES}>
                                 {t("home.characters.firstAppearance")}
                             </dt>
 
@@ -172,6 +178,29 @@ export default function CharacterCard({ character, variantId }: Props) {
                                 )}
                             </dd>
                         </div>
+                        {character.portrayedBy && (
+                            <div className="flex items-center justify-between gap-3 rounded-md bg-(--button-bg-hover) px-3 py-2.5 max-mobile:py-2">
+                                <dt className={LABEL_STYLES}>
+                                    {t("home.characters.portrayedBy")}
+                                </dt>
+
+                                <dd className="text-right font-semibold">
+                                    {character.portrayedByUrl ? (
+                                        <a
+                                            href={character.portrayedByUrl}
+                                            className="group/portrayed flex items-center justify-end gap-1 hover:text-(--game-accent)"
+                                            target="_blank"
+                                            referrerPolicy="no-referrer"
+                                        >
+                                            {character.portrayedBy}
+                                            <IconArrowUpRight className="size-4 transition-transform group-hover/portrayed:scale-[1.2]" />
+                                        </a>
+                                    ) : (
+                                        character.portrayedBy
+                                    )}
+                                </dd>
+                            </div>
+                        )}
                     </dl>
 
                     <p className="mt-auto rounded-md bg-(--button-bg-hover) px-3 py-3 text-sm italic leading-relaxed text-neutral-200 max-mobile:text-xs max-mobile:leading-normal">
