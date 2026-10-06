@@ -65,7 +65,11 @@ export function MultiSelector<
                         <button
                             key={option.id}
                             type="button"
-                            onClick={() => onSelectPrimary(option.id)}
+                            onClick={() => {
+                                if (!isSelected) {
+                                    onSelectPrimary(option.id);
+                                }
+                            }}
                             className={`flex items-center gap-5 max-mobile:gap-3 px-6 max-mobile:px-5 py-4 max-mobile:py-2.5 rounded-full transition-all cursor-pointer select-none whitespace-nowrap max-mobile:shrink-0 text-xl max-mobile:text-base font-bold ${
                                 isSelected
                                     ? "bg-(--game-accent) text-(--game-buttons-primary-text) shadow-md shadow-yellow-500/10 scale-[1.02]"
