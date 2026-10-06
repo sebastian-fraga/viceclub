@@ -99,7 +99,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                         toggle();
                     }
                 }}
-                className="group relative h-full w-full cursor-pointer rounded-2xl shadow-[0_18px_40px_-16px_var(--button-bg)] outline-none duration-500 ease-out transform-3d transition focus-visible:ring-2 focus-visible:ring-pink-300/70"
+                className="group relative h-full w-full cursor-pointer rounded-2xl shadow-[0_18px_40px_-16px_var(--button-bg)] outline-none duration-500 ease-out transform-3d transition"
                 style={{
                     transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}
@@ -114,7 +114,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                         />
 
                         <span
-                            className={`absolute right-2.5 top-2.5 z-10 rounded-full px-4 py-1 text-[14px] font-extrabold uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${statusStyle}`}
+                            className={`absolute right-4 top-4 z-10 rounded-full px-4 py-1 text-[14px] font-extrabold uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${statusStyle}`}
                         >
                             {t(
                                 `home.characters.statusLabel.${character.status}`,
@@ -122,7 +122,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                         </span>
                     </div>
 
-                    <div className="relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_28%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3">
+                    <div className="relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_40%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3">
                         <p className="text-xl font-body-condensed tracking-tight text-neutral-50 max-mobile:text-lg">
                             {characterName}
                         </p>
