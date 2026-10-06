@@ -15,7 +15,7 @@ import CursorManager from "@/components/providers/CursorManager";
 import "../styles/main.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 
-import CursorGlow from "@/components/layout/CursorGlow.astro";
+import CursorGlow from "@/components/layout/CursorGlow";
 
 interface Props {
     title: string;
@@ -149,7 +149,7 @@ const { title, description, canonical, dataGame, game } = Astro.props;
                 : ""}
         >
             <slot />
-            <CursorGlow />
+            <CursorGlow client:idle transition:persist />
         </div>
 
         <Footer />
