@@ -307,6 +307,7 @@ export default function ExploreSections({ game, variantId }: Props) {
                                                         src={
                                                             activeProgress.icon
                                                         }
+                                                        loading="lazy"
                                                         alt=""
                                                         className="size-5 object-contain"
                                                     />
