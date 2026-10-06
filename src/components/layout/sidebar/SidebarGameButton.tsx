@@ -44,7 +44,7 @@ function SidebarGameButton({
                     className={clsx(
                         "w-12 h-12 shrink-0 object-contain transition",
                         isActiveGame
-                            ? "opacity-100 drop-shadow-md drop-shadow-indigo-300/30"
+                            ? "opacity-100 drop-shadow-md drop-shadow-indigo-300/25"
                             : "opacity-80 hover:opacity-100 drop-shadow-md drop-shadow-indigo-300/15",
                     )}
                     loading="lazy"
