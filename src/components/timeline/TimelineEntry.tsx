@@ -255,14 +255,14 @@ function TimelineEventItem({
                                 <img
                                     src={image}
                                     loading="lazy"
-                                    className="w-full rounded-xl border-slate-500 border-2 drop-shadow-xl drop-shadow-indigo-400/20"
+                                    className="w-full rounded-4xl drop-shadow-2xl drop-shadow-pink-400/20"
                                     alt={t(
                                         "timeline.accessibility.timelineImage",
                                     )}
                                 />
                                 {footerText && (
                                     <div className="text-xs flex items-center mt-0.5 ml-1.5 pt-2 pl-1 text-gray-300 relative">
-                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-purple-300/80"></div>
+                                        <div className="absolute rounded-full left-0.5 h-full w-0.5 bg-yellow-200/80"></div>
 
                                         <p className="italic pl-2">
                                             {footerText}
@@ -274,7 +274,7 @@ function TimelineEventItem({
                     </div>
 
                     {spoiler && (
-                        <div className="spoiler-container relative mt-4 w-full rounded-2xl bg-(--button-bg)/40 overflow-hidden">
+                        <div className="spoiler-container relative mt-4 w-full rounded-2xl bg-(--button-bg)/40 overflow-hidden shadow-2xl shadow-(color:--button-bg)/10">
                             <div className="flex min-h-12 items-center justify-between gap-2 px-4 mobile:px-5 border-b border-indigo-950/50 bg-(--button-bg)/40">
                                 <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-100">
                                     <IconEye size={14} stroke={2} />
@@ -320,7 +320,7 @@ function TimelineEventItem({
                                     </div>
 
                                     {spoiler.image && (
-                                        <div className="rounded-lg overflow-hidden max-w-lg">
+                                        <div className="rounded-lg overflow-hidden max-w-lg max-mobile:my-12">
                                             <img
                                                 src={spoiler.image}
                                                 loading="lazy"
