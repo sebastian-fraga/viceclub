@@ -176,9 +176,15 @@ export const sectionLabels: Record<string, Caption> = {
         pt: "Pacote Vintage Vice City",
     },
     gameInformer: {
-        es: "Revista de Game Informer",
+        es: "Revista Game Informer",
         en: "Game Informer magazine",
         fr: "Magazine Game Informer",
         pt: "Revista Game Informer",
+    },
+    love: {
+        es: "Revista LOVE",
+        en: "LOVE magazine",
+        fr: "Magazine LOVE",
+        pt: "Revista LOVE",
     },
 };

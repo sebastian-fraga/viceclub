@@ -147,32 +147,41 @@
             {
                 "id": "vi-m-01",
                 "caption": {
-                    "es": "Jason y Lucia (Dazed)",
-                    "en": "Jason and Lucia (Dazed)",
-                    "fr": "Jason et Lucia (Dazed)",
-                    "pt": "Jason e Lucia (Dazed)"
+                    "es": "Jason y Lucia - DAZED",
+                    "en": "Jason and Lucia - DAZED",
+                    "fr": "Jason et Lucia - DAZED",
+                    "pt": "Jason e Lucia - DAZED"
                 }
             },
             {
                 "id": "vi-m-02",
                 "caption": {
-                    "es": "Jason y Lucia (The Album)",
-                    "en": "Jason and Lucia (The Album)",
-                    "fr": "Jason et Lucia (The Album)",
-                    "pt": "Jason e Lucia (The Album)"
+                    "es": "Jason y Lucia - The Album",
+                    "en": "Jason and Lucia - The Album",
+                    "fr": "Jason et Lucia - The Album",
+                    "pt": "Jason e Lucia - The Album"
                 }
             },
             {
                 "id": "vi-m-03",
                 "caption": {
-                    "es": "Jason y Lucia (Game Informer)",
-                    "en": "Jason and Lucia (Game Informer)",
-                    "fr": "Jason et Lucia (Game Informer)",
-                    "pt": "Jason e Lucia (Game Informer)"
+                    "es": "Jason y Lucia - Game Informer",
+                    "en": "Jason and Lucia - Game Informer",
+                    "fr": "Jason et Lucia - Game Informer",
+                    "pt": "Jason e Lucia - Game Informer"
                 }
             },
             {
                 "id": "vi-m-04",
+                "caption": {
+                    "es": "Jason y Lucia - LOVE",
+                    "en": "Jason and Lucia - LOVE",
+                    "fr": "Jason et Lucia - LOVE",
+                    "pt": "Jason e Lucia - LOVE"
+                }
+            },
+            {
+                "id": "vi-m-05",
                 "caption": {
                     "es": "The Album - Artistas 01",
                     "en": "The Album - Artists 01",
@@ -181,7 +190,7 @@
                 }
             },
             {
-                "id": "vi-m-05",
+                "id": "vi-m-06",
                 "caption": {
                     "es": "The Album - Artistas 02",
                     "en": "The Album - Artists 02",
@@ -190,7 +199,7 @@
                 }
             },
             {
-                "id": "vi-m-06",
+                "id": "vi-m-07",
                 "caption": {
                     "es": "The Album - Artistas 03",
                     "en": "The Album - Artists 03",
@@ -199,7 +208,7 @@
                 }
             },
             {
-                "id": "vi-m-07",
+                "id": "vi-m-08",
                 "caption": {
                     "es": "The Album - Artistas 04",
                     "en": "The Album - Artists 04",
@@ -208,7 +217,7 @@
                 }
             },
             {
-                "id": "vi-m-08",
+                "id": "vi-m-09",
                 "caption": {
                     "es": "The Album - Artistas 05",
                     "en": "The Album - Artists 05",
@@ -217,35 +226,13 @@
                 }
             },
             {
-                "id": "vi-m-09",
+                "id": "vi-m-10",
                 "caption": {
                     "es": "The Album - Artistas 06",
                     "en": "The Album - Artists 06",
                     "fr": "The Album - Artistes 06",
                     "pt": "The Album - Artistas 06"
                 }
-            },
-            {
-                "id": "vi-m-10",
-                "caption": {
-                    "es": "The Album - Vinilo de edición limitada",
-                    "en": "The Album - Limited-Edition Vinyl",
-                    "fr": "The Album - Vinyle en édition limitée",
-                    "pt": "The Album - Vinil de edição limitada"
-                }
-            },
-            {
-                "id": "vi-m-11",
-                "caption": {
-                    "es": "The Album - Vinilo",
-                    "en": "The Album - Vinyl",
-                    "fr": "The Album - Vinyle",
-                    "pt": "The Album - Vinil"
-                }
-            },
-            {
-                "id": "vi-m-12",
-                "caption": "The Album - CD"
             }
         ]
     },
@@ -1464,6 +1451,44 @@
                     "en": "Screenshot 12",
                     "fr": "Capture d’écran 12",
                     "pt": "Captura de tela 12"
+                }
+            }
+        ],
+        "love": [
+            {
+                "id": "vi-love-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vi-love-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vi-love-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vi-love-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
                 }
             }
         ]
