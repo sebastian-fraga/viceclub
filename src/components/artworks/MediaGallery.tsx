@@ -13,6 +13,7 @@ import useT from "@/hooks/useT";
 import { AnimatePresence, motion } from "framer-motion";
 import { flushSync } from "react-dom";
 import "./artworks.css";
+import { useCategoryParam } from "@/components/artworks/useCategoryParam";
 
 interface Props {
     gameId: GameId;
@@ -24,7 +25,7 @@ export function MediaGallery({ gameId, data }: Props) {
     const i18n = useT();
     const lang = useLocale();
 
-    const [category, setCategory] = useState<MediaCategory>("artworks");
+    const [category, setCategory] = useCategoryParam();
 
     useEffect(() => {
         document.dispatchEvent(new Event("scroll-to-top"));
