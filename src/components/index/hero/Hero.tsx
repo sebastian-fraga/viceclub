@@ -30,8 +30,13 @@ export default function Hero() {
     const t = useT();
     const shouldReduceMotion = useReducedMotion();
 
-    const [deck, setDeck] = useState<string[]>(() => shuffle(HERO_IMAGES));
+    const [deck, setDeck] = useState<string[]>(HERO_IMAGES);
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const [first, ...rest] = HERO_IMAGES;
+        setDeck([first, ...shuffle(rest)]);
+    }, []);
 
     useEffect(() => {
         if (shouldReduceMotion || deck.length === 0) return;
