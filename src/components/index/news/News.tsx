@@ -282,7 +282,7 @@ export default function News() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener"
-                                className="flex items-center gap-2 w-fit mt-6 mx-auto bg-yellow-200 text-black font-bold px-8 py-3 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group"
+                                className="flex items-center gap-2 w-fit my-12 mx-auto bg-yellow-200 text-black font-bold px-12 py-4 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group text-lg max-mobile:px-8 max-mobile:text-base max-mobile:mb-6" 
                             >
                                 {item.linkText
                                     ? translateContent(item.linkText)
