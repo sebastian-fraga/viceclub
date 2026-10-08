@@ -14,7 +14,7 @@ const anchorClasses =
     class="ml-0 mobile:ml-(--sidebar-width) pt-10 pb-22 text-neutral-50 gap-10 flex flex-col border-t border-t-slate-800 overflow-hidden"
 >
     <div
-        class="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-4 mobile:px-18"
+        class="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-6 mobile:px-12 lg:px-32"
     >
         <div class="relative flex items-center gap-4 shrink-0">
             <div
@@ -37,9 +37,9 @@ const anchorClasses =
         </div>
 
         <div
-            class="flex flex-wrap items-center justify-center lg:justify-end gap-x-10 gap-y-6"
+            class="flex flex-wrap items-center justify-center lg:justify-end gap-x-10 gap-y-6 w-full lg:w-auto"
         >
-            <nav aria-label="Redes" class="flex items-center gap-3">
+            <nav aria-label="Redes🌴" class="flex items-center gap-3">
                 <a
                     href="https://github.com/sebastian-fraga/viceclub"
                     aria-label="GitHub"
@@ -65,7 +65,7 @@ const anchorClasses =
                 </a>
             </nav>
 
-            <Support />
+            <Support client:idle />
         </div>
     </div>
 
@@ -85,8 +85,7 @@ const anchorClasses =
                 href={`https://github.com/sebastian-fraga/viceclub/commit/${COMMIT}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:text-slate-100
-            transition underline decoration-slate-600 underline-offset-2"
+                class="hover:text-slate-100 transition underline decoration-slate-600 underline-offset-2"
             >
                 {COMMIT}
             </a>
