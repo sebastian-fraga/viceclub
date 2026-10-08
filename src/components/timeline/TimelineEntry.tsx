@@ -48,6 +48,11 @@ export interface TimelineEntryProps {
     locale: string;
 }
 
+interface DateGroup {
+    date: string;
+    items: { event: TimelineEvent; index: number }[];
+}
+
 export default function TimelineEntry({
     date,
     time,
@@ -80,7 +85,7 @@ export default function TimelineEntry({
 
     const representativeTime = time ?? itemsToRender[0]?.time;
 
-    const displayDate = representativeTime
+    const entryDate = representativeTime
         ? formatTimelineDateTime(
               date,
               representativeTime,
@@ -91,37 +96,72 @@ export default function TimelineEntry({
           ).date
         : formatTimelineDateOnly(date, dateFormat);
 
+    const groups: DateGroup[] = [];
+    itemsToRender.forEach((event, index) => {
+        const lastGroup = groups[groups.length - 1];
+
+        const eventDate = event.time
+            ? formatTimelineDateTime(
+                  date,
+                  event.time,
+                  timeFormat,
+                  timezone,
+                  dateFormat,
+                  locale,
+              ).date
+            : (lastGroup?.date ?? entryDate);
+
+        if (lastGroup && lastGroup.date === eventDate) {
+            lastGroup.items.push({ event, index });
+        } else {
+            groups.push({ date: eventDate, items: [{ event, index }] });
+        }
+    });
+
     return (
         <article className="timeline-entry flex flex-col">
-            {showDate && (
-                <div className="flex items-baseline gap-1.5 mb-3 ml-2 max-mobile:ml-0">
-                    <h3 className="text-sm font-bold tracking-wide text-slate-100 uppercase">
-                        {displayDate}
-                    </h3>
-                </div>
-            )}
+            {groups.map((group, groupIndex) => {
+                const shouldShowDate = groupIndex > 0 || showDate;
 
-            <div className="flex flex-col gap-6 ml-2 max-mobile:gap-4 max-mobile:ml-0">
-                {itemsToRender.map((event, index) => (
+                return (
                     <div
-                        key={index}
-                        className="timeline-event-enter"
-                        style={
-                            { "--stagger-index": index } as React.CSSProperties
-                        }
+                        key={`${group.date}-${groupIndex}`}
+                        className={groupIndex > 0 ? "mt-6" : ""}
                     >
-                        <TimelineEventItem
-                            event={event}
-                            t={t}
-                            date={date}
-                            timezone={timezone}
-                            timeFormat={timeFormat}
-                            dateFormat={dateFormat}
-                            locale={locale}
-                        />
+                        {shouldShowDate && (
+                            <div className="flex items-baseline gap-1.5 mb-5 ml-2 max-mobile:ml-0">
+                                <h3 className="text-xl tracking-wide text-slate-100 uppercase font-body-condensed">
+                                    {group.date}
+                                </h3>
+                            </div>
+                        )}
+
+                        <div className="flex flex-col gap-6 ml-2 max-mobile:gap-4 max-mobile:ml-0">
+                            {group.items.map(({ event, index }) => (
+                                <div
+                                    key={index}
+                                    className="timeline-event-enter"
+                                    style={
+                                        {
+                                            "--stagger-index": index,
+                                        } as React.CSSProperties
+                                    }
+                                >
+                                    <TimelineEventItem
+                                        event={event}
+                                        t={t}
+                                        date={date}
+                                        timezone={timezone}
+                                        timeFormat={timeFormat}
+                                        dateFormat={dateFormat}
+                                        locale={locale}
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                ))}
-            </div>
+                );
+            })}
         </article>
     );
 }
@@ -188,7 +228,7 @@ function TimelineEventItem({
                 <div className="timeline-content flex-1 min-w-0">
                     {displayTime && (
                         <div className="timeline-event-time mb-1">
-                            <h4 className="text-sm text-slate-500 font-medium">
+                            <h4 className="text text-slate-400 font-body-condensed">
                                 {displayTime}
                             </h4>
                         </div>
@@ -235,7 +275,7 @@ function TimelineEventItem({
 
                     {spoiler && (
                         <div className="spoiler-container relative mt-4 w-full rounded-2xl bg-(--button-bg)/40 overflow-hidden">
-                            <div className="flex items-center justify-between gap-2 px-4 py-3.5 max-mobile:px-3 max-mobile:py-2 border-b border-indigo-950/50 bg-(--button-bg)/40">
+                            <div className="flex min-h-12 items-center justify-between gap-2 px-4 mobile:px-5 border-b border-indigo-950/50 bg-(--button-bg)/40">
                                 <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-indigo-100">
                                     <IconEye size={14} stroke={2} />
                                     Spoiler
@@ -247,7 +287,7 @@ function TimelineEventItem({
                                         onClick={() => setSpoilerOpen(false)}
                                         aria-expanded={true}
                                         aria-controls="spoiler-content"
-                                        className="flex items-center gap-1.5 rounded-full bg-(--button-bg) text-white px-3 py-1 text-xs font-medium backdrop-blur-sm cursor-pointer hover:bg-(--button-bg-hover) transition"
+                                        className="flex h-8 items-center gap-1.5 rounded-full bg-(--button-bg) text-white px-3 text-xs font-medium backdrop-blur-sm cursor-pointer hover:bg-(--button-bg-hover) transition"
                                     >
                                         <IconEyeOff size={14} stroke={2} />
                                         {t("timeline.buttons.hideSpoilers")}
@@ -263,21 +303,16 @@ function TimelineEventItem({
                                         "timeline.accessibility.spoilerContent",
                                     )}
                                     aria-hidden={!spoilerOpen}
-                                    className={`px-5 py-6 max-mobile:px-4 max-mobile:py-5 transition-[filter,opacity] duration-300 ${
+                                    className={`space-y-4 px-4 mobile:px-5 py-5 transition-[filter,opacity] duration-300 ${
                                         spoilerOpen
                                             ? "opacity-100"
-                                            : "blur-sm select-none opacity-60"
+                                            : "blur-md select-none opacity-60"
                                     }`}
                                 >
-                                    <div className="text-base leading-relaxed text-indigo-100 max-w-full">
+                                    <div className="space-y-4 text-base leading-relaxed text-pretty text-indigo-100">
                                         {spoiler.text.map(
                                             (paragraph, index) => (
-                                                <p
-                                                    key={index}
-                                                    className={
-                                                        index > 0 ? "mt-4" : ""
-                                                    }
-                                                >
+                                                <p key={index}>
                                                     {parse(paragraph)}
                                                 </p>
                                             ),
@@ -285,7 +320,7 @@ function TimelineEventItem({
                                     </div>
 
                                     {spoiler.image && (
-                                        <div className="mt-3 rounded-lg overflow-hidden max-w-lg">
+                                        <div className="rounded-lg overflow-hidden max-w-lg">
                                             <img
                                                 src={spoiler.image}
                                                 loading="lazy"
@@ -296,7 +331,7 @@ function TimelineEventItem({
                                             />
 
                                             {spoiler.footerText && (
-                                                <div className="px-2.5 py-1.5 text-xs text-gray-400 bg-white">
+                                                <div className="px-3 py-2 text-xs text-gray-600 bg-white">
                                                     {spoiler.footerText}
                                                 </div>
                                             )}
@@ -311,7 +346,7 @@ function TimelineEventItem({
                                             onClick={() => setSpoilerOpen(true)}
                                             aria-expanded={false}
                                             aria-controls="spoiler-content"
-                                            className="flex items-center gap-2 rounded-full bg-indigo-300 px-5 py-2.5 max-mobile:px-4 max-mobile:py-2 max-mobile:text-sm text-sm font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white shadow-lg active:scale-[0.98] transition"
+                                            className="flex h-11 items-center gap-2 rounded-full bg-indigo-300 px-5 text-sm font-medium text-blue-950 cursor-pointer hover:bg-indigo-600 hover:text-white shadow-lg active:scale-[0.98] transition"
                                         >
                                             <IconEye size={18} stroke={2} />
                                             {t("timeline.buttons.showSpoilers")}

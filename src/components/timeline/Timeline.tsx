@@ -3,7 +3,11 @@ import Title from "@/components/ui/Title";
 import useLocale from "@/hooks/useLocale";
 import useSettings from "@/hooks/useSettings";
 import useT from "@/hooks/useT";
-import type { DateFormat } from "@/lib/timeline/formatTimelineTime";
+import {
+    formatTimelineDateOnly,
+    formatTimelineDateTime,
+    type DateFormat,
+} from "@/lib/timeline/formatTimelineTime";
 import { useEffect, useState } from "react";
 
 export interface TimelineSpoiler {
@@ -51,9 +55,37 @@ interface TimeSettings {
     dateFormat: DateFormat;
 }
 
+function getShiftedDateRange(
+    entry: TimelineEntryData,
+    settings: TimeSettings,
+    locale: string,
+): { first: string; last: string } {
+    const dateAt = (time?: string): string =>
+        time
+            ? formatTimelineDateTime(
+                  entry.date,
+                  time,
+                  settings.timeFormat,
+                  settings.timezone,
+                  "DD/MM/YYYY",
+                  locale,
+              ).date
+            : formatTimelineDateOnly(entry.date, "DD/MM/YYYY");
+
+    const firstTime = entry.time ?? entry.events?.[0]?.time;
+
+    const lastEventTime = entry.events
+        ?.map((event) => event.time)
+        .filter((time): time is string => Boolean(time))
+        .at(-1);
+    const lastTime = lastEventTime ?? entry.time;
+
+    return { first: dateAt(firstTime), last: dateAt(lastTime) };
+}
+
 export default function Timeline({ gameCode, initialData }: TimelineProps) {
     const locale = useLocale();
-    const i18n = useT()
+    const i18n = useT();
     const { settings } = useSettings();
 
     const [data, setData] = useState<TimelineData | null>(initialData ?? null);
@@ -158,6 +190,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
     }
 
     let lastYear: string | null = null;
+    let previousLastDate: string | null = null;
 
     return (
         <section className="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex gap-8 flex-col mb-12 mt-12">
@@ -166,10 +199,19 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
             </div>
 
             {data.entries.map((entry, entryIdx) => {
-                const year = entry.date.split(" ").at(-1);
+                const { first, last } = getShiftedDateRange(
+                    entry,
+                    timeSettings,
+                    locale,
+                );
+
+                const year = first.split("/").at(-1);
                 const showDivider = lastYear !== null && lastYear !== year;
 
+                const showDate = previousLastDate !== first;
+
                 lastYear = year ?? null;
+                previousLastDate = last;
 
                 return (
                     <div key={entryIdx}>
@@ -187,7 +229,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
                             secondaryText={entry.secondaryText}
                             spoiler={entry.spoiler}
                             events={entry.events}
-                            showDate
+                            showDate={showDate}
                             timezone={timeSettings.timezone}
                             timeFormat={timeSettings.timeFormat}
                             dateFormat={timeSettings.dateFormat}
