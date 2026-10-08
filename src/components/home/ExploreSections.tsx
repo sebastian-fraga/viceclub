@@ -22,6 +22,8 @@ interface Props {
 
 const LARGE_SECTION_IDS = ["100", "mapa"];
 
+const EMPTY_IDS = new Set<string>();
+
 function isChecklistId(sectionId: string) {
     return sectionId === "100" || sectionId.includes("checklist");
 }
@@ -44,8 +46,16 @@ function getBentoClasses(sectionId: string) {
 export default function ExploreSections({ game, variantId }: Props) {
     const t = useT();
     const checklistProgress = useGameChecklistProgress(game.id, variantId);
-    const completedMapIds = useGameMapProgress(game.id, variantId);
+    const storedMapIds = useGameMapProgress(game.id, variantId);
     const mapData = getGameMapData(game.id, variantId);
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const completedMapIds = mounted ? storedMapIds : EMPTY_IDS;
 
     const mapProgress = [
         ...Object.entries(mapData?.collectibles ?? {}),
@@ -72,7 +82,7 @@ export default function ExploreSections({ game, variantId }: Props) {
         };
     });
 
-    const pctValue = checklistProgress?.pct ?? 0;
+    const pctValue = mounted ? (checklistProgress?.pct ?? 0) : 0;
 
     const [activeMapProgress, setActiveMapProgress] = useState(0);
 
@@ -245,7 +255,7 @@ export default function ExploreSections({ game, variantId }: Props) {
                                             }}
                                             className={bentoBadge}
                                         >
-                                            <span className="">
+                                            <span>
                                                 {activeProgress.completed}
                                             </span>
                                             <span className="opacity-85">
