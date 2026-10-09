@@ -26,12 +26,21 @@ export default function ProgressBar({
     duration,
     onSeek,
 }: ProgressBarProps) {
+    const TIMER_STYLES =
+        "text-[14px] font-bold tabular-nums text-[color-mix(in_srgb,white_,var(--radio-station-accent)_20%)]";
+
     const isBusy = isLoading || isSeeking;
     const progress =
         duration > 0 ? Math.min(100, (currentTime / duration) * 100) : 0;
     const [dragRatio, setDragRatio] = useState<number | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const dragProgress = dragRatio !== null ? dragRatio * 100 : null;
+
+    const displayTime = dragRatio !== null ? dragRatio * duration : currentTime;
+    const timerWidth = `${formatTime(duration).length}ch`;
+
+    const thumbRatio =
+        (isDragging && dragProgress !== null ? dragProgress : progress) / 100;
 
     const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -157,17 +166,19 @@ export default function ProgressBar({
     return (
         <div className="flex w-full items-center gap-2 max-mobile:gap-6">
             {hasStation && (
-                <span className="w-10 shrink-0 text-xs font-thin tabular-nums text-slate-300 max-mobile:w-6">
-                    {isDragging && dragRatio !== null
-                        ? formatTime(dragRatio * duration)
-                        : formatTime(currentTime)}
-                </span>
+                <div className="pr-4 flex shrink-0 items-center gap-1.5">
+                    <span
+                        className={`${TIMER_STYLES} text-end`}
+                        style={{ minWidth: timerWidth }}
+                    >
+                        {formatTime(displayTime)}
+                    </span>
+                </div>
             )}
-
             <div
                 ref={progressBarRef}
                 className={clsx(
-                    "group relative h-1.5 min-w-0 flex-1 overflow-hidden rounded-full bg-(--button-bg) touch-none select-none max-mobile:h-2",
+                    "group relative flex h-5 min-w-0 flex-1 items-center touch-none select-none",
                     hasStation ? "cursor-pointer" : "cursor-default opacity-40",
                     isDragging && "cursor-grabbing",
                 )}
@@ -175,18 +186,15 @@ export default function ProgressBar({
                 onPointerMove={handleProgressPointerMove}
                 onPointerLeave={handleProgressPointerLeave}
             >
-                <div className="relative h-1.5 min-w-0 overflow-hidden rounded-full bg-(--button-bg) max-mobile:h-2">
-                    <div className="absolute top-0 left-0 h-full w-full bg-gray-900/15" />
+                <div className="relative h-1.25 w-full rounded-full bg-[oklch(from_var(--radio-station-accent)_0.75_0.11_h)]/60 transition-all duration-150 group-hover:h-2 max-mobile:h-2">
+                    <div className="absolute top-0 left-0 h-full w-full rounded-full bg-gray-900/15" />
 
                     {isDragging && dragProgress !== null ? (
                         <>
                             <div
-                                className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
-                                style={{
-                                    width: `${dragProgress}%`,
-                                }}
+                                className="absolute top-0 left-0 h-full rounded-full bg-(--track-color)"
+                                style={{ width: `${dragProgress}%` }}
                             />
-
                             {dragProgress < progress && (
                                 <div
                                     className="absolute top-0 h-full rounded-full"
@@ -201,42 +209,31 @@ export default function ProgressBar({
                         </>
                     ) : (
                         <motion.div
-                            className="absolute top-0 left-0 h-full rounded-full bg-violet-500"
+                            className="absolute top-0 left-0 h-full rounded-full bg-white group-active:bg-(--track-color)"
                             animate={{ width: `${progress}%` }}
-                            transition={{
-                                duration: 0.3,
-                                ease: "easeOut",
-                            }}
+                            transition={{ duration: 0.3, ease: "easeOut" }}
                         />
                     )}
 
-                    {isDragging && dragRatio !== null && (
-                        <>
-                            <div
-                                className="absolute top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-violet-500 shadow-lg"
-                                style={{
-                                    left: `calc(${dragProgress}% - 6px)`,
-                                }}
-                            />
-
-                            <div
-                                className="absolute bottom-full mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-violet-800 px-2 py-1 text-xs text-white"
-                                style={{
-                                    left: `${dragProgress}%`,
-                                }}
-                            >
-                                {formatTime(dragRatio * duration)} /{" "}
-                                {formatTime(duration)}
-                            </div>
-                        </>
-                    )}
+                    <div
+                        className={clsx(
+                            "pointer-events-none absolute top-1/2 z-10 h-3.5 w-5 -translate-y-1/2 rounded-full border-2 border-(--radio-station-accent) bg-white transition-[scale,opacity] duration-150",
+                            isDragging
+                                ? "scale-100 opacity-100"
+                                : "scale-80 opacity-0 group-hover:opacity-100",
+                        )}
+                        style={{
+                            left: `calc((100% - 20px) * ${thumbRatio})`,
+                            transformOrigin: `${thumbRatio * 100}% 50%`,
+                        }}
+                    />
 
                     {isBusy && (
                         <motion.div
-                            className="absolute inset-0"
+                            className="absolute inset-0 rounded-full overflow-hidden"
                             style={{
                                 background:
-                                    "linear-gradient(90deg, transparent 0%, rgba(196,181,253,0.7) 50%, transparent 100%)",
+                                    "linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%)",
                                 backgroundSize: "200% 100%",
                                 pointerEvents: "none",
                             }}
@@ -254,8 +251,11 @@ export default function ProgressBar({
             </div>
 
             {hasStation && (
-                <div className="flex shrink-0 items-center gap-1.5">
-                    <span className="w-10 shrink-0 text-xs font-thin tabular-nums text-slate-300 max-mobile:w-6">
+                <div className="pl-4 flex shrink-0 items-center gap-1.5">
+                    <span
+                        className={`${TIMER_STYLES} text-start`}
+                        style={{ minWidth: timerWidth }}
+                    >
                         {formatTime(duration)}
                     </span>
                 </div>

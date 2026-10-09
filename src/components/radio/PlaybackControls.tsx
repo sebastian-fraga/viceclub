@@ -31,6 +31,8 @@ export default function PlaybackControls({
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const controlsDisabled = !hasStation || isInitialLoad;
 
+    const BUTTON_STYLES =
+        "cursor-pointer disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300 transition-[filter,opacity] duration-400 drop-shadow-[0_0_10px] drop-shadow-transparent hover:drop-shadow-white/50";
     useEffect(() => {
         if (!isLoading && !hasLoadedOnceRef.current) {
             hasLoadedOnceRef.current = true;
@@ -38,16 +40,16 @@ export default function PlaybackControls({
         }
     }, [isLoading]);
     return (
-        <div className="flex items-center gap-3.5 max-mobile:gap-4">
+        <div className="flex items-center gap-5 max-mobile:gap-3 text-white">
             <button
                 type="button"
                 onClick={onPrev}
                 disabled={controlsDisabled}
                 aria-label={t("radio.common.prevSong")}
-                className="cursor-pointer text-slate-300 transition-colors hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300"
+                className={`${BUTTON_STYLES} p-2`}
             >
                 <IconPlayerSkipBackFilled
-                    size={18}
+                    size={16}
                     className="max-mobile:size-6"
                 />
             </button>
@@ -61,16 +63,16 @@ export default function PlaybackControls({
                         ? t("radio.common.pauseSong")
                         : t("radio.common.playSong")
                 }
-                className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-violet-500 text-slate-900 transition-colors hover:bg-violet-400 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-violet-500 max-mobile:h-10 max-mobile:w-10"
+                className={`${BUTTON_STYLES} text-(--radio-station-accent) h-12 w-12 bg-white rounded-full flex items-center justify-center`}
             >
                 {isPlaying ? (
                     <IconPlayerPauseFilled
-                        size={16}
+                        size={22}
                         className="max-mobile:size-6"
                     />
                 ) : (
                     <IconPlayerPlayFilled
-                        size={16}
+                        size={22}
                         className="max-mobile:size-6"
                     />
                 )}
@@ -81,10 +83,10 @@ export default function PlaybackControls({
                 onClick={onNext}
                 disabled={controlsDisabled}
                 aria-label={t("radio.common.nextSong")}
-                className="cursor-pointer text-slate-300 transition-colors hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300"
+                className={`${BUTTON_STYLES} p-2`}
             >
                 <IconPlayerSkipForwardFilled
-                    size={18}
+                    size={16}
                     className="max-mobile:size-6"
                 />
             </button>
