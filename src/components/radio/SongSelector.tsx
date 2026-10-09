@@ -147,7 +147,7 @@ export function SongSelector({
                     )}
 
                     <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
-                        <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto">
+                        <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
                             <img
                                 src={station.image}
                                 alt={station.displayName}
