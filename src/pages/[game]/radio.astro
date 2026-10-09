@@ -1,7 +1,7 @@
 ---
 import { getRadioData } from "@/components/radio/lib/getRadioData";
 import { parseRadioData } from "@/components/radio/lib/parseRadioData";
-import RadioPlayer from "@/components/radio/RadioPlayer";
+import RadioPage from "@/components/radio/RadioPage";
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
@@ -48,7 +48,7 @@ const stations = parseRadioData(radioDataRaw);
         <section
             class="mx-auto flex w-full max-w-350 flex-col gap-8 max-mobile:gap-20 max-mobile:px-4 max-mobile:pb-12 mobile:px-6"
         >
-            <RadioPlayer client:load stations={stations} game={gameId} />
+            <RadioPage client:load stations={stations} game={gameId} />
         </section>
     </main>
 </BaseLayout>
