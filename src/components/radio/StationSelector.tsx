@@ -102,7 +102,7 @@ export function StationSelector({
                                     alt={station.displayName}
                                     whileHover={{ scale: 1.08 }}
                                     transition={{ duration: 0.2 }}
-                                    className="h-26 w-22 object-contain"
+                                    className="h-26 w-22 object-contain drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
                                 />
                                 <span className="absolute bottom-3 left-1/2 text-yellow-50 -translate-x-1/2 text-xs truncate max-w-[90%] text-center opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 max-mobile:opacity-100 max-mobile:translate-y-0 transition-all duration-200">
                                     {station.displayName}

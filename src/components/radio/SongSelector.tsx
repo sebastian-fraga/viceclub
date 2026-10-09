@@ -151,7 +151,7 @@ export function SongSelector({
                             <img
                                 src={station.image}
                                 alt={station.displayName}
-                                className="h-full w-full object-contain p-3"
+                                className="h-full w-full object-contain p-3 drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
                             />
                         </div>
 
