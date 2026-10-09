@@ -5,6 +5,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/head.ogg",
         "dj": "Michael Hunt",
         "genre": "soft_rock",
+        "color": "#3E717E",
         "songs": [
             {
                 "artist": "Conor and Jay",
@@ -53,6 +54,7 @@
     "double_clef_fm": {
         "image": "../assets/images/radios/LCS/clef.webp",
         "displayName": "Double Clef FM",
+        "color": "#3E3E7E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/clef.ogg",
         "dj": "Sergio Boccino",
         "genre": ["classical", "opera"],
@@ -98,6 +100,7 @@
     "kjah_radio": {
         "image": "../assets/images/radios/LCS/kjah.webp",
         "displayName": "K-Jah Radio",
+        "color": "#3E7E54",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/kjah.ogg",
         "dj": "Natalee Walsh Davis",
         "genre": "reggae",
@@ -155,6 +158,7 @@
     "rise_fm": {
         "image": "../assets/images/radios/LCS/rise.webp",
         "displayName": "Rise FM",
+        "color": "#474776",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rise.ogg",
         "dj": "Boy Sanchez",
         "genre": ["dance", "house"],
@@ -248,6 +252,7 @@
     "lips_106": {
         "image": "../assets/images/radios/LCS/lips.webp",
         "displayName": "Lips 106",
+        "color": "#7E3E3F",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lips.ogg",
         "dj": ["Cliff Lane", "Andee"],
         "genre": "teen_pop",
@@ -299,6 +304,7 @@
     "radio_del_mundo": {
         "image": "../assets/images/radios/LCS/rdm.webp",
         "displayName": "Radio del Mundo",
+        "color": "#627E3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rdm.ogg",
         "dj": "Panjit Gavaskar",
         "genre": ["world_music_middle_east", "world_music_africa"],
@@ -374,6 +380,7 @@
     "msx_98": {
         "image": "../assets/images/radios/LCS/msx.webp",
         "displayName": "MSX 98",
+        "color": "#7E743E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/msx.ogg",
         "dj": ["MC Codebreaker", "DJ Timecode"],
         "genre": "drum_and_bass",
@@ -449,6 +456,7 @@
     "flashback_fm": {
         "image": "../assets/images/radios/LCS/flashback.webp",
         "displayName": "Flashback 95.6",
+        "color": "#7E6D3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/flashback.ogg",
         "dj": "Reni Wassulmaier",
         "genre": ["disco", "electronic"],
@@ -494,6 +502,7 @@
     "the_liberty_jam": {
         "image": "../assets/images/radios/LCS/tlj.webp",
         "displayName": "The Liberty Jam",
+        "color": "#7E3E41",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/tlj.ogg",
         "dj": "DJ Clue",
         "genre": "east_coast_hip_hop",
@@ -575,6 +584,7 @@
     "liberty_city_free_radio": {
         "image": "../assets/images/radios/LCS/lcfr.webp",
         "displayName": "Liberty City Free Radio",
+        "color": "#3E627E",
         "playlists": [
             {
                 "name": "Heartland Values with Nurse Bob",
