@@ -1,25 +1,26 @@
 import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
+import type { RadioSelection } from "@/components/radio/hooks/useRadioSelection";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
-import { useCurrentTrack } from "./hooks/useCurrentTrack";
-import { useMediaSession } from "./hooks/useMediaSession";
-import { useRadioSelection } from "./hooks/useRadioSelection";
-import { getNextSeekTarget, getPrevSeekTarget } from "./lib/getAdjacentSong";
-import { PlayerFooter } from "./PlayerFooter";
+import { useState } from "react";
 import { SongSelector } from "./SongSelector";
 import { StationSelector } from "./StationSelector";
 import type { RadioStation } from "./types/types";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface RadioPlayerProps {
     stations: RadioStation[];
     game: GameId;
+    radio: RadioSelection;
+    currentIndex: number;
 }
 
-export function RadioPlayer({ stations, game }: RadioPlayerProps) {
+export function RadioPlayer({
+    stations,
+    game,
+    radio,
+    currentIndex,
+}: RadioPlayerProps) {
     const gameInfo = gamesList.find((item) => item.id === game);
-    const radio = useRadioSelection(stations);
     const [mobilePanel, setMobilePanel] = useState<"stations" | "songs">(
         "stations",
     );
@@ -29,73 +30,13 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
         setMobilePanel("songs");
     };
 
-    const { currentIndex } = useCurrentTrack(
-        radio.activePlaylist?.songs,
-        radio.currentTime,
-    );
-    const currentSong = radio.activePlaylist?.songs[currentIndex] ?? null;
-    const isBusy = radio.isLoading || radio.isSeeking;
     const handleSelectSong = (startTime: number) => {
         radio.seekTo(startTime);
+
         if (!radio.isPlaying) {
             radio.play();
         }
     };
-
-    const handleNext = () => {
-        if (!radio.activePlaylist) return;
-        const { time } = getNextSeekTarget(
-            radio.activePlaylist.songs,
-            radio.currentTime,
-            currentIndex,
-        );
-        radio.seekTo(time);
-    };
-
-    const handlePrev = () => {
-        if (!radio.activePlaylist) return;
-        const { time } = getPrevSeekTarget(
-            radio.activePlaylist.songs,
-            radio.currentTime,
-            currentIndex,
-        );
-        radio.seekTo(time);
-    };
-
-    useMediaSession(radio.activeStation, currentSong, {
-        play: radio.play,
-        pause: radio.pause,
-        seekRelative: radio.seekRelative,
-        next: handleNext,
-        prev: handlePrev,
-    });
-
-    useEffect(() => {
-        const onKeyDown = (e: KeyboardEvent) => {
-            const target = e.target as HTMLElement | null;
-            const isTypingContext =
-                target?.tagName === "INPUT" ||
-                target?.tagName === "TEXTAREA" ||
-                target?.isContentEditable;
-            if (isTypingContext) return;
-
-            if (e.code === "Space") {
-                e.preventDefault();
-                radio.togglePlay();
-            }
-            if (e.key === "ArrowRight") {
-                e.preventDefault();
-                radio.seekRelative(5);
-            }
-            if (e.key === "ArrowLeft") {
-                e.preventDefault();
-                radio.seekRelative(-5);
-            }
-        };
-
-        document.addEventListener("keydown", onKeyDown);
-        return () => document.removeEventListener("keydown", onKeyDown);
-    }, [radio]);
 
     return (
         <>
@@ -105,6 +46,7 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                     options={{ fullName: gameInfo?.fullName }}
                 />
             </div>
+
             <div className="flex flex-col gap-4">
                 <div className="relative h-190 max-mobile:h-[70vh] max-mobile:overflow-hidden">
                     <div
@@ -125,6 +67,7 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                                 onSelect={handleSelectStation}
                             />
                         </div>
+
                         <div className="h-full min-h-0 max-mobile:w-1/2 max-mobile:h-full max-mobile:shrink-0">
                             <SongSelector
                                 isPlaying={radio.isPlaying}
@@ -138,31 +81,6 @@ export function RadioPlayer({ stations, game }: RadioPlayerProps) {
                         </div>
                     </div>
                 </div>
-
-                <AnimatePresence>
-                    {mobilePanel === "songs" && (
-                        <motion.div
-                            initial={{ y: 80, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: 80, opacity: 0 }}
-                        >
-                            <PlayerFooter
-                                isPlaying={radio.isPlaying}
-                                isLoading={radio.isLoading}
-                                isSeeking={radio.isSeeking}
-                                hasStation={radio.activeStation !== null}
-                                currentTime={radio.currentTime}
-                                duration={radio.duration}
-                                volume={radio.volume}
-                                onPlayPause={radio.togglePlay}
-                                onNext={handleNext}
-                                onPrev={handlePrev}
-                                onSeek={radio.seekTo}
-                                onVolumeChange={radio.setVolume}
-                            />
-                        </motion.div>
-                    )}
-                </AnimatePresence>
             </div>
         </>
     );
