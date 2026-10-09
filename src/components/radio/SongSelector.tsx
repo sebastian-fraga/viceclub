@@ -110,7 +110,7 @@ export function SongSelector({
     const maskImage = `linear-gradient(to bottom, ${maskParts.join(", ")})`;
 
     const selectorClasses =
-        "text-gray-300/80 flex flex-col rounded-4xl bg-linear-to-br from-[var(--button-bg-hover)] from-20% to-[var(--button-bg)] shadow-2xl shadow-pink-300/5";
+        "text-gray-300/80 flex flex-col rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5";
 
     return (
         <AnimatePresence mode="wait">
@@ -147,11 +147,11 @@ export function SongSelector({
                     )}
 
                     <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
-                        <div className="rounded-2xl bg-linear-120 from-[#37344D] to-slate-900 p-2 max-mobile:mx-auto">
+                        <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto">
                             <img
                                 src={station.image}
                                 alt={station.displayName}
-                                className="w-26 h-26 max-mobile:w-20 max-mobile:h-20 object-contain"
+                                className="h-full w-full object-contain p-3"
                             />
                         </div>
 
@@ -252,8 +252,8 @@ export function SongSelector({
                         </div>
                     )}
 
-                    <div className="border-t border-purple-400/10 pt-3 flex-1 min-h-0 flex flex-col">
-                        <p className="mb-1 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-indigo-100">
+                    <div className="pt-3 flex-1 min-h-0 flex flex-col">
+                        <p className="mb-1 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
                             {t("radio.tracks")}
                         </p>
                         <ul
@@ -286,7 +286,7 @@ export function SongSelector({
                                             damping: 24,
                                             delay: index * 0.03,
                                         }}
-                                        className="flex items-center justify-between border-b last:border-b-0 pb-4 max-mobile:pb-3 pt-2 first:pt-0 border-purple-400/5"
+                                        className="flex items-center justify-between pb-4 max-mobile:pb-3 pt-2 first:pt-0"
                                     >
                                         <button
                                             onClick={() =>
@@ -345,8 +345,8 @@ export function SongSelector({
                                                         className={clsx(
                                                             "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm",
                                                             isActive
-                                                                ? "text-violet-300"
-                                                                : "text-white",
+                                                                ? "text-[color-mix(in_oklch,var(--radio-station-accent)_10%,white)]"
+                                                                : "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]",
                                                         )}
                                                     >
                                                         {translateRadioText(
@@ -357,10 +357,10 @@ export function SongSelector({
 
                                                     <span
                                                         className={clsx(
-                                                            "text-gray-400 text-sm max-mobile:text-xs font-thin truncate max-mobile:max-w-60",
+                                                            "text-sm max-mobile:text-xs font-medium truncate max-mobile:max-w-60",
                                                             isActive
-                                                                ? "text-violet-200/80"
-                                                                : "text-gray-200",
+                                                                ? "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]"
+                                                                : "text-[color-mix(in_oklch,var(--radio-station-accent)_60%,white)]",
                                                         )}
                                                     >
                                                         {song.artist}

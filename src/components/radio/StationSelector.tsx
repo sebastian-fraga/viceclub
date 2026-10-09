@@ -31,8 +31,8 @@ export function StationSelector({
 
     if (stations.length === 0) {
         return (
-            <div className="flex flex-col px-4 py-6 rounded-full bg-linear-to-br from-(--button-bg-hover) from-20% to-(--button-bg) text-slate-50">
-                <h3 className="mb-4 text-2xl font-medium">
+            <div className="flex flex-col px-4 py-6 rounded-full bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)]">
+                <h3 className="mb-4 text-2xl font-medium text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
                     {t("radio.stations")}
                 </h3>
                 <p className="text-sm text-slate-400">
@@ -50,12 +50,12 @@ export function StationSelector({
 
     return (
         <motion.div
-            className="flex flex-col pl-4 py-6 rounded-4xl bg-linear-to-bl from-(--button-bg-hover) from-20% to-(--button-bg) shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
+            className="flex flex-col pl-4 py-6 rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
-            <h3 className="mb-3 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-indigo-100">
+            <h3 className="mb-3 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
                 {t("radio.stations")}
             </h3>
             <div
@@ -92,9 +92,9 @@ export function StationSelector({
                                     damping: 20,
                                 }}
                                 className={clsx(
-                                    "group relative bg-linear-120 from-[#262438] to-slate-900 rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer border border-white/7 hover:ring-4 hover:ring-yellow-200 focus-visible:border-yellow-200 outline-none overflow-hidden",
+                                    "group relative bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer border border-white/7 hover:ring-4 hover:ring-[color-mix(in_oklch,var(--radio-station-accent)_50%,white)] focus-visible:border-yellow-200 outline-none overflow-hidden",
                                     isActive &&
-                                        "border-violet-300 bg-[#37344D] border ring-4 ring-yellow-200",
+                                        "border-violet-300 bg-[#37344D] border ring-4 ring-[color-mix(in_oklch,var(--radio-station-accent)_70%,white)]",
                                 )}
                             >
                                 <motion.img
