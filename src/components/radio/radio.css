@@ -1,40 +1,47 @@
-.volume-slider {
-    width: 6rem;
-    height: 6px;
-    appearance: none;
-    cursor: pointer;
-    border-radius: 9999px;
-    background: linear-gradient(to right,
-            var(--color-violet-500) var(--volume),
-            color-mix(in srgb, var(--color-gray-900) 15%, transparent) var(--volume));
+@property --radio-station-accent {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #38365d;
 }
 
-.volume-slider::-webkit-slider-runnable-track {
-    height: 4px;
-    border-radius: 9999px;
-    background: transparent;
+@property --track-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgb(255 212 168);
 }
 
-.volume-slider::-webkit-slider-thumb {
-    width: 10px;
-    height: 10px;
-    margin-top: -3px;
-    appearance: none;
-    border: none;
-    border-radius: 50%;
-    background: var(--color-violet-500);
+@keyframes track-color-cycle {
+    0% {
+        --track-color: rgb(255 212 168);
+    }
+
+    20% {
+        --track-color: rgb(236 244 164);
+    }
+
+    40% {
+        --track-color: rgb(255 203 178);
+    }
+
+    60% {
+        --track-color: rgb(255 212 168);
+    }
+
+    80% {
+        --track-color: rgb(236 244 164);
+    }
+
+    100% {
+        --track-color: rgb(255 212 168);
+    }
 }
 
-.volume-slider::-moz-range-track {
-    height: 4px;
-    border-radius: 9999px;
-    background: transparent;
+.radio-track-cycle {
+    animation: track-color-cycle 24s ease-in-out infinite;
 }
 
-.volume-slider::-moz-range-thumb {
-    width: 10px;
-    height: 10px;
-    border: none;
-    border-radius: 50%;
-    background: var(--color-violet-500);
+@media (prefers-reduced-motion: reduce) {
+    .radio-track-cycle {
+        animation: none;
+    }
 }
