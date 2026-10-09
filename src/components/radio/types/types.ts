@@ -18,6 +18,7 @@ export interface Playlist {
 export interface RadioStation {
     id: string;
     displayName: string;
+    color?: string;
     image: string;
     playlists: Playlist[];
     volume?: number;
@@ -32,6 +33,7 @@ export interface RawRadioSong {
 
 export interface RawRadioStation {
     displayName: string;
+    color?: string;
     image: string;
     audio: string;
     dj: string | string[];

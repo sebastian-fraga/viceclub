@@ -67,6 +67,7 @@ export function parseRadioStation(
         id,
         displayName: raw.displayName,
         image: raw.image,
+        color: raw.color,
         playlists,
     };
 }
