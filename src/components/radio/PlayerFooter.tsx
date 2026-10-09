@@ -41,10 +41,10 @@ export function PlayerFooter({
     onNext,
 }: PlayerBarProps) {
     return (
-        <div className="radio-track-cycle grid grid-cols-[1fr_minmax(0,32rem)_1fr] gap-8 max-mobile:gap-4 rounded-[32px] bg-(--radio-station-accent) px-4 py-3 shadow-2xl shadow-black/55 min-h-20 w-full max-mobile:max-w-125 max-mobile:px-10 max-mobile:py-5 max-mobile:flex-col">
+        <div className="radio-track-cycle grid w-full min-h-20 grid-cols-[minmax(0,1fr)_minmax(0,32rem)_minmax(0,1fr)] items-center gap-8 rounded-[32px] bg-(--radio-station-accent) px-4 py-3 shadow-2xl shadow-black/55 max-mobile:flex max-mobile:max-w-125 max-mobile:flex-col max-mobile:gap-5 max-mobile:px-5 max-mobile:py-5">
             <PlaybackInfo station={station} song={song} djs={djs} />
 
-            <div className="flex flex-col items-center w-full gap-3 min-w-0">
+            <div className="flex w-full min-w-0 flex-col items-center gap-3">
                 <PlaybackControls
                     isPlaying={isPlaying}
                     isLoading={isLoading}
@@ -64,7 +64,10 @@ export function PlayerFooter({
                 />
             </div>
 
-            <VolumeControl volume={volume} onVolumeChange={onVolumeChange} />
+            <VolumeControl
+                volume={volume}
+                onVolumeChange={onVolumeChange}
+            />
         </div>
     );
 }

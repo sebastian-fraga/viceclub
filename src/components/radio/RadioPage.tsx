@@ -136,7 +136,7 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
                         initial={{ y: 80, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 80, opacity: 0 }}
-                        className="fixed bottom-10 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 w-[calc(100%-2rem)] max-w-[calc(80vw-var(--sidebar-width))] duration-300 z-1000"
+                        className="fixed bottom-10 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 w-[calc(100%-2rem)] max-w-[calc(80vw-var(--sidebar-width))] duration-300 z-1000 max-mobile:bottom-4 max-mobile:left-1/2 max-mobile:w-[calc(100%-1.5rem)] max-mobile:max-w-none max-mobile:-translate-x-1/2"
                     >
                         <PlayerFooter
                             song={currentSong}

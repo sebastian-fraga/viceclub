@@ -33,12 +33,14 @@ export default function PlaybackControls({
 
     const BUTTON_STYLES =
         "cursor-pointer disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:text-slate-300 transition-[filter,opacity] duration-400 drop-shadow-[0_0_10px] drop-shadow-transparent hover:drop-shadow-white/50";
+
     useEffect(() => {
         if (!isLoading && !hasLoadedOnceRef.current) {
             hasLoadedOnceRef.current = true;
             setIsInitialLoad(false);
         }
     }, [isLoading]);
+
     return (
         <div className="flex items-center gap-5 max-mobile:gap-3 text-white">
             <button
@@ -50,7 +52,7 @@ export default function PlaybackControls({
             >
                 <IconPlayerSkipBackFilled
                     size={16}
-                    className="max-mobile:size-6"
+                    className="max-mobile:size-5"
                 />
             </button>
 
@@ -63,17 +65,17 @@ export default function PlaybackControls({
                         ? t("radio.common.pauseSong")
                         : t("radio.common.playSong")
                 }
-                className={`${BUTTON_STYLES} text-(--radio-station-accent) h-12 w-12 bg-white rounded-full flex items-center justify-center`}
+                className={`${BUTTON_STYLES} text-(--radio-station-accent) h-12 w-12 max-mobile:h-10 max-mobile:w-10 bg-white rounded-full flex items-center justify-center`}
             >
                 {isPlaying ? (
                     <IconPlayerPauseFilled
                         size={22}
-                        className="max-mobile:size-6"
+                        className="max-mobile:size-5"
                     />
                 ) : (
                     <IconPlayerPlayFilled
                         size={22}
-                        className="max-mobile:size-6"
+                        className="max-mobile:size-5"
                     />
                 )}
             </button>
@@ -87,7 +89,7 @@ export default function PlaybackControls({
             >
                 <IconPlayerSkipForwardFilled
                     size={16}
-                    className="max-mobile:size-6"
+                    className="max-mobile:size-5"
                 />
             </button>
         </div>

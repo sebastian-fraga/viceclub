@@ -27,7 +27,7 @@ export default function ProgressBar({
     onSeek,
 }: ProgressBarProps) {
     const TIMER_STYLES =
-        "text-[14px] font-bold tabular-nums text-[color-mix(in_srgb,white_,var(--radio-station-accent)_20%)]";
+        "text-[14px] max-mobile:text-xs font-bold tabular-nums text-[color-mix(in_srgb,white_,var(--radio-station-accent)_20%)]";
 
     const isBusy = isLoading || isSeeking;
     const progress =
@@ -43,7 +43,6 @@ export default function ProgressBar({
         (isDragging && dragProgress !== null ? dragProgress : progress) / 100;
 
     const progressBarRef = useRef<HTMLDivElement>(null);
-
     const activePointerIdRef = useRef<number | null>(null);
 
     const getRatioFromClientX = useCallback((clientX: number) => {
@@ -55,6 +54,7 @@ export default function ProgressBar({
 
         return Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
     }, []);
+
     const releaseActivePointerCapture = useCallback(() => {
         const element = progressBarRef.current;
         const pointerId = activePointerIdRef.current;
@@ -163,10 +163,11 @@ export default function ProgressBar({
     const handleSeekEffect = useEffectEvent((seconds: number) => {
         onSeek(seconds);
     });
+
     return (
-        <div className="flex w-full items-center gap-2 max-mobile:gap-6">
+        <div className="flex w-full min-w-0 items-center gap-2 max-mobile:gap-2">
             {hasStation && (
-                <div className="pr-4 flex shrink-0 items-center gap-1.5">
+                <div className="flex shrink-0 items-center gap-1.5 pr-4 max-mobile:pr-0">
                     <span
                         className={`${TIMER_STYLES} text-end`}
                         style={{ minWidth: timerWidth }}
@@ -175,6 +176,7 @@ export default function ProgressBar({
                     </span>
                 </div>
             )}
+
             <div
                 ref={progressBarRef}
                 className={clsx(
@@ -230,7 +232,7 @@ export default function ProgressBar({
 
                     {isBusy && (
                         <motion.div
-                            className="absolute inset-0 rounded-full overflow-hidden"
+                            className="absolute inset-0 overflow-hidden rounded-full"
                             style={{
                                 background:
                                     "linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%)",
@@ -251,7 +253,7 @@ export default function ProgressBar({
             </div>
 
             {hasStation && (
-                <div className="pl-4 flex shrink-0 items-center gap-1.5">
+                <div className="flex shrink-0 items-center gap-1.5 pl-4 max-mobile:pl-0">
                     <span
                         className={`${TIMER_STYLES} text-start`}
                         style={{ minWidth: timerWidth }}
