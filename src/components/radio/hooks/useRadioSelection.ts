@@ -1,4 +1,4 @@
-import { useMemo, useState, useCallback } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { RadioStation } from "../types/types";
 import { useAudioPlayer } from "./useAudioPlayer";
 
@@ -6,7 +6,9 @@ export function useRadioSelection(stations: RadioStation[]) {
     const player = useAudioPlayer();
 
     const [activeStationId, setActiveStationId] = useState<string | null>(null);
-    const [activePlaylistId, setActivePlaylistId] = useState<string | null>(null);
+    const [activePlaylistId, setActivePlaylistId] = useState<string | null>(
+        null,
+    );
 
     const activeStation = useMemo(
         () => stations.find((s) => s.id === activeStationId) ?? null,
@@ -14,7 +16,10 @@ export function useRadioSelection(stations: RadioStation[]) {
     );
 
     const activePlaylist = useMemo(
-        () => activeStation?.playlists.find((p: { id: string | null; }) => p.id === activePlaylistId) ?? null,
+        () =>
+            activeStation?.playlists.find(
+                (p: { id: string | null }) => p.id === activePlaylistId,
+            ) ?? null,
         [activeStation, activePlaylistId],
     );
 
@@ -22,6 +27,7 @@ export function useRadioSelection(stations: RadioStation[]) {
         (stationId: string) => {
             const station = stations.find((s) => s.id === stationId);
             if (!station) return;
+
             const firstPlaylist = station.playlists[0];
 
             setActiveStationId(stationId);
@@ -34,7 +40,10 @@ export function useRadioSelection(stations: RadioStation[]) {
     const selectPlaylist = useCallback(
         (playlistId: string) => {
             if (!activeStation) return;
-            const playlist = activeStation.playlists.find((p) => p.id === playlistId);
+
+            const playlist = activeStation.playlists.find(
+                (p) => p.id === playlistId,
+            );
             if (!playlist) return;
 
             setActivePlaylistId(playlistId);
@@ -52,3 +61,5 @@ export function useRadioSelection(stations: RadioStation[]) {
         selectPlaylist,
     };
 }
+
+export type RadioSelection = ReturnType<typeof useRadioSelection>;
