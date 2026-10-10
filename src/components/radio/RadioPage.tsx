@@ -1,11 +1,13 @@
 import { PlayerFooter } from "@/components/radio/PlayerFooter";
 import type { GameId } from "@/config/games";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useCurrentTrack } from "./hooks/useCurrentTrack";
 import { useMediaSession } from "./hooks/useMediaSession";
 import { useRadioSelection } from "./hooks/useRadioSelection";
 import { getNextSeekTarget, getPrevSeekTarget } from "./lib/getAdjacentSong";
+import { RadioFullscreen } from "./RadioFullscreen";
 import RadioPlayer from "./RadioPlayer";
 import type { RadioStation } from "./types/types";
 
@@ -17,6 +19,8 @@ interface RadioPageProps {
 
 export default function RadioPage({ stations, game, station }: RadioPageProps) {
     const radio = useRadioSelection(stations);
+    const isMobile = useIsMobile();
+    const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
     const { currentIndex } = useCurrentTrack(
         radio.activePlaylist?.songs,
@@ -91,6 +95,13 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
         };
     }, [radio]);
 
+    useEffect(() => {
+        if (isMobile === false) setIsFullscreenOpen(false);
+    }, [isMobile]);
+
+    const isFullscreenVisible =
+        isMobile === true && isFullscreenOpen && radio.activeStation !== null;
+
     const [isAtBottom, setIsAtBottom] = useState(false);
 
     useEffect(() => {
@@ -131,31 +142,49 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
             />
 
             <AnimatePresence>
-                {radio.activeStation !== null && !isAtBottom && (
-                    <motion.div
-                        initial={{ y: 80, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: 80, opacity: 0 }}
-                        className="fixed bottom-10 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 w-[calc(100%-2rem)] max-w-[calc(80vw-var(--sidebar-width))] duration-300 z-1000 max-mobile:bottom-4 max-mobile:left-1/2 max-mobile:w-[calc(100%-1.5rem)] max-mobile:max-w-none max-mobile:-translate-x-1/2"
-                    >
-                        <PlayerFooter
-                            song={currentSong}
-                            djs={radio.activePlaylist?.djs ?? []}
-                            isPlaying={radio.isPlaying}
-                            isLoading={radio.isLoading}
-                            isSeeking={radio.isSeeking}
-                            hasStation={radio.activeStation !== null}
-                            station={radio.activeStation}
-                            currentTime={radio.currentTime}
-                            duration={radio.duration}
-                            volume={radio.volume}
-                            onPlayPause={radio.togglePlay}
-                            onNext={handleNext}
-                            onPrev={handlePrev}
-                            onSeek={radio.seekTo}
-                            onVolumeChange={radio.setVolume}
-                        />
-                    </motion.div>
+                {radio.activeStation !== null &&
+                    !isAtBottom &&
+                    !isFullscreenVisible && (
+                        <motion.div
+                            initial={{ y: 80, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 80, opacity: 0 }}
+                            className="fixed bottom-10 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 w-[calc(100%-2rem)] max-w-[calc(80vw-var(--sidebar-width))] duration-300 z-1000 max-mobile:bottom-4 max-mobile:left-1/2 max-mobile:w-[calc(100%-1.5rem)] max-mobile:max-w-none max-mobile:-translate-x-1/2"
+                        >
+                            <PlayerFooter
+                                variant={isMobile ? "mini" : "default"}
+                                onOpen={() => setIsFullscreenOpen(true)}
+                                song={currentSong}
+                                djs={radio.activePlaylist?.djs ?? []}
+                                isPlaying={radio.isPlaying}
+                                isLoading={radio.isLoading}
+                                isSeeking={radio.isSeeking}
+                                hasStation={radio.activeStation !== null}
+                                station={radio.activeStation}
+                                currentTime={radio.currentTime}
+                                duration={radio.duration}
+                                volume={radio.volume}
+                                onPlayPause={radio.togglePlay}
+                                onNext={handleNext}
+                                onPrev={handlePrev}
+                                onSeek={radio.seekTo}
+                                onVolumeChange={radio.setVolume}
+                            />
+                        </motion.div>
+                    )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+                {isFullscreenVisible && (
+                    <RadioFullscreen
+                        key="radio-fullscreen"
+                        radio={radio}
+                        currentIndex={currentIndex}
+                        currentSong={currentSong}
+                        onNext={handleNext}
+                        onPrev={handlePrev}
+                        onClose={() => setIsFullscreenOpen(false)}
+                    />
                 )}
             </AnimatePresence>
         </div>

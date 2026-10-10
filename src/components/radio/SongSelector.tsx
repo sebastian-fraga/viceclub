@@ -26,6 +26,7 @@ interface SongSelectorProps {
     onSelectSong: (startTime: number) => void;
     onBack?: () => void;
     preventAutoScrollOnMobile?: boolean;
+    compact?: boolean;
 }
 
 export function SongSelector({
@@ -37,6 +38,7 @@ export function SongSelector({
     onSelectSong,
     onBack,
     preventAutoScrollOnMobile = true,
+    compact = false,
 }: SongSelectorProps) {
     const t = useT();
 
@@ -109,6 +111,10 @@ export function SongSelector({
     ];
     const maskImage = `linear-gradient(to bottom, ${maskParts.join(", ")})`;
 
+    const cardSpacing = compact
+        ? "px-4 py-4 gap-3"
+        : "px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5";
+
     const selectorClasses =
         "text-gray-300/80 flex flex-col rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5";
 
@@ -130,13 +136,13 @@ export function SongSelector({
                 <motion.div
                     key={station.id}
                     ref={handleCardMount}
-                    className={`${selectorClasses} px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5 h-full min-h-0 w-full min-w-0 @container`}
+                    className={`${selectorClasses} ${cardSpacing} h-full min-h-0 w-full min-w-0 @container`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                 >
-                    {onBack && (
+                    {onBack && !compact && (
                         <button
                             onClick={onBack}
                             className="hidden max-mobile:flex items-center gap-1 text-base text-slate-300 hover:text-white -mb-2 cursor-pointer font-body-condensed"
@@ -146,73 +152,80 @@ export function SongSelector({
                         </button>
                     )}
 
-                    <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
-                        <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
-                            <img
-                                src={station.image}
-                                alt={station.displayName}
-                                className="h-full w-full object-contain p-3 drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
-                            />
+                    {!compact && (
+                        <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
+                            <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
+                                <img
+                                    src={station.image}
+                                    alt={station.displayName}
+                                    className="h-full w-full object-contain p-3 drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
+                                />
+                            </div>
+
+                            <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:gap-4 max-mobile:items-center">
+                                <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
+                                    {station.displayName}
+                                </h3>
+
+                                {activePlaylist.genres.length > 0 && (
+                                    <div
+                                        ref={genresScroll.scrollRef}
+                                        onScroll={genresScroll.handleScroll}
+                                        {...genresDrag}
+                                        className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
+                                        style={{
+                                            maskImage: genresScroll.maskImage,
+                                            WebkitMaskImage:
+                                                genresScroll.maskImage,
+                                        }}
+                                    >
+                                        {activePlaylist.genres.map((genre) => (
+                                            <div
+                                                key={genre}
+                                                className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
+                                            >
+                                                <IconMusic className="text-violet-400 shrink-0" />
+                                                <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
+                                                    {t(
+                                                        `radio.genres.${genre}`,
+                                                        {
+                                                            defaultValue: genre,
+                                                        },
+                                                    )}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {activePlaylist.djs.length > 0 && (
+                                    <div
+                                        ref={djsScroll.scrollRef}
+                                        onScroll={djsScroll.handleScroll}
+                                        {...djsDrag}
+                                        className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
+                                        style={{
+                                            maskImage: djsScroll.maskImage,
+                                            WebkitMaskImage:
+                                                djsScroll.maskImage,
+                                        }}
+                                    >
+                                        {activePlaylist.djs.map((dj) => (
+                                            <div
+                                                key={dj}
+                                                className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
+                                            >
+                                                <IconHeadphones className="text-yellow-200 shrink-0" />
+                                                <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
+                                                    {dj}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         </div>
-
-                        <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:gap-4 max-mobile:items-center">
-                            <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
-                                {station.displayName}
-                            </h3>
-
-                            {activePlaylist.genres.length > 0 && (
-                                <div
-                                    ref={genresScroll.scrollRef}
-                                    onScroll={genresScroll.handleScroll}
-                                    {...genresDrag}
-                                    className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
-                                    style={{
-                                        maskImage: genresScroll.maskImage,
-                                        WebkitMaskImage: genresScroll.maskImage,
-                                    }}
-                                >
-                                    {activePlaylist.genres.map((genre) => (
-                                        <div
-                                            key={genre}
-                                            className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
-                                        >
-                                            <IconMusic className="text-violet-400 shrink-0" />
-                                            <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
-                                                {t(`radio.genres.${genre}`, {
-                                                    defaultValue: genre,
-                                                })}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-
-                            {activePlaylist.djs.length > 0 && (
-                                <div
-                                    ref={djsScroll.scrollRef}
-                                    onScroll={djsScroll.handleScroll}
-                                    {...djsDrag}
-                                    className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
-                                    style={{
-                                        maskImage: djsScroll.maskImage,
-                                        WebkitMaskImage: djsScroll.maskImage,
-                                    }}
-                                >
-                                    {activePlaylist.djs.map((dj) => (
-                                        <div
-                                            key={dj}
-                                            className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
-                                        >
-                                            <IconHeadphones className="text-yellow-200 shrink-0" />
-                                            <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
-                                                {dj}
-                                            </span>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    </div>
+                    )}
 
                     {station.playlists.length > 1 && (
                         <div
