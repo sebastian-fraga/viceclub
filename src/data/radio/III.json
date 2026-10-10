@@ -5,6 +5,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/head.ogg",
         "dj": "Michael Hunt",
         "genre": ["alternative_rock", "pop"],
+        "color": "#3E7E79",
         "songs": [
             {
                 "artist": "Dil-Don't",
@@ -56,6 +57,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/clef.ogg",
         "dj": "Morgan Merryweather",
         "genre": ["classical", "opera"],
+        "color": "#3E6A7E",
         "songs": [
             {
                 "artist": "Wolfgang Amadeus Mozart",
@@ -101,6 +103,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/kjah.ogg",
         "dj": "Horace \"The Pacifist\" Walsh",
         "genre": "reggae",
+        "color": "#7E783E",
         "songs": [
             {
                 "artist": "Scientist",
@@ -185,6 +188,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/lips.ogg",
         "dj": "Andee",
         "genre": ["pop", "jazz", "rap"],
+        "color": "#3E527E",
         "songs": [
             {
                 "artist": "Fatamarse",
@@ -230,6 +234,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/game.ogg",
         "dj": ["Stretch Armstrong", "Lord Sear"],
         "genre": "hip_hop",
+        "color": "#3E7E74",
         "songs": [
             {
                 "artist": "Reef",
@@ -374,6 +379,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/flashback.ogg",
         "dj": "Toni",
         "genre": ["new_wave", "synth_pop", "scarface_soundtrack"],
+        "color": "#7E6E3E",
         "songs": [
             {
                 "artist": "Debbie Harry",
@@ -413,6 +419,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/chatterbox.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",
+        "color": "#3E7E7E",
         "songs": [
             {
                 "artist": "Lazlow",

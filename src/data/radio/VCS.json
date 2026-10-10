@@ -2,10 +2,10 @@
     "flash_fm": {
         "image": "../assets/images/radios/VCS/flash.webp",
         "displayName": "Flash FM",
-        "color": "#7E6A3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/flash.ogg",
         "dj": ["Teri", "Toni"],
         "genre": ["pop", "new_wave"],
+        "color": "#7E6A3E",
         "songs": [
             {
                 "artist": "Laura Branigan",
@@ -120,10 +120,10 @@
     "v_rock": {
         "image": "../assets/images/radios/VCS/vrock.webp",
         "displayName": "V-Rock",
-        "color": "#7E3E3F",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vrock.ogg",
         "dj": ["Couzin Ed", "Lazlow"],
         "genre": "rock",
+        "color": "#7E3E3F",
         "songs": [
             {
                 "artist": "Dio",
@@ -208,10 +208,10 @@
     "paradise_fm": {
         "image": "../assets/images/radios/VCS/paradise.webp",
         "displayName": "Paradise FM",
-        "color": "#7E4C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/paradise.ogg",
         "dj": "",
         "genre": "disco",
+        "color": "#7E4C3E",
         "songs": [
             {
                 "artist": "Unlimited Touch",
@@ -373,10 +373,10 @@
     "vcfl": {
         "image": "../assets/images/radios/VCS/vcfl.webp",
         "displayName": "VCFL",
-        "color": "#3E707E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcfl.ogg",
         "dj": "Tina Jane",
         "genre": "soul",
+        "color": "#3E707E",
         "songs": [
             {
                 "artist": "Marvin Gaye",
@@ -449,10 +449,10 @@
     "wave_103": {
         "image": "../assets/images/radios/VCS/wave.webp",
         "displayName": "Wave 103",
-        "color": "#3E7E74",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/wave.ogg",
         "dj": ["Adam First", "Trish Camden"],
         "genre": "new_wave",
+        "color": "#3E7E74",
         "songs": [
             {
                 "artist": "The Human League",
@@ -549,10 +549,10 @@
     "fresh_fm": {
         "image": "../assets/images/radios/VCS/fresh.webp",
         "displayName": "Fresh 105 FM",
-        "color": "#3E7E74",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/fresh.ogg",
         "dj": "DJ Luke",
         "genre": ["hip_hop", "breakbeat"],
+        "color": "#3E7E74",
         "songs": [
             {
                 "artist": "Afrika Bambaata & The Soulsonic Force",
@@ -619,10 +619,10 @@
     "radio_espantoso": {
         "image": "../assets/images/radios/VCS/espantoso.webp",
         "displayName": "Radio Espantoso",
-        "color": "#7E3E43",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/espantoso.ogg",
         "dj": "Hector Hernandez",
         "genre": ["salsa", "latin_jazz"],
+        "color": "#7E3E43",
         "songs": [
             {
                 "artist": "Ray Barretto",
@@ -677,10 +677,10 @@
     "emotion": {
         "image": "../assets/images/radios/VCS/emotion.webp",
         "displayName": "Emotion 98.3",
-        "color": "#7E3E44",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/emotion.ogg",
         "dj": "Lionel Makepeace",
         "genre": "soft_rock",
+        "color": "#7E3E44",
         "songs": [
             {
                 "artist": "The Motels",

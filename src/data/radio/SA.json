@@ -5,6 +5,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/playback.ogg",
         "dj": "Forth Right MC",
         "genre": "east_coast_hip_hop",
+        "color": "#3E7E4D",
         "songs": [
             {
                 "artist": "Kool G Rap",
@@ -86,6 +87,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/krose.ogg",
         "dj": "Mary-Beth Maybell",
         "genre": "country_music",
+        "color": "#7E793E",
         "songs": [
             {
                 "artist": "Hank Williams With His Drifting Cowboys",
@@ -185,6 +187,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kdst.ogg",
         "dj": "Tommy \"The Nightmare\" Smith",
         "genre": "classic_rock",
+        "color": "#7E3E40",
         "songs": [
             {
                 "artist": "Grand Funk Railroad",
@@ -296,6 +299,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/bounce.ogg",
         "dj": "The Funktipus",
         "genre": ["disco", "funk"],
+        "color": "#3E667E",
         "songs": [
             {
                 "artist": "Rick James",
@@ -407,7 +411,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/sfur.ogg",
         "dj": "Hans Oberlander",
         "genre": ["house", "electro", "dance"],
-        "list": [],
+        "color": "#3E6A7E",
         "songs": [
             {
                 "artist": "Joe Smooth",
@@ -513,6 +517,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/rls.ogg",
         "dj": "Julio G",
         "genre": "west_coast_hip_hop",
+        "color": "#457E3E",
         "songs": [
             {
                 "artist": "Ice Cube",
@@ -618,6 +623,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/radiox.ogg",
         "dj": "Sage",
         "genre": ["alternative_rock", "grunge"],
+        "color": "#3E517E",
         "songs": [
             {
                 "artist": "Helmet",
@@ -717,6 +723,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/csr.ogg",
         "dj": "Phillip \"PM\" Michaels",
         "genre": ["soul", "funk"],
+        "color": "#7E3E65",
         "songs": [
             {
                 "artist": "Bobby Brown",
@@ -804,6 +811,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kjah.ogg",
         "dj": ["Marshall Peters", "Johnny Lawton"],
         "genre": "reggae",
+        "color": "#617E3E",
         "songs": [
             {
                 "artist": "Black Harmony",
@@ -909,6 +917,7 @@
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/master.ogg",
         "dj": "Johnny \"The Love Giant\" Parkinson",
         "genre": ["soul", "funk_groove"],
+        "color": "#7E593E",
         "songs": [
             {
                 "artist": "James Brown",
@@ -1023,6 +1032,7 @@
     "wctr": {
         "image": "../assets/images/radios/SA/wctr.webp",
         "displayName": "West Coast Talk Radio",
+        "color": "#743E7E",
         "playlists": [
             {
                 "name": "WCTR News",

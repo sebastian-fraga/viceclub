@@ -602,7 +602,6 @@
     "motomami_los_santos": {
         "image": "../assets/images/radios/V/motomami.webp",
         "displayName": "MOTOMAMI Los Santos",
-        "color": "#8D4053",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/motomami.ogg",
         "dj": ["Rosalía", "Arca"],
         "genre": [
@@ -614,6 +613,7 @@
             "trap",
             "urbano"
         ],
+        "color": "#8D4053",
         "songs": [
             {
                 "title": "Tumbando Fronte",
@@ -818,8 +818,8 @@
     "music_locker_radio": {
         "image": "../assets/images/radios/V/ml.webp",
         "displayName": "Music Locker Radio",
-        "color": "#3D5F7D",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ml.ogg",
+        "color": "#3D5F7D",
         "playlists": [
             {
                 "name": "Set de Keinemusik",
@@ -1504,10 +1504,10 @@
     "the_blue_ark": {
         "image": "../assets/images/radios/V/tba.webp",
         "displayName": "The Blue Ark",
-        "color": "#477648",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/tba.ogg",
         "dj": "Lee \"Scratch\" Perry",
         "genre": ["reggae", "dancehall"],
+        "color": "#477648",
         "songs": [
             {
                 "artist": "Busy Signal",
@@ -1640,10 +1640,10 @@
     "worldwide_fm": {
         "image": "../assets/images/radios/V/ww.webp",
         "displayName": "WorldWide FM",
-        "color": "#426A7B",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ww.ogg",
         "dj": "Gilles Peterson",
         "genre": ["chillwave", "ambient", "jazz_funk"],
+        "color": "#426A7B",
         "songs": [
             {
                 "artist": "Cashmere Cat",
@@ -2124,10 +2124,10 @@
     "flylo_fm": {
         "image": "../assets/images/radios/V/flylo.webp",
         "displayName": "FlyLo FM",
-        "color": "#766847",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/flylo.ogg",
         "dj": "Flying Lotus",
         "genre": ["electronic", "experimental_hip_hop"],
+        "color": "#766847",
         "songs": [
             {
                 "artist": "Flying Lotus",
@@ -2464,10 +2464,10 @@
     "lowdown": {
         "image": "../assets/images/radios/V/lowdown.webp",
         "displayName": "The Lowdown 91.1",
-        "color": "#766347",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/lowdown.ogg",
         "dj": "Pam Grier",
         "genre": ["rhythm_and_blues", "soul", "groove"],
+        "color": "#766347",
         "songs": [
             {
                 "artist": "Aaron Neville",
@@ -2681,9 +2681,9 @@
     "radio_mirror_park": {
         "image": "../assets/images/radios/V/mirror.webp",
         "displayName": "Radio Mirror Park",
-        "color": "#765347",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/mirror.ogg",
         "dj": "George Lewis Jr.",
+        "color": "#765347",
         "genre": ["indie_rock", "chillwave"],
         "songs": [
             {
@@ -3154,10 +3154,10 @@
     "space": {
         "image": "../assets/images/radios/V/space.webp",
         "displayName": "Space 103.2",
-        "color": "#764757",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/space.ogg",
         "dj": "Bootsy Collins",
         "genre": ["funk", "disco", "rhythm_and_blues", "groove"],
+        "color": "#764757",
         "songs": [
             {
                 "artist": "Bootsy Collins",
@@ -3426,7 +3426,6 @@
     "blonded_los_santos": {
         "image": "../assets/images/radios/V/blonded.webp",
         "displayName": "blonded Los Santos",
-        "color": "#7E7E3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/blonded.ogg",
         "dj": ["Frank Ocean", "Vegyn", "Roof Access", "Federico Aliprandi"],
         "genre": [
@@ -3437,6 +3436,7 @@
             "electronic",
             "rock"
         ],
+        "color": "#7E7E3E",
         "songs": [
             {
                 "artist": "Todd Rundgren",
@@ -4043,10 +4043,10 @@
     "ifruit_radio": {
         "image": "../assets/images/radios/V/ifruit.webp",
         "displayName": "iFruit Radio",
-        "color": "#7E3E6A",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ifruit.ogg",
         "dj": ["Danny Brown", "Skepta"],
         "genre": ["rap", "dancehall", "electro"],
+        "color": "#7E3E6A",
         "songs": [
             {
                 "artist": "Danny Brown",
@@ -4221,10 +4221,10 @@
     "still_slipping_los_santos": {
         "image": "../assets/images/radios/V/ssls.webp",
         "displayName": "Still Slipping Los Santos",
-        "color": "#7E793E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ssls.ogg",
         "dj": "Joy Orbison",
         "genre": ["electronic", "dancehall"],
+        "color": "#7E793E",
         "songs": [
             {
                 "artist": "DJ Nigga Fox",
@@ -4417,10 +4417,10 @@
     "los_santos_rock_radio": {
         "image": "../assets/images/radios/V/lsrr.webp",
         "displayName": "Los Santos Rock Radio",
-        "color": "#7E3E3F",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/lsrr.ogg",
         "dj": "Kenny Loggins",
         "genre": "classic_rock",
+        "color": "#7E3E3F",
         "songs": [
             {
                 "artist": "Elton John",
@@ -4655,10 +4655,10 @@
     "non_stop_pop": {
         "image": "../assets/images/radios/V/nsp.webp",
         "displayName": "Non-Stop Pop FM",
-        "color": "#707E3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/nsp.ogg",
         "dj": "Cara Delevingne",
         "genre": ["pop", "pop_rock"],
+        "color": "#707E3E",
         "songs": [
             {
                 "artist": "Fergie",
@@ -4917,10 +4917,10 @@
     "radio_los_santos": {
         "image": "../assets/images/radios/V/rls.webp",
         "displayName": "Radio Los Santos",
-        "color": "#7E6F3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/rls.ogg",
         "dj": "Big Boy",
         "genre": ["hip_hop", "gangsta_rap", "trap"],
+        "color": "#7E6F3E",
         "songs": [
             {
                 "artist": "Kendrick Lamar",
@@ -5311,10 +5311,10 @@
     "channel_x": {
         "image": "../assets/images/radios/V/channel.webp",
         "displayName": "Channel X",
-        "color": "#7E3E45",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/channel.ogg",
         "dj": "Keith Morris",
         "genre": ["punk_rock", "hardcore_punk"],
+        "color": "#7E3E45",
         "songs": [
             {
                 "artist": "Agent Orange",
@@ -5484,10 +5484,10 @@
     "rebel_radio": {
         "image": "../assets/images/radios/V/rebel.webp",
         "displayName": "Rebel Radio",
-        "color": "#7E3E54",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/rebel.ogg",
         "dj": "Jesco \"The Dancing Outlaw\" White",
         "genre": "country_music",
+        "color": "#7E3E54",
         "songs": [
             {
                 "artist": "Charlie Feathers",
@@ -5713,10 +5713,10 @@
     "east_los_fm": {
         "image": "../assets/images/radios/V/elfm.webp",
         "displayName": "East Los FM",
-        "color": "#7E6E3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/elfm.ogg",
         "dj": ["Don Cheto", "Camilo Lara"],
         "genre": "latin_music",
+        "color": "#7E6E3E",
         "songs": [
             {
                 "artist": "Hechizeros Band",
@@ -5813,10 +5813,10 @@
     "west_coast_classics": {
         "image": "../assets/images/radios/V/wcc.webp",
         "displayName": "West Coast Classics",
-        "color": "#7E6C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/wcc.ogg",
         "dj": "DJ Pooh",
         "genre": ["classic_hip_hop", "gangsta_rap"],
+        "color": "#7E6C3E",
         "songs": [
             {
                 "artist": "CPO",

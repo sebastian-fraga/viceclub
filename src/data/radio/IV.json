@@ -618,10 +618,10 @@
     "the_classics": {
         "image": "../assets/images/radios/IV/classics.webp",
         "displayName": "The Classics 104.1",
-        "color": "#7E3E44",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/classics.ogg",
         "dj": "DJ Premier",
         "genre": "classic_hip_hop",
+        "color": "#7E3E44",
         "songs": [
             {
                 "artist": "Group Home",
@@ -694,10 +694,10 @@
     "if99": {
         "image": "../assets/images/radios/IV/if99.webp",
         "displayName": "International Funk 99",
-        "color": "#7E5B3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/if99.ogg",
         "dj": "Femi Kuti",
         "genre": ["funk", "afrobeat"],
+        "color": "#7E5B3E",
         "songs": [
             {
                 "artist": "The Meters",
@@ -776,10 +776,10 @@
     "tuff_gong_radio": {
         "image": "../assets/images/radios/IV/tuff.webp",
         "displayName": "Tuff Gong Radio",
-        "color": "#3E7E62",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/tuff.ogg",
         "dj": "Carl Bradshaw",
         "genre": "reggae",
+        "color": "#3E7E62",
         "songs": [
             {
                 "artist": "Bob Marley & The Wailers",
@@ -840,10 +840,10 @@
     "integrity": {
         "displayName": "Integrity 2.0",
         "image": "../assets/images/radios/IV/integrity.webp",
-        "color": "#7E6D3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/integrity.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",
+        "color": "#7E6D3E",
         "songs": [
             {
                 "artist": "Lazlow",
@@ -856,10 +856,10 @@
     "the_vibe": {
         "image": "../assets/images/radios/IV/vibe.webp",
         "displayName": "The Vibe 98.8",
-        "color": "#7E6C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vibe.ogg",
         "dj": "Vaughn Harper",
         "genre": ["rhythm_and_blues", "soul"],
+        "color": "#7E6C3E",
         "songs": [
             {
                 "artist": "Minnie Riperton",
@@ -1243,10 +1243,10 @@
     "jazz_nation_radio": {
         "image": "../assets/images/radios/IV/jnr.webp",
         "displayName": "Jazz Nation Radio 108.5",
-        "color": "#7E5C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/jnr.ogg",
         "dj": "Roy Haynes",
         "genre": "jazz",
+        "color": "#7E5C3E",
         "songs": [
             {
                 "artist": "Chet Baker",
@@ -1313,10 +1313,10 @@
     "massive_b_soundsystem": {
         "image": "../assets/images/radios/IV/massive.webp",
         "displayName": "Massive B Soundsystem 96.9",
-        "color": "#7E6D3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/mbs.ogg",
         "dj": "Bobby Konders",
         "genre": "dancehall",
+        "color": "#7E6D3E",
         "songs": [
             {
                 "artist": "Burro Banton",
@@ -1407,10 +1407,10 @@
     "k109": {
         "image": "../assets/images/radios/IV/k109.webp",
         "displayName": "K109 The Studio",
-        "color": "#7E6D3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/k109.ogg",
         "dj": "Karl Lagerfeld",
         "genre": ["disco", "funk"],
+        "color": "#7E6D3E",
         "songs": [
             {
                 "artist": "Rainbow Brown",
@@ -1731,10 +1731,10 @@
     "vice_city_fm": {
         "image": "../assets/images/radios/IV/vice.webp",
         "displayName": "Vice City FM",
-        "color": "#7E523E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vice.ogg",
         "dj": "Fernando Martinez",
         "genre": ["new_wave", "80s"],
+        "color": "#7E523E",
         "songs": [
             {
                 "artist": "Nu Shooz",
@@ -2059,10 +2059,10 @@
     "the_journey": {
         "image": "../assets/images/radios/IV/journey.webp",
         "displayName": "The Journey",
-        "color": "#7E6C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/journey.ogg",
         "dj": "Fruit",
         "genre": "ambient",
+        "color": "#7E6C3E",
         "songs": [
             {
                 "artist": "Tangerine Dream",
@@ -2123,10 +2123,10 @@
     "fusion_fm": {
         "image": "../assets/images/radios/IV/fusion.webp",
         "displayName": "Fusion FM",
-        "color": "#3E6C7E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/fusion.ogg",
         "dj": "Roy Ayers",
         "genre": ["jazz_fusion", "acid_jazz"],
+        "color": "#3E6C7E",
         "songs": [
             {
                 "artist": "Ryo Kawasaki",
@@ -2408,10 +2408,10 @@
     "ramjam_fm": {
         "image": "../assets/images/radios/IV/ram.webp",
         "displayName": "RamJam FM",
-        "color": "#3E7E53",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/ram.ogg",
         "dj": "David Rodigan",
         "genre": "reggae",
+        "color": "#3E7E53",
         "songs": [
             {
                 "artist": "Barrington Levy",
@@ -2490,10 +2490,10 @@
     "radio_broker": {
         "image": "../assets/images/radios/IV/broker.webp",
         "displayName": "Radio Broker",
-        "color": "#7E5C3E",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/broker.ogg",
         "dj": "Juliette Lewis",
         "genre": ["alternative_rock", "indie_rock"],
+        "color": "#7E5C3E",
         "songs": [
             {
                 "artist": "!!!",
