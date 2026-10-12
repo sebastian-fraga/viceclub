@@ -43,6 +43,14 @@ const STATUS_STYLES: Record<string, string> = {
 const LABEL_STYLES =
     "text-[11px] font-semibold uppercase tracking-wide text-neutral-300/85 max-mobile:text-[10px]";
 
+// Segunda defensa: backface-visibility (con prefijo explícito para Safari).
+const BACKFACE = "backface-hidden [-webkit-backface-visibility:hidden]";
+
+// Defensa principal: cada cara cambia su "visibility" a mitad del giro
+// (~150ms, cuando la carta está de canto). Con duration-0 + delay-150 el
+// cambio es instantáneo pero retrasado, así no depende de backface-visibility.
+const FACE_SWITCH = "transition-[visibility] duration-0 delay-150";
+
 function FlagImage({ nationality }: { nationality: string }) {
     if (nationality === "unknown") {
         return (
@@ -81,7 +89,7 @@ export default function CharacterCard({ character, variantId }: Props) {
         : character.name;
 
     return (
-        <div className="aspect-square w-full perspective-distant max-mobile:aspect-video max-mobile:min-h-90 max-mobile:max-w-100">
+        <div className="relative aspect-square w-full perspective-distant max-mobile:aspect-auto max-mobile:h-90 max-mobile:max-w-100">
             <div
                 role="button"
                 tabIndex={0}
@@ -99,22 +107,27 @@ export default function CharacterCard({ character, variantId }: Props) {
                         toggle();
                     }
                 }}
-                className="group relative h-full w-full cursor-pointer rounded-2xl shadow-[0_18px_40px_-16px_var(--button-bg)] outline-none duration-500 ease-out transform-3d transition"
+                className="group absolute inset-0 cursor-pointer rounded-2xl shadow-[0_18px_40px_-16px_var(--button-bg)] outline-none duration-500 ease-out transform-3d transition [-webkit-tap-highlight-color:transparent]"
                 style={{
                     transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}
             >
-                <div className="absolute inset-0 flex flex-col overflow-hidden rounded-2xl bg-(--button-bg) backface-hidden">
+                {/* CARA FRONTAL: visible solo cuando NO está girada */}
+                <div
+                    className={`absolute inset-0 flex flex-col overflow-hidden rounded-2xl bg-(--button-bg) ${BACKFACE} ${FACE_SWITCH} ${
+                        flipped ? "invisible" : "visible"
+                    }`}
+                >
                     <div className="relative flex-1 overflow-hidden after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-2/5 after:bg-linear-to-t after:from-(--button-bg) after:to-transparent after:content-['']">
                         <img
                             src={character.image}
                             alt={characterName}
-                            className="h-full w-full object-cover object-top"
+                            className={`h-full w-full object-cover object-top ${BACKFACE}`}
                             loading="lazy"
                         />
 
                         <span
-                            className={`absolute right-4 top-4 z-10 rounded-full px-4 py-1 text-[14px] font-extrabold uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${statusStyle}`}
+                            className={`absolute right-4 top-4 z-10 rounded-full px-4 py-1 text-[14px] font-extrabold uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${BACKFACE} ${statusStyle}`}
                         >
                             {t(
                                 `home.characters.statusLabel.${character.status}`,
@@ -122,7 +135,9 @@ export default function CharacterCard({ character, variantId }: Props) {
                         </span>
                     </div>
 
-                    <div className="relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_40%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3">
+                    <div
+                        className={`relative isolate flex flex-col gap-0.5 bg-(--button-bg) px-4 pb-4 pt-1 before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:bg-linear-to-t before:from-[color-mix(in_oklab,var(--game-accent,#a855f7)_40%,transparent)] before:to-transparent before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] group-hover:before:opacity-100 max-mobile:px-3 max-mobile:pb-3 ${BACKFACE}`}
+                    >
                         <p className="text-xl font-body-condensed tracking-tight text-neutral-50 max-mobile:text-lg">
                             {characterName}
                         </p>
@@ -135,8 +150,11 @@ export default function CharacterCard({ character, variantId }: Props) {
                     </div>
                 </div>
 
+                {/* CARA TRASERA: visible solo cuando está girada */}
                 <div
-                    className="absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-2xl bg-(--button-bg) bg-[radial-gradient(120%_70%_at_100%_0%,color-mix(in_oklab,var(--game-accent,#a855f7)_25%,transparent),transparent_60%)] p-4 backface-hidden transform-[rotateY(180deg)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] scrollbar-thin max-mobile:gap-3 max-mobile:p-3"
+                    className={`absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-2xl bg-(--button-bg) bg-[radial-gradient(120%_70%_at_100%_0%,color-mix(in_oklab,var(--game-accent,#a855f7)_25%,transparent),transparent_60%)] p-4 transform-[rotateY(180deg)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] scrollbar-thin max-mobile:gap-3 max-mobile:p-3 ${BACKFACE} ${FACE_SWITCH} ${
+                        flipped ? "visible" : "invisible"
+                    }`}
                     data-lenis-prevent
                 >
                     <div className="flex items-center gap-2">
@@ -190,7 +208,9 @@ export default function CharacterCard({ character, variantId }: Props) {
                                             href={character.portrayedByUrl}
                                             className="group/portrayed flex items-center justify-end gap-1 hover:text-(--game-accent)"
                                             target="_blank"
+                                            rel="noreferrer"
                                             referrerPolicy="no-referrer"
+                                            onClick={(e) => e.stopPropagation()}
                                         >
                                             {character.portrayedBy}
                                             <IconArrowUpRight className="size-4 transition-transform group-hover/portrayed:scale-[1.2]" />
