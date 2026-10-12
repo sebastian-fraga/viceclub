@@ -164,10 +164,11 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
         return (
             <div
                 ref={ref}
+                data-lenis-prevent
                 onMouseDown={(e) => e.stopPropagation()}
                 onDoubleClick={(e) => e.stopPropagation()}
                 onWheel={(e) => e.stopPropagation()}
-                className="absolute z-2000 top-4 left-4 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-white/10 bg-(--button-bg)/90 text-white shadow-2xl shadow-black/70 backdrop-blur-md max-mobile:top-auto max-mobile:right-3 max-mobile:bottom-3 max-mobile:left-3 max-mobile:w-auto max-mobile:max-h-full max-mobile:rounded-2xl"
+                className="absolute z-2000 top-4 left-4 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-white/10 bg-(--button-bg)/90 text-white shadow-2xl shadow-black/70 backdrop-blur-md max-mobile:fixed max-mobile:inset-x-3 max-mobile:top-auto max-mobile:bottom-3 max-mobile:w-auto max-mobile:max-h-[calc(100dvh-6rem)] max-mobile:overflow-y-auto"
             >
                 <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
                     <div className="flex items-center gap-2">
