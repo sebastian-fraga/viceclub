@@ -133,3 +133,4 @@ pnpm run dev
 - Per-game theming via `--game-accent` (CSS custom property)
 - Shared hooks in `useSettings` for persistence (localStorage)
 - Developer settings section in `SettingsModal` with development-only options (more options planned in the future)
+- WebKit testing via Playwright: `pnpm webkit [url] [device]` opens the site in an iPhone-emulated WebKit window (defaults to `http://localhost:4321` and `iPhone 14`)
