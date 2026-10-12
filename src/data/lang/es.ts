@@ -1507,6 +1507,9 @@ export default {
                 "Reiniciarás el progreso de los juegos seleccionados. Esta acción es irreversible.",
         },
     },
+    footer: {
+        socialNetworks: "Redes sociales"
+    },
     common: {
         editionLabels: {
             original: "Original",
@@ -1535,12 +1538,16 @@ export default {
             import: "Importar",
             retry: "Reiniciar",
             open: "Abrir",
+            copiedLink: "¡Link copiado!",
+            copyLink: "Copiar link",
+            copyLinkTo: "Copiar link a {{label}}"
         },
         accessibility: {
             prev: "Anterior",
             next: "Siguiente",
             close: "Cerrar",
             gameIcon: "Logo de GTA {{game}}",
+            coverArt: "Portada de Grand Theft Auto {{variantId}}",
             zoomIn: "Acercar",
             zoomOut: "Alejar",
             openSidebar: "Abrir barra lateral",

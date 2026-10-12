@@ -5,6 +5,7 @@ import ModModalInfo from "@/components/mods/ModModalInfo";
 import ModRequirements from "@/components/mods/ModRequirements";
 import type { GameId } from "@/config/games";
 import type { ModEntry } from "@/data/mods/types";
+import useT from "@/hooks/useT";
 import { IconX } from "@tabler/icons-react";
 import { motion, useIsPresent } from "framer-motion";
 import { useEffect, useLayoutEffect, useRef } from "react";
@@ -36,6 +37,8 @@ export default function ModModal({
     const hasRequirements =
         !!mod.requirements?.gameVersion ||
         (mod.requirements?.mods?.length ?? 0) > 0;
+
+    const t = useT();
 
     useLayoutEffect(() => {
         if (open) {
@@ -113,7 +116,7 @@ export default function ModModal({
                 type="button"
                 onClick={onClose}
                 className="absolute right-4 top-4 p-2 text-slate-400 hover:text-white transition cursor-pointer z-10"
-                aria-label="🌴"
+                aria-label={t("common.accessibility.close")}
             >
                 <IconX size={20} />
             </button>

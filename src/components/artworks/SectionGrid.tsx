@@ -12,6 +12,7 @@ import { Tooltip } from "@/components/ui/Tooltip";
 import { IconCheck, IconLink } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
+import useT from "@/hooks/useT";
 
 interface Props {
     gameId: string;
@@ -49,6 +50,8 @@ export function SectionGrid({
 
     const slug = slugify(section);
     const label = getSectionLabel(section, lang);
+
+    const t = useT()
 
     useEffect(() => {
         if (window.location.hash.slice(1) === slug) {
@@ -118,7 +121,9 @@ export function SectionGrid({
 
                 <Tooltip
                     label={
-                        copied ? "Copiado" : `Copiar`
+                        copied
+                            ? t("common.buttons.copiedLink")
+                            : t("common.buttons.copyLink")
                     }
                 >
                     <button
@@ -126,8 +131,8 @@ export function SectionGrid({
                         onClick={handleCopyLink}
                         aria-label={
                             copied
-                                ? "Link copiado🌴"
-                                : `Copiar link a 🌴${label}`
+                                ? t("common.buttons.copiedLink")
+                                : t("common.buttons.copyLinkTo", { label })
                         }
                         className={`relative ml-1 size-6 shrink-0 cursor-pointer transition duration-250 hover:text-yellow-100 focus-visible:opacity-100 max-mobile:opacity-100 group-hover:opacity-100 ${
                             copied ? "opacity-100" : "opacity-0"

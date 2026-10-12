@@ -1505,6 +1505,9 @@ export default {
                 "You will reset the progress of the selected games. This action cannot be undone.",
         },
     },
+    footer: {
+        socialNetworks: "Social media",
+    },
     common: {
         editionLabels: {
             original: "Original",
@@ -1533,12 +1536,16 @@ export default {
             import: "Import",
             retry: "Retry",
             open: "Open",
+            copiedLink: "Link copied!",
+            copyLink: "Copy link",
+            copyLinkTo: "Copy link to {{label}}",
         },
         accessibility: {
             prev: "Previous",
             next: "Next",
             close: "Close",
             gameIcon: "GTA {{game}} logo",
+            coverArt: "Grand Theft Auto {{variantId}} cover art",
             zoomIn: "Zoom in",
             zoomOut: "Zoom out",
             openSidebar: "Open sidebar",

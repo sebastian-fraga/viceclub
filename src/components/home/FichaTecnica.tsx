@@ -221,7 +221,7 @@ export default function TechSheet({
             <div className="mt-8 w-full max-w-lg rounded-2xl bg-(--button-bg) p-4 shadow-2xl shadow-black/40 max-mobile:mt-5 max-mobile:p-3">
                 <img
                     src={`/assets/images/main/boxarts/portada_${variantId}.webp`}
-                    alt={`Portada de ${title}🌴`}
+                    alt={t("common.accessibility.coverArt", { variantId })}
                     className="mx-auto mb-4 block w-full rounded-lg max-mobile:mb-3"
                 />
 

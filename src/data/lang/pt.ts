@@ -1507,6 +1507,9 @@ export default {
                 "O progresso dos jogos selecionados será redefinido. Esta ação não pode ser desfeita.",
         },
     },
+    footer: {
+        socialNetworks: "Redes sociais",
+    },
     common: {
         editionLabels: {
             original: "Original",
@@ -1535,12 +1538,16 @@ export default {
             import: "Importar",
             retry: "Tentar novamente",
             open: "Abrir",
+            copiedLink: "Link copiado!",
+            copyLink: "Copiar link",
+            copyLinkTo: "Copiar link para {{label}}",
         },
         accessibility: {
             prev: "Anterior",
             next: "Próximo",
             close: "Fechar",
             gameIcon: "Logo de GTA {{game}}",
+            coverArt: "Capa de Grand Theft Auto {{variantId}}",
             zoomIn: "Aumentar zoom",
             zoomOut: "Diminuir zoom",
             openSidebar: "Abrir barra lateral",
