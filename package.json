@@ -7,7 +7,8 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "webkit": "node scripts/webkit.mjs"
     },
     "dependencies": {
         "@astrojs/react": "^6.0.4",
