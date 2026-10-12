@@ -120,6 +120,9 @@ importers:
       '@types/leaflet':
         specifier: ^1.9.22
         version: 1.9.22
+      playwright:
+        specifier: ^1.64.0
+        version: 1.64.0
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -6538,6 +6541,16 @@ packages:
   player.style@0.3.4:
     resolution: {integrity: sha512-5O9bkbq0APQIkhptyZwp0gUgheCeImGPFo4hvPF2M5xBmgsUYzsUPHCfMye2xyeRE1zvQBKtziaC3jPgnHE1tw==}
 
+  playwright-core@1.64.0:
+    resolution: {integrity: sha512-T9r+MZkTECl2+oUcZ26YgZzTrYidTsIhYYkJix+6iDOymOb1FB2RLLSOxRGnZGv5DStt+aduIVbt+E8WygXYpg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
+  playwright@1.64.0:
+    resolution: {integrity: sha512-kVzTnYFYEyQ9RGzBjNCd2+yEqWmVbxl3AHPynv3qQ6JTjv4a+kwRcnqQwIpuP3NnrnIrE/Q6wWAIAvMfIE2/Yg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   pluralize-esm@9.0.5:
     resolution: {integrity: sha512-Kb2dcpMsIutFw2hYrN0EhsAXOUJTd6FVMIxvNAkZCMQLVt9NGZqQczvGpYDxNWCZeCWLHUPxQIBudWzt1h7VVA==}
     engines: {node: '>=14.0.0'}
@@ -6950,6 +6963,7 @@ packages:
   sanity@6.12.0:
     resolution: {integrity: sha512-o21BRF7oxFatFcWgbZ9NBQhZSp9JxuWtwlfARGly3vqM/4Z5H7Y9J1ZUZb7XO6EAYX3DXsfn65Hivj80X5FBjQ==}
     engines: {node: '>=22.12'}
+    deprecated: 'This version of Sanity Studio has a potential data-loss bug when working with Portable Text fields. This issue is resolved in 6.14.1. Upgrade with: npm install sanity@latest. See https://www.sanity.io/docs/studio/upgrade'
     hasBin: true
     peerDependencies:
       react: ^19.2.2
@@ -15086,6 +15100,12 @@ snapshots:
       media-chrome: 4.19.2(react@19.2.8)
     transitivePeerDependencies:
       - react
+
+  playwright-core@1.64.0: {}
+
+  playwright@1.64.0:
+    dependencies:
+      playwright-core: 1.64.0
 
   pluralize-esm@9.0.5: {}
 
