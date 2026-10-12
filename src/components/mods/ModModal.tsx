@@ -106,7 +106,7 @@ export default function ModModal({
             initial={supportsVT ? false : "hidden"}
             animate="visible"
             exit="hidden"
-            className="mod-dialog w-full max-w-200 max-mobile:max-w-[95vw] max-h-[90dvh] max-mobile:max-h-[95dvh] open:flex open:flex-col mx-auto my-auto bg-[#14141e] text-white shadow-2xl rounded-2xl pb-4 overflow-hidden"
+            className="mod-dialog w-full max-w-200 max-mobile:max-w-[95vw] h-[90dvh] max-mobile:h-[95dvh] max-h-[90dvh] max-mobile:max-h-[95dvh] open:flex open:flex-col mx-auto my-auto bg-[#14141e] text-white shadow-2xl rounded-2xl pb-4 overflow-hidden"
             data-lenis-prevent
         >
             <button
