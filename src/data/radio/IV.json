@@ -1,6 +1,6 @@
 {
     "vladivostok_fm": {
-        "image": "../assets/images/radios/IV/vlad.webp",
+        "image": "/assets/images/radios/IV/vlad.webp",
         "displayName": "Vladivostok FM",
         "color": "#3E5D7E",
         "playlists": [
@@ -257,7 +257,7 @@
         ]
     },
     "public_liberty_radio": {
-        "image": "../assets/images/radios/IV/plr.webp",
+        "image": "/assets/images/radios/IV/plr.webp",
         "displayName": "Public Liberty Radio",
         "color": "#3E5F7E",
         "playlists": [
@@ -312,7 +312,7 @@
         ]
     },
     "san_juan_sounds": {
-        "image": "../assets/images/radios/IV/sanjuan.webp",
+        "image": "/assets/images/radios/IV/sanjuan.webp",
         "displayName": "San Juan Sounds",
         "color": "#3E5B7E",
         "playlists": [
@@ -431,7 +431,7 @@
         ]
     },
     "electro_choc": {
-        "image": "../assets/images/radios/IV/electro.webp",
+        "image": "/assets/images/radios/IV/electro.webp",
         "displayName": "Electro-Choc",
         "color": "#7E3E65",
         "playlists": [
@@ -616,7 +616,7 @@
         ]
     },
     "the_classics": {
-        "image": "../assets/images/radios/IV/classics.webp",
+        "image": "/assets/images/radios/IV/classics.webp",
         "displayName": "The Classics 104.1",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/classics.ogg",
         "dj": "DJ Premier",
@@ -692,7 +692,7 @@
         ]
     },
     "if99": {
-        "image": "../assets/images/radios/IV/if99.webp",
+        "image": "/assets/images/radios/IV/if99.webp",
         "displayName": "International Funk 99",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/if99.ogg",
         "dj": "Femi Kuti",
@@ -774,7 +774,7 @@
         ]
     },
     "tuff_gong_radio": {
-        "image": "../assets/images/radios/IV/tuff.webp",
+        "image": "/assets/images/radios/IV/tuff.webp",
         "displayName": "Tuff Gong Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/tuff.ogg",
         "dj": "Carl Bradshaw",
@@ -839,7 +839,7 @@
     },
     "integrity": {
         "displayName": "Integrity 2.0",
-        "image": "../assets/images/radios/IV/integrity.webp",
+        "image": "/assets/images/radios/IV/integrity.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/integrity.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",
@@ -854,7 +854,7 @@
         ]
     },
     "the_vibe": {
-        "image": "../assets/images/radios/IV/vibe.webp",
+        "image": "/assets/images/radios/IV/vibe.webp",
         "displayName": "The Vibe 98.8",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vibe.ogg",
         "dj": "Vaughn Harper",
@@ -978,7 +978,7 @@
         ]
     },
     "liberty_rock_radio": {
-        "image": "../assets/images/radios/IV/lrr.webp",
+        "image": "/assets/images/radios/IV/lrr.webp",
         "displayName": "Liberty Rock Radio 97.8",
         "color": "#7E3E46",
         "playlists": [
@@ -1241,7 +1241,7 @@
         ]
     },
     "jazz_nation_radio": {
-        "image": "../assets/images/radios/IV/jnr.webp",
+        "image": "/assets/images/radios/IV/jnr.webp",
         "displayName": "Jazz Nation Radio 108.5",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/jnr.ogg",
         "dj": "Roy Haynes",
@@ -1311,7 +1311,7 @@
         ]
     },
     "massive_b_soundsystem": {
-        "image": "../assets/images/radios/IV/massive.webp",
+        "image": "/assets/images/radios/IV/massive.webp",
         "displayName": "Massive B Soundsystem 96.9",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/mbs.ogg",
         "dj": "Bobby Konders",
@@ -1405,7 +1405,7 @@
         ]
     },
     "k109": {
-        "image": "../assets/images/radios/IV/k109.webp",
+        "image": "/assets/images/radios/IV/k109.webp",
         "displayName": "K109 The Studio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/k109.ogg",
         "dj": "Karl Lagerfeld",
@@ -1571,7 +1571,7 @@
         ]
     },
     "self_actualization_fm": {
-        "image": "../assets/images/radios/IV/self.webp",
+        "image": "/assets/images/radios/IV/self.webp",
         "displayName": "Self Actualization FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/self.ogg",
         "dj": "Audrey",
@@ -1628,7 +1628,7 @@
         ]
     },
     "we_know_the_truth": {
-        "image": "../assets/images/radios/IV/wktt.webp",
+        "image": "/assets/images/radios/IV/wktt.webp",
         "displayName": "WKTT Radio",
         "color": "#7E3E46",
         "playlists": [
@@ -1729,7 +1729,7 @@
         ]
     },
     "vice_city_fm": {
-        "image": "../assets/images/radios/IV/vice.webp",
+        "image": "/assets/images/radios/IV/vice.webp",
         "displayName": "Vice City FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vice.ogg",
         "dj": "Fernando Martinez",
@@ -1907,7 +1907,7 @@
         ]
     },
     "liberty_city_hardcore": {
-        "image": "../assets/images/radios/IV/lchc.webp",
+        "image": "/assets/images/radios/IV/lchc.webp",
         "displayName": "Liberty City Hardcore",
         "color": "#7E3E46",
         "playlists": [
@@ -2057,7 +2057,7 @@
         ]
     },
     "the_journey": {
-        "image": "../assets/images/radios/IV/journey.webp",
+        "image": "/assets/images/radios/IV/journey.webp",
         "displayName": "The Journey",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/journey.ogg",
         "dj": "Fruit",
@@ -2121,7 +2121,7 @@
         ]
     },
     "fusion_fm": {
-        "image": "../assets/images/radios/IV/fusion.webp",
+        "image": "/assets/images/radios/IV/fusion.webp",
         "displayName": "Fusion FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/fusion.ogg",
         "dj": "Roy Ayers",
@@ -2191,7 +2191,7 @@
         ]
     },
     "the_beat": {
-        "image": "../assets/images/radios/IV/beat.webp",
+        "image": "/assets/images/radios/IV/beat.webp",
         "displayName": "The Beat 102.7",
         "color": "#7E3E46",
         "playlists": [
@@ -2406,7 +2406,7 @@
         ]
     },
     "ramjam_fm": {
-        "image": "../assets/images/radios/IV/ram.webp",
+        "image": "/assets/images/radios/IV/ram.webp",
         "displayName": "RamJam FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/ram.ogg",
         "dj": "David Rodigan",
@@ -2488,7 +2488,7 @@
         ]
     },
     "radio_broker": {
-        "image": "../assets/images/radios/IV/broker.webp",
+        "image": "/assets/images/radios/IV/broker.webp",
         "displayName": "Radio Broker",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/broker.ogg",
         "dj": "Juliette Lewis",
