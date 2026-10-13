@@ -1,4 +1,6 @@
 ---
+import { HTML_LANG, defaultLanguage } from "@/config/languages";
+import i18n from "@/i18n";
 import { ClientRouter } from "astro:transitions";
 import "../styles/main.css";
 
@@ -6,15 +8,20 @@ interface Props {
     title?: string;
 }
 
-const { title = "Page Not Found" } = Astro.props;
+await i18n.changeLanguage(defaultLanguage);
+
+const { title = `${i18n.t("404.title")} | Vice Club` } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={HTML_LANG[defaultLanguage]}>
     <head>
+        <script>
+            import "@/i18n";
+        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+
         <meta name="theme-color" content="#38365d" />
 
         <link
