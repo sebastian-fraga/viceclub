@@ -13,9 +13,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA 3: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA 3 Artwork | Characters and Vehicles",
+            title: "GTA 3 Artworks | Characters and Vehicles",
             description:
-                "Download GTA 3 artwork and screenshots featuring Claude, Catalina, Salvatore Leone and other characters, plus vehicles, locations and weapons.",
+                "Download GTA 3 artworks and screenshots featuring Claude, Catalina, Salvatore Leone and other characters, plus vehicles, locations and weapons.",
         },
         "herramientas-y-mods": {
             title: "GTA 3 Mods and Tools",
@@ -55,9 +55,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA Vice City: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA Vice City Artwork | Characters and Vehicles",
+            title: "GTA Vice City Artworks | Characters and Vehicles",
             description:
-                "Download GTA Vice City artwork and screenshots featuring Tommy, Lance, Ken Rosenberg and other characters, plus vehicles, locations and weapons.",
+                "Download GTA Vice City artworks and screenshots featuring Tommy, Lance, Ken Rosenberg and other characters, plus vehicles, locations and weapons.",
         },
         "herramientas-y-mods": {
             title: "GTA Vice City Mods and Tools",
@@ -97,9 +97,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA San Andreas: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA San Andreas Artwork | Characters and Vehicles",
+            title: "GTA San Andreas Artworks | Characters and Vehicles",
             description:
-                "Download GTA San Andreas artwork and screenshots featuring CJ, Big Smoke, Sweet, Ryder, Tenpenny and other characters, plus vehicles and weapons.",
+                "Download GTA San Andreas artworks and screenshots featuring CJ, Big Smoke, Sweet, Ryder, Tenpenny and other characters, plus vehicles and weapons.",
         },
         "herramientas-y-mods": {
             title: "GTA San Andreas Mods and Tools",
@@ -139,9 +139,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA Liberty City Stories: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA Liberty City Stories Artwork | Characters",
+            title: "GTA Liberty City Stories Artworks | Characters",
             description:
-                "Download GTA Liberty City Stories artwork and screenshots featuring Toni, Salvatore, Maria Latore and other characters, plus vehicles and weapons.",
+                "Download GTA Liberty City Stories artworks and screenshots featuring Toni, Salvatore, Maria Latore and other characters, plus vehicles and weapons.",
         },
         mapa: {
             title: "GTA Liberty City Stories Interactive Map",
@@ -171,9 +171,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA Vice City Stories: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA Vice City Stories Artwork | Characters",
+            title: "GTA Vice City Stories Artworks | Characters",
             description:
-                "Download GTA Vice City Stories artwork and screenshots featuring Victor, Lance, Phil Collins and other characters, plus vehicles and weapons.",
+                "Download GTA Vice City Stories artworks and screenshots featuring Victor, Lance, Phil Collins and other characters, plus vehicles and weapons.",
         },
         mapa: {
             title: "GTA Vice City Stories Interactive Map",
@@ -203,9 +203,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA 4 and its expansions: story missions, collectibles and side jobs to complete 100% of each game.",
         },
         artworks: {
-            title: "GTA 4 Artwork | Characters and Vehicles",
+            title: "GTA 4 Artworks | Characters and Vehicles",
             description:
-                "Download GTA 4 artwork and screenshots featuring Niko, Roman, Dimitri and other characters, plus vehicles, locations and weapons.",
+                "Download GTA 4 artworks and screenshots featuring Niko, Roman, Dimitri and other characters, plus vehicles, locations and weapons.",
         },
         "herramientas-y-mods": {
             title: "GTA 4 Mods and Tools",
@@ -245,9 +245,9 @@ export const seoEn: SeoMap = {
                 "Track your progress in GTA 5: story missions, collectibles and side jobs to complete 100% of the game.",
         },
         artworks: {
-            title: "GTA 5 Artwork | Characters and Vehicles",
+            title: "GTA 5 Artworks | Characters and Vehicles",
             description:
-                "Download GTA 5 artwork and screenshots featuring Michael, Franklin, Trevor and other characters, plus vehicles, locations and weapons.",
+                "Download GTA 5 artworks and screenshots featuring Michael, Franklin, Trevor and other characters, plus vehicles, locations and weapons.",
         },
         "herramientas-y-mods": {
             title: "GTA 5 Mods and Tools",
@@ -282,9 +282,9 @@ export const seoEn: SeoMap = {
                 "Everything about GTA 6: characters, the Leonida map, news, updates and game info at Vice Club.",
         },
         artworks: {
-            title: "GTA 6 Artwork | Characters and Vehicles",
+            title: "GTA 6 Artworks | Characters and Vehicles",
             description:
-                "Download GTA 6 artwork and screenshots featuring Jason, Lucia, Leonida locations, vehicles and weapons.",
+                "Download GTA 6 artworks and screenshots featuring Jason, Lucia, Leonida locations, vehicles and weapons.",
         },
         timeline: {
             title: "GTA 6 Timeline | Leaks and News",
