@@ -38,7 +38,7 @@ export const languageOptions = Object.entries(languages).map(
     }),
 );
 
-export const defaultLanguage: Language = "en";
+export const defaultLanguage: Language = "es";
 
 export const detectBrowserLanguage = (): Language | null => {
     if (typeof navigator === "undefined") return null;
