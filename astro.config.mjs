@@ -22,6 +22,7 @@ function localeRedirect() {
             pathname.startsWith("/_") ||
             pathname.startsWith("/src/") ||
             pathname.startsWith("/node_modules/") ||
+            pathname.includes("sitemap") ||
             LOCALE_SLUGS.some(
                 (slug) =>
                     pathname === `/${slug}` || pathname.startsWith(`/${slug}/`),
