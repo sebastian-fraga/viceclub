@@ -1,6 +1,7 @@
 import { IconArrowLeft } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
+import useLocalePath from "@/hooks/useLocalePath";
 import useT from "@/hooks/useT";
 
 interface UnderConstructionProps {
@@ -9,6 +10,7 @@ interface UnderConstructionProps {
 
 export default function UnderConstruction({ gameId }: UnderConstructionProps) {
     const t = useT();
+    const lp = useLocalePath();
 
     const handleBack = () => {
         const referrer = document.referrer;
@@ -20,11 +22,11 @@ export default function UnderConstruction({ gameId }: UnderConstructionProps) {
         }
 
         if (gameId) {
-            window.location.href = `/${gameId}/inicio`;
+            window.location.href = lp(`/${gameId}/inicio`);
             return;
         }
 
-        window.location.href = "/";
+        window.location.href = lp(`/`);
     };
 
     return (

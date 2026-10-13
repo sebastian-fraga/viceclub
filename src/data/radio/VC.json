@@ -1,6 +1,6 @@
 {
     "wildstyle_pirate_radio": {
-        "image": "../assets/images/radios/VC/wildstyle.webp",
+        "image": "/assets/images/radios/VC/wildstyle.webp",
         "displayName": "Wildstyle Pirate Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wildstyle.ogg",
         "dj": "Mr. Magic",
@@ -100,7 +100,7 @@
         ]
     },
     "flash_fm": {
-        "image": "../assets/images/radios/VC/flash.webp",
+        "image": "/assets/images/radios/VC/flash.webp",
         "displayName": "Flash FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/flash.ogg",
         "dj": "Toni",
@@ -206,7 +206,7 @@
         ]
     },
     "k_chat": {
-        "image": "../assets/images/radios/VC/kchat.webp",
+        "image": "/assets/images/radios/VC/kchat.webp",
         "displayName": "K-Chat",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/kchat.ogg",
         "dj": "Amy Sheckenhausen",
@@ -222,7 +222,7 @@
         ]
     },
     "fever_105": {
-        "image": "../assets/images/radios/VC/fever.webp",
+        "image": "/assets/images/radios/VC/fever.webp",
         "displayName": "Fever 105",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/fever.ogg",
         "dj": "Oliver Biscuit",
@@ -310,7 +310,7 @@
         ]
     },
     "v_rock": {
-        "image": "../assets/images/radios/VC/vrock.webp",
+        "image": "/assets/images/radios/VC/vrock.webp",
         "displayName": "V-Rock",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vrock.ogg",
         "dj": "Lazlow Jones",
@@ -422,7 +422,7 @@
         ]
     },
     "vcpr": {
-        "image": "../assets/images/radios/VC/vcpr.webp",
+        "image": "/assets/images/radios/VC/vcpr.webp",
         "displayName": "Vice City Public Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vcpr.ogg",
         "dj": "Maurice Chavez",
@@ -438,7 +438,7 @@
         ]
     },
     "radio_espantoso": {
-        "image": "../assets/images/radios/VC/espantoso.webp",
+        "image": "/assets/images/radios/VC/espantoso.webp",
         "displayName": "Radio Espantoso",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/espantoso.ogg",
         "dj": "Pepe",
@@ -532,7 +532,7 @@
         ]
     },
     "emotion": {
-        "image": "../assets/images/radios/VC/emotion.webp",
+        "image": "/assets/images/radios/VC/emotion.webp",
         "displayName": "Emotion 98.3",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/emotion.ogg",
         "dj": "Fernando Martínez",
@@ -614,7 +614,7 @@
         ]
     },
     "wave_103": {
-        "image": "../assets/images/radios/VC/wave.webp",
+        "image": "/assets/images/radios/VC/wave.webp",
         "displayName": "Wave 103",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wave.ogg",
         "dj": "Adam First",

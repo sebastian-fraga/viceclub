@@ -1,7 +1,7 @@
 {
     "head_radio": {
         "displayName": "Head Radio",
-        "image": "../assets/images/radios/III/head.webp",
+        "image": "/assets/images/radios/III/head.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/head.ogg",
         "dj": "Michael Hunt",
         "genre": ["alternative_rock", "pop"],
@@ -53,7 +53,7 @@
     },
     "double_clef_fm": {
         "displayName": "Double Clef FM",
-        "image": "../assets/images/radios/III/clef.webp",
+        "image": "/assets/images/radios/III/clef.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/clef.ogg",
         "dj": "Morgan Merryweather",
         "genre": ["classical", "opera"],
@@ -99,7 +99,7 @@
     },
     "kjah_radio": {
         "displayName": "K-Jah Radio",
-        "image": "../assets/images/radios/III/kjah.webp",
+        "image": "/assets/images/radios/III/kjah.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/kjah.ogg",
         "dj": "Horace \"The Pacifist\" Walsh",
         "genre": "reggae",
@@ -139,7 +139,7 @@
     },
     "rise_fm": {
         "displayName": "Rise FM",
-        "image": "../assets/images/radios/III/rise.webp",
+        "image": "/assets/images/radios/III/rise.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/rise.ogg",
         "dj": "DJ Andre",
         "genre": ["trance", "house"],
@@ -184,7 +184,7 @@
     },
     "lips_106": {
         "displayName": "Lips 106",
-        "image": "../assets/images/radios/III/lips.webp",
+        "image": "/assets/images/radios/III/lips.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/lips.ogg",
         "dj": "Andee",
         "genre": ["pop", "jazz", "rap"],
@@ -230,7 +230,7 @@
     },
     "game_radio_fm": {
         "displayName": "Game Radio FM",
-        "image": "../assets/images/radios/III/game.webp",
+        "image": "/assets/images/radios/III/game.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/game.ogg",
         "dj": ["Stretch Armstrong", "Lord Sear"],
         "genre": "hip_hop",
@@ -300,7 +300,7 @@
     },
     "msx": {
         "displayName": "MSX FM",
-        "image": "../assets/images/radios/III/msx.webp",
+        "image": "/assets/images/radios/III/msx.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/msx.ogg",
         "dj": "MC Codebreaker",
         "genre": ["drum_and_bass", "jungle"],
@@ -375,7 +375,7 @@
     },
     "flashback_fm": {
         "displayName": "Flashback 95.6",
-        "image": "../assets/images/radios/III/flashback.webp",
+        "image": "/assets/images/radios/III/flashback.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/flashback.ogg",
         "dj": "Toni",
         "genre": ["new_wave", "synth_pop", "scarface_soundtrack"],
@@ -415,7 +415,7 @@
     },
     "chatterbox": {
         "displayName": "Chatterbox FM",
-        "image": "../assets/images/radios/III/chatterbox.webp",
+        "image": "/assets/images/radios/III/chatterbox.webp",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/chatterbox.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",

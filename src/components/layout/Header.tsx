@@ -1,8 +1,10 @@
 import useT from "@/hooks/useT";
+import useLocalePath from "@/hooks/useLocalePath";
 import { useEffect, useState } from "react";
 
 export default function Header() {
     const i18n = useT();
+    const lp = useLocalePath();
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -55,7 +57,7 @@ export default function Header() {
             </button>
 
             <a
-                href="/"
+                href={lp("/")}
                 className="m-0 p-0 leading-none transition-all duration-400 ease-in-out active:scale-90 hover:brightness-75 flex items-center justify-start gap-4 max-mobile:flex-none max-mobile:gap-2"
             >
                 <img

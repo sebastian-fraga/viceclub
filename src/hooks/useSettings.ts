@@ -10,6 +10,7 @@ import {
 import { settingsConfig } from "@/config/settings";
 
 import type { Language } from "@/config/languages";
+import { switchLocalePath } from "@/utils/locale";
 import { loadSettings, saveSettings } from "./useSettingsStorage";
 
 type SettingsValue = string | boolean;
@@ -81,15 +82,39 @@ const getValidStoredSettings = (
     return validSettings;
 };
 
+const withoutLanguage = (state: SettingsState): SettingsState => {
+    const { language: _language, ...rest } = state;
+    return rest;
+};
+
+async function navigateToLanguage(language: Language) {
+    if (language === i18n.language) return;
+
+    try {
+        document.cookie = `language=${language}; path=/; max-age=31536000; samesite=lax`;
+    } catch {}
+
+    const target =
+        switchLocalePath(window.location.pathname, language) +
+        window.location.search +
+        window.location.hash;
+
+    const { navigate } = await import("astro:transitions/client");
+    navigate(target);
+}
+
 export default function useSettings() {
-    const [settings, setSettings] = useState<SettingsState>(() =>
-        getDefaultSettings(),
-    );
+    const [settings, setSettings] = useState<SettingsState>(() => ({
+        ...getDefaultSettings(),
+        language: i18n.language,
+    }));
 
     useEffect(() => {
         try {
             const storedSettings = loadSettings<SettingsState>();
-            const validStoredSettings = getValidStoredSettings(storedSettings);
+            const validStoredSettings = withoutLanguage(
+                getValidStoredSettings(storedSettings),
+            );
             setSettings((prev) => ({ ...prev, ...validStoredSettings }));
         } catch (err) {
             console.warn("useSettings: failed to load stored settings", err);
@@ -100,7 +125,8 @@ export default function useSettings() {
         const handler = (e: Event) => {
             const custom = e as CustomEvent<SettingsState>;
             if (custom?.detail && typeof custom.detail === "object") {
-                setSettings((prev) => ({ ...prev, ...custom.detail }));
+                const detail = withoutLanguage(custom.detail);
+                setSettings((prev) => ({ ...prev, ...detail }));
             }
         };
         window.addEventListener("settings-change", handler as EventListener);
@@ -111,20 +137,32 @@ export default function useSettings() {
             );
     }, []);
 
+    useEffect(() => {
+        const sync = (language: string) => {
+            setSettings((prev) =>
+                prev.language === language ? prev : { ...prev, language },
+            );
+        };
+
+        sync(i18n.language);
+        i18n.on("languageChanged", sync);
+
+        return () => {
+            i18n.off("languageChanged", sync);
+        };
+    }, []);
+
     const setSetting = (id: string, value: SettingsValue) => {
+        if (id === "language") {
+            void navigateToLanguage(value as Language);
+            return;
+        }
+
         setSettings((prev) => {
             const newSettings: SettingsState = {
                 ...prev,
                 [id]: value,
             };
-
-            if (id === "language") {
-                const language = value as Language;
-                i18n.changeLanguage(language);
-                try {
-                    // localStorage.setItem("language", language);
-                } catch {}
-            }
 
             if (id === "platform-family") {
                 const family = value as PlatformFamily | "default";
@@ -136,7 +174,7 @@ export default function useSettings() {
             }
 
             try {
-                saveSettings(newSettings);
+                saveSettings(withoutLanguage(newSettings));
             } catch {}
 
             window.dispatchEvent(

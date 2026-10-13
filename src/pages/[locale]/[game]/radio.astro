@@ -3,21 +3,27 @@ import { getRadioData } from "@/components/radio/lib/getRadioData";
 import { parseRadioData } from "@/components/radio/lib/parseRadioData";
 import RadioPage from "@/components/radio/RadioPage";
 import type { GameId } from "@/config/games";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { seo } from "@/data/seo";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games)
-        .filter(([, gameData]) => getRadioData(gameData.id))
-        .map(([game]) => ({
-            params: { game },
-        }));
+    const availableGames = Object.entries(games).filter(([, gameData]) =>
+        getRadioData(gameData.id),
+    );
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
-const gameSeo = seo[game]?.radio;
+const gameSeo = getPageSeo(game, "radio", LOCALE_TO_LANG[locale as LocaleSlug]);
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);
@@ -38,7 +44,7 @@ const stations = parseRadioData(radioDataRaw);
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/radio`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/radio`}
     game={gameData}
 >
     <main
@@ -48,7 +54,12 @@ const stations = parseRadioData(radioDataRaw);
         <section
             class="mx-auto flex w-full max-w-350 flex-col gap-8 max-mobile:gap-20 max-mobile:px-4 max-mobile:pb-12 mobile:px-6"
         >
-            <RadioPage client:load stations={stations} game={gameId} />
+            <RadioPage
+                client:load
+                stations={stations}
+                station={stations[0]}
+                game={gameId}
+            />
         </section>
     </main>
 </BaseLayout>

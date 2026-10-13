@@ -2,21 +2,31 @@
 import { getMediaData } from "@/components/artworks/getMediaData";
 import { MediaGallery } from "@/components/artworks/MediaGallery";
 import type { GameId } from "@/config/games";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { seo } from "@/data/seo";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games)
-        .filter(([, gameData]) => getMediaData(gameData.id))
-        .map(([game]) => ({
-            params: { game },
-        }));
+    const availableGames = Object.entries(games).filter(([, gameData]) =>
+        getMediaData(gameData.id),
+    );
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
-const pageSeo = seo[game]?.artworks;
+const pageSeo = getPageSeo(
+    game,
+    "artworks",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);
@@ -33,9 +43,9 @@ if (!mediaData) {
 <BaseLayout
     title={pageSeo
         ? `${pageSeo.title} | Vice Club`
-        : `Artworks de ${gameData.title} | Vice Club`}
-    description={pageSeo?.description ?? `Artworks de ${gameData.title}.`}
-    canonical={`https://www.viceclub.app/${game}/artworks`}
+        : `${gameData.title} | Vice Club`}
+    description={pageSeo?.description ?? gameData.description.paragraphs[0]}
+    canonical={`https://www.viceclub.app/${locale}/${game}/artworks`}
     game={gameData}
 >
     <main

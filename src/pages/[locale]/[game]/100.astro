@@ -1,33 +1,40 @@
 ---
 import { ChecklistContainer } from "@/components/checklist/ChecklistContainer";
 import type { GameId } from "@/config/games";
-import { seo } from "@/data/seo";
-import type { ChecklistData } from "@/types/checklist";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { ChecklistData } from "@/types/checklist";
 
 export function getStaticPaths() {
-    const checklistModules = import.meta.glob("../../data/checklists/*.json", {
-        eager: true,
-    });
+    const checklistModules = import.meta.glob(
+        "../../../data/checklists/*.json",
+        {
+            eager: true,
+        },
+    );
 
-    return Object.entries(games)
-        .filter(([game]) =>
-            Object.keys(checklistModules).some((path) =>
-                path.endsWith(`/checklists/${game}.json`),
-            ),
-        )
-        .map(([game, gameData]) => ({
-            params: { game },
+    const availableGames = Object.entries(games).filter(([game]) =>
+        Object.keys(checklistModules).some((path) =>
+            path.endsWith(`/checklists/${game}.json`),
+        ),
+    );
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game, gameData]) => ({
+            params: { locale, game },
             props: { gameData },
-        }));
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
-const pageSeo = seo[game]?.["100"];
+const pageSeo = getPageSeo(game, "100", LOCALE_TO_LANG[locale as LocaleSlug]);
 
-const checklistModules = import.meta.glob("../../data/checklists/*.json", {
+const checklistModules = import.meta.glob("../../../data/checklists/*.json", {
     eager: true,
 });
 
@@ -47,7 +54,7 @@ const data = (checklistEntry[1] as { default: ChecklistData }).default;
         ? `${pageSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={pageSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/100`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/100`}
     game={gameData}
 >
     <main

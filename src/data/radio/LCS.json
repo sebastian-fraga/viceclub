@@ -1,6 +1,6 @@
 {
     "head_radio": {
-        "image": "../assets/images/radios/LCS/head.webp",
+        "image": "/assets/images/radios/LCS/head.webp",
         "displayName": "Head Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/head.ogg",
         "dj": "Michael Hunt",
@@ -52,7 +52,7 @@
         ]
     },
     "double_clef_fm": {
-        "image": "../assets/images/radios/LCS/clef.webp",
+        "image": "/assets/images/radios/LCS/clef.webp",
         "displayName": "Double Clef FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/clef.ogg",
         "dj": "Sergio Boccino",
@@ -98,7 +98,7 @@
         ]
     },
     "kjah_radio": {
-        "image": "../assets/images/radios/LCS/kjah.webp",
+        "image": "/assets/images/radios/LCS/kjah.webp",
         "displayName": "K-Jah Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/kjah.ogg",
         "dj": "Natalee Walsh Davis",
@@ -156,7 +156,7 @@
         ]
     },
     "rise_fm": {
-        "image": "../assets/images/radios/LCS/rise.webp",
+        "image": "/assets/images/radios/LCS/rise.webp",
         "displayName": "Rise FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rise.ogg",
         "dj": "Boy Sanchez",
@@ -250,7 +250,7 @@
         ]
     },
     "lips_106": {
-        "image": "../assets/images/radios/LCS/lips.webp",
+        "image": "/assets/images/radios/LCS/lips.webp",
         "displayName": "Lips 106",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lips.ogg",
         "dj": ["Cliff Lane", "Andee"],
@@ -302,7 +302,7 @@
         ]
     },
     "radio_del_mundo": {
-        "image": "../assets/images/radios/LCS/rdm.webp",
+        "image": "/assets/images/radios/LCS/rdm.webp",
         "displayName": "Radio del Mundo",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rdm.ogg",
         "dj": "Panjit Gavaskar",
@@ -378,7 +378,7 @@
         ]
     },
     "msx_98": {
-        "image": "../assets/images/radios/LCS/msx.webp",
+        "image": "/assets/images/radios/LCS/msx.webp",
         "displayName": "MSX 98",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/msx.ogg",
         "dj": ["MC Codebreaker", "DJ Timecode"],
@@ -454,7 +454,7 @@
         ]
     },
     "flashback_fm": {
-        "image": "../assets/images/radios/LCS/flashback.webp",
+        "image": "/assets/images/radios/LCS/flashback.webp",
         "displayName": "Flashback 95.6",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/flashback.ogg",
         "dj": "Reni Wassulmaier",
@@ -500,7 +500,7 @@
         ]
     },
     "the_liberty_jam": {
-        "image": "../assets/images/radios/LCS/tlj.webp",
+        "image": "/assets/images/radios/LCS/tlj.webp",
         "displayName": "The Liberty Jam",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/tlj.ogg",
         "dj": "DJ Clue",
@@ -582,7 +582,7 @@
         ]
     },
     "liberty_city_free_radio": {
-        "image": "../assets/images/radios/LCS/lcfr.webp",
+        "image": "/assets/images/radios/LCS/lcfr.webp",
         "displayName": "Liberty City Free Radio",
         "color": "#3E627E",
         "playlists": [

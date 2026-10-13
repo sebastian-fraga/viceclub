@@ -43,12 +43,8 @@ const STATUS_STYLES: Record<string, string> = {
 const LABEL_STYLES =
     "text-[11px] font-semibold uppercase tracking-wide text-neutral-300/85 max-mobile:text-[10px]";
 
-// Segunda defensa: backface-visibility (con prefijo explícito para Safari).
 const BACKFACE = "backface-hidden [-webkit-backface-visibility:hidden]";
 
-// Defensa principal: cada cara cambia su "visibility" a mitad del giro
-// (~150ms, cuando la carta está de canto). Con duration-0 + delay-150 el
-// cambio es instantáneo pero retrasado, así no depende de backface-visibility.
 const FACE_SWITCH = "transition-[visibility] duration-0 delay-150";
 
 function FlagImage({ nationality }: { nationality: string }) {
@@ -112,7 +108,6 @@ export default function CharacterCard({ character, variantId }: Props) {
                     transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}
             >
-                {/* CARA FRONTAL: visible solo cuando NO está girada */}
                 <div
                     className={`absolute inset-0 flex flex-col overflow-hidden rounded-2xl bg-(--button-bg) ${BACKFACE} ${FACE_SWITCH} ${
                         flipped ? "invisible" : "visible"
@@ -150,7 +145,6 @@ export default function CharacterCard({ character, variantId }: Props) {
                     </div>
                 </div>
 
-                {/* CARA TRASERA: visible solo cuando está girada */}
                 <div
                     className={`absolute inset-0 flex flex-col gap-3 overflow-y-auto rounded-2xl bg-(--button-bg) bg-[radial-gradient(120%_70%_at_100%_0%,color-mix(in_oklab,var(--game-accent,#a855f7)_25%,transparent),transparent_60%)] p-4 transform-[rotateY(180deg)] [scrollbar-color:rgb(255_255_255/0.3)_transparent] scrollbar-thin max-mobile:gap-3 max-mobile:p-3 ${BACKFACE} ${FACE_SWITCH} ${
                         flipped ? "visible" : "invisible"

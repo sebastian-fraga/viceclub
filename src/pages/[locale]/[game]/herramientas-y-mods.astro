@@ -1,25 +1,32 @@
 ---
 import ModsContainer from "@/components/mods/ModsContainer";
-
 import type { GameId } from "@/config/games";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
+import { getPageSeo } from "@/data/seo/getSeo";
 import { GAME_MODS } from "@/data/mods";
-import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(GAME_MODS).map(([game]) => ({
-        params: { game },
-        props: {
-            gameData: games[game as GameId],
-        },
-    }));
+    return LOCALES.flatMap((locale) =>
+        Object.entries(GAME_MODS).map(([game]) => ({
+            params: { locale, game },
+            props: {
+                gameData: games[game as GameId],
+            },
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as keyof typeof GAME_MODS;
 const gameData = games[game as GameId];
 const modsData = GAME_MODS[game];
-const pageSeo = seo[game as GameId]?.["herramientas-y-mods"];
+const pageSeo = getPageSeo(
+    game as GameId,
+    "herramientas-y-mods",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 ---
 
 <BaseLayout
@@ -27,7 +34,7 @@ const pageSeo = seo[game as GameId]?.["herramientas-y-mods"];
         ? `${pageSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={pageSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/herramientas-y-mods`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/herramientas-y-mods`}
     game={gameData}
 >
     <main

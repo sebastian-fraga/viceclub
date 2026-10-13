@@ -1,20 +1,27 @@
 ---
-import { seo } from "@/data/seo";
-
 import GameHome from "@/components/home/GameHome.astro";
-import { games } from "../../data/games";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import type { GameId } from "@/config/games";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
+import { games } from "@/data/games";
+import { getPageSeo } from "@/data/seo/getSeo";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games).map(([game, gameData]) => ({
-        params: { game },
-        props: { gameData },
-    }));
+    return LOCALES.flatMap((locale) =>
+        Object.entries(games).map(([game, gameData]) => ({
+            params: { locale, game },
+            props: { gameData },
+        })),
+    );
 }
 
-const { game } = Astro.params;
+const { locale, game } = Astro.params;
 const gameData = games[game as keyof typeof games];
-const gameSeo = seo[game as keyof typeof games]?.inicio;
+const gameSeo = getPageSeo(
+    game as GameId,
+    "inicio",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 ---
 
 <BaseLayout
@@ -22,7 +29,7 @@ const gameSeo = seo[game as keyof typeof games]?.inicio;
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/inicio`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/inicio`}
     game={gameData}
 >
     <main

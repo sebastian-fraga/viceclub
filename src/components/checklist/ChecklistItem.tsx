@@ -1,4 +1,5 @@
 import { Tooltip } from "@/components/ui/Tooltip";
+import useLocalePath from "@/hooks/useLocalePath";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import type { ChecklistItemData } from "@/types/checklist";
 import {
@@ -32,6 +33,7 @@ export function ChecklistItem({
 }: ChecklistItemProps) {
     const { t, i18n } = useTranslation();
     const localizedText = useLocalizedText();
+    const lp = useLocalePath()
     const [open, setOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -52,9 +54,11 @@ export function ChecklistItem({
           : "";
 
     const mapUrl = item.mapSlug
-        ? `/${game}/mapa?variant=${variantId}&type=${item.mapSlug}${
-              item.mapMarker ? `&marker=${item.mapMarker}` : ""
-          }`
+        ? lp(
+              `/${game}/mapa?variant=${variantId}&type=${item.mapSlug}${
+                  item.mapMarker ? `&marker=${item.mapMarker}` : ""
+              }`,
+          )
         : null;
     return (
         <li

@@ -5,13 +5,180 @@
     "redirects": [
         {
             "source": "/:path*",
+            "has": [{ "type": "host", "value": "viceclub.app" }],
+            "destination": "https://www.viceclub.app/:path*",
+            "permanent": true
+        },
+
+        {
+            "source": "/",
+            "has": [{ "type": "cookie", "key": "language", "value": "^es$" }],
+            "destination": "/es",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [{ "type": "cookie", "key": "language", "value": "^en$" }],
+            "destination": "/en",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [{ "type": "cookie", "key": "language", "value": "^fr$" }],
+            "destination": "/fr",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [{ "type": "cookie", "key": "language", "value": "^pt$" }],
+            "destination": "/pt-br",
+            "permanent": false
+        },
+        {
+            "source": "/",
             "has": [
                 {
-                    "type": "host",
-                    "value": "viceclub.app"
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^es(?:[-_,;]|$)"
                 }
             ],
-            "destination": "https://www.viceclub.app/:path*",
+            "destination": "/es",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^en(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/en",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^fr(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/fr",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^pt(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/pt-br",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "has": [
+                { "type": "header", "key": "accept-language", "value": ".+" }
+            ],
+            "destination": "/en",
+            "permanent": false
+        },
+        {
+            "source": "/",
+            "destination": "/es",
+            "permanent": true
+        },
+
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [{ "type": "cookie", "key": "language", "value": "^es$" }],
+            "destination": "/es/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [{ "type": "cookie", "key": "language", "value": "^en$" }],
+            "destination": "/en/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [{ "type": "cookie", "key": "language", "value": "^fr$" }],
+            "destination": "/fr/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [{ "type": "cookie", "key": "language", "value": "^pt$" }],
+            "destination": "/pt-br/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^es(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/es/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^en(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/en/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^fr(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/fr/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [
+                {
+                    "type": "header",
+                    "key": "accept-language",
+                    "value": "^pt(?:[-_,;]|$)"
+                }
+            ],
+            "destination": "/pt-br/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "has": [
+                { "type": "header", "key": "accept-language", "value": ".+" }
+            ],
+            "destination": "/en/:path",
+            "permanent": false
+        },
+        {
+            "source": "/:path((?!(?:es|en|fr|pt-br)(?:/|$)|.*\\.).+)",
+            "destination": "/es/:path",
             "permanent": true
         }
     ]

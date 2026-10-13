@@ -1,11 +1,13 @@
 import type { GameId } from "@/config/games";
 
-type PageSeo = {
+export type PageSeo = {
     title: string;
     description: string;
 };
 
-export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
+export type SeoMap = Partial<Record<GameId, Record<string, PageSeo>>>;
+
+export const seo: SeoMap = {
     III: {
         inicio: {
             title: "GTA 3: trucos, mapa, lista del 100% y más",
@@ -65,7 +67,7 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
                 "Descarga artworks y capturas de GTA Vice City con Tommy, Lance, Ken Rosenberg y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 3",
+            title: "Mods y herramientas para GTA Vice City",
             description:
                 "Lista de los mejores mods y herramientas para la versión de PC de GTA Vice City: Silent Patch, fixes, mods de conversión total y más.",
         },
@@ -107,7 +109,7 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
                 "Descarga artworks y capturas de GTA San Andreas con CJ, Big Smoke, Sweet, Ryder, Tenpenny y otros personajes, además de vehículos y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 3",
+            title: "Mods y herramientas para GTA San Andreas",
             description:
                 "Lista de los mejores mods y herramientas para la versión de PC de GTA San Andreas: Silent Patch, fixes, mods de conversión total y más.",
         },
@@ -213,9 +215,9 @@ export const seo: Partial<Record<GameId, Record<string, PageSeo>>> = {
                 "Descarga artworks y capturas de GTA 4 con Niko, Roman, Dimitri y otros personajes, además de vehículos, escenarios y armas.",
         },
         "herramientas-y-mods": {
-            title: "Mods y herramientas para GTA 3",
+            title: "Mods y herramientas para GTA 4",
             description:
-                "Lista de los mejores mods y herramientas para la versión de PC de GTA 3: Fusion Fix, parches, mods de conversión total y más.",
+                "Lista de los mejores mods y herramientas para la versión de PC de GTA 4: Fusion Fix, parches, mods de conversión total y más.",
         },
         logros: {
             title: "Guía de logros y trofeos para GTA 4",

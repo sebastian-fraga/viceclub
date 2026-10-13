@@ -1172,7 +1172,7 @@ const mods: GameModsFile = {
             version: "1.7",
             author: ["LINK/2012", "ThirteenAG", "Blackbird88"],
             requirements: {
-                mods: ["mod-loader"]
+                mods: ["mod-loader"],
             },
             installSteps: [
                 {
@@ -1226,9 +1226,9 @@ const mods: GameModsFile = {
                     },
                     description: {
                         es: "Mover la carpeta <code>Open Limit Adjuster/</code> al <code>modloader/</code> del juego",
-                        en: "",
-                        fr: "",
-                        pt: "",
+                        en: "Move the <code>Open Limit Adjuster/</code> folder into the game's <code>modloader/</code> directory",
+                        fr: "Déplacer le dossier <code>Open Limit Adjuster/</code> dans le répertoire <code>modloader/</code> du jeu",
+                        pt: "Mover a pasta <code>Open Limit Adjuster/</code> para o diretório <code>modloader/</code> do jogo",
                     },
                 },
             ],
