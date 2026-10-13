@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 import useT from "@/hooks/useT";
 import Title from "../../ui/Title";
+import useLocalePath from "@/hooks/useLocalePath";
 
 const GAMES = [
     { id: "III", name: "GTA III" },
@@ -21,6 +22,7 @@ const EDGE_TOLERANCE = 8;
 
 export default function GameCarousel() {
     const t = useT();
+    const lp = useLocalePath();
     const scrollerRef = useRef<HTMLDivElement>(null);
 
     const isDragging = useRef(false);
@@ -166,7 +168,7 @@ export default function GameCarousel() {
                     {GAMES.map((game) => (
                         <a
                             key={game.id}
-                            href={`/${game.id}/inicio`}
+                            href={lp(`/${game.id}/inicio`)}
                             onClick={handleCardClick}
                             draggable={false}
                             onDragStart={(e) => e.preventDefault()}

@@ -30,7 +30,6 @@ function SidebarGame({
     showLabels,
     onToggle,
 }: SidebarGameProps) {
-    const { t } = useTranslation();
 
     return (
         <div className="flex flex-col gap-1 w-full max-mobile:last:pb-32">

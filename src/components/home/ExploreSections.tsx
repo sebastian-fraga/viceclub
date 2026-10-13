@@ -14,6 +14,7 @@ import { IconArrowUpRight, IconTools } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Title from "../ui/Title";
+import useLocalePath from "@/hooks/useLocalePath";
 
 interface Props {
     game: Game;
@@ -45,6 +46,7 @@ function getBentoClasses(sectionId: string) {
 
 export default function ExploreSections({ game, variantId }: Props) {
     const t = useT();
+    const lp = useLocalePath()
     const checklistProgress = useGameChecklistProgress(game.id, variantId);
     const storedMapIds = useGameMapProgress(game.id, variantId);
     const mapData = getGameMapData(game.id, variantId);
@@ -160,11 +162,12 @@ export default function ExploreSections({ game, variantId }: Props) {
 
                     const hasVariants = Boolean(game.variants?.length);
 
-                    const sectionHref =
+                    const sectionHref = lp(
                         hasVariants &&
-                        (section.id === "100" || section.id === "mapa")
+                            (section.id === "100" || section.id === "mapa")
                             ? `/${game.id}/${section.id}?variant=${variantId}`
-                            : `/${game.id}/${section.id}`;
+                            : `/${game.id}/${section.id}`,
+                    );
                     return (
                         <motion.a
                             key={section.id}

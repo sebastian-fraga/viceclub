@@ -1,9 +1,10 @@
-import { AnimatePresence, motion } from "framer-motion";
+import useLocalePath from "@/hooks/useLocalePath";
 import clsx from "clsx";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-import { SECTIONS_METADATA, type GameId, type SectionId } from "@/config/games";
 import { Tooltip } from "@/components/ui/Tooltip";
+import { SECTIONS_METADATA, type GameId, type SectionId } from "@/config/games";
 
 type SidebarGameSectionsProps = {
     gameId: GameId;
@@ -27,6 +28,7 @@ function SidebarGameSections({
     showLabels,
 }: SidebarGameSectionsProps) {
     const { t } = useTranslation();
+    const lp = useLocalePath();
 
     return (
         <AnimatePresence initial={false}>
@@ -96,7 +98,7 @@ function SidebarGameSections({
                                 ) : (
                                     <a
                                         data-game-id={gameId}
-                                        href={gameHref(gameId, sectionId)}
+                                        href={lp(gameHref(gameId, sectionId))}
                                         className={clsx(
                                             "flex items-center gap-2 max-mobile:gap-3 rounded-full px-2 py-1.5 max-mobile:p-3 w-full transition",
                                             showLabels

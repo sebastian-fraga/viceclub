@@ -25,6 +25,9 @@ import { useTranslation } from "react-i18next";
 import SettingsModal from "../../settings/SettingsModal";
 import { Tooltip } from "../../ui/Tooltip";
 
+import type { Language } from "@/config/languages";
+import { localePath, stripLocale } from "@/utils/locale";
+
 const SIDEBAR_STORAGE_KEY = "viceclub:sidebar-expanded";
 
 type SidebarProps = {
@@ -32,7 +35,7 @@ type SidebarProps = {
 };
 
 function Sidebar({ currentPath: initialPath }: SidebarProps) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const isMobile = useIsMobile();
     const [currentPath, setCurrentPath] = useState(initialPath);
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -144,7 +147,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
     useSidebarSounds(asideRef as React.RefObject<HTMLElement>);
 
     const { activeGame, activeSection } = useMemo(() => {
-        const match = currentPath.match(/^\/([^/]+)\/?([^/]*)/i);
+        const match = stripLocale(currentPath).match(/^\/([^/]+)\/?([^/]*)/i);
 
         if (!match) {
             return {
@@ -171,7 +174,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         };
     }, [currentPath]);
 
-    const isHomeActive = currentPath === "/" || currentPath === "";
+    const isHomeActive = stripLocale(currentPath) === "/";
 
     const [openGame, setOpenGame] = useState<GameId | null>(activeGame);
 
@@ -261,7 +264,10 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                 </span>
                             ) : (
                                 <a
-                                    href="/"
+                                    href={localePath(
+                                        "/",
+                                        i18n.language as Language,
+                                    )}
                                     className={clsx(
                                         baseNavButtonStyle,
                                         "text-slate-300 hover:bg-white/5 hover:text-white cursor-pointer",
