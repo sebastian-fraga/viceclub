@@ -1,21 +1,25 @@
 ---
 import UnderConstruction from "@/components/404/UnderConstruction";
 import type { GameId } from "@/config/games";
+import { LOCALES } from "@/config/languages";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(seo)
-        .filter(([, pages]) => pages?.logros)
-        .map(([game]) => ({
-            params: { game },
+    const availableGames = Object.entries(seo).filter(([, pages]) => pages?.logros);
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
             props: {
                 gameData: games[game as GameId],
             },
-        }));
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
 const gameSeo = seo[game]?.logros;
@@ -26,7 +30,7 @@ const gameSeo = seo[game]?.logros;
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/logros`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/logros`}
     game={gameData}
 >
     <main class="flex min-h-screen flex-col items-center justify-center">

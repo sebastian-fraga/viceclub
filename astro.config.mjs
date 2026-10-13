@@ -5,6 +5,24 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
     site: "https://www.viceclub.app",
+    trailingSlash: "never",
+
+    i18n: {
+        defaultLocale: "es",
+        locales: [
+            "es",
+            "en",
+            "fr",
+            {
+                path: "pt-br",
+                codes: ["pt"],
+            },
+        ],
+        routing: {
+            prefixDefaultLocale: true,
+            redirectToDefaultLocale: false,
+        },
+    },
 
     integrations: [sitemap(), react()],
 

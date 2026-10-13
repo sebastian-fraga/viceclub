@@ -1,10 +1,18 @@
 ---
 import type { TimelineData } from "@/components/timeline/Timeline";
 import Timeline from "@/components/timeline/Timeline";
+import { LOCALES } from "@/config/languages";
 import { GTAVI } from "@/data/games/VI";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
+export function getStaticPaths() {
+    return LOCALES.map((locale) => ({
+        params: { locale },
+    }));
+}
+
+const { locale } = Astro.params;
 const game = "VI";
 const gameData = GTAVI;
 const gameSeo = seo.VI?.timeline;
@@ -33,7 +41,7 @@ try {
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/timeline`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/timeline`}
     game={gameData}
 >
     <main

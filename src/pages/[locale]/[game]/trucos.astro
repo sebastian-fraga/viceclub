@@ -1,19 +1,25 @@
 ---
 import { CheatsContainer } from "@/components/cheats/CheatsContainer";
 import type { GameId } from "@/config/games";
+import { LOCALES } from "@/config/languages";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { loadCheats } from "@/lib/cheats/loadCheats";
 
 export function getStaticPaths() {
-    return Object.entries(games)
-        .filter(([, gameData]) => loadCheats(gameData.id as GameId))
-        .map(([game]) => ({
-            params: { game },
-        }));
+    const availableGames = Object.entries(games).filter(([, gameData]) =>
+        loadCheats(gameData.id as GameId),
+    );
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
 const gameSeo = seo[game]?.trucos;
@@ -35,7 +41,7 @@ if (!cheatsData) {
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/trucos`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/trucos`}
     game={gameData}
 >
     <main

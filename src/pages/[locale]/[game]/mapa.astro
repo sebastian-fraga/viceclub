@@ -1,24 +1,26 @@
 ---
 import GameMap from "@/components/maps/GameMap";
-
+import "@/components/maps/map.css";
 import type { GameId } from "@/config/games";
+import { LOCALES } from "@/config/languages";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-import "../../components/maps/map.css";
-
 export function getStaticPaths() {
-    return Object.entries(seo)
-        .filter(([, pages]) => pages?.mapa)
-        .map(([game]) => ({
-            params: { game },
+    const availableGames = Object.entries(seo).filter(([, pages]) => pages?.mapa);
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
             props: {
                 gameData: games[game as GameId],
             },
-        }));
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
 const gameSeo = seo[game]?.mapa;
@@ -29,7 +31,7 @@ const gameSeo = seo[game]?.mapa;
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/mapa`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/mapa`}
     game={gameData}
 >
     <main

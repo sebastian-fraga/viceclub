@@ -3,18 +3,24 @@ import { getRadioData } from "@/components/radio/lib/getRadioData";
 import { parseRadioData } from "@/components/radio/lib/parseRadioData";
 import RadioPage from "@/components/radio/RadioPage";
 import type { GameId } from "@/config/games";
+import { LOCALES } from "@/config/languages";
 import { games } from "@/data/games";
 import { seo } from "@/data/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    return Object.entries(games)
-        .filter(([, gameData]) => getRadioData(gameData.id))
-        .map(([game]) => ({
-            params: { game },
-        }));
+    const availableGames = Object.entries(games).filter(([, gameData]) =>
+        getRadioData(gameData.id),
+    );
+
+    return LOCALES.flatMap((locale) =>
+        availableGames.map(([game]) => ({
+            params: { locale, game },
+        })),
+    );
 }
 
+const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
 const gameSeo = seo[game]?.radio;
@@ -38,7 +44,7 @@ const stations = parseRadioData(radioDataRaw);
         ? `${gameSeo.title} | Vice Club`
         : `${gameData.title} | Vice Club`}
     description={gameSeo?.description ?? gameData.description.paragraphs[0]}
-    canonical={`https://www.viceclub.app/${game}/radio`}
+    canonical={`https://www.viceclub.app/${locale}/${game}/radio`}
     game={gameData}
 >
     <main
