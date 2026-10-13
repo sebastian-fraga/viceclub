@@ -1,8 +1,9 @@
 ---
 import GameHome from "@/components/home/GameHome.astro";
-import { LOCALES } from "@/config/languages";
+import type { GameId } from "@/config/games";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { seo } from "@/data/seo";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
@@ -16,7 +17,11 @@ export function getStaticPaths() {
 
 const { locale, game } = Astro.params;
 const gameData = games[game as keyof typeof games];
-const gameSeo = seo[game as keyof typeof games]?.inicio;
+const gameSeo = getPageSeo(
+    game as GameId,
+    "inicio",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 ---
 
 <BaseLayout

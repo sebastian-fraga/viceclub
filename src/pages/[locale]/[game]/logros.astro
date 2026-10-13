@@ -1,13 +1,16 @@
 ---
 import UnderConstruction from "@/components/404/UnderConstruction";
 import type { GameId } from "@/config/games";
-import { LOCALES } from "@/config/languages";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { seo } from "@/data/seo";
+import { getPageSeo } from "@/data/seo/getSeo";
+import { seo } from "@/data/seo/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    const availableGames = Object.entries(seo).filter(([, pages]) => pages?.logros);
+    const availableGames = Object.entries(seo).filter(
+        ([, pages]) => pages?.logros,
+    );
 
     return LOCALES.flatMap((locale) =>
         availableGames.map(([game]) => ({
@@ -22,7 +25,11 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
-const gameSeo = seo[game]?.logros;
+const gameSeo = getPageSeo(
+    game,
+    "logros",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 ---
 
 <BaseLayout

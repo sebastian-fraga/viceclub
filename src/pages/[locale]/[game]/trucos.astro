@@ -1,9 +1,9 @@
 ---
 import { CheatsContainer } from "@/components/cheats/CheatsContainer";
 import type { GameId } from "@/config/games";
-import { LOCALES } from "@/config/languages";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { seo } from "@/data/seo";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { loadCheats } from "@/lib/cheats/loadCheats";
 
@@ -22,7 +22,11 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const game = Astro.params.game as GameId;
 const gameData = games[game];
-const gameSeo = seo[game]?.trucos;
+const gameSeo = getPageSeo(
+    game,
+    "trucos",
+    LOCALE_TO_LANG[locale as LocaleSlug],
+);
 
 if (!gameData) {
     throw new Error(`Game not found: ${game}`);

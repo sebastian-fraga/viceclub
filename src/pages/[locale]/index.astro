@@ -6,7 +6,8 @@ import Countdown from "@/components/index/countdown/Countdown";
 import Faq from "@/components/index/faq/Faq";
 import Hero from "@/components/index/hero/Hero";
 import News from "@/components/index/news/News";
-import { LOCALES } from "@/config/languages";
+import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
+import { homeSeo } from "@/data/seo/homeSeo";
 
 export function getStaticPaths() {
     return LOCALES.map((locale) => ({
@@ -15,11 +16,12 @@ export function getStaticPaths() {
 }
 
 const { locale } = Astro.params;
+const pageSeo = homeSeo[LOCALE_TO_LANG[locale as LocaleSlug]];
 ---
 
 <BaseLayout
-    title="Vice Club | La página definitiva de la saga GTA"
-    description="Guías completas de GTA, checklists para el 100%, mapas interactivos, mods, trucos y radios de GTA San Andreas, GTA 5, GTA 6 y más"
+    title={pageSeo.title}
+    description={pageSeo.description}
     canonical={`https://www.viceclub.app/${locale}`}
 >
     <main
