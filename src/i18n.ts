@@ -1,78 +1,37 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import { defaultLanguage, detectBrowserLanguage } from "@/config/languages";
+import { defaultLanguage, type Language } from "@/config/languages";
 import { resources } from "@/data/lang";
+import { getLanguageFromHtmlLang } from "@/utils/locale";
 
-function resolveInitialLanguage(): string {
-    if (typeof localStorage === "undefined") return defaultLanguage;
-
-    try {
-        const stored = localStorage.getItem("viceclub-settings");
-
-        if (stored) {
-            const settings = JSON.parse(stored);
-
-            if (
-                typeof settings.language === "string" &&
-                settings.language in resources
-            ) {
-                return settings.language;
-            }
-        }
-    } catch {}
-
-    return detectBrowserLanguage() ?? defaultLanguage;
+function readPageLanguage(): Language {
+    if (typeof document === "undefined") return defaultLanguage;
+    return getLanguageFromHtmlLang(document.documentElement.lang);
 }
-
-const initialLanguage = resolveInitialLanguage();
 
 export const i18nReady = i18n.use(initReactI18next).init({
     resources,
-    lng: initialLanguage,
-    fallbackLng: defaultLanguage,
+    lng: readPageLanguage(),
+    fallbackLng: {
+        fr: ["en", "es"],
+        pt: ["en", "es"],
+        en: ["es"],
+        default: ["es"],
+    },
     interpolation: {
         escapeValue: false,
     },
 });
 
-function applyUserLanguage() {
-    const stored = localStorage.getItem("viceclub-settings");
-    let targetLanguage: string | null = null;
-
-    if (stored) {
-        try {
-            const settings = JSON.parse(stored);
-            if (
-                typeof settings.language === "string" &&
-                settings.language in resources
-            ) {
-                targetLanguage = settings.language;
-            }
-        } catch {}
-    }
-
-    if (!targetLanguage) {
-        targetLanguage = detectBrowserLanguage();
-    }
-
-    if (targetLanguage) {
-        document.cookie = `language=${targetLanguage}; path=/; max-age=31536000; samesite=lax`;
-
-        if (targetLanguage !== i18n.language) {
-            i18n.changeLanguage(targetLanguage);
-        }
-
-        window.dispatchEvent(
-            new CustomEvent("settings-change", {
-                detail: { language: targetLanguage },
-            }),
-        );
-    }
-}
-
 if (typeof document !== "undefined") {
-    document.addEventListener("astro:page-load", applyUserLanguage);
+    document.addEventListener("astro:after-swap", () => {
+        const language = readPageLanguage();
+
+        if (language !== i18n.language) {
+            i18n.changeLanguage(language);
+        }
+    });
 }
 
 export default i18n;
