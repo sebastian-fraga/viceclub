@@ -1,10 +1,16 @@
 import { IconArrowLeft } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
+import useErrorPageLanguage from "@/hooks/useErrorPageLanguage";
+import useLocalePath from "@/hooks/useLocalePath";
 import useT from "@/hooks/useT";
 
 export default function ErrorMessage() {
-    const t = useT()
+    const t = useT();
+    const lp = useLocalePath();
+
+    useErrorPageLanguage();
+
     return (
         <div className="flex flex-col items-center gap-8 px-4 text-center">
             <motion.div
@@ -22,7 +28,7 @@ export default function ErrorMessage() {
             </motion.div>
 
             <motion.a
-                href="/"
+                href={lp("/")}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
