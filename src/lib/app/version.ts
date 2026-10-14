@@ -1,4 +1,2 @@
-import { execSync } from "node:child_process";
-
 export const APP_VERSION = "2.3.0";
-export const COMMIT = execSync("git rev-parse --short HEAD").toString().trim();
+export const COMMIT: string = __COMMIT__;

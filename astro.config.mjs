@@ -2,8 +2,17 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import { execSync } from "node:child_process";
 
 const LOCALE_SLUGS = ["es", "en", "fr", "pt-br"];
+
+function getCommit() {
+    try {
+        return execSync("git rev-parse --short HEAD").toString().trim();
+    } catch {
+        return "unknown";
+    }
+}
 
 function localeRedirect() {
     const handler = (req, res, next) => {
@@ -87,6 +96,10 @@ export default defineConfig({
 
     vite: {
         plugins: [tailwindcss(), localeRedirect()],
+
+        define: {
+            __COMMIT__: JSON.stringify(getCommit()),
+        },
 
         server: {
             watch: {
