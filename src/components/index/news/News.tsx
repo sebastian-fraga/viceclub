@@ -16,21 +16,26 @@ import { useScrollToPosition } from "@/hooks/useScrollToTop";
 
 import Title from "../../ui/Title";
 
+import useLocale from "@/hooks/useLocale";
+import { resolveLocalized } from "@/lib/localizedText";
+import type { MaybeLocalizedText } from "@/types/localizedText";
+
+
 import "./news.css";
-import { useTranslation } from "react-i18next";
 
 interface NewsItem {
     slug: string;
-    title: string | Record<string, string>;
-    subtitle: string | Record<string, string>;
-    date: string | Record<string, string>;
-    paragraphs: (string | Record<string, string>)[];
-    footerText: string | Record<string, string>;
+    title: MaybeLocalizedText;
+    subtitle: MaybeLocalizedText;
+    date: MaybeLocalizedText;
+    paragraphs: MaybeLocalizedText[];
+    footerText: MaybeLocalizedText;
     link: string;
-    linkText?: string | Record<string, string>;
+    linkText?: MaybeLocalizedText;
     image: string;
     author: string;
 }
+
 
 const NEWS_URL = "https://viceclub.s3.us-east-1.amazonaws.com/news.json";
 const STEP = 2;
@@ -43,7 +48,10 @@ const buttonClass =
 
 export default function News() {
     const t = useT();
-    const { i18n } = useTranslation();
+    const language = useLocale();
+    const translateContent = (value: MaybeLocalizedText) =>
+        resolveLocalized(value, language);
+
     const [news, setNews] = useState<NewsItem[]>([]);
     const [visibleCount, setVisibleCount] = useState(STEP);
     const [copiedSlug, setCopiedSlug] = useState<string | null>(null);
@@ -56,14 +64,6 @@ export default function News() {
 
     function getArticleUrl(slug: string) {
         return `https://viceclub.app?news=${slug}`;
-    }
-
-    function translateContent(value: string | Record<string, string>) {
-        if (typeof value === "string") return value;
-
-        const language = i18n.language.split("-")[0];
-
-        return value[language] ?? value.es ?? "";
     }
 
     function shareOnX(title: string, slug: string) {
