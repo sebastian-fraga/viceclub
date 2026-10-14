@@ -33,7 +33,7 @@ export function StationSelector({
         return (
             <div className="flex flex-col px-4 py-6 rounded-full bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)]">
                 <h3 className="mb-4 text-2xl font-medium text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
-                    {t("radio.stations")}
+                    {t("radio.stations.title")}
                 </h3>
                 <p className="text-sm text-slate-400">
                     {t("radio.emptySelector")}
@@ -56,7 +56,7 @@ export function StationSelector({
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
             <h3 className="mb-3 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
-                {t("radio.stations")}
+                {t("radio.stations.title")}
             </h3>
             <div
                 ref={scrollRef}
@@ -67,6 +67,10 @@ export function StationSelector({
             >
                 {stations.map((station, index) => {
                     const isActive = station.id === activeStationId;
+                    const stationName = station.displayNameKey
+                        ? t(station.displayNameKey)
+                        : station.displayName;
+
                     return (
                         <motion.div
                             key={station.id}
@@ -99,13 +103,13 @@ export function StationSelector({
                             >
                                 <motion.img
                                     src={station.image}
-                                    alt={station.displayName}
+                                    alt={stationName}
                                     whileHover={{ scale: 1.08 }}
                                     transition={{ duration: 0.2 }}
                                     className="h-26 w-22 object-contain drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
                                 />
                                 <span className="absolute bottom-3 left-1/2 text-yellow-50 -translate-x-1/2 text-xs truncate max-w-[90%] text-center opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 max-mobile:opacity-100 max-mobile:translate-y-0 transition-all duration-200">
-                                    {station.displayName}
+                                    {stationName}
                                 </span>
                             </motion.button>
                         </motion.div>

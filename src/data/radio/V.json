@@ -2,6 +2,7 @@
     "reproductor": {
         "image": "/assets/images/radios/V/mediaplayer.webp",
         "displayName": "Reproductor",
+        "displayNameKey": "radio.stations.v.musicPlayer",
         "playlists": [
             {
                 "name": "Blue EP",

@@ -42,6 +42,10 @@ export function SongSelector({
 }: SongSelectorProps) {
     const t = useT();
 
+    const stationName = station?.displayNameKey
+        ? t(station.displayNameKey)
+        : station?.displayName;
+
     const scrollRef = useRef<HTMLUListElement>(null);
     const songRefs = useRef<Map<number, HTMLLIElement>>(new Map());
     const [canScrollUp, setCanScrollUp] = useState(false);
@@ -148,7 +152,7 @@ export function SongSelector({
                             className="hidden max-mobile:flex items-center gap-1 text-base text-slate-300 hover:text-white -mb-2 cursor-pointer font-body-condensed"
                         >
                             <IconChevronLeft size={18} />
-                            {t("radio.stations")}
+                            {t("radio.stations.title")}
                         </button>
                     )}
 
@@ -157,14 +161,14 @@ export function SongSelector({
                             <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
                                 <img
                                     src={station.image}
-                                    alt={station.displayName}
+                                    alt={stationName}
                                     className="h-full w-full object-contain p-3 drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
                                 />
                             </div>
 
                             <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:gap-4 max-mobile:items-center">
                                 <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
-                                    {station.displayName}
+                                    {stationName}
                                 </h3>
 
                                 {activePlaylist.genres.length > 0 && (

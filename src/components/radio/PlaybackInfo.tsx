@@ -1,4 +1,5 @@
 import type { RadioStation, Song } from "@/components/radio/types/types";
+import useT from "@/hooks/useT";
 import { IconRadio } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
 
@@ -13,10 +14,15 @@ export default function PlaybackInfo({
     song,
     djs,
 }: PlaybackInfoProps) {
+    const t = useT();
     const [hasImageError, setHasImageError] = useState(false);
 
     const imageSrc = station?.image;
     const showImage = Boolean(imageSrc) && !hasImageError;
+
+    const stationName = station?.displayNameKey
+        ? t(station.displayNameKey)
+        : station?.displayName;
 
     useEffect(() => {
         setHasImageError(false);
@@ -28,7 +34,7 @@ export default function PlaybackInfo({
                 {showImage ? (
                     <img
                         src={imageSrc}
-                        alt={station?.displayName ?? ""}
+                        alt={stationName ?? ""}
                         width={64}
                         height={64}
                         className="h-full w-full object-contain drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
@@ -45,9 +51,9 @@ export default function PlaybackInfo({
             </div>
 
             <div className="flex min-w-0 flex-col gap-px">
-                {station?.displayName && (
+                {stationName && (
                     <span className="truncate font-medium uppercase">
-                        {station.displayName}
+                        {stationName}
                     </span>
                 )}
 
@@ -64,7 +70,7 @@ export default function PlaybackInfo({
                 ) : (
                     <div className="flex min-w-0 gap-1.5 font-medium">
                         <span className="shrink-0 text-[color-mix(in_oklch,var(--radio-station-accent)_10%,white)]">
-                            {station?.displayName}
+                            {stationName}
                         </span>
                         <span className="select-none">•</span>
                         <span className="truncate text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]">

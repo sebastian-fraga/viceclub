@@ -66,6 +66,7 @@ export function parseRadioStation(
     return {
         id,
         displayName: raw.displayName,
+        displayNameKey: raw.displayNameKey,
         image: raw.image,
         color: raw.color,
         playlists,

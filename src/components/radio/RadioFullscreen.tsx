@@ -58,11 +58,15 @@ export function RadioFullscreen({
 
     if (!station) return null;
 
+    const stationName = station.displayNameKey
+        ? t(station.displayNameKey)
+        : station.displayName;
+
     return (
         <motion.div
             role="dialog"
             aria-modal="true"
-            aria-label={station.displayName}
+            aria-label={stationName}
             data-lenis-prevent
             className="fixed inset-0 z-2000 flex flex-col overflow-hidden bg-[color-mix(in_oklch,var(--radio-station-accent)_25%,#0d0c14)] text-slate-50"
             initial={{ y: "100%" }}
@@ -83,7 +87,7 @@ export function RadioFullscreen({
                 </button>
 
                 <h2 className="truncate text-center text-lg font-medium uppercase font-body-condensed">
-                    {station.displayName}
+                    {stationName}
                 </h2>
             </header>
 
