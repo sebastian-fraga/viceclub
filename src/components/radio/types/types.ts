@@ -1,6 +1,10 @@
+export type SongType = "preview" | "segment" | "news" | "episode";
+
 export interface Song {
     artist: string;
     title: string;
+    type?: SongType;
+    order?: number;
     start: number;
     end: number;
     duration: number;
@@ -28,6 +32,8 @@ export interface RadioStation {
 export interface RawRadioSong {
     artist: string;
     title: string;
+    type?: SongType;
+    order?: number;
     start: string;
     end: string;
 }

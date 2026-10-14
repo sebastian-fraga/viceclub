@@ -31,6 +31,8 @@ function parseSong(raw: RawRadioSong): Song {
     return {
         artist: raw.artist,
         title: raw.title,
+        type: raw.type,
+        order: raw.order,
         start,
         end,
         duration: end - start,
