@@ -565,13 +565,17 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/bcr_2.ogg",
                 "songs": [
                     {
-                        "title": "Blaine County Radio Community Hour - Episodio 1",
+                        "title": "Blaine County Radio Community Hour",
+                        "type": "episode",
+                        "order": 1,
                         "artist": "Ron Jakowski",
                         "start": "7",
                         "end": "1196"
                     },
                     {
-                        "title": "Blaine County Radio Community Hour - Episodio 2",
+                        "title": "Blaine County Radio Community Hour",
+                        "type": "episode",
+                        "order": 2,
                         "artist": "Ron Jakowski",
                         "start": "1255",
                         "end": "2714"
@@ -585,13 +589,17 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/bcr_3.ogg",
                 "songs": [
                     {
-                        "title": "Beyond Insemination - Episodio 1",
+                        "title": "Beyond Insemination",
+                        "type": "episode",
+                        "order": 1,
                         "artist": "Duane Earl",
                         "start": "0",
                         "end": "864"
                     },
                     {
-                        "title": "Beyond Insemination - Episodio 2",
+                        "title": "Beyond Insemination",
+                        "type": "episode",
+                        "order": 2,
                         "artist": "Duane Earl",
                         "start": "866",
                         "end": "1781"
@@ -5440,7 +5448,7 @@
                 "songs": [
                     {
                         "title": "Chattersphere",
-                        "artist": "Michele Makes y Lazlow",
+                        "artist": "Michele Makes & Lazlow",
                         "start": "0",
                         "end": "1330"
                     }
@@ -5453,13 +5461,17 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/wctr_2.ogg",
                 "songs": [
                     {
-                        "title": "Chakra Attack - Episodio 1",
+                        "title": "Chakra Attack",
+                        "type": "episode",
+                        "order": 1,
                         "artist": "Ray De Angelo Harris",
                         "start": "0",
                         "end": "1818"
                     },
                     {
-                        "title": "Chakra Attack - Episodio 2",
+                        "title": "Chakra Attack",
+                        "type": "episode",
+                        "order": 2,
                         "artist": "Ray De Angelo Harris",
                         "start": "1819",
                         "end": "3145"

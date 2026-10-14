@@ -1042,67 +1042,89 @@
                 "songs": [
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #1",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 1,
                         "start": "0",
                         "end": "140"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #2",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 2,
                         "start": "141",
                         "end": "281"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #3",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 3,
                         "start": "283",
                         "end": "394"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #4",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 4,
                         "start": "397",
                         "end": "521"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #5",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 5,
                         "start": "522",
                         "end": "675"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #6",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 6,
                         "start": "677",
                         "end": "818"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #7",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 7,
                         "start": "819",
                         "end": "961"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #8",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 8,
                         "start": "962",
                         "end": "1095"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #9",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 9,
                         "start": "1096",
                         "end": "1154"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #10",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 10,
                         "start": "1157",
                         "end": "1227"
                     },
                     {
                         "artist": "Lianne Forget",
-                        "title": "WCTR News - Noticia #11",
+                        "title": "WCTR News",
+                        "type": "news",
+                        "order": 11,
                         "start": "1228",
                         "end": "1406"
                     }
@@ -1130,13 +1152,17 @@
                 "songs": [
                     {
                         "artist": "James Pedeaston",
-                        "title": "The Wild Traveler - Segmento #1",
+                        "title": "The Wild Traveler",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "336"
                     },
                     {
                         "artist": "James Pedeaston",
-                        "title": "The Wild Traveler - Segmento #2",
+                        "title": "The Wild Traveler",
+                        "type": "segment",
+                        "order": 2,
                         "start": "338",
                         "end": "701"
                     }
@@ -1150,19 +1176,25 @@
                 "songs": [
                     {
                         "artist": "Billy Dexter",
-                        "title": "Entertaining America - Segmento #1",
+                        "title": "Entertaining America",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "358"
                     },
                     {
                         "artist": "Lazlow",
-                        "title": "Entertaining America - Segmento #2",
+                        "title": "Entertaining America",
+                        "type": "segment",
+                        "order": 2,
                         "start": "359",
                         "end": "652"
                     },
                     {
                         "artist": "Lazlow",
-                        "title": "Entertaining America - Segmento #3",
+                        "title": "Entertaining America",
+                        "type": "segment",
+                        "order": 3,
                         "start": "654",
                         "end": "1067"
                     }
@@ -1176,25 +1208,33 @@
                 "songs": [
                     {
                         "artist": "Maurice",
-                        "title": "Gardening with Maurice - Segmento #1",
+                        "title": "Gardening with Maurice",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "252"
                     },
                     {
                         "artist": "Maurice",
-                        "title": "Gardening with Maurice - Segmento #2",
+                        "title": "Gardening with Maurice",
+                        "type": "segment",
+                        "order": 2,
                         "start": "253",
                         "end": "615"
                     },
                     {
                         "artist": "Maurice",
-                        "title": "Gardening with Maurice - Adelanto #1",
+                        "title": "Gardening with Maurice",
+                        "type": "preview",
+                        "order": 1,
                         "start": "616",
                         "end": "685"
                     },
                     {
                         "artist": "Maurice",
-                        "title": "Gardening with Maurice - Adelanto #2",
+                        "title": "Gardening with Maurice",
+                        "type": "preview",
+                        "order": 2,
                         "start": "686",
                         "end": "779"
                     }
@@ -1207,14 +1247,18 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_6.ogg",
                 "songs": [
                     {
-                        "artist": "Peyton y Mary Phillips",
-                        "title": "I Say/You Say - Segmento #1",
+                        "artist": "Peyton & Mary Phillips",
+                        "title": "I Say/You Say",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "345"
                     },
                     {
-                        "artist": "Peyton y Mary Phillips",
-                        "title": "I Say/You Say - Segmento #2",
+                        "artist": "Peyton & Mary Phillips",
+                        "title": "I Say/You Say",
+                        "type": "segment",
+                        "order": 2,
                         "start": "346",
                         "end": "630"
                     }
@@ -1228,13 +1272,17 @@
                 "songs": [
                     {
                         "artist": "Christy MacIntyre",
-                        "title": "Lonely Hearts - Segmento #1",
+                        "title": "Lonely Hearts",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "420"
                     },
                     {
-                        "artist": "Christy MacIntyre y Fernando Martinez",
-                        "title": "Lonely Hearts - Segmento #2",
+                        "artist": "Christy MacIntyre & Fernando Martinez",
+                        "title": "Lonely Hearts",
+                        "type": "segment",
+                        "order": 2,
                         "start": "422",
                         "end": "752"
                     }
@@ -1248,19 +1296,25 @@
                 "songs": [
                     {
                         "artist": "Marvin Trill",
-                        "title": "Area 53 - Segmento #1",
+                        "title": "Area 53",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "168"
                     },
                     {
                         "artist": "Marvin Trill",
-                        "title": "Area 53 - Segmento #2",
+                        "title": "Area 53",
+                        "type": "segment",
+                        "order": 2,
                         "start": "169",
                         "end": "347"
                     },
                     {
                         "artist": "Marvin Trill",
-                        "title": "Area 53 - Segmento #3",
+                        "title": "Area 53",
+                        "type": "segment",
+                        "order": 3,
                         "start": "348",
                         "end": "538"
                     }

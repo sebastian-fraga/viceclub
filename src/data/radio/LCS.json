@@ -594,13 +594,17 @@
                 "songs": [
                     {
                         "artist": "Nurse Bob",
-                        "title": "Heartland Values with Nurse Bob - Segmento #1",
+                        "title": "Heartland Values with Nurse Bob",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "321"
                     },
                     {
                         "artist": "Nurse Bob",
-                        "title": "Heartland Values with Nurse Bob - Segmento #2",
+                        "title": "Heartland Values with Nurse Bob",
+                        "type": "segment",
+                        "order": 2,
                         "start": "388",
                         "end": "644"
                     }
@@ -613,14 +617,18 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_2.ogg",
                 "songs": [
                     {
-                        "artist": "Bill y Steve",
-                        "title": "The Electron Zone - Segmento #1",
+                        "artist": "Bill & Steve",
+                        "title": "The Electron Zone",
+                        "type": "segment",
+                        "order": 1,
                         "start": "10",
                         "end": "209"
                     },
                     {
-                        "artist": "Bill y Steve",
-                        "title": "The Electron Zone - Segmento #2",
+                        "artist": "Bill & Steve",
+                        "title": "The Electron Zone",
+                        "type": "segment",
+                        "order": 2,
                         "start": "251",
                         "end": "481"
                     }
@@ -634,13 +642,17 @@
                 "songs": [
                     {
                         "artist": "Melissa Chowder",
-                        "title": "Breathing World - Segmento #1",
+                        "title": "Breathing World",
+                        "type": "segment",
+                        "order": 1,
                         "start": "9",
                         "end": "239"
                     },
                     {
                         "artist": "Melissa Chowder",
-                        "title": "Breathing World - Segmento #2",
+                        "title": "Breathing World",
+                        "type": "segment",
+                        "order": 2,
                         "start": "283",
                         "end": "598"
                     }
@@ -654,13 +666,17 @@
                 "songs": [
                     {
                         "artist": "Richard Goblin",
-                        "title": "Coq O Vin - Segmento #1",
+                        "title": "Coq O Vin",
+                        "type": "segment",
+                        "order": 1,
                         "start": "7",
                         "end": "324"
                     },
                     {
                         "artist": "Richard Goblin",
-                        "title": "Coq O Vin - Segmento #2",
+                        "title": "Coq O Vin",
+                        "type": "segment",
+                        "order": 2,
                         "start": "375",
                         "end": "549"
                     }
@@ -674,13 +690,17 @@
                 "songs": [
                     {
                         "artist": "Lazlow",
-                        "title": "Chatterbox - Segmento #1",
+                        "title": "Chatterbox",
+                        "type": "segment",
+                        "order": 1,
                         "start": "7",
                         "end": "458"
                     },
                     {
                         "artist": "Lazlow",
-                        "title": "Chatterbox - Segmento #2",
+                        "title": "Chatterbox",
+                        "type": "segment",
+                        "order": 2,
                         "start": "534",
                         "end": "684"
                     }

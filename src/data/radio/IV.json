@@ -269,13 +269,17 @@
                 "songs": [
                     {
                         "artist": "Beatrix Fontaine",
-                        "title": "The Séance - Segmento #1",
+                        "title": "The Séance",
+                        "type": "segment",
+                        "order": 1,
                         "start": "2",
                         "end": "566"
                     },
                     {
                         "artist": "Beatrix Fontaine",
-                        "title": "The Séance - Segmento #2",
+                        "title": "The Séance",
+                        "type": "segment",
+                        "order": 2,
                         "start": "584",
                         "end": "1076"
                     }
@@ -329,7 +333,7 @@
                         "end": "210.29"
                     },
                     {
-                        "artist": "Angel y Khriz",
+                        "artist": "Angel & Khriz",
                         "title": "Ven Báilalo",
                         "start": "236.14",
                         "end": "436.89"
@@ -391,7 +395,7 @@
                         "end": "538.93"
                     },
                     {
-                        "artist": "Angel y Khriz",
+                        "artist": "Angel & Khriz",
                         "title": "Na De Na ft. Gocho & John Eric",
                         "start": "546.15",
                         "end": "745.41"
@@ -1640,13 +1644,17 @@
                 "songs": [
                     {
                         "artist": "Juez Grady",
-                        "title": "Just or Unjust - Segmento #1",
+                        "title": "Just or Unjust",
+                        "type": "segment",
+                        "order": 1,
                         "start": "10",
                         "end": "555"
                     },
                     {
                         "artist": "Juez Grady",
-                        "title": "Just or Unjust - Segmento #2",
+                        "title": "Just or Unjust",
+                        "type": "segment",
+                        "order": 2,
                         "start": "557",
                         "end": "1058"
                     }
@@ -1660,13 +1668,17 @@
                 "songs": [
                     {
                         "artist": "Richard Bastion",
-                        "title": "The Richard Bastion Show - Segmento #1",
+                        "title": "The Richard Bastion Show",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "413"
                     },
                     {
                         "artist": "Richard Bastion",
-                        "title": "The Richard Bastion Show - Segmento #2",
+                        "title": "The Richard Bastion Show",
+                        "type": "segment",
+                        "order": 2,
                         "start": "483",
                         "end": "1162"
                     }
@@ -1679,14 +1691,18 @@
                 "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_3.ogg",
                 "songs": [
                     {
-                        "artist": "Jane Labrador, Marcel LeMuir y Jeffron James",
-                        "title": "Fizz! - Segmento #1",
+                        "artist": "Jane Labrador, Marcel LeMuir & Jeffron James",
+                        "title": "Fizz!",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "371"
                     },
                     {
-                        "artist": "Jane Labrador, Marcel LeMuir y Jeffron James",
-                        "title": "Fizz! - Segmento #2",
+                        "artist": "Jane Labrador, Marcel LeMuir & Jeffron James",
+                        "title": "Fizz!",
+                        "type": "segment",
+                        "order": 2,
                         "start": "439",
                         "end": "867"
                     }
@@ -1714,13 +1730,17 @@
                 "songs": [
                     {
                         "artist": "John Smith",
-                        "title": "Conspire - Segmento #1",
+                        "title": "Conspire",
+                        "type": "segment",
+                        "order": 1,
                         "start": "0",
                         "end": "480"
                     },
                     {
                         "artist": "John Smith",
-                        "title": "Conspire - Segmento #2",
+                        "title": "Conspire",
+                        "type": "segment",
+                        "order": 2,
                         "start": "483",
                         "end": "1190"
                     }
