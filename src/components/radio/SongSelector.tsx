@@ -16,6 +16,7 @@ import { EqualizerBars } from "./EqualizerBars";
 import { formatTime } from "./lib/formatTime";
 import { translateRadioText } from "./lib/translateRadioText";
 import type { Playlist, RadioStation } from "./types/types";
+import SongLabel from "@/components/radio/SongLabel";
 
 interface SongSelectorProps {
     isPlaying: boolean;
@@ -309,7 +310,7 @@ export function SongSelector({
                                             onClick={() =>
                                                 onSelectSong(song.start)
                                             }
-                                            className="flex items-center justify-between w-full text-left cursor-pointer transition rounded-2xl hover:bg-white/10 px-5 max-mobile:px-3 py-2 data-[active=true]:bg-violet-400/10 mr-2 max-mobile:mr-0"
+                                            className="flex items-center justify-between w-full text-left cursor-pointer transition duration-300 rounded-2xl hover:bg-white/5 px-5 max-mobile:px-3 py-2 data-[active=true]:bg-violet-400/10 mr-2 max-mobile:mr-0"
                                             data-active={isActive}
                                         >
                                             <div className="flex items-center gap-4 max-mobile:gap-2 min-w-0">
@@ -358,19 +359,29 @@ export function SongSelector({
                                                 </AnimatePresence>
 
                                                 <div className="flex flex-col min-w-0">
-                                                    <span
-                                                        className={clsx(
-                                                            "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm",
-                                                            isActive
-                                                                ? "text-[color-mix(in_oklch,var(--radio-station-accent)_10%,white)]"
-                                                                : "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]",
-                                                        )}
-                                                    >
-                                                        {translateRadioText(
-                                                            song.title,
-                                                            t,
-                                                        )}
-                                                    </span>
+                                                    <div className="flex items-center gap-2 min-w-0 ">
+                                                        <span
+                                                            className={clsx(
+                                                                "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm",
+                                                                isActive
+                                                                    ? "text-[color-mix(in_oklch,var(--radio-station-accent)_10%,white)]"
+                                                                    : "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]",
+                                                            )}
+                                                        >
+                                                            {translateRadioText(
+                                                                song.title,
+                                                                t,
+                                                            )}
+                                                        </span>
+                                                        <SongLabel
+                                                            song={song}
+                                                            className={clsx(
+                                                                "text-xs ml-1 pt-0.5 pb-0.5",
+                                                                !isActive &&
+                                                                    "opacity-60",
+                                                            )}
+                                                        />
+                                                    </div>
 
                                                     <span
                                                         className={clsx(
