@@ -270,8 +270,8 @@ export function SongSelector({
                         </div>
                     )}
 
-                    <div className="pt-3 flex-1 min-h-0 flex flex-col">
-                        <p className="mb-1 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
+                    <div className="pt-1 flex-1 min-h-0 flex flex-col">
+                        <p className="mb-2 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
                             {t("radio.tracks")}
                         </p>
                         <ul
