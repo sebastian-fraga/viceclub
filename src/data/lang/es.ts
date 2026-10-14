@@ -1251,7 +1251,12 @@ export default {
     radio: {
         title: "Radios de {{fullName}}",
         emptySelector: "No hay ninguna emisora seleccionada",
-        stations: "Emisoras",
+        stations: {
+            title: "Estaciones",
+            v: {
+                musicPlayer: "Reproductor"
+            }
+        },
         tracks: "Canciones",
         genres: {
             "80s": "Música de los 80s",
