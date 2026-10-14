@@ -17,7 +17,7 @@ export default function SongLabel({ song, className }: SongLabelProps) {
     return (
         <span
             className={clsx(
-                "shrink-0 rounded-[4px] px-2.25 py-px font-body-condensed uppercase border border-[color-mix(in_oklch,var(--radio-station-accent)_60%,white)] text-sm text-white",
+                "shrink-0 rounded-[4px] px-2.25 py-px max-mobile:py-1 font-body-condensed uppercase border border-[color-mix(in_oklch,var(--radio-station-accent)_60%,white)] text-sm max-mobile:text-xs text-white",
                 className,
             )}
         >
