@@ -1047,7 +1047,7 @@ export default {
                 3: {
                     role: "Traficante de drogas en Leonida",
                     mission: "?",
-                    quote: "🌴",
+                    quote: "Tienes que saber cuando... bajarte, Jason",
                 },
                 4: {
                     role: "Amigo de Jason",
@@ -1508,7 +1508,7 @@ export default {
         },
     },
     footer: {
-        socialNetworks: "Redes sociales"
+        socialNetworks: "Redes sociales",
     },
     common: {
         editionLabels: {
@@ -1540,7 +1540,7 @@ export default {
             open: "Abrir",
             copiedLink: "¡Link copiado!",
             copyLink: "Copiar link",
-            copyLinkTo: "Copiar link a {{label}}"
+            copyLinkTo: "Copiar link a {{label}}",
         },
         accessibility: {
             prev: "Anterior",
