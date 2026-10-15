@@ -84,20 +84,22 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 </div>
 <br>
 
-```text
+```
 src/
 ├── components/
 │   ├── artworks/
 │   ├── home/
 │   ├── index/
-│   ├─── radio/
+│   ├── radio/
 │   └── ...
 ├── layouts/
 │   ├── BaseLayout.astro
 │   └── ErrorLayout.astro
-├── pages/
-│   ├── [game].astro
-│   └── static routes
+└── pages/
+    ├── [locale]/
+    │   ├── [game].astro
+    │   └── ...            # static routes
+    └── og/
 ```
 
 <br><br>
