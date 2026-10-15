@@ -60,6 +60,11 @@
 body {
   font-family: "GTAArtDeco";
   color: #f4f4f4;
+
+  & ::selection {
+      background: var(--game-buttons-primary-background, #fef9c2);
+      color: var(--game-buttons-primary-text, #020618);
+    }
 }
 
 html {
