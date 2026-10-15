@@ -43,6 +43,10 @@ export const GTAVI: Game = {
             name: "5",
             link: "https://www.youtube.com/watch?v=tJbzMqJGH4k",
         },
+        {
+            name: "6",
+            link: "https://www.youtube.com/watch?v=rz1B4B2yBZY",
+        },
     ],
     purchase: [
         {
