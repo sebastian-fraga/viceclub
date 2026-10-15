@@ -149,7 +149,7 @@ export const sectionLabels: Record<string, Caption> = {
         es: "Arte y fondos de pantalla",
         en: "Artwork & Wallpapers",
         fr: "Illustrations et fonds d'écran",
-        br: "Ilustrações e fundos de tela",
+        pt: "Ilustrações e fundos de tela",
     },
     marketing: {
         es: "Material promocional",
