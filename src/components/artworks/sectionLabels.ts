@@ -187,4 +187,10 @@ export const sectionLabels: Record<string, Caption> = {
         fr: "Magazine LOVE",
         pt: "Revista LOVE",
     },
+    music: {
+        es: "La música de Grand Theft Auto VI",
+        en: "The Music of Grand Theft Auto VI",
+        fr: "La musique de Grand Theft Auto VI",
+        pt: "A Música de Grand Theft Auto VI",
+    },
 };
