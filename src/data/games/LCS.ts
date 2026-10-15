@@ -12,7 +12,7 @@ export const GTALCS: Game = {
             primary: {
                 background: "#dc2626",
                 hovered: "#7f1d1d",
-                text: "#fff",
+                text: "#fef9f8",
             },
             secondary: {
                 background: "#00000000",

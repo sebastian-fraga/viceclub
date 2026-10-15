@@ -12,7 +12,7 @@ export const GTAV: Game = {
             primary: {
                 background: "#bbf7d0",
                 hovered: "#4ade80",
-                text: "#000",
+                text: "#03381e",
             },
             secondary: {
                 background: "#00000000",

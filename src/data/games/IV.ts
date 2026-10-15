@@ -12,7 +12,7 @@ export const GTAIV: Game = {
             primary: {
                 background: "#a3a3a3",
                 hovered: "#999696",
-                text: "#000",
+                text: "#0a0a0a",
             },
             secondary: {
                 background: "#00000000",
@@ -35,7 +35,7 @@ export const GTAIV: Game = {
                     primary: {
                         background: "#a3a3a3",
                         hovered: "#999696",
-                        text: "#000",
+                        text: "#0a0a0a",
                     },
                     secondary: {
                         background: "#00000000",
@@ -100,7 +100,7 @@ export const GTAIV: Game = {
                     primary: {
                         background: "#D41B23",
                         hovered: "#b8171e",
-                        text: "#fff",
+                        text: "#fef9f8",
                     },
                     secondary: {
                         background: "#00000000",
@@ -223,7 +223,7 @@ export const GTAIV: Game = {
                     primary: {
                         background: "#F0E95B",
                         hovered: "#d8d04f",
-                        text: "#000",
+                        text: "#322f00",
                     },
                     secondary: {
                         background: "#00000000",

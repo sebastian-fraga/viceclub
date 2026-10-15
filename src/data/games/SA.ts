@@ -12,7 +12,7 @@ export const GTASA: Game = {
             primary: {
                 background: "#a3e635",
                 hovered: "#65a30d",
-                text: "#000",
+                text: "#182900",
             },
             secondary: {
                 background: "#00000000",
