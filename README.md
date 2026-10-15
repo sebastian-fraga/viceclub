@@ -14,31 +14,31 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/preview-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/preview-light.png">
     <img alt="Preview" src="public/assets/images/app/readme/titles/preview-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 <div align="center">
-  <img src="public/assets/images/app/readme/screenshots/preview-index.png" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-home.png" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-radio.png" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-artworks.png" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-index.png" alt="Vice Club index page" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-home.png" alt="Vice Club home page" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-radio.png" alt="Vice Club radio" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-artworks.png" alt="Vice Club artworks gallery" width="49%" />
 </div>
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/tech-stack-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/tech-stack-light.png">
     <img alt="Tech stack" src="public/assets/images/app/readme/titles/tech-stack-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 ![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white)
@@ -52,13 +52,13 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/features-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/features-light.png">
     <img alt="Features" src="public/assets/images/app/readme/titles/features-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 | Feature         | Status |
@@ -69,19 +69,23 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 | 🛠️ Tools & mods | 🚧     |
 | 🏆 Achievements | 🚧     |
 | 🗺️ Map          | ✅     |
+| ⭐ Missions     | 📅     |
 | 📻 Radio        | ✅     |
 | 🕒 Timeline     | ✅     |
 | 🎮 Cheats       | ✅     |
+| 🚗 Vehicles     | 📅     |
+
+<sub>✅ Available · 🚧 In progress · 📅 Planned</sub>
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/structure-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/structure-light.png">
     <img alt="Structure" src="public/assets/images/app/readme/titles/structure-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 ```
@@ -104,13 +108,13 @@ src/
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/local-development-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/local-development-light.png">
     <img alt="Local development" src="public/assets/images/app/readme/titles/local-development-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 ```bash
@@ -122,13 +126,13 @@ pnpm run dev
 
 <br><br>
 
-<div align="left">
+<h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/images/app/readme/titles/conventions-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/images/app/readme/titles/conventions-light.png">
     <img alt="Conventions" src="public/assets/images/app/readme/titles/conventions-light.png" height="48">
   </picture>
-</div>
+</h2>
 <br>
 
 - Custom breakpoints: `max-mobile:` for inverse mobile-first overrides
