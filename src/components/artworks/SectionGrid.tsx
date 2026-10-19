@@ -158,7 +158,7 @@ export function SectionGrid({
                 </Tooltip>
             </h3>
 
-            <div className="grid w-full grid-cols-3 gap-x-6 gap-y-8 max-mobile:grid-cols-1">
+            <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-x-6 gap-y-8 max-mobile:grid-cols-1">
                 {images.map((image, index) => {
                     const url = getImageUrl(
                         gameId,
