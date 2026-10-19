@@ -1,5 +1,5 @@
 import i18n from "@/i18n";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import {
     getPlatformOptions,
@@ -152,42 +152,48 @@ export default function useSettings() {
         };
     }, []);
 
-    const setSetting = (id: string, value: SettingsValue) => {
-        if (id === "language") {
-            void navigateToLanguage(value as Language);
-            return;
-        }
-
-        setSettings((prev) => {
-            const newSettings: SettingsState = {
-                ...prev,
-                [id]: value,
-            };
-
-            if (id === "platform-family") {
-                const family = value as PlatformFamily | "default";
-                const platformOptions = getPlatformOptions(family);
-                newSettings.platform =
-                    platformOptions.length === 1 && platformOptions[0]
-                        ? platformOptions[0].value
-                        : "default";
+    const setSetting = useCallback(
+        (id: string, value: SettingsValue) => {
+            if (id === "language") {
+                void navigateToLanguage(value as Language);
+                return;
             }
 
-            try {
-                saveSettings(withoutLanguage(newSettings));
-            } catch {}
+            setSettings((prev) => {
+                const newSettings: SettingsState = {
+                    ...prev,
+                    [id]: value,
+                };
 
-            window.dispatchEvent(
-                new CustomEvent("settings-change", {
-                    detail: newSettings,
-                }),
-            );
+                if (id === "platform-family") {
+                    const family = value as PlatformFamily | "default";
+                    const platformOptions = getPlatformOptions(family);
+                    newSettings.platform =
+                        platformOptions.length === 1 && platformOptions[0]
+                            ? platformOptions[0].value
+                            : "default";
+                }
 
-            return newSettings;
-        });
-    };
+                try {
+                    saveSettings(withoutLanguage(newSettings));
+                } catch {}
 
-    const getSetting = (id: string) => settings[id];
+                window.dispatchEvent(
+                    new CustomEvent("settings-change", {
+                        detail: newSettings,
+                    }),
+                );
+
+                return newSettings;
+            });
+        },
+        [],
+    );
+
+    const getSetting = useCallback(
+        (id: string) => settings[id],
+        [settings],
+    );
 
     return { settings, setSetting, getSetting };
 }
