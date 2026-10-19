@@ -1,19 +1,19 @@
 {
     "Jugador": {
         "category": {
-            "ES": "Jugador",
-            "EN": "Player",
-            "FR": "Joueur",
-            "PT": "Jogador"
+            "es": "Jugador",
+            "en": "Player",
+            "fr": "Joueur",
+            "pt": "Jogador"
         },
         "cheats": [
             {
                 "id": "player_1",
                 "title": {
-                    "ES": "Salud al máximo",
-                    "EN": "Full health",
-                    "FR": "Santé maximale",
-                    "PT": "Saúde máxima"
+                    "es": "Salud al máximo",
+                    "en": "Full health",
+                    "fr": "Santé maximale",
+                    "pt": "Saúde máxima"
                 },
                 "codes": {
                     "ps2": [
@@ -134,10 +134,10 @@
             {
                 "id": "player_2",
                 "title": {
-                    "ES": "Blindaje al máximo",
-                    "EN": "Full armor",
-                    "FR": "Armure maximale",
-                    "PT": "Blindagem máxima"
+                    "es": "Blindaje al máximo",
+                    "en": "Full armor",
+                    "fr": "Armure maximale",
+                    "pt": "Blindagem máxima"
                 },
                 "codes": {
                     "ps2": [
@@ -258,10 +258,10 @@
             {
                 "id": "player_3",
                 "title": {
-                    "ES": "Suicidarse",
-                    "EN": "Commit suicide",
-                    "FR": "Se suicider",
-                    "PT": "Cometer suicídio"
+                    "es": "Suicidarse",
+                    "en": "Commit suicide",
+                    "fr": "Se suicider",
+                    "pt": "Cometer suicídio"
                 },
                 "codes": {
                     "ps2": [
@@ -366,10 +366,10 @@
             {
                 "id": "player_4",
                 "title": {
-                    "ES": "Set de armas básicas",
-                    "EN": "Basic Weapons set",
-                    "FR": "Ensemble d'armes de base",
-                    "PT": "Conjunto de armas básicas"
+                    "es": "Set de armas básicas",
+                    "en": "Basic Weapons set",
+                    "fr": "Ensemble d'armes de base",
+                    "pt": "Conjunto de armas básicas"
                 },
                 "platformNotes": [
                     {
@@ -385,10 +385,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga el Puño americano, Bate de béisbol, Cócteles molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de francotirador y Lanzallamas.",
-                            "EN": "Grants Brass Knuckles, Baseball Bat, Molotov Cocktails, Pistol, Shotgun, Tec-9, Kruger, Sniper Rifle, and Flamethrower.",
-                            "FR": "Accorde les Poings américains, la batte de baseball, les cocktails Molotov, le pistolet, le fusil à pompe, le Tec-9, le Kruger, le fusil de précision et le lance-flammes.",
-                            "PT": "Concede os Socos Ingleses, Taco de Beisebol, Coquetéis Molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de Precisão e Lança-chamas."
+                            "es": "Otorga el Puño americano, Bate de béisbol, Cócteles molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de francotirador y Lanzallamas.",
+                            "en": "Grants Brass Knuckles, Baseball Bat, Molotov Cocktails, Pistol, Shotgun, Tec-9, Kruger, Sniper Rifle, and Flamethrower.",
+                            "fr": "Accorde les Poings américains, la batte de baseball, les cocktails Molotov, le pistolet, le fusil à pompe, le Tec-9, le Kruger, le fusil de précision et le lance-flammes.",
+                            "pt": "Concede os Socos Ingleses, Taco de Beisebol, Coquetéis Molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de Precisão e Lança-chamas."
                         },
                         "noteType": "info"
                     }
@@ -512,10 +512,10 @@
             {
                 "id": "player_5",
                 "title": {
-                    "ES": "Set de armas intermedias",
-                    "EN": "Intermediate Weapons set",
-                    "FR": "Ensemble d'armes intermédiaires",
-                    "PT": "Conjunto de armas intermediárias"
+                    "es": "Set de armas intermedias",
+                    "en": "Intermediate Weapons set",
+                    "fr": "Ensemble d'armes intermédiaires",
+                    "pt": "Conjunto de armas intermediárias"
                 },
                 "platformNotes": [
                     {
@@ -531,10 +531,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga la Katana, Granadas a control remoto, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
-                            "EN": "Grants the Katana, Remote Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
-                            "FR": "Accorde le katana, les grenades télécommandées, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
-                            "PT": "Concede a Katana, Granadas por Controle Remoto, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
+                            "es": "Otorga la Katana, Granadas a control remoto, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
+                            "en": "Grants the Katana, Remote Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
+                            "fr": "Accorde le katana, les grenades télécommandées, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
+                            "pt": "Concede a Katana, Granadas por Controle Remoto, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
                         },
                         "noteType": "info"
                     }
@@ -658,10 +658,10 @@
             {
                 "id": "player_6",
                 "title": {
-                    "ES": "Set de armas avanzadas",
-                    "EN": "Advanced Weapons set",
-                    "FR": "Ensemble d'armes avancées",
-                    "PT": "Conjunto de armas avançadas"
+                    "es": "Set de armas avanzadas",
+                    "en": "Advanced Weapons set",
+                    "fr": "Ensemble d'armes avancées",
+                    "pt": "Conjunto de armas avançadas"
                 },
                 "platformNotes": [
                     {
@@ -677,10 +677,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de francotirador .308 y Minigun.",
-                            "EN": "Grants the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, MP5, M4, .308 Sniper Rifle, and Minigun.",
-                            "FR": "Accorde la tronçonneuse, les grenades, le revolver .357, le S.P.A.S. 12, le MP5, le M4, le fusil de précision .308 et la minigun.",
-                            "PT": "Concede a Motosserra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de Precisão .308 e Minigun."
+                            "es": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de francotirador .308 y Minigun.",
+                            "en": "Grants the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, MP5, M4, .308 Sniper Rifle, and Minigun.",
+                            "fr": "Accorde la tronçonneuse, les grenades, le revolver .357, le S.P.A.S. 12, le MP5, le M4, le fusil de précision .308 et la minigun.",
+                            "pt": "Concede a Motosserra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de Precisão .308 e Minigun."
                         },
                         "noteType": "info"
                     }
@@ -804,10 +804,10 @@
             {
                 "id": "player_7",
                 "title": {
-                    "ES": "Obtener 2 niveles de búsqueda",
-                    "EN": "Get 2 wanted levels",
-                    "FR": "Obtenir 2 niveaux de recherche",
-                    "PT": "Obter 2 níveis de procurado"
+                    "es": "Obtener 2 niveles de búsqueda",
+                    "en": "Get 2 wanted levels",
+                    "fr": "Obtenir 2 niveaux de recherche",
+                    "pt": "Obter 2 níveis de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -912,10 +912,10 @@
             {
                 "id": "player_8",
                 "title": {
-                    "ES": "Eliminar nivel de búsqueda",
-                    "EN": "Remove wanted level",
-                    "FR": "Supprimer le niveau de recherche",
-                    "PT": "Remover nível de procurado"
+                    "es": "Eliminar nivel de búsqueda",
+                    "en": "Remove wanted level",
+                    "fr": "Supprimer le niveau de recherche",
+                    "pt": "Remover nível de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -1020,10 +1020,10 @@
             {
                 "id": "player_9",
                 "title": {
-                    "ES": "Aparecer en las noticias",
-                    "EN": "Show media attention level",
-                    "FR": "Afficher le niveau d'attention des médias",
-                    "PT": "Mostrar o nível de atenção da mídia"
+                    "es": "Aparecer en las noticias",
+                    "en": "Show media attention level",
+                    "fr": "Afficher le niveau d'attention des médias",
+                    "pt": "Mostrar o nível de atenção da mídia"
                 },
                 "platformNotes": [
                     {
@@ -1039,10 +1039,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
-                            "EN": "A message will appear on the interface when you have a high wanted level",
-                            "FR": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
-                            "PT": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
+                            "es": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
+                            "en": "A message will appear on the interface when you have a high wanted level",
+                            "fr": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
+                            "pt": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
                         },
                         "noteType": "info"
                     }
@@ -1150,10 +1150,10 @@
             {
                 "id": "player_10",
                 "title": {
-                    "ES": "Cambiar la skin de Tommy",
-                    "EN": "Change Tommy's skin",
-                    "FR": "Changer le skin de Tommy",
-                    "PT": "Mudar a skin do Tommy"
+                    "es": "Cambiar la skin de Tommy",
+                    "en": "Change Tommy's skin",
+                    "fr": "Changer le skin de Tommy",
+                    "pt": "Mudar a skin do Tommy"
                 },
                 "codes": {
                     "ps2": [
@@ -1258,10 +1258,10 @@
             {
                 "id": "player_11",
                 "title": {
-                    "ES": "Tommy delgado",
-                    "EN": "Thin Tommy",
-                    "FR": "Tommy maigre",
-                    "PT": "Tommy magro"
+                    "es": "Tommy delgado",
+                    "en": "Thin Tommy",
+                    "fr": "Tommy maigre",
+                    "pt": "Tommy magro"
                 },
                 "codes": {
                     "pc": ["PROGRAMMER"]
@@ -1270,10 +1270,10 @@
             {
                 "id": "player_12",
                 "title": {
-                    "ES": "Tommy gordo",
-                    "EN": "Fat Tommy",
-                    "FR": "Tommy gros",
-                    "PT": "Tommy gordo"
+                    "es": "Tommy gordo",
+                    "en": "Fat Tommy",
+                    "fr": "Tommy gros",
+                    "pt": "Tommy gordo"
                 },
                 "codes": {
                     "pc": ["DEEPFRIEDMARSBARS"]
@@ -1282,10 +1282,10 @@
             {
                 "id": "player_13",
                 "title": {
-                    "ES": "Tommy fumará",
-                    "EN": "Smoking Tommy",
-                    "FR": "Tommy fumeur",
-                    "PT": "Tommy fumante"
+                    "es": "Tommy fumará",
+                    "en": "Smoking Tommy",
+                    "fr": "Tommy fumeur",
+                    "pt": "Tommy fumante"
                 },
                 "codes": {
                     "pc": ["CERTAINDEATH"]
@@ -1295,19 +1295,19 @@
     },
     "Vehículos": {
         "category": {
-            "ES": "Vehículos",
-            "EN": "Vehicles",
-            "FR": "Véhicules",
-            "PT": "Veículos"
+            "es": "Vehículos",
+            "en": "Vehicles",
+            "fr": "Véhicules",
+            "pt": "Veículos"
         },
         "cheats": [
             {
                 "id": "vehicles_1",
                 "title": {
-                    "ES": "Aparecer un Sabre Turbo",
-                    "EN": "Spawn Sabre Turbo",
-                    "FR": "Faire apparaître un Sabre Turbo",
-                    "PT": "Gerar um Sabre Turbo"
+                    "es": "Aparecer un Sabre Turbo",
+                    "en": "Spawn Sabre Turbo",
+                    "fr": "Faire apparaître un Sabre Turbo",
+                    "pt": "Gerar um Sabre Turbo"
                 },
                 "codes": {
                     "ps2": [
@@ -1412,10 +1412,10 @@
             {
                 "id": "vehicles_2",
                 "title": {
-                    "ES": "Aparecer un Caddy",
-                    "EN": "Spawn Caddy",
-                    "FR": "Faire apparaître un Caddy",
-                    "PT": "Gerar um Caddy"
+                    "es": "Aparecer un Caddy",
+                    "en": "Spawn Caddy",
+                    "fr": "Faire apparaître un Caddy",
+                    "pt": "Gerar um Caddy"
                 },
                 "codes": {
                     "ps2": [
@@ -1520,10 +1520,10 @@
             {
                 "id": "vehicles_3",
                 "title": {
-                    "ES": "Aparecer un Romero",
-                    "EN": "Spawn Romero",
-                    "FR": "Faire apparaître un Romero",
-                    "PT": "Gerar um Romero"
+                    "es": "Aparecer un Romero",
+                    "en": "Spawn Romero",
+                    "fr": "Faire apparaître un Romero",
+                    "pt": "Gerar um Romero"
                 },
                 "codes": {
                     "ps2": [
@@ -1628,10 +1628,10 @@
             {
                 "id": "vehicles_4",
                 "title": {
-                    "ES": "Aparecer un Trashmaster",
-                    "EN": "Spawn Trashmaster",
-                    "FR": "Faire apparaître un Trashmaster",
-                    "PT": "Gerar um Trashmaster"
+                    "es": "Aparecer un Trashmaster",
+                    "en": "Spawn Trashmaster",
+                    "fr": "Faire apparaître un Trashmaster",
+                    "pt": "Gerar um Trashmaster"
                 },
                 "codes": {
                     "ps2": [
@@ -1736,10 +1736,10 @@
             {
                 "id": "vehicles_5",
                 "title": {
-                    "ES": "Aparecer una limusina Love Fist",
-                    "EN": "Spawn Love Fist Limo",
-                    "FR": "Faire apparaître une limousine Love Fist",
-                    "PT": "Gerar uma limusine Love Fist"
+                    "es": "Aparecer una limusina Love Fist",
+                    "en": "Spawn Love Fist Limo",
+                    "fr": "Faire apparaître une limousine Love Fist",
+                    "pt": "Gerar uma limusine Love Fist"
                 },
                 "codes": {
                     "ps2": [
@@ -1836,10 +1836,10 @@
             {
                 "id": "vehicles_6",
                 "title": {
-                    "ES": "Aparecer un Rhino",
-                    "EN": "Spawn Rhino",
-                    "FR": "Faire apparaître un Rhino",
-                    "PT": "Gerar um Rhino"
+                    "es": "Aparecer un Rhino",
+                    "en": "Spawn Rhino",
+                    "fr": "Faire apparaître un Rhino",
+                    "pt": "Gerar um Rhino"
                 },
                 "codes": {
                     "ps2": [
@@ -1960,10 +1960,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "ES": "Aparecer un Hotring Racer V2",
-                    "EN": "Spawn Hotring Racer V2",
-                    "FR": "Faire apparaître un Hotring Racer V2",
-                    "PT": "Gerar um Hotring Racer V2"
+                    "es": "Aparecer un Hotring Racer V2",
+                    "en": "Spawn Hotring Racer V2",
+                    "fr": "Faire apparaître un Hotring Racer V2",
+                    "pt": "Gerar um Hotring Racer V2"
                 },
                 "codes": {
                     "ps2": [
@@ -2068,10 +2068,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "ES": "Aparecer un Hotring Racer V3",
-                    "EN": "Spawn Hotring Racer V3",
-                    "FR": "Faire apparaître un Hotring Racer V3",
-                    "PT": "Gerar um Hotring Racer V3"
+                    "es": "Aparecer un Hotring Racer V3",
+                    "en": "Spawn Hotring Racer V3",
+                    "fr": "Faire apparaître un Hotring Racer V3",
+                    "pt": "Gerar um Hotring Racer V3"
                 },
                 "codes": {
                     "ps2": [
@@ -2176,10 +2176,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "ES": "Aparecer un Bloodring Banger",
-                    "EN": "Spawn Bloodring Banger",
-                    "FR": "Faire apparaître un Bloodring Banger",
-                    "PT": "Gerar um Bloodring Banger"
+                    "es": "Aparecer un Bloodring Banger",
+                    "en": "Spawn Bloodring Banger",
+                    "fr": "Faire apparaître un Bloodring Banger",
+                    "pt": "Gerar um Bloodring Banger"
                 },
                 "codes": {
                     "ps2": [
@@ -2268,10 +2268,10 @@
             {
                 "id": "vehicles_10",
                 "title": {
-                    "ES": "Aparecer un Bloodring Banger V2",
-                    "EN": "Spawn Bloodring Banger V2",
-                    "FR": "Faire apparaître un Bloodring Banger V2",
-                    "PT": "Gerar um Bloodring Banger V2"
+                    "es": "Aparecer un Bloodring Banger V2",
+                    "en": "Spawn Bloodring Banger V2",
+                    "fr": "Faire apparaître un Bloodring Banger V2",
+                    "pt": "Gerar um Bloodring Banger V2"
                 },
                 "codes": {
                     "ps2": [
@@ -2376,10 +2376,10 @@
             {
                 "id": "vehicles_11",
                 "title": {
-                    "ES": "Explotar todos los vehículos",
-                    "EN": "Blow up all vehicles",
-                    "FR": "Faire exploser tous les véhicules",
-                    "PT": "Explodir todos os veículos"
+                    "es": "Explotar todos los vehículos",
+                    "en": "Blow up all vehicles",
+                    "fr": "Faire exploser tous les véhicules",
+                    "pt": "Explodir todos os veículos"
                 },
                 "codes": {
                     "ps2": [
@@ -2500,10 +2500,10 @@
             {
                 "id": "vehicles_12",
                 "title": {
-                    "ES": "Coches voladores",
-                    "EN": "Flying cars",
-                    "FR": "Voitures volantes",
-                    "PT": "Carros voadores"
+                    "es": "Coches voladores",
+                    "en": "Flying cars",
+                    "fr": "Voitures volantes",
+                    "pt": "Carros voadores"
                 },
                 "codes": {
                     "ps2": [
@@ -2583,10 +2583,10 @@
             {
                 "id": "vehicles_13",
                 "title": {
-                    "ES": "Barcos voladores",
-                    "EN": "Flying boats",
-                    "FR": "Bateaux volants",
-                    "PT": "Barcos voadores"
+                    "es": "Barcos voladores",
+                    "en": "Flying boats",
+                    "fr": "Bateaux volants",
+                    "pt": "Barcos voadores"
                 },
                 "codes": {
                     "pc": ["AIRSHIP"]
@@ -2595,10 +2595,10 @@
             {
                 "id": "vehicles_14",
                 "title": {
-                    "ES": "Los coches flotarán en el agua",
-                    "EN": "Cars float on water",
-                    "FR": "Les voitures flottent sur l'eau",
-                    "PT": "Carros flutuam na água"
+                    "es": "Los coches flotarán en el agua",
+                    "en": "Cars float on water",
+                    "fr": "Les voitures flottent sur l'eau",
+                    "pt": "Carros flutuam na água"
                 },
                 "codes": {
                     "ps2": [
@@ -2678,19 +2678,19 @@
             {
                 "id": "vehicles_15",
                 "title": {
-                    "ES": "Coches invisibles",
-                    "EN": "Invisible cars",
-                    "FR": "Voitures invisibles",
-                    "PT": "Carros invisíveis"
+                    "es": "Coches invisibles",
+                    "en": "Invisible cars",
+                    "fr": "Voitures invisibles",
+                    "pt": "Carros invisíveis"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -2722,10 +2722,10 @@
             {
                 "id": "vehicles_16",
                 "title": {
-                    "ES": "Mejor conducción",
-                    "EN": "Better handling",
-                    "FR": "Meilleure conduite",
-                    "PT": "Melhor dirigibilidade"
+                    "es": "Mejor conducción",
+                    "en": "Better handling",
+                    "fr": "Meilleure conduite",
+                    "pt": "Melhor dirigibilidade"
                 },
                 "codes": {
                     "ps2": [
@@ -2805,10 +2805,10 @@
             {
                 "id": "vehicles_17",
                 "title": {
-                    "ES": "Vehículos con ruedas gigantes",
-                    "EN": "Vehicles with giant wheels",
-                    "FR": "Véhicules avec des roues géantes",
-                    "PT": "Veículos com rodas gigantes"
+                    "es": "Vehículos con ruedas gigantes",
+                    "en": "Vehicles with giant wheels",
+                    "fr": "Véhicules avec des roues géantes",
+                    "pt": "Veículos com rodas gigantes"
                 },
                 "codes": {
                     "ps2": [
@@ -2905,10 +2905,10 @@
             {
                 "id": "vehicles_18",
                 "title": {
-                    "ES": "Tráfico agresivo",
-                    "EN": "Aggressive traffic",
-                    "FR": "Circulation agressive",
-                    "PT": "Trânsito agressivo"
+                    "es": "Tráfico agresivo",
+                    "en": "Aggressive traffic",
+                    "fr": "Circulation agressive",
+                    "pt": "Trânsito agressivo"
                 },
                 "codes": {
                     "ps2": [
@@ -3005,10 +3005,10 @@
             {
                 "id": "vehicles_19",
                 "title": {
-                    "ES": "Tráfico negro",
-                    "EN": "Black traffic",
-                    "FR": "Circulation noire",
-                    "PT": "Trânsito negro"
+                    "es": "Tráfico negro",
+                    "en": "Black traffic",
+                    "fr": "Circulation noire",
+                    "pt": "Trânsito negro"
                 },
                 "codes": {
                     "ps2": [
@@ -3113,10 +3113,10 @@
             {
                 "id": "vehicles_20",
                 "title": {
-                    "ES": "Tráfico rosa",
-                    "EN": "Pink traffic",
-                    "FR": "Circulation rose",
-                    "PT": "Trânsito rosa"
+                    "es": "Tráfico rosa",
+                    "en": "Pink traffic",
+                    "fr": "Circulation rose",
+                    "pt": "Trânsito rosa"
                 },
                 "codes": {
                     "ps2": [
@@ -3221,10 +3221,10 @@
             {
                 "id": "vehicles_21",
                 "title": {
-                    "ES": "Todos los semáforos verdes",
-                    "EN": "All traffic lights green",
-                    "FR": "Tous les feux de circulation au vert",
-                    "PT": "Todos os semáforos verdes"
+                    "es": "Todos los semáforos verdes",
+                    "en": "All traffic lights green",
+                    "fr": "Tous les feux de circulation au vert",
+                    "pt": "Todos os semáforos verdes"
                 },
                 "codes": {
                     "ps2": [
@@ -3330,19 +3330,19 @@
     },
     "Clima": {
         "category": {
-            "ES": "Clima",
-            "EN": "Weather",
-            "FR": "Météo",
-            "PT": "Clima"
+            "es": "Clima",
+            "en": "Weather",
+            "fr": "Météo",
+            "pt": "Clima"
         },
         "cheats": [
             {
                 "id": "weather_1",
                 "title": {
-                    "ES": "Clima soleado",
-                    "EN": "Sunny weather",
-                    "FR": "Temps ensoleillé",
-                    "PT": "Clima ensolarado"
+                    "es": "Clima soleado",
+                    "en": "Sunny weather",
+                    "fr": "Temps ensoleillé",
+                    "pt": "Clima ensolarado"
                 },
                 "codes": {
                     "ps2": [
@@ -3422,10 +3422,10 @@
             {
                 "id": "weather_2",
                 "title": {
-                    "ES": "Clima despejado",
-                    "EN": "Clear weather",
-                    "FR": "Temps dégagé",
-                    "PT": "Tempo limpo"
+                    "es": "Clima despejado",
+                    "en": "Clear weather",
+                    "fr": "Temps dégagé",
+                    "pt": "Tempo limpo"
                 },
                 "codes": {
                     "ps2": [
@@ -3496,10 +3496,10 @@
             {
                 "id": "weather_3",
                 "title": {
-                    "ES": "Clima nublado",
-                    "EN": "Cloudy weather",
-                    "FR": "Temps nuageux",
-                    "PT": "Clima nublado"
+                    "es": "Clima nublado",
+                    "en": "Cloudy weather",
+                    "fr": "Temps nuageux",
+                    "pt": "Clima nublado"
                 },
                 "codes": {
                     "ps2": [
@@ -3570,10 +3570,10 @@
             {
                 "id": "weather_4",
                 "title": {
-                    "ES": "Tormenta",
-                    "EN": "Stormy weather",
-                    "FR": "Temps orageux",
-                    "PT": "Clima tempestuoso"
+                    "es": "Tormenta",
+                    "en": "Stormy weather",
+                    "fr": "Temps orageux",
+                    "pt": "Clima tempestuoso"
                 },
                 "codes": {
                     "ps2": [
@@ -3644,10 +3644,10 @@
             {
                 "id": "weather_5",
                 "title": {
-                    "ES": "Niebla",
-                    "EN": "Foggy weather",
-                    "FR": "Temps brumeux",
-                    "PT": "Clima com neblina"
+                    "es": "Niebla",
+                    "en": "Foggy weather",
+                    "fr": "Temps brumeux",
+                    "pt": "Clima com neblina"
                 },
                 "codes": {
                     "ps2": [
@@ -3719,28 +3719,28 @@
     },
     "Peatones": {
         "category": {
-            "ES": "Peatones",
-            "EN": "Pedestrians",
-            "FR": "Piétons",
-            "PT": "Pedestres"
+            "es": "Peatones",
+            "en": "Pedestrians",
+            "fr": "Piétons",
+            "pt": "Pedestres"
         },
         "cheats": [
             {
                 "id": "peds_1",
                 "title": {
-                    "ES": "Pelea de peatones",
-                    "EN": "Pedestrian riot",
-                    "FR": "Émeute des piétons",
-                    "PT": "Motim de pedestres"
+                    "es": "Pelea de peatones",
+                    "en": "Pedestrian riot",
+                    "fr": "Émeute des piétons",
+                    "pt": "Motim de pedestres"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
-                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
-                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
-                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
-                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                            "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
                         "noteType": "warning"
                     }
@@ -3840,19 +3840,19 @@
             {
                 "id": "peds_2",
                 "title": {
-                    "ES": "Los peatones odian a Tommy",
-                    "EN": "Pedestrians hate Tommy",
-                    "FR": "Les piétons détestent Tommy",
-                    "PT": "Os pedestres odeiam Tommy"
+                    "es": "Los peatones odian a Tommy",
+                    "en": "Pedestrians hate Tommy",
+                    "fr": "Les piétons détestent Tommy",
+                    "pt": "Os pedestres odeiam Tommy"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
-                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
-                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
-                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
-                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                            "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
                         "noteType": "warning"
                     }
@@ -3952,10 +3952,10 @@
             {
                 "id": "peds_3",
                 "title": {
-                    "ES": "Los peatones tendrán armas",
-                    "EN": "Pedestrians carry weapons",
-                    "FR": "Les piétons portent des armes",
-                    "PT": "Os pedestres terão armas"
+                    "es": "Los peatones tendrán armas",
+                    "en": "Pedestrians carry weapons",
+                    "fr": "Les piétons portent des armes",
+                    "pt": "Os pedestres terão armas"
                 },
                 "codes": {
                     "ps2": [
@@ -4017,10 +4017,10 @@
             {
                 "id": "peds_4",
                 "title": {
-                    "ES": "Las mujeres seguirán a Tommy",
-                    "EN": "Women follow Tommy",
-                    "FR": "Les femmes suivent Tommy",
-                    "PT": "As mulheres seguem Tommy"
+                    "es": "Las mujeres seguirán a Tommy",
+                    "en": "Women follow Tommy",
+                    "fr": "Les femmes suivent Tommy",
+                    "pt": "As mulheres seguem Tommy"
                 },
                 "codes": {
                     "ps2": [
@@ -4087,10 +4087,10 @@
             {
                 "id": "peds_5",
                 "title": {
-                    "ES": "La banda de Vercetti serán mujeres con M4",
-                    "EN": "Vercetti Gang members are women with M4s",
-                    "FR": "Les membres du gang de Vercetti seront des femmes avec des M4",
-                    "PT": "Os membros da gangue de Vercetti serão mulheres com M4s"
+                    "es": "La banda de Vercetti serán mujeres con M4",
+                    "en": "Vercetti Gang members are women with M4s",
+                    "fr": "Les membres du gang de Vercetti seront des femmes avec des M4",
+                    "pt": "Os membros da gangue de Vercetti serão mulheres com M4s"
                 },
                 "codes": {
                     "ps2": [
@@ -4195,10 +4195,10 @@
             {
                 "id": "peds_6",
                 "title": {
-                    "ES": "Los peatones se subirán al vehículo de Tommy",
-                    "EN": "Pedestrians get into Tommy's vehicle",
-                    "FR": "Les piétons monteront dans le véhicule de Tommy",
-                    "PT": "Os pedestres entrarão no veículo de Tommy"
+                    "es": "Los peatones se subirán al vehículo de Tommy",
+                    "en": "Pedestrians get into Tommy's vehicle",
+                    "fr": "Les piétons monteront dans le véhicule de Tommy",
+                    "pt": "Os pedestres entrarão no veículo de Tommy"
                 },
                 "codes": {
                     "pc": ["HOPINGIRL"]
@@ -4207,10 +4207,10 @@
             {
                 "id": "peds_7",
                 "title": {
-                    "ES": "Los policías resucitarán",
-                    "EN": "Police cops will resurrect",
-                    "FR": "Les policiers ressusciteront",
-                    "PT": "Os policiais ressuscitarão"
+                    "es": "Los policías resucitarán",
+                    "en": "Police cops will resurrect",
+                    "fr": "Les policiers ressusciteront",
+                    "pt": "Os policiais ressuscitarão"
                 },
                 "codes": {
                     "ps2": [
@@ -4243,19 +4243,19 @@
     },
     "Skins": {
         "category": {
-            "ES": "Skins",
-            "EN": "Skins",
-            "FR": "Skins",
-            "PT": "Skins"
+            "es": "Skins",
+            "en": "Skins",
+            "fr": "Skins",
+            "pt": "Skins"
         },
         "cheats": [
             {
                 "id": "skin_1",
                 "title": {
-                    "ES": "Jugar como Candy Suxxx",
-                    "EN": "Play as Candy Suxxx",
-                    "FR": "Jouer en tant que Candy Suxxx",
-                    "PT": "Jogar como Candy Suxxx"
+                    "es": "Jugar como Candy Suxxx",
+                    "en": "Play as Candy Suxxx",
+                    "fr": "Jouer en tant que Candy Suxxx",
+                    "pt": "Jogar como Candy Suxxx"
                 },
                 "codes": {
                     "ps2": [
@@ -4360,10 +4360,10 @@
             {
                 "id": "skin_2",
                 "title": {
-                    "ES": "Jugar como Hilary King",
-                    "EN": "Play as Hilary King",
-                    "FR": "Jouer en tant que Hilary King",
-                    "PT": "Jogar como Hilary King"
+                    "es": "Jugar como Hilary King",
+                    "en": "Play as Hilary King",
+                    "fr": "Jouer en tant que Hilary King",
+                    "pt": "Jogar como Hilary King"
                 },
                 "codes": {
                     "ps2": [
@@ -4460,10 +4460,10 @@
             {
                 "id": "skin_3",
                 "title": {
-                    "ES": "Jugar como Ken Rosenberg",
-                    "EN": "Play as Ken Rosenberg",
-                    "FR": "Jouer en tant que Ken Rosenberg",
-                    "PT": "Jogar como Ken Rosenberg"
+                    "es": "Jugar como Ken Rosenberg",
+                    "en": "Play as Ken Rosenberg",
+                    "fr": "Jouer en tant que Ken Rosenberg",
+                    "pt": "Jogar como Ken Rosenberg"
                 },
                 "codes": {
                     "ps2": [
@@ -4568,10 +4568,10 @@
             {
                 "id": "skin_4",
                 "title": {
-                    "ES": "Jugar como Lance Vance",
-                    "EN": "Play as Lance Vance",
-                    "FR": "Jouer en tant que Lance Vance",
-                    "PT": "Jogar como Lance Vance"
+                    "es": "Jugar como Lance Vance",
+                    "en": "Play as Lance Vance",
+                    "fr": "Jouer en tant que Lance Vance",
+                    "pt": "Jogar como Lance Vance"
                 },
                 "codes": {
                     "ps2": [
@@ -4633,10 +4633,10 @@
             {
                 "id": "skin_5",
                 "title": {
-                    "ES": "Jugar como Dick de Love Fist",
-                    "EN": "Play as Dick from Love Fist",
-                    "FR": "Jouer en tant que Dick de Love Fist",
-                    "PT": "Jogar como Dick do Love Fist"
+                    "es": "Jugar como Dick de Love Fist",
+                    "en": "Play as Dick from Love Fist",
+                    "fr": "Jouer en tant que Dick de Love Fist",
+                    "pt": "Jogar como Dick do Love Fist"
                 },
                 "codes": {
                     "ps2": [
@@ -4741,10 +4741,10 @@
             {
                 "id": "skin_6",
                 "title": {
-                    "ES": "Jugar como Jezz de Love Fist",
-                    "EN": "Play as Jezz from Love Fist",
-                    "FR": "Jouer en tant que Jezz de Love Fist",
-                    "PT": "Jogar como Jezz do Love Fist"
+                    "es": "Jugar como Jezz de Love Fist",
+                    "en": "Play as Jezz from Love Fist",
+                    "fr": "Jouer en tant que Jezz de Love Fist",
+                    "pt": "Jogar como Jezz do Love Fist"
                 },
                 "codes": {
                     "ps2": [
@@ -4849,10 +4849,10 @@
             {
                 "id": "skin_7",
                 "title": {
-                    "ES": "Jugar como Mercedes",
-                    "EN": "Play as Mercedes",
-                    "FR": "Jouer en tant que Mercedes",
-                    "PT": "Jogar como Mercedes"
+                    "es": "Jugar como Mercedes",
+                    "en": "Play as Mercedes",
+                    "fr": "Jouer en tant que Mercedes",
+                    "pt": "Jogar como Mercedes"
                 },
                 "codes": {
                     "ps2": [
@@ -4957,10 +4957,10 @@
             {
                 "id": "skin_8",
                 "title": {
-                    "ES": "Jugar como Phil Cassidy",
-                    "EN": "Play as Phil Cassidy",
-                    "FR": "Jouer en tant que Phil Cassidy",
-                    "PT": "Jogar como Phil Cassidy"
+                    "es": "Jugar como Phil Cassidy",
+                    "en": "Play as Phil Cassidy",
+                    "fr": "Jouer en tant que Phil Cassidy",
+                    "pt": "Jogar como Phil Cassidy"
                 },
                 "codes": {
                     "ps2": [
@@ -5065,10 +5065,10 @@
             {
                 "id": "skin_9",
                 "title": {
-                    "ES": "Jugar como Ricardo Diaz",
-                    "EN": "Play as Ricardo Diaz",
-                    "FR": "Jouer en tant que Ricardo Diaz",
-                    "PT": "Jogar como Ricardo Diaz"
+                    "es": "Jugar como Ricardo Diaz",
+                    "en": "Play as Ricardo Diaz",
+                    "fr": "Jouer en tant que Ricardo Diaz",
+                    "pt": "Jogar como Ricardo Diaz"
                 },
                 "codes": {
                     "ps2": ["L1", "L2", "R1", "R2", "DOWN", "L1", "R2", "L2"],
@@ -5112,10 +5112,10 @@
             {
                 "id": "skin_10",
                 "title": {
-                    "ES": "Jugar como Sonny Forelli",
-                    "EN": "Play as Sonny Forelli",
-                    "FR": "Jouer en tant que Sonny Forelli",
-                    "PT": "Jogar como Sonny Forelli"
+                    "es": "Jugar como Sonny Forelli",
+                    "en": "Play as Sonny Forelli",
+                    "fr": "Jouer en tant que Sonny Forelli",
+                    "pt": "Jogar como Sonny Forelli"
                 },
                 "codes": {
                     "ps2": [
@@ -5221,19 +5221,19 @@
     },
     "Otros": {
         "category": {
-            "ES": "Otros",
-            "EN": "Other",
-            "FR": "Autres",
-            "PT": "Outros"
+            "es": "Otros",
+            "en": "Other",
+            "fr": "Autres",
+            "pt": "Outros"
         },
         "cheats": [
             {
                 "id": "other_1",
                 "title": {
-                    "ES": "Aumentar velocidad de juego",
-                    "EN": "Increase game speed",
-                    "FR": "Augmenter la vitesse du jeu",
-                    "PT": "Aumentar velocidade do jogo"
+                    "es": "Aumentar velocidad de juego",
+                    "en": "Increase game speed",
+                    "fr": "Augmenter la vitesse du jeu",
+                    "pt": "Aumentar velocidade do jogo"
                 },
                 "codes": {
                     "ps2": [
@@ -5282,10 +5282,10 @@
             {
                 "id": "other_2",
                 "title": {
-                    "ES": "Disminuir velocidad de juego",
-                    "EN": "Decrease game speed",
-                    "FR": "Réduire la vitesse du jeu",
-                    "PT": "Diminuir velocidade do jogo"
+                    "es": "Disminuir velocidad de juego",
+                    "en": "Decrease game speed",
+                    "fr": "Réduire la vitesse du jeu",
+                    "pt": "Diminuir velocidade do jogo"
                 },
                 "codes": {
                     "ps2": [
@@ -5334,10 +5334,10 @@
             {
                 "id": "other_3",
                 "title": {
-                    "ES": "Adelantar el reloj del juego",
-                    "EN": "Faster game clock",
-                    "FR": "Horloge du jeu accélérée",
-                    "PT": "Relógio do jogo acelerado"
+                    "es": "Adelantar el reloj del juego",
+                    "en": "Faster game clock",
+                    "fr": "Horloge du jeu accélérée",
+                    "pt": "Relógio do jogo acelerado"
                 },
                 "codes": {
                     "ps2": [
@@ -5458,19 +5458,19 @@
             {
                 "id": "other_4",
                 "title": {
-                    "ES": "Todos los personajes cabezones",
-                    "EN": "Big head mode",
-                    "FR": "Mode grosses têtes",
-                    "PT": "Modo cabeção"
+                    "es": "Todos los personajes cabezones",
+                    "en": "Big head mode",
+                    "fr": "Mode grosses têtes",
+                    "pt": "Modo cabeção"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Solo disponible en la Edición Definitiva.",
-                            "EN": "Only available in the Definitive Edition.",
-                            "FR": "Disponible uniquement dans l'Édition Définitive.",
-                            "PT": "Disponível apenas na Edição Definitiva."
+                            "es": "Solo disponible en la Edición Definitiva.",
+                            "en": "Only available in the Definitive Edition.",
+                            "fr": "Disponible uniquement dans l'Édition Définitive.",
+                            "pt": "Disponível apenas na Edição Definitiva."
                         },
                         "notetype": "info"
                     }

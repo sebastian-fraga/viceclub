@@ -1,19 +1,19 @@
 {
     "Jugador": {
         "category": {
-            "ES": "Jugador",
-            "EN": "Player",
-            "FR": "Joueur",
-            "PT": "Jogador"
+            "es": "Jugador",
+            "en": "Player",
+            "fr": "Joueur",
+            "pt": "Jogador"
         },
         "cheats": [
             {
                 "id": "player_1",
                 "title": {
-                    "ES": "Obtener salud, blindaje y $250,000",
-                    "EN": "Get health, armor and $250,000",
-                    "FR": "Obtenir de la santé, de l'armure et 250 000 $",
-                    "PT": "Obter saúde, colete e $250.000"
+                    "es": "Obtener salud, blindaje y $250,000",
+                    "en": "Get health, armor and $250,000",
+                    "fr": "Obtenir de la santé, de l'armure et 250 000 $",
+                    "pt": "Obter saúde, colete e $250.000"
                 },
                 "codes": {
                     "ps2": [
@@ -148,10 +148,10 @@
             {
                 "id": "player_2",
                 "title": {
-                    "ES": "Suicidarse",
-                    "EN": "Commit suicide",
-                    "FR": "Se suicider",
-                    "PT": "Cometer suicídio"
+                    "es": "Suicidarse",
+                    "en": "Commit suicide",
+                    "fr": "Se suicider",
+                    "pt": "Cometer suicídio"
                 },
                 "codes": {
                     "ps2": [
@@ -268,19 +268,19 @@
             {
                 "id": "player_3",
                 "title": {
-                    "ES": "Efectos de adrenalina",
-                    "EN": "Adrenaline effects",
-                    "FR": "Effets de l'adrénaline",
-                    "PT": "Efeitos de adrenalina"
+                    "es": "Efectos de adrenalina",
+                    "en": "Adrenaline effects",
+                    "fr": "Effets de l'adrénaline",
+                    "pt": "Efeitos de adrenalina"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -336,10 +336,10 @@
             {
                 "id": "player_4",
                 "title": {
-                    "ES": "Supersalto",
-                    "EN": "Super Jump",
-                    "FR": "Super saut",
-                    "PT": "Super salto"
+                    "es": "Supersalto",
+                    "en": "Super Jump",
+                    "fr": "Super saut",
+                    "pt": "Super salto"
                 },
                 "codes": {
                     "ps2": [
@@ -457,10 +457,10 @@
             {
                 "id": "player_5",
                 "title": {
-                    "ES": "Supersalto en bicicletas",
-                    "EN": "Super Jump on bikes",
-                    "FR": "Super saut à vélo",
-                    "PT": "Super salto em bicicletas"
+                    "es": "Supersalto en bicicletas",
+                    "en": "Super Jump on bikes",
+                    "fr": "Super saut à vélo",
+                    "pt": "Super salto em bicicletas"
                 },
                 "codes": {
                     "ps2": [
@@ -595,10 +595,10 @@
             {
                 "id": "player_6",
                 "title": {
-                    "ES": "Superpuñetazos",
-                    "EN": "Super Punches",
-                    "FR": "Super coups de poing",
-                    "PT": "Super socos"
+                    "es": "Superpuñetazos",
+                    "en": "Super Punches",
+                    "fr": "Super coups de poing",
+                    "pt": "Super socos"
                 },
                 "codes": {
                     "ps2": [
@@ -706,29 +706,29 @@
             {
                 "id": "player_7",
                 "title": {
-                    "ES": "Salud infinita",
-                    "EN": "Infinite health",
-                    "FR": "Santé infinie",
-                    "PT": "Vida infinita"
+                    "es": "Salud infinita",
+                    "en": "Infinite health",
+                    "fr": "Santé infinie",
+                    "pt": "Vida infinita"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "ps3", "xbox", "xbox360", "pc"],
                         "note": {
-                            "ES": "CJ seguirá recibiendo daño de explosiones, caídas y de helicópteros de la policía.",
-                            "EN": "CJ will still take damage from explosions, falls, and police helicopters.",
-                            "FR": "CJ continuera de subir des dégâts des explosions, des chutes et des hélicoptères de police.",
-                            "PT": "CJ continuará sofrendo dano de explosões, quedas e helicópteros da polícia."
+                            "es": "CJ seguirá recibiendo daño de explosiones, caídas y de helicópteros de la policía.",
+                            "en": "CJ will still take damage from explosions, falls, and police helicopters.",
+                            "fr": "CJ continuera de subir des dégâts des explosions, des chutes et des hélicoptères de police.",
+                            "pt": "CJ continuará sofrendo dano de explosões, quedas e helicópteros da polícia."
                         },
                         "noteType": "warning"
                     },
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -788,10 +788,10 @@
             {
                 "id": "player_8",
                 "title": {
-                    "ES": "Munición infinita",
-                    "EN": "Infinite ammo",
-                    "FR": "Munitions infinies",
-                    "PT": "Munição infinita"
+                    "es": "Munición infinita",
+                    "en": "Infinite ammo",
+                    "fr": "Munitions infinies",
+                    "pt": "Munição infinita"
                 },
                 "codes": {
                     "ps2": [
@@ -926,10 +926,10 @@
             {
                 "id": "player_9",
                 "title": {
-                    "ES": "Nivel de asesino con todas las armas",
-                    "EN": "Hitman level with all weapons",
-                    "FR": "Niveau de tueur avec toutes les armes",
-                    "PT": "Nível de assassino com todas as armas"
+                    "es": "Nivel de asesino con todas las armas",
+                    "en": "Hitman level with all weapons",
+                    "fr": "Niveau de tueur avec toutes les armes",
+                    "pt": "Nível de assassino com todas as armas"
                 },
                 "codes": {
                     "ps2": [
@@ -1064,10 +1064,10 @@
             {
                 "id": "player_10",
                 "title": {
-                    "ES": "Set de armas 1",
-                    "EN": "Weapons set 1",
-                    "FR": "Ensemble d'armes 1",
-                    "PT": "Conjunto de armas 1"
+                    "es": "Set de armas 1",
+                    "en": "Weapons set 1",
+                    "fr": "Ensemble d'armes 1",
+                    "pt": "Conjunto de armas 1"
                 },
                 "platformNotes": [
                     {
@@ -1084,10 +1084,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga el Puño americano, Bate de béisbol, Pistola 9mm, Escopeta, Micro Uzi, AK-47, Rifle, Lanzacohetes, Cócteles molotov y Bote de spray",
-                            "EN": "Grants Brass Knuckles, Baseball Bat, 9mm Pistol, Shotgun, Micro SMG, AK-47, Rifle, Rocket Launcher, Molotov Cocktails, and Spray Can.",
-                            "FR": "Accorde le Poing américain, la batte de baseball, le pistolet 9 mm, le fusil à pompe, le Micro SMG, l’AK-47, le fusil, le lance-roquettes, les cocktails Molotov et la bombe de peinture.",
-                            "PT": "Concede Soco Inglês, Taco de Beisebol, Pistola 9 mm, Escopeta, Micro SMG, AK-47, Rifle, Lança-foguetes, Coquetéis Molotov e Lata de Spray."
+                            "es": "Otorga el Puño americano, Bate de béisbol, Pistola 9mm, Escopeta, Micro Uzi, AK-47, Rifle, Lanzacohetes, Cócteles molotov y Bote de spray",
+                            "en": "Grants Brass Knuckles, Baseball Bat, 9mm Pistol, Shotgun, Micro SMG, AK-47, Rifle, Rocket Launcher, Molotov Cocktails, and Spray Can.",
+                            "fr": "Accorde le Poing américain, la batte de baseball, le pistolet 9 mm, le fusil à pompe, le Micro SMG, l’AK-47, le fusil, le lance-roquettes, les cocktails Molotov et la bombe de peinture.",
+                            "pt": "Concede Soco Inglês, Taco de Beisebol, Pistola 9 mm, Escopeta, Micro SMG, AK-47, Rifle, Lança-foguetes, Coquetéis Molotov e Lata de Spray."
                         },
                         "noteType": "info"
                     }
@@ -1225,10 +1225,10 @@
             {
                 "id": "player_11",
                 "title": {
-                    "ES": "Set de armas 2",
-                    "EN": "Weapons set 2",
-                    "FR": "Ensemble d'armes 2",
-                    "PT": "Conjunto de armas 2"
+                    "es": "Set de armas 2",
+                    "en": "Weapons set 2",
+                    "fr": "Ensemble d'armes 2",
+                    "pt": "Conjunto de armas 2"
                 },
                 "platformNotes": [
                     {
@@ -1245,10 +1245,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga el Cuchillo, Desert Eagle, Escopeta recortada, Tec-9, M4, Rifle de francotirador, Lanzallamas, Extintor y Granadas.",
-                            "EN": "Grants the Knife, Desert Eagle, Sawn-off Shotgun, Tec-9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, and Grenades.",
-                            "FR": "Accorde le couteau, le Desert Eagle, le fusil à canon scié, le Tec-9, le M4, le fusil de précision, le lance-flammes, l’extincteur et les grenades.",
-                            "PT": "Concede a Faca, Desert Eagle, Escopeta de Cano Serrado, Tec-9, M4, Rifle de Precisão, Lança-chamas, Extintor de Incêndio e Granadas."
+                            "es": "Otorga el Cuchillo, Desert Eagle, Escopeta recortada, Tec-9, M4, Rifle de francotirador, Lanzallamas, Extintor y Granadas.",
+                            "en": "Grants the Knife, Desert Eagle, Sawn-off Shotgun, Tec-9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, and Grenades.",
+                            "fr": "Accorde le couteau, le Desert Eagle, le fusil à canon scié, le Tec-9, le M4, le fusil de précision, le lance-flammes, l’extincteur et les grenades.",
+                            "pt": "Concede a Faca, Desert Eagle, Escopeta de Cano Serrado, Tec-9, M4, Rifle de Precisão, Lança-chamas, Extintor de Incêndio e Granadas."
                         },
                         "noteType": "info"
                     }
@@ -1386,10 +1386,10 @@
             {
                 "id": "player_12",
                 "title": {
-                    "ES": "Set de armas 3",
-                    "EN": "Weapons set 3",
-                    "FR": "Ensemble d'armes 3",
-                    "PT": "Conjunto de armas 3"
+                    "es": "Set de armas 3",
+                    "en": "Weapons set 3",
+                    "fr": "Ensemble d'armes 3",
+                    "pt": "Conjunto de armas 3"
                 },
                 "platformNotes": [
                     {
@@ -1406,10 +1406,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Otorga la Motosierra, Pistola con silenciador, S.P.A.S. 12, MP5, M4, Lanzacohetes con atracción al calor y Cargas explosivas.",
-                            "EN": "Grants the Chainsaw, Silenced Pistol, S.P.A.S. 12, MP5, M4, Heat-Seeking Rocket Launcher, and Satchel Charges.",
-                            "FR": "Accorde la tronçonneuse, le pistolet avec silencieux, le S.P.A.S. 12, le MP5, le M4, le lance-roquettes à tête chercheuse et les charges explosives.",
-                            "PT": "Concede a Motosserra, Pistola com Silenciador, S.P.A.S. 12, MP5, M4, Lança-foguetes teleguiado por calor e Cargas Explosivas."
+                            "es": "Otorga la Motosierra, Pistola con silenciador, S.P.A.S. 12, MP5, M4, Lanzacohetes con atracción al calor y Cargas explosivas.",
+                            "en": "Grants the Chainsaw, Silenced Pistol, S.P.A.S. 12, MP5, M4, Heat-Seeking Rocket Launcher, and Satchel Charges.",
+                            "fr": "Accorde la tronçonneuse, le pistolet avec silencieux, le S.P.A.S. 12, le MP5, le M4, le lance-roquettes à tête chercheuse et les charges explosives.",
+                            "pt": "Concede a Motosserra, Pistola com Silenciador, S.P.A.S. 12, MP5, M4, Lança-foguetes teleguiado por calor e Cargas Explosivas."
                         },
                         "noteType": "info"
                     }
@@ -1547,10 +1547,10 @@
             {
                 "id": "player_13",
                 "title": {
-                    "ES": "Obtener paracaídas",
-                    "EN": "Get a parachute",
-                    "FR": "Obtenir un parachute",
-                    "PT": "Obter um paraquedas"
+                    "es": "Obtener paracaídas",
+                    "en": "Get a parachute",
+                    "fr": "Obtenir un parachute",
+                    "pt": "Obter um paraquedas"
                 },
                 "codes": {
                     "ps2": [
@@ -1676,10 +1676,10 @@
             {
                 "id": "player_14",
                 "title": {
-                    "ES": "Obtener jetpack",
-                    "EN": "Get a jetpack",
-                    "FR": "Obtenir un jetpack",
-                    "PT": "Obter um jetpack"
+                    "es": "Obtener jetpack",
+                    "en": "Get a jetpack",
+                    "fr": "Obtenir un jetpack",
+                    "pt": "Obter um jetpack"
                 },
                 "codes": {
                     "ps2": [
@@ -1787,10 +1787,10 @@
             {
                 "id": "player_15",
                 "title": {
-                    "ES": "Obtener 2 niveles de búsqueda",
-                    "EN": "Get 2 wanted levels",
-                    "FR": "Obtenir 2 niveaux de recherche",
-                    "PT": "Obter 2 níveis de procurado"
+                    "es": "Obtener 2 niveles de búsqueda",
+                    "en": "Get 2 wanted levels",
+                    "fr": "Obtenir 2 niveaux de recherche",
+                    "pt": "Obter 2 níveis de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -1889,10 +1889,10 @@
             {
                 "id": "player_16",
                 "title": {
-                    "ES": "Obtener 6 niveles de búsqueda",
-                    "EN": "Get 6 wanted levels",
-                    "FR": "Obtenir 6 niveaux de recherche",
-                    "PT": "Obter 6 níveis de procurado"
+                    "es": "Obtener 6 niveles de búsqueda",
+                    "en": "Get 6 wanted levels",
+                    "fr": "Obtenir 6 niveaux de recherche",
+                    "pt": "Obter 6 níveis de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -1991,10 +1991,10 @@
             {
                 "id": "player_17",
                 "title": {
-                    "ES": "Eliminar nivel de búsqueda",
-                    "EN": "Remove wanted level",
-                    "FR": "Supprimer le niveau de recherche",
-                    "PT": "Remover nível de procurado"
+                    "es": "Eliminar nivel de búsqueda",
+                    "en": "Remove wanted level",
+                    "fr": "Supprimer le niveau de recherche",
+                    "pt": "Remover nível de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -2111,10 +2111,10 @@
             {
                 "id": "player_18",
                 "title": {
-                    "ES": "Desactivar nivel de búsqueda",
-                    "EN": "Disable wanted level",
-                    "FR": "Désactiver le niveau de recherche",
-                    "PT": "Desativar o nível de procurado"
+                    "es": "Desactivar nivel de búsqueda",
+                    "en": "Disable wanted level",
+                    "fr": "Désactiver le niveau de recherche",
+                    "pt": "Desativar o nível de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -2213,10 +2213,10 @@
             {
                 "id": "player_19",
                 "title": {
-                    "ES": "Gordura al máximo",
-                    "EN": "Maximum fat",
-                    "FR": "Graisse au maximum",
-                    "PT": "Gordura no máximo"
+                    "es": "Gordura al máximo",
+                    "en": "Maximum fat",
+                    "fr": "Graisse au maximum",
+                    "pt": "Gordura no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2315,10 +2315,10 @@
             {
                 "id": "player_20",
                 "title": {
-                    "ES": "Musculatura al máximo",
-                    "EN": "Maximum muscle",
-                    "FR": "Musculature au maximum",
-                    "PT": "Musculatura no máximo"
+                    "es": "Musculatura al máximo",
+                    "en": "Maximum muscle",
+                    "fr": "Musculature au maximum",
+                    "pt": "Musculatura no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2417,10 +2417,10 @@
             {
                 "id": "player_21",
                 "title": {
-                    "ES": "Gordura y musculatura al mínimo",
-                    "EN": "Minimum fat and muscle",
-                    "FR": "Graisse et musculature au minimum",
-                    "PT": "Gordura e musculatura no mínimo"
+                    "es": "Gordura y musculatura al mínimo",
+                    "en": "Minimum fat and muscle",
+                    "fr": "Graisse et musculature au minimum",
+                    "pt": "Gordura e musculatura no mínimo"
                 },
                 "codes": {
                     "ps2": [
@@ -2519,19 +2519,19 @@
             {
                 "id": "player_22",
                 "title": {
-                    "ES": "CJ nunca tendrá hambre",
-                    "EN": "CJ never gets hungry",
-                    "FR": "CJ n'aura jamais faim",
-                    "PT": "CJ nunca ficará com fome"
+                    "es": "CJ nunca tendrá hambre",
+                    "en": "CJ never gets hungry",
+                    "fr": "CJ n'aura jamais faim",
+                    "pt": "CJ nunca ficará com fome"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -2587,10 +2587,10 @@
             {
                 "id": "player_23",
                 "title": {
-                    "ES": "Respeto al máximo",
-                    "EN": "Maximum respect",
-                    "FR": "Respect au maximum",
-                    "PT": "Respeito no máximo"
+                    "es": "Respeto al máximo",
+                    "en": "Maximum respect",
+                    "fr": "Respect au maximum",
+                    "pt": "Respeito no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2725,10 +2725,10 @@
             {
                 "id": "player_24",
                 "title": {
-                    "ES": "Resistencia al máximo",
-                    "EN": "Maximum stamina",
-                    "FR": "Endurance au maximum",
-                    "PT": "Resistência no máximo"
+                    "es": "Resistencia al máximo",
+                    "en": "Maximum stamina",
+                    "fr": "Endurance au maximum",
+                    "pt": "Resistência no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2836,10 +2836,10 @@
             {
                 "id": "player_25",
                 "title": {
-                    "ES": "Capacidad pulmonar al máximo",
-                    "EN": "Maximum lung capacity",
-                    "FR": "Capacité pulmonaire au maximum",
-                    "PT": "Capacidade pulmonar no máximo"
+                    "es": "Capacidad pulmonar al máximo",
+                    "en": "Maximum lung capacity",
+                    "fr": "Capacité pulmonaire au maximum",
+                    "pt": "Capacidade pulmonar no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2947,10 +2947,10 @@
             {
                 "id": "player_26",
                 "title": {
-                    "ES": "Sex-appeal al máximo",
-                    "EN": "Maximum sex appeal",
-                    "FR": "Sex-appeal au maximum",
-                    "PT": "Apelo sexual no máximo"
+                    "es": "Sex-appeal al máximo",
+                    "en": "Maximum sex appeal",
+                    "fr": "Sex-appeal au maximum",
+                    "pt": "Apelo sexual no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -3085,10 +3085,10 @@
             {
                 "id": "player_27",
                 "title": {
-                    "ES": "Habilidad de conducción al máximo",
-                    "EN": "Maximum driving skill",
-                    "FR": "Compétence de conduite au maximum",
-                    "PT": "Habilidade de condução no máximo"
+                    "es": "Habilidad de conducción al máximo",
+                    "en": "Maximum driving skill",
+                    "fr": "Compétence de conduite au maximum",
+                    "pt": "Habilidade de condução no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -3224,19 +3224,19 @@
     },
     "Vehículos": {
         "category": {
-            "ES": "Vehículos",
-            "EN": "Vehicles",
-            "FR": "Véhicules",
-            "PT": "Veículos"
+            "es": "Vehículos",
+            "en": "Vehicles",
+            "fr": "Véhicules",
+            "pt": "Veículos"
         },
         "cheats": [
             {
                 "id": "vehicles_1",
                 "title": {
-                    "ES": "Aparecer un Bloodring Banger",
-                    "EN": "Spawn Bloodring Banger",
-                    "FR": "Faire apparaître un Bloodring Banger",
-                    "PT": "Gerar um Bloodring Banger"
+                    "es": "Aparecer un Bloodring Banger",
+                    "en": "Spawn Bloodring Banger",
+                    "fr": "Faire apparaître un Bloodring Banger",
+                    "pt": "Gerar um Bloodring Banger"
                 },
                 "codes": {
                     "ps2": [
@@ -3353,10 +3353,10 @@
             {
                 "id": "vehicles_2",
                 "title": {
-                    "ES": "Aparecer un Caddy",
-                    "EN": "Spawn Caddy",
-                    "FR": "Faire apparaître un Caddy",
-                    "PT": "Gerar um Caddy"
+                    "es": "Aparecer un Caddy",
+                    "en": "Spawn Caddy",
+                    "fr": "Faire apparaître un Caddy",
+                    "pt": "Gerar um Caddy"
                 },
                 "codes": {
                     "ps2": [
@@ -3473,10 +3473,10 @@
             {
                 "id": "vehicles_3",
                 "title": {
-                    "ES": "Aparecer un Dozer",
-                    "EN": "Spawn Dozer",
-                    "FR": "Faire apparaître un Dozer",
-                    "PT": "Gerar um Dozer"
+                    "es": "Aparecer un Dozer",
+                    "en": "Spawn Dozer",
+                    "fr": "Faire apparaître un Dozer",
+                    "pt": "Gerar um Dozer"
                 },
                 "codes": {
                     "ps2": [
@@ -3593,10 +3593,10 @@
             {
                 "id": "vehicles_4",
                 "title": {
-                    "ES": "Aparecer un Hunter",
-                    "EN": "Spawn Hunter",
-                    "FR": "Faire apparaître un Hunter",
-                    "PT": "Gerar um Hunter"
+                    "es": "Aparecer un Hunter",
+                    "en": "Spawn Hunter",
+                    "fr": "Faire apparaître un Hunter",
+                    "pt": "Gerar um Hunter"
                 },
                 "codes": {
                     "ps2": [
@@ -3731,10 +3731,10 @@
             {
                 "id": "vehicles_5",
                 "title": {
-                    "ES": "Aparecer un Hydra",
-                    "EN": "Spawn Hydra",
-                    "FR": "Faire apparaître un Hydra",
-                    "PT": "Gerar um Hydra"
+                    "es": "Aparecer un Hydra",
+                    "en": "Spawn Hydra",
+                    "fr": "Faire apparaître un Hydra",
+                    "pt": "Gerar um Hydra"
                 },
                 "codes": {
                     "ps2": [
@@ -3822,10 +3822,10 @@
             {
                 "id": "vehicles_6",
                 "title": {
-                    "ES": "Aparecer un Monster Truck",
-                    "EN": "Spawn Monster Truck",
-                    "FR": "Faire apparaître un Monster Truck",
-                    "PT": "Gerar um Monster Truck"
+                    "es": "Aparecer un Monster Truck",
+                    "en": "Spawn Monster Truck",
+                    "fr": "Faire apparaître un Monster Truck",
+                    "pt": "Gerar um Monster Truck"
                 },
                 "codes": {
                     "ps2": [
@@ -3960,10 +3960,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "ES": "Aparecer un Quad",
-                    "EN": "Spawn Quad",
-                    "FR": "Faire apparaître un Quad",
-                    "PT": "Gerar um Quad"
+                    "es": "Aparecer un Quad",
+                    "en": "Spawn Quad",
+                    "fr": "Faire apparaître un Quad",
+                    "pt": "Gerar um Quad"
                 },
                 "codes": {
                     "ps2": [
@@ -4089,10 +4089,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "ES": "Aparecer un Hotring Racer V2",
-                    "EN": "Spawn Hotring Racer V2",
-                    "FR": "Faire apparaître un Hotring Racer V2",
-                    "PT": "Gerar um Hotring Racer V2"
+                    "es": "Aparecer un Hotring Racer V2",
+                    "en": "Spawn Hotring Racer V2",
+                    "fr": "Faire apparaître un Hotring Racer V2",
+                    "pt": "Gerar um Hotring Racer V2"
                 },
                 "codes": {
                     "ps2": [
@@ -4209,10 +4209,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "ES": "Aparecer un Hotring Racer V3",
-                    "EN": "Spawn Hotring Racer V3",
-                    "FR": "Faire apparaître un Hotring Racer V3",
-                    "PT": "Gerar um Hotring Racer V3"
+                    "es": "Aparecer un Hotring Racer V3",
+                    "en": "Spawn Hotring Racer V3",
+                    "fr": "Faire apparaître un Hotring Racer V3",
+                    "pt": "Gerar um Hotring Racer V3"
                 },
                 "codes": {
                     "ps2": [
@@ -4329,10 +4329,10 @@
             {
                 "id": "vehicles_10",
                 "title": {
-                    "ES": "Aparecer un Rancher",
-                    "EN": "Spawn Rancher",
-                    "FR": "Faire apparaître un Rancher",
-                    "PT": "Gerar um Rancher"
+                    "es": "Aparecer un Rancher",
+                    "en": "Spawn Rancher",
+                    "fr": "Faire apparaître un Rancher",
+                    "pt": "Gerar um Rancher"
                 },
                 "codes": {
                     "ps2": [
@@ -4431,10 +4431,10 @@
             {
                 "id": "vehicles_11",
                 "title": {
-                    "ES": "Aparecer un Rhino",
-                    "EN": "Spawn Rhino",
-                    "FR": "Faire apparaître un Rhino",
-                    "PT": "Gerar um Rhino"
+                    "es": "Aparecer un Rhino",
+                    "en": "Spawn Rhino",
+                    "fr": "Faire apparaître un Rhino",
+                    "pt": "Gerar um Rhino"
                 },
                 "codes": {
                     "ps2": [
@@ -4569,10 +4569,10 @@
             {
                 "id": "vehicles_12",
                 "title": {
-                    "ES": "Aparecer un Romero",
-                    "EN": "Spawn Romero",
-                    "FR": "Faire apparaître un Romero",
-                    "PT": "Gerar um Romero"
+                    "es": "Aparecer un Romero",
+                    "en": "Spawn Romero",
+                    "fr": "Faire apparaître un Romero",
+                    "pt": "Gerar um Romero"
                 },
                 "codes": {
                     "ps2": [
@@ -4689,10 +4689,10 @@
             {
                 "id": "vehicles_13",
                 "title": {
-                    "ES": "Aparecer un Stretch",
-                    "EN": "Spawn Stretch",
-                    "FR": "Faire apparaître un Stretch",
-                    "PT": "Gerar um Stretch"
+                    "es": "Aparecer un Stretch",
+                    "en": "Spawn Stretch",
+                    "fr": "Faire apparaître un Stretch",
+                    "pt": "Gerar um Stretch"
                 },
                 "codes": {
                     "ps2": [
@@ -4800,10 +4800,10 @@
             {
                 "id": "vehicles_14",
                 "title": {
-                    "ES": "Aparecer un Stunt Plane",
-                    "EN": "Spawn Stunt Plane",
-                    "FR": "Faire apparaître un Stunt Plane",
-                    "PT": "Gerar um Stunt Plane"
+                    "es": "Aparecer un Stunt Plane",
+                    "en": "Spawn Stunt Plane",
+                    "fr": "Faire apparaître un Stunt Plane",
+                    "pt": "Gerar um Stunt Plane"
                 },
                 "codes": {
                     "ps2": [
@@ -4938,10 +4938,10 @@
             {
                 "id": "vehicles_15",
                 "title": {
-                    "ES": "Aparecer un Tanker",
-                    "EN": "Spawn Tanker",
-                    "FR": "Faire apparaître un Tanker",
-                    "PT": "Gerar um Tanker"
+                    "es": "Aparecer un Tanker",
+                    "en": "Spawn Tanker",
+                    "fr": "Faire apparaître un Tanker",
+                    "pt": "Gerar um Tanker"
                 },
                 "codes": {
                     "ps2": [
@@ -5076,10 +5076,10 @@
             {
                 "id": "vehicles_16",
                 "title": {
-                    "ES": "Aparecer un Trashmaster",
-                    "EN": "Spawn Trashmaster",
-                    "FR": "Faire apparaître un Trashmaster",
-                    "PT": "Gerar um Trashmaster"
+                    "es": "Aparecer un Trashmaster",
+                    "en": "Spawn Trashmaster",
+                    "fr": "Faire apparaître un Trashmaster",
+                    "pt": "Gerar um Trashmaster"
                 },
                 "codes": {
                     "ps2": [
@@ -5196,10 +5196,10 @@
             {
                 "id": "vehicles_17",
                 "title": {
-                    "ES": "Aparecer un Vortex",
-                    "EN": "Spawn Vortex",
-                    "FR": "Faire apparaître un Vortex",
-                    "PT": "Gerar um Vortex"
+                    "es": "Aparecer un Vortex",
+                    "en": "Spawn Vortex",
+                    "fr": "Faire apparaître un Vortex",
+                    "pt": "Gerar um Vortex"
                 },
                 "codes": {
                     "ps2": [
@@ -5307,19 +5307,19 @@
             {
                 "id": "vehicles_18",
                 "title": {
-                    "ES": "Explotar todos los vehículos",
-                    "EN": "Blow up all vehicles",
-                    "FR": "Faire exploser tous les véhicules",
-                    "PT": "Explodir todos os veículos"
+                    "es": "Explotar todos los vehículos",
+                    "en": "Blow up all vehicles",
+                    "fr": "Faire exploser tous les véhicules",
+                    "pt": "Explodir todos os veículos"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -5387,10 +5387,10 @@
             {
                 "id": "vehicles_19",
                 "title": {
-                    "ES": "Coche invencible",
-                    "EN": "Invincible car",
-                    "FR": "Voiture invincible",
-                    "PT": "Carro invencível"
+                    "es": "Coche invencible",
+                    "en": "Invincible car",
+                    "fr": "Voiture invincible",
+                    "pt": "Carro invencível"
                 },
                 "codes": {
                     "ps2": [
@@ -5507,10 +5507,10 @@
             {
                 "id": "vehicles_20",
                 "title": {
-                    "ES": "Coches voladores",
-                    "EN": "Flying cars",
-                    "FR": "Voitures volantes",
-                    "PT": "Carros voadores"
+                    "es": "Coches voladores",
+                    "en": "Flying cars",
+                    "fr": "Voitures volantes",
+                    "pt": "Carros voadores"
                 },
                 "codes": {
                     "ps2": [
@@ -5618,10 +5618,10 @@
             {
                 "id": "vehicles_21",
                 "title": {
-                    "ES": "Barcos voladores",
-                    "EN": "Flying boats",
-                    "FR": "Bateaux volants",
-                    "PT": "Barcos voadores"
+                    "es": "Barcos voladores",
+                    "en": "Flying boats",
+                    "fr": "Bateaux volants",
+                    "pt": "Barcos voadores"
                 },
                 "codes": {
                     "ps2": [
@@ -5738,10 +5738,10 @@
             {
                 "id": "vehicles_22",
                 "title": {
-                    "ES": "Los coches flotarán en el agua",
-                    "EN": "Cars float on water",
-                    "FR": "Les voitures flottent sur l'eau",
-                    "PT": "Carros flutuam na água"
+                    "es": "Los coches flotarán en el agua",
+                    "en": "Cars float on water",
+                    "fr": "Les voitures flottent sur l'eau",
+                    "pt": "Carros flutuam na água"
                 },
                 "platformNotes": [
                     {
@@ -5838,19 +5838,19 @@
             {
                 "id": "vehicles_23",
                 "title": {
-                    "ES": "Coches invisibles",
-                    "EN": "Invisible cars",
-                    "FR": "Voitures invisibles",
-                    "PT": "Carros invisíveis"
+                    "es": "Coches invisibles",
+                    "en": "Invisible cars",
+                    "fr": "Voitures invisibles",
+                    "pt": "Carros invisíveis"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -5882,10 +5882,10 @@
             {
                 "id": "vehicles_24",
                 "title": {
-                    "ES": "Mejor suspensión",
-                    "EN": "Better suspension",
-                    "FR": "Meilleure suspension",
-                    "PT": "Melhor suspensão"
+                    "es": "Mejor suspensión",
+                    "en": "Better suspension",
+                    "fr": "Meilleure suspension",
+                    "pt": "Melhor suspensão"
                 },
                 "codes": {
                     "ps2": [
@@ -6002,10 +6002,10 @@
             {
                 "id": "vehicles_25",
                 "title": {
-                    "ES": "Mejor conducción",
-                    "EN": "Better handling",
-                    "FR": "Meilleure conduite",
-                    "PT": "Melhor dirigibilidade"
+                    "es": "Mejor conducción",
+                    "en": "Better handling",
+                    "fr": "Meilleure conduite",
+                    "pt": "Melhor dirigibilidade"
                 },
                 "codes": {
                     "ps2": [
@@ -6094,10 +6094,10 @@
             {
                 "id": "vehicles_26",
                 "title": {
-                    "ES": "Todos los coches tendrán nitro",
-                    "EN": "All cars have nitro",
-                    "FR": "Toutes les voitures ont du nitro",
-                    "PT": "Todos os carros têm nitro"
+                    "es": "Todos los coches tendrán nitro",
+                    "en": "All cars have nitro",
+                    "fr": "Toutes les voitures ont du nitro",
+                    "pt": "Todos os carros têm nitro"
                 },
                 "codes": {
                     "ps2": [
@@ -6232,19 +6232,19 @@
             {
                 "id": "vehicles_27",
                 "title": {
-                    "ES": "CJ podrá disparar manualmente desde el coche",
-                    "EN": "CJ can manually perform drive-bys",
-                    "FR": "CJ peut effectuer des tirs en voiture manuellement",
-                    "PT": "CJ pode fazer disparos manuais de dentro do carro"
+                    "es": "CJ podrá disparar manualmente desde el coche",
+                    "en": "CJ can manually perform drive-bys",
+                    "fr": "CJ peut effectuer des tirs en voiture manuellement",
+                    "pt": "CJ pode fazer disparos manuais de dentro do carro"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -6304,19 +6304,19 @@
             {
                 "id": "vehicles_28",
                 "title": {
-                    "ES": "Los coches flotarán al ser chocados",
-                    "EN": "Cars float when hit",
-                    "FR": "Les voitures flottent lorsqu'elles sont percutées",
-                    "PT": "Os carros flutuam quando são atingidos"
+                    "es": "Los coches flotarán al ser chocados",
+                    "en": "Cars float when hit",
+                    "fr": "Les voitures flottent lorsqu'elles sont percutées",
+                    "pt": "Os carros flutuam quando são atingidos"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -6376,10 +6376,10 @@
             {
                 "id": "vehicles_29",
                 "title": {
-                    "ES": "Conductores agresivos",
-                    "EN": "Aggressive drivers",
-                    "FR": "Conducteurs agressifs",
-                    "PT": "Motoristas agressivos"
+                    "es": "Conductores agresivos",
+                    "en": "Aggressive drivers",
+                    "fr": "Conducteurs agressifs",
+                    "pt": "Motoristas agressivos"
                 },
                 "codes": {
                     "ps2": [
@@ -6514,10 +6514,10 @@
             {
                 "id": "vehicles_30",
                 "title": {
-                    "ES": "Tráfico agresivo",
-                    "EN": "Aggressive traffic",
-                    "FR": "Circulation agressive",
-                    "PT": "Trânsito agressivo"
+                    "es": "Tráfico agresivo",
+                    "en": "Aggressive traffic",
+                    "fr": "Circulation agressive",
+                    "pt": "Trânsito agressivo"
                 },
                 "codes": {
                     "ps2": [
@@ -6624,10 +6624,10 @@
             {
                 "id": "vehicles_31",
                 "title": {
-                    "ES": "Tráfico negro",
-                    "EN": "Black traffic",
-                    "FR": "Circulation noire",
-                    "PT": "Trânsito negro"
+                    "es": "Tráfico negro",
+                    "en": "Black traffic",
+                    "fr": "Circulation noire",
+                    "pt": "Trânsito negro"
                 },
                 "codes": {
                     "ps2": [
@@ -6744,10 +6744,10 @@
             {
                 "id": "vehicles_32",
                 "title": {
-                    "ES": "Tráfico rosa",
-                    "EN": "Pink traffic",
-                    "FR": "Circulation rose",
-                    "PT": "Trânsito rosa"
+                    "es": "Tráfico rosa",
+                    "en": "Pink traffic",
+                    "fr": "Circulation rose",
+                    "pt": "Trânsito rosa"
                 },
                 "codes": {
                     "ps2": [
@@ -6864,10 +6864,10 @@
             {
                 "id": "vehicles_33",
                 "title": {
-                    "ES": "Todos los semáforos verdes",
-                    "EN": "All traffic lights green",
-                    "FR": "Tous les feux de circulation au vert",
-                    "PT": "Todos os semáforos verdes"
+                    "es": "Todos los semáforos verdes",
+                    "en": "All traffic lights green",
+                    "fr": "Tous les feux de circulation au vert",
+                    "pt": "Todos os semáforos verdes"
                 },
                 "codes": {
                     "ps2": [
@@ -6985,19 +6985,19 @@
     },
     "Clima": {
         "category": {
-            "ES": "Clima",
-            "EN": "Weather",
-            "FR": "Météo",
-            "PT": "Clima"
+            "es": "Clima",
+            "en": "Weather",
+            "fr": "Météo",
+            "pt": "Clima"
         },
         "cheats": [
             {
                 "id": "weather_1",
                 "title": {
-                    "ES": "Clima caluroso",
-                    "EN": "Hot weather",
-                    "FR": "Temps chaud",
-                    "PT": "Tempo quente"
+                    "es": "Clima caluroso",
+                    "en": "Hot weather",
+                    "fr": "Temps chaud",
+                    "pt": "Tempo quente"
                 },
                 "codes": {
                     "ps2": [
@@ -7087,10 +7087,10 @@
             {
                 "id": "weather_2",
                 "title": {
-                    "ES": "Clima soleado",
-                    "EN": "Sunny weather",
-                    "FR": "Temps ensoleillé",
-                    "PT": "Clima ensolarado"
+                    "es": "Clima soleado",
+                    "en": "Sunny weather",
+                    "fr": "Temps ensoleillé",
+                    "pt": "Clima ensolarado"
                 },
                 "codes": {
                     "ps2": [
@@ -7162,10 +7162,10 @@
             {
                 "id": "weather_3",
                 "title": {
-                    "ES": "Clima despejado",
-                    "EN": "Clear weather",
-                    "FR": "Temps dégagé",
-                    "PT": "Tempo limpo"
+                    "es": "Clima despejado",
+                    "en": "Clear weather",
+                    "fr": "Temps dégagé",
+                    "pt": "Tempo limpo"
                 },
                 "codes": {
                     "ps2": [
@@ -7237,10 +7237,10 @@
             {
                 "id": "weather_4",
                 "title": {
-                    "ES": "Clima lluvioso",
-                    "EN": "Rainy weather",
-                    "FR": "Temps pluvieux",
-                    "PT": "Tempo chuvoso"
+                    "es": "Clima lluvioso",
+                    "en": "Rainy weather",
+                    "fr": "Temps pluvieux",
+                    "pt": "Tempo chuvoso"
                 },
                 "codes": {
                     "ps2": [
@@ -7312,10 +7312,10 @@
             {
                 "id": "weather_5",
                 "title": {
-                    "ES": "Tormenta",
-                    "EN": "Stormy weather",
-                    "FR": "Temps orageux",
-                    "PT": "Clima tempestuoso"
+                    "es": "Tormenta",
+                    "en": "Stormy weather",
+                    "fr": "Temps orageux",
+                    "pt": "Clima tempestuoso"
                 },
                 "codes": {
                     "ps2": [
@@ -7387,10 +7387,10 @@
             {
                 "id": "weather_6",
                 "title": {
-                    "ES": "Niebla",
-                    "EN": "Foggy weather",
-                    "FR": "Temps brumeux",
-                    "PT": "Clima com neblina"
+                    "es": "Niebla",
+                    "en": "Foggy weather",
+                    "fr": "Temps brumeux",
+                    "pt": "Clima com neblina"
                 },
                 "codes": {
                     "ps2": [
@@ -7462,10 +7462,10 @@
             {
                 "id": "weather_7",
                 "title": {
-                    "ES": "Tormenta de arena",
-                    "EN": "Sandstorm",
-                    "FR": "Tempête de sable",
-                    "PT": "Tempestade de areia"
+                    "es": "Tormenta de arena",
+                    "en": "Sandstorm",
+                    "fr": "Tempête de sable",
+                    "pt": "Tempestade de areia"
                 },
                 "codes": {
                     "ps2": [
@@ -7592,19 +7592,19 @@
     },
     "Peatones": {
         "category": {
-            "ES": "Peatones",
-            "EN": "Pedestrians",
-            "FR": "Piétons",
-            "PT": "Pedestres"
+            "es": "Peatones",
+            "en": "Pedestrians",
+            "fr": "Piétons",
+            "pt": "Pedestres"
         },
         "cheats": [
             {
                 "id": "peds_1",
                 "title": {
-                    "ES": "Modo caos",
-                    "EN": "Pedestrian riot",
-                    "FR": "Émeute des piétons",
-                    "PT": "Motim de pedestres"
+                    "es": "Modo caos",
+                    "en": "Pedestrian riot",
+                    "fr": "Émeute des piétons",
+                    "pt": "Motim de pedestres"
                 },
                 "codes": {
                     "ps2": [
@@ -7739,10 +7739,10 @@
             {
                 "id": "peds_2",
                 "title": {
-                    "ES": "Modo caos con palos de golf",
-                    "EN": "Pedestrian riot with golf clubs",
-                    "FR": "Émeute des piétons avec des clubs de golf",
-                    "PT": "Motim de pedestres com tacos de golfe"
+                    "es": "Modo caos con palos de golf",
+                    "en": "Pedestrian riot with golf clubs",
+                    "fr": "Émeute des piétons avec des clubs de golf",
+                    "pt": "Motim de pedestres com tacos de golfe"
                 },
                 "codes": {
                     "ps2": [
@@ -7850,19 +7850,19 @@
             {
                 "id": "peds_3",
                 "title": {
-                    "ES": "Modo chulo",
-                    "EN": "Pimp mode",
-                    "FR": "Mode mac",
-                    "PT": "Modo cafetão"
+                    "es": "Modo chulo",
+                    "en": "Pimp mode",
+                    "fr": "Mode mac",
+                    "pt": "Modo cafetão"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -7918,10 +7918,10 @@
             {
                 "id": "peds_4",
                 "title": {
-                    "ES": "Temática de playa",
-                    "EN": "Beach theme",
-                    "FR": "Thème plage",
-                    "PT": "Tema de praia"
+                    "es": "Temática de playa",
+                    "en": "Beach theme",
+                    "fr": "Thème plage",
+                    "pt": "Tema de praia"
                 },
                 "codes": {
                     "ps2": [
@@ -8038,10 +8038,10 @@
             {
                 "id": "peds_5",
                 "title": {
-                    "ES": "Temática de circo",
-                    "EN": "Circus theme",
-                    "FR": "Thème cirque",
-                    "PT": "Tema de circo"
+                    "es": "Temática de circo",
+                    "en": "Circus theme",
+                    "fr": "Thème cirque",
+                    "pt": "Tema de circo"
                 },
                 "codes": {
                     "ps2": [
@@ -8129,10 +8129,10 @@
             {
                 "id": "peds_6",
                 "title": {
-                    "ES": "Temática de Elvis",
-                    "EN": "Elvis theme",
-                    "FR": "Thème Elvis",
-                    "PT": "Tema do Elvis"
+                    "es": "Temática de Elvis",
+                    "en": "Elvis theme",
+                    "fr": "Thème Elvis",
+                    "pt": "Tema do Elvis"
                 },
                 "codes": {
                     "ps2": [
@@ -8249,19 +8249,19 @@
             {
                 "id": "peds_7",
                 "title": {
-                    "ES": "Temática rural",
-                    "EN": "Rural theme",
-                    "FR": "Thème rural",
-                    "PT": "Tema rural"
+                    "es": "Temática rural",
+                    "en": "Rural theme",
+                    "fr": "Thème rural",
+                    "pt": "Tema rural"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -8329,19 +8329,19 @@
             {
                 "id": "peds_8",
                 "title": {
-                    "ES": "Temática de tríadas",
-                    "EN": "Triad theme",
-                    "FR": "Thème des triades",
-                    "PT": "Tema das tríades"
+                    "es": "Temática de tríadas",
+                    "en": "Triad theme",
+                    "fr": "Thème des triades",
+                    "pt": "Tema das tríades"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -8397,10 +8397,10 @@
             {
                 "id": "peds_9",
                 "title": {
-                    "ES": "Tráfico de coches deportivos",
-                    "EN": "Sports car traffic",
-                    "FR": "Circulation de voitures de sport",
-                    "PT": "Trânsito de carros esportivos"
+                    "es": "Tráfico de coches deportivos",
+                    "en": "Sports car traffic",
+                    "fr": "Circulation de voitures de sport",
+                    "pt": "Trânsito de carros esportivos"
                 },
                 "codes": {
                     "ps2": [
@@ -8517,10 +8517,10 @@
             {
                 "id": "peds_10",
                 "title": {
-                    "ES": "Tráfico de coches rurales",
-                    "EN": "Rural car traffic",
-                    "FR": "Circulation de voitures rurales",
-                    "PT": "Trânsito de carros rurais"
+                    "es": "Tráfico de coches rurales",
+                    "en": "Rural car traffic",
+                    "fr": "Circulation de voitures rurales",
+                    "pt": "Trânsito de carros rurais"
                 },
                 "codes": {
                     "ps2": [
@@ -8637,10 +8637,10 @@
             {
                 "id": "peds_11",
                 "title": {
-                    "ES": "Ciudad fantasma",
-                    "EN": "Ghost town",
-                    "FR": "Ville fantôme",
-                    "PT": "Cidade fantasma"
+                    "es": "Ciudad fantasma",
+                    "en": "Ghost town",
+                    "fr": "Ville fantôme",
+                    "pt": "Cidade fantasma"
                 },
                 "codes": {
                     "ps2": [
@@ -8748,19 +8748,19 @@
             {
                 "id": "peds_12",
                 "title": {
-                    "ES": "Los peatones odian a CJ",
-                    "EN": "Pedestrians hate CJ",
-                    "FR": "Les piétons détestent CJ",
-                    "PT": "Os pedestres odeiam CJ"
+                    "es": "Los peatones odian a CJ",
+                    "en": "Pedestrians hate CJ",
+                    "fr": "Les piétons détestent CJ",
+                    "pt": "Os pedestres odeiam CJ"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
-                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
-                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
-                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
-                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                            "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
                         "noteType": "warning"
                     }
@@ -8871,19 +8871,19 @@
             {
                 "id": "peds_13",
                 "title": {
-                    "ES": "Los peatones atacarán a CJ con armas",
-                    "EN": "Pedestrians attack CJ with weapons",
-                    "FR": "Les piétons attaquent CJ avec des armes",
-                    "PT": "Os pedestres atacam CJ com armas"
+                    "es": "Los peatones atacarán a CJ con armas",
+                    "en": "Pedestrians attack CJ with weapons",
+                    "fr": "Les piétons attaquent CJ avec des armes",
+                    "pt": "Os pedestres atacam CJ com armas"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
-                            "ES": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
-                            "EN": "This cheat is irreversible. It is recommended not to save the game after activating it.",
-                            "FR": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
-                            "PT": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
+                            "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
+                            "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
+                            "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
+                            "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
                         "noteType": "warning"
                     }
@@ -9021,10 +9021,10 @@
             {
                 "id": "peds_14",
                 "title": {
-                    "ES": "Los peatones tendrán armas",
-                    "EN": "Pedestrians carry weapons",
-                    "FR": "Les piétons portent des armes",
-                    "PT": "Os pedestres terão armas"
+                    "es": "Los peatones tendrán armas",
+                    "en": "Pedestrians carry weapons",
+                    "fr": "Les piétons portent des armes",
+                    "pt": "Os pedestres terão armas"
                 },
                 "codes": {
                     "ps2": [
@@ -9087,10 +9087,10 @@
             {
                 "id": "peds_15",
                 "title": {
-                    "ES": "Las prostitutas le pagarán a CJ por tener sexo",
-                    "EN": "Prostitutes pay CJ for sex",
-                    "FR": "Les prostituées paient CJ pour avoir des relations sexuelles",
-                    "PT": "As prostitutas pagam CJ para fazer sexo"
+                    "es": "Las prostitutas le pagarán a CJ por tener sexo",
+                    "en": "Prostitutes pay CJ for sex",
+                    "fr": "Les prostituées paient CJ pour avoir des relations sexuelles",
+                    "pt": "As prostitutas pagam CJ para fazer sexo"
                 },
                 "codes": {
                     "ps2": [
@@ -9197,10 +9197,10 @@
             {
                 "id": "peds_16",
                 "title": {
-                    "ES": "Más Families por las calles",
-                    "EN": "More Families on the streets",
-                    "FR": "Plus de Families dans les rues",
-                    "PT": "Mais Families pelas ruas"
+                    "es": "Más Families por las calles",
+                    "en": "More Families on the streets",
+                    "fr": "Plus de Families dans les rues",
+                    "pt": "Mais Families pelas ruas"
                 },
                 "codes": {
                     "ps2": [
@@ -9317,10 +9317,10 @@
             {
                 "id": "peds_17",
                 "title": {
-                    "ES": "Bandas por las calles",
-                    "EN": "Gangs on the streets",
-                    "FR": "Des gangs dans les rues",
-                    "PT": "Gangues pelas ruas"
+                    "es": "Bandas por las calles",
+                    "en": "Gangs on the streets",
+                    "fr": "Des gangs dans les rues",
+                    "pt": "Gangues pelas ruas"
                 },
                 "codes": {
                     "ps2": [
@@ -9437,10 +9437,10 @@
             {
                 "id": "peds_18",
                 "title": {
-                    "ES": "Guerras de bandas por las calles",
-                    "EN": "Gang wars in the streets",
-                    "FR": "Guerres de gangs dans les rues",
-                    "PT": "Guerras de gangues pelas ruas"
+                    "es": "Guerras de bandas por las calles",
+                    "en": "Gang wars in the streets",
+                    "fr": "Guerres de gangs dans les rues",
+                    "pt": "Guerras de gangues pelas ruas"
                 },
                 "codes": {
                     "ps2": [
@@ -9557,10 +9557,10 @@
             {
                 "id": "peds_19",
                 "title": {
-                    "ES": "Reclutar a cualquier peatón con pistola",
-                    "EN": "Recruit any pedestrian with a pistol",
-                    "FR": "Recruter n'importe quel piéton avec un pistolet",
-                    "PT": "Recrutar qualquer pedestre com uma pistola"
+                    "es": "Reclutar a cualquier peatón con pistola",
+                    "en": "Recruit any pedestrian with a pistol",
+                    "fr": "Recruter n'importe quel piéton avec un pistolet",
+                    "pt": "Recrutar qualquer pedestre com uma pistola"
                 },
                 "codes": {
                     "ps2": [
@@ -9668,19 +9668,19 @@
             {
                 "id": "peds_20",
                 "title": {
-                    "ES": "Reclutar a cualquier peatón con lanzacohetes",
-                    "EN": "Recruit any pedestrian with a rocket launcher",
-                    "FR": "Recruter n'importe quel piéton avec un lance-roquettes",
-                    "PT": "Recrutar qualquer pedestre com um lança-foguetes"
+                    "es": "Reclutar a cualquier peatón con lanzacohetes",
+                    "en": "Recruit any pedestrian with a rocket launcher",
+                    "fr": "Recruter n'importe quel piéton avec un lance-roquettes",
+                    "pt": "Recrutar qualquer pedestre com um lança-foguetes"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -9740,10 +9740,10 @@
             {
                 "id": "peds_21",
                 "title": {
-                    "ES": "Reclutar a cualquier peatón con AK-47",
-                    "EN": "Recruit any pedestrian with an AK-47",
-                    "FR": "Recruter n'importe quel piéton avec un AK-47",
-                    "PT": "Recrutar qualquer pedestre com uma AK-47"
+                    "es": "Reclutar a cualquier peatón con AK-47",
+                    "en": "Recruit any pedestrian with an AK-47",
+                    "fr": "Recruter n'importe quel piéton avec un AK-47",
+                    "pt": "Recrutar qualquer pedestre com uma AK-47"
                 },
                 "codes": {
                     "pc": ["BMTPWHR", "NOONECANSTOPUS"]
@@ -9753,19 +9753,19 @@
     },
     "Otros": {
         "category": {
-            "ES": "Otros",
-            "EN": "Other",
-            "FR": "Autres",
-            "PT": "Outros"
+            "es": "Otros",
+            "en": "Other",
+            "fr": "Autres",
+            "pt": "Outros"
         },
         "cheats": [
             {
                 "id": "other_1",
                 "title": {
-                    "ES": "Aumentar velocidad de juego",
-                    "EN": "Increase game speed",
-                    "FR": "Augmenter la vitesse du jeu",
-                    "PT": "Aumentar velocidade do jogo"
+                    "es": "Aumentar velocidad de juego",
+                    "en": "Increase game speed",
+                    "fr": "Augmenter la vitesse du jeu",
+                    "pt": "Aumentar velocidade do jogo"
                 },
                 "codes": {
                     "ps2": [
@@ -9815,10 +9815,10 @@
             {
                 "id": "other_2",
                 "title": {
-                    "ES": "Disminuir velocidad de juego",
-                    "EN": "Decrease game speed",
-                    "FR": "Réduire la vitesse du jeu",
-                    "PT": "Diminuir velocidade do jogo"
+                    "es": "Disminuir velocidad de juego",
+                    "en": "Decrease game speed",
+                    "fr": "Réduire la vitesse du jeu",
+                    "pt": "Diminuir velocidade do jogo"
                 },
                 "codes": {
                     "ps2": [
@@ -9868,10 +9868,10 @@
             {
                 "id": "other_3",
                 "title": {
-                    "ES": "Adelantar el reloj del juego",
-                    "EN": "Faster game clock",
-                    "FR": "Horloge du jeu accélérée",
-                    "PT": "Relógio do jogo acelerado"
+                    "es": "Adelantar el reloj del juego",
+                    "en": "Faster game clock",
+                    "fr": "Horloge du jeu accélérée",
+                    "pt": "Relógio do jogo acelerado"
                 },
                 "codes": {
                     "ps2": [
@@ -10006,19 +10006,19 @@
             {
                 "id": "other_4",
                 "title": {
-                    "ES": "Congelar el reloj a medianoche",
-                    "EN": "Freeze the clock at midnight",
-                    "FR": "Figer l'horloge à minuit",
-                    "PT": "Congelar o relógio à meia-noite"
+                    "es": "Congelar el reloj a medianoche",
+                    "en": "Freeze the clock at midnight",
+                    "fr": "Figer l'horloge à minuit",
+                    "pt": "Congelar o relógio à meia-noite"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Truco removido en la Edición Definitiva.",
-                            "EN": "Cheat removed in the Definitive Edition.",
-                            "FR": "Triche supprimée dans la Definitive Edition.",
-                            "PT": "Trapaça removida na Definitive Edition."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
@@ -10074,10 +10074,10 @@
             {
                 "id": "other_5",
                 "title": {
-                    "ES": "Congelar el reloj al anochecer",
-                    "EN": "Freeze the clock at dusk",
-                    "FR": "Figer l'horloge au crépuscule",
-                    "PT": "Congelar o relógio ao anoitecer"
+                    "es": "Congelar el reloj al anochecer",
+                    "en": "Freeze the clock at dusk",
+                    "fr": "Figer l'horloge au crépuscule",
+                    "pt": "Congelar o relógio ao anoitecer"
                 },
                 "codes": {
                     "ps2": [
@@ -10194,10 +10194,10 @@
             {
                 "id": "other_6",
                 "title": {
-                    "ES": "Completar automáticamente las misiones de taxi",
-                    "EN": "Automatically complete taxi missions",
-                    "FR": "Terminer automatiquement les missions de taxi",
-                    "PT": "Completar automaticamente as missões de táxi"
+                    "es": "Completar automáticamente las misiones de taxi",
+                    "en": "Automatically complete taxi missions",
+                    "fr": "Terminer automatiquement les missions de taxi",
+                    "pt": "Completar automaticamente as missões de táxi"
                 },
                 "codes": {
                     "ps2": [
@@ -10249,19 +10249,19 @@
             {
                 "id": "other_7",
                 "title": {
-                    "ES": "Todos los personajes cabezones",
-                    "EN": "Big head mode",
-                    "FR": "Mode grosses têtes",
-                    "PT": "Modo cabeção"
+                    "es": "Todos los personajes cabezones",
+                    "en": "Big head mode",
+                    "fr": "Mode grosses têtes",
+                    "pt": "Modo cabeção"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "ES": "Solo disponible en la Edición Definitiva.",
-                            "EN": "Only available in the Definitive Edition.",
-                            "FR": "Disponible uniquement dans l'Édition Définitive.",
-                            "PT": "Disponível apenas na Edição Definitiva."
+                            "es": "Solo disponible en la Edición Definitiva.",
+                            "en": "Only available in the Definitive Edition.",
+                            "fr": "Disponible uniquement dans l'Édition Définitive.",
+                            "pt": "Disponível apenas na Edição Definitiva."
                         },
                         "notetype": "info"
                     }

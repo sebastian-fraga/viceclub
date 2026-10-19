@@ -1,19 +1,19 @@
 {
     "Jugador": {
         "category": {
-            "ES": "Jugador",
-            "EN": "Player",
-            "FR": "Joueur",
-            "PT": "Jogador"
+            "es": "Jugador",
+            "en": "Player",
+            "fr": "Joueur",
+            "pt": "Jogador"
         },
         "cheats": [
             {
                 "id": "player_1",
                 "title": {
-                    "ES": "Salud al máximo",
-                    "EN": "Full health",
-                    "FR": "Santé maximale",
-                    "PT": "Saúde máxima"
+                    "es": "Salud al máximo",
+                    "en": "Full health",
+                    "fr": "Santé maximale",
+                    "pt": "Saúde máxima"
                 },
                 "codes": {
                     "psp": ["L", "R", "CROSS", "L", "R", "SQUARE", "L", "R"],
@@ -32,10 +32,10 @@
             {
                 "id": "player_2",
                 "title": {
-                    "ES": "Blindaje al máximo",
-                    "EN": "Full armor",
-                    "FR": "Armure maximale",
-                    "PT": "Blindagem máxima"
+                    "es": "Blindaje al máximo",
+                    "en": "Full armor",
+                    "fr": "Armure maximale",
+                    "pt": "Blindagem máxima"
                 },
                 "codes": {
                     "psp": ["L", "R", "CIRCLE", "L", "R", "CROSS", "L", "R"],
@@ -54,10 +54,10 @@
             {
                 "id": "player_3",
                 "title": {
-                    "ES": "Obtener $250,000",
-                    "EN": "Get $250,000",
-                    "FR": "Obtenir 250 000 $",
-                    "PT": "Obter $250.000"
+                    "es": "Obtener $250,000",
+                    "en": "Get $250,000",
+                    "fr": "Obtenir 250 000 $",
+                    "pt": "Obter $250.000"
                 },
                 "codes": {
                     "psp": ["L", "R", "TRIANGLE", "L", "R", "CIRCLE", "L", "R"],
@@ -76,10 +76,10 @@
             {
                 "id": "player_4",
                 "title": {
-                    "ES": "Suicidarse",
-                    "EN": "Commit suicide",
-                    "FR": "Se suicider",
-                    "PT": "Cometer suicídio"
+                    "es": "Suicidarse",
+                    "en": "Commit suicide",
+                    "fr": "Se suicider",
+                    "pt": "Cometer suicídio"
                 },
                 "codes": {
                     "psp": [
@@ -105,19 +105,19 @@
             {
                 "id": "player_5",
                 "title": {
-                    "ES": "Set de armas 1",
-                    "EN": "Weapons set 1",
-                    "FR": "Ensemble d'armes 1",
-                    "PT": "Conjunto de armas 1"
+                    "es": "Set de armas 1",
+                    "en": "Weapons set 1",
+                    "fr": "Ensemble d'armes 1",
+                    "pt": "Conjunto de armas 1"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "ES": "Otorga el Puño americano, Cuchillo, Cócteles molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de francotirador y Lanzallamas.",
-                            "EN": "Gives the Brass Knuckles, Knife, Molotov Cocktails, Pistol, Shotgun, Tec-9, AK-47, Sniper Rifle and Flamethrower",
-                            "FR": "Donne le Poing américain, Couteau, Cocktails Molotov, Pistolet, Fusil à pompe, Tec-9, AK-47, Fusil de sniper et Lance-flammes",
-                            "PT": "Concede Soco-inglês, Faca, Coquetéis Molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de precisão e Lança-chamas"
+                            "es": "Otorga el Puño americano, Cuchillo, Cócteles molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de francotirador y Lanzallamas.",
+                            "en": "Gives the Brass Knuckles, Knife, Molotov Cocktails, Pistol, Shotgun, Tec-9, AK-47, Sniper Rifle and Flamethrower",
+                            "fr": "Donne le Poing américain, Couteau, Cocktails Molotov, Pistolet, Fusil à pompe, Tec-9, AK-47, Fusil de sniper et Lance-flammes",
+                            "pt": "Concede Soco-inglês, Faca, Coquetéis Molotov, Pistola, Escopeta, Tec-9, AK-47, Rifle de precisão e Lança-chamas"
                         },
                         "noteType": "info"
                     }
@@ -148,19 +148,19 @@
             {
                 "id": "player_6",
                 "title": {
-                    "ES": "Set de armas 2",
-                    "EN": "Weapons set 2",
-                    "FR": "Ensemble d'armes 2",
-                    "PT": "Conjunto de armas 2"
+                    "es": "Set de armas 2",
+                    "en": "Weapons set 2",
+                    "fr": "Ensemble d'armes 2",
+                    "pt": "Conjunto de armas 2"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "ES": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Micro SMG, M4, Rifle de francotirador PSG-1 y Lanzacohetes.",
-                            "EN": "Gives the Katana, Grenades, .357 Revolver, Sawed-off Shotgun, Micro SMG, M4, PSG-1 Sniper Rifle and Rocket Launcher",
-                            "FR": "Donne le Katana, Grenades, Revolver .357, Fusil à canon scié, Micro SMG, M4, Fusil de sniper PSG-1 et Lance-roquettes",
-                            "PT": "Concede Katana, Granadas, Revólver .357, Escopeta serrada, Micro SMG, M4, Rifle de precisão PSG-1 e Lança-foguetes"
+                            "es": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Micro SMG, M4, Rifle de francotirador PSG-1 y Lanzacohetes.",
+                            "en": "Gives the Katana, Grenades, .357 Revolver, Sawed-off Shotgun, Micro SMG, M4, PSG-1 Sniper Rifle and Rocket Launcher",
+                            "fr": "Donne le Katana, Grenades, Revolver .357, Fusil à canon scié, Micro SMG, M4, Fusil de sniper PSG-1 et Lance-roquettes",
+                            "pt": "Concede Katana, Granadas, Revólver .357, Escopeta serrada, Micro SMG, M4, Rifle de precisão PSG-1 e Lança-foguetes"
                         },
                         "noteType": "info"
                     }
@@ -191,19 +191,19 @@
             {
                 "id": "player_7",
                 "title": {
-                    "ES": "Set de armas 3",
-                    "EN": "Weapons set 3",
-                    "FR": "Ensemble d'armes 3",
-                    "PT": "Conjunto de armas 3"
+                    "es": "Set de armas 3",
+                    "en": "Weapons set 3",
+                    "fr": "Ensemble d'armes 3",
+                    "pt": "Conjunto de armas 3"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "ES": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de francotirador y Minigun.",
-                            "EN": "Gives the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, Sniper Rifle and Minigun",
-                            "FR": "Donne la Tronçonneuse, Grenades, Revolver .357, S.P.A.S. 12, Fusil de sniper et Minigun",
-                            "PT": "Concede Motosserra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de precisão e Minigun"
+                            "es": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de francotirador y Minigun.",
+                            "en": "Gives the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, Sniper Rifle and Minigun",
+                            "fr": "Donne la Tronçonneuse, Grenades, Revolver .357, S.P.A.S. 12, Fusil de sniper et Minigun",
+                            "pt": "Concede Motosserra, Granadas, Revólver .357, S.P.A.S. 12, Rifle de precisão e Minigun"
                         },
                         "noteType": "info"
                     }
@@ -234,10 +234,10 @@
             {
                 "id": "player_8",
                 "title": {
-                    "ES": "Obtener 2 niveles de búsqueda",
-                    "EN": "Get 2 wanted levels",
-                    "FR": "Obtenir 2 niveaux de recherche",
-                    "PT": "Obter 2 níveis de procurado"
+                    "es": "Obtener 2 niveles de búsqueda",
+                    "en": "Get 2 wanted levels",
+                    "fr": "Obtenir 2 niveaux de recherche",
+                    "pt": "Obter 2 níveis de procurado"
                 },
                 "codes": {
                     "psp": ["L", "R", "SQUARE", "L", "R", "TRIANGLE", "L", "R"],
@@ -256,10 +256,10 @@
             {
                 "id": "player_9",
                 "title": {
-                    "ES": "Desactivar nivel de búsqueda",
-                    "EN": "Disable wanted level",
-                    "FR": "Désactiver le niveau de recherche",
-                    "PT": "Desativar o nível de procurado"
+                    "es": "Desactivar nivel de búsqueda",
+                    "en": "Disable wanted level",
+                    "fr": "Désactiver le niveau de recherche",
+                    "pt": "Desativar o nível de procurado"
                 },
                 "codes": {
                     "psp": [
@@ -287,10 +287,10 @@
             {
                 "id": "player_10",
                 "title": {
-                    "ES": "Cambiar la skin de Toni",
-                    "EN": "Change Toni's skin",
-                    "FR": "Changer le skin de Toni",
-                    "PT": "Mudar a skin do Toni"
+                    "es": "Cambiar la skin de Toni",
+                    "en": "Change Toni's skin",
+                    "fr": "Changer le skin de Toni",
+                    "pt": "Mudar a skin do Toni"
                 },
                 "codes": {
                     "psp": [
@@ -318,19 +318,19 @@
             {
                 "id": "player_11",
                 "title": {
-                    "ES": "Aparecer en las noticias",
-                    "EN": "Show media attention level",
-                    "FR": "Afficher le niveau d'attention des médias",
-                    "PT": "Mostrar o nível de atenção da mídia"
+                    "es": "Aparecer en las noticias",
+                    "en": "Show media attention level",
+                    "fr": "Afficher le niveau d'attention des médias",
+                    "pt": "Mostrar o nível de atenção da mídia"
                 },
                 "platformNotes": [
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "ES": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
-                            "EN": "A message will appear on the interface when you have a high wanted level",
-                            "FR": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
-                            "PT": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
+                            "es": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
+                            "en": "A message will appear on the interface when you have a high wanted level",
+                            "fr": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
+                            "pt": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
                         },
                         "noteType": "info"
                     }
@@ -362,19 +362,19 @@
     },
     "Vehículos": {
         "category": {
-            "ES": "Vehículos",
-            "EN": "Vehicles",
-            "FR": "Véhicules",
-            "PT": "Veículos"
+            "es": "Vehículos",
+            "en": "Vehicles",
+            "fr": "Véhicules",
+            "pt": "Veículos"
         },
         "cheats": [
             {
                 "id": "vehicles_1",
                 "title": {
-                    "ES": "Aparecer un Rhino",
-                    "EN": "Spawn Rhino",
-                    "FR": "Faire apparaître un Rhino",
-                    "PT": "Gerar um Rhino"
+                    "es": "Aparecer un Rhino",
+                    "en": "Spawn Rhino",
+                    "fr": "Faire apparaître un Rhino",
+                    "pt": "Gerar um Rhino"
                 },
                 "codes": {
                     "psp": [
@@ -402,10 +402,10 @@
             {
                 "id": "vehicles_2",
                 "title": {
-                    "ES": "Aparecer un Trashmaster",
-                    "EN": "Spawn Trashmaster",
-                    "FR": "Faire apparaître un Trashmaster",
-                    "PT": "Gerar um Trashmaster"
+                    "es": "Aparecer un Trashmaster",
+                    "en": "Spawn Trashmaster",
+                    "fr": "Faire apparaître un Trashmaster",
+                    "pt": "Gerar um Trashmaster"
                 },
                 "codes": {
                     "psp": [
@@ -433,10 +433,10 @@
             {
                 "id": "vehicles_3",
                 "title": {
-                    "ES": "Explotar todos los vehículos",
-                    "EN": "Blow up all vehicles",
-                    "FR": "Faire exploser tous les véhicules",
-                    "PT": "Explodir todos os veículos"
+                    "es": "Explotar todos los vehículos",
+                    "en": "Blow up all vehicles",
+                    "fr": "Faire exploser tous les véhicules",
+                    "pt": "Explodir todos os veículos"
                 },
                 "codes": {
                     "psp": [
@@ -464,10 +464,10 @@
             {
                 "id": "vehicles_4",
                 "title": {
-                    "ES": "Los coches flotarán en el agua",
-                    "EN": "Cars float on water",
-                    "FR": "Les voitures flottent sur l'eau",
-                    "PT": "Carros flutuam na água"
+                    "es": "Los coches flotarán en el agua",
+                    "en": "Cars float on water",
+                    "fr": "Les voitures flottent sur l'eau",
+                    "pt": "Carros flutuam na água"
                 },
                 "codes": {
                     "psp": [
@@ -495,10 +495,10 @@
             {
                 "id": "vehicles_5",
                 "title": {
-                    "ES": "Mejor conducción",
-                    "EN": "Better handling",
-                    "FR": "Meilleure conduite",
-                    "PT": "Melhor dirigibilidade"
+                    "es": "Mejor conducción",
+                    "en": "Better handling",
+                    "fr": "Meilleure conduite",
+                    "pt": "Melhor dirigibilidade"
                 },
                 "codes": {
                     "psp": [
@@ -526,10 +526,10 @@
             {
                 "id": "vehicles_6",
                 "title": {
-                    "ES": "Motos con ruedas gigantes",
-                    "EN": "Bikes with giant wheels",
-                    "FR": "Motos avec des roues géantes",
-                    "PT": "Motos com rodas gigantes"
+                    "es": "Motos con ruedas gigantes",
+                    "en": "Bikes with giant wheels",
+                    "fr": "Motos avec des roues géantes",
+                    "pt": "Motos com rodas gigantes"
                 },
                 "codes": {
                     "psp": [
@@ -557,10 +557,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "ES": "Conductores agresivos",
-                    "EN": "Aggressive drivers",
-                    "FR": "Conducteurs agressifs",
-                    "PT": "Motoristas agressivos"
+                    "es": "Conductores agresivos",
+                    "en": "Aggressive drivers",
+                    "fr": "Conducteurs agressifs",
+                    "pt": "Motoristas agressivos"
                 },
                 "codes": {
                     "psp": [
@@ -588,10 +588,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "ES": "Tráfico blanco",
-                    "EN": "White traffic",
-                    "FR": "Circulation blanche",
-                    "PT": "Trânsito branco"
+                    "es": "Tráfico blanco",
+                    "en": "White traffic",
+                    "fr": "Circulation blanche",
+                    "pt": "Trânsito branco"
                 },
                 "codes": {
                     "psp": [
@@ -619,10 +619,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "ES": "Tráfico negro",
-                    "EN": "Black traffic",
-                    "FR": "Circulation noire",
-                    "PT": "Trânsito negro"
+                    "es": "Tráfico negro",
+                    "en": "Black traffic",
+                    "fr": "Circulation noire",
+                    "pt": "Trânsito negro"
                 },
                 "codes": {
                     "psp": [
@@ -650,10 +650,10 @@
             {
                 "id": "vehicles_10",
                 "title": {
-                    "ES": "Tráfico cromado",
-                    "EN": "Chrome traffic",
-                    "FR": "Circulation chromée",
-                    "PT": "Trânsito cromado"
+                    "es": "Tráfico cromado",
+                    "en": "Chrome traffic",
+                    "fr": "Circulation chromée",
+                    "pt": "Trânsito cromado"
                 },
                 "codes": {
                     "psp": [
@@ -681,10 +681,10 @@
             {
                 "id": "vehicles_11",
                 "title": {
-                    "ES": "Todos los semáforos verdes",
-                    "EN": "All traffic lights green",
-                    "FR": "Tous les feux de circulation au vert",
-                    "PT": "Todos os semáforos verdes"
+                    "es": "Todos los semáforos verdes",
+                    "en": "All traffic lights green",
+                    "fr": "Tous les feux de circulation au vert",
+                    "pt": "Todos os semáforos verdes"
                 },
                 "codes": {
                     "psp": [
@@ -713,19 +713,19 @@
     },
     "Clima": {
         "category": {
-            "ES": "Clima",
-            "EN": "Weather",
-            "FR": "Météo",
-            "PT": "Clima"
+            "es": "Clima",
+            "en": "Weather",
+            "fr": "Météo",
+            "pt": "Clima"
         },
         "cheats": [
             {
                 "id": "weather_1",
                 "title": {
-                    "ES": "Clima soleado",
-                    "EN": "Sunny weather",
-                    "FR": "Temps ensoleillé",
-                    "PT": "Clima ensolarado"
+                    "es": "Clima soleado",
+                    "en": "Sunny weather",
+                    "fr": "Temps ensoleillé",
+                    "pt": "Clima ensolarado"
                 },
                 "codes": {
                     "psp": [
@@ -753,10 +753,10 @@
             {
                 "id": "weather_2",
                 "title": {
-                    "ES": "Clima despejado",
-                    "EN": "Clear weather",
-                    "FR": "Temps dégagé",
-                    "PT": "Tempo limpo"
+                    "es": "Clima despejado",
+                    "en": "Clear weather",
+                    "fr": "Temps dégagé",
+                    "pt": "Tempo limpo"
                 },
                 "codes": {
                     "psp": [
@@ -784,10 +784,10 @@
             {
                 "id": "weather_3",
                 "title": {
-                    "ES": "Clima nublado",
-                    "EN": "Cloudy weather",
-                    "FR": "Temps nuageux",
-                    "PT": "Clima nublado"
+                    "es": "Clima nublado",
+                    "en": "Cloudy weather",
+                    "fr": "Temps nuageux",
+                    "pt": "Clima nublado"
                 },
                 "codes": {
                     "psp": [
@@ -815,10 +815,10 @@
             {
                 "id": "weather_4",
                 "title": {
-                    "ES": "Clima lluvioso",
-                    "EN": "Rainy weather",
-                    "FR": "Temps pluvieux",
-                    "PT": "Tempo chuvoso"
+                    "es": "Clima lluvioso",
+                    "en": "Rainy weather",
+                    "fr": "Temps pluvieux",
+                    "pt": "Tempo chuvoso"
                 },
                 "codes": {
                     "psp": [
@@ -846,10 +846,10 @@
             {
                 "id": "weather_5",
                 "title": {
-                    "ES": "Niebla",
-                    "EN": "Foggy weather",
-                    "FR": "Temps brumeux",
-                    "PT": "Clima com neblina"
+                    "es": "Niebla",
+                    "en": "Foggy weather",
+                    "fr": "Temps brumeux",
+                    "pt": "Clima com neblina"
                 },
                 "codes": {
                     "psp": [
@@ -878,19 +878,19 @@
     },
     "Peatones": {
         "category": {
-            "ES": "Peatones",
-            "EN": "Pedestrians",
-            "FR": "Piétons",
-            "PT": "Pedestres"
+            "es": "Peatones",
+            "en": "Pedestrians",
+            "fr": "Piétons",
+            "pt": "Pedestres"
         },
         "cheats": [
             {
                 "id": "peds_1",
                 "title": {
-                    "ES": "Pelea de peatones",
-                    "EN": "Pedestrian riot",
-                    "FR": "Émeute des piétons",
-                    "PT": "Motim de pedestres"
+                    "es": "Pelea de peatones",
+                    "en": "Pedestrian riot",
+                    "fr": "Émeute des piétons",
+                    "pt": "Motim de pedestres"
                 },
                 "codes": {
                     "psp": ["L", "L", "R", "L", "L", "R", "LEFT", "SQUARE"],
@@ -909,10 +909,10 @@
             {
                 "id": "peds_2",
                 "title": {
-                    "ES": "Los peatones odian a Toni",
-                    "EN": "Pedestrians hate Toni",
-                    "FR": "Les piétons détestent Toni",
-                    "PT": "Os pedestres odeiam Toni"
+                    "es": "Los peatones odian a Toni",
+                    "en": "Pedestrians hate Toni",
+                    "fr": "Les piétons détestent Toni",
+                    "pt": "Os pedestres odeiam Toni"
                 },
                 "codes": {
                     "psp": ["L", "L", "R", "L", "L", "R", "UP", "TRIANGLE"],
@@ -931,10 +931,10 @@
             {
                 "id": "peds_3",
                 "title": {
-                    "ES": "Los peatones tendrán armas",
-                    "EN": "Pedestrians carry weapons",
-                    "FR": "Les piétons portent des armes",
-                    "PT": "Os pedestres terão armas"
+                    "es": "Los peatones tendrán armas",
+                    "en": "Pedestrians carry weapons",
+                    "fr": "Les piétons portent des armes",
+                    "pt": "Os pedestres terão armas"
                 },
                 "codes": {
                     "psp": ["R", "R", "L", "R", "R", "L", "RIGHT", "CIRCLE"],
@@ -953,10 +953,10 @@
             {
                 "id": "peds_4",
                 "title": {
-                    "ES": "Los peatones seguirán a Toni",
-                    "EN": "Pedestrians follow Toni",
-                    "FR": "Les piétons suivent Toni",
-                    "PT": "Os pedestres seguem Toni"
+                    "es": "Los peatones seguirán a Toni",
+                    "en": "Pedestrians follow Toni",
+                    "fr": "Les piétons suivent Toni",
+                    "pt": "Os pedestres seguem Toni"
                 },
                 "codes": {
                     "psp": [
@@ -984,10 +984,10 @@
             {
                 "id": "peds_5",
                 "title": {
-                    "ES": "Los peatones se subirán al vehículo de Toni",
-                    "EN": "Pedestrians get into Toni's vehicle",
-                    "FR": "Les piétons monteront dans le véhicule de Toni",
-                    "PT": "Os pedestres entrarão no veículo de Toni"
+                    "es": "Los peatones se subirán al vehículo de Toni",
+                    "en": "Pedestrians get into Toni's vehicle",
+                    "fr": "Les piétons monteront dans le véhicule de Toni",
+                    "pt": "Os pedestres entrarão no veículo de Toni"
                 },
                 "codes": {
                     "psp": [
@@ -1015,10 +1015,10 @@
             {
                 "id": "peds_6",
                 "title": {
-                    "ES": "Todos los personajes cabezones",
-                    "EN": "Big head mode",
-                    "FR": "Mode grosses têtes",
-                    "PT": "Modo cabeção"
+                    "es": "Todos los personajes cabezones",
+                    "en": "Big head mode",
+                    "fr": "Mode grosses têtes",
+                    "pt": "Modo cabeção"
                 },
                 "codes": {
                     "psp": [
@@ -1047,19 +1047,19 @@
     },
     "Otros": {
         "category": {
-            "ES": "Otros",
-            "EN": "Other",
-            "FR": "Autres",
-            "PT": "Outros"
+            "es": "Otros",
+            "en": "Other",
+            "fr": "Autres",
+            "pt": "Outros"
         },
         "cheats": [
             {
                 "id": "other_1",
                 "title": {
-                    "ES": "Aumentar velocidad de juego",
-                    "EN": "Increase game speed",
-                    "FR": "Augmenter la vitesse du jeu",
-                    "PT": "Aumentar velocidade do jogo"
+                    "es": "Aumentar velocidad de juego",
+                    "en": "Increase game speed",
+                    "fr": "Augmenter la vitesse du jeu",
+                    "pt": "Aumentar velocidade do jogo"
                 },
                 "codes": {
                     "psp": ["R", "R", "L", "R", "R", "L", "DOWN", "CROSS"],
@@ -1069,10 +1069,10 @@
             {
                 "id": "other_2",
                 "title": {
-                    "ES": "Disminuir velocidad de juego",
-                    "EN": "Decrease game speed",
-                    "FR": "Réduire la vitesse du jeu",
-                    "PT": "Diminuir velocidade do jogo"
+                    "es": "Disminuir velocidad de juego",
+                    "en": "Decrease game speed",
+                    "fr": "Réduire la vitesse du jeu",
+                    "pt": "Diminuir velocidade do jogo"
                 },
                 "codes": {
                     "psp": [
@@ -1100,10 +1100,10 @@
             {
                 "id": "other_3",
                 "title": {
-                    "ES": "Adelantar el reloj del juego",
-                    "EN": "Faster game clock",
-                    "FR": "Horloge du jeu accélérée",
-                    "PT": "Relógio do jogo acelerado"
+                    "es": "Adelantar el reloj del juego",
+                    "en": "Faster game clock",
+                    "fr": "Horloge du jeu accélérée",
+                    "pt": "Relógio do jogo acelerado"
                 },
                 "codes": {
                     "psp": [
@@ -1131,10 +1131,10 @@
             {
                 "id": "other_4",
                 "title": {
-                    "ES": "Mundo al revés",
-                    "EN": "Upside-down world",
-                    "FR": "Monde à l'envers",
-                    "PT": "Mundo de cabeça para baixo"
+                    "es": "Mundo al revés",
+                    "en": "Upside-down world",
+                    "fr": "Monde à l'envers",
+                    "pt": "Mundo de cabeça para baixo"
                 },
                 "codes": {
                     "psp": [
@@ -1162,10 +1162,10 @@
             {
                 "id": "other_5",
                 "title": {
-                    "ES": "Mundo invertido",
-                    "EN": "Mirrored world",
-                    "FR": "Monde inversé",
-                    "PT": "Mundo invertido"
+                    "es": "Mundo invertido",
+                    "en": "Mirrored world",
+                    "fr": "Monde inversé",
+                    "pt": "Mundo invertido"
                 },
                 "codes": {
                     "psp": [
@@ -1193,10 +1193,10 @@
             {
                 "id": "other_6",
                 "title": {
-                    "ES": "Mostrar créditos del juego",
-                    "EN": "Show game credits",
-                    "FR": "Afficher les crédits du jeu",
-                    "PT": "Mostrar créditos do jogo"
+                    "es": "Mostrar créditos del juego",
+                    "en": "Show game credits",
+                    "fr": "Afficher les crédits du jeu",
+                    "pt": "Mostrar créditos do jogo"
                 },
                 "codes": {
                     "psp": ["L", "R", "L", "R", "UP", "DOWN", "L", "R"],
@@ -1207,19 +1207,19 @@
     },
     "Multijugador": {
         "category": {
-            "ES": "Multijugador",
-            "EN": "Multiplayer",
-            "FR": "Multijoueur",
-            "PT": "Multijogador"
+            "es": "Multijugador",
+            "en": "Multiplayer",
+            "fr": "Multijoueur",
+            "pt": "Multijogador"
         },
         "cheats": [
             {
                 "id": "multiplayer_1",
                 "title": {
-                    "ES": "Desbloquear el 25% del contenido multijugador",
-                    "EN": "Unlock 25% of multiplayer content",
-                    "FR": "Débloquer 25 % du contenu multijoueur",
-                    "PT": "Desbloquear 25% do conteúdo multijogador"
+                    "es": "Desbloquear el 25% del contenido multijugador",
+                    "en": "Unlock 25% of multiplayer content",
+                    "fr": "Débloquer 25 % du contenu multijoueur",
+                    "pt": "Desbloquear 25% do conteúdo multijogador"
                 },
                 "codes": {
                     "psp": [
@@ -1237,10 +1237,10 @@
             {
                 "id": "multiplayer_2",
                 "title": {
-                    "ES": "Desbloquear el 50% del contenido multijugador",
-                    "EN": "Unlock 50% of multiplayer content",
-                    "FR": "Débloquer 50 % du contenu multijoueur",
-                    "PT": "Desbloquear 50% do conteúdo multijogador"
+                    "es": "Desbloquear el 50% del contenido multijugador",
+                    "en": "Unlock 50% of multiplayer content",
+                    "fr": "Débloquer 50 % du contenu multijoueur",
+                    "pt": "Desbloquear 50% do conteúdo multijogador"
                 },
                 "codes": {
                     "psp": [
@@ -1258,10 +1258,10 @@
             {
                 "id": "multiplayer_3",
                 "title": {
-                    "ES": "Desbloquear el 75% del contenido multijugador",
-                    "EN": "Unlock 75% of multiplayer content",
-                    "FR": "Débloquer 75 % du contenu multijoueur",
-                    "PT": "Desbloquear 75% do conteúdo multijogador"
+                    "es": "Desbloquear el 75% del contenido multijugador",
+                    "en": "Unlock 75% of multiplayer content",
+                    "fr": "Débloquer 75 % du contenu multijoueur",
+                    "pt": "Desbloquear 75% do conteúdo multijogador"
                 },
                 "codes": {
                     "psp": [
@@ -1279,10 +1279,10 @@
             {
                 "id": "multiplayer_4",
                 "title": {
-                    "ES": "Desbloquear el 100% del contenido multijugador",
-                    "EN": "Unlock 100% of multiplayer content",
-                    "FR": "Débloquer 100 % du contenu multijoueur",
-                    "PT": "Desbloquear 100% do conteúdo multijogador"
+                    "es": "Desbloquear el 100% del contenido multijugador",
+                    "en": "Unlock 100% of multiplayer content",
+                    "fr": "Débloquer 100 % du contenu multijoueur",
+                    "pt": "Desbloquear 100% do conteúdo multijogador"
                 },
                 "codes": {
                     "psp": [

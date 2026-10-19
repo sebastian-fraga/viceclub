@@ -1,19 +1,19 @@
 {
     "Jugador": {
         "category": {
-            "ES": "Jugador",
-            "EN": "Player",
-            "FR": "Joueur",
-            "PT": "Jogador"
+            "es": "Jugador",
+            "en": "Player",
+            "fr": "Joueur",
+            "pt": "Jogador"
         },
         "cheats": [
             {
                 "id": "player_1",
                 "title": {
-                    "ES": "Salud y blindaje al máximo",
-                    "EN": "Maximum health and armor",
-                    "FR": "Santé et armure au maximum",
-                    "PT": "Saúde e colete no máximo"
+                    "es": "Salud y blindaje al máximo",
+                    "en": "Maximum health and armor",
+                    "fr": "Santé et armure au maximum",
+                    "pt": "Saúde e colete no máximo"
                 },
                 "codes": {
                     "ps3": [
@@ -106,10 +106,10 @@
             {
                 "id": "player_2",
                 "title": {
-                    "ES": "Invencibilidad por 5 minutos",
-                    "EN": "Invincibility for 5 minutes",
-                    "FR": "Invincibilité pendant 5 minutes",
-                    "PT": "Invencibilidade por 5 minutos"
+                    "es": "Invencibilidad por 5 minutos",
+                    "en": "Invincibility for 5 minutes",
+                    "fr": "Invincibilité pendant 5 minutes",
+                    "pt": "Invencibilidade por 5 minutos"
                 },
                 "codes": {
                     "ps3": [
@@ -190,10 +190,10 @@
             {
                 "id": "player_3",
                 "title": {
-                    "ES": "Obtener todas las armas",
-                    "EN": "Get all weapons",
-                    "FR": "Obtenir toutes les armes",
-                    "PT": "Obter todas as armas"
+                    "es": "Obtener todas las armas",
+                    "en": "Get all weapons",
+                    "fr": "Obtenir toutes les armes",
+                    "pt": "Obter todas as armas"
                 },
                 "codes": {
                     "ps3": [
@@ -286,10 +286,10 @@
             {
                 "id": "player_4",
                 "title": {
-                    "ES": "Balas explosivas",
-                    "EN": "Explosive bullets",
-                    "FR": "Balles explosives",
-                    "PT": "Balas explosivas"
+                    "es": "Balas explosivas",
+                    "en": "Explosive bullets",
+                    "fr": "Balles explosives",
+                    "pt": "Balas explosivas"
                 },
                 "codes": {
                     "ps3": [
@@ -382,10 +382,10 @@
             {
                 "id": "player_5",
                 "title": {
-                    "ES": "Balas incendiarias",
-                    "EN": "Incendiary bullets",
-                    "FR": "Balles incendiaires",
-                    "PT": "Balas incendiárias"
+                    "es": "Balas incendiarias",
+                    "en": "Incendiary bullets",
+                    "fr": "Balles incendiaires",
+                    "pt": "Balas incendiárias"
                 },
                 "codes": {
                     "ps3": [
@@ -490,10 +490,10 @@
             {
                 "id": "player_6",
                 "title": {
-                    "ES": "Recargar la habilidad especial",
-                    "EN": "Recharge special ability",
-                    "FR": "Recharger la capacité spéciale",
-                    "PT": "Recarregar a habilidade especial"
+                    "es": "Recargar la habilidad especial",
+                    "en": "Recharge special ability",
+                    "fr": "Recharger la capacité spéciale",
+                    "pt": "Recarregar a habilidade especial"
                 },
                 "codes": {
                     "ps3": [
@@ -568,10 +568,10 @@
             {
                 "id": "player_7",
                 "title": {
-                    "ES": "Puñetazos explosivos",
-                    "EN": "Explosive punches",
-                    "FR": "Coups de poing explosifs",
-                    "PT": "Socos explosivos"
+                    "es": "Puñetazos explosivos",
+                    "en": "Explosive punches",
+                    "fr": "Coups de poing explosifs",
+                    "pt": "Socos explosivos"
                 },
                 "codes": {
                     "ps3": [
@@ -646,10 +646,10 @@
             {
                 "id": "player_8",
                 "title": {
-                    "ES": "Supersalto",
-                    "EN": "Super Jump",
-                    "FR": "Super saut",
-                    "PT": "Super salto"
+                    "es": "Supersalto",
+                    "en": "Super Jump",
+                    "fr": "Super saut",
+                    "pt": "Super salto"
                 },
                 "codes": {
                     "ps3": [
@@ -736,10 +736,10 @@
             {
                 "id": "player_9",
                 "title": {
-                    "ES": "Correr más rápido",
-                    "EN": "Run faster",
-                    "FR": "Courir plus vite",
-                    "PT": "Correr mais rápido"
+                    "es": "Correr más rápido",
+                    "en": "Run faster",
+                    "fr": "Courir plus vite",
+                    "pt": "Correr mais rápido"
                 },
                 "codes": {
                     "ps3": [
@@ -786,10 +786,10 @@
             {
                 "id": "player_10",
                 "title": {
-                    "ES": "Nadar más rápido",
-                    "EN": "Swim faster",
-                    "FR": "Nager plus vite",
-                    "PT": "Nadar mais rápido"
+                    "es": "Nadar más rápido",
+                    "en": "Swim faster",
+                    "fr": "Nager plus vite",
+                    "pt": "Nadar mais rápido"
                 },
                 "codes": {
                     "ps3": [
@@ -864,10 +864,10 @@
             {
                 "id": "player_11",
                 "title": {
-                    "ES": "Ralentizar el tiempo al apuntar",
-                    "EN": "Slow down time while aiming",
-                    "FR": "Ralentir le temps en visant",
-                    "PT": "Desacelerar o tempo ao mirar"
+                    "es": "Ralentizar el tiempo al apuntar",
+                    "en": "Slow down time while aiming",
+                    "fr": "Ralentir le temps en visant",
+                    "pt": "Desacelerar o tempo ao mirar"
                 },
                 "codes": {
                     "ps3": [
@@ -942,10 +942,10 @@
             {
                 "id": "player_12",
                 "title": {
-                    "ES": "Obtener 1 nivel de búsqueda",
-                    "EN": "Get 1 wanted level",
-                    "FR": "Obtenir 1 niveau de recherche",
-                    "PT": "Obter 1 nível de procurado"
+                    "es": "Obtener 1 nivel de búsqueda",
+                    "en": "Get 1 wanted level",
+                    "fr": "Obtenir 1 niveau de recherche",
+                    "pt": "Obter 1 nível de procurado"
                 },
                 "codes": {
                     "ps3": [
@@ -1026,10 +1026,10 @@
             {
                 "id": "player_13",
                 "title": {
-                    "ES": "Eliminar 1 nivel de búsqueda",
-                    "EN": "Remove 1 wanted level",
-                    "FR": "Supprimer 1 niveau de recherche",
-                    "PT": "Remover 1 nível de procurado"
+                    "es": "Eliminar 1 nivel de búsqueda",
+                    "en": "Remove 1 wanted level",
+                    "fr": "Supprimer 1 niveau de recherche",
+                    "pt": "Remover 1 nível de procurado"
                 },
                 "codes": {
                     "ps3": [
@@ -1110,10 +1110,10 @@
             {
                 "id": "player_14",
                 "title": {
-                    "ES": "Obtener paracaídas",
-                    "EN": "Get a parachute",
-                    "FR": "Obtenir un parachute",
-                    "PT": "Obter um paraquedas"
+                    "es": "Obtener paracaídas",
+                    "en": "Get a parachute",
+                    "fr": "Obtenir un parachute",
+                    "pt": "Obter um paraquedas"
                 },
                 "codes": {
                     "ps3": [
@@ -1201,19 +1201,19 @@
     },
     "Vehículos": {
         "category": {
-            "ES": "Vehículos",
-            "EN": "Vehicles",
-            "FR": "Véhicules",
-            "PT": "Veículos"
+            "es": "Vehículos",
+            "en": "Vehicles",
+            "fr": "Véhicules",
+            "pt": "Veículos"
         },
         "cheats": [
             {
                 "id": "vehicles_1",
                 "title": {
-                    "ES": "Aparecer una BMX",
-                    "EN": "Spawn BMX",
-                    "FR": "Faire apparaître un BMX",
-                    "PT": "Gerar um BMX"
+                    "es": "Aparecer una BMX",
+                    "en": "Spawn BMX",
+                    "fr": "Faire apparaître un BMX",
+                    "pt": "Gerar um BMX"
                 },
                 "codes": {
                     "ps3": [
@@ -1300,10 +1300,10 @@
             {
                 "id": "vehicles_2",
                 "title": {
-                    "ES": "Aparecer un Buzzard",
-                    "EN": "Spawn Buzzard",
-                    "FR": "Faire apparaître un Buzzard",
-                    "PT": "Gerar um Buzzard"
+                    "es": "Aparecer un Buzzard",
+                    "en": "Spawn Buzzard",
+                    "fr": "Faire apparaître un Buzzard",
+                    "pt": "Gerar um Buzzard"
                 },
                 "codes": {
                     "ps3": [
@@ -1396,10 +1396,10 @@
             {
                 "id": "vehicles_3",
                 "title": {
-                    "ES": "Aparecer un Caddy",
-                    "EN": "Spawn Caddy",
-                    "FR": "Faire apparaître un Caddy",
-                    "PT": "Gerar um Caddy"
+                    "es": "Aparecer un Caddy",
+                    "en": "Spawn Caddy",
+                    "fr": "Faire apparaître un Caddy",
+                    "pt": "Gerar um Caddy"
                 },
                 "codes": {
                     "ps3": [
@@ -1480,10 +1480,10 @@
             {
                 "id": "vehicles_4",
                 "title": {
-                    "ES": "Aparecer un Comet",
-                    "EN": "Spawn Comet",
-                    "FR": "Faire apparaître un Comet",
-                    "PT": "Gerar um Comet"
+                    "es": "Aparecer un Comet",
+                    "en": "Spawn Comet",
+                    "fr": "Faire apparaître un Comet",
+                    "pt": "Gerar um Comet"
                 },
                 "codes": {
                     "ps3": [
@@ -1564,10 +1564,10 @@
             {
                 "id": "vehicles_5",
                 "title": {
-                    "ES": "Aparecer un Duster",
-                    "EN": "Spawn Duster",
-                    "FR": "Faire apparaître un Duster",
-                    "PT": "Gerar um Duster"
+                    "es": "Aparecer un Duster",
+                    "en": "Spawn Duster",
+                    "fr": "Faire apparaître un Duster",
+                    "pt": "Gerar um Duster"
                 },
                 "codes": {
                     "ps3": [
@@ -1660,10 +1660,10 @@
             {
                 "id": "vehicles_6",
                 "title": {
-                    "ES": "Aparecer un Mallard",
-                    "EN": "Spawn Mallard",
-                    "FR": "Faire apparaître un Mallard",
-                    "PT": "Gerar um Mallard"
+                    "es": "Aparecer un Mallard",
+                    "en": "Spawn Mallard",
+                    "fr": "Faire apparaître un Mallard",
+                    "pt": "Gerar um Mallard"
                 },
                 "codes": {
                     "ps3": [
@@ -1756,10 +1756,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "ES": "Aparecer una PCJ-600",
-                    "EN": "Spawn PCJ-600",
-                    "FR": "Faire apparaître un PCJ-600",
-                    "PT": "Gerar um PCJ-600"
+                    "es": "Aparecer una PCJ-600",
+                    "en": "Spawn PCJ-600",
+                    "fr": "Faire apparaître un PCJ-600",
+                    "pt": "Gerar um PCJ-600"
                 },
                 "codes": {
                     "ps3": [
@@ -1852,10 +1852,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "ES": "Aparecer un Rapid GT",
-                    "EN": "Spawn Rapid GT",
-                    "FR": "Faire apparaître un Rapid GT",
-                    "PT": "Gerar um Rapid GT"
+                    "es": "Aparecer un Rapid GT",
+                    "en": "Spawn Rapid GT",
+                    "fr": "Faire apparaître un Rapid GT",
+                    "pt": "Gerar um Rapid GT"
                 },
                 "codes": {
                     "ps3": [
@@ -1936,10 +1936,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "ES": "Aparecer una Sánchez",
-                    "EN": "Spawn Sanchez",
-                    "FR": "Faire apparaître un Sanchez",
-                    "PT": "Gerar um Sanchez"
+                    "es": "Aparecer una Sánchez",
+                    "en": "Spawn Sanchez",
+                    "fr": "Faire apparaître un Sanchez",
+                    "pt": "Gerar um Sanchez"
                 },
                 "codes": {
                     "ps3": [
@@ -2032,10 +2032,10 @@
             {
                 "id": "vehicles_10",
                 "title": {
-                    "ES": "Aparecer un Stretch",
-                    "EN": "Spawn Stretch",
-                    "FR": "Faire apparaître un Stretch",
-                    "PT": "Gerar um Stretch"
+                    "es": "Aparecer un Stretch",
+                    "en": "Spawn Stretch",
+                    "fr": "Faire apparaître un Stretch",
+                    "pt": "Gerar um Stretch"
                 },
                 "codes": {
                     "ps3": [
@@ -2110,10 +2110,10 @@
             {
                 "id": "vehicles_11",
                 "title": {
-                    "ES": "Aparecer un Trashmaster",
-                    "EN": "Spawn Trashmaster",
-                    "FR": "Faire apparaître un Trashmaster",
-                    "PT": "Gerar um Trashmaster"
+                    "es": "Aparecer un Trashmaster",
+                    "en": "Spawn Trashmaster",
+                    "fr": "Faire apparaître un Trashmaster",
+                    "pt": "Gerar um Trashmaster"
                 },
                 "codes": {
                     "ps3": [
@@ -2194,10 +2194,10 @@
             {
                 "id": "vehicles_12",
                 "title": {
-                    "ES": "Aparecer un Dodo",
-                    "EN": "Spawn Dodo",
-                    "FR": "Faire apparaître un Dodo",
-                    "PT": "Gerar um Dodo"
+                    "es": "Aparecer un Dodo",
+                    "en": "Spawn Dodo",
+                    "fr": "Faire apparaître un Dodo",
+                    "pt": "Gerar um Dodo"
                 },
                 "platformNotes": [
                     {
@@ -2209,10 +2209,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Requiere completar el evento aleatorio <b>Hidroavión</b>",
-                            "EN": "Requires completing the random event <b>Seaplane</b>",
-                            "PT": "Requer completar o evento aleatório <b>Hidroavião</b>",
-                            "FR": "Nécessite de terminer l’événement aléatoire <b>Hydravion</b>"
+                            "es": "Requiere completar el evento aleatorio <b>Hidroavión</b>",
+                            "en": "Requires completing the random event <b>Seaplane</b>",
+                            "pt": "Requer completar o evento aleatório <b>Hidroavião</b>",
+                            "fr": "Nécessite de terminer l’événement aléatoire <b>Hydravion</b>"
                         },
                         "noteType": "warning"
                     }
@@ -2228,10 +2228,10 @@
             {
                 "id": "vehicles_13",
                 "title": {
-                    "ES": "Aparecer un Kraken",
-                    "EN": "Spawn Kraken",
-                    "FR": "Faire apparaître un Kraken",
-                    "PT": "Gerar um Kraken"
+                    "es": "Aparecer un Kraken",
+                    "en": "Spawn Kraken",
+                    "fr": "Faire apparaître un Kraken",
+                    "pt": "Gerar um Kraken"
                 },
                 "platformNotes": [
                     {
@@ -2243,10 +2243,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Requiere completar el desafío de fotografía salvaje",
-                            "EN": "Requires completing the Wildlife Photography Challenge",
-                            "FR": "Nécessite de terminer le défi de photo animalière",
-                            "PT": "Requer concluir o Desafio de Fotografia de Vida Selvagem"
+                            "es": "Requiere completar el desafío de fotografía salvaje",
+                            "en": "Requires completing the Wildlife Photography Challenge",
+                            "fr": "Nécessite de terminer le défi de photo animalière",
+                            "pt": "Requer concluir o Desafio de Fotografia de Vida Selvagem"
                         },
                         "noteType": "warning"
                     }
@@ -2262,10 +2262,10 @@
             {
                 "id": "vehicles_14",
                 "title": {
-                    "ES": "Aparecer Duke O'Death blindado",
-                    "EN": "Spawn an armored Duke O'Death",
-                    "FR": "Faire apparaître un Duke O'Death blindé",
-                    "PT": "Gerar um Duke O'Death blindado"
+                    "es": "Aparecer Duke O'Death blindado",
+                    "en": "Spawn an armored Duke O'Death",
+                    "fr": "Faire apparaître un Duke O'Death blindé",
+                    "pt": "Gerar um Duke O'Death blindado"
                 },
                 "platformNotes": [
                     {
@@ -2277,10 +2277,10 @@
                             "pc"
                         ],
                         "note": {
-                            "ES": "Requiere completar el evento aleatorio <b>Duelo</b>",
-                            "EN": "Requires completing the random event <b>Duel</b>",
-                            "PT": "Requer completar o evento aleatório <b>Duelo</b>",
-                            "FR": "Nécessite de terminer l’événement aléatoire <b>Duel</b>"
+                            "es": "Requiere completar el evento aleatorio <b>Duelo</b>",
+                            "en": "Requires completing the random event <b>Duel</b>",
+                            "pt": "Requer completar o evento aleatório <b>Duelo</b>",
+                            "fr": "Nécessite de terminer l’événement aléatoire <b>Duel</b>"
                         },
                         "noteType": "warning"
                     }
@@ -2296,10 +2296,10 @@
             {
                 "id": "vehicles_15",
                 "title": {
-                    "ES": "Coches resbaladizos",
-                    "EN": "Slippery cars",
-                    "FR": "Voitures glissantes",
-                    "PT": "Carros escorregadios"
+                    "es": "Coches resbaladizos",
+                    "en": "Slippery cars",
+                    "fr": "Voitures glissantes",
+                    "pt": "Carros escorregadios"
                 },
                 "codes": {
                     "ps3": [
@@ -2369,19 +2369,19 @@
     },
     "Otros": {
         "category": {
-            "ES": "Otros",
-            "EN": "Other",
-            "FR": "Autres",
-            "PT": "Outros"
+            "es": "Otros",
+            "en": "Other",
+            "fr": "Autres",
+            "pt": "Outros"
         },
         "cheats": [
             {
                 "id": "other_1",
                 "title": {
-                    "ES": "Caída libre desde el cielo",
-                    "EN": "Free fall",
-                    "FR": "Chute libre depuis le ciel",
-                    "PT": "Queda livre do céu"
+                    "es": "Caída libre desde el cielo",
+                    "en": "Free fall",
+                    "fr": "Chute libre depuis le ciel",
+                    "pt": "Queda livre do céu"
                 },
                 "codes": {
                     "ps3": [
@@ -2498,10 +2498,10 @@
             {
                 "id": "other_2",
                 "title": {
-                    "ES": "Modo borracho",
-                    "EN": "Drunk mode",
-                    "FR": "Mode ivre",
-                    "PT": "Modo bêbado"
+                    "es": "Modo borracho",
+                    "en": "Drunk mode",
+                    "fr": "Mode ivre",
+                    "pt": "Modo bêbado"
                 },
                 "codes": {
                     "ps3": [
@@ -2570,10 +2570,10 @@
             {
                 "id": "other_3",
                 "title": {
-                    "ES": "Cambiar el clima",
-                    "EN": "Change weather",
-                    "FR": "Changer la météo",
-                    "PT": "Mudar o clima"
+                    "es": "Cambiar el clima",
+                    "en": "Change weather",
+                    "fr": "Changer la météo",
+                    "pt": "Mudar o clima"
                 },
                 "codes": {
                     "ps3": [
@@ -2624,10 +2624,10 @@
             {
                 "id": "other_4",
                 "title": {
-                    "ES": "Cámara lenta",
-                    "EN": "Slow motion",
-                    "FR": "Ralenti",
-                    "PT": "Câmera lenta"
+                    "es": "Cámara lenta",
+                    "en": "Slow motion",
+                    "fr": "Ralenti",
+                    "pt": "Câmera lenta"
                 },
                 "codes": {
                     "ps3": [
@@ -2702,10 +2702,10 @@
             {
                 "id": "other_5",
                 "title": {
-                    "ES": "Gravedad lunar",
-                    "EN": "Moon gravity",
-                    "FR": "Gravité lunaire",
-                    "PT": "Gravidade lunar"
+                    "es": "Gravedad lunar",
+                    "en": "Moon gravity",
+                    "fr": "Gravité lunaire",
+                    "pt": "Gravidade lunar"
                 },
                 "codes": {
                     "ps3": [
