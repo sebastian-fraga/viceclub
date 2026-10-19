@@ -177,7 +177,8 @@ export function useAudioPlayer() {
         setIsSeeking(false);
 
         audio.pause();
-        audio.src = "";
+        audio.removeAttribute("src");
+        audio.load();
 
         setIsPlaying(false);
         setIsLoading(false);
