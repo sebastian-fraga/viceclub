@@ -4,6 +4,7 @@ import Analytics from "@vercel/analytics/astro";
 
 import type { Game } from "@/types/game";
 import { HTML_LANG, LOCALE_TO_LANG, defaultLanguage } from "@/config/languages";
+import { themeToCssVars } from "@/lib/theme";
 import i18n from "@/i18n";
 import { isLocaleSlug } from "@/utils/locale";
 
@@ -148,21 +149,7 @@ const OG_LOCALE = {
         <CursorManager gameId={game?.id} client:load />
         <SmoothScroll client:load transition:persist />
 
-        <div
-            style={game
-                ? `--game-accent: ${game.theme.accent.default};
-                --game-accent-muted: ${game.theme.accent.muted};
-                --game-buttons-primary-background: ${game.theme.buttons.primary.background};
-                --game-buttons-primary-hovered: ${game.theme.buttons.primary.hovered};
-                --game-buttons-primary-border: ${game.theme.buttons.primary.border};
-                --game-buttons-primary-text: ${game.theme.buttons.primary.text};
-                --game-buttons-secondary-background: ${game.theme.buttons.secondary.background};
-                --game-buttons-secondary-hovered: ${game.theme.buttons.secondary.hovered};
-                --game-buttons-secondary-border: ${game.theme.buttons.secondary.border};
-                --game-buttons-secondary-text: ${game.theme.buttons.secondary.text};
-            `
-                : ""}
-        >
+        <div style={game ? themeToCssVars(game.theme) : undefined}>
             <slot />
             <CursorGlow client:idle transition:persist />
         </div>

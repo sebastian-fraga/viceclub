@@ -3,6 +3,7 @@ import GameMapCanvas from "@/components/maps/GameMapCanvas";
 import { getGameMapData } from "@/components/maps/types";
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
+import { themeToCssVars } from "@/lib/theme";
 import { AnimatePresence, motion } from "framer-motion";
 import "leaflet/dist/leaflet.css";
 import { useMemo, useState } from "react";
@@ -64,28 +65,7 @@ export default function GameMap({ gameId }: GameMapProps) {
     return (
         <div
             className="flex h-full w-full flex-col"
-            style={
-                {
-                    "--game-accent": activeTheme.accent.default,
-                    "--game-accent-muted": activeTheme.accent.muted,
-                    "--game-buttons-primary-background":
-                        activeTheme.buttons.primary.background,
-                    "--game-buttons-primary-hovered":
-                        activeTheme.buttons.primary.hovered,
-                    "--game-buttons-primary-border":
-                        activeTheme.buttons.primary.border,
-                    "--game-buttons-primary-text":
-                        activeTheme.buttons.primary.text,
-                    "--game-buttons-secondary-background":
-                        activeTheme.buttons.secondary.background,
-                    "--game-buttons-secondary-hovered":
-                        activeTheme.buttons.secondary.hovered,
-                    "--game-buttons-secondary-border":
-                        activeTheme.buttons.secondary.border,
-                    "--game-buttons-secondary-text":
-                        activeTheme.buttons.secondary.text,
-                } as React.CSSProperties
-            }
+            style={themeToCssVars(activeTheme)}
         >
             {variants && (
                 <div className="mt-4 flex justify-center">

@@ -4,6 +4,7 @@ import ExploreSections from "@/components/home/ExploreSections";
 import FichaTecnica from "@/components/home/FichaTecnica";
 import GameHero from "@/components/home/GameHero";
 import HomeParagraphs from "@/components/home/HomeParagraphs";
+import { themeToCssVars } from "@/lib/theme";
 import type { Game } from "@/types/game";
 import { useState } from "react";
 
@@ -29,28 +30,7 @@ function GamePage({ game, charactersData }: Props) {
     const characters = charactersData[variantId] ?? [];
     return (
         <div
-            style={
-                {
-                    "--game-accent": activeTheme.accent.default,
-                    "--game-accent-muted": activeTheme.accent.muted,
-                    "--game-buttons-primary-background":
-                        activeTheme.buttons.primary.background,
-                    "--game-buttons-primary-hovered":
-                        activeTheme.buttons.primary.hovered,
-                    "--game-buttons-primary-border":
-                        activeTheme.buttons.primary.border,
-                    "--game-buttons-primary-text":
-                        activeTheme.buttons.primary.text,
-                    "--game-buttons-secondary-background":
-                        activeTheme.buttons.secondary.background,
-                    "--game-buttons-secondary-hovered":
-                        activeTheme.buttons.secondary.hovered,
-                    "--game-buttons-secondary-border":
-                        activeTheme.buttons.secondary.border,
-                    "--game-buttons-secondary-text":
-                        activeTheme.buttons.secondary.text,
-                } as React.CSSProperties
-            }
+            style={themeToCssVars(activeTheme)}
             className="flex flex-col gap-22 max-mobile:gap-16"
         >
             <div>
