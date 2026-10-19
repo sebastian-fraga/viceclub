@@ -1,8 +1,8 @@
-export interface LocalizedText {
+export type LocalizedText = {
     es: string;
     en: string;
     fr: string;
     pt: string;
-}
+};
 
 export type MaybeLocalizedText = string | LocalizedText;

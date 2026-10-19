@@ -17,7 +17,7 @@ import { useScrollToPosition } from "@/hooks/useScrollToTop";
 import Title from "../../ui/Title";
 
 import useLocale from "@/hooks/useLocale";
-import { resolveLocalized } from "@/lib/localizedText";
+import { resolveLocalizedText } from "@/lib/localizedText";
 import type { MaybeLocalizedText } from "@/types/localizedText";
 
 import "./news.css";
@@ -47,7 +47,7 @@ export default function News() {
     const t = useT();
     const language = useLocale();
     const translateContent = (value: MaybeLocalizedText) =>
-        resolveLocalized(value, language);
+        resolveLocalizedText(value, language);
 
     const [news, setNews] = useState<NewsItem[]>([]);
     const [visibleCount, setVisibleCount] = useState(STEP);

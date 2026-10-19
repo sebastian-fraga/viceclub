@@ -5,7 +5,7 @@ import {
     type DateFormat,
     type TimeFormat,
 } from "@/lib/timeline/formatTimelineTime";
-import { resolveLocalized } from "@/lib/localizedText";
+import { resolveLocalizedText } from "@/lib/localizedText";
 import { getTimelineIcon } from "@/lib/timeline/timelineIcons";
 import type { MaybeLocalizedText } from "@/types/localizedText";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
@@ -36,7 +36,7 @@ export default function TimelineEventItem({
     const language = useLocale();
 
     const render = (value?: MaybeLocalizedText) =>
-        value ? parse(resolveLocalized(value, language)) : null;
+        value ? parse(resolveLocalizedText(value, language)) : null;
     const {
         icon = "timeline",
         time,

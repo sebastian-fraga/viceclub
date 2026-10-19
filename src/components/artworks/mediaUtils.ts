@@ -5,6 +5,7 @@ import type {
     MediaCategory,
 } from "@/components/artworks/types";
 
+import { resolveLocalizedText } from "@/lib/localizedText";
 import { sectionLabels } from "@/components/artworks/sectionLabels";
 
 const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
@@ -19,9 +20,7 @@ export function getImageUrl(
 }
 
 export function getCaption(caption: Caption, lang: string): string {
-    return typeof caption === "string"
-        ? caption
-        : (caption[lang] ?? caption["es"]);
+    return resolveLocalizedText(caption, lang);
 }
 
 export function flattenCategory(

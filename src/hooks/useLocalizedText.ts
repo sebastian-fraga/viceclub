@@ -1,8 +1,7 @@
+import { resolveLocalizedText } from "@/lib/localizedText";
+import type { MaybeLocalizedText } from "@/types/localizedText";
 import { useEffect, useState } from "react";
-import type { MaybeLocalizedText, LocalizedText } from "@/types/localizedText";
-
 import { useTranslation } from "react-i18next";
-import { getLocalizedText } from "@/utils/getLocalizedText";
 import { defaultLanguage } from "@/config/languages";
 
 export function useLocalizedText() {
@@ -15,5 +14,5 @@ export function useLocalizedText() {
 
     const language = hydrated ? i18n.language : defaultLanguage;
 
-    return (value: MaybeLocalizedText) => getLocalizedText(value, language);
+    return (value: MaybeLocalizedText) => resolveLocalizedText(value, language);
 }
