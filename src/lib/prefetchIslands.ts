@@ -1,21 +1,3 @@
-/**
- * Prefetch de las islas de Astro.
- *
- * El prefetch nativo de Astro (activo por defecto con <ClientRouter />)
- * solo calienta el HTML del destino: los chunks JS de las islas se
- * descargan DESPUES del swap, y eso es lo que ralentiza la navegacion
- * (~540 ms de los ~713 ms que costaba cambiar de pagina).
- *
- * Aqui se hace el pre-fetch completo: al pasar el raton por encima de un
- * enlace interno se descarga el HTML del destino, se parsea y se insertan
- * <link rel="modulepreload"> para cada isla, de forma que el import()
- * dinamico que hace Astro al hidratar resuelve desde el module map y no
- * tiene que volver a la red.
- *
- * Sustituye al prefetch de Astro (prefetch: false en astro.config.mjs) para
- * no descargar el HTML dos veces.
- */
-
 const HOVER_DELAY_MS = 300;
 const SAME_PATH_MAX_AGE_MS = 5 * 60 * 1000;
 
@@ -97,8 +79,6 @@ async function prefetchIslands(href: string) {
             preloadChunk(new URL(componentUrl, location.href).href);
         }
     } catch {
-        // El prefetch es una optimizacion: si falla, la navegacion normal
-        // se encarga de descargar lo que falte.
     } finally {
         inFlight.delete(href);
     }
