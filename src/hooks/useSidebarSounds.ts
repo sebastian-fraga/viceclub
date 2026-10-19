@@ -1,5 +1,5 @@
 import useSettings from "@/hooks/useSettings";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useIsMobile } from "./useIsMobile";
 
 interface SidebarSoundsOptions {
@@ -25,7 +25,6 @@ export function useSidebarSounds(
 
     const cache = useRef<Map<string, HTMLAudioElement>>(new Map());
     const lastHovered = useRef<Element | null>(null);
-    const pendingGameId = useRef<string | null>(null);
 
     useEffect(() => {
         if (!soundsOn) {
@@ -36,37 +35,42 @@ export function useSidebarSounds(
                 } catch {}
             }
 
-            pendingGameId.current = null;
             lastHovered.current = null;
         }
     }, [soundsOn]);
 
-    const getAudio = (kind: SoundKind, gameId: string) => {
-        const key = `${kind}:${gameId}`;
-        let audio = cache.current.get(key);
+    const getAudio = useCallback(
+        (kind: SoundKind, gameId: string) => {
+            const key = `${kind}:${gameId}`;
+            let audio = cache.current.get(key);
 
-        if (audio === undefined) {
-            const url = soundUrl(kind, gameId);
-            audio = new Audio(url);
-            audio.preload = "auto";
-            cache.current.set(key, audio);
-        }
+            if (audio === undefined) {
+                const url = soundUrl(kind, gameId);
+                audio = new Audio(url);
+                audio.preload = "auto";
+                cache.current.set(key, audio);
+            }
 
-        audio.volume = volume;
+            audio.volume = volume;
 
-        return audio;
-    };
+            return audio;
+        },
+        [volume],
+    );
 
-    const play = (kind: SoundKind, gameId: string) => {
-        if (!soundsOn) {
-            return;
-        }
+    const play = useCallback(
+        (kind: SoundKind, gameId: string) => {
+            if (!soundsOn) {
+                return;
+            }
 
-        const audio = getAudio(kind, gameId);
-        audio.currentTime = 0;
+            const audio = getAudio(kind, gameId);
+            audio.currentTime = 0;
 
-        audio.play().catch(() => {});
-    };
+            audio.play().catch(() => {});
+        },
+        [soundsOn, getAudio],
+    );
 
     useEffect(() => {
         const container = sidebarRef.current;
@@ -106,7 +110,7 @@ export function useSidebarSounds(
             container.removeEventListener("mouseover", handleMouseOver);
             container.removeEventListener("mouseout", handleMouseOut);
         };
-    }, [selector, isMobile, volume, soundsOn, sidebarRef]);
+    }, [selector, isMobile, volume, soundsOn, sidebarRef, play]);
 
     useEffect(() => {
         if (!soundsOn) {
@@ -131,19 +135,7 @@ export function useSidebarSounds(
                 return;
             }
 
-            pendingGameId.current = gameId;
-
-            try {
-                const audio = getAudio("select", gameId);
-
-                audio
-                    .play()
-                    .then(() => {
-                        audio.pause();
-                        audio.currentTime = 0;
-                    })
-                    .catch(() => {});
-            } catch {}
+            play("select", gameId);
         };
 
         document.addEventListener("pointerdown", handlePointerDown, {
@@ -156,24 +148,5 @@ export function useSidebarSounds(
                 capture: true,
             } as any);
         };
-    }, [selector, volume, sidebarRef, soundsOn]);
-
-    useEffect(() => {
-        const handleAfterSwap = () => {
-            if (!soundsOn) {
-                pendingGameId.current = null;
-                return;
-            }
-
-            if (pendingGameId.current) {
-                play("select", pendingGameId.current);
-                pendingGameId.current = null;
-            }
-        };
-
-        document.addEventListener("astro:after-swap", handleAfterSwap);
-
-        return () =>
-            document.removeEventListener("astro:after-swap", handleAfterSwap);
-    }, [soundsOn, volume]);
+    }, [selector, sidebarRef, soundsOn, play]);
 }
