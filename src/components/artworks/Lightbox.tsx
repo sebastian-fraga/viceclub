@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { useKeyDown } from "@/hooks/useKeyDown";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import {
     IconChevronLeft,
@@ -180,17 +181,11 @@ export function Lightbox({
 
     useScrollLock(true);
 
-    const handleKeyEffect = useEffectEvent((e: KeyboardEvent) => {
-        if (e.key === "Escape") handleClose();
-        if (e.key === "ArrowLeft") onPrev();
-        if (e.key === "ArrowRight") onNext();
+    useKeyDown((event) => {
+        if (event.key === "Escape") handleClose();
+        if (event.key === "ArrowLeft") onPrev();
+        if (event.key === "ArrowRight") onNext();
     });
-
-    useEffect(() => {
-        window.addEventListener("keydown", handleKeyEffect);
-
-        return () => window.removeEventListener("keydown", handleKeyEffect);
-    }, []);
 
     return (
         <div

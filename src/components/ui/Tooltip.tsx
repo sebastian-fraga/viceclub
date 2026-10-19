@@ -8,6 +8,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import { useEscapeKey } from "@/hooks/useEscapeKey";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface TooltipProps {
@@ -167,23 +168,10 @@ export function Tooltip({
         isVisible === true && isMobile === true && mobileEnabled,
     );
 
-    useEffect(() => {
-        if (!isVisible || !isMobile || !mobileEnabled) {
-            return;
-        }
-
-        const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === "Escape") {
-                hide();
-            }
-        };
-
-        window.addEventListener("keydown", handleKeyDown);
-
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-        };
-    }, [isVisible, isMobile, mobileEnabled, hide]);
+    useEscapeKey(
+        hide,
+        isVisible === true && isMobile === true && mobileEnabled,
+    );
 
     const initialOffset = isTop
         ? { y: 4 }
