@@ -62,6 +62,12 @@ export default defineConfig({
     site: "https://www.viceclub.app",
     trailingSlash: "never",
 
+    // El prefetch nativo de Astro solo calienta el HTML del destino: los
+    // chunks JS de las islas se descargan despues del swap, que es lo que
+    // ralentiza la navegacion. src/lib/prefetchIslands.ts hace el pre-fetch
+    // completo (HTML + modulepreload de las islas) en un solo paso.
+    prefetch: false,
+
     i18n: {
         defaultLocale: "es",
         locales: [
