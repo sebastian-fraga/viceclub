@@ -1,3 +1,22 @@
+/**
+ * Audits translation keys across all supported languages (ES, EN, FR, PT)
+ * to identify missing translations, unused keys, and potentially dynamic keys.
+ *
+ * Scans source files in `src`, excluding `src/data/lang`, and compares
+ * translation dictionary keys against references found in the source code.
+ *
+ * Usage:
+ *   node scripts/unused-i18n-keys.mjs
+ *
+ * Output:
+ *   - Not added: keys missing from one or more language dictionaries.
+ *   - Unused: keys with no detected references in the source code.
+ *   - Dynamic keys (possibly): keys that may be referenced dynamically
+ *     and therefore cannot be reliably identified as unused.
+ *
+ * Note: Results are based on static text matching and may require manual review.
+ */
+
 import { readdirSync, readFileSync } from "node:fs";
 import { extname, join } from "node:path";
 import es from "../src/data/lang/es.ts";
@@ -88,5 +107,3 @@ unused.forEach((k) => console.log(`  ${k}  ${label(k)}`));
 
 console.log(`\Dynamic keys (possibly) (${maybeDynamic.length}):`);
 maybeDynamic.forEach((k) => console.log(`  ${k}  ${label(k)}`));
-
-

@@ -1,3 +1,17 @@
+/**
+ * Searches for a specific term across source files in the `src` and `public` directories.
+ * Supports TypeScript, JavaScript, Astro, and JSON files while excluding `src/data/lang`.
+ *
+ * Usage:
+ *   node scripts/find-key.mjs "search-term"
+ *
+ * Example:
+ *   node scripts/find-key.mjs "home.title"
+ *
+ * Output:
+ *   Matching file paths, line numbers, and lines containing the search term.
+ */
+
 import { readdirSync, readFileSync } from "node:fs";
 import { extname, join } from "node:path";
 
