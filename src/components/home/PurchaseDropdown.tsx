@@ -54,15 +54,6 @@ const storeIcons = {
     ios: AppStoreIcon,
 };
 
-const editionLabels: Record<string, string> = {
-    "10th": "10th",
-    DE: "DE",
-    TCE: "The Complete Edition",
-    E: "E",
-    L: "L",
-    "E&E": "E&E",
-};
-
 const VIEWPORT_MARGIN = 16;
 
 const STAGGER = 0.045;
@@ -407,16 +398,13 @@ export default function PurchaseDropdown({
                                                             <Tooltip
                                                                 key={store.link}
                                                                 position="right"
-                                                                label={
-                                                                    editionLabels[
-                                                                        store
-                                                                            .extra
-                                                                    ]
-                                                                        ? t(
-                                                                              `common.editionLabels.${store.extra}`,
-                                                                          )
-                                                                        : store.extra
-                                                                }
+                                                                label={t(
+                                                                    `common.editionLabels.${store.extra}`,
+                                                                    {
+                                                                        defaultValue:
+                                                                            store.extra,
+                                                                    },
+                                                                )}
                                                             >
                                                                 {link}
                                                             </Tooltip>

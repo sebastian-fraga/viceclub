@@ -18,17 +18,6 @@ import {
 
 export type GameId = "III" | "VC" | "SA" | "LCS" | "VCS" | "IV" | "V" | "VI";
 
-export const GAME_IDS: GameId[] = [
-    "III",
-    "VC",
-    "SA",
-    "LCS",
-    "VCS",
-    "IV",
-    "V",
-    "VI",
-];
-
 export type SectionId =
     | "inicio"
     | "100"

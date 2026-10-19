@@ -23,7 +23,6 @@ export interface Character {
         | "neutral"
         | "unknown"
         | string;
-    firstAppearance: string;
     portrayedBy?: string;
     portrayedByUrl?: string;
     quote?: string;
