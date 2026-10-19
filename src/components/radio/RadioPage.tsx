@@ -1,6 +1,7 @@
 import { PlayerFooter } from "@/components/radio/PlayerFooter";
 import type { GameId } from "@/config/games";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useKeyDown } from "@/hooks/useKeyDown";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useCurrentTrack } from "./hooks/useCurrentTrack";
@@ -61,17 +62,8 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
         prev: handlePrev,
     });
 
-    useEffect(() => {
-        const onKeyDown = (e: KeyboardEvent) => {
-            const target = e.target as HTMLElement | null;
-
-            const isTypingContext =
-                target?.tagName === "INPUT" ||
-                target?.tagName === "TEXTAREA" ||
-                target?.isContentEditable;
-
-            if (isTypingContext) return;
-
+    useKeyDown(
+        (e) => {
             if (e.code === "Space") {
                 e.preventDefault();
                 radio.togglePlay();
@@ -86,14 +78,9 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
                 e.preventDefault();
                 radio.seekRelative(-5);
             }
-        };
-
-        document.addEventListener("keydown", onKeyDown);
-
-        return () => {
-            document.removeEventListener("keydown", onKeyDown);
-        };
-    }, [radio]);
+        },
+        { ignoreWhenTyping: true },
+    );
 
     useEffect(() => {
         if (isMobile === false) setIsFullscreenOpen(false);

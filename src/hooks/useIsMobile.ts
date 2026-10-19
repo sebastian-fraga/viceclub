@@ -1,23 +1,6 @@
-import { useEffect, useState } from "react";
+import { MOBILE_BREAKPOINT } from "@/config/breakpoints";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
-export function useIsMobile(breakpoint = 660) {
-    const [isMobile, setIsMobile] = useState<boolean | null>(null);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
-
-        const handleChange = () => {
-            setIsMobile(mediaQuery.matches);
-        };
-
-        handleChange();
-
-        mediaQuery.addEventListener("change", handleChange);
-
-        return () => {
-            mediaQuery.removeEventListener("change", handleChange);
-        };
-    }, [breakpoint]);
-
-    return isMobile;
+export function useIsMobile(breakpoint = MOBILE_BREAKPOINT) {
+    return useMediaQuery(`(max-width: ${breakpoint}px)`);
 }

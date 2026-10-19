@@ -1,30 +1,22 @@
-import type { CheatsFile } from "@/types/cheats";
 import type { GameId } from "@/config/games";
+import { createDataLoader } from "@/lib/data/createDataLoader";
+import type { CheatsFile } from "@/types/cheats";
 
-const cheatsFiles = import.meta.glob<CheatsFile>("/src/data/cheats/*.json", {
+const modules = import.meta.glob<CheatsFile>("/src/data/cheats/*.json", {
     eager: true,
     import: "default",
 });
 
+const loadCheatFile = createDataLoader(modules);
+
 export function loadCheats(game: GameId): CheatsFile | null {
     if (!game) return null;
 
-    const targetName = game.toLowerCase();
+    const cheats = loadCheatFile(game);
 
-    const matchedPath = Object.keys(cheatsFiles).find((path) => {
-        const fileName = path
-            .split("/")
-            .pop()
-            ?.replace(".json", "")
-            .toLowerCase();
-
-        return fileName === targetName;
-    });
-
-    if (!matchedPath) {
+    if (!cheats) {
         console.error(`No se encontraron cheats para el juego: ${game}`);
-        return null;
     }
 
-    return cheatsFiles[matchedPath];
+    return cheats;
 }

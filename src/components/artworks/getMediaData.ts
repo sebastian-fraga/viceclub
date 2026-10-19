@@ -1,13 +1,13 @@
 import type { GameMediaIndex } from "@/components/artworks/types";
+import { createDataLoader } from "@/lib/data/createDataLoader";
 
-const modules = import.meta.glob<{ default: GameMediaIndex }>(
+const modules = import.meta.glob<GameMediaIndex>(
     "/src/data/artworks/*.json",
-    { eager: true },
+    { eager: true, import: "default" },
 );
 
+const loadMedia = createDataLoader(modules);
+
 export function getMediaData(gameId: string): GameMediaIndex | null {
-    const entry = Object.entries(modules).find(([path]) =>
-        path.endsWith(`/${gameId}.json`),
-    );
-    return entry ? entry[1].default : null;
+    return loadMedia(gameId);
 }

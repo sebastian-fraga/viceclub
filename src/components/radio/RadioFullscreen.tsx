@@ -1,9 +1,9 @@
 import type { RadioSelection } from "@/components/radio/hooks/useRadioSelection";
 import useT from "@/hooks/useT";
+import { useEscapeKey } from "@/hooks/useEscapeKey";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { PlayerFooter } from "./PlayerFooter";
 import { SongSelector } from "./SongSelector";
 import { StationCarousel } from "./StationCarousel";
@@ -31,13 +31,7 @@ export function RadioFullscreen({
 
     useScrollLock(true);
 
-    useEffect(() => {
-        const onKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") onClose();
-        };
-        document.addEventListener("keydown", onKeyDown);
-        return () => document.removeEventListener("keydown", onKeyDown);
-    }, [onClose]);
+    useEscapeKey(onClose);
 
     const handleSelectSong = (startTime: number) => {
         radio.seekTo(startTime);

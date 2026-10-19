@@ -1,6 +1,6 @@
 import VariantSelector from "@/components/home/VariantSelector";
 import GameMapCanvas from "@/components/maps/GameMapCanvas";
-import { getGameMapData } from "@/components/maps/types";
+import { getGameMapData } from "@/lib/maps/loadMapData";
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
 import { themeToCssVars } from "@/lib/theme";
