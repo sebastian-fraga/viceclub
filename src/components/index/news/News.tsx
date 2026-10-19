@@ -20,7 +20,6 @@ import useLocale from "@/hooks/useLocale";
 import { resolveLocalized } from "@/lib/localizedText";
 import type { MaybeLocalizedText } from "@/types/localizedText";
 
-
 import "./news.css";
 
 interface NewsItem {
@@ -36,13 +35,11 @@ interface NewsItem {
     author: string;
 }
 
-
 const NEWS_URL = "https://viceclub.s3.us-east-1.amazonaws.com/news.json";
 const STEP = 2;
 const SCROLL_RETRY_DELAY_MS = 50;
 const SCROLL_RETRY_MAX_ATTEMPTS = 20;
-const paragraphClass =
-    "max-mobile:text-base/7 text-lg/8 text-pretty text-slate-200/90";
+const paragraphClass = "max-mobile:text-base/7 text-lg/8 text-slate-200/90";
 const buttonClass =
     "flex bg-pink-300 rounded-full px-4 sm:px-6 py-3 cursor-pointer transition hover:bg-pink-400 hover:text-slate-50 gap-2 sm:gap-3 text-black text-sm items-center duration-200";
 
@@ -96,8 +93,7 @@ export default function News() {
                 title,
                 url: getArticleUrl(slug),
             });
-        } catch {
-        }
+        } catch {}
     }
 
     function scrollToArticleWhenReady(index: number, attempt = 0) {
@@ -212,21 +208,27 @@ export default function News() {
                                 {translateContent(item.subtitle)}
                             </p>
 
-                            <div className="flex flex-wrap gap-3 sm:gap-4 text-sm sm:text-base">
+                            <div className="flex flex-wrap gap-3 sm:gap-4 text-sm sm:text-base mt-1">
                                 <h4 className="flex gap-2">
-                                    <IconUser size={18} className="text-yellow-200"/>
+                                    <IconUser
+                                        size={18}
+                                        className="text-yellow-200"
+                                    />
                                     {item.author}
                                 </h4>
 
                                 <h4 className="flex gap-2">
-                                    <IconCalendarEvent size={18} className="text-yellow-200"/>
+                                    <IconCalendarEvent
+                                        size={18}
+                                        className="text-yellow-200"
+                                    />
 
                                     {translateContent(item.date)}
                                 </h4>
                             </div>
                         </div>
 
-                        <div className="flex flex-col items-center max-w-300">
+                        <div className="flex flex-col w-full max-w-300">
                             {item.paragraphs.map(
                                 (paragraph, paragraphIndex) => {
                                     const isFirst = paragraphIndex === 0;
@@ -237,7 +239,7 @@ export default function News() {
                                             <p
                                                 className={
                                                     needsTopMargin
-                                                        ? `${paragraphClass} mt-8`
+                                                        ? `${paragraphClass} mt-6`
                                                         : paragraphClass
                                                 }
                                                 dangerouslySetInnerHTML={{
@@ -248,7 +250,7 @@ export default function News() {
                                             />
 
                                             {isFirst && (
-                                                <div className="w-full my-6">
+                                                <div className="w-full my-8">
                                                     <img
                                                         src={item.image}
                                                         className="w-full rounded-4xl drop-shadow-2xl drop-shadow-pink-400/20"
@@ -282,7 +284,7 @@ export default function News() {
                                 href={item.link}
                                 target="_blank"
                                 rel="noopener"
-                                className="flex items-center gap-2 w-fit my-12 mx-auto bg-yellow-200 text-black font-bold px-12 py-4 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group text-lg max-mobile:px-8 max-mobile:text-base max-mobile:mb-6" 
+                                className="flex items-center gap-2 w-fit my-12 mx-auto bg-yellow-200 text-black font-bold px-12 py-4 rounded-full transition hover:bg-yellow-300 shadow-yellow-300/10 shadow-xl uppercase group text-lg max-mobile:px-8 max-mobile:text-base max-mobile:mb-6"
                             >
                                 {item.linkText
                                     ? translateContent(item.linkText)
