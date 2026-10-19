@@ -14,6 +14,27 @@ function getCommit() {
     }
 }
 
+function detectLocale(req) {
+    const cookie = req.headers.cookie ?? "";
+    const cookieLang = cookie.match(
+        /(?:^|;\s*)language=(es|en|fr|pt)(?:;|$)/,
+    )?.[1];
+    if (cookieLang) {
+        return cookieLang === "pt" ? "pt-br" : cookieLang;
+    }
+
+    const accept = req.headers["accept-language"] ?? "";
+    if (!accept.trim()) return "es";
+
+    const primary = accept.split(",")[0].split(";")[0].trim().toLowerCase();
+    const lang = primary.split("-")[0];
+
+    if (lang === "es" || lang === "en" || lang === "fr") return lang;
+    if (lang === "pt") return "pt-br";
+
+    return "en";
+}
+
 function localeRedirect() {
     const handler = (req, res, next) => {
         const accept = req.headers.accept ?? "";
@@ -39,10 +60,12 @@ function localeRedirect() {
 
         if (skip) return next();
 
+        const locale = detectLocale(req);
+
         res.statusCode = 302;
         res.setHeader(
             "Location",
-            `/es${pathname === "/" ? "" : pathname}${search}`,
+            `/${locale}${pathname === "/" ? "" : pathname}${search}`,
         );
         res.end();
     };

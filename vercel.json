@@ -40,7 +40,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^es(?:[-_,;]|$)"
+                    "value": "^es(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/es",
@@ -52,7 +52,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^en(?:[-_,;]|$)"
+                    "value": "^en(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/en",
@@ -64,7 +64,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^fr(?:[-_,;]|$)"
+                    "value": "^fr(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/fr",
@@ -76,7 +76,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^pt(?:[-_,;]|$)"
+                    "value": "^pt(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/pt-br",
@@ -126,7 +126,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^es(?:[-_,;]|$)"
+                    "value": "^es(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/es/:path",
@@ -138,7 +138,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^en(?:[-_,;]|$)"
+                    "value": "^en(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/en/:path",
@@ -150,7 +150,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^fr(?:[-_,;]|$)"
+                    "value": "^fr(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/fr/:path",
@@ -162,7 +162,7 @@
                 {
                     "type": "header",
                     "key": "accept-language",
-                    "value": "^pt(?:[-_,;]|$)"
+                    "value": "^pt(?:[-_,;].*)?$"
                 }
             ],
             "destination": "/pt-br/:path",
