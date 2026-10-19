@@ -37,6 +37,11 @@ const bannerQuery = `
 const STORAGE_KEY = "notification-banner-dismissed";
 const BANNER_HEIGHT_PX = "60px";
 
+const BANNER_TRANSITION = {
+    duration: 0.7,
+    ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
+};
+
 export default function NotificationBanner() {
     const { i18n, t } = useTranslation();
     const [banner, setBanner] = useState<BannerData | null>(null);
@@ -44,7 +49,6 @@ export default function NotificationBanner() {
     const [dismissed, setDismissed] = useState(false);
     const [visible, setVisible] = useState(true);
 
-    const hasAnimatedRef = useRef(false);
     const dismissedRef = useRef(dismissed);
 
     useEffect(() => {
@@ -121,16 +125,12 @@ export default function NotificationBanner() {
             {visible && !dismissed && (
                 <motion.a
                     key={banner._id}
-                    initial={
-                        hasAnimatedRef.current ? false : { opacity: 0, y: -40 }
-                    }
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -40 }}
-                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    initial={{ y: "-100%" }}
+                    animate={{ y: 0, transition: BANNER_TRANSITION }}
+                    exit={{ y: "-100%", transition: BANNER_TRANSITION }}
                     style={{
                         height: BANNER_HEIGHT_PX,
-                        willChange: "transform, opacity",
-                        transform: "translateZ(0)",
+                        willChange: "transform",
                     }}
                     className={`group z-50 bg-linear-90 from-[#907FC1] via-[#b684cf] to-[#907FC1] w-full fixed top-0 left-0 right-0 flex justify-center items-center
                             ${banner.link ? "cursor-pointer" : "cursor-default"}
@@ -141,10 +141,6 @@ export default function NotificationBanner() {
                         if (!banner.link) {
                             e.preventDefault();
                         }
-                    }}
-                    onAnimationComplete={() => {
-                        if (!hasAnimatedRef.current)
-                            hasAnimatedRef.current = true;
                     }}
                 >
                     <div className="relative w-full h-full flex justify-center items-center overflow-hidden">

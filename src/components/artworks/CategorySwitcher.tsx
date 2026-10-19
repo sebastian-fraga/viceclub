@@ -29,7 +29,7 @@ export function CategorySwitcher({ active, onChange }: Props) {
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_25%_at_50%_5%,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.5)_35%,transparent_70%)]" />
             </div>
 
-            <div className="pointer-events-auto fixed left-1/2 z-30 flex -translate-x-1/2 justify-center gap-2 mobile:top-[calc(var(--banner-height)+var(--header-height)+20px)] max-mobile:bottom-0 max-mobile:w-full max-mobile:bg-(--button-bg) max-mobile:px-3 max-mobile:pt-6 max-mobile:pb-[calc(3rem+env(safe-area-inset-bottom))]">
+            <div className="pointer-events-auto fixed left-1/2 z-30 flex -translate-x-1/2 justify-center gap-2 mobile:top-[calc(var(--banner-height)+var(--header-height)+20px)] max-mobile:bottom-0 max-mobile:w-full max-mobile:bg-(--button-bg) max-mobile:px-3 max-mobile:pt-6 max-mobile:pb-[calc(3rem+env(safe-area-inset-bottom))] transition-[top] duration-700 ease-in-out">
                 <button
                     onClick={() => handleChange("artworks")}
                     aria-pressed={active === "artworks"}
