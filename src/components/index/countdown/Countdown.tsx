@@ -51,8 +51,6 @@ export default function Countdown() {
 
     const shouldReduceMotion = useReducedMotion();
 
-    const display = timeLeft ?? EMPTY_TIME;
-
     const timers = [
         { value: timeLeft?.days ?? null, label: t("index.countdown.days") },
         { value: timeLeft?.hours ?? null, label: t("index.countdown.hours") },

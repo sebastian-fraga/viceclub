@@ -21,7 +21,6 @@ interface Props {
     images: FlatImageEntry[];
     lang: string;
     onSelect: (image: FlatImageEntry) => void;
-    activeImageId: string | null;
     registerThumb: (id: string, el: HTMLImageElement | null) => void;
 }
 
@@ -41,7 +40,6 @@ export function SectionGrid({
     images,
     lang,
     onSelect,
-    activeImageId,
     registerThumb,
 }: Props) {
     const sectionRef = useRef<HTMLElement>(null);

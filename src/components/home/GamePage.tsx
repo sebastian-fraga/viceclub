@@ -66,9 +66,7 @@ function GamePage({ game, charactersData }: Props) {
             <div className="grid sm:grid-cols-2 max-mobile:grid-cols-1 w-full gap-0 max-mobile:gap-22">
                 <div className="flex justify-start">
                     <FichaTecnica
-                        game={game.id}
                         variantId={variantId}
-                        title={activeTechnicalSheet.title}
                         developers={activeTechnicalSheet.developers}
                         publisher={activeTechnicalSheet.publisher}
                         producer={activeTechnicalSheet.producer}

@@ -119,7 +119,6 @@ export function MediaGallery({ gameId, data }: Props) {
                                     lang={lang}
                                     onSelect={lightbox.open}
                                     registerThumb={registerThumb}
-                                    activeImageId={null}
                                 />
                             ),
                         )}

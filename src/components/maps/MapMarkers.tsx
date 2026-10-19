@@ -42,7 +42,6 @@ const guidePointIcon = (color: string) =>
 
 function AnimatedMarker({
     collectible,
-    type,
     marker,
     meta,
     height,
@@ -52,7 +51,6 @@ function AnimatedMarker({
     onSelect,
 }: {
     collectible: CollectibleData;
-    type: string;
     marker: {
         icon?: string;
     };
@@ -220,7 +218,6 @@ export default function MapMarkers({
                             <AnimatedMarker
                                 key={uniqueId}
                                 collectible={collectible}
-                                type={type}
                                 marker={marker}
                                 meta={meta}
                                 height={height}

@@ -6,9 +6,7 @@ import Title from "../ui/Title";
 import { Tooltip } from "../ui/Tooltip";
 
 interface TechSheetProps {
-    game: string;
     variantId: string;
-    title: string;
     developers: string[];
     publisher: string;
     producer: string;
@@ -190,9 +188,7 @@ function SalesValue({ value }: { value: string }) {
 }
 
 export default function TechSheet({
-    game,
     variantId,
-    title,
     developers,
     publisher,
     producer,

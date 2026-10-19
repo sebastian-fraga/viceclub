@@ -8,7 +8,7 @@ interface ProgressBarProps {
 
 export function ProgressBar({ progress }: ProgressBarProps) {
     const t = useT();
-    const { total, count, pct } = progress;
+    const { pct } = progress;
 
     return (
         <div className="mb-2 flex flex-col gap-2 max-mobile:mb-3">

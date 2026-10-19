@@ -1,5 +1,3 @@
-import { useTranslation } from "react-i18next";
-
 import SidebarGameButton from "@/components/layout/sidebar/SidebarGameButton";
 import SidebarGameSections from "@/components/layout/sidebar/SidebarGameSections";
 import { type GameId, type SectionId } from "@/config/games";
@@ -16,10 +14,6 @@ type SidebarGameProps = {
     showLabels: boolean;
     onToggle: () => void;
 };
-
-function gameHref(gameId: GameId, sectionId: SectionId) {
-    return `/${gameId.toUpperCase()}/${sectionId}`;
-}
 
 function SidebarGame({
     game,

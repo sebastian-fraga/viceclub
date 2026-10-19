@@ -8,7 +8,6 @@ import { CoordinatesPicker } from "@/components/maps/utils/CoordinatesPicker";
 import ZoomControls from "@/components/maps/ZoomControls";
 import Title from "@/components/ui/Title";
 import { gamesList } from "@/config/games";
-import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
 import { motion } from "framer-motion";
 import {
@@ -69,7 +68,6 @@ export default function GameMapCanvas({
 }) {
     const gameInfo = gamesList.find((item) => item.id === gameId);
     const i18n = useT();
-    const lang = useLocale();
 
     const [selectedCollectible, setSelectedCollectible] = useState<{
         type: string;

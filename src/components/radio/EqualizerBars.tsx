@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-const barCount = 3;
 const barDelays = [0, 0.15, 0.3];
 
 export function EqualizerBars() {
