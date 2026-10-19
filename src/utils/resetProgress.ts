@@ -1,4 +1,3 @@
-
 function resetProgressByMatcher(
     games: string[],
     eventName: string,
@@ -29,10 +28,7 @@ export function resetChecklistProgress(games: string[]): void {
     );
 }
 export function resetMapProgress(games: string[]): void {
-    resetProgressByMatcher(
-        games,
-        "map-progress-reset",
-        (key, game) => key === `completed_collectibles_${game}`,
+    resetProgressByMatcher(games, "map-progress-reset", (key, game) =>
+        key.startsWith(`completed_collectibles_${game}`),
     );
 }
-
