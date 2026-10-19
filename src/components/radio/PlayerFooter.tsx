@@ -3,7 +3,7 @@ import PlaybackInfo from "@/components/radio/PlaybackInfo";
 import ProgressBar from "@/components/radio/ProgressBar";
 import VolumeControl from "@/components/radio/VolumeControl";
 import type { RadioStation, Song } from "@/components/radio/types/types";
-import { IconChevronUp } from "@tabler/icons-react";
+import { IconChevronUp, IconX } from "@tabler/icons-react";
 import "./radio.css";
 
 export type PlayerFooterVariant = "default" | "mini" | "controls";
@@ -11,6 +11,7 @@ export type PlayerFooterVariant = "default" | "mini" | "controls";
 interface PlayerBarProps {
     variant?: PlayerFooterVariant;
     onOpen?: () => void;
+    onClose?: () => void;
     isSeeking: boolean;
     isPlaying: boolean;
     isLoading: boolean;
@@ -31,6 +32,7 @@ interface PlayerBarProps {
 export function PlayerFooter({
     variant = "default",
     onOpen,
+    onClose,
     isSeeking,
     isPlaying,
     isLoading,
@@ -110,7 +112,16 @@ export function PlayerFooter({
                 />
             </div>
 
-            <VolumeControl volume={volume} onVolumeChange={onVolumeChange} />
+            <div className="items-center flex gap-12 justify-end mr-4">
+                <VolumeControl
+                    volume={volume}
+                    onVolumeChange={onVolumeChange}
+                />
+
+                <div>
+                    <IconX className="text-white cursor-pointer drop-shadow-md drop-shadow-transparent hover:drop-shadow-white/40 transition duration-350" onClick={onClose}/>
+                </div>
+            </div>
         </div>
     );
 }

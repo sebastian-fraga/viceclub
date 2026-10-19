@@ -154,6 +154,7 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
                             <PlayerFooter
                                 variant={isMobile ? "mini" : "default"}
                                 onOpen={() => setIsFullscreenOpen(true)}
+                                onClose={radio.clearStation}
                                 song={currentSong}
                                 djs={radio.activePlaylist?.djs ?? []}
                                 isPlaying={radio.isPlaying}
