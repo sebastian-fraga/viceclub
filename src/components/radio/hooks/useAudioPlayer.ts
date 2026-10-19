@@ -169,12 +169,18 @@ export function useAudioPlayer() {
         if (!audio) return;
 
         clearSeekTimeout();
+
+        pendingSeekRef.current = null;
+        pendingAutoplayRef.current = false;
+        targetTimeRef.current = null;
+
         setIsSeeking(false);
 
         audio.pause();
         audio.src = "";
 
         setIsPlaying(false);
+        setIsLoading(false);
         setCurrentTime(0);
         setDuration(0);
     }, [clearSeekTimeout, setIsSeeking]);

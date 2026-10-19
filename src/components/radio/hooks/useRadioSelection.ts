@@ -52,6 +52,12 @@ export function useRadioSelection(stations: RadioStation[]) {
         [activeStation, player],
     );
 
+    const clearStation = useCallback(() => {
+        player.stop();
+        setActiveStationId(null);
+        setActivePlaylistId(null);
+    }, [player.stop]);
+
     return {
         ...player,
         stations,
@@ -59,6 +65,7 @@ export function useRadioSelection(stations: RadioStation[]) {
         activePlaylist,
         selectStation,
         selectPlaylist,
+        clearStation,
     };
 }
 
