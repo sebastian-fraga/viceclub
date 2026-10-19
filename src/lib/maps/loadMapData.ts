@@ -10,10 +10,6 @@ const loadMap = createDataLoader(modules, {
     key: (_path, map) => map.gameId,
 });
 
-/**
- * Devuelve los datos del mapa de un juego, con la variante aplicada si se
- * indica (por ejemplo `TLAD` o `TBOGT` dentro de GTA IV).
- */
 export function getGameMapData(
     gameId: string,
     variantId?: string,

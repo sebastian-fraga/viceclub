@@ -1,14 +1,6 @@
 import type { CSSProperties } from "react";
 import type { GameTheme } from "@/types/game";
 
-/**
- * Convierte un tema de juego en las variables CSS que consume el tema
- * activo. Es la unica fuente: BaseLayout, la pagina de inicio y el mapa
- * aplicaban el mismo bloque de variables por separado.
- *
- * Los valores opcionales (hovered, border) se omiten cuando no existen, de
- * forma que no se escribe "undefined" en el estilo inline.
- */
 export function themeToCssVars(theme: GameTheme): CSSProperties {
     return {
         "--game-accent": theme.accent.default,
