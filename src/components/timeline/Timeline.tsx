@@ -194,7 +194,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
 
     return (
         <section className="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex gap-8 flex-col mb-12 mt-12">
-            <div className="max-w-fit">
+            <div className="max-w-fit mb-6">
                 <Title label="timeline.titles.vi" />
             </div>
 
