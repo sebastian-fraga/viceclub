@@ -70,32 +70,3 @@ export interface GameMapData {
 }
 
 export type Description = string | Record<string, string>;
-
-const mapModules = import.meta.glob<{ default: GameMapData }>(
-    "/src/data/maps/*.json",
-    { eager: true },
-);
-
-const mapDataByGameId: Record<string, GameMapData> = {};
-
-for (const mod of Object.values(mapModules)) {
-    mapDataByGameId[mod.default.gameId] = mod.default;
-}
-
-export function getGameMapData(
-    gameId: string,
-    variantId?: string,
-): GameMapData | undefined {
-    const gameMap = mapDataByGameId[gameId];
-
-    if (!gameMap) return undefined;
-
-    if (variantId && gameMap.variants?.[variantId]) {
-        return {
-            gameId,
-            ...gameMap.variants[variantId],
-        };
-    }
-
-    return gameMap;
-}

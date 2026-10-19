@@ -1,4 +1,4 @@
-import { getGameMapData } from "@/components/maps/types";
+import { getGameMapData } from "@/lib/maps/loadMapData";
 import { getTypeMeta } from "@/components/maps/types/categories";
 import {
     GAME_SECTIONS,
