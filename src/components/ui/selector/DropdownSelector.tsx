@@ -1,8 +1,9 @@
 import { IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ComponentType } from "react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 interface Option<T extends string = string> {
     id: T;
@@ -30,22 +31,10 @@ export default function DropdownSelector<T extends string = string>({
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const handleClickOutside = (event: PointerEvent) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target as Node)
-            ) {
-                setIsOpen(false);
-            }
-        };
-
-        document.addEventListener("pointerdown", handleClickOutside);
-
-        return () => {
-            document.removeEventListener("pointerdown", handleClickOutside);
-        };
-    }, []);
+    useClickOutside(
+        () => setIsOpen(false),
+        [dropdownRef],
+    );
 
     const handleSelect = (id: T) => {
         onSelect(id);

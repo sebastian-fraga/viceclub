@@ -18,6 +18,7 @@ import {
 } from "@/config/games";
 
 import SidebarGame from "@/components/layout/sidebar/SidebarGame";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { useSidebarSounds } from "@/hooks/useSidebarSounds";
@@ -117,25 +118,11 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         );
     }, [isMobile, mobileOpen]);
 
-    useEffect(() => {
-        if (!isMobile || !mobileOpen) return;
-
-        function handleClickOutside(event: MouseEvent) {
-            if (settingsOpen) return;
-
-            if (
-                asideRef.current &&
-                !asideRef.current.contains(event.target as Node)
-            ) {
-                setMobileOpen(false);
-            }
-        }
-
-        document.addEventListener("mousedown", handleClickOutside);
-
-        return () =>
-            document.removeEventListener("mousedown", handleClickOutside);
-    }, [isMobile, mobileOpen, settingsOpen]);
+    useClickOutside(
+        () => setMobileOpen(false),
+        [asideRef],
+        isMobile === true && mobileOpen && !settingsOpen,
+    );
 
     useSidebarSounds(asideRef as React.RefObject<HTMLElement>);
 

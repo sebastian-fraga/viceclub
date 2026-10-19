@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -70,24 +71,11 @@ export default function TrailerDropdown({ variantId, trailers, buttonClass }: Pr
         return () => window.removeEventListener("resize", handleReposition);
     }, [isOpen]);
 
-    useLayoutEffect(() => {
-        if (!isOpen) return;
-
-        const handleClickOutside = (e: MouseEvent) => {
-            const target = e.target as Node;
-            if (
-                dropdownRef.current?.contains(target) ||
-                dropdownContentRef.current?.contains(target)
-            ) {
-                return;
-            }
-            setIsOpen(false);
-        };
-
-        document.addEventListener("mousedown", handleClickOutside);
-        return () =>
-            document.removeEventListener("mousedown", handleClickOutside);
-    }, [isOpen]);
+    useClickOutside(
+        () => setIsOpen(false),
+        [dropdownRef, dropdownContentRef],
+        isOpen,
+    );
 
     useLayoutEffect(() => {
         if (!isOpen) return;

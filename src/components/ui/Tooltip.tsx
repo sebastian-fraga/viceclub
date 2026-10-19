@@ -7,6 +7,7 @@ import {
     useState,
 } from "react";
 import { createPortal } from "react-dom";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 interface TooltipProps {
     label: string;
@@ -178,25 +179,7 @@ export function Tooltip({
         };
     }, [isVisible, isMobile, hide]);
 
-    useEffect(() => {
-        if (!isVisible || !isMobile || !mobileEnabled) {
-            return;
-        }
-
-        const handleOutsidePointer = (event: PointerEvent) => {
-            const target = event.target as Node;
-
-            if (triggerRef.current && !triggerRef.current.contains(target)) {
-                hide();
-            }
-        };
-
-        document.addEventListener("pointerdown", handleOutsidePointer);
-
-        return () => {
-            document.removeEventListener("pointerdown", handleOutsidePointer);
-        };
-    }, [isVisible, isMobile, mobileEnabled, hide]);
+    useClickOutside(hide, [triggerRef], isVisible && isMobile && mobileEnabled);
 
     useEffect(() => {
         if (!isVisible || !isMobile || !mobileEnabled) {
