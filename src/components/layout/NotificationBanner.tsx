@@ -90,7 +90,7 @@ export default function NotificationBanner() {
     useEffect(() => {
         const handleAfterSwap = () => {
             requestAnimationFrame(() => {
-                setVisible(window.scrollY <= 120);
+                setVisible(window.scrollY <= 190);
             });
         };
 
