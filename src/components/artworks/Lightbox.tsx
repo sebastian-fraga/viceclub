@@ -56,6 +56,14 @@ export function Lightbox({
     });
 
     function handleClose() {
+        if (
+            typeof document !== "undefined" &&
+            typeof document.startViewTransition === "function"
+        ) {
+            onClose();
+            return;
+        }
+
         setIsClosing(true);
     }
 

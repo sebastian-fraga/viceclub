@@ -9,6 +9,43 @@
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+@keyframes gallery-fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes gallery-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+:root[data-vt-gallery="close"]::view-transition-old(gallery-image) {
+    mix-blend-mode: normal;
+    animation: gallery-fade-out 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+:root[data-vt-gallery="close"]::view-transition-new(gallery-image) {
+    mix-blend-mode: normal;
+    animation: gallery-fade-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+:root[data-vt-gallery="close"]::view-transition-old(root),
+:root[data-vt-gallery="close"]::view-transition-new(root),
+:root[data-vt-gallery="close"]::view-transition-group(root) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 @keyframes fade-card {
     0% {
         opacity: 1;

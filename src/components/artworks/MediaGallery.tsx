@@ -1,12 +1,12 @@
 import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
-import { useMemo, useRef, useState, useEffect } from "react";
+import { useMemo, useRef, useEffect } from "react";
 import { CategorySwitcher } from "./CategorySwitcher";
 import { Lightbox } from "./Lightbox";
 import { flattenCategory } from "./mediaUtils";
 import { SectionGrid } from "./SectionGrid";
-import type { GameMediaIndex, MediaCategory } from "./types";
+import type { GameMediaIndex } from "./types";
 import { useLightbox } from "./useLightbox";
 
 import useT from "@/hooks/useT";
@@ -54,6 +54,8 @@ export function MediaGallery({ gameId, data }: Props) {
             return;
         }
 
+        document.documentElement.setAttribute("data-vt-gallery", "close");
+
         const transition = document.startViewTransition(() => {
             imgEl.style.viewTransitionName = "gallery-image";
             flushSync(() => {
@@ -61,9 +63,14 @@ export function MediaGallery({ gameId, data }: Props) {
             });
         });
 
-        transition.finished.finally(() => {
-            imgEl.style.viewTransitionName = "";
-        });
+        transition.ready.catch(() => {});
+
+        transition.finished
+            .catch(() => {})
+            .finally(() => {
+                imgEl.style.viewTransitionName = "";
+                document.documentElement.removeAttribute("data-vt-gallery");
+            });
     }
 
     return (
@@ -130,7 +137,7 @@ export function MediaGallery({ gameId, data }: Props) {
                     onPrev={lightbox.prev}
                     canNext={lightbox.canNext}
                     canPrev={lightbox.canPrev}
-                    onClose={lightbox.close}
+                    onClose={handleClose}
                 />
             )}
         </>
