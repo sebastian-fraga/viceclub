@@ -189,7 +189,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
     }
 
     const baseNavButtonStyle = clsx(
-        "flex w-full items-center gap-4 rounded-full px-2 py-1.5 transition max-mobile:p-3",
+        "flex w-full items-center gap-4 rounded-full px-4 py-2 transition max-mobile:p-3",
         showLabels ? "justify-start" : "justify-center",
     );
 
