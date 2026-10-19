@@ -3,7 +3,6 @@
 @import './typography.css';
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
 
 :root {
   --button-bg: #38365d;
@@ -62,9 +61,9 @@ body {
   color: #f4f4f4;
 
   & ::selection {
-      background: var(--game-buttons-primary-background, #fef9c2);
-      color: var(--game-buttons-primary-text, #020618);
-    }
+    background: var(--game-buttons-primary-background, #fef9c2);
+    color: var(--game-buttons-primary-text, #020618);
+  }
 }
 
 html {
@@ -211,5 +210,13 @@ a {
 
   html {
     @apply font-sans;
+  }
+
+  main {
+    @apply ml-0 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] pb-48 max-mobile:pb-32 md:ml-(--sidebar-width) md:gap-45;
+    padding-top: calc(var(--header-height) + var(--banner-height));
+    transition:
+      padding-top 700ms cubic-bezier(0.4, 0, 0.2, 1),
+      margin-left 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

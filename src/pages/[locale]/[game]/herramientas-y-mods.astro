@@ -3,8 +3,8 @@ import ModsContainer from "@/components/mods/ModsContainer";
 import type { GameId } from "@/config/games";
 import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
-import { getPageSeo } from "@/data/seo/getSeo";
 import { GAME_MODS } from "@/data/mods";
+import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
@@ -37,10 +37,7 @@ const pageSeo = getPageSeo(
     canonical={`https://www.viceclub.app/${locale}/${game}/herramientas-y-mods`}
     game={gameData}
 >
-    <main
-        class="ml-0 flex flex-col gap-16 bg-linear-135 from-[#15151F] to-[#1E1E33] mt-8 pb-32 md:ml-(--sidebar-width) md:gap-45"
-        style="padding-top: calc(var(--header-height) + var(--banner-height)); transition: margin-left 0.3s;"
-    >
+    <main class="mt-4">
         <ModsContainer client:load gameId={game} mods={modsData.mods} />
     </main>
 </BaseLayout>
