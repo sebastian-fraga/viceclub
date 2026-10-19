@@ -19,9 +19,9 @@ export function normalizeLanguage(lang: string): keyof LocalizedText {
  * (utils/getLocalizedText, lib/localizedText, hooks/useLocalizedText y
  * artworks/mediaUtils.getCaption).
  *
- * La busqueda no distingue mayusculas porque los datos no son coherentes:
- * `data/cheats` usa claves en mayusculas ("ES") y el resto en minusculas
- * ("es").
+ * Las claves de idioma son siempre en minusculas en todos los datasets
+ * (data/artworks, data/cheats, data/checklists, data/maps y los ficheros
+ * remotos de news y timeline).
  */
 export function resolveLocalizedText(
     value: MaybeLocalizedText | string | Record<string, string>,
@@ -32,11 +32,5 @@ export function resolveLocalizedText(
     const language = normalizeLanguage(lang);
     const record = value as Record<string, string>;
 
-    return (
-        record[language] ??
-        record[language.toUpperCase()] ??
-        record[DEFAULT_LANG] ??
-        record[DEFAULT_LANG.toUpperCase()] ??
-        ""
-    );
+    return record[language] ?? record[DEFAULT_LANG] ?? "";
 }
