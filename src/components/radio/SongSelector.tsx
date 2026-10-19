@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { MOBILE_QUERY } from "@/config/breakpoints";
 import {
     IconChevronLeft,
     IconHeadphones,
@@ -93,12 +94,7 @@ export function SongSelector({
         const el = songRefs.current.get(currentIndex);
         if (!el) return;
 
-        const MOBILE_QUERY = "(max-width: 640px)";
-
-        const isMobile =
-            typeof window !== "undefined" &&
-            window.matchMedia &&
-            window.matchMedia(MOBILE_QUERY).matches;
+        const isMobile = window.matchMedia(MOBILE_QUERY).matches;
 
         if (isMobile && preventAutoScrollOnMobile) {
             return;

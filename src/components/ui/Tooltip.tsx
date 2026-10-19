@@ -8,6 +8,7 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 interface TooltipProps {
     label: string;
@@ -19,7 +20,6 @@ interface TooltipProps {
 }
 
 const GAP = 16;
-const MOBILE_BREAKPOINT = 660;
 
 let hideActiveTooltip: (() => void) | null = null;
 
@@ -32,7 +32,7 @@ export function Tooltip({
     anchorRef,
 }: TooltipProps) {
     const [isVisible, setIsVisible] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const isMobile = useIsMobile();
     const [coords, setCoords] = useState({
         top: 0,
         left: 0,
@@ -61,24 +61,6 @@ export function Tooltip({
             }
         };
     }, [hide]);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia(
-            `(max-width: ${MOBILE_BREAKPOINT}px)`,
-        );
-
-        const handleChange = () => {
-            setIsMobile(mediaQuery.matches);
-        };
-
-        handleChange();
-
-        mediaQuery.addEventListener("change", handleChange);
-
-        return () => {
-            mediaQuery.removeEventListener("change", handleChange);
-        };
-    }, []);
 
     useEffect(() => {
         if (isMobile && !mobileEnabled) {
@@ -179,7 +161,11 @@ export function Tooltip({
         };
     }, [isVisible, isMobile, hide]);
 
-    useClickOutside(hide, [triggerRef], isVisible && isMobile && mobileEnabled);
+    useClickOutside(
+        hide,
+        [triggerRef],
+        isVisible === true && isMobile === true && mobileEnabled,
+    );
 
     useEffect(() => {
         if (!isVisible || !isMobile || !mobileEnabled) {

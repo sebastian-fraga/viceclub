@@ -46,6 +46,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* Debe coincidir con MOBILE_BREAKPOINT en src/config/breakpoints.ts */
   --breakpoint-mobile: 660px;
   --font-body: "GTAArtDeco", sans-serif;
   --font-body-condensed: "GTAArtDecoCondensed", sans-serif;
