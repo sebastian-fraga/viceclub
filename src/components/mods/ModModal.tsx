@@ -6,6 +6,7 @@ import ModRequirements from "@/components/mods/ModRequirements";
 import type { GameId } from "@/config/games";
 import type { ModEntry } from "@/data/mods/types";
 import useT from "@/hooks/useT";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { IconX } from "@tabler/icons-react";
 import { motion, useIsPresent } from "framer-motion";
 import { useEffect, useLayoutEffect, useRef } from "react";
@@ -46,22 +47,7 @@ export default function ModModal({
         }
     }, [open]);
 
-    useEffect(() => {
-        if (!open) return;
-
-        const html = document.documentElement;
-        const body = document.body;
-
-        html.style.overflow = "hidden";
-        body.style.overflow = "hidden";
-        body.style.touchAction = "none";
-
-        return () => {
-            html.style.overflow = "";
-            body.style.overflow = "";
-            body.style.touchAction = "";
-        };
-    }, [open]);
+    useScrollLock(open, { touchAction: true });
 
     useEffect(() => {
         scrollRef.current?.scrollTo({ top: 0 });

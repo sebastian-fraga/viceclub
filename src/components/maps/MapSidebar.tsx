@@ -5,9 +5,10 @@ import {
 } from "@/components/maps/types/categories";
 import { MAP_MARKERS } from "@/data/maps/markers";
 import useT from "@/hooks/useT";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { IconChevronDown, IconFilter, IconX } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 
 interface MapSidebarProps {
@@ -67,15 +68,7 @@ export default function MapSidebar({
         });
     };
 
-    useEffect(() => {
-        if (!isOpen) return;
-
-        document.body.style.overflow = "hidden";
-
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [isOpen]);
+    useScrollLock(isOpen);
 
     if (sections.length === 0) return null;
 

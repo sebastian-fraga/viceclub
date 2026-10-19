@@ -1,5 +1,6 @@
 import type { RadioSelection } from "@/components/radio/hooks/useRadioSelection";
 import useT from "@/hooks/useT";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -28,20 +29,7 @@ export function RadioFullscreen({
     const t = useT();
     const station = radio.activeStation;
 
-    useEffect(() => {
-        const html = document.documentElement;
-        const body = document.body;
-        const prevHtml = html.style.overflow;
-        const prevBody = body.style.overflow;
-
-        html.style.overflow = "hidden";
-        body.style.overflow = "hidden";
-
-        return () => {
-            html.style.overflow = prevHtml;
-            body.style.overflow = prevBody;
-        };
-    }, []);
+    useScrollLock(true);
 
     useEffect(() => {
         const onKeyDown = (e: KeyboardEvent) => {

@@ -1,4 +1,5 @@
 import useT from "@/hooks/useT";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import {
     IconChevronLeft,
     IconChevronRight,
@@ -169,15 +170,7 @@ export function Lightbox({
         }
     }
 
-    useEffect(() => {
-        const originalOverflow = document.body.style.overflow;
-
-        document.body.style.overflow = "hidden";
-
-        return () => {
-            document.body.style.overflow = originalOverflow;
-        };
-    }, []);
+    useScrollLock(true);
 
     const handleKeyEffect = useEffectEvent((e: KeyboardEvent) => {
         if (e.key === "Escape") handleClose();

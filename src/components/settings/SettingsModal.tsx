@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 
@@ -16,6 +16,7 @@ import { settingsConfig } from "@/config/settings";
 import useSettings from "@/hooks/useSettings";
 
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import {
     downloadLocalStorageBackup,
     importAllLocalStorage,
@@ -113,22 +114,7 @@ export default function SettingsModal({ open, onClose }: Props) {
     const settingsSections = settingsConfig;
     const { settings, setSetting } = useSettings();
 
-    useEffect(() => {
-        if (!open) return;
-
-        const html = document.documentElement;
-        const body = document.body;
-
-        html.style.overflow = "hidden";
-        body.style.overflow = "hidden";
-        body.style.touchAction = "none";
-
-        return () => {
-            html.style.overflow = "";
-            body.style.overflow = "";
-            body.style.touchAction = "";
-        };
-    }, [open]);
+    useScrollLock(open, { touchAction: true });
 
     if (typeof document === "undefined") return null;
 

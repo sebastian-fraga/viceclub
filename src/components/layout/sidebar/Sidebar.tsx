@@ -19,6 +19,7 @@ import {
 
 import SidebarGame from "@/components/layout/sidebar/SidebarGame";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { useSidebarSounds } from "@/hooks/useSidebarSounds";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
@@ -95,15 +96,7 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         } catch {}
     }, [expanded]);
 
-    useEffect(() => {
-        if (!isMobile) return;
-
-        document.body.style.overflow = mobileOpen ? "hidden" : "";
-
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [isMobile, mobileOpen]);
+    useScrollLock(isMobile === true && mobileOpen);
 
     useEffect(() => {
         function handleToggle() {
