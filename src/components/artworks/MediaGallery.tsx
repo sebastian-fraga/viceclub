@@ -4,14 +4,15 @@ import useLocale from "@/hooks/useLocale";
 import { useMemo, useRef, useEffect, useCallback } from "react";
 import { CategorySwitcher } from "./CategorySwitcher";
 import { Lightbox } from "./Lightbox";
-import { flattenCategory } from "./mediaUtils";
-import { SectionGrid } from "./SectionGrid";
-import type { GameMediaIndex } from "./types";
+import { flattenCategory, getImageUrl } from "./mediaUtils";
+import { PRIORITY_IMAGE_COUNT, SectionGrid } from "./SectionGrid";
+import type { GameMediaIndex, MediaCategory } from "./types";
 import { useLightbox } from "./useLightbox";
 
 import useT from "@/hooks/useT";
 import { AnimatePresence, motion } from "framer-motion";
 import { flushSync } from "react-dom";
+import { preloadImage } from "@/lib/preloadImage";
 import "./artworks.css";
 import { useCategoryParam } from "@/components/artworks/useCategoryParam";
 
@@ -47,6 +48,29 @@ export function MediaGallery({ gameId, data }: Props) {
             return { section, images, priorityOffset };
         });
     }, [data, category]);
+
+    const preloadCategory = useCallback(
+        (target: MediaCategory) => {
+            let remaining = PRIORITY_IMAGE_COUNT;
+
+            for (const [section, images] of Object.entries(data[target])) {
+                for (const image of images) {
+                    if (remaining <= 0) return;
+
+                    preloadImage(
+                        getImageUrl(
+                            gameId,
+                            target,
+                            section,
+                            image.id,
+                        ),
+                    );
+                    remaining--;
+                }
+            }
+        },
+        [data, gameId],
+    );
 
     const thumbRefs = useRef(new Map<string, HTMLImageElement>());
 
@@ -89,7 +113,11 @@ export function MediaGallery({ gameId, data }: Props) {
 
     return (
         <>
-            <CategorySwitcher active={category} onChange={setCategory} />
+            <CategorySwitcher
+                active={category}
+                onChange={setCategory}
+                onPreview={preloadCategory}
+            />
 
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
