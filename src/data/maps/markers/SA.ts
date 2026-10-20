@@ -1,5 +1,5 @@
 export const SA_MARKERS = {
-    tag: {
+    tags: {
         icon: "/assets/images/maps/SA/icons/tag.webp",
     },
     snapshot: {

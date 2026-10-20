@@ -19,7 +19,7 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.common.stuntJumps",
         singularLabel: "maps.markers.collectibles.common.stuntJump",
     },
-    tag: {
+    tags: {
         color: "#8BC34A",
         label: "maps.markers.collectibles.sa.tags",
         singularLabel: "maps.markers.collectibles.sa.tag",
