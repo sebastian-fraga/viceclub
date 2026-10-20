@@ -25,7 +25,6 @@ export interface ChallengeRequirements {
 export interface CollectibleData {
     description?: Description;
     type?: string;
-    image?: string | undefined;
     text: string | undefined;
     guide?: CollectibleGuide;
     id: string;
