@@ -69,6 +69,9 @@ export default function GameMapCanvas({
     const gameInfo = gamesList.find((item) => item.id === gameId);
     const i18n = useT();
 
+    const imageVariant =
+        variantId && variantId !== gameId ? variantId : undefined;
+
     const [selectedCollectible, setSelectedCollectible] = useState<{
         type: string;
         collectible: CollectibleData;
@@ -397,6 +400,7 @@ export default function GameMapCanvas({
 
                             <MapMarkers
                                 gameId={gameId}
+                                variant={imageVariant}
                                 height={height}
                                 data={visibleData}
                                 completedIds={completedIds}
@@ -455,6 +459,7 @@ export default function GameMapCanvas({
                                             setSelectedCollectible(null)
                                         }
                                         gameId={gameId}
+                                        variant={imageVariant}
                                     />
                                 </div>
                             )}
@@ -489,6 +494,7 @@ export default function GameMapCanvas({
                                             setSelectedCollectible(null)
                                         }
                                         gameId={gameId}
+                                        variant={imageVariant}
                                     />
                                 </div>,
                                 document.getElementById("map-main")!,

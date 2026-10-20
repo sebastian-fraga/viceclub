@@ -4,6 +4,11 @@ import type {
 } from "@/components/maps/types";
 import { getTypeMeta } from "@/components/maps/types/categories";
 import {
+    COLLECTIBLE_IMAGE_SIZES,
+    getCollectibleImageSrcSet,
+    getCollectibleImageUrl,
+} from "@/components/maps/utils/collectibleImage";
+import {
     getDescription,
     getRequirement,
 } from "@/components/maps/utils/getLabels";
@@ -18,21 +23,6 @@ import {
     IconX,
 } from "@tabler/icons-react";
 import { forwardRef, memo, useState } from "react";
-
-const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
-
-const getCollectibleImageUrl = (
-    gameId: string,
-    variant: string | undefined,
-    category: string,
-    id: string,
-) => {
-    const path = [gameId, "maps", variant, category, `${id}.webp`]
-        .filter(Boolean)
-        .join("/");
-
-    return `${S3_BASE}/${path}`;
-};
 
 interface MapMarkerPopupProps {
     collectible: CollectibleData;
@@ -175,6 +165,10 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
         const lang = useLocale();
 
         const [failedSrc, setFailedSrc] = useState<string | null>(null);
+        const [loadedSrc, setLoadedSrc] = useState<string | null>(null);
+        const [thumbFailedSrc, setThumbFailedSrc] = useState<string | null>(
+            null,
+        );
 
         const meta = getTypeMeta(type);
         if (!meta) return null;
@@ -190,6 +184,15 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
             collectible.id,
         );
         const imageFailed = failedSrc === imageSrc;
+        const imageLoaded = loadedSrc === imageSrc;
+        const useThumbs = thumbFailedSrc !== imageSrc;
+
+        const thumbSrcSet = getCollectibleImageSrcSet(
+            gameId,
+            variant,
+            type,
+            collectible.id,
+        );
 
         return (
             <div
@@ -200,7 +203,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                 onWheel={(e) => e.stopPropagation()}
                 className="absolute z-2000 top-4 left-4 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-white/10 bg-(--button-bg)/90 text-white shadow-2xl shadow-black/70 backdrop-blur-md max-mobile:fixed max-mobile:inset-x-3 max-mobile:top-auto max-mobile:bottom-3 max-mobile:w-auto max-mobile:max-h-[calc(100dvh-6rem)] max-mobile:overflow-y-auto"
             >
-                <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+                <div className="flex items-center justify-between px-4 pt-3">
                     <div className="flex items-center gap-2">
                         <span className="font-body-condensed text-lg max-w-60 truncate">
                             {displayLabel}
@@ -223,7 +226,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                     </button>
                 </div>
 
-                <div className="flex flex-col gap-4 px-4 py-4 font-body max-mobile:gap-3 max-mobile:px-3 max-mobile:py-3">
+                <div className="flex flex-col gap-4 px-4 pb-4 font-body max-mobile:gap-3 max-mobile:px-3 max-mobile:pb-3">
                     <p className="text-sm leading-relaxed text-white/80">
                         {collectible.description
                             ? getDescription(collectible.description, lang)
@@ -234,7 +237,11 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                         requirements={collectible.requirements}
                     />
 
-                    <div>
+                    <div className="relative overflow-hidden rounded-2xl">
+                        {!imageLoaded && !imageFailed && (
+                            <div className="absolute inset-0 animate-pulse rounded-2xl bg-(--button-bg-hover)" />
+                        )}
+
                         {imageFailed ? (
                             <div className="flex flex-col gap-2 h-48 max-mobile:h-32 w-full items-center justify-center rounded-2xl border border-(--button-bg)/60 bg-(--button-bg-hover) text-sm text-white/40">
                                 <IconPhotoOff />
@@ -245,10 +252,24 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                         ) : (
                             <img
                                 src={imageSrc}
+                                srcSet={useThumbs ? thumbSrcSet : undefined}
+                                sizes={COLLECTIBLE_IMAGE_SIZES}
                                 alt={displayLabel}
-                                loading="lazy"
-                                onError={() => setFailedSrc(imageSrc)}
-                                className="h-full max-mobile:h-32 w-full rounded-2xl object-cover shadow-2xl shadow-(--game-accent)/20 aspect-video"
+                                loading="eager"
+                                fetchPriority="high"
+                                decoding="async"
+                                width={640}
+                                height={360}
+                                onLoad={() => setLoadedSrc(imageSrc)}
+                                onError={() => {
+                                    if (useThumbs) {
+                                        setThumbFailedSrc(imageSrc);
+                                        return;
+                                    }
+
+                                    setFailedSrc(imageSrc);
+                                }}
+                                className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-(--game-accent)/20 aspect-video"
                             />
                         )}
                     </div>
