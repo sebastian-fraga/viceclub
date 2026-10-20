@@ -37,6 +37,17 @@ export function MediaGallery({ gameId, data }: Props) {
     );
     const lightbox = useLightbox(flatImages);
 
+    const sections = useMemo(() => {
+        let offset = 0;
+
+        return Object.entries(data[category]).map(([section, images]) => {
+            const priorityOffset = offset;
+            offset += images.length;
+
+            return { section, images, priorityOffset };
+        });
+    }, [data, category]);
+
     const thumbRefs = useRef(new Map<string, HTMLImageElement>());
 
     const registerThumb = useCallback(
@@ -108,8 +119,8 @@ export function MediaGallery({ gameId, data }: Props) {
                             ease: [0.22, 1, 0.36, 1],
                         }}
                     >
-                        {Object.entries(data[category]).map(
-                            ([section, images]) => (
+                        {sections.map(
+                            ({ section, images, priorityOffset }) => (
                                 <SectionGrid
                                     key={section}
                                     gameId={gameId}
@@ -120,6 +131,7 @@ export function MediaGallery({ gameId, data }: Props) {
                                         section,
                                     }))}
                                     lang={lang}
+                                    priorityOffset={priorityOffset}
                                     onSelect={lightbox.open}
                                     registerThumb={registerThumb}
                                 />

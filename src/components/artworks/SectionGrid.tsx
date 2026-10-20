@@ -20,6 +20,7 @@ interface Props {
     section: string;
     images: FlatImageEntry[];
     lang: string;
+    priorityOffset: number;
     onSelect: (image: FlatImageEntry) => void;
     registerThumb: (id: string, el: HTMLImageElement | null) => void;
 }
@@ -32,6 +33,8 @@ function slugify(value: string) {
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/(^-|-$)/g, "");
 }
+
+export const PRIORITY_IMAGE_COUNT = 9;
 
 interface ThumbProps {
     url: string;
@@ -81,6 +84,7 @@ export function SectionGrid({
     section,
     images,
     lang,
+    priorityOffset,
     onSelect,
     registerThumb,
 }: Props) {
@@ -208,7 +212,8 @@ export function SectionGrid({
                     );
 
                     const caption = getCaption(image.caption, lang);
-                    const isPriority = index < 6;
+                    const isPriority =
+                        priorityOffset + index < PRIORITY_IMAGE_COUNT;
 
                     return (
                         <button
