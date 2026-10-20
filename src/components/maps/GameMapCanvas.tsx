@@ -454,6 +454,7 @@ export default function GameMapCanvas({
                                         onClose={() =>
                                             setSelectedCollectible(null)
                                         }
+                                        gameId={gameId}
                                     />
                                 </div>
                             )}
@@ -487,6 +488,7 @@ export default function GameMapCanvas({
                                         onClose={() =>
                                             setSelectedCollectible(null)
                                         }
+                                        gameId={gameId}
                                     />
                                 </div>,
                                 document.getElementById("map-main")!,

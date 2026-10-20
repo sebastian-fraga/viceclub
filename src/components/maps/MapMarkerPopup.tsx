@@ -17,11 +17,28 @@ import {
     IconStarFilled,
     IconX,
 } from "@tabler/icons-react";
-import { forwardRef, memo } from "react";
+import { forwardRef, memo, useState } from "react";
+
+const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
+
+const getCollectibleImageUrl = (
+    gameId: string,
+    variant: string | undefined,
+    category: string,
+    id: string,
+) => {
+    const path = [gameId, "maps", variant, category, `${id}.webp`]
+        .filter(Boolean)
+        .join("/");
+
+    return `${S3_BASE}/${path}`;
+};
 
 interface MapMarkerPopupProps {
     collectible: CollectibleData;
     type: string;
+    gameId: string;
+    variant?: string;
     totalForType: number;
     isCompleted: boolean;
     onToggleComplete: (id: string) => void;
@@ -145,6 +162,8 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
         {
             collectible,
             type,
+            gameId,
+            variant,
             totalForType,
             isCompleted,
             onToggleComplete,
@@ -154,12 +173,23 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
     ) {
         const i18n = useT();
         const lang = useLocale();
+
+        const [failedSrc, setFailedSrc] = useState<string | null>(null);
+
         const meta = getTypeMeta(type);
         if (!meta) return null;
 
         const displayLabel = meta?.singularLabel
             ? i18n(meta.singularLabel)
             : i18n(meta.label);
+
+        const imageSrc = getCollectibleImageUrl(
+            gameId,
+            variant,
+            type,
+            collectible.id,
+        );
+        const imageFailed = failedSrc === imageSrc;
 
         return (
             <div
@@ -205,22 +235,21 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                     />
 
                     <div>
-                        {collectible.image ? (
-                            <img
-                                src={collectible.image}
-                                alt={
-                                    type ??
-                                    i18n("maps.accessibility.collectibleImage")
-                                }
-                                className="rounded-2xl shadow-2xl shadow-(--game-accent)/20"
-                            />
-                        ) : (
+                        {imageFailed ? (
                             <div className="flex flex-col gap-2 h-48 max-mobile:h-32 w-full items-center justify-center rounded-2xl border border-(--button-bg)/60 bg-(--button-bg-hover) text-sm text-white/40">
                                 <IconPhotoOff />
                                 <span>
                                     {i18n("common.other.notFoundImage")}
                                 </span>
                             </div>
+                        ) : (
+                            <img
+                                src={imageSrc}
+                                alt={displayLabel}
+                                loading="lazy"
+                                onError={() => setFailedSrc(imageSrc)}
+                                className="h-full max-mobile:h-32 w-full rounded-2xl object-cover shadow-2xl shadow-(--game-accent)/20 aspect-video"
+                            />
                         )}
                     </div>
 
