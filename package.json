@@ -8,6 +8,7 @@
         "build": "astro build",
         "preview": "astro preview",
         "astro": "astro",
+        "thumbs": "node scripts/generate-map-thumbs.mjs",
         "webkit": "node scripts/webkit.mjs"
     },
     "dependencies": {
