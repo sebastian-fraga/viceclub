@@ -227,7 +227,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                 </div>
 
                 <div className="flex flex-col gap-4 px-4 pb-4 font-body max-mobile:gap-3 max-mobile:px-3 max-mobile:pb-3">
-                    <p className="text-sm leading-relaxed text-white/80">
+                    <p className="text-[12px] pt-2 pl-0.5 leading-relaxed text-white/80">
                         {collectible.description
                             ? getDescription(collectible.description, lang)
                             : ""}
