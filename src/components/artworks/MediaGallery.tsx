@@ -1,7 +1,7 @@
 import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import useLocale from "@/hooks/useLocale";
-import { useMemo, useRef, useEffect } from "react";
+import { useMemo, useRef, useEffect, useCallback } from "react";
 import { CategorySwitcher } from "./CategorySwitcher";
 import { Lightbox } from "./Lightbox";
 import { flattenCategory } from "./mediaUtils";
@@ -39,10 +39,13 @@ export function MediaGallery({ gameId, data }: Props) {
 
     const thumbRefs = useRef(new Map<string, HTMLImageElement>());
 
-    function registerThumb(id: string, el: HTMLImageElement | null) {
-        if (el) thumbRefs.current.set(id, el);
-        else thumbRefs.current.delete(id);
-    }
+    const registerThumb = useCallback(
+        (id: string, el: HTMLImageElement | null) => {
+            if (el) thumbRefs.current.set(id, el);
+            else thumbRefs.current.delete(id);
+        },
+        [],
+    );
 
     function handleClose() {
         const imgEl = lightbox.current

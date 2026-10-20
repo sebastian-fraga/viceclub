@@ -33,6 +33,48 @@ function slugify(value: string) {
         .replace(/(^-|-$)/g, "");
 }
 
+interface ThumbProps {
+    url: string;
+    caption: string;
+    isPriority: boolean;
+    registerThumb: (el: HTMLImageElement | null) => void;
+}
+
+function MediaThumb({ url, caption, isPriority, registerThumb }: ThumbProps) {
+    const [loaded, setLoaded] = useState(false);
+
+    function setRefs(el: HTMLImageElement | null) {
+        registerThumb(el);
+
+        if (el?.complete) setLoaded(true);
+    }
+
+    return (
+        <div className="relative aspect-video w-full shrink-0 overflow-hidden bg-[#1b1b36]">
+            <div
+                aria-hidden="true"
+                className={`absolute inset-0 bg-linear-to-r from-transparent via-white/6 to-transparent ${
+                    loaded ? "hidden" : "animate-pulse"
+                }`}
+            />
+
+            <img
+                ref={setRefs}
+                src={url}
+                alt={caption}
+                loading={isPriority ? "eager" : "lazy"}
+                fetchPriority={isPriority ? "high" : "auto"}
+                width={640}
+                height={360}
+                onLoad={() => setLoaded(true)}
+                className={`absolute inset-0 size-full object-cover object-top transition-opacity duration-500 ${
+                    loaded ? "opacity-100" : "opacity-0"
+                }`}
+            />
+        </div>
+    );
+}
+
 export function SectionGrid({
     gameId,
     category,
@@ -174,15 +216,13 @@ export function SectionGrid({
                             onClick={(e) => handleSelect(e, image)}
                             className="fade-card group flex cursor-pointer flex-col overflow-hidden rounded-[20px] bg-[#252644] text-left shadow-xl shadow-(color:--button-bg)/5 transition-colors duration-300 hover:bg-[#302f58]"
                         >
-                            <img
-                                ref={(el) => registerThumb(image.id, el)}
-                                src={url}
-                                alt={caption}
-                                loading={isPriority ? "eager" : "lazy"}
-                                fetchPriority={isPriority ? "high" : "auto"}
-                                width={640}
-                                height={360}
-                                className="aspect-video w-full shrink-0 object-cover object-top"
+                            <MediaThumb
+                                url={url}
+                                caption={caption}
+                                isPriority={isPriority}
+                                registerThumb={(el) =>
+                                    registerThumb(image.id, el)
+                                }
                             />
 
                             <div className="max-mobile:h-22 h-32 shrink-0 p-8">
