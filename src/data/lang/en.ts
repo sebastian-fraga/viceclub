@@ -1217,10 +1217,10 @@ export default {
                     driveBy: "Drive-by challenge",
                 },
                 v: {
-                    underTheBridgeChallenges: "Voos por baixo de pontes",
-                    underTheBridge: "Voo por baixo de ponte",
-                    knifeFlights: "Voos em faca",
-                    knifeFlight: "Voo em faca",
+                    underTheBridgeChallenges: "Under the bridge challenges",
+                    underTheBridge: "Under the bridge challenge",
+                    knifeFlights: "Knife flights",
+                    knifeFlight: "Knife flight",
                 },
             },
             locations: {
