@@ -3,7 +3,13 @@ import {
     MAP_CATEGORIES,
     type MapCategory,
 } from "@/components/maps/types/categories";
+import {
+    COLLECTIBLE_IMAGE_SIZES,
+    getCollectibleImageSrcSet,
+    getCollectibleImageUrl,
+} from "@/components/maps/utils/collectibleImage";
 import { MAP_MARKERS } from "@/data/maps/markers";
+import { preloadImage } from "@/lib/preloadImage";
 import { motion } from "framer-motion";
 import { divIcon } from "leaflet";
 import { useMemo, useState } from "react";
@@ -12,6 +18,7 @@ import { Marker, Polyline, useMapEvents } from "react-leaflet";
 
 interface MapMarkersProps {
     gameId: string;
+    variant?: string;
     height: number;
     data: Partial<Record<MapCategory, Record<string, CollectibleData[]>>>;
     completedIds: Set<string>;
@@ -48,6 +55,8 @@ function AnimatedMarker({
     isCompleted,
     isSelected,
     zoomScale,
+    imageUrl,
+    imageSrcSet,
     onSelect,
 }: {
     collectible: CollectibleData;
@@ -59,6 +68,8 @@ function AnimatedMarker({
     isCompleted: boolean;
     isSelected: boolean;
     zoomScale: number;
+    imageUrl: string;
+    imageSrcSet: string;
     onSelect: () => void;
 }) {
     const { customIcon, containerEl } = useMemo(() => {
@@ -111,6 +122,16 @@ function AnimatedMarker({
                 zIndexOffset={isSelected ? 1000 : 0}
                 eventHandlers={{
                     click: () => onSelect(),
+                    mouseover: () =>
+                        preloadImage(imageUrl, {
+                            srcSet: imageSrcSet,
+                            sizes: COLLECTIBLE_IMAGE_SIZES,
+                        }),
+                    mousedown: () =>
+                        preloadImage(imageUrl, {
+                            srcSet: imageSrcSet,
+                            sizes: COLLECTIBLE_IMAGE_SIZES,
+                        }),
                 }}
             >
                 {createPortal(
@@ -164,6 +185,7 @@ interface TypeMeta {
 
 export default function MapMarkers({
     gameId,
+    variant,
     height,
     data,
     completedIds,
@@ -224,6 +246,18 @@ export default function MapMarkers({
                                 isCompleted={isCompleted}
                                 isSelected={isSelected}
                                 zoomScale={zoomScale}
+                                imageUrl={getCollectibleImageUrl(
+                                    gameId,
+                                    variant,
+                                    type,
+                                    collectible.id,
+                                )}
+                                imageSrcSet={getCollectibleImageSrcSet(
+                                    gameId,
+                                    variant,
+                                    type,
+                                    collectible.id,
+                                )}
                                 onSelect={() =>
                                     onSelect(collectible, type, items.length)
                                 }
