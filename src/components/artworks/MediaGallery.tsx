@@ -126,7 +126,7 @@ export function MediaGallery({ gameId, data }: Props) {
                     duration: 0.6,
                     ease: [0.22, 1, 0.36, 1],
                 }}
-                className="mx-auto mt-30 max-w-430 max-mobile:mt-0 max-mobile:mx-4"
+                className="mx-auto mt-30 w-full max-w-430 max-mobile:mt-0 max-mobile:px-4"
             >
                 <div className="mb-12 mt-6 max-w-fit">
                     <Title
