@@ -247,10 +247,10 @@ export function Lightbox({
                 </button>
             </div>
 
-            <div className="w-[calc(100%-var(--sidebar-width))] mx-auto mb-10 bg-[#252644] rounded-3xl py-8 px-12 max-mobile:w-full max-mobile:mx-0 max-mobile:mb-0 max-mobile:rounded-none max-mobile:py-4 max-mobile:px-4 max-mobile:pb-[calc(1rem+env(safe-area-inset-bottom)+56px)]">
-                <div className="flex items-center justify-between max-mobile:flex-col max-mobile:gap-3">
-                    <div className="flex items-center gap-6 max-mobile:hidden">
-                        <div className="flex items-center gap-4">
+            <div className="w-auto mx-10 mb-10 bg-[#252644] rounded-3xl py-8 px-12 max-mobile:w-full max-mobile:mx-0 max-mobile:mb-0 max-mobile:rounded-none max-mobile:py-4 max-mobile:px-4 max-mobile:pb-[calc(1rem+env(safe-area-inset-bottom)+56px)]">
+                <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-mobile:flex-col max-mobile:gap-3">
+                    <div className="flex min-w-0 items-center gap-6 max-mobile:hidden">
+                        <div className="flex shrink-0 items-center gap-4">
                             <button
                                 onClick={onPrev}
                                 disabled={!canPrev}
@@ -270,23 +270,34 @@ export function Lightbox({
                             </button>
                         </div>
 
-                        <div className="flex gap-2 text-2xl">
-                            <span className="font-bold text-violet-200">
+                        <div className="flex flex-1 min-w-48 items-baseline gap-2 text-2xl">
+                            <span
+                                title={sectionLabel}
+                                className="shrink-2 truncate font-bold text-violet-200"
+                            >
                                 {sectionLabel}
                             </span>
-                            <span className="font-bold text-indigo-400/30">
+                            <span
+                                aria-hidden="true"
+                                className="shrink-0 font-bold text-indigo-400/30"
+                            >
                                 /
                             </span>
-                            <span className="text-violet-50">{caption}</span>
+                            <span
+                                title={caption}
+                                className="truncate text-violet-50"
+                            >
+                                {caption}
+                            </span>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4 max-mobile:w-full max-mobile:justify-between">
+                    <div className="ml-auto flex min-w-0 items-center gap-4 max-mobile:w-full max-mobile:justify-between">
                         <button
                             onClick={handleDownload}
                             disabled={isDownloading}
                             aria-label={t("common.buttons.download")}
-                            className={`flex w-110 items-center justify-center gap-4 rounded-full bg-(--game-buttons-primary-background) cursor-pointer hover:bg-(--game-buttons-primary-hovered) transition duration-400 py-7 font-black text-3xl text-(--game-buttons-primary-text) max-mobile:flex-1 max-mobile:w-auto max-mobile:py-3 max-mobile:text-lg disabled:cursor-wait ${
+                            className={`flex w-110 max-w-full min-w-0 items-center justify-center gap-4 rounded-full bg-(--game-buttons-primary-background) cursor-pointer hover:bg-(--game-buttons-primary-hovered) transition duration-400 py-7 font-black text-3xl text-(--game-buttons-primary-text) max-mobile:flex-1 max-mobile:w-auto max-mobile:py-3 max-mobile:text-lg disabled:cursor-wait ${
                                 isDownloading
                                     ? "mobile:justify-between mobile:px-12"
                                     : ""
@@ -328,18 +339,20 @@ export function Lightbox({
                                         </svg>
                                     </span>
 
-                                    <span className="tabular-nums">
+                                    <span className="tabular-nums shrink-0">
                                         {downloadProgress}%
                                     </span>
                                 </>
                             ) : (
                                 <>
-                                    {t("common.buttons.download")}
+                                    <span className="truncate">
+                                        {t("common.buttons.download")}
+                                    </span>
 
                                     <IconDownload
                                         stroke={3}
                                         size={32}
-                                        className="max-mobile:size-5"
+                                        className="shrink-0 max-mobile:size-5"
                                     />
                                 </>
                             )}
