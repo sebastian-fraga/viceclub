@@ -1,3 +1,5 @@
+import thumbConfig from "@/data/map-thumb-widths.json";
+
 const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
 
 const buildPath = (segments: (string | undefined)[]) =>
@@ -26,7 +28,7 @@ export const getCollectibleThumbUrl = (
         `${id}-${width}.webp`,
     ])}`;
 
-export const THUMB_WIDTHS = [480, 640, 960, 1280] as const;
+export const THUMB_WIDTHS: readonly number[] = thumbConfig.widths;
 
 export const COLLECTIBLE_IMAGE_SIZES =
     "(max-width: 640px) calc(100vw - 48px), 288px";
@@ -36,8 +38,17 @@ export const getCollectibleImageSrcSet = (
     variant: string | undefined,
     type: string,
     id: string,
+    excludeWidths: readonly number[] = [],
 ) =>
-    THUMB_WIDTHS.map(
+    THUMB_WIDTHS.filter((width) => !excludeWidths.includes(width))
+        .map(
+            (width) =>
+                `${getCollectibleThumbUrl(gameId, variant, type, id, width)} ${width}w`,
+        )
+        .join(", ");
+
+export const getThumbWidthFromUrl = (url: string): number | undefined =>
+    THUMB_WIDTHS.find(
         (width) =>
-            `${getCollectibleThumbUrl(gameId, variant, type, id, width)} ${width}w`,
-    ).join(", ");
+            url.includes("/maps/thumbs/") && url.endsWith(`-${width}.webp`),
+    );

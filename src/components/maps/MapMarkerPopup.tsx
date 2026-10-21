@@ -7,6 +7,7 @@ import {
     COLLECTIBLE_IMAGE_SIZES,
     getCollectibleImageSrcSet,
     getCollectibleImageUrl,
+    getThumbWidthFromUrl,
 } from "@/components/maps/utils/collectibleImage";
 import {
     getDescription,
@@ -166,9 +167,10 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
 
         const [failedSrc, setFailedSrc] = useState<string | null>(null);
         const [loadedSrc, setLoadedSrc] = useState<string | null>(null);
-        const [thumbFailedSrc, setThumbFailedSrc] = useState<string | null>(
-            null,
-        );
+        const [thumbFailures, setThumbFailures] = useState<{
+            src: string;
+            widths: number[];
+        } | null>(null);
 
         const meta = getTypeMeta(type);
         if (!meta) return null;
@@ -185,14 +187,18 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
         );
         const imageFailed = failedSrc === imageSrc;
         const imageLoaded = loadedSrc === imageSrc;
-        const useThumbs = thumbFailedSrc !== imageSrc;
+
+        const failedThumbWidths =
+            thumbFailures?.src === imageSrc ? thumbFailures.widths : [];
 
         const thumbSrcSet = getCollectibleImageSrcSet(
             gameId,
             variant,
             type,
             collectible.id,
+            failedThumbWidths,
         );
+        const useThumbs = thumbSrcSet.length > 0;
 
         return (
             <div
@@ -261,11 +267,36 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                                 width={640}
                                 height={360}
                                 onLoad={() => setLoadedSrc(imageSrc)}
-                                onError={() => {
-                                    if (useThumbs) {
-                                        setThumbFailedSrc(imageSrc);
+                                onError={(event) => {
+                                    const currentSrc =
+                                        event.currentTarget.currentSrc ?? "";
+
+                                    const failedWidth =
+                                        getThumbWidthFromUrl(currentSrc);
+
+                                    if (failedWidth !== undefined) {
+                                        setThumbFailures((prev) => {
+                                            const widths =
+                                                prev?.src === imageSrc
+                                                    ? prev.widths
+                                                    : [];
+
+                                            if (widths.includes(failedWidth))
+                                                return prev;
+
+                                            return {
+                                                src: imageSrc,
+                                                widths: [
+                                                    ...widths,
+                                                    failedWidth,
+                                                ],
+                                            };
+                                        });
+
                                         return;
                                     }
+
+                                    if (currentSrc !== imageSrc) return;
 
                                     setFailedSrc(imageSrc);
                                 }}
