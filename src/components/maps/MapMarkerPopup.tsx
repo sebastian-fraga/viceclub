@@ -15,6 +15,8 @@ import {
 } from "@/components/maps/utils/getLabels";
 import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
+import { themeToCssVars } from "@/lib/theme";
+import type { GameTheme } from "@/types/game";
 import {
     IconClockFilled,
     IconFlagFilled,
@@ -34,6 +36,7 @@ interface MapMarkerPopupProps {
     isCompleted: boolean;
     onToggleComplete: (id: string) => void;
     onClose: () => void;
+    theme: GameTheme
 }
 
 function RequirementsPanel({
@@ -159,6 +162,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
             isCompleted,
             onToggleComplete,
             onClose,
+            theme,
         },
         ref,
     ) {
@@ -207,49 +211,50 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                 onMouseDown={(e) => e.stopPropagation()}
                 onDoubleClick={(e) => e.stopPropagation()}
                 onWheel={(e) => e.stopPropagation()}
-                className="absolute z-2000 top-4 left-4 w-[min(20rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-white/10 bg-(--button-bg)/90 text-white shadow-2xl shadow-black/70 backdrop-blur-md max-mobile:fixed max-mobile:inset-x-3 max-mobile:top-auto max-mobile:bottom-3 max-mobile:w-auto max-mobile:max-h-[calc(100dvh-6rem)] max-mobile:overflow-y-auto"
+                className="absolute z-2000 top-4 left-4 w-[min(22rem,calc(100vw-2rem))] max-h-[calc(100dvh-2rem)] overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl bg-(--button-bg)/90 text-white shadow-2xl shadow-black/70 backdrop-blur-md max-mobile:fixed max-mobile:inset-x-3 max-mobile:top-auto max-mobile:bottom-3 max-mobile:w-auto max-mobile:max-h-[calc(100dvh-6rem)]"
+                style={themeToCssVars(theme)}
             >
-                <div className="flex items-center justify-between px-4 pt-3">
-                    <div className="flex items-center gap-2">
-                        <span className="font-body-condensed text-lg max-w-60 truncate">
-                            {displayLabel}
-                        </span>
-
-                        {totalForType > 1 && (
-                            <span className="shrink-0 rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
-                                {collectible.id}
+                <div className="flex flex-col gap-4 p-4 font-body max-mobile:gap-3 max-mobile:p-3">
+                    <div className="flex items-center justify-between gap-2">
+                        <div className="flex min-w-0 items-center gap-2">
+                            <span className="truncate font-body-condensed text-lg">
+                                {displayLabel}
                             </span>
-                        )}
+
+                            {totalForType > 1 && (
+                                <span className="shrink-0 rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
+                                    {collectible.id}
+                                </span>
+                            )}
+                        </div>
+
+                        <button
+                            type="button"
+                            onClick={onClose}
+                            aria-label={i18n("common.accessibility.close")}
+                            className="shrink-0 cursor-pointer rounded-lg bg-white/5 p-1.5 text-slate-400 transition hover:text-white"
+                        >
+                            <IconX size={18} />
+                        </button>
                     </div>
 
-                    <button
-                        type="button"
-                        onClick={onClose}
-                        aria-label={i18n("common.accessibility.close")}
-                        className="z-10 p-1.5 rounded-lg text-slate-400 hover:text-white bg-white/5 transition cursor-pointer"
-                    >
-                        <IconX size={18} />
-                    </button>
-                </div>
-
-                <div className="flex flex-col gap-4 px-4 pb-4 font-body max-mobile:gap-3 max-mobile:px-3 max-mobile:pb-3">
-                    <p className="text-[12px] pt-2 pl-0.5 leading-relaxed text-white/80">
-                        {collectible.description
-                            ? getDescription(collectible.description, lang)
-                            : ""}
-                    </p>
+                    {collectible.description && (
+                        <p className="text-[13px] leading-relaxed text-pretty text-white/80">
+                            {getDescription(collectible.description, lang)}
+                        </p>
+                    )}
 
                     <RequirementsPanel
                         requirements={collectible.requirements}
                     />
 
-                    <div className="relative overflow-hidden rounded-2xl">
+                    <div className="relative overflow-hidden rounded-md shadow-2xl shadow-(color:--game-accent)/20">
                         {!imageLoaded && !imageFailed && (
-                            <div className="absolute inset-0 animate-pulse rounded-2xl bg-(--button-bg-hover)" />
+                            <div className="absolute inset-0 animate-pulse rounded-md bg-(--button-bg-hover)" />
                         )}
 
                         {imageFailed ? (
-                            <div className="flex flex-col gap-2 h-48 max-mobile:h-32 w-full items-center justify-center rounded-2xl border border-(--button-bg)/60 bg-(--button-bg-hover) text-sm text-white/40">
+                            <div className="flex aspect-video w-full flex-col items-center justify-center gap-2 rounded-md border border-(--button-bg)/60 bg-(--button-bg-hover) text-sm text-white/40">
                                 <IconPhotoOff />
                                 <span>
                                     {i18n("common.other.notFoundImage")}
@@ -300,7 +305,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
 
                                     setFailedSrc(imageSrc);
                                 }}
-                                className="h-full w-full rounded-2xl object-cover shadow-2xl shadow-(--game-accent)/20 aspect-video"
+                                className="aspect-video h-full w-full rounded-md object-cover"
                             />
                         )}
                     </div>
@@ -308,17 +313,15 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                     <button
                         type="button"
                         onClick={() => onToggleComplete(collectible.id)}
-                        className={`flex items-center justify-center gap-2 w-full rounded-full border px-4 py-3 font-medium text-sm transition-colors duration-300 cursor-pointer ${
+                        className={`flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border px-4 py-3 text-sm font-medium transition-colors duration-500 ${
                             isCompleted
                                 ? "bg-(--game-buttons-primary-background)/5 text-(--game-buttons-secondary-text) border-(--game-buttons-secondary-border)/20 hover:bg-(--game-buttons-secondary-hovered)"
                                 : "bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) border-transparent hover:bg-(--game-buttons-primary-hovered)"
                         }`}
                     >
-                        {isCompleted ? (
-                            <>{i18n("maps.markers.popup.completed")}</>
-                        ) : (
-                            <>{i18n("maps.markers.popup.markAsCompleted")}</>
-                        )}
+                        {isCompleted
+                            ? i18n("maps.markers.popup.completed")
+                            : i18n("maps.markers.popup.markAsCompleted")}
                     </button>
                 </div>
             </div>

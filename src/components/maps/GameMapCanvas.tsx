@@ -463,6 +463,7 @@ export default function GameMapCanvas({
                                         }
                                         gameId={gameId}
                                         variant={imageVariant}
+                                        theme={theme}
                                     />
                                 </div>
                             )}
@@ -498,6 +499,7 @@ export default function GameMapCanvas({
                                         }
                                         gameId={gameId}
                                         variant={imageVariant}
+                                        theme={theme}
                                     />
                                 </div>,
                                 document.getElementById("map-main")!,
