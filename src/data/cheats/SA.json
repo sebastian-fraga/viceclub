@@ -1691,6 +1691,7 @@
                         "R2",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "ps3": [
@@ -1702,6 +1703,7 @@
                         "R1",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "ps4": [
@@ -1713,6 +1715,7 @@
                         "R2",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "ps5": [
@@ -1724,6 +1727,7 @@
                         "R2",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "xbox": [
@@ -1735,6 +1739,7 @@
                         "BLACK",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "xbox360": [
@@ -1746,6 +1751,7 @@
                         "RB",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "xboxOne": [
@@ -1757,6 +1763,7 @@
                         "RT",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "xboxSeries": [
@@ -1768,6 +1775,7 @@
                         "RT",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "switch": [
@@ -1779,6 +1787,7 @@
                         "ZR",
                         "UP",
                         "DOWN",
+                        "LEFT",
                         "RIGHT"
                     ],
                     "pc": ["YECGAA", "ROCKETMAN"]
