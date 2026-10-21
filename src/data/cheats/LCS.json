@@ -256,10 +256,10 @@
             {
                 "id": "player_9",
                 "title": {
-                    "es": "Desactivar nivel de búsqueda",
-                    "en": "Disable wanted level",
-                    "fr": "Désactiver le niveau de recherche",
-                    "pt": "Desativar o nível de procurado"
+                    "es": "Bloquear nivel de búsqueda",
+                    "en": "Lock wanted level",
+                    "fr": "Bloquer le niveau de recherche",
+                    "pt": "Bloquear o nível de procurado"
                 },
                 "codes": {
                     "psp": [
