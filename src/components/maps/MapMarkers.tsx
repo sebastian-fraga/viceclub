@@ -138,10 +138,15 @@ function AnimatedMarker({
                     <motion.div
                         initial={false}
                         animate={{
-                            scale: currentScale,
-                            opacity: isCompleted ? 0.2 : 1,
+                            scale: isCompleted ? 0.8 : currentScale,
+                            opacity: isCompleted ? 0.7 : 1,
+                            filter: isCompleted
+                                ? "grayscale(70%)"
+                                : "grayscale(0%)",
                         }}
-                        whileHover={{ scale: currentScale * 1.15 }}
+                        whileHover={{
+                            scale: isCompleted ? 0.9 : currentScale * 1.15,
+                        }}
                         transition={{
                             type: "spring",
                             stiffness: 350,
