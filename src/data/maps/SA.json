@@ -1216,19 +1216,19 @@
         "bmx": [
             {
                 "id": "1",
-                "x": 5008,
-                "y": 1653,
+                "x": 5002,
+                "y": 1664,
                 "requirements": {
                     "minLevel": { "skill": "cycling", "value": "20%" }
                 }
             }
         ],
-        "nrg": [{ "id": "1", "x": 1339, "y": 3139 }],
+        "nrg": [{ "id": "1", "x": 1333, "y": 3147 }],
         "chiliad": [
             {
                 "id": "1",
                 "x": 685,
-                "y": 1451,
+                "y": 1400,
                 "description": "Scotch Bonnet Yellow Route",
                 "requirements": {
                     "schedule": { "from": "07:00", "to": "18:00" },
@@ -1238,7 +1238,7 @@
             {
                 "id": "2",
                 "x": 700,
-                "y": 1451,
+                "y": 1400,
                 "description": "Birdseye Winder",
                 "requirements": {
                     "schedule": { "from": "07:00", "to": "18:00" },
@@ -1249,7 +1249,7 @@
             {
                 "id": "3",
                 "x": 715,
-                "y": 1451,
+                "y": 1400,
                 "description": "Cobra Run",
                 "requirements": {
                     "schedule": { "from": "07:00", "to": "18:00" },
@@ -1284,8 +1284,8 @@
             },
             {
                 "id": "2",
-                "x": 5257,
-                "y": 2993,
+                "x": 5270,
+                "y": 2997,
                 "description": "Fisher's Lagoon",
                 "requirements": {
                     "schedule": {
@@ -1311,8 +1311,8 @@
         "assets": [
             {
                 "id": "1",
-                "x": 774,
-                "y": 3198,
+                "x": 781,
+                "y": 3211,
                 "description": {
                     "es": "Tienda de RC de Zero",
                     "en": "Zero RC",
@@ -1344,8 +1344,8 @@
             },
             {
                 "id": "3",
-                "x": 3495,
-                "y": 5671,
+                "x": 3501,
+                "y": 5662,
                 "description": {
                     "es": "Aeropuerto de Verdant Meadows",
                     "en": "Verdant Meadows Airfield",
@@ -1359,8 +1359,8 @@
             },
             {
                 "id": "4",
-                "x": 3004,
-                "y": 1927,
+                "x": 3000,
+                "y": 1914,
                 "description": "RS Haul",
                 "requirements": {
                     "availableAfter": ["Tanker Commander"],
@@ -1376,7 +1376,7 @@
             },
             {
                 "id": "5",
-                "x": 1271,
+                "x": 1276,
                 "y": 4045,
                 "description": {
                     "es": "Hotel Vank Hoff",
@@ -1398,8 +1398,8 @@
             },
             {
                 "id": "6",
-                "x": 3917,
-                "y": 3896,
+                "x": 3916,
+                "y": 3912,
                 "description": {
                     "es": "Cantera Hunter",
                     "en": "Hunter Quarry",
@@ -1420,8 +1420,8 @@
             },
             {
                 "id": "7",
-                "x": 4469,
-                "y": 1275,
+                "x": 4473,
+                "y": 1251,
                 "description": "Roboi's Food Mart",
                 "requirements": {
                     "unlockedBy": [
@@ -1436,8 +1436,8 @@
             },
             {
                 "id": "8",
-                "x": 420,
-                "y": 3130,
+                "x": 429,
+                "y": 3150,
                 "description": "Hippy Shopper",
                 "requirements": {
                     "unlockedBy": [
@@ -1452,8 +1452,8 @@
             },
             {
                 "id": "9",
-                "x": 5010,
-                "y": 5199,
+                "x": 5011,
+                "y": 5209,
                 "description": "Burger Shot",
                 "requirements": {
                     "unlockedBy": [
