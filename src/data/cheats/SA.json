@@ -346,6 +346,7 @@
                         "UP",
                         "UP",
                         "TRIANGLE",
+                        "TRIANGLE",
                         "UP",
                         "UP",
                         "LEFT",
@@ -357,6 +358,7 @@
                     "ps3": [
                         "UP",
                         "UP",
+                        "TRIANGLE",
                         "TRIANGLE",
                         "UP",
                         "UP",
@@ -370,6 +372,7 @@
                         "UP",
                         "UP",
                         "TRIANGLE",
+                        "TRIANGLE",
                         "UP",
                         "UP",
                         "LEFT",
@@ -381,6 +384,7 @@
                     "ps5": [
                         "UP",
                         "UP",
+                        "TRIANGLE",
                         "TRIANGLE",
                         "UP",
                         "UP",
@@ -394,6 +398,7 @@
                         "UP",
                         "UP",
                         "Y",
+                        "Y",
                         "UP",
                         "UP",
                         "LEFT",
@@ -405,6 +410,7 @@
                     "xbox360": [
                         "UP",
                         "UP",
+                        "Y",
                         "Y",
                         "UP",
                         "UP",
@@ -418,6 +424,7 @@
                         "UP",
                         "UP",
                         "Y",
+                        "Y",
                         "UP",
                         "UP",
                         "LEFT",
@@ -429,6 +436,7 @@
                     "xboxSeries": [
                         "UP",
                         "UP",
+                        "Y",
                         "Y",
                         "UP",
                         "UP",
@@ -1803,94 +1811,112 @@
                 },
                 "codes": {
                     "ps2": [
+                        "R1",
+                        "R1",
                         "CIRCLE",
-                        "RIGHT",
-                        "CIRCLE",
+                        "R2",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "SQUARE",
-                        "TRIANGLE",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "ps3": [
+                        "R1",
+                        "R1",
                         "CIRCLE",
-                        "RIGHT",
-                        "CIRCLE",
+                        "R2",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "SQUARE",
-                        "TRIANGLE",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "ps4": [
+                        "R1",
+                        "R1",
                         "CIRCLE",
-                        "RIGHT",
-                        "CIRCLE",
+                        "R2",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "SQUARE",
-                        "TRIANGLE",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "ps5": [
+                        "R1",
+                        "R1",
                         "CIRCLE",
-                        "RIGHT",
-                        "CIRCLE",
+                        "R2",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "SQUARE",
-                        "TRIANGLE",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "xbox": [
+                        "RT",
+                        "RT",
                         "B",
-                        "RIGHT",
-                        "B",
+                        "BLACK",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "X",
-                        "Y",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "xbox360": [
+                        "RB",
+                        "RB",
                         "B",
-                        "RIGHT",
-                        "B",
+                        "RT",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "X",
-                        "Y",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "xboxOne": [
+                        "RB",
+                        "RB",
                         "B",
-                        "RIGHT",
-                        "B",
+                        "RT",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "X",
-                        "Y",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "xboxSeries": [
+                        "RB",
+                        "RB",
                         "B",
-                        "RIGHT",
-                        "B",
+                        "RT",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "X",
-                        "Y",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "switch": [
+                        "R",
+                        "R",
                         "A",
-                        "RIGHT",
-                        "A",
+                        "ZR",
+                        "LEFT",
                         "RIGHT",
                         "LEFT",
-                        "Y",
-                        "X",
-                        "UP"
+                        "RIGHT",
+                        "LEFT",
+                        "RIGHT"
                     ],
                     "pc": ["OSRBLHH", "TURNUPTHEHEAT"]
                 }
@@ -2120,10 +2146,10 @@
             {
                 "id": "player_18",
                 "title": {
-                    "es": "Desactivar nivel de búsqueda",
-                    "en": "Disable wanted level",
-                    "fr": "Désactiver le niveau de recherche",
-                    "pt": "Desativar o nível de procurado"
+                    "es": "Bloquear nivel de búsqueda",
+                    "en": "Lock wanted level",
+                    "fr": "Bloquer le niveau de recherche",
+                    "pt": "Bloquear o nível de procurado"
                 },
                 "codes": {
                     "ps2": [
@@ -5897,18 +5923,6 @@
                     "pt": "Melhor suspensão"
                 },
                 "codes": {
-                    "ps2": [
-                        "SQUARE",
-                        "SQUARE",
-                        "R2",
-                        "LEFT",
-                        "UP",
-                        "SQUARE",
-                        "R2",
-                        "CROSS",
-                        "CROSS",
-                        "CROSS"
-                    ],
                     "ps3": [
                         "SQUARE",
                         "SQUARE",
@@ -7171,10 +7185,10 @@
             {
                 "id": "weather_3",
                 "title": {
-                    "es": "Clima despejado",
-                    "en": "Clear weather",
-                    "fr": "Temps dégagé",
-                    "pt": "Tempo limpo"
+                    "es": "Clima nublado",
+                    "en": "Cloudy weather",
+                    "fr": "Temps nuageux",
+                    "pt": "Clima nublado"
                 },
                 "codes": {
                     "ps2": [
@@ -7484,7 +7498,6 @@
                         "L1",
                         "L2",
                         "L2",
-                        "L2",
                         "L1",
                         "L2",
                         "R1",
@@ -7495,7 +7508,6 @@
                         "DOWN",
                         "L2",
                         "L2",
-                        "L1",
                         "L1",
                         "L1",
                         "L2",
@@ -7510,7 +7522,6 @@
                         "L1",
                         "L2",
                         "L2",
-                        "L2",
                         "L1",
                         "L2",
                         "R1",
@@ -7521,7 +7532,6 @@
                         "DOWN",
                         "L1",
                         "L1",
-                        "L2",
                         "L2",
                         "L2",
                         "L1",
@@ -7536,7 +7546,6 @@
                         "LT",
                         "WHITE",
                         "WHITE",
-                        "WHITE",
                         "LT",
                         "WHITE",
                         "RT",
@@ -7547,7 +7556,6 @@
                         "DOWN",
                         "LT",
                         "LT",
-                        "LB",
                         "LB",
                         "LB",
                         "LT",
@@ -7562,7 +7570,6 @@
                         "LB",
                         "LT",
                         "LT",
-                        "LT",
                         "LB",
                         "LT",
                         "RB",
@@ -7575,7 +7582,6 @@
                         "LB",
                         "LT",
                         "LT",
-                        "LT",
                         "LB",
                         "LT",
                         "RB",
@@ -7586,7 +7592,6 @@
                         "DOWN",
                         "L",
                         "L",
-                        "ZL",
                         "ZL",
                         "ZL",
                         "L",
@@ -7611,9 +7616,9 @@
                 "id": "peds_1",
                 "title": {
                     "es": "Modo caos",
-                    "en": "Pedestrian riot",
-                    "fr": "Émeute des piétons",
-                    "pt": "Motim de pedestres"
+                    "en": "Riot mode",
+                    "fr": "Mode émeute",
+                    "pt": "Modo distúrbio"
                 },
                 "codes": {
                     "ps2": [
@@ -7748,10 +7753,10 @@
             {
                 "id": "peds_2",
                 "title": {
-                    "es": "Modo caos con palos de golf",
-                    "en": "Pedestrian riot with golf clubs",
-                    "fr": "Émeute des piétons avec des clubs de golf",
-                    "pt": "Motim de pedestres com tacos de golfe"
+                    "es": "Peatones agresivos",
+                    "en": "Aggressive pedestrian riot",
+                    "fr": "Émeute de piétons agressifs",
+                    "pt": "Motim de pedestres agressivos"
                 },
                 "codes": {
                     "ps2": [
@@ -8143,6 +8148,18 @@
                     "fr": "Thème Elvis",
                     "pt": "Tema do Elvis"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2"],
+                        "note": {
+                            "es": "Este truco no puede desactivarse manualmente. Requiere recargar la partida.",
+                            "en": "This cheat cannot be disabled manually. Reloading the game is required.",
+                            "fr": "Ce code de triche ne peut pas être désactivé manuellement. Il faut recharger la partie.",
+                            "pt": "Esta trapaça não pode ser desativada manualmente. É necessário recarregar o jogo."
+                        },
+                        "noteType": "warning"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "L1",
@@ -9101,6 +9118,18 @@
                     "fr": "Les prostituées paient CJ pour avoir des relations sexuelles",
                     "pt": "As prostitutas pagam CJ para fazer sexo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2"],
+                        "note": {
+                            "es": "Este truco estará activado si has completado las misiones de chulo con anterioridad.",
+                            "en": "This cheat will be enabled if you have previously completed the pimping missions.",
+                            "fr": "Ce code de triche sera activé si vous avez déjà terminé les missions de proxénète.",
+                            "pt": "Esta trapaça estará ativada se você já tiver concluído as missões de cafetão."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "RIGHT",
@@ -9212,18 +9241,6 @@
                     "pt": "Mais Families pelas ruas"
                 },
                 "codes": {
-                    "ps2": [
-                        "L1",
-                        "UP",
-                        "R1",
-                        "R1",
-                        "LEFT",
-                        "R1",
-                        "R1",
-                        "R2",
-                        "RIGHT",
-                        "DOWN"
-                    ],
                     "ps3": [
                         "L2",
                         "UP",
@@ -9326,10 +9343,10 @@
             {
                 "id": "peds_17",
                 "title": {
-                    "es": "Bandas por las calles",
-                    "en": "Gangs on the streets",
-                    "fr": "Des gangs dans les rues",
-                    "pt": "Gangues pelas ruas"
+                    "es": "Las bandas aparecen en todos lados",
+                    "en": "Gangs appear everywhere",
+                    "fr": "Les gangs apparaissent partout",
+                    "pt": "As gangues aparecem por toda parte"
                 },
                 "codes": {
                     "ps2": [
@@ -9446,10 +9463,10 @@
             {
                 "id": "peds_18",
                 "title": {
-                    "es": "Guerras de bandas por las calles",
-                    "en": "Gang wars in the streets",
-                    "fr": "Guerres de gangs dans les rues",
-                    "pt": "Guerras de gangues pelas ruas"
+                    "es": "Solo aparecen bandas en las calles",
+                    "en": "Gang members only on the streets",
+                    "fr": "Seuls les gangs apparaissent dans les rues",
+                    "pt": "Só aparecem gangues nas ruas"
                 },
                 "codes": {
                     "ps2": [
@@ -10203,11 +10220,23 @@
             {
                 "id": "other_6",
                 "title": {
-                    "es": "Completar automáticamente las misiones de taxi",
-                    "en": "Automatically complete taxi missions",
-                    "fr": "Terminer automatiquement les missions de taxi",
-                    "pt": "Completar automaticamente as missões de táxi"
+                    "es": "Obtener automáticamente la recompensa por completar 50 viajes como taxista",
+                    "en": "Automatically receive the reward for completing 50 taxi fares",
+                    "fr": "Obtenir automatiquement la récompense pour avoir effectué 50 courses en taxi",
+                    "pt": "Obter automaticamente a recompensa por completar 50 corridas de táxi"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2"],
+                        "note": {
+                            "es": "Todos los taxis tendrán nitro y saltarán al tocar el claxon.",
+                            "en": "All taxis will have nitro and jump when you honk the horn.",
+                            "fr": "Tous les taxis auront du nitro et sauteront lorsque vous klaxonnerez.",
+                            "pt": "Todos os táxis terão nitro e saltarão ao tocar a buzina."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "UP",
