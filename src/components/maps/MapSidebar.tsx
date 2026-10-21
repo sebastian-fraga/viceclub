@@ -10,6 +10,8 @@ import { IconChevronDown, IconFilter, IconX } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import type { GameTheme } from "@/types/game";
+import { themeToCssVars } from "@/lib/theme";
 
 interface MapSidebarProps {
     gameId: string;
@@ -17,6 +19,7 @@ interface MapSidebarProps {
     completedIds: Set<string>;
     hiddenTypes: Set<string>;
     onToggleType: (type: string) => void;
+    theme: GameTheme
 }
 
 interface TypeMeta {
@@ -30,6 +33,7 @@ export default function MapSidebar({
     completedIds,
     hiddenTypes,
     onToggleType,
+    theme
 }: MapSidebarProps) {
     const markers = MAP_MARKERS[gameId as keyof typeof MAP_MARKERS];
 
@@ -167,6 +171,7 @@ export default function MapSidebar({
                                             ease: [0.32, 0.72, 0, 1],
                                         }}
                                         className="fixed inset-x-0 bottom-0 z-1110 flex max-h-[85dvh] flex-col overflow-hidden rounded-t-4xl bg-(--button-bg) text-white shadow-2xl shadow-black/50"
+                                        style={themeToCssVars(theme)}
                                     >
                                         <div className="flex shrink-0 items-center justify-between bg-(--button-bg) px-6 pt-4 pb-3">
                                             <span className="font-body-condensed uppercase text-2xl text-white">
@@ -316,7 +321,7 @@ function SectionContent({
                                 return (
                                     <li
                                         key={type}
-                                        className="relative mb-1.5 overflow-hidden rounded-2xl"
+                                        className="relative mb-2 overflow-hidden rounded-2xl"
                                     >
                                         {completedCount === items.length &&
                                             items.length > 0 && (
@@ -338,13 +343,13 @@ function SectionContent({
                                             type="button"
                                             onClick={() => onToggleType(type)}
                                             aria-pressed={!isHidden}
-                                            className={`relative flex w-full cursor-pointer items-center gap-3 rounded-2xl px-3 py-3 text-left text-sm font-medium transition ${
+                                            className={`relative flex w-full cursor-pointer items-center gap-3.5 rounded-2xl px-3 pt-3 pb-4 text-left text-sm font-medium transition ${
                                                 completedCount === items.length
                                                     ? "bg-(--game-accent)/10"
                                                     : "hover:bg-white/5"
                                             } ${
                                                 isHidden
-                                                    ? "opacity-40"
+                                                    ? "opacity-40 grayscale-70"
                                                     : "opacity-100"
                                             }`}
                                         >
@@ -365,7 +370,7 @@ function SectionContent({
                                                     </span>
 
                                                     <div
-                                                        className={`flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 font-body-condensed text-xs ${
+                                                        className={`flex shrink-0 items-center gap-1 rounded-full px-4 py-1.5 font-body-condensed text-xs ${
                                                             completedCount ===
                                                             items.length
                                                                 ? "bg-(--game-accent)/20"

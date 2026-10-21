@@ -20,6 +20,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import type { GameTheme } from "@/types/game";
 
 function FocusOnMarker({
     target,
@@ -57,6 +58,7 @@ export default function GameMapCanvas({
     minZoom,
     maxZoom,
     data,
+    theme
 }: {
     gameId: string;
     variantId?: string;
@@ -65,6 +67,7 @@ export default function GameMapCanvas({
     minZoom: number;
     maxZoom: number;
     data: Partial<Record<MapCategory, Record<string, CollectibleData[]>>>;
+    theme: GameTheme;
 }) {
     const gameInfo = gamesList.find((item) => item.id === gameId);
     const i18n = useT();
@@ -509,6 +512,7 @@ export default function GameMapCanvas({
                         completedIds={completedIds}
                         hiddenTypes={hiddenTypes}
                         onToggleType={handleToggleType}
+                        theme={theme}
                     />
                 </div>
             </motion.div>

@@ -98,6 +98,7 @@ export default function GameMap({ gameId }: GameMapProps) {
                                 locations: mapData.locations ?? {},
                             }}
                             {...mapData.mapMeta}
+                            theme={activeTheme}
                         />
                     </motion.div>
                 </AnimatePresence>
