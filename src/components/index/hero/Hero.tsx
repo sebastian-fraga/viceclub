@@ -1,6 +1,6 @@
 import useT from "@/hooks/useT";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HERO_IMAGES = [
     "/assets/images/hero/1.webp",
@@ -26,12 +26,30 @@ function shuffle<T>(array: T[]): T[] {
     return result;
 }
 
+function buildDeck(previousLast?: string): string[] {
+    const deck = shuffle(HERO_IMAGES);
+
+    if (deck[0] === previousLast && deck.length > 1) {
+        [deck[0], deck[1]] = [deck[1], deck[0]];
+    }
+
+    return deck;
+}
+
+function preload(src: string) {
+    const img = new Image();
+    img.src = src;
+}
+
 export default function Hero() {
     const t = useT();
     const shouldReduceMotion = useReducedMotion();
 
     const [deck, setDeck] = useState<string[]>(HERO_IMAGES);
     const [index, setIndex] = useState(0);
+    const [hasRotated, setHasRotated] = useState(false);
+
+    const nextDeckRef = useRef<string[] | null>(null);
 
     useEffect(() => {
         const [first, ...rest] = HERO_IMAGES;
@@ -39,63 +57,84 @@ export default function Hero() {
     }, []);
 
     useEffect(() => {
+        if (shouldReduceMotion) return;
+
+        const isLast = index + 1 >= deck.length;
+
+        if (isLast && !nextDeckRef.current) {
+            nextDeckRef.current = buildDeck(deck[deck.length - 1]);
+        }
+
+        const next = isLast ? nextDeckRef.current?.[0] : deck[index + 1];
+
+        if (next) preload(next);
+    }, [deck, index, shouldReduceMotion]);
+
+    useEffect(() => {
         if (shouldReduceMotion || deck.length === 0) return;
 
-        const interval = setInterval(() => {
+        const timeout = setTimeout(() => {
+            setHasRotated(true);
+
             if (index + 1 >= deck.length) {
-                const lastImage = deck[deck.length - 1];
-
-                const newDeck = shuffle(HERO_IMAGES);
-
-                if (newDeck[0] === lastImage && newDeck.length > 1) {
-                    [newDeck[0], newDeck[1]] = [newDeck[1], newDeck[0]];
-                }
-
-                setDeck(newDeck);
+                setDeck(
+                    nextDeckRef.current ?? buildDeck(deck[deck.length - 1]),
+                );
+                nextDeckRef.current = null;
                 setIndex(0);
-
                 return;
             }
 
             setIndex((prevIndex) => prevIndex + 1);
         }, ROTATE_INTERVAL_MS);
 
-        return () => clearInterval(interval);
+        return () => clearTimeout(timeout);
     }, [deck, index, shouldReduceMotion]);
 
-    const currentImage = deck[index] || HERO_IMAGES[0];
+    const currentImage = deck[index] ?? HERO_IMAGES[0];
+    const isFirstPaint = !hasRotated;
+
+    const imageInitial = shouldReduceMotion
+        ? { opacity: 0 }
+        : { opacity: 0, scale: 1.08, x: -30 };
+
+    const imageAnimate = shouldReduceMotion
+        ? { opacity: 1 }
+        : { opacity: 1, scale: 1.12, x: 30 };
+
+    const rise = (y: number) =>
+        shouldReduceMotion
+            ? { initial: false as const }
+            : {
+                  initial: { opacity: 0, y },
+                  animate: { opacity: 1, y: 0 },
+              };
 
     return (
         <section
             className="
                 relative
                 flex
-                h-[calc(90vh-var(--header-height))]
+                bg-[#171723]
+                h-[calc(100dvh-var(--header-height))]
                 min-h-125
                 w-full
-                items-center
+                items-end
                 justify-start
                 overflow-hidden
                 pl-22
                 max-mobile:pl-0
             "
         >
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0" aria-hidden="true">
                 <AnimatePresence mode="sync">
                     <motion.img
                         key={currentImage}
                         src={currentImage}
-                        alt={t("index.welcome.accessibility.heroImage")}
-                        initial={{
-                            opacity: 0,
-                            scale: 1.08,
-                            x: -30,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            scale: 1.12,
-                            x: 30,
-                        }}
+                        alt=""
+                        fetchPriority={isFirstPaint ? "high" : undefined}
+                        initial={imageInitial}
+                        animate={imageAnimate}
                         exit={{
                             opacity: 0,
                         }}
@@ -120,16 +159,9 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-linear-to-b from-black/0 from-0% to-[#171723] to-100%" />
             </div>
 
-            <div className="relative z-10 flex flex-col items-start max-mobile:items-center gap-8 px-6 pt-120 max-mobile:pt-60 text-center">
+            <div className="relative z-10 flex flex-col items-start max-mobile:items-center gap-8 px-6 pb-42 max-mobile:pb-16 text-start max-mobile:text-center">
                 <motion.h1
-                    initial={{
-                        opacity: 0,
-                        y: 40,
-                    }}
-                    animate={{
-                        opacity: 1,
-                        y: 0,
-                    }}
+                    {...rise(40)}
                     transition={{
                         duration: 0.9,
                         ease: [0.16, 1, 0.3, 1],
@@ -140,40 +172,29 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    initial={{
-                        opacity: 0,
-                        y: 30,
-                    }}
-                    animate={{
-                        opacity: 1,
-                        y: 0,
-                    }}
+                    {...rise(30)}
                     transition={{
                         duration: 0.8,
                         delay: 0.2,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="max-w-xl text-pretty text-start max-mobile:text-center text-2xl max-mobile:text-lg text-violet-200 font-medium"
+                    className="max-w-xl text-pretty text-2xl max-mobile:text-lg text-violet-200 font-medium"
                 >
                     {t("index.welcome.description")}
                 </motion.p>
 
                 <motion.a
                     href="#explore"
-                    initial={{
-                        opacity: 0,
-                        y: 20,
-                    }}
-                    animate={{
-                        opacity: 1,
-                        y: 0,
-                    }}
+                    {...rise(20)}
                     transition={{
                         duration: 0.7,
                     }}
                     className="mt-4 rounded-full bg-pink-200 px-10 max-mobile:px-12 max-mobile:py-4 py-5 text-2xl max-mobile:text-lg font-semibold tracking-wide text-[#3B304E] transition-colors duration-500 hover:bg-pink-300 relative"
                 >
-                    <div className="absolute inset-0 -z-10 rounded-full bg-pink-400/20 blur-lg animate-pulse" />
+                    <span
+                        aria-hidden="true"
+                        className="absolute inset-0 -z-10 rounded-full bg-pink-400/20 blur-lg animate-pulse"
+                    />
                     {t("index.welcome.button")}
                 </motion.a>
             </div>
