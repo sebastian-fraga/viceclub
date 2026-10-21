@@ -29,7 +29,7 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.sa.snapshots",
         singularLabel: "maps.markers.collectibles.sa.snapshot",
     },
-    horseshoe: {
+    horseshoes: {
         color: "#FFEA8B",
         label: "maps.markers.collectibles.sa.horseshoes",
         singularLabel: "maps.markers.collectibles.sa.horseshoe",

@@ -5,7 +5,7 @@ export const SA_MARKERS = {
     snapshot: {
         icon: "/assets/images/maps/SA/icons/snapshot.webp",
     },
-    horseshoe: {
+    horseshoes: {
         icon: "/assets/images/maps/SA/icons/horseshoe.webp",
     },
     oyster: {
