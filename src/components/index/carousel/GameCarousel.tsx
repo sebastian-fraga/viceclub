@@ -177,7 +177,7 @@ export default function GameCarousel() {
                             <img
                                 src={`/assets/images/main/boxarts/portada_${game.id}.webp`}
                                 alt={game.name}
-                                loading="eager"
+                                loading="lazy"
                                 decoding="async"
                                 draggable={false}
                                 className="aspect-2/3 w-full object-cover pointer-events-none transition-transform duration-300 group-hover:scale-105"
