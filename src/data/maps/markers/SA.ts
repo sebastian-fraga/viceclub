@@ -2,7 +2,7 @@ export const SA_MARKERS = {
     tags: {
         icon: "/assets/images/maps/SA/icons/tag.webp",
     },
-    snapshot: {
+    snapshots: {
         icon: "/assets/images/maps/SA/icons/snapshot.webp",
     },
     horseshoes: {

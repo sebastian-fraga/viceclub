@@ -24,7 +24,7 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.sa.tags",
         singularLabel: "maps.markers.collectibles.sa.tag",
     },
-    snapshot: {
+    snapshots: {
         color: "#F097FE",
         label: "maps.markers.collectibles.sa.snapshots",
         singularLabel: "maps.markers.collectibles.sa.snapshot",
