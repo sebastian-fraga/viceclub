@@ -8,7 +8,7 @@ export const SA_MARKERS = {
     horseshoes: {
         icon: "/assets/images/maps/SA/icons/horseshoe.webp",
     },
-    oyster: {
+    oysters: {
         icon: "/assets/images/maps/SA/icons/oyster.webp",
     },
     stuntJumps_SA: {

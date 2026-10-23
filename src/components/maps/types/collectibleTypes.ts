@@ -34,7 +34,7 @@ export const COLLECTIBLE_TYPES = {
         label: "maps.markers.collectibles.sa.horseshoes",
         singularLabel: "maps.markers.collectibles.sa.horseshoe",
     },
-    oyster: {
+    oysters: {
         color: "#AFDCED",
         label: "maps.markers.collectibles.sa.oysters",
         singularLabel: "maps.markers.collectibles.sa.oyster",
