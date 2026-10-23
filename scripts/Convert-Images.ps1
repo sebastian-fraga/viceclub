@@ -21,11 +21,11 @@
         (The project root is the parent folder of the script folder.)
 
 .USAGE
-    From PowerShell:
-        .\Convert-Images.ps1
+    From a PowerShell terminal:
+        ./scripts/Convert-Images.ps1
 
     If script execution is blocked by your policy:
-        powershell -ExecutionPolicy Bypass -File .\Convert-Images.ps1
+        powershell -ExecutionPolicy Bypass -File ./scripts/Convert-Images.ps1
 
     The script waits for Enter at the end, so the window stays open
     when it is launched with a double click.
