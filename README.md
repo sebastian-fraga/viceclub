@@ -3,14 +3,16 @@
 GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV, GTA V, and GTA VI fan site: cheats, information, artworks, mods, achievements, interactive maps, and more.
 
 <p align="center">
+  <img src="https://img.shields.io/badge/i18n-ES_|_EN_|_FR_|_PT--BR-blue" alt="Languages" />
+  <img src="https://img.shields.io/github/license/sebastian-fraga/viceclub?cacheSeconds=1" alt="License" />
+  <img src="https://img.shields.io/github/last-commit/sebastian-fraga/viceclub" alt="Last commit" />
+</p>
+
+<p align="center">
   <a href="https://viceclub.app">
     <img src="public/assets/images/app/readme/buttons/visit-website.png" alt="Visit Vice Club" width="200" />
   </a>
 </p>
-
-![Last commit](https://img.shields.io/github/last-commit/sebastian-fraga/viceclub)
-![License](https://img.shields.io/github/license/sebastian-fraga/viceclub?cacheSeconds=1)
-![Languages](https://img.shields.io/badge/i18n-ES_|_EN_|_FR_|_PT--BR-blue)
 
 <br><br>
 
