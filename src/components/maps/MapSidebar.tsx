@@ -401,7 +401,8 @@ function SectionContent({
                                                 <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
                                                     <motion.div
                                                         className="h-full rounded-full bg-(--game-accent)"
-                                                        initial={false}
+                                                        inherit={false}
+                                                        initial={{ width: "0%" }}
                                                         animate={{
                                                             width: `${progress}%`,
                                                         }}
