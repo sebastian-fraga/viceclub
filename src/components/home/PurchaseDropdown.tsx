@@ -1,7 +1,5 @@
-import { useLayoutEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+import { useLayoutEffect, useState } from "react";
 import useT from "@/hooks/useT";
-import { useClickOutside } from "@/hooks/useClickOutside";
 
 import { AnimatePresence, motion, type Variants } from "framer-motion";
 
@@ -29,6 +27,8 @@ import PlayStationStoreIcon from "@/components/icons/playstation/PlayStationStor
 import { Tooltip } from "@/components/ui/Tooltip";
 import { IconArrowUpRight, IconMoodPuzzled } from "@tabler/icons-react";
 
+import PlatformSelector from "@/components/ui/selector/PlatformSelector";
+
 interface Props {
     purchase: Game["purchase"];
     buttonClass: string;
@@ -44,6 +44,7 @@ const platformIcons = {
     android: AndroidIcon,
     ios: AppleIcon,
 };
+
 const storeIcons = {
     rgl: RockstarIcon,
     steam: SteamIcon,
@@ -53,8 +54,6 @@ const storeIcons = {
     android: GooglePlayIcon,
     ios: AppStoreIcon,
 };
-
-const VIEWPORT_MARGIN = 16;
 
 const STAGGER = 0.045;
 const SLIDE = 16;
@@ -110,6 +109,8 @@ export default function PurchaseDropdown({
         purchase.find((platform) => platform.platform === resolvedFamily)
             ?.platform ?? purchase[0]?.platform,
     );
+    const [direction, setDirection] = useState(0);
+
     const selectedPlatformData = purchase.find(
         (platform) => platform.platform === selectedPlatform,
     );
@@ -122,8 +123,8 @@ export default function PurchaseDropdown({
         setDirection(0);
         setSelectedPlatform(preferred?.platform ?? purchase[0]?.platform);
     }, [purchase, resolvedFamily]);
-    const [isOpen, setIsOpen] = useState(false);
-    const [direction, setDirection] = useState(0);
+
+    const t = useT();
 
     const handleSelectPlatform = (platform: typeof selectedPlatform) => {
         if (platform === selectedPlatform) return;
@@ -139,311 +140,161 @@ export default function PurchaseDropdown({
         setSelectedPlatform(platform);
     };
 
-    const t = useT();
-
-    const dropdownRef = useRef<HTMLDivElement>(null);
-    const buttonRef = useRef<HTMLButtonElement>(null);
-    const dropdownContentRef = useRef<HTMLDivElement>(null);
-    const [mounted, setMounted] = useState(false);
-
-    const [dropdownPosition, setDropdownPosition] = useState({
-        top: 0,
-        left: 0,
-    });
-
-    const computePosition = () => {
-        if (!buttonRef.current) return;
-
-        const rect = buttonRef.current.getBoundingClientRect();
-        let left = rect.left;
-
-        const dropdownWidth = dropdownContentRef.current?.offsetWidth ?? 0;
-        const maxLeft = window.innerWidth - dropdownWidth - VIEWPORT_MARGIN;
-
-        left = Math.min(left, maxLeft);
-        left = Math.max(left, VIEWPORT_MARGIN);
-
-        setDropdownPosition({
-            top: rect.bottom + 8,
-            left,
-        });
-    };
-
-    const handleToggle = () => {
-        if (!isOpen) {
-            computePosition();
-            setDirection(0);
-        }
-        setIsOpen((previous) => !previous);
-    };
-
-    useLayoutEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useLayoutEffect(() => {
-        if (!isOpen) return;
-        computePosition();
-    }, [isOpen]);
-
-    useLayoutEffect(() => {
-        if (!isOpen) return;
-
-        const handleReposition = () => computePosition();
-
-        window.addEventListener("resize", handleReposition);
-        return () => window.removeEventListener("resize", handleReposition);
-    }, [isOpen]);
-
-    useClickOutside(
-        () => setIsOpen(false),
-        [dropdownRef, dropdownContentRef],
-        isOpen,
-    );
-
-    useLayoutEffect(() => {
-        if (!isOpen) return;
-
-        const handleScroll = (e: Event) => {
-            const target = e.target as Node;
-            if (dropdownContentRef.current?.contains(target)) return;
-            setIsOpen(false);
-        };
-
-        window.addEventListener("scroll", handleScroll, {
-            capture: true,
-            passive: true,
-        });
-        return () =>
-            window.removeEventListener("scroll", handleScroll, {
-                capture: true,
-            });
-    }, [isOpen]);
-
     return (
-        <div ref={dropdownRef} className="relative">
-            <button
-                ref={buttonRef}
-                type="button"
-                className={`bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) hover:bg-(--game-buttons-primary-hovered) hover:drop-shadow-(--game-buttons-primary-hovered) ${
-                    isOpen
-                        ? "bg-(--game-buttons-primary-hovered) drop-shadow-(--game-buttons-primary-hovered)"
-                        : ""
-                } ${buttonClass}`}
-                onClick={handleToggle}
-                aria-expanded={isOpen}
+        <PlatformSelector
+            variant="primary"
+            label={t("home.buttons.purchase")}
+            buttonClass={buttonClass}
+            onOpen={() => setDirection(0)}
+            layout
+            contentClassName="max-w-80 w-full pt-4 shadow-2xl"
+        >
+            <div
+                className={`flex items-center gap-6 px-6 pb-2 max-mobile:gap-4 max-mobile:px-4 ${
+                    purchase.length > 0 ? "border-b border-white/10" : ""
+                }`}
             >
-                {t("home.buttons.purchase")}
-            </button>
+                {purchase.map((platform) => {
+                    const Icon = platformIcons[platform.platform];
 
-            {mounted &&
-                createPortal(
-                    <AnimatePresence>
-                        {isOpen && (
-                            <motion.div
-                                layout
-                                initial={{
-                                    opacity: 0,
-                                    y: -6,
-                                    scale: 0.98,
-                                    pointerEvents: "none",
-                                }}
-                                animate={{
-                                    opacity: 1,
-                                    y: 0,
-                                    scale: 1,
-                                    pointerEvents: "auto",
-                                }}
-                                exit={{
-                                    opacity: 0,
-                                    y: -6,
-                                    scale: 0.98,
-                                    pointerEvents: "none",
-                                }}
-                                transition={{ duration: 0.15, ease: "easeOut" }}
-                                style={{
-                                    position: "fixed",
-                                    top: dropdownPosition.top,
-                                    left: dropdownPosition.left,
-                                }}
-                                className="z-50 max-w-80 w-full rounded-2xl bg-(--button-bg) pt-4 max-mobile:max-w-[calc(100vw-2rem)] max-mobile:pt-3 shadow-2xl"
-                                ref={dropdownContentRef}
+                    return (
+                        <button
+                            key={platform.platform}
+                            type="button"
+                            onClick={() =>
+                                handleSelectPlatform(platform.platform)
+                            }
+                            className="cursor-pointer"
+                        >
+                            <Tooltip
+                                position="top"
+                                label={platform.label}
                             >
-                                <div
-                                    className={`flex items-center gap-6 px-6 pb-2 max-mobile:gap-4 max-mobile:px-4 ${
-                                        purchase.length > 0
-                                            ? "border-b border-white/10"
+                                <Icon
+                                    className={`size-5 transition-all max-mobile:size-4 ${
+                                        platform.platform !== selectedPlatform
+                                            ? "grayscale-100 opacity-50 hover:grayscale-70 hover:opacity-80"
                                             : ""
                                     }`}
-                                >
-                                    {purchase.map((platform) => {
-                                        const Icon =
-                                            platformIcons[platform.platform];
+                                />
+                            </Tooltip>
+                        </button>
+                    );
+                })}
+            </div>
 
-                                        return (
-                                            <button
-                                                key={platform.platform}
-                                                type="button"
-                                                onClick={() =>
-                                                    handleSelectPlatform(
-                                                        platform.platform,
-                                                    )
-                                                }
-                                                className="cursor-pointer"
-                                            >
-                                                <Tooltip
-                                                    position="top"
-                                                    label={platform.label}
-                                                >
-                                                    <Icon
-                                                        className={`size-5 transition-all max-mobile:size-4 ${
-                                                            platform.platform !==
-                                                            selectedPlatform
-                                                                ? "grayscale-100 opacity-50 hover:grayscale-70 hover:opacity-80"
-                                                                : ""
-                                                        }`}
-                                                    />
-                                                </Tooltip>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
-
-                                <motion.div layout className="overflow-hidden">
-                                    <AnimatePresence
-                                        mode="wait"
-                                        custom={direction}
-                                    >
-                                        <motion.div
-                                            key={selectedPlatform}
-                                            variants={listVariants}
-                                            exit="exit"
-                                            className="flex flex-col gap-0.5"
+            <motion.div layout className="overflow-hidden">
+                <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                        key={selectedPlatform}
+                        variants={listVariants}
+                        exit="exit"
+                        className="flex flex-col gap-0.5"
+                    >
+                        {selectedPlatformData?.stores?.length ? (
+                            selectedPlatformData.stores.map(
+                                (store, index) => {
+                                    const isLast =
+                                        index ===
+                                        selectedPlatformData.stores.length -
+                                            1;
+                                    const Icon =
+                                        storeIcons[store.icon];
+                                    const link = (
+                                        <motion.a
+                                            href={store.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            variants={itemVariants}
+                                            custom={{
+                                                index,
+                                                direction,
+                                            }}
+                                            initial="hidden"
+                                            animate="visible"
+                                            whileHover="hover"
+                                            whileTap="hover"
+                                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
+                                                isLast
+                                                    ? "pb-4 rounded-b-2xl max-mobile:pb-3"
+                                                    : ""
+                                            }`}
                                         >
-                                            {selectedPlatformData?.stores
-                                                ?.length ? (
-                                                selectedPlatformData.stores.map(
-                                                    (store, index) => {
-                                                        const isLast =
-                                                            index ===
-                                                            selectedPlatformData
-                                                                .stores.length -
-                                                                1;
-                                                        const Icon =
-                                                            storeIcons[
-                                                                store.icon
-                                                            ];
-                                                        const link = (
-                                                            <motion.a
-                                                                href={
-                                                                    store.link
-                                                                }
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                variants={
-                                                                    itemVariants
-                                                                }
-                                                                custom={{
-                                                                    index,
-                                                                    direction,
-                                                                }}
-                                                                initial="hidden"
-                                                                animate="visible"
-                                                                whileHover="hover"
-                                                                whileTap="hover"
-                                                                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
-                                                                    isLast
-                                                                        ? "pb-4 rounded-b-2xl max-mobile:pb-3"
-                                                                        : ""
-                                                                }`}
-                                                            >
-                                                                <Icon className="size-5 max-mobile:size-4" />
-                                                                <span className="flex items-center gap-1.5">
-                                                                    {store.name}
-                                                                    {store.extra && (
-                                                                        <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded">
-                                                                            {
-                                                                                store.extra
-                                                                            }
-                                                                        </span>
-                                                                    )}
-                                                                </span>
-                                                                <motion.div
-                                                                    variants={{
-                                                                        hidden: {
-                                                                            opacity: 0,
-                                                                            x: 8,
-                                                                        },
-                                                                        visible:
-                                                                            {
-                                                                                opacity: 0,
-                                                                                x: 8,
-                                                                            },
-                                                                        exit: {
-                                                                            opacity: 0,
-                                                                            x: 8,
-                                                                        },
-                                                                        hover: {
-                                                                            opacity: 1,
-                                                                            x: 0,
-                                                                        },
-                                                                    }}
-                                                                    className="ml-auto"
-                                                                >
-                                                                    <IconArrowUpRight className="size-4" />
-                                                                </motion.div>
-                                                            </motion.a>
-                                                        );
-                                                        return store.extra ? (
-                                                            <Tooltip
-                                                                key={store.link}
-                                                                position="right"
-                                                                label={t(
-                                                                    `common.editionLabels.${store.extra}`,
-                                                                    {
-                                                                        defaultValue:
-                                                                            store.extra,
-                                                                    },
-                                                                )}
-                                                            >
-                                                                {link}
-                                                            </Tooltip>
-                                                        ) : (
-                                                            <div
-                                                                key={store.link}
-                                                            >
-                                                                {link}
-                                                            </div>
-                                                        );
-                                                    },
-                                                )
-                                            ) : (
-                                                <motion.div
-                                                    custom={{
-                                                        index: 0,
-                                                        direction,
-                                                    }}
-                                                    variants={itemVariants}
-                                                    initial="hidden"
-                                                    animate="visible"
-                                                    className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs"
-                                                >
-                                                    <IconMoodPuzzled className="text-white/80" />
-                                                    <span className="text-white">
-                                                        {t(
-                                                            "common.other.notAvailable",
-                                                        )}
+                                            <Icon className="size-5 max-mobile:size-4" />
+                                            <span className="flex items-center gap-1.5">
+                                                {store.name}
+                                                {store.extra && (
+                                                    <span className="text-[10px] font-semibold uppercase tracking-wide text-white/50 bg-white/10 px-1.5 py-0.5 rounded">
+                                                        {store.extra}
                                                     </span>
-                                                </motion.div>
+                                                )}
+                                            </span>
+                                            <motion.div
+                                                variants={{
+                                                    hidden: {
+                                                        opacity: 0,
+                                                        x: 8,
+                                                    },
+                                                    visible: {
+                                                        opacity: 0,
+                                                        x: 8,
+                                                    },
+                                                    exit: {
+                                                        opacity: 0,
+                                                        x: 8,
+                                                    },
+                                                    hover: {
+                                                        opacity: 1,
+                                                        x: 0,
+                                                    },
+                                                }}
+                                                className="ml-auto"
+                                            >
+                                                <IconArrowUpRight className="size-4" />
+                                            </motion.div>
+                                        </motion.a>
+                                    );
+                                    return store.extra ? (
+                                        <Tooltip
+                                            key={store.link}
+                                            position="right"
+                                            label={t(
+                                                `common.editionLabels.${store.extra}`,
+                                                {
+                                                    defaultValue:
+                                                        store.extra,
+                                                },
                                             )}
-                                        </motion.div>
-                                    </AnimatePresence>
-                                </motion.div>
+                                        >
+                                            {link}
+                                        </Tooltip>
+                                    ) : (
+                                        <div key={store.link}>{link}</div>
+                                    );
+                                },
+                            )
+                        ) : (
+                            <motion.div
+                                custom={{
+                                    index: 0,
+                                    direction,
+                                }}
+                                variants={itemVariants}
+                                initial="hidden"
+                                animate="visible"
+                                className="px-6 pt-0 pb-5 text-sm flex flex-col items-center gap-3 max-mobile:px-4 max-mobile:pb-4 max-mobile:text-xs"
+                            >
+                                <IconMoodPuzzled className="text-white/80" />
+                                <span className="text-white">
+                                    {t(
+                                        "common.other.notAvailable",
+                                    )}
+                                </span>
                             </motion.div>
                         )}
-                    </AnimatePresence>,
-                    document.body,
-                )}
-        </div>
+                    </motion.div>
+                </AnimatePresence>
+            </motion.div>
+        </PlatformSelector>
     );
 }
