@@ -3,7 +3,7 @@
     Converts PNG images to WebP and adds a custom watermark to each one.
 
 .DESCRIPTION
-    For every .png file in <project root>/temp/convert, the script:
+    For every .png file in <project root>/temp/convert-images, the script:
     1. Places the watermark in the top-left corner (32px offset),
         resized to fit 450x180 and at 60% opacity.
     2. Saves the result as .webp (quality 60) in
@@ -15,7 +15,7 @@
 .REQUIREMENTS
     - ImageMagick installed and available in PATH (the `magick` command).
     - A folder with the PNG images to convert:
-        <project root>/temp/convert/
+        <project root>/temp/convert-images/
     - The watermark image:
         <project root>/public/assets/images/app/watermark.png
         (The project root is the parent folder of the script folder.)
@@ -39,7 +39,7 @@ try {
     }
 
     $projectRoot = Split-Path $PSScriptRoot -Parent
-    $inputDir = Join-Path $projectRoot "temp/convert"
+    $inputDir = Join-Path $projectRoot "temp/convert-images"
     $watermark = Join-Path $projectRoot "public/assets/images/app/watermark.png"
     $outputDir = Join-Path $inputDir "webp"
 
