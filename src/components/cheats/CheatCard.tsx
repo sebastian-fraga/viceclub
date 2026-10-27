@@ -36,7 +36,11 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
     const isAvailable = codeButtons.length > 0;
 
     return (
-        <div
+        <motion.div
+            key={selectedPlatform}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className={`rounded-3xl p-7 max-mobile:p-4 flex flex-col gap-2 transition-opacity ${
                 isAvailable
                     ? "bg-(--button-bg)/70 shadow-2xl shadow-violet-400/5"
@@ -136,6 +140,6 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
                     );
                 })}
             </div>
-        </div>
+        </motion.div>
     );
 }
