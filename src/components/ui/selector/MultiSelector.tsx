@@ -1,6 +1,7 @@
 import DropdownSelector from "@/components/ui/selector/DropdownSelector";
 import useT from "@/hooks/useT";
 import type { ComponentType, ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 export interface MultiSelectorOption<
@@ -82,18 +83,27 @@ export function MultiSelector<
                 })}
             </div>
 
-            {activePrimary?.subOptions &&
-                activePrimary.subOptions.length > 0 && (
-                    <div className="flex flex-wrap gap-2 pt-2 animate-in fade-in duration-200">
-                        <DropdownSelector
-                            placeholder={t("common.buttons.selectPlatform")}
-                            options={activePrimary.subOptions}
-                            selectedOption={activeSecondary}
-                            onSelect={(id) => onSelectSecondary?.(id)}
-                            disabled={activePrimary.subOptions.length === 1}
-                        />
-                    </div>
-                )}
+            <AnimatePresence mode="wait">
+                {activePrimary?.subOptions &&
+                    activePrimary.subOptions.length > 0 && (
+                        <motion.div
+                            key={activePrimary.id}
+                            initial={{ opacity: 0, y: -6 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -6 }}
+                            transition={{ duration: 0.18, ease: "easeOut" }}
+                            className="flex flex-wrap gap-2 pt-2"
+                        >
+                            <DropdownSelector
+                                placeholder={t("common.buttons.selectPlatform")}
+                                options={activePrimary.subOptions}
+                                selectedOption={activeSecondary}
+                                onSelect={(id) => onSelectSecondary?.(id)}
+                                disabled={activePrimary.subOptions.length === 1}
+                            />
+                        </motion.div>
+                    )}
+            </AnimatePresence>
 
             {activeBanner && (
                 <div className="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800/80 text-zinc-300 text-xs flex items-start gap-3 animate-in fade-in duration-200">
