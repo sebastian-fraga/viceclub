@@ -1,29 +1,23 @@
 import { gamesList, type GameId } from "@/config/games";
-import parse from "html-react-parser";
 import { useEffect, useState } from "react";
 
 import {
     platformFamilies,
-    platformIcons,
-    platforms,
     type Platform,
     type PlatformFamily,
 } from "@/config/platforms";
 
 import { games } from "@/data/games";
-import { GAME_MODS } from "@/data/mods";
 
 import type { Cheat, CheatsFile } from "@/types/cheats";
 
-import type { MultiSelectorOption } from "@/components/ui/selector/MultiSelector";
 import { MultiSelector } from "@/components/ui/selector/MultiSelector";
 import Title from "@/components/ui/Title";
 
 import useSettings from "@/hooks/useSettings";
 import useT from "@/hooks/useT";
 
-import { getButtonIconPath, getCheatCodes } from "@/utils/cheats";
-import { linkifyNote } from "./utils/linkifyNote.ts";
+import { motion } from "framer-motion";
 
 import "./cheats.css";
 
@@ -32,10 +26,10 @@ import {
     getAvailableFamilies,
     getInitialFamily,
     getInitialPlatform,
-    getPlatformEdition,
 } from "@/utils/platformSelector";
-import { IconArrowUpRight } from "@tabler/icons-react";
-import { motion } from "framer-motion";
+
+import { CheatCard } from "./CheatCard";
+import { buildSelectorOptions } from "./utils/buildSelectorOptions";
 
 interface CheatsContainerProps {
     cheatsData: CheatsFile;
@@ -102,32 +96,10 @@ export const CheatsContainer = ({
         setSelectedPlatform(platform);
     }, [settings, availablePlatforms]);
 
-    const selectorOptions: MultiSelectorOption<PlatformFamily, Platform>[] = [];
-
-    for (const [familyId, family] of Object.entries(platformFamilies)) {
-        const familyIdTyped = familyId as PlatformFamily;
-
-        const familyPlatforms = family.platforms.filter((platform) =>
-            availablePlatforms.includes(platform as Platform),
-        ) as Platform[];
-
-        if (familyPlatforms.length === 0) {
-            continue;
-        }
-
-        selectorOptions.push({
-            id: familyIdTyped,
-            label: family.name,
-            icon: family.icon,
-
-            subOptions: familyPlatforms.map((platform) => ({
-                id: platform,
-                label: platforms[platform],
-                icon: platformIcons[platform],
-                labelEdition: getPlatformEdition(platform, gameData),
-            })),
-        });
-    }
+    const selectorOptions = buildSelectorOptions(
+        availablePlatforms,
+        gameData,
+    );
 
     const handleFamilyChange = (family: PlatformFamily) => {
         setSelectedFamily(family);
@@ -190,161 +162,15 @@ export const CheatsContainer = ({
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-stretch max-mobile:gap-y-3">
-                            {cheats.map((cheat) => {
-                                const codeButtons = getCheatCodes(
-                                    cheat,
-                                    selectedPlatform,
-                                );
-
-                                const platformNotes =
-                                    cheat.platformNotes?.filter((entry) =>
-                                        entry.platforms.includes(
-                                            selectedPlatform,
-                                        ),
-                                    );
-
-                                const isAvailable = codeButtons.length > 0;
-
-                                return (
-                                    <div
-                                        key={cheat.id}
-                                        className={`rounded-3xl p-7 max-mobile:p-4 flex flex-col gap-2 transition-opacity ${
-                                            isAvailable
-                                                ? "bg-(--button-bg)/70 shadow-2xl shadow-violet-400/5"
-                                                : "bg-(--button-bg)/20 opacity-50 cursor-not-allowed"
-                                        }`}
-                                    >
-                                        <h3 className="text-xl text-violet-50 font-body-condensed">
-                                            {t(cheat.title)}
-                                        </h3>
-
-                                        <div className="flex flex-wrap items-center gap-1.5 mt-1">
-                                            {isAvailable ? (
-                                                codeButtons.map(
-                                                    (button, index) => {
-                                                        const isText =
-                                                            selectedPlatform ===
-                                                                "pc" ||
-                                                            button.startsWith(
-                                                                "text:",
-                                                            );
-
-                                                        const value =
-                                                            button.startsWith(
-                                                                "text:",
-                                                            )
-                                                                ? button.slice(
-                                                                      5,
-                                                                  )
-                                                                : button;
-
-                                                        return isText ? (
-                                                            <kbd
-                                                                key={`${button}-${index}`}
-                                                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15"
-                                                            >
-                                                                {value}
-                                                            </kbd>
-                                                        ) : (
-                                                            <img
-                                                                key={`${button}-${index}`}
-                                                                src={getButtonIconPath(
-                                                                    selectedPlatform,
-                                                                    button,
-                                                                )}
-                                                                alt={button}
-                                                                className="h-9 w-auto object-contain shadow-2xl shadow-violet-300/25"
-                                                            />
-                                                        );
-                                                    },
-                                                )
-                                            ) : (
-                                                <span className="text-xs text-zinc-500">
-                                                    {i18n(
-                                                        "cheats.notAvailable",
-                                                    )}
-                                                </span>
-                                            )}
-                                        </div>
-
-                                        <div className="flex flex-col gap-0.5">
-                                            {platformNotes?.map(
-                                                (platformNote, index) => {
-                                                    const mod =
-                                                        platformNote.requiresMod
-                                                            ? GAME_MODS[
-                                                                  game as keyof typeof GAME_MODS
-                                                              ]?.mods.find(
-                                                                  (mod) =>
-                                                                      mod.id ===
-                                                                      platformNote.requiresMod,
-                                                              )
-                                                            : undefined;
-
-                                                    let noteContent =
-                                                        platformNote.note
-                                                            ? t(
-                                                                  platformNote.note,
-                                                              )
-                                                            : "";
-
-                                                    if (
-                                                        platformNote.requiresMod &&
-                                                        mod
-                                                    ) {
-                                                        noteContent = i18n(
-                                                            "cheats.requiresMod",
-                                                            {
-                                                                mod: linkifyNote(
-                                                                    game,
-                                                                    mod.title,
-                                                                    mod.id,
-                                                                ),
-                                                            },
-                                                        );
-                                                    }
-
-                                                    return (
-                                                        <div
-                                                            key={index}
-                                                            className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex flex-wrap items-center gap-1 ${
-                                                                platformNote.noteType ===
-                                                                "warning"
-                                                                    ? "text-red-100"
-                                                                    : "text-blue-100"
-                                                            }`}
-                                                        >
-                                                            {parse(
-                                                                noteContent,
-                                                                {
-                                                                    replace: (
-                                                                        domNode,
-                                                                    ) => {
-                                                                        if (
-                                                                            domNode.type ===
-                                                                                "tag" &&
-                                                                            domNode.name ===
-                                                                                "icon-arrow-up-right"
-                                                                        ) {
-                                                                            return (
-                                                                                <IconArrowUpRight
-                                                                                    size={
-                                                                                        16
-                                                                                    }
-                                                                                />
-                                                                            );
-                                                                        }
-                                                                    },
-                                                                },
-                                                            )}
-                                                        </div>
-                                                    );
-                                                },
-                                            )}
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                            {cheats.map((cheat) => (
+                                <CheatCard
+                                    key={cheat.id}
+                                    cheat={cheat}
+                                    selectedPlatform={selectedPlatform}
+                                    game={game}
+                                    gameData={gameData}
+                                />
+                            ))}
                         </div>
                     </section>
                 );
