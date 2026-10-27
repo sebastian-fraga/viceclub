@@ -57,7 +57,7 @@ export default function DropdownSelector<T extends string = string>({
                 onClick={() => !disabled && setIsOpen((prev) => !prev)}
             >
                 <span className="font-medium">
-                    {selectedOption?.label ?? "Selecciona una plataforma"}
+                    {selectedOption?.label ?? "Selecciona una plataforma🌴"}
                 </span>
 
                 <motion.div
@@ -76,7 +76,7 @@ export default function DropdownSelector<T extends string = string>({
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -6 }}
                             transition={{ duration: 0.15 }}
-                            className="absolute flex flex-col bg-(--button-bg) max-h-65 mt-2 rounded-3xl w-full pl-5 max-mobile:pl-4 pt-5 pb-3"
+                            className="absolute flex flex-col bg-(--button-bg) max-h-65 mt-2 rounded-3xl w-full pl-5 max-mobile:pl-4 pt-5 pb-3 shadow-2xl"
                         >
                             <span className="font-medium text-lg mb-4 shrink-0">
                                 {placeholder}
