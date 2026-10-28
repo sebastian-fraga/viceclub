@@ -96,10 +96,7 @@ export const CheatsContainer = ({
         setSelectedPlatform(platform);
     }, [settings, availablePlatforms]);
 
-    const selectorOptions = buildSelectorOptions(
-        availablePlatforms,
-        gameData,
-    );
+    const selectorOptions = buildSelectorOptions(availablePlatforms, gameData);
 
     const handleFamilyChange = (family: PlatformFamily) => {
         setSelectedFamily(family);
@@ -118,6 +115,8 @@ export const CheatsContainer = ({
     };
 
     const categories = Object.entries(cheatsData);
+
+    let globalIndex = 0;
 
     return (
         <motion.div
@@ -162,15 +161,19 @@ export const CheatsContainer = ({
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-stretch max-mobile:gap-y-3">
-                            {cheats.map((cheat) => (
-                                <CheatCard
-                                    key={cheat.id}
-                                    cheat={cheat}
-                                    selectedPlatform={selectedPlatform}
-                                    game={game}
-                                    gameData={gameData}
-                                />
-                            ))}
+                            {cheats.map((cheat) => {
+                                const index = globalIndex++
+                                return (
+                                    <CheatCard
+                                        key={cheat.id}
+                                        cheat={cheat}
+                                        index={index}
+                                        selectedPlatform={selectedPlatform}
+                                        game={game}
+                                        gameData={gameData}
+                                    />
+                                );
+                            })}
                         </div>
                     </section>
                 );

@@ -25,11 +25,13 @@ interface Props {
     selectedPlatform: Platform;
     game: GameId;
     gameData: Game;
+    index: number
 }
 
-export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
+export function CheatCard({ cheat, selectedPlatform, game, gameData, index }: Props) {
     const t = useLocalizedText();
     const i18n = useT();
+    const shouldLoadEagerly = index < 8;
 
     const codeButtons = getCheatCodes(cheat, selectedPlatform);
 
@@ -80,6 +82,7 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
                                     selectedPlatform,
                                     button,
                                 )}
+                                loading={shouldLoadEagerly ? "eager" : "lazy"}
                                 alt={button}
                                 className="h-9 w-auto object-contain shadow-2xl shadow-violet-300/25"
                             />
