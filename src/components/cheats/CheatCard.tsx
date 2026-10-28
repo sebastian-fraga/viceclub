@@ -14,7 +14,11 @@ import { linkifyNote } from "./utils/linkifyNote.ts";
 import { useLocalizedText } from "@/hooks/useLocalizedText";
 import useT from "@/hooks/useT";
 
-import { IconArrowUpRight } from "@tabler/icons-react";
+import {
+    IconAlertTriangle,
+    IconArrowUpRight,
+    IconInfoCircle,
+} from "@tabler/icons-react";
 
 interface Props {
     cheat: Cheat;
@@ -91,9 +95,7 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
             <div className="flex flex-col gap-0.5">
                 {platformNotes?.map((platformNote, index) => {
                     const mod = platformNote.requiresMod
-                        ? GAME_MODS[
-                              game as keyof typeof GAME_MODS
-                          ]?.mods.find(
+                        ? GAME_MODS[game as keyof typeof GAME_MODS]?.mods.find(
                               (mod) => mod.id === platformNote.requiresMod,
                           )
                         : undefined;
@@ -104,38 +106,45 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData }: Props) {
 
                     if (platformNote.requiresMod && mod) {
                         noteContent = i18n("cheats.requiresMod", {
-                            mod: linkifyNote(
-                                game,
-                                mod.title,
-                                mod.id,
-                            ),
+                            mod: linkifyNote(game, mod.title, mod.id),
                         });
                     }
+
+                    const isWarning = platformNote.noteType === "warning";
+                    const NoteIcon = isWarning
+                        ? IconAlertTriangle
+                        : IconInfoCircle;
 
                     return (
                         <div
                             key={index}
-                            className={`mt-2 rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex flex-wrap items-center gap-1 ${
-                                platformNote.noteType === "warning"
-                                    ? "text-red-100"
-                                    : "text-blue-100"
+                            className={`mt-2 flex items-start gap-1.5 ${
+                                isWarning ? "text-red-100" : "text-blue-100"
                             }`}
                         >
-                            {parse(noteContent, {
-                                replace: (domNode) => {
-                                    if (
-                                        domNode.type === "tag" &&
-                                        domNode.name ===
-                                            "icon-arrow-up-right"
-                                    ) {
-                                        return (
-                                            <IconArrowUpRight
-                                                size={16}
-                                            />
-                                        );
-                                    }
-                                },
-                            })}
+                            <NoteIcon
+                                size={14}
+                                aria-hidden="true"
+                                className={`mt-[3px] shrink-0 ${
+                                    isWarning ? "text-red-300" : "text-blue-300"
+                                }`}
+                            />
+
+                            <div className="rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex flex-wrap items-center gap-1">
+                                {parse(noteContent, {
+                                    replace: (domNode) => {
+                                        if (
+                                            domNode.type === "tag" &&
+                                            domNode.name ===
+                                                "icon-arrow-up-right"
+                                        ) {
+                                            return (
+                                                <IconArrowUpRight size={16} />
+                                            );
+                                        }
+                                    },
+                                })}
+                            </div>
                         </div>
                     );
                 })}
