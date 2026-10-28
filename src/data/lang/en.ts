@@ -1082,7 +1082,7 @@ export default {
         title: "100% Checklist for {{fullName}}",
         progress: "Progress",
         markAsCompleted: "Mark as completed",
-        markAsUncompleted: "Mark as uncompleted",
+        markAsIncomplete: "Mark as incomplete",
         mapLocation: "View location on map",
         accessibility: {
             entryIcon: "Checklist icon",
@@ -1247,6 +1247,18 @@ export default {
         },
         accessibility: {
             collectibleImage: "Collectible image",
+        },
+        sidebar: {
+            buttons: {
+                showAll: "Show all",
+                hideAll: "Hide all",
+                markAll: "Mark all as completed",
+                unmarkAll: "Mark all as incomplete",
+                showOnMap: "Show on map",
+                hideFromMap: "Hide from map",
+                markAsCompleted: "Mark as completed",
+                markAsIncomplete: "Mark as incomplete",
+            },
         },
     },
     radio: {

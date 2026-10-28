@@ -1082,7 +1082,7 @@ export default {
         title: "Liste à 100 % pour {{fullName}}",
         progress: "Progression",
         markAsCompleted: "Marquer comme terminé",
-        markAsUncompleted: "Marquer comme non terminé",
+        markAsIncomplete: "Marquer comme non terminé",
         mapLocation: "Voir l’emplacement sur la carte",
         accessibility: {
             entryIcon: "Icône de checklist",
@@ -1247,6 +1247,18 @@ export default {
         },
         accessibility: {
             collectibleImage: "Image de l’objet à collectionner",
+        },
+        sidebar: {
+            buttons: {
+                showAll: "Tout afficher",
+                hideAll: "Tout masquer",
+                markAll: "Tout marquer comme terminé",
+                unmarkAll: "Tout marquer comme non terminé",
+                showOnMap: "Afficher sur la carte",
+                hideFromMap: "Masquer de la carte",
+                markAsCompleted: "Marquer comme terminé",
+                markAsIncomplete: "Marquer comme non terminé",
+            },
         },
     },
     radio: {

@@ -1082,7 +1082,7 @@ export default {
         title: "Lista del 100% para {{fullName}}",
         progress: "Progreso",
         markAsCompleted: "Marcar como completado",
-        markAsUncompleted: "Marcar como no completado",
+        markAsIncomplete: "Marcar como no completado",
         mapLocation: "Ver ubicación en el mapa",
         accessibility: {
             entryIcon: "Icono de checklist",
@@ -1248,6 +1248,18 @@ export default {
         accessibility: {
             collectibleImage: "Imagen del coleccionable",
         },
+        sidebar: {
+            buttons: {
+                showAll: "Mostrar todo",
+                hideAll: "Ocultar todo",
+                markAll: "Marcar todo como completado",
+                unmarkAll: "Marcar todo como no completado",
+                showOnMap: "Mostrar en el mapa",
+                hideFromMap: "Ocultar del mapa",
+                markAsCompleted: "Marcar como completado",
+                markAsIncomplete: "Marcar como no completado",
+            },
+        },
     },
     radio: {
         title: "Radios de {{fullName}}",
@@ -1255,8 +1267,8 @@ export default {
         stations: {
             title: "Estaciones",
             v: {
-                musicPlayer: "Reproductor"
-            }
+                musicPlayer: "Reproductor",
+            },
         },
         tracks: "Canciones",
         genres: {
