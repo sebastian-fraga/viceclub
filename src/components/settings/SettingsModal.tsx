@@ -1,117 +1,38 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { useTranslation } from "react-i18next";
 
-import {
-    ResetProgressContent,
-    type ResetTarget,
-} from "@/components/settings/ResetProgressContent";
+import { ResetProgressContent } from "@/components/settings/ResetProgressContent";
+import SettingsSections from "@/components/settings/SettingsSections";
+import { useSettingsModal } from "@/components/settings/hooks/useSettingsModal";
 
 import { IconChevronLeft, IconX } from "@tabler/icons-react";
 
-import { getPlatformOptions, type PlatformFamily } from "@/config/platforms";
 import { settingsConfig } from "@/config/settings";
 
 import useSettings from "@/hooks/useSettings";
 
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useScrollLock } from "@/hooks/useScrollLock";
-import {
-    downloadLocalStorageBackup,
-    importAllLocalStorage,
-    readFileAsText,
-} from "@/utils/localStorageBackup";
-
-import openPageInProduction from "@/utils/openPageInProduction";
-import openPageInPageSpeed from "@/utils/openPageInPageSpeed";
-import SettingItem, { type SettingStatusMessage } from "./SettingItem";
 
 interface Props {
     open: boolean;
     onClose: () => void;
 }
 
-type Step = "main" | "reset";
-
 export default function SettingsModal({ open, onClose }: Props) {
-    const { t } = useTranslation();
+    const {
+        t,
+        currentStep,
+        setCurrentStep,
+        resetTarget,
+        fileInputRef,
+        actionStatus,
+        handleAction,
+        handleFileSelected,
+        handleClose,
+    } = useSettingsModal({ onClose });
+
     const isMobile = useIsMobile();
-    const [currentStep, setCurrentStep] = useState<Step>("main");
-    const [resetTarget, setResetTarget] = useState<ResetTarget>("checklist");
-    const fileInputRef = useRef<HTMLInputElement>(null);
-
-    const [actionStatus, setActionStatus] = useState<
-        ({ id: string } & SettingStatusMessage) | null
-    >(null);
-
-    const handleAction = (id: string) => {
-        switch (id) {
-            case "reset-checklist":
-                setResetTarget("checklist");
-                setCurrentStep("reset");
-                break;
-            case "reset-map":
-                setResetTarget("map");
-                setCurrentStep("reset");
-                break;
-            case "export-localstorage":
-                downloadLocalStorageBackup();
-                break;
-            case "import-localstorage":
-                fileInputRef.current?.click();
-                break;
-            case "open-page-production":
-                openPageInProduction();
-                break;
-            case "open-page-performance":
-                openPageInPageSpeed();
-                break;
-        }
-    };
-
-    const handleFileSelected = async (
-        e: React.ChangeEvent<HTMLInputElement>,
-    ) => {
-        const file = e.target.files?.[0];
-        e.target.value = "";
-
-        if (!file) return;
-
-        setActionStatus(null);
-
-        try {
-            const text = await readFileAsText(file);
-            const result = importAllLocalStorage(text);
-
-            if (result.success) {
-                window.location.reload();
-                return;
-            }
-
-            setActionStatus({
-                id: "import-localstorage",
-                text: t("settings.error.importBackup"),
-                variant: "error",
-            });
-        } catch {
-            setActionStatus({
-                id: "import-localstorage",
-                text: t("settings.error.importBackup"),
-                variant: "error",
-            });
-        }
-    };
-
-    const handleClose = () => {
-        onClose();
-        setTimeout(() => {
-            setCurrentStep("main");
-            setActionStatus(null);
-        }, 200);
-    };
-
-    const settingsSections = settingsConfig;
     const { settings, setSetting } = useSettings();
 
     useScrollLock(open, { touchAction: true });
@@ -188,101 +109,14 @@ export default function SettingsModal({ open, onClose }: Props) {
                                         exit={{ opacity: 0, x: -20 }}
                                         transition={{ duration: 0.15 }}
                                     >
-                                        {settingsSections
-                                            .filter(
-                                                (section) =>
-                                                    !(
-                                                        import.meta.env.PROD &&
-                                                        section.hideOnProduction
-                                                    ),
-                                            )
-                                            .map((section) => (
-                                                <section
-                                                    key={section.id}
-                                                    className="flex flex-col mb-4 px-2 max-mobile:px-0"
-                                                >
-                                                    <h3 className="text-xs text-gray-300/80 tracking-wide pl-1 mt-4 first:mt-6 mb-1.5 uppercase">
-                                                        {t(section.name)}
-                                                    </h3>
-
-                                                    <article className="flex flex-col gap-1">
-                                                        {section.settings
-                                                            .filter(
-                                                                (setting) =>
-                                                                    !(
-                                                                        isMobile &&
-                                                                        setting.hideOnMobile
-                                                                    ),
-                                                            )
-                                                            .map((setting) => {
-                                                                const platformFamily =
-                                                                    settings[
-                                                                        "platform-family"
-                                                                    ] as
-                                                                        | PlatformFamily
-                                                                        | "default";
-
-                                                                const options =
-                                                                    setting.id ===
-                                                                    "platform"
-                                                                        ? getPlatformOptions(
-                                                                              platformFamily,
-                                                                          )
-                                                                        : undefined;
-
-                                                                const statusMessage =
-                                                                    actionStatus?.id ===
-                                                                    setting.id
-                                                                        ? {
-                                                                              text: actionStatus.text,
-                                                                              variant:
-                                                                                  actionStatus.variant,
-                                                                          }
-                                                                        : undefined;
-
-                                                                return (
-                                                                    <SettingItem
-                                                                        key={
-                                                                            setting.id
-                                                                        }
-                                                                        setting={
-                                                                            setting
-                                                                        }
-                                                                        value={
-                                                                            settings[
-                                                                                setting
-                                                                                    .id
-                                                                            ]
-                                                                        }
-                                                                        onChange={(
-                                                                            value,
-                                                                        ) =>
-                                                                            setSetting(
-                                                                                setting.id,
-                                                                                value,
-                                                                            )
-                                                                        }
-                                                                        onAction={
-                                                                            handleAction
-                                                                        }
-                                                                        options={
-                                                                            options
-                                                                        }
-                                                                        disabled={
-                                                                            setting.id ===
-                                                                                "platform" &&
-                                                                            platformFamily ===
-                                                                                "default"
-                                                                        }
-                                                                        statusMessage={
-                                                                            statusMessage
-                                                                        }
-                                                                    />
-                                                                );
-                                                            })}
-                                                    </article>
-                                                </section>
-                                            ))}
+                                        <SettingsSections
+                                            sections={settingsConfig}
+                                            settings={settings}
+                                            setSetting={setSetting}
+                                            isMobile={isMobile}
+                                            actionStatus={actionStatus}
+                                            handleAction={handleAction}
+                                        />
                                     </motion.div>
                                 ) : (
                                     <motion.div
