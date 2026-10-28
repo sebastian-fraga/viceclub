@@ -99,6 +99,11 @@ function SidebarGameSections({
                                     <a
                                         data-game-id={gameId}
                                         href={lp(gameHref(gameId, sectionId))}
+                                        aria-label={
+                                            !showLabels
+                                                ? t(meta.label)
+                                                : undefined
+                                        }
                                         className={clsx(
                                             "flex items-center gap-2 max-mobile:gap-3 rounded-full px-2 py-1.5 max-mobile:p-3 w-full transition",
                                             showLabels

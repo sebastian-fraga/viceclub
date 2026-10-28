@@ -248,6 +248,11 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
                                         "/",
                                         i18n.language as Language,
                                     )}
+                                    aria-label={
+                                        !showLabels
+                                            ? t("sidebar.home")
+                                            : undefined
+                                    }
                                     className={clsx(
                                         baseNavButtonStyle,
                                         "text-slate-300 hover:bg-white/5 hover:text-white cursor-pointer",
