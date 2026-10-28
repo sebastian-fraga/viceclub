@@ -33,7 +33,7 @@ export function ChecklistItem({
 }: ChecklistItemProps) {
     const { t, i18n } = useTranslation();
     const localizedText = useLocalizedText();
-    const lp = useLocalePath()
+    const lp = useLocalePath();
     const [open, setOpen] = useState(false);
 
     const toggleDropdown = () => {
@@ -87,7 +87,7 @@ export function ChecklistItem({
                     position="bottom"
                     label={
                         checked
-                            ? t("checklist.markAsUncompleted")
+                            ? t("checklist.markAsIncomplete")
                             : t("checklist.markAsCompleted")
                     }
                 >

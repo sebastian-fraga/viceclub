@@ -78,7 +78,7 @@ export function ChecklistSection({
                         position="bottom"
                         label={
                             allDone
-                                ? i18n("checklist.markAsUncompleted")
+                                ? i18n("checklist.markAsIncomplete")
                                 : i18n("checklist.markAsCompleted")
                         }
                     >
