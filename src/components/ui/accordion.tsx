@@ -18,7 +18,7 @@ function AccordionItem({
 }: React.ComponentProps<typeof AccordionPrimitive.Item>) {
     return (
         <AccordionPrimitive.Item
-            className={cn("", className)}
+            className={cn("rounded-2xl overflow-hidden", className)}
             data-slot="accordion-item"
             {...props}
         />
@@ -31,10 +31,10 @@ function AccordionTrigger({
     ...props
 }: React.ComponentProps<typeof AccordionPrimitive.Trigger>) {
     return (
-        <AccordionPrimitive.Header className="flex my-4">
+        <AccordionPrimitive.Header className="flex my-2">
             <AccordionPrimitive.Trigger
                 className={cn(
-                    "group flex flex-1 cursor-pointer items-center justify-between gap-4 rounded-full px-5 py-4 text-left font-semibold text-sm outline-none",
+                    "group flex flex-1 cursor-pointer items-center justify-between gap-6 rounded-2xl px-6 py-5 text-left font-semibold text-base outline-none",
                     "bg-(--button-bg)/40 shadow-2xl shadow-(color:--button-bg)/20",
                     "transition-colors duration-400 hover:bg-(--button-bg-hover)/70",
                     "data-[state=open]:bg-(--button-bg-hover)",
@@ -49,8 +49,8 @@ function AccordionTrigger({
                 {children}
                 <IconChevronDown
                     aria-hidden="true"
-                    className="pointer-events-none shrink-0 opacity-60 transition-all duration-200 group-hover:opacity-100"
-                    size={16}
+                    className="pointer-events-none shrink-0 opacity-70 transition-all duration-200 group-hover:opacity-100"
+                    size={20}
                 />
             </AccordionPrimitive.Trigger>
         </AccordionPrimitive.Header>
@@ -64,11 +64,18 @@ function AccordionContent({
 }: React.ComponentProps<typeof AccordionPrimitive.Content>) {
     return (
         <AccordionPrimitive.Content
-            className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            className="overflow-hidden text-base leading-relaxed data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
             data-slot="accordion-content"
             {...props}
         >
-            <div className={cn("pt-0 pb-4", className)}>{children}</div>
+            <div
+                className={cn(
+                    "pt-2 pb-6 pl-4 max-w-3xl text-slate-200/90 border-l-2 border-yellow-200",
+                    className,
+                )}
+            >
+                {children}
+            </div>
         </AccordionPrimitive.Content>
     );
 }

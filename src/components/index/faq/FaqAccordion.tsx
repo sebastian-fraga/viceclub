@@ -8,13 +8,13 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-    IconCode,
-    IconDeviceGamepad2,
-    IconEdit,
-    IconInfoSquareRounded,
-    IconMailForward,
-    IconUser,
-    IconZoomQuestion,
+    IconBugFilled,
+    IconStarFilled,
+    IconBulbFilled,
+    IconInfoSquareRoundedFilled,
+    IconMailFilled,
+    IconUserFilled,
+    IconSearchFilled,
 } from "@tabler/icons-react";
 
 const anchorClasses =
@@ -28,19 +28,19 @@ const sections = [
                 id: "1",
                 title: "index.faq.sections.viceClub.items.1.title",
                 content: "index.faq.sections.viceClub.items.1.content",
-                icon: IconInfoSquareRounded,
+                icon: IconInfoSquareRoundedFilled,
             },
             {
                 id: "2",
                 title: "index.faq.sections.viceClub.items.2.title",
                 content: "index.faq.sections.viceClub.items.2.content",
-                icon: IconZoomQuestion,
+                icon: IconSearchFilled,
             },
             {
                 id: "3",
                 title: "index.faq.sections.viceClub.items.3.title",
                 content: "index.faq.sections.viceClub.items.3.content",
-                icon: IconEdit,
+                icon: IconBulbFilled,
             },
             {
                 id: "4",
@@ -60,7 +60,7 @@ const sections = [
                         }}
                     />
                 ),
-                icon: IconCode,
+                icon: IconBugFilled,
             },
         ],
     },
@@ -71,7 +71,7 @@ const sections = [
                 id: "1",
                 title: "index.faq.sections.aboutMe.items.1.title",
                 content: "index.faq.sections.aboutMe.items.1.content",
-                icon: IconUser,
+                icon: IconUserFilled,
             },
             {
                 id: "2",
@@ -97,13 +97,13 @@ const sections = [
                         }}
                     />
                 ),
-                icon: IconMailForward,
+                icon: IconMailFilled,
             },
             {
                 id: "3",
                 title: "index.faq.sections.aboutMe.items.3.title",
                 content: "index.faq.sections.aboutMe.items.3.content",
-                icon: IconDeviceGamepad2,
+                icon: IconStarFilled,
             },
         ],
     },
@@ -112,29 +112,29 @@ const sections = [
 export default function FaqAccordion() {
     const t = useT();
     return (
-        <div className="space-y-6 mt-6">
+        <div className="flex flex-col gap-12 ml-4">
             {sections.map((section) => (
-                <div key={section.title}>
-                    <h2 className="mb-8 text-2xl font-bold">
+                <div key={section.title} className="flex flex-col ">
+                    <h3 className="mb-4 mt-6 text-2xl font-bold">
                         {t(section.title)}
-                    </h2>
+                    </h3>
 
                     <Accordion
                         type="single"
                         collapsible
-                        className="max-w-4xl px-2"
+                        className="max-w-4xl px-2 space-y-3"
                     >
                         {section.items.map((item) => (
                             <AccordionItem
                                 key={item.id}
                                 value={item.id}
-                                className="transition-colors duration-500 group last:mb-8"
+                                className="transition-colors duration-500 group mb-3"
                             >
-                                <AccordionTrigger className="py-4 px-6 text-[15px] leading-6 hover:no-underline cursor-pointer">
-                                    <span className="flex items-center gap-5">
+                                <AccordionTrigger className="px-6 py-5 text-base leading-6 hover:no-underline cursor-pointer gap-6">
+                                    <span className="flex items-center gap-6">
                                         <item.icon
-                                            size={16}
-                                            className="shrink-0 opacity-90 text-yellow-200"
+                                            size={22}
+                                            className="shrink-0 text-yellow-200"
                                         />
                                         <span className="text-lg tracking-wide font-medium text-yellow-50 max-mobile:text-sm">
                                             {t(item.title)}
@@ -142,7 +142,7 @@ export default function FaqAccordion() {
                                     </span>
                                 </AccordionTrigger>
 
-                                <AccordionContent className="max-w-full pl-6 pr-12 pb-4 text-sm/7 text-pretty text-white/75">
+                                <AccordionContent className="max-w-full pl-6 pr-12 pb-4 text-sm/6 text-pretty text-white/75">
                                     {typeof item.content === "string"
                                         ? t(item.content)
                                         : item.content}
