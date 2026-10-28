@@ -1,4 +1,7 @@
 import FitToContainer from "@/components/maps/FitToContainer";
+import FocusOnMarker from "@/components/maps/FocusOnMarker";
+import { useCompletedCollectibles } from "@/components/maps/hooks/useCompletedCollectibles";
+import { useMapSelection } from "@/components/maps/hooks/useMapSelection";
 import MapMarkerPopup from "@/components/maps/MapMarkerPopup";
 import MapMarkers from "@/components/maps/MapMarkers";
 import MapSidebar from "@/components/maps/MapSidebar";
@@ -9,46 +12,17 @@ import ZoomControls from "@/components/maps/ZoomControls";
 import Title from "@/components/ui/Title";
 import { gamesList } from "@/config/games";
 import useT from "@/hooks/useT";
+import type { GameTheme } from "@/types/game";
 import { motion } from "framer-motion";
 import {
     CRS,
     Transformation,
     type LatLngBoundsExpression,
-    type LatLngTuple,
     type Map as LeafletMap,
 } from "leaflet";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { createPortal } from "react-dom";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import type { GameTheme } from "@/types/game";
-
-function FocusOnMarker({
-    target,
-    zoom,
-}: {
-    target: LatLngTuple | null;
-    zoom: number;
-}) {
-    const map = useMap();
-    const done = useRef(false);
-
-    useEffect(() => {
-        if (!target || done.current) return;
-        done.current = true;
-
-        const timeout = setTimeout(() => {
-            map.invalidateSize();
-            map.setView(target, zoom, { animate: false });
-        }, 100);
-
-        return () => {
-            clearTimeout(timeout);
-            done.current = false;
-        };
-    }, [map, target, zoom]);
-
-    return null;
-}
+import { MapContainer, TileLayer } from "react-leaflet";
 
 export default function GameMapCanvas({
     gameId,
@@ -58,7 +32,7 @@ export default function GameMapCanvas({
     minZoom,
     maxZoom,
     data,
-    theme
+    theme,
 }: {
     gameId: string;
     variantId?: string;
@@ -74,12 +48,6 @@ export default function GameMapCanvas({
 
     const imageVariant =
         variantId && variantId !== gameId ? variantId : undefined;
-
-    const [selectedCollectible, setSelectedCollectible] = useState<{
-        type: string;
-        collectible: CollectibleData;
-        totalForType: number;
-    } | null>(null);
 
     const mapRef = useRef<LeafletMap | null>(null);
     const popupRef = useRef<HTMLDivElement>(null);
@@ -116,176 +84,21 @@ export default function GameMapCanvas({
         [gameId],
     );
 
-    const [hiddenTypes, setHiddenTypes] = useState<Set<string>>(() => {
-        if (typeof window === "undefined") return new Set();
+    const {
+        hiddenTypes,
+        isolated,
+        selectedMarker,
+        selectedCollectible,
+        setSelectedCollectible,
+        focusTarget,
+        handleToggleType,
+        visibleData,
+    } = useMapSelection({ data, gameId, height });
 
-        const searchParams = new URLSearchParams(window.location.search);
-        const typeParam = searchParams.get("type");
-
-        if (!typeParam) return new Set();
-
-        const allTypes = Object.values(data).flatMap((typesRecord) =>
-            typesRecord ? Object.keys(typesRecord) : [],
-        );
-
-        const targetType = allTypes.find(
-            (type) => type === typeParam || type === `${typeParam}_${gameId}`,
-        );
-
-        if (!targetType) return new Set();
-
-        return new Set(allTypes.filter((type) => type !== targetType));
-    });
-
-    const [markerParam] = useState<string | null>(() => {
-        if (typeof window === "undefined") return null;
-
-        return new URLSearchParams(window.location.search).get("marker");
-    });
-
-    const [isolated, setIsolated] = useState<boolean>(() =>
-        Boolean(markerParam),
+    const { completedIds, toggleCollectible } = useCompletedCollectibles(
+        gameId,
+        variantId,
     );
-
-    const selectedMarker = useMemo(() => {
-        if (!markerParam) return null;
-
-        const typeParam = new URLSearchParams(window.location.search).get(
-            "type",
-        );
-
-        if (!typeParam) return null;
-
-        const allTypes = Object.values(data).flatMap((typesRecord) =>
-            typesRecord ? Object.entries(typesRecord) : [],
-        );
-
-        const [type, collectibles] =
-            allTypes.find(
-                ([type]) =>
-                    type === typeParam || type === `${typeParam}_${gameId}`,
-            ) ?? [];
-
-        if (!type || !collectibles) return null;
-
-        const collectible = collectibles.find(
-            (item) => item.id === markerParam,
-        );
-
-        if (!collectible) return null;
-
-        return {
-            type,
-            collectible,
-            totalForType: collectibles.length,
-        };
-    }, [data, gameId, markerParam]);
-
-    const focusTarget = useMemo<LatLngTuple | null>(() => {
-        if (!selectedMarker) return null;
-
-        return [
-            height - selectedMarker.collectible.y,
-            selectedMarker.collectible.x,
-        ];
-    }, [selectedMarker, height]);
-
-    useEffect(() => {
-        if (!selectedMarker) return;
-
-        setSelectedCollectible(selectedMarker);
-    }, [selectedMarker]);
-
-    const handleToggleType = (type: string) => {
-        setIsolated(false);
-
-        setHiddenTypes((prev) => {
-            const next = new Set(prev);
-
-            if (next.has(type)) {
-                next.delete(type);
-            } else {
-                next.add(type);
-            }
-
-            return next;
-        });
-    };
-
-    const visibleData = useMemo(() => {
-        const result: Partial<
-            Record<MapCategory, Record<string, CollectibleData[]>>
-        > = {};
-
-        if (isolated && selectedMarker) {
-            for (const [categoryKey, typesRecord] of Object.entries(data) as [
-                MapCategory,
-                Record<string, CollectibleData[]> | undefined,
-            ][]) {
-                if (!typesRecord?.[selectedMarker.type]) continue;
-
-                result[categoryKey] = {
-                    [selectedMarker.type]: [selectedMarker.collectible],
-                };
-            }
-
-            return result;
-        }
-
-        if (hiddenTypes.size === 0) return data;
-
-        for (const [categoryKey, typesRecord] of Object.entries(data) as [
-            MapCategory,
-            Record<string, CollectibleData[]> | undefined,
-        ][]) {
-            if (!typesRecord) continue;
-
-            result[categoryKey] = Object.fromEntries(
-                Object.entries(typesRecord).filter(
-                    ([type]) => !hiddenTypes.has(type),
-                ),
-            );
-        }
-
-        return result;
-    }, [data, hiddenTypes, isolated, selectedMarker]);
-
-    const storageKey = `completed_collectibles_${gameId}_${variantId}`;
-
-    const [completedIds, setCompletedIds] = useState<Set<string>>(() => {
-        if (typeof window === "undefined") return new Set();
-
-        try {
-            const saved = localStorage.getItem(storageKey);
-
-            return saved ? new Set(JSON.parse(saved)) : new Set();
-        } catch {
-            return new Set();
-        }
-    });
-
-    useEffect(() => {
-        try {
-            const saved = localStorage.getItem(storageKey);
-
-            setCompletedIds(saved ? new Set(JSON.parse(saved)) : new Set());
-        } catch {
-            setCompletedIds(new Set());
-        }
-    }, [storageKey]);
-
-    useEffect(() => {
-        const handleMapReset = (e: Event) => {
-            const detail = (e as CustomEvent<{ games: string[] }>).detail;
-            if (!detail?.games?.includes(gameId)) return;
-
-            setCompletedIds(new Set());
-        };
-
-        window.addEventListener("map-progress-reset", handleMapReset);
-        return () =>
-            window.removeEventListener("map-progress-reset", handleMapReset);
-    }, [gameId]);
 
     useEffect(() => {
         if (!selectedCollectible) return;
@@ -346,22 +159,6 @@ export default function GameMapCanvas({
 
         return () => cancelAnimationFrame(frame);
     }, [selectedCollectible, height]);
-
-    const toggleCollectible = (id: string) => {
-        setCompletedIds((prev) => {
-            const next = new Set(prev);
-
-            if (next.has(id)) {
-                next.delete(id);
-            } else {
-                next.add(id);
-            }
-
-            localStorage.setItem(storageKey, JSON.stringify(Array.from(next)));
-
-            return next;
-        });
-    };
 
     return (
         <section className="flex h-full w-full flex-col items-center">
