@@ -1,5 +1,5 @@
-import useT from "@/hooks/useT";
 import { MOBILE_QUERY } from "@/config/breakpoints";
+import useT from "@/hooks/useT";
 import {
     IconChevronLeft,
     IconHeadphones,
@@ -12,12 +12,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useDragToScroll } from "./hooks/useDragToScroll";
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
+import SongLabel from "@/components/radio/SongLabel";
 import clsx from "clsx";
 import { EqualizerBars } from "./EqualizerBars";
 import { formatTime } from "./lib/formatTime";
 import { translateRadioText } from "./lib/translateRadioText";
 import type { Playlist, RadioStation } from "./types/types";
-import SongLabel from "@/components/radio/SongLabel";
 
 interface SongSelectorProps {
     isPlaying: boolean;
@@ -309,50 +309,72 @@ export function SongSelector({
                                             className="flex items-center justify-between w-full text-left cursor-pointer transition duration-300 rounded-2xl hover:bg-white/5 px-5 max-mobile:px-3 py-2 data-[active=true]:bg-violet-400/10 mr-2 max-mobile:mr-0"
                                             data-active={isActive}
                                         >
-                                            <div className="flex items-center gap-4 max-mobile:gap-2 min-w-0">
-                                                {!(isActive && isPlaying) && (
-                                                    <span
-                                                        className={clsx(
-                                                            "shrink-0 text-[12px] font-body-condensed tabular-nums",
-                                                            isActive
-                                                                ? "text-violet-300"
-                                                                : "text-gray-200/80",
-                                                        )}
+                                            <div className="flex items-center gap-4 max-mobile:gap-3 min-w-0">
+                                                <div className="relative flex h-4 w-5 shrink-0 items-center justify-center">
+                                                    <AnimatePresence
+                                                        initial={false}
+                                                        mode="sync"
                                                     >
-                                                        {String(
-                                                            index + 1,
-                                                        ).padStart(2, "0")}
-                                                    </span>
-                                                )}
-                                                <AnimatePresence>
-                                                    {isActive && isPlaying && (
-                                                        <motion.div
-                                                            key="playing-icon"
-                                                            initial={{
-                                                                opacity: 0,
-                                                                scale: 0.6,
-                                                                width: 0,
-                                                            }}
-                                                            animate={{
-                                                                opacity: 1,
-                                                                scale: 1,
-                                                                width: "auto",
-                                                            }}
-                                                            exit={{
-                                                                opacity: 0,
-                                                                scale: 0.6,
-                                                                width: 0,
-                                                            }}
-                                                            transition={{
-                                                                duration: 0.2,
-                                                                ease: "easeOut",
-                                                            }}
-                                                            className="shrink-0"
-                                                        >
-                                                            <EqualizerBars />
-                                                        </motion.div>
-                                                    )}
-                                                </AnimatePresence>
+                                                        {isActive &&
+                                                        isPlaying ? (
+                                                            <motion.span
+                                                                key="equalizer"
+                                                                initial={{
+                                                                    opacity: 0,
+                                                                    scale: 0.7,
+                                                                }}
+                                                                animate={{
+                                                                    opacity: 1,
+                                                                    scale: 1,
+                                                                }}
+                                                                exit={{
+                                                                    opacity: 0,
+                                                                    scale: 0.7,
+                                                                }}
+                                                                transition={{
+                                                                    duration: 0.18,
+                                                                    ease: "easeOut",
+                                                                }}
+                                                                className="absolute inset-0 flex items-center justify-center"
+                                                            >
+                                                                <EqualizerBars />
+                                                            </motion.span>
+                                                        ) : (
+                                                            <motion.span
+                                                                key="number"
+                                                                initial={{
+                                                                    opacity: 0,
+                                                                    scale: 0.7,
+                                                                }}
+                                                                animate={{
+                                                                    opacity: 1,
+                                                                    scale: 1,
+                                                                }}
+                                                                exit={{
+                                                                    opacity: 0,
+                                                                    scale: 0.7,
+                                                                }}
+                                                                transition={{
+                                                                    duration: 0.18,
+                                                                    ease: "easeOut",
+                                                                }}
+                                                                className={clsx(
+                                                                    "absolute inset-0 flex items-center justify-center text-[12px] font-body-condensed tabular-nums",
+                                                                    isActive
+                                                                        ? "text-violet-300"
+                                                                        : "text-gray-200/80",
+                                                                )}
+                                                            >
+                                                                {String(
+                                                                    index + 1,
+                                                                ).padStart(
+                                                                    2,
+                                                                    "0",
+                                                                )}
+                                                            </motion.span>
+                                                        )}
+                                                    </AnimatePresence>
+                                                </div>
 
                                                 <div className="flex flex-col min-w-0">
                                                     <div className="flex items-center gap-2 min-w-0 ">

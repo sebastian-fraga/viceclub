@@ -45,3 +45,32 @@
         animation: none;
     }
 }
+
+.equalizer-bar {
+    height: 30%;
+    animation: equalizer 1s ease-in-out infinite;
+}
+
+@keyframes equalizer {
+
+    0%,
+    100% {
+        height: 30%;
+    }
+
+    25% {
+        height: 100%;
+    }
+
+    50% {
+        height: 45%;
+    }
+
+    75% {
+        height: 80%;
+    }
+}
+
+html.is-busy .equalizer-bar {
+    animation-play-state: paused;
+}
