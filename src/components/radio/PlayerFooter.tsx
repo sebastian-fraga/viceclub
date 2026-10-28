@@ -54,7 +54,7 @@ export function PlayerFooter({
             <button
                 type="button"
                 onClick={onOpen}
-                className="radio-track-cycle flex w-full cursor-pointer items-center gap-3 rounded-[28px] bg-(--radio-station-accent) px-4 py-3 text-left shadow-2xl shadow-black/55"
+                className="radio-track-cycle flex w-full cursor-pointer items-center gap-3 rounded-[20px] bg-(--radio-station-accent) px-4 py-3 text-left shadow-2xl shadow-black/55"
             >
                 <div className="min-w-0 flex-1">
                     <PlaybackInfo station={station} song={song} djs={djs} />
