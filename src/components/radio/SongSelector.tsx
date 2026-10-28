@@ -274,7 +274,7 @@ export function SongSelector({
                             key={activePlaylist.id}
                             ref={scrollRef}
                             onScroll={handleScroll}
-                            className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto scroll-radio flex-1 min-h-0"
+                            className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto overscroll-y-contain scroll-radio flex-1 min-h-0"
                             data-lenis-prevent
                             style={{
                                 maskImage,
