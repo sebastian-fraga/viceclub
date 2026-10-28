@@ -175,7 +175,7 @@ export default function ProgressBar({
     return (
         <div className="flex w-full min-w-0 items-center gap-2 max-mobile:gap-2">
             {hasStation && (
-                <div className="flex shrink-0 items-center gap-1.5 pr-4 max-mobile:pr-0">
+                <div className="flex shrink-0 items-center gap-1.5 pr-4 max-mobile:pr-3">
                     <span
                         className={`${TIMER_STYLES} text-end`}
                         style={{ minWidth: timerWidth }}
@@ -233,7 +233,7 @@ export default function ProgressBar({
                                 : "scale-80 opacity-0 group-hover:opacity-100",
                         )}
                         style={{
-                            left: `calc((100% - 20px) * ${thumbRatio})`,
+                            left: `calc(${thumbRatio * 100}% - 10px)`,
                             transformOrigin: `${thumbRatio * 100}% 50%`,
                         }}
                     />
@@ -261,7 +261,7 @@ export default function ProgressBar({
             </div>
 
             {hasStation && (
-                <div className="flex shrink-0 items-center gap-1.5 pl-4 max-mobile:pl-0">
+                <div className="flex shrink-0 items-center gap-1.5 pl-4 max-mobile:pl-3">
                     <span
                         className={`${TIMER_STYLES} text-start`}
                         style={{ minWidth: timerWidth }}
