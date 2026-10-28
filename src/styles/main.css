@@ -79,6 +79,11 @@ html.custom-cursors * {
   cursor: inherit;
 }
 
+html.is-busy:not(.custom-cursors),
+html.is-busy:not(.custom-cursors) * {
+  cursor: progress !important;
+}
+
 html[data-reduced-animations="true"] *,
 html[data-reduced-animations="true"] *::before,
 html[data-reduced-animations="true"] *::after {

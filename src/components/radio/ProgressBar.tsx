@@ -160,6 +160,14 @@ export default function ProgressBar({
         releaseActivePointerCapture,
     ]);
 
+    useEffect(() => {
+        document.documentElement.classList.toggle("is-busy", isBusy);
+
+        return () => {
+            document.documentElement.classList.remove("is-busy");
+        };
+    }, [isBusy]);
+
     const handleSeekEffect = useEffectEvent((seconds: number) => {
         onSeek(seconds);
     });
