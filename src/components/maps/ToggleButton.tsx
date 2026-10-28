@@ -6,6 +6,7 @@ interface ToggleButtonProps {
     label: string;
     onClick: () => void;
     children: ReactNode;
+    size?: "sm" | "md";
 }
 
 export default function ToggleButton({
@@ -13,6 +14,7 @@ export default function ToggleButton({
     label,
     onClick,
     children,
+    size = "md",
 }: ToggleButtonProps) {
     const tone =
         pressed === true
@@ -27,7 +29,11 @@ export default function ToggleButton({
             aria-pressed={pressed}
             aria-label={label}
             onClick={onClick}
-            className={`grid size-9 shrink-0 cursor-pointer place-items-center rounded-xl transition duration-350 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-md ${tone}`}
+            className={`grid shrink-0 cursor-pointer place-items-center transition duration-350 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white shadow-md ${
+                size === "sm"
+                    ? "size-7 rounded-lg"
+                    : "size-9 rounded-xl"
+            } ${tone}`}
         >
             {children}
         </button>

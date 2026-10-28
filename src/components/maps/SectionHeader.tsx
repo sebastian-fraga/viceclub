@@ -54,7 +54,7 @@ export default function SectionHeader({
 
     return (
         <div
-            className={`flex items-center justify-between gap-3 py-3 ${
+            className={`flex items-center justify-between gap-3 py-3 mb-2 ${
                 compact ? "px-5" : "px-6"
             }`}
         >

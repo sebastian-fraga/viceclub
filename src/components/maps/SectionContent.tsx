@@ -176,6 +176,7 @@ export default function SectionContent({
                                                     position="bottom"
                                                 >
                                                     <ToggleButton
+                                                        size="sm"
                                                         pressed={!isHidden}
                                                         label={i18n(
                                                             isHidden
@@ -189,11 +190,11 @@ export default function SectionContent({
                                                     >
                                                         {isHidden ? (
                                                             <IconEyeOff
-                                                                size={18}
+                                                                size={14}
                                                             />
                                                         ) : (
                                                             <IconEye
-                                                                size={18}
+                                                                size={14}
                                                             />
                                                         )}
                                                     </ToggleButton>
@@ -209,6 +210,7 @@ export default function SectionContent({
                                                     position="bottom"
                                                 >
                                                     <ToggleButton
+                                                        size="sm"
                                                         pressed={isComplete}
                                                         label={i18n(
                                                             isComplete
@@ -227,7 +229,7 @@ export default function SectionContent({
                                                         }
                                                     >
                                                         <IconCheck
-                                                            size={18}
+                                                            size={14}
                                                             stroke={2.5}
                                                         />
                                                     </ToggleButton>
