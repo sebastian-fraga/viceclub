@@ -2,30 +2,60 @@ import type { LatLngTuple } from "leaflet";
 import { useEffect, useRef } from "react";
 import { useMap } from "react-leaflet";
 
-export function FocusOnMarker({
-    target,
-    zoom,
-}: {
+const PAN_DURATION = 0.6;
+
+interface FocusOnMarkerProps {
     target: LatLngTuple | null;
-    zoom: number;
-}) {
+    onFocused?: () => void;
+}
+
+export function FocusOnMarker({ target, onFocused }: FocusOnMarkerProps) {
     const map = useMap();
-    const done = useRef(false);
+
+    const onFocusedRef = useRef(onFocused);
 
     useEffect(() => {
-        if (!target || done.current) return;
-        done.current = true;
+        onFocusedRef.current = onFocused;
+    });
+
+    const hasFocused = useRef(false);
+
+    useEffect(() => {
+        if (!target) return;
+
+        let onMoveEnd: (() => void) | null = null;
+
+        const delay = hasFocused.current ? 0 : 100;
 
         const timeout = setTimeout(() => {
-            map.invalidateSize();
-            map.setView(target, zoom, { animate: false });
-        }, 100);
+            if (!hasFocused.current) {
+                map.invalidateSize();
+                hasFocused.current = true;
+            }
+
+            const offset = map
+                .latLngToContainerPoint(target)
+                .subtract(map.getSize().divideBy(2));
+            const alreadyCentered =
+                Math.abs(offset.x) < 1 && Math.abs(offset.y) < 1;
+
+            map.panTo(target, { animate: true, duration: PAN_DURATION });
+
+            if (alreadyCentered) {
+                onFocusedRef.current?.();
+                return;
+            }
+
+            onMoveEnd = () => onFocusedRef.current?.();
+            map.once("moveend", onMoveEnd);
+        }, delay);
 
         return () => {
             clearTimeout(timeout);
-            done.current = false;
+
+            if (onMoveEnd) map.off("moveend", onMoveEnd);
         };
-    }, [map, target, zoom]);
+    }, [map, target]);
 
     return null;
 }

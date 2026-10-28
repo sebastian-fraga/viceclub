@@ -36,6 +36,13 @@ export function useCompletedCollectibles(gameId: string, variantId?: string) {
             window.removeEventListener("map-progress-reset", handleMapReset);
     }, [gameId]);
 
+    const persist = (ids: Set<string>) => {
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(Array.from(ids)));
+        } catch {
+        }
+    };
+
     const toggleCollectible = (id: string) => {
         setCompletedIds((prev) => {
             const next = new Set(prev);
@@ -46,11 +53,29 @@ export function useCompletedCollectibles(gameId: string, variantId?: string) {
                 next.add(id);
             }
 
-            localStorage.setItem(storageKey, JSON.stringify(Array.from(next)));
+            persist(next);
 
             return next;
         });
     };
 
-    return { completedIds, toggleCollectible };
+    const setCompleted = (ids: string[], completed: boolean) => {
+        setCompletedIds((prev) => {
+            const next = new Set(prev);
+
+            for (const id of ids) {
+                if (completed) {
+                    next.add(id);
+                } else {
+                    next.delete(id);
+                }
+            }
+
+            persist(next);
+
+            return next;
+        });
+    };
+
+    return { completedIds, toggleCollectible, setCompleted };
 }

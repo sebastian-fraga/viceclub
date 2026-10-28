@@ -1,4 +1,6 @@
 import SectionContent from "@/components/maps/SectionContent";
+import SectionHeader from "@/components/maps/SectionHeader";
+import type { TypeMeta } from "@/components/maps/utils/sectionUtils";
 import type { CollectibleData } from "@/components/maps/types";
 import {
     MAP_CATEGORIES,
@@ -9,7 +11,7 @@ import { useScrollLock } from "@/hooks/useScrollLock";
 import useT from "@/hooks/useT";
 import { themeToCssVars } from "@/lib/theme";
 import type { GameTheme } from "@/types/game";
-import { IconChevronDown, IconFilter, IconX } from "@tabler/icons-react";
+import { IconFilter, IconX } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { createPortal } from "react-dom";
@@ -20,12 +22,9 @@ interface MapSidebarProps {
     completedIds: Set<string>;
     hiddenTypes: Set<string>;
     onToggleType: (type: string) => void;
+    onSetTypesHidden: (types: string[], hidden: boolean) => void;
+    onSetCompleted: (ids: string[], completed: boolean) => void;
     theme: GameTheme;
-}
-
-interface TypeMeta {
-    color: string;
-    label: string;
 }
 
 export default function MapSidebar({
@@ -34,6 +33,8 @@ export default function MapSidebar({
     completedIds,
     hiddenTypes,
     onToggleType,
+    onSetTypesHidden,
+    onSetCompleted,
     theme,
 }: MapSidebarProps) {
     const markers = MAP_MARKERS[gameId as keyof typeof MAP_MARKERS];
@@ -91,27 +92,18 @@ export default function MapSidebar({
                             key={section.key}
                             className="mb-6 last:mb-0 overflow-hidden rounded-3xl bg-(--button-bg) shadow-2xl shadow-(color:--button-bg)/40"
                         >
-                            <button
-                                type="button"
-                                onClick={() => toggleSection(section.key)}
-                                aria-expanded={!isCollapsed}
-                                className="w-full"
-                            >
-                                <div className="flex items-center justify-between w-full group cursor-pointer px-6 py-4">
-                                    <span className="font-body-condensed text-[22px] text-white">
-                                        {i18n(section.label)}
-                                    </span>
-
-                                    <IconChevronDown
-                                        size={18}
-                                        className={`text-white/50 transition duration-200 group-hover:text-white ${
-                                            isCollapsed
-                                                ? "rotate-0"
-                                                : "rotate-180"
-                                        }`}
-                                    />
-                                </div>
-                            </button>
+                            <SectionHeader
+                                section={section}
+                                markers={markers}
+                                completedIds={completedIds}
+                                hiddenTypes={hiddenTypes}
+                                isCollapsed={isCollapsed}
+                                onToggleCollapse={() =>
+                                    toggleSection(section.key)
+                                }
+                                onSetTypesHidden={onSetTypesHidden}
+                                onSetCompleted={onSetCompleted}
+                            />
 
                             <SectionContent
                                 section={section}
@@ -120,6 +112,7 @@ export default function MapSidebar({
                                 completedIds={completedIds}
                                 hiddenTypes={hiddenTypes}
                                 onToggleType={onToggleType}
+                                onSetCompleted={onSetCompleted}
                             />
                         </div>
                     );
@@ -204,33 +197,31 @@ export default function MapSidebar({
                                                         key={section.key}
                                                         className="mb-4 overflow-hidden rounded-3xl bg-black/10 last:mb-0"
                                                     >
-                                                        <button
-                                                            type="button"
-                                                            onClick={() =>
+                                                        <SectionHeader
+                                                            compact
+                                                            section={section}
+                                                            markers={markers}
+                                                            completedIds={
+                                                                completedIds
+                                                            }
+                                                            hiddenTypes={
+                                                                hiddenTypes
+                                                            }
+                                                            isCollapsed={
+                                                                isCollapsed
+                                                            }
+                                                            onToggleCollapse={() =>
                                                                 toggleSection(
                                                                     section.key,
                                                                 )
                                                             }
-                                                            aria-expanded={
-                                                                !isCollapsed
+                                                            onSetTypesHidden={
+                                                                onSetTypesHidden
                                                             }
-                                                            className="flex w-full cursor-pointer items-center justify-between px-5 py-4"
-                                                        >
-                                                            <span className="font-body-condensed text-xl text-white">
-                                                                {i18n(
-                                                                    section.label,
-                                                                )}
-                                                            </span>
-
-                                                            <IconChevronDown
-                                                                size={18}
-                                                                className={`text-white/50 transition duration-200 ${
-                                                                    isCollapsed
-                                                                        ? "rotate-0"
-                                                                        : "rotate-180"
-                                                                }`}
-                                                            />
-                                                        </button>
+                                                            onSetCompleted={
+                                                                onSetCompleted
+                                                            }
+                                                        />
 
                                                         <SectionContent
                                                             section={section}
@@ -247,6 +238,9 @@ export default function MapSidebar({
                                                             onToggleType={
                                                                 onToggleType
                                                             }
+                                                            onSetCompleted={
+                                                                onSetCompleted
+                                                            }
                                                         />
                                                     </div>
                                                 );
@@ -262,5 +256,3 @@ export default function MapSidebar({
         </>
     );
 }
-
-// SectionContent moved to ./SectionContent.tsx

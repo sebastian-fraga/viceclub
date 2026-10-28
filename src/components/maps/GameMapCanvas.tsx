@@ -20,7 +20,7 @@ import {
     type LatLngBoundsExpression,
     type Map as LeafletMap,
 } from "leaflet";
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { createPortal } from "react-dom";
 import { MapContainer, TileLayer } from "react-leaflet";
 
@@ -92,72 +92,68 @@ export default function GameMapCanvas({
         setSelectedCollectible,
         focusTarget,
         handleToggleType,
+        handleSetTypesHidden,
         visibleData,
     } = useMapSelection({ data, gameId, height });
 
-    const { completedIds, toggleCollectible } = useCompletedCollectibles(
-        gameId,
-        variantId,
-    );
+    const { completedIds, toggleCollectible, setCompleted } =
+        useCompletedCollectibles(gameId, variantId);
 
-    useEffect(() => {
+    const avoidPopup = useCallback(() => {
         if (!selectedCollectible) return;
 
         const map = mapRef.current;
         const popupEl = popupRef.current;
         if (!map || !popupEl) return;
 
-        const frame = requestAnimationFrame(() => {
-            const mapRect = map.getContainer().getBoundingClientRect();
-            const popupRect = popupEl.getBoundingClientRect();
+        const mapRect = map.getContainer().getBoundingClientRect();
+        const popupRect = popupEl.getBoundingClientRect();
 
-            const MARGIN = 32;
-            const forbidden = {
-                left: popupRect.left - mapRect.left - MARGIN,
-                top: popupRect.top - mapRect.top - MARGIN,
-                right: popupRect.right - mapRect.left + MARGIN,
-                bottom: popupRect.bottom - mapRect.top + MARGIN,
-            };
+        const MARGIN = 32;
+        const forbidden = {
+            left: popupRect.left - mapRect.left - MARGIN,
+            top: popupRect.top - mapRect.top - MARGIN,
+            right: popupRect.right - mapRect.left + MARGIN,
+            bottom: popupRect.bottom - mapRect.top + MARGIN,
+        };
 
-            const latlng: [number, number] = [
-                height - selectedCollectible.collectible.y,
-                selectedCollectible.collectible.x,
-            ];
-            const point = map.latLngToContainerPoint(latlng);
+        const latlng: [number, number] = [
+            height - selectedCollectible.collectible.y,
+            selectedCollectible.collectible.x,
+        ];
+        const point = map.latLngToContainerPoint(latlng);
 
-            const isHidden =
-                point.x > forbidden.left &&
-                point.x < forbidden.right &&
-                point.y > forbidden.top &&
-                point.y < forbidden.bottom;
+        const isHidden =
+            point.x > forbidden.left &&
+            point.x < forbidden.right &&
+            point.y > forbidden.top &&
+            point.y < forbidden.bottom;
 
-            if (!isHidden) return;
-            const distToLeft = point.x - forbidden.left;
-            const distToRight = forbidden.right - point.x;
-            const distToTop = point.y - forbidden.top;
-            const distToBottom = forbidden.bottom - point.y;
-            const minDist = Math.min(
-                distToLeft,
-                distToRight,
-                distToTop,
-                distToBottom,
-            );
+        if (!isHidden) return;
 
-            let targetX = point.x;
-            let targetY = point.y;
+        const distToLeft = point.x - forbidden.left;
+        const distToRight = forbidden.right - point.x;
+        const distToTop = point.y - forbidden.top;
+        const distToBottom = forbidden.bottom - point.y;
+        const minDist = Math.min(
+            distToLeft,
+            distToRight,
+            distToTop,
+            distToBottom,
+        );
 
-            if (minDist === distToLeft) targetX = forbidden.left;
-            else if (minDist === distToRight) targetX = forbidden.right;
-            else if (minDist === distToTop) targetY = forbidden.top;
-            else targetY = forbidden.bottom;
+        let targetX = point.x;
+        let targetY = point.y;
 
-            map.panBy([point.x - targetX, point.y - targetY], {
-                animate: true,
-                duration: 0.35,
-            });
+        if (minDist === distToLeft) targetX = forbidden.left;
+        else if (minDist === distToRight) targetX = forbidden.right;
+        else if (minDist === distToTop) targetY = forbidden.top;
+        else targetY = forbidden.bottom;
+
+        map.panBy([point.x - targetX, point.y - targetY], {
+            animate: true,
+            duration: 0.35,
         });
-
-        return () => cancelAnimationFrame(frame);
     }, [selectedCollectible, height]);
 
     return (
@@ -232,7 +228,7 @@ export default function GameMapCanvas({
 
                             <FocusOnMarker
                                 target={focusTarget}
-                                zoom={maxZoom}
+                                onFocused={avoidPopup}
                             />
 
                             <ZoomControls />
@@ -312,6 +308,8 @@ export default function GameMapCanvas({
                         completedIds={completedIds}
                         hiddenTypes={hiddenTypes}
                         onToggleType={handleToggleType}
+                        onSetTypesHidden={handleSetTypesHidden}
+                        onSetCompleted={setCompleted}
                         theme={theme}
                     />
                 </div>

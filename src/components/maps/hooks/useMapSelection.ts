@@ -1,7 +1,5 @@
 import type { CollectibleData } from "@/components/maps/types";
-import {
-    type MapCategory,
-} from "@/components/maps/types/categories";
+import { type MapCategory } from "@/components/maps/types/categories";
 import { useEffect, useMemo, useState } from "react";
 
 interface UseMapSelectionParams {
@@ -91,7 +89,7 @@ export function useMapSelection({
         setSelectedCollectible(selectedMarker);
     }, [selectedMarker]);
 
-    const focusTarget = useMemo< [number, number] | null>(() => {
+    const focusTarget = useMemo<[number, number] | null>(() => {
         if (!selectedCollectible) return null;
 
         return [
@@ -110,6 +108,24 @@ export function useMapSelection({
                 next.delete(type);
             } else {
                 next.add(type);
+            }
+
+            return next;
+        });
+    };
+
+    const handleSetTypesHidden = (types: string[], hidden: boolean) => {
+        setIsolated(false);
+
+        setHiddenTypes((prev) => {
+            const next = new Set(prev);
+
+            for (const type of types) {
+                if (hidden) {
+                    next.add(type);
+                } else {
+                    next.delete(type);
+                }
             }
 
             return next;
@@ -164,6 +180,7 @@ export function useMapSelection({
         setSelectedCollectible,
         focusTarget,
         handleToggleType,
+        handleSetTypesHidden,
         visibleData,
         markerParam,
     };
