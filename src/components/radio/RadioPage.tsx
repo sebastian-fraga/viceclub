@@ -116,7 +116,6 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
                 {
                     "--radio-station-accent":
                         radio.activeStation?.color ??
-                        station?.color ??
                         "var(--button-bg)",
                 } as React.CSSProperties
             }
