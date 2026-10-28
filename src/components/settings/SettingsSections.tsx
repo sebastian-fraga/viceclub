@@ -1,13 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { getPlatformOptions, type PlatformFamily } from "@/config/platforms";
-import { useIsMobile } from "@/hooks/useIsMobile";
 import SettingItem, { type SettingStatusMessage } from "./SettingItem";
 
 interface SettingsSectionsProps {
     sections: typeof import("@/config/settings").settingsConfig;
     settings: Record<string, string | boolean>;
     setSetting: (id: string, value: string | boolean) => void;
-    isMobile: boolean;
+    isMobile: boolean | null;
     actionStatus: ({ id: string } & SettingStatusMessage) | null;
     handleAction: (id: string) => void;
 }
