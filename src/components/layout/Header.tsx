@@ -35,7 +35,7 @@ export default function Header() {
                         ? i18n("common.accessibility.closeSidebar")
                         : i18n("common.accessibility.openSidebar")
                 }
-                className="flex mobile:hidden absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-lg text-slate-200 hover:text-white bg-white/10 transition z-10 cursor-pointer"
+                className="flex mobile:hidden absolute left-2 top-1/2 -translate-y-1/2 items-center justify-center w-10 h-10 rounded-lg text-slate-200 hover:text-white bg-white/10 transition z-10 cursor-pointer max-mobile:ml-2"
             >
                 <svg
                     id="mobile-menu-icon-hamburger"
@@ -58,7 +58,7 @@ export default function Header() {
 
             <a
                 href={lp("/")}
-                className="m-0 p-0 leading-none transition-all duration-400 ease-in-out active:scale-90 hover:brightness-75 flex items-center justify-start gap-4 max-mobile:flex-none max-mobile:gap-2"
+                className="m-0 p-0 leading-none transition-all duration-400 ease-in-out active:scale-90 hover:brightness-75 flex items-center justify-start gap-4 max-mobile:flex-none max-mobile:gap-2 max-mobile:mr-2"
             >
                 <img
                     className="ml-7.5 w-[4em] drop-shadow-2xl drop-shadow-purple-800/40 max-mobile:ml-0 max-mobile:w-15"
