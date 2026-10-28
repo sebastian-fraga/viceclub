@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { createPortal } from "react-dom";
+import { useEffect } from "react";
 
 import { ResetProgressContent } from "@/components/settings/ResetProgressContent";
 import SettingsSections from "@/components/settings/SettingsSections";
@@ -36,6 +37,19 @@ export default function SettingsModal({ open, onClose }: Props) {
     const { settings, setSetting } = useSettings();
 
     useScrollLock(open, { touchAction: true });
+
+    useEffect(() => {
+        const handlePageLoad = () => {
+            onClose();
+            setCurrentStep("main");
+            setActionStatus(null);
+        };
+
+        document.addEventListener("astro:page-load", handlePageLoad);
+
+        return () =>
+            document.removeEventListener("astro:page-load", handlePageLoad);
+    }, [onClose, setCurrentStep, setActionStatus]);
 
     if (typeof document === "undefined") return null;
 

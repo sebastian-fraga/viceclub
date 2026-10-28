@@ -36,7 +36,7 @@ export default function SettingItem({
     const hasDescription = Boolean(setting.description);
 
     const mobileGrid = hasDescription
-        ? "max-mobile:grid max-mobile:grid-cols-[auto_minmax(0,1fr)_auto] max-mobile:gap-x-3 max-mobile:gap-y-1"
+        ? "max-mobile:grid max-mobile:grid-cols-[auto_minmax(0,1fr)_auto] max-mobile:gap-x-3 max-mobile:gap-y-1.5"
         : "";
     const mobileContents = hasDescription ? "max-mobile:contents" : "";
     const placeIcon = hasDescription
