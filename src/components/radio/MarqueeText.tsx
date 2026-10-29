@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { motion, type MotionProps } from "framer-motion";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
 interface MarqueeTextProps {
     children: React.ReactNode;
@@ -10,6 +10,10 @@ interface MarqueeTextProps {
 const marqueeMotion: MotionProps = {
     initial: { x: 0 },
 };
+
+const DISTANCE_JITTER_PX = 2;
+
+const START_DELAY_S = 2;
 
 export default function MarqueeText({ children, className }: MarqueeTextProps) {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +34,19 @@ export default function MarqueeText({ children, className }: MarqueeTextProps) {
             const d = content.scrollWidth - container.clientWidth;
             const next = prefersReducedMotion || d <= 1 ? 0 : d;
 
-            setDistance((prev) => (prev === next ? prev : next));
+            setDistance((prev) => {
+                if (prev === next) return prev;
+
+                if (
+                    prev > 0 &&
+                    next > 0 &&
+                    Math.abs(prev - next) <= DISTANCE_JITTER_PX
+                ) {
+                    return prev;
+                }
+
+                return next;
+            });
         };
 
         measure();
@@ -40,9 +56,37 @@ export default function MarqueeText({ children, className }: MarqueeTextProps) {
         ro.observe(content);
 
         return () => ro.disconnect();
-    }, [children, prefersReducedMotion]);
+    }, [prefersReducedMotion]);
 
     const duration = Math.max(6, distance / 10);
+
+    const animate = useMemo(
+        () => ({
+            x: distance > 0 ? [0, -distance, -distance, 0, 0] : 0,
+        }),
+        [distance],
+    );
+
+    const transition = useMemo(
+        () =>
+            distance > 0
+                ? {
+                      delay: START_DELAY_S,
+                      duration: duration + 6,
+                      times: [
+                          0,
+                          duration / 2 / (duration + 6),
+                          (duration / 2 + 2) / (duration + 6),
+                          (duration + 2) / (duration + 6),
+                          1,
+                      ],
+                      repeat: Infinity,
+                      ease: "linear" as const,
+                      repeatDelay: 2,
+                  }
+                : { duration: 0 },
+        [distance, duration],
+    );
 
     const [leftMaskOpacity, setLeftMaskOpacity] = useState(0);
     const [rightMaskOpacity, setRightMaskOpacity] = useState(0);
@@ -56,26 +100,8 @@ export default function MarqueeText({ children, className }: MarqueeTextProps) {
                 ref={contentRef}
                 {...marqueeMotion}
                 className="flex w-max min-w-full items-center whitespace-nowrap"
-                animate={{
-                    x: distance > 0 ? [0, -distance, -distance, 0, 0] : 0,
-                }}
-                transition={
-                    distance > 0
-                        ? {
-                              duration: duration + 6,
-                              times: [
-                                  0,
-                                  duration / 2 / (duration + 6),
-                                  (duration / 2 + 2) / (duration + 6),
-                                  (duration + 2) / (duration + 6),
-                                  1,
-                              ],
-                              repeat: Infinity,
-                              ease: "linear",
-                              repeatDelay: 2,
-                          }
-                        : { duration: 0 }
-                }
+                animate={animate}
+                transition={transition}
                 onUpdate={(latest) => {
                     const x = Math.abs(Number(latest.x ?? 0));
                     const atStart = x < 1;
