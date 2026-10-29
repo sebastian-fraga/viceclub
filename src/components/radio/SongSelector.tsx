@@ -13,6 +13,7 @@ import { useDragToScroll } from "./hooks/useDragToScroll";
 import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
 import SongLabel from "@/components/radio/SongLabel";
+import { Tooltip } from "@/components/ui/Tooltip";
 import clsx from "clsx";
 import { EqualizerBars } from "./EqualizerBars";
 import { formatTime } from "./lib/formatTime";
@@ -185,7 +186,14 @@ export function SongSelector({
                                                 key={genre}
                                                 className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
                                             >
-                                                <IconMusic className="text-violet-400 shrink-0" />
+                                                <Tooltip
+                                                    position="bottom"
+                                                    label={t(
+                                                        "radio.common.genre",
+                                                    )}
+                                                >
+                                                    <IconMusic className="text-violet-400 shrink-0 cursor-help" />
+                                                </Tooltip>
                                                 <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
                                                     {t(
                                                         `radio.genres.${genre}`,
@@ -216,7 +224,14 @@ export function SongSelector({
                                                 key={dj}
                                                 className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
                                             >
-                                                <IconHeadphones className="text-yellow-200 shrink-0" />
+                                                <Tooltip
+                                                    position="bottom"
+                                                    label={t(
+                                                        "radio.common.dj",
+                                                    )}
+                                                >
+                                                    <IconHeadphones className="text-yellow-200 shrink-0 cursor-help" />
+                                                </Tooltip>
                                                 <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
                                                     {dj}
                                                 </span>
