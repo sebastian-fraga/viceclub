@@ -1369,6 +1369,8 @@ export default {
             world_music_middle_east: "Musique du Moyen-Orient",
         },
         common: {
+            dj: "Animateur",
+            genre: "Genre",
             preview: "Extrait",
             segment: "Segment",
             news: "Actualité",

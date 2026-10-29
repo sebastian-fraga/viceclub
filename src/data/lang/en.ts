@@ -1368,6 +1368,8 @@ export default {
             world_music_middle_east: "Middle Eastern music",
         },
         common: {
+            dj: "DJ",
+            genre: "Genre",
             preview: "Preview",
             segment: "Segment",
             news: "News",

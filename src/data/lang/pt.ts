@@ -1368,6 +1368,8 @@ export default {
             world_music_middle_east: "Música do Oriente Médio",
         },
         common: {
+            dj: "Locutor",
+            genre: "Gênero",
             preview: "Prévia",
             segment: "Segmento",
             news: "Notícia",
