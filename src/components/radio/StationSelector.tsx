@@ -96,18 +96,27 @@ export function StationSelector({
                                     damping: 20,
                                 }}
                                 className={clsx(
-                                    "group relative bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition cursor-pointer border border-white/7 hover:ring-4 hover:ring-[color-mix(in_oklch,var(--radio-station-accent)_50%,white)] focus-visible:border-yellow-200 outline-none overflow-hidden",
+                                    "group relative bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] rounded-xl px-2 py-8 w-full min-h-40 flex flex-col items-center justify-center transition-[background-color,border-color,box-shadow] duration-300 cursor-pointer border border-white/7 hover:ring-4 hover:ring-[color-mix(in_oklch,var(--radio-station-accent)_50%,white)] focus-visible:border-yellow-200 outline-none overflow-hidden",
                                     isActive &&
-                                        "border-violet-300 bg-[#37344D] border ring-4 ring-[color-mix(in_oklch,var(--radio-station-accent)_70%,white)]",
+                                        "border-violet-300 bg-[#37344D] border ring-4 ring-[color-mix(in_oklch,var(--radio-station-accent)_70%,white)] transition-all duration-150",
                                 )}
                             >
-                                <motion.img
-                                    src={station.image}
-                                    alt={stationName}
-                                    whileHover={{ scale: 1.08 }}
-                                    transition={{ duration: 0.2 }}
-                                    className="h-26 w-22 object-contain drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
-                                />
+                                <div className="relative flex items-center justify-center">
+                                    <div
+                                        aria-hidden="true"
+                                        className="pointer-events-none absolute inset-2 rounded-full opacity-40 blur-xl"
+                                        style={{
+                                            background:
+                                                "radial-gradient(circle, var(--radio-station-accent), transparent 70%)",
+                                        }}
+                                    />
+
+                                    <img
+                                        src={station.image}
+                                        alt={stationName}
+                                        className="relative h-26 w-22 object-contain transition-transform duration-360 group-hover:scale-108 filter-[drop-shadow(0_1px_1px_rgb(0_0_0/50%))_drop-shadow(0_0_6px_color-mix(in_oklch,var(--radio-station-accent)_30%,transparent))]"
+                                    />
+                                </div>
                                 <span className="absolute bottom-3 left-1/2 text-yellow-50 -translate-x-1/2 text-xs truncate max-w-[90%] text-center opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 max-mobile:opacity-100 max-mobile:translate-y-0 transition-all duration-200">
                                     {stationName}
                                 </span>
