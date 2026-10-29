@@ -306,11 +306,11 @@ export function SongSelector({
                                             onClick={() =>
                                                 onSelectSong(song.start)
                                             }
-                                            className="flex items-center justify-between w-full text-left cursor-pointer transition duration-300 rounded-2xl hover:bg-white/5 px-5 max-mobile:px-3 py-2 data-[active=true]:bg-violet-400/10 mr-2 max-mobile:mr-0"
+                                            className="flex items-center justify-between w-full text-left cursor-pointer transition duration-400 rounded-md hover:bg-white/10 px-5 max-mobile:px-3.5 py-2.5 data-[active=true]:bg-white mr-2 max-mobile:mr-0"
                                             data-active={isActive}
                                         >
                                             <div className="flex items-center gap-4 max-mobile:gap-3 min-w-0">
-                                                <div className="relative flex h-4 w-5 shrink-0 items-center justify-center">
+                                                <div className="relative flex h-4 w-5 items-center justify-center">
                                                     <AnimatePresence
                                                         initial={false}
                                                         mode="sync"
@@ -361,7 +361,7 @@ export function SongSelector({
                                                                 className={clsx(
                                                                     "absolute inset-0 flex items-center justify-center text-[12px] font-body-condensed tabular-nums",
                                                                     isActive
-                                                                        ? "text-violet-300"
+                                                                        ? "text-black"
                                                                         : "text-gray-200/80",
                                                                 )}
                                                             >
@@ -376,13 +376,13 @@ export function SongSelector({
                                                     </AnimatePresence>
                                                 </div>
 
-                                                <div className="flex flex-col min-w-0">
-                                                    <div className="flex items-center gap-2 min-w-0 ">
+                                                <div className="flex flex-col min-w-0 max-mobile:gap-px">
+                                                    <div className="flex items-center gap-2 min-w-0 max-mobile:gap-1">
                                                         <span
                                                             className={clsx(
-                                                                "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm",
+                                                                "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm transition",
                                                                 isActive
-                                                                    ? "text-[color-mix(in_oklch,var(--radio-station-accent)_10%,white)]"
+                                                                    ? "text-[color-mix(in_oklch,var(--radio-station-accent)_50%,black)]"
                                                                     : "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]",
                                                             )}
                                                         >
@@ -398,14 +398,15 @@ export function SongSelector({
                                                                 !isActive &&
                                                                     "opacity-60",
                                                             )}
+                                                            isActive={isActive}
                                                         />
                                                     </div>
 
                                                     <span
                                                         className={clsx(
-                                                            "text-sm max-mobile:text-xs font-medium truncate max-mobile:max-w-60",
+                                                            "text-sm max-mobile:text-xs font-medium truncate max-mobile:max-w-60 transition",
                                                             isActive
-                                                                ? "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]"
+                                                                ? "text-[color-mix(in_oklch,var(--radio-station-accent)_95%,white)]"
                                                                 : "text-[color-mix(in_oklch,var(--radio-station-accent)_60%,white)]",
                                                         )}
                                                     >
@@ -415,10 +416,10 @@ export function SongSelector({
                                             </div>
                                             <span
                                                 className={clsx(
-                                                    "shrink-0 max-mobile:text-xs",
+                                                    "shrink-0 max-mobile:text-xs tabular-nums font-body-condensed transition",
                                                     isActive
-                                                        ? "text-violet-300"
-                                                        : "text-gray-200",
+                                                        ? "text-black"
+                                                        : "text-white",
                                                 )}
                                             >
                                                 {formatTime(song.duration)}
