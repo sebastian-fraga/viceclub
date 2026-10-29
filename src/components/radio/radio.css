@@ -59,15 +59,15 @@
     }
 
     25% {
-        height: 100%;
+        height: var(--max-height);
     }
 
     50% {
-        height: 45%;
+        height: var(--mid-height);
     }
 
     75% {
-        height: 80%;
+        height: var(--max-height);
     }
 }
 
