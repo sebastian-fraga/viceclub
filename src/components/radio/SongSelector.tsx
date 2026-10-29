@@ -114,7 +114,7 @@ export function SongSelector({
     const maskImage = `linear-gradient(to bottom, ${maskParts.join(", ")})`;
 
     const cardSpacing = compact
-        ? "px-4 py-4 gap-3"
+        ? "px-4 max-mobile:pl-3 max-mobile:pr-0 py-4 gap-3"
         : "px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5";
 
     const selectorClasses =
@@ -289,7 +289,7 @@ export function SongSelector({
                             key={activePlaylist.id}
                             ref={scrollRef}
                             onScroll={handleScroll}
-                            className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto overscroll-y-contain scroll-radio flex-1 min-h-0"
+                            className="flex flex-col mt-2 max-mobile:mt-0 overflow-y-auto overscroll-y-contain scroll-radio flex-1 min-h-0 max-mobile:pr-3"
                             data-lenis-prevent
                             style={{
                                 maskImage,

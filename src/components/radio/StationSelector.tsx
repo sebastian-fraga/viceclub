@@ -50,7 +50,7 @@ export function StationSelector({
 
     return (
         <motion.div
-            className="flex flex-col pl-4 py-6 rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
+            className="flex flex-col px-4 py-6 rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
