@@ -27,7 +27,7 @@ export default function ProgressBar({
     onSeek,
 }: ProgressBarProps) {
     const TIMER_STYLES =
-        "text-[14px] max-mobile:text-xs font-bold tabular-nums text-[color-mix(in_srgb,white_,var(--radio-station-accent)_20%)]";
+        "text-[14px] max-mobile:text-xs font-bold tabular-nums tracking-wider text-[color-mix(in_srgb,white_,var(--radio-station-accent)_20%)]";
 
     const isBusy = isLoading || isSeeking;
     const progress =
