@@ -12,8 +12,8 @@
         "webkit": "node scripts/webkit.mjs"
     },
     "dependencies": {
-        "@astrojs/react": "^6.0.4",
-        "@astrojs/sitemap": "^3.7.3",
+        "@astrojs/react": "7.1.2",
+        "@astrojs/sitemap": "3.7.4",
         "@base-ui/react": "^1.7.0",
         "@fontsource-variable/geist": "^5.3.0",
         "@resvg/resvg-js": "^2.6.2",
@@ -24,7 +24,7 @@
         "@types/react": "^19.2.18",
         "@types/react-dom": "^19.2.4",
         "@vercel/analytics": "^2.0.1",
-        "astro": "^7.2.4",
+        "astro": "7.4.5",
         "canvas-confetti": "^1.9.4",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
