@@ -44,6 +44,7 @@ export function RadioPlayer({
                     <div className="grid h-full w-full grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-4 max-mobile:grid-cols-1">
                         <div className="h-full min-h-0 min-w-0">
                             <StationSelector
+                                game={game}
                                 stations={stations}
                                 activeStationId={
                                     radio.activeStation?.id ?? null
@@ -55,6 +56,7 @@ export function RadioPlayer({
                         {isMobile !== true && (
                             <div className="h-full min-h-0 min-w-0 max-mobile:hidden">
                                 <SongSelector
+                                    game={game}
                                     isPlaying={radio.isPlaying}
                                     station={radio.activeStation}
                                     activePlaylist={radio.activePlaylist}

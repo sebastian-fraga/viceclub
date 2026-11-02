@@ -62,6 +62,7 @@ export function useRadioSelection(stations: RadioStation[]) {
         ...player,
         stations,
         activeStation,
+        activeStationId,
         activePlaylist,
         selectStation,
         selectPlaylist,

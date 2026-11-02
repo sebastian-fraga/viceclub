@@ -1,6 +1,5 @@
 {
-    "reproductor": {
-        "image": "/assets/images/radios/V/mediaplayer.webp",
+    "media_player": {
         "displayName": "Reproductor",
         "displayNameKey": "radio.stations.v.musicPlayer",
         "playlists": [
@@ -540,7 +539,6 @@
         ]
     },
     "blaine_county_radio": {
-        "image": "/assets/images/radios/V/bcr.webp",
         "displayName": "Blaine County Radio",
         "color": "#283372",
         "playlists": [
@@ -609,7 +607,6 @@
         ]
     },
     "motomami_los_santos": {
-        "image": "/assets/images/radios/V/motomami.webp",
         "displayName": "MOTOMAMI Los Santos",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/motomami.ogg",
         "dj": ["Rosalía", "Arca"],
@@ -825,7 +822,6 @@
         ]
     },
     "music_locker_radio": {
-        "image": "/assets/images/radios/V/ml.webp",
         "displayName": "Music Locker Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ml.ogg",
         "color": "#3D5F7D",
@@ -1511,7 +1507,6 @@
         ]
     },
     "the_blue_ark": {
-        "image": "/assets/images/radios/V/tba.webp",
         "displayName": "The Blue Ark",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/tba.ogg",
         "dj": "Lee \"Scratch\" Perry",
@@ -1647,7 +1642,6 @@
         ]
     },
     "worldwide_fm": {
-        "image": "/assets/images/radios/V/ww.webp",
         "displayName": "WorldWide FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ww.ogg",
         "dj": "Gilles Peterson",
@@ -2131,7 +2125,6 @@
         ]
     },
     "flylo_fm": {
-        "image": "/assets/images/radios/V/flylo.webp",
         "displayName": "FlyLo FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/flylo.ogg",
         "dj": "Flying Lotus",
@@ -2470,8 +2463,7 @@
             }
         ]
     },
-    "lowdown": {
-        "image": "/assets/images/radios/V/lowdown.webp",
+    "the_lowdown": {
         "displayName": "The Lowdown 91.1",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/lowdown.ogg",
         "dj": "Pam Grier",
@@ -2601,7 +2593,6 @@
         ]
     },
     "the_lab": {
-        "image": "/assets/images/radios/V/lab.webp",
         "displayName": "The Lab",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/lab.ogg",
         "dj": ["The Alchemist", "Oh No"],
@@ -2688,7 +2679,6 @@
         ]
     },
     "radio_mirror_park": {
-        "image": "/assets/images/radios/V/mirror.webp",
         "displayName": "Radio Mirror Park",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/mirror.ogg",
         "dj": "George Lewis Jr.",
@@ -2939,7 +2929,6 @@
         ]
     },
     "kult": {
-        "image": "/assets/images/radios/V/kult.webp",
         "displayName": "K.U.L.T. 99.1 FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/kult.ogg",
         "dj": ["Julian Casablancas", "Mac DeMarco", "Zachary", "Tony Mac"],
@@ -3161,7 +3150,6 @@
         ]
     },
     "space": {
-        "image": "/assets/images/radios/V/space.webp",
         "displayName": "Space 103.2",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/space.ogg",
         "dj": "Bootsy Collins",
@@ -3303,7 +3291,6 @@
         ]
     },
     "vinewood_boulevard_radio": {
-        "image": "/assets/images/radios/V/vbr.webp",
         "displayName": "Vinewood Boulevard Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/vbr.ogg",
         "dj": ["Nathan Williams", "Stephen Pope"],
@@ -3433,7 +3420,6 @@
         ]
     },
     "blonded_los_santos": {
-        "image": "/assets/images/radios/V/blonded.webp",
         "displayName": "blonded Los Santos",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/blonded.ogg",
         "dj": ["Frank Ocean", "Vegyn", "Roof Access", "Federico Aliprandi"],
@@ -3618,7 +3604,6 @@
         ]
     },
     "los_santos_underground_radio": {
-        "image": "/assets/images/radios/V/lsur.webp",
         "displayName": "Los Santos Underground Radio",
         "playlists": [
             {
@@ -4050,7 +4035,6 @@
         ]
     },
     "ifruit_radio": {
-        "image": "/assets/images/radios/V/ifruit.webp",
         "displayName": "iFruit Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ifruit.ogg",
         "dj": ["Danny Brown", "Skepta"],
@@ -4228,7 +4212,6 @@
         ]
     },
     "still_slipping_los_santos": {
-        "image": "/assets/images/radios/V/ssls.webp",
         "displayName": "Still Slipping Los Santos",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/ssls.ogg",
         "dj": "Joy Orbison",
@@ -4424,7 +4407,6 @@
         ]
     },
     "los_santos_rock_radio": {
-        "image": "/assets/images/radios/V/lsrr.webp",
         "displayName": "Los Santos Rock Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/lsrr.ogg",
         "dj": "Kenny Loggins",
@@ -4662,7 +4644,6 @@
         ]
     },
     "non_stop_pop": {
-        "image": "/assets/images/radios/V/nsp.webp",
         "displayName": "Non-Stop Pop FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/nsp.ogg",
         "dj": "Cara Delevingne",
@@ -4924,7 +4905,6 @@
         ]
     },
     "radio_los_santos": {
-        "image": "/assets/images/radios/V/rls.webp",
         "displayName": "Radio Los Santos",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/rls.ogg",
         "dj": "Big Boy",
@@ -5318,7 +5298,6 @@
         ]
     },
     "channel_x": {
-        "image": "/assets/images/radios/V/channel.webp",
         "displayName": "Channel X",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/channel.ogg",
         "dj": "Keith Morris",
@@ -5436,7 +5415,6 @@
         ]
     },
     "wctr": {
-        "image": "/assets/images/radios/V/wctr.webp",
         "displayName": "West Coast Talk Radio",
         "color": "#7E5C3E",
         "playlists": [
@@ -5495,7 +5473,6 @@
         ]
     },
     "rebel_radio": {
-        "image": "/assets/images/radios/V/rebel.webp",
         "displayName": "Rebel Radio",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/rebel.ogg",
         "dj": "Jesco \"The Dancing Outlaw\" White",
@@ -5607,7 +5584,6 @@
         ]
     },
     "soulwax_fm": {
-        "image": "/assets/images/radios/V/soulwax.webp",
         "displayName": "Soulwax FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/soulwax.ogg",
         "dj": "Soulwax",
@@ -5724,7 +5700,6 @@
         ]
     },
     "east_los_fm": {
-        "image": "/assets/images/radios/V/elfm.webp",
         "displayName": "East Los FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/elfm.ogg",
         "dj": ["Don Cheto", "Camilo Lara"],
@@ -5824,7 +5799,6 @@
         ]
     },
     "west_coast_classics": {
-        "image": "/assets/images/radios/V/wcc.webp",
         "displayName": "West Coast Classics",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/V/wcc.ogg",
         "dj": "DJ Pooh",

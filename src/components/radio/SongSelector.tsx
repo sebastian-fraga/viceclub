@@ -19,8 +19,11 @@ import { EqualizerBars } from "./EqualizerBars";
 import { formatTime } from "./lib/formatTime";
 import { translateRadioText } from "./lib/translateRadioText";
 import type { Playlist, RadioStation } from "./types/types";
+import RadioImage from "@/components/radio/RadioImage";
+import type { GameId } from "@/config/games";
 
 interface SongSelectorProps {
+    game: GameId;
     isPlaying: boolean;
     station: RadioStation | null;
     activePlaylist: Playlist | null;
@@ -33,6 +36,7 @@ interface SongSelectorProps {
 }
 
 export function SongSelector({
+    game,
     isPlaying,
     station,
     activePlaylist,
@@ -154,16 +158,12 @@ export function SongSelector({
                         </button>
                     )}
 
-                    {!compact && (
-                        <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
-                            <div className="flex aspect-square w-full items-center justify-center rounded-2xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
-                                <img
-                                    src={station.image}
-                                    alt={stationName}
-                                    className="h-full w-full object-contain p-3 drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
-                                />
-                            </div>
+                    <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
+                        <div className="flex aspect-square w-full items-center justify-center bg-[color-mix(in_oklch,var(--radio-station-accent)_40%,black)] rounded-xl p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
+                            <RadioImage station={station} game={game} />
+                        </div>
 
+                        {!compact && (
                             <div className="min-w-0 w-full overflow-hidden flex flex-col gap-2.5 max-mobile:gap-4 max-mobile:items-center">
                                 <h3 className="text-3xl max-mobile:text-2xl text-white font-medium truncate max-w-[30ch]">
                                     {stationName}
@@ -194,6 +194,7 @@ export function SongSelector({
                                                 >
                                                     <IconMusic className="text-violet-400 shrink-0 cursor-help" />
                                                 </Tooltip>
+
                                                 <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
                                                     {t(
                                                         `radio.genres.${genre}`,
@@ -226,12 +227,11 @@ export function SongSelector({
                                             >
                                                 <Tooltip
                                                     position="bottom"
-                                                    label={t(
-                                                        "radio.common.dj",
-                                                    )}
+                                                    label={t("radio.common.dj")}
                                                 >
                                                     <IconHeadphones className="text-yellow-200 shrink-0 cursor-help" />
                                                 </Tooltip>
+
                                                 <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
                                                     {dj}
                                                 </span>
@@ -240,8 +240,8 @@ export function SongSelector({
                                     </div>
                                 )}
                             </div>
-                        </div>
-                    )}
+                        )}
+                    </div>
 
                     {station.playlists.length > 1 && (
                         <div

@@ -1,6 +1,5 @@
 {
     "playback_fm": {
-        "image": "/assets/images/radios/SA/playback.webp",
         "displayName": "Playback FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/playback.ogg",
         "dj": "Forth Right MC",
@@ -82,7 +81,6 @@
         ]
     },
     "k_rose": {
-        "image": "/assets/images/radios/SA/krose.webp",
         "displayName": "K-Rose",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/krose.ogg",
         "dj": "Mary-Beth Maybell",
@@ -182,7 +180,6 @@
         ]
     },
     "k_dst": {
-        "image": "/assets/images/radios/SA/kdst.webp",
         "displayName": "K-DST",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kdst.ogg",
         "dj": "Tommy \"The Nightmare\" Smith",
@@ -294,7 +291,6 @@
         ]
     },
     "bounce_fm": {
-        "image": "/assets/images/radios/SA/bounce.webp",
         "displayName": "Bounce FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/bounce.ogg",
         "dj": "The Funktipus",
@@ -406,7 +402,6 @@
         ]
     },
     "sfur": {
-        "image": "/assets/images/radios/SA/sfur.webp",
         "displayName": "SF-UR",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/sfur.ogg",
         "dj": "Hans Oberlander",
@@ -512,7 +507,6 @@
         ]
     },
     "radio_los_santos": {
-        "image": "/assets/images/radios/SA/rls.webp",
         "displayName": "Radio Los Santos",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/rls.ogg",
         "dj": "Julio G",
@@ -618,7 +612,6 @@
         ]
     },
     "radio_x": {
-        "image": "/assets/images/radios/SA/radiox.webp",
         "displayName": "Radio X",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/radiox.ogg",
         "dj": "Sage",
@@ -718,7 +711,6 @@
         ]
     },
     "csr": {
-        "image": "/assets/images/radios/SA/csr.webp",
         "displayName": "CSR 103:9",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/csr.ogg",
         "dj": "Phillip \"PM\" Michaels",
@@ -805,8 +797,7 @@
             }
         ]
     },
-    "kjah_west": {
-        "image": "/assets/images/radios/SA/kjah.webp",
+    "k_jah_west": {
         "displayName": "K-Jah Radio West",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kjah.ogg",
         "dj": ["Marshall Peters", "Johnny Lawton"],
@@ -912,7 +903,6 @@
         ]
     },
     "master_sounds": {
-        "image": "/assets/images/radios/SA/master.webp",
         "displayName": "Master Sounds 98.3",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/master.ogg",
         "dj": "Johnny \"The Love Giant\" Parkinson",
@@ -1030,7 +1020,6 @@
         ]
     },
     "wctr": {
-        "image": "/assets/images/radios/SA/wctr.webp",
         "displayName": "West Coast Talk Radio",
         "color": "#743E7E",
         "playlists": [

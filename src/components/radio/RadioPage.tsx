@@ -14,11 +14,17 @@ import type { RadioStation } from "./types/types";
 
 interface RadioPageProps {
     stations: RadioStation[];
+    stationId: string | null;
     station: RadioStation | null;
     game: GameId;
 }
 
-export default function RadioPage({ stations, game, station }: RadioPageProps) {
+export default function RadioPage({
+    stations,
+    stationId,
+    game,
+    station,
+}: RadioPageProps) {
     const radio = useRadioSelection(stations);
     const isMobile = useIsMobile();
     const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
@@ -142,6 +148,8 @@ export default function RadioPage({ stations, game, station }: RadioPageProps) {
                             className="fixed bottom-10 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 w-[calc(100%-2rem)] max-w-[calc(80vw-var(--sidebar-width))] z-1000 max-mobile:bottom-4 max-mobile:left-1/2 max-mobile:w-[calc(100%-1.5rem)] max-mobile:max-w-none max-mobile:-translate-x-1/2"
                         >
                             <PlayerFooter
+                                game={game}
+                                stationId={stationId}
                                 variant={isMobile ? "mini" : "default"}
                                 onOpen={() => setIsFullscreenOpen(true)}
                                 onClose={radio.clearStation}

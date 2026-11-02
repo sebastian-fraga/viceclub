@@ -1,7 +1,8 @@
 import type { RadioSelection } from "@/components/radio/hooks/useRadioSelection";
-import useT from "@/hooks/useT";
+import type { GameId } from "@/config/games";
 import { useEscapeKey } from "@/hooks/useEscapeKey";
 import { useScrollLock } from "@/hooks/useScrollLock";
+import useT from "@/hooks/useT";
 import { IconChevronDown } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import { PlayerFooter } from "./PlayerFooter";
@@ -10,6 +11,7 @@ import { StationCarousel } from "./StationCarousel";
 import type { Song } from "./types/types";
 
 interface RadioFullscreenProps {
+    game: GameId;
     radio: RadioSelection;
     currentIndex: number;
     currentSong: Song | null;
@@ -19,6 +21,7 @@ interface RadioFullscreenProps {
 }
 
 export function RadioFullscreen({
+    game,
     radio,
     currentIndex,
     currentSong,
@@ -75,6 +78,7 @@ export function RadioFullscreen({
 
             <div className="shrink-0">
                 <StationCarousel
+                    game={game}
                     stations={radio.stations}
                     activeStationId={station.id}
                     onSelect={radio.selectStation}
@@ -83,6 +87,7 @@ export function RadioFullscreen({
 
             <div className="min-h-0 flex-1 px-3 pb-3">
                 <SongSelector
+                    game={game}
                     compact
                     preventAutoScrollOnMobile={false}
                     isPlaying={radio.isPlaying}
@@ -95,6 +100,8 @@ export function RadioFullscreen({
             </div>
 
             <PlayerFooter
+                game={game}
+                stationId={station.id}
                 variant="controls"
                 song={currentSong}
                 djs={radio.activePlaylist?.djs ?? []}

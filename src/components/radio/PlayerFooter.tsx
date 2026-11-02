@@ -3,12 +3,15 @@ import PlaybackInfo from "@/components/radio/PlaybackInfo";
 import ProgressBar from "@/components/radio/ProgressBar";
 import VolumeControl from "@/components/radio/VolumeControl";
 import type { RadioStation, Song } from "@/components/radio/types/types";
+import type { GameId } from "@/config/games";
 import { IconChevronUp, IconX } from "@tabler/icons-react";
 import "./radio.css";
 
 export type PlayerFooterVariant = "default" | "mini" | "controls";
 
 interface PlayerBarProps {
+    game: GameId;
+    stationId: string | null;
     variant?: PlayerFooterVariant;
     onOpen?: () => void;
     onClose?: () => void;
@@ -30,6 +33,8 @@ interface PlayerBarProps {
 }
 
 export function PlayerFooter({
+    game,
+    stationId,
     variant = "default",
     onOpen,
     onClose,
@@ -57,7 +62,13 @@ export function PlayerFooter({
                 className="radio-track-cycle flex w-full cursor-pointer items-center gap-3 rounded-[20px] bg-(--radio-station-accent) px-4 py-3 text-left shadow-2xl shadow-black/55"
             >
                 <div className="min-w-0 flex-1">
-                    <PlaybackInfo station={station} song={song} djs={djs} />
+                    <PlaybackInfo
+                        station={station}
+                        song={song}
+                        djs={djs}
+                        game={game}
+                        stationId={stationId}
+                    />
                 </div>
                 <IconChevronUp size={22} className="shrink-0 text-white/70" />
             </button>
@@ -90,7 +101,13 @@ export function PlayerFooter({
 
     return (
         <div className="radio-track-cycle grid w-full min-h-20 grid-cols-[minmax(0,1fr)_minmax(0,min(32rem,40%))_minmax(0,1fr)] items-center gap-8 rounded-[32px] bg-(--radio-station-accent) px-4 py-2.5 shadow-2xl shadow-black/55 max-mobile:flex max-mobile:max-w-125 max-mobile:flex-col max-mobile:gap-5 max-mobile:px-5 max-mobile:py-5">
-            <PlaybackInfo station={station} song={song} djs={djs} />
+            <PlaybackInfo
+                station={station}
+                song={song}
+                djs={djs}
+                game={game}
+                stationId={stationId}
+            />
 
             <div className="flex w-full min-w-0 flex-col items-center gap-3">
                 <PlaybackControls
@@ -119,7 +136,10 @@ export function PlayerFooter({
                 />
 
                 <div>
-                    <IconX className="text-white cursor-pointer drop-shadow-md drop-shadow-transparent hover:drop-shadow-white/40 transition duration-350" onClick={onClose}/>
+                    <IconX
+                        className="text-white cursor-pointer drop-shadow-md drop-shadow-transparent hover:drop-shadow-white/40 transition duration-350"
+                        onClick={onClose}
+                    />
                 </div>
             </div>
         </div>

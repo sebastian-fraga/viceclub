@@ -1,3 +1,5 @@
+import RadioImage from "@/components/radio/RadioImage";
+import type { GameId } from "@/config/games";
 import {
     animate,
     motion,
@@ -15,12 +17,14 @@ const MAX_ITEM_WIDTH = 280;
 const SPRING = { type: "spring", stiffness: 320, damping: 34 } as const;
 
 interface StationCarouselProps {
+    game: GameId;
     stations: RadioStation[];
     activeStationId: string | null;
     onSelect: (stationId: string) => void;
 }
 
 export function StationCarousel({
+    game,
     stations,
     activeStationId,
     onSelect,
@@ -112,6 +116,7 @@ export function StationCarousel({
                 >
                     {stations.map((station, index) => (
                         <CarouselItem
+                            game={game}
                             key={station.id}
                             station={station}
                             index={index}
@@ -126,13 +131,20 @@ export function StationCarousel({
 }
 
 interface CarouselItemProps {
+    game: GameId;
     station: RadioStation;
     index: number;
     itemWidth: number;
     x: MotionValue<number>;
 }
 
-function CarouselItem({ station, index, itemWidth, x }: CarouselItemProps) {
+function CarouselItem({
+    game,
+    station,
+    index,
+    itemWidth,
+    x,
+}: CarouselItemProps) {
     const center = -index * itemWidth;
     const range = [center - itemWidth, center, center + itemWidth];
 
@@ -145,12 +157,7 @@ function CarouselItem({ station, index, itemWidth, x }: CarouselItemProps) {
             style={{ width: itemWidth, scale, opacity }}
         >
             <div className="flex aspect-square w-full items-center justify-center rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-6 shadow-2xl shadow-black/40">
-                <img
-                    src={station.image}
-                    alt={station.displayName}
-                    draggable={false}
-                    className="pointer-events-none h-full w-full select-none object-contain drop-shadow-xl drop-shadow-[color-mix(in_oklch,var(--radio-station-accent)_25%,rgb(255_255_255/5%))]"
-                />
+                <RadioImage station={station} game={game} />
             </div>
         </motion.div>
     );

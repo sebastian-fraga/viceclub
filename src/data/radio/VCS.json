@@ -1,6 +1,5 @@
 {
     "flash_fm": {
-        "image": "/assets/images/radios/VCS/flash.webp",
         "displayName": "Flash FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/flash.ogg",
         "dj": ["Teri", "Toni"],
@@ -118,7 +117,6 @@
         ]
     },
     "v_rock": {
-        "image": "/assets/images/radios/VCS/vrock.webp",
         "displayName": "V-Rock",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vrock.ogg",
         "dj": ["Couzin Ed", "Lazlow"],
@@ -206,7 +204,6 @@
         ]
     },
     "paradise_fm": {
-        "image": "/assets/images/radios/VCS/paradise.webp",
         "displayName": "Paradise FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/paradise.ogg",
         "dj": "",
@@ -294,7 +291,6 @@
         ]
     },
     "vcpr": {
-        "image": "/assets/images/radios/VCS/vcpr.webp",
         "displayName": "Vice City Public Radio",
         "color": "#3E527E",
         "playlists": [
@@ -371,7 +367,6 @@
         ]
     },
     "vcfl": {
-        "image": "/assets/images/radios/VCS/vcfl.webp",
         "displayName": "VCFL",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcfl.ogg",
         "dj": "Tina Jane",
@@ -447,7 +442,6 @@
         ]
     },
     "wave_103": {
-        "image": "/assets/images/radios/VCS/wave.webp",
         "displayName": "Wave 103",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/wave.ogg",
         "dj": ["Adam First", "Trish Camden"],
@@ -547,7 +541,6 @@
         ]
     },
     "fresh_fm": {
-        "image": "/assets/images/radios/VCS/fresh.webp",
         "displayName": "Fresh 105 FM",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/fresh.ogg",
         "dj": "DJ Luke",
@@ -617,7 +610,6 @@
         ]
     },
     "radio_espantoso": {
-        "image": "/assets/images/radios/VCS/espantoso.webp",
         "displayName": "Radio Espantoso",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/espantoso.ogg",
         "dj": "Hector Hernandez",
@@ -675,7 +667,6 @@
         ]
     },
     "emotion": {
-        "image": "/assets/images/radios/VCS/emotion.webp",
         "displayName": "Emotion 98.3",
         "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/emotion.ogg",
         "dj": "Lionel Makepeace",
