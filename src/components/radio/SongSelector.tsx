@@ -3,7 +3,6 @@ import useT from "@/hooks/useT";
 import {
     IconChevronLeft,
     IconHeadphones,
-    IconMoodPuzzled,
     IconMusic,
     IconMusicOff,
 } from "@tabler/icons-react";
@@ -15,6 +14,7 @@ import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
 import RadioImage from "@/components/radio/RadioImage";
 import SongLabel from "@/components/radio/SongLabel";
+import NotFoundContent from "@/components/ui/NotFoundContent";
 import { Tooltip } from "@/components/ui/Tooltip";
 import type { GameId } from "@/config/games";
 import clsx from "clsx";
@@ -301,7 +301,7 @@ export function SongSelector({
                                     WebkitMaskImage: maskImage,
                                 }}
                             >
-                                {activePlaylist.songs.map((song, index) => {
+                                {songs.map((song, index) => {
                                     const isActive = index === currentIndex;
                                     return (
                                         <motion.li
@@ -459,15 +459,10 @@ export function SongSelector({
                                 })}
                             </ul>
                         ) : (
-                            <div className="flex-1 min-h-0 flex flex-col items-center justify-center gap-3 px-6 max-mobile:px-4 text-center text-lg max-mobile:text-xs border border-white/30 border-dashed rounded-2xl my-4 mx-4 bg-[color-mix(in_oklch,var(--radio-station-accent)_35%,transparent)]">
-                                <IconMoodPuzzled
-                                    className="text-white/80"
-                                    size={32}
-                                />
-                                <span className="text-white">
-                                    {t("common.other.notAvailable")}
-                                </span>
-                            </div>
+                            <NotFoundContent
+                                variant="fill"
+                                className="my-4 mx-4 bg-linear-120 from-[color-mix(in_oklch,var(--radio-station-accent)_40%,transparent)] via-[color-mix(in_oklch,var(--radio-station-accent)_25%,transparent)] to-[color-mix(in_oklch,var(--radio-station-accent)_10%,transparent)]"
+                            />
                         )}
                     </div>
                 </motion.div>
