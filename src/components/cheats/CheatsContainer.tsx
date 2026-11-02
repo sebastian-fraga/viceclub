@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import {
     platformFamilies,
+    getPlatformFamily,
     type Platform,
     type PlatformFamily,
 } from "@/config/platforms";
@@ -30,6 +31,9 @@ import {
 
 import { CheatCard } from "./CheatCard";
 import { buildSelectorOptions } from "./utils/buildSelectorOptions";
+import CopyLink from "@/components/ui/CopyLink";
+import { slugify } from "@/components/artworks/mediaUtils";
+import { useUrlParam } from "@/hooks/useUrlParam";
 
 interface CheatsContainerProps {
     cheatsData: CheatsFile;
@@ -71,30 +75,38 @@ export const CheatsContainer = ({
         initialFamily as PlatformFamily,
     );
 
-    const [selectedPlatform, setSelectedPlatform] = useState<Platform>(
-        initialPlatform as Platform,
+    const [selectedPlatform, setSelectedPlatform, hasUrlPlatform] = useUrlParam(
+        "platform",
+        availablePlatforms,
+        initialPlatform,
     );
 
     useEffect(() => {
+        const family = getPlatformFamily(selectedPlatform);
+
+        if (family !== "default") {
+            setSelectedFamily(family);
+        }
+    }, [selectedPlatform]);
+
+    useEffect(() => {
+        if (hasUrlPlatform) return;
+
         const savedFamily = settings["platform-family"] as
             | PlatformFamily
             | "default";
 
         const savedPlatform = settings.platform as Platform | "default";
 
-        const availableFamilies = getAvailableFamilies(availablePlatforms);
-
         const family = getInitialFamily(savedFamily, availableFamilies);
 
-        const platform = getInitialPlatform(
-            savedPlatform,
-            family,
-            availablePlatforms,
-        );
+        const platform =
+            getInitialPlatform(savedPlatform, family, availablePlatforms) ??
+            availablePlatforms[0];
 
         setSelectedFamily(family);
         setSelectedPlatform(platform);
-    }, [settings, availablePlatforms]);
+    }, [hasUrlPlatform, settings, availablePlatforms, setSelectedPlatform]);
 
     const selectorOptions = buildSelectorOptions(availablePlatforms, gameData);
 
@@ -148,9 +160,15 @@ export const CheatsContainer = ({
                     ? categoryData
                     : categoryData.cheats;
 
+                    const id = slugify(categoryName);
+
                 return (
-                    <section key={categoryName} className="flex flex-col gap-4">
-                        <h2 className="flex items-center gap-3 text-2xl font-bold pb-1 text-(--title-color)">
+                    <section
+                        key={categoryName}
+                        id={id}
+                        className="flex flex-col gap-4 scroll-mt-50"
+                    >
+                        <h3 className="flex items-center gap-3 text-2xl font-bold pb-1 text-(--title-color) group">
                             {Array.isArray(categoryData)
                                 ? categoryName
                                 : t(categoryData.category)}
@@ -158,11 +176,17 @@ export const CheatsContainer = ({
                             <span className="font-body-condensed text-sm bg-(--button-bg) px-2 py-0.5 rounded-[4px]">
                                 {cheats.length}
                             </span>
-                        </h2>
+
+                            <CopyLink
+                                id={slugify(categoryName)}
+                                label={categoryName}
+                                searchParams={{ platform: selectedPlatform }}
+                            />
+                        </h3>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 items-stretch max-mobile:gap-y-3">
                             {cheats.map((cheat) => {
-                                const index = globalIndex++
+                                const index = globalIndex++;
                                 return (
                                     <CheatCard
                                         key={cheat.id}
