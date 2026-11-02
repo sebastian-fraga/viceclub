@@ -9,8 +9,9 @@ import type { GameId } from "@/config/games";
  * - Station with playlists:         `{bucket}/{gameId}/{stationId}_{playlistId}.ogg`
  *
  * `stationId` is the key of the station inside its JSON file (e.g. `head_radio`,
- * `public_liberty_radio`). `playlistId` is the explicit numeric `id` declared in
- * the raw JSON (`1`, `2`, `3`…), not the slug derived from the playlist name.
+ * `public_liberty_radio`). `playlistId` is the 1-based position of the playlist
+ * inside `station.playlists` (`index + 1`), so the file name is stable as long
+ * as the playlist order does not change. The raw JSON declares no id for it.
  *
  * @throws If `PUBLIC_R2_BUCKET` is not configured, so the build fails loudly
  * instead of emitting `undefined/...` URLs.
