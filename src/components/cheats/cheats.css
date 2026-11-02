@@ -1,7 +1,14 @@
 @reference "tailwindcss";
 
-.cheat-note-entry b {
-    @apply text-red-200
+.cheat-note-entry {
+    & b {
+        @apply text-red-200
+    }
+
+    & code {
+        @apply bg-(--game-buttons-primary-background) text-(--game-buttons-primary-text) px-2.75 mx-1 py-0.5 rounded-full font-medium tracking-wide;
+        font-family: var(--font-body);
+    }
 }
 
 .cheat-link {

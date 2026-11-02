@@ -71,7 +71,7 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData, index }: Pr
                         return isText ? (
                             <kbd
                                 key={`${button}-${index}`}
-                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15"
+                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15 pc-cheat-note"
                             >
                                 {value}
                             </kbd>

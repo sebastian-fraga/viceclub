@@ -143,10 +143,10 @@
                     {
                         "platforms": ["pc"],
                         "note": {
-                            "es": "TURTOISE en la versión 1.0",
-                            "en": "TURTOISE in version 1.0",
-                            "fr": "TURTOISE dans la version 1.0",
-                            "pt": "TURTOISE na versão 1.0"
+                            "es": "<code>TURTOISE</code> en la versión 1.0",
+                            "en": "<code>TURTOISE</code> in version 1.0",
+                            "fr": "<code>TURTOISE</code> dans la version 1.0",
+                            "pt": "<code>TURTOISE</code> na versão 1.0"
                         },
                         "noteType": "info"
                     }
@@ -275,6 +275,18 @@
                     "fr": "Obtenir toutes les armes",
                     "pt": "Obter todas as armas"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Al seguir escribiendo <code>GUNS</code> recibirás más munición",
+                            "en": "Keep entering <code>GUNS</code> to receive more ammo",
+                            "fr": "Continuez à saisir <code>GUNS</code> pour obtenir plus de munitions",
+                            "pt": "Continue digitando <code>GUNS</code> para receber mais munição"
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "R2",
