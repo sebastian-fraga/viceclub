@@ -1,7 +1,6 @@
 {
     "flash_fm": {
         "displayName": "Flash FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/flash.ogg",
         "dj": ["Teri", "Toni"],
         "genre": ["pop", "new_wave"],
         "color": "#7E6A3E",
@@ -118,7 +117,6 @@
     },
     "v_rock": {
         "displayName": "V-Rock",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vrock.ogg",
         "dj": ["Couzin Ed", "Lazlow"],
         "genre": "rock",
         "color": "#7E3E3F",
@@ -205,7 +203,6 @@
     },
     "paradise_fm": {
         "displayName": "Paradise FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/paradise.ogg",
         "dj": "",
         "genre": "disco",
         "color": "#7E4C3E",
@@ -298,7 +295,6 @@
                 "name": "Pressing Issues",
                 "dj": "Maurice Chavez",
                 "genre": "public_affairs_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_1.ogg",
                 "songs": [
                     {
                         "artist": "Maurice Chavez",
@@ -312,7 +308,6 @@
                 "name": "Bait and Switch",
                 "dj": ["Larry Joe", "Bobbie Ray"],
                 "genre": "fishing_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_2.ogg",
                 "songs": [
                     {
                         "artist": "Larry Joe & Bobbie Ray",
@@ -326,7 +321,6 @@
                 "name": "New World Order",
                 "dj": "Dwayne Thorn",
                 "genre": "international_affairs_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_3.ogg",
                 "songs": [
                     {
                         "artist": "Dwayne Thorn",
@@ -340,7 +334,6 @@
                 "name": "The Time Ranger",
                 "dj": "Ernest Keigel",
                 "genre": "time_traveler_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_4.ogg",
                 "songs": [
                     {
                         "artist": "Ernest Keigel",
@@ -354,7 +347,6 @@
                 "name": "Moorehead Rides Again!",
                 "dj": "Jonathan Freeloader",
                 "genre": "police_drama_radio_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcpr_5.ogg",
                 "songs": [
                     {
                         "artist": "Jonathan Freeloader",
@@ -368,7 +360,6 @@
     },
     "vcfl": {
         "displayName": "VCFL",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/vcfl.ogg",
         "dj": "Tina Jane",
         "genre": "soul",
         "color": "#3E707E",
@@ -443,7 +434,6 @@
     },
     "wave_103": {
         "displayName": "Wave 103",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/wave.ogg",
         "dj": ["Adam First", "Trish Camden"],
         "genre": "new_wave",
         "color": "#3E7E74",
@@ -542,7 +532,6 @@
     },
     "fresh_fm": {
         "displayName": "Fresh 105 FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/fresh.ogg",
         "dj": "DJ Luke",
         "genre": ["hip_hop", "breakbeat"],
         "color": "#3E7E74",
@@ -611,7 +600,6 @@
     },
     "radio_espantoso": {
         "displayName": "Radio Espantoso",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/espantoso.ogg",
         "dj": "Hector Hernandez",
         "genre": ["salsa", "latin_jazz"],
         "color": "#3E707E",
@@ -668,7 +656,6 @@
     },
     "emotion": {
         "displayName": "Emotion 98.3",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VCS/emotion.ogg",
         "dj": "Lionel Makepeace",
         "genre": "soft_rock",
         "color": "#7E3E44",

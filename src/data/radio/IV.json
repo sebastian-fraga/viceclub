@@ -7,7 +7,6 @@
                 "name": "GTA IV",
                 "dj": "Ruslana",
                 "genre": ["russian_music", "ukrainian_music"],
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vlad_1.ogg",
                 "songs": [
                     {
                         "artist": "Zveri",
@@ -159,7 +158,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": "DJ Paul",
                 "genre": "dance",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vlad_2.ogg",
                 "songs": [
                     {
                         "artist": "David Morales",
@@ -263,7 +261,6 @@
                 "name": "The Séance",
                 "dj": "Beatrix Fontaine",
                 "genre": "spiritualism_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_1.ogg",
                 "songs": [
                     {
                         "artist": "Beatrix Fontaine",
@@ -287,7 +284,6 @@
                 "name": "Pacemaker",
                 "dj": "Ryan McFallon",
                 "genre": "medical_aid_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_2.ogg",
                 "songs": [
                     {
                         "artist": "Ryan McFallon",
@@ -301,7 +297,6 @@
                 "name": "Intelligent Agenda",
                 "dj": "Mike Riley",
                 "genre": "liberal_debate_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/plr_3.ogg",
                 "songs": [
                     {
                         "artist": "Mike Riley",
@@ -321,7 +316,6 @@
                 "name": "GTA IV",
                 "dj": "Daddy Yankee",
                 "genre": "reggaeton",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/sanjuan_1.ogg",
                 "songs": [
                     {
                         "artist": "Don Omar",
@@ -377,7 +371,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": "Henry Santos",
                 "genre": "reggaeton",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/sanjuan_2.ogg",
                 "songs": [
                     {
                         "artist": "Aventura",
@@ -439,7 +432,6 @@
                 "name": "GTA IV",
                 "dj": "François K",
                 "genre": ["electro", "house"],
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/electro_1.ogg",
                 "songs": [
                     {
                         "artist": "Padded Cell",
@@ -531,7 +523,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": "Crookers",
                 "genre": ["electro", "house", "dance"],
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/electro_2.ogg",
                 "songs": [
                     {
                         "artist": "Major Lazer",
@@ -617,7 +608,6 @@
     },
     "the_classics": {
         "displayName": "The Classics 104.1",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/classics.ogg",
         "dj": "DJ Premier",
         "genre": "classic_hip_hop",
         "color": "#7E3E44",
@@ -692,7 +682,6 @@
     },
     "if99": {
         "displayName": "International Funk 99",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/if99.ogg",
         "dj": "Femi Kuti",
         "genre": ["funk", "afrobeat"],
         "color": "#7E5B3E",
@@ -773,7 +762,6 @@
     },
     "tuff_gong_radio": {
         "displayName": "Tuff Gong Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/tuff.ogg",
         "dj": "Carl Bradshaw",
         "genre": "reggae",
         "color": "#3E7E62",
@@ -836,7 +824,6 @@
     },
     "integrity": {
         "displayName": "Integrity 2.0",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/integrity.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",
         "color": "#7E6D3E",
@@ -851,7 +838,6 @@
     },
     "the_vibe": {
         "displayName": "The Vibe 98.8",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vibe.ogg",
         "dj": "Vaughn Harper",
         "genre": ["rhythm_and_blues", "soul"],
         "color": "#7E6C3E",
@@ -980,7 +966,6 @@
                 "name": "GTA IV",
                 "dj": "Iggy Pop",
                 "genre": "classic_rock",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/rock_1.ogg",
                 "songs": [
                     {
                         "artist": "The Smashing Pumpkins",
@@ -1120,7 +1105,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": "Iggy Pop",
                 "genre": "classic_rock",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/rock_2.ogg",
                 "songs": [
                     {
                         "artist": "Bon Jovi",
@@ -1236,7 +1220,6 @@
     },
     "jazz_nation_radio": {
         "displayName": "Jazz Nation Radio 108.5",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/jnr.ogg",
         "dj": "Roy Haynes",
         "genre": "jazz",
         "color": "#7E5C3E",
@@ -1305,7 +1288,6 @@
     },
     "massive_b_soundsystem": {
         "displayName": "Massive B Soundsystem 96.9",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/mbs.ogg",
         "dj": "Bobby Konders",
         "genre": "dancehall",
         "color": "#7E6D3E",
@@ -1398,7 +1380,6 @@
     },
     "k109": {
         "displayName": "K109 The Studio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/k109.ogg",
         "dj": "Karl Lagerfeld",
         "genre": ["disco", "funk"],
         "color": "#7E6D3E",
@@ -1563,7 +1544,6 @@
     },
     "self_actualization_fm": {
         "displayName": "Self Actualization FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/self.ogg",
         "dj": "Audrey",
         "genre": "ambient",
         "songs": [
@@ -1625,7 +1605,6 @@
                 "name": "Just or Unjust",
                 "dj": "Juez Grady",
                 "genre": "court_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_1.ogg",
                 "songs": [
                     {
                         "artist": "Juez Grady",
@@ -1649,7 +1628,6 @@
                 "name": "The Richard Bastion Show",
                 "dj": "Richard Bastion",
                 "genre": "conservative_debate_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_2.ogg",
                 "songs": [
                     {
                         "artist": "Richard Bastion",
@@ -1673,7 +1651,6 @@
                 "name": "Fizz!",
                 "dj": ["Jane Labrador", "Marcel LeMuir", "Jeffron James"],
                 "genre": "entertainment_news_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_3.ogg",
                 "songs": [
                     {
                         "artist": "Jane Labrador, Marcel LeMuir & Jeffron James",
@@ -1697,7 +1674,6 @@
                 "name": "The Martin Serious Show",
                 "dj": "Martin Serious",
                 "genre": "shock_jock_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_4.ogg",
                 "songs": [
                     {
                         "artist": "Martin Serious",
@@ -1711,7 +1687,6 @@
                 "name": "Conspire",
                 "dj": "John Smith",
                 "genre": "conspiracy_theory_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/wktt_5.ogg",
                 "songs": [
                     {
                         "artist": "John Smith",
@@ -1735,7 +1710,6 @@
     },
     "vice_city_fm": {
         "displayName": "Vice City FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/vice.ogg",
         "dj": "Fernando Martinez",
         "genre": ["new_wave", "80s"],
         "color": "#7E523E",
@@ -1918,7 +1892,6 @@
                 "name": "GTA IV",
                 "dj": "Jimmy Gestapo",
                 "genre": ["hardcore_punk", "death_metal"],
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/lchc_1.ogg",
                 "songs": [
                     {
                         "artist": "Bad Brains",
@@ -1987,7 +1960,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": "Max Cavalera",
                 "genre": ["Hardcore Punk", "Death Metal"],
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/lchc_2.ogg",
                 "songs": [
                     {
                         "artist": "Soulfly",
@@ -2061,7 +2033,6 @@
     },
     "the_journey": {
         "displayName": "The Journey",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/journey.ogg",
         "dj": "Fruit",
         "genre": "ambient",
         "color": "#7E6C3E",
@@ -2124,7 +2095,6 @@
     },
     "fusion_fm": {
         "displayName": "Fusion FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/fusion.ogg",
         "dj": "Roy Ayers",
         "genre": ["jazz_fusion", "acid_jazz"],
         "color": "#3E6C7E",
@@ -2199,7 +2169,6 @@
                 "name": "GTA IV",
                 "dj": ["DJ Mister Cee", "DJ Green Lantern"],
                 "genre": "east_coast_hip_hop",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/beat_1.ogg",
                 "songs": [
                     {
                         "artist": "Swizz Beatz",
@@ -2309,7 +2278,6 @@
                 "name": "Episodes From Liberty City",
                 "dj": ["Funkmaster Flex", "Statik Selektah"],
                 "genre": "east_coast_hip_hop",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/beat_2.ogg",
                 "songs": [
                     {
                         "artist": "Busta Rhymes",
@@ -2407,7 +2375,6 @@
     },
     "ramjam_fm": {
         "displayName": "RamJam FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/ram.ogg",
         "dj": "David Rodigan",
         "genre": "reggae",
         "color": "#3E7E53",
@@ -2488,7 +2455,6 @@
     },
     "radio_broker": {
         "displayName": "Radio Broker",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/IV/broker.ogg",
         "dj": "Juliette Lewis",
         "genre": ["alternative_rock", "indie_rock"],
         "color": "#7E5C3E",

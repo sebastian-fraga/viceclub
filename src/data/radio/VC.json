@@ -1,7 +1,6 @@
 {
     "wildstyle_pirate_radio": {
         "displayName": "Wildstyle Pirate Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wildstyle.ogg",
         "dj": "Mr. Magic",
         "genre": ["rap", "funk"],
         "color": "#7E7B3E",
@@ -100,7 +99,6 @@
     },
     "flash_fm": {
         "displayName": "Flash FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/flash.ogg",
         "dj": "Toni",
         "genre": ["pop", "new_wave"],
         "color": "#7E3E5A",
@@ -205,7 +203,6 @@
     },
     "k_chat": {
         "displayName": "K-Chat",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/kchat.ogg",
         "dj": "Amy Sheckenhausen",
         "genre": "talk_radio",
         "color": "#3E777E",
@@ -220,7 +217,6 @@
     },
     "fever_105": {
         "displayName": "Fever 105",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/fever.ogg",
         "dj": "Oliver Biscuit",
         "genre": ["disco", "funk"],
         "color": "#7E3E43",
@@ -307,7 +303,6 @@
     },
     "v_rock": {
         "displayName": "V-Rock",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vrock.ogg",
         "dj": "Lazlow Jones",
         "genre": "rock",
         "color": "#7E3E3F",
@@ -418,7 +413,6 @@
     },
     "vcpr": {
         "displayName": "Vice City Public Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/vcpr.ogg",
         "dj": "Maurice Chavez",
         "genre": "talk_radio",
         "color": "#3E6E7E",
@@ -433,7 +427,6 @@
     },
     "radio_espantoso": {
         "displayName": "Radio Espantoso",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/espantoso.ogg",
         "dj": "Pepe",
         "genre": ["salsa", "jazz", "latin_music"],
         "color": "#7E3E46",
@@ -526,7 +519,6 @@
     },
     "emotion": {
         "displayName": "Emotion 98.3",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/emotion.ogg",
         "dj": "Fernando Martínez",
         "genre": ["soft_rock", "romantic_pop"],
         "color": "#7E3E45",
@@ -607,7 +599,6 @@
     },
     "wave_103": {
         "displayName": "Wave 103",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/VC/wave.ogg",
         "dj": "Adam First",
         "genre": "new_wave",
         "color": "#3E7E75",

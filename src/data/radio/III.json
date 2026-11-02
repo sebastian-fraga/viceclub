@@ -1,7 +1,6 @@
 {
     "head_radio": {
         "displayName": "Head Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/head.ogg",
         "dj": "Michael Hunt",
         "genre": ["alternative_rock", "pop"],
         "color": "#3E7E79",
@@ -52,7 +51,6 @@
     },
     "double_clef_fm": {
         "displayName": "Double Clef FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/clef.ogg",
         "dj": "Morgan Merryweather",
         "genre": ["classical", "opera"],
         "color": "#3E6A7E",
@@ -97,7 +95,6 @@
     },
     "k_jah_radio": {
         "displayName": "K-Jah Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/kjah.ogg",
         "dj": "Horace \"The Pacifist\" Walsh",
         "genre": "reggae",
         "color": "#7E783E",
@@ -136,7 +133,6 @@
     },
     "rise_fm": {
         "displayName": "Rise FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/rise.ogg",
         "dj": "DJ Andre",
         "genre": ["trance", "house"],
         "songs": [
@@ -180,7 +176,6 @@
     },
     "lips_106": {
         "displayName": "Lips 106",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/lips.ogg",
         "dj": "Andee",
         "genre": ["pop", "jazz", "rap"],
         "color": "#3E527E",
@@ -225,7 +220,6 @@
     },
     "game_radio_fm": {
         "displayName": "Game Radio FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/game.ogg",
         "dj": ["Stretch Armstrong", "Lord Sear"],
         "genre": "hip_hop",
         "color": "#3E7E74",
@@ -294,7 +288,6 @@
     },
     "msx_fm": {
         "displayName": "MSX FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/msx.ogg",
         "dj": "MC Codebreaker",
         "genre": ["drum_and_bass", "jungle"],
         "songs": [
@@ -368,7 +361,6 @@
     },
     "flashback_fm": {
         "displayName": "Flashback 95.6",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/flashback.ogg",
         "dj": "Toni",
         "genre": ["new_wave", "synth_pop", "scarface_soundtrack"],
         "color": "#7E6E3E",
@@ -407,7 +399,6 @@
     },
     "chatterbox_fm": {
         "displayName": "Chatterbox FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/III/chatterbox.ogg",
         "dj": "Lazlow",
         "genre": "talk_radio",
         "color": "#3E7E7E",

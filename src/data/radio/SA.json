@@ -1,7 +1,6 @@
 {
     "playback_fm": {
         "displayName": "Playback FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/playback.ogg",
         "dj": "Forth Right MC",
         "genre": "east_coast_hip_hop",
         "color": "#3E7E4D",
@@ -82,7 +81,6 @@
     },
     "k_rose": {
         "displayName": "K-Rose",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/krose.ogg",
         "dj": "Mary-Beth Maybell",
         "genre": "country_music",
         "color": "#7E793E",
@@ -181,7 +179,6 @@
     },
     "k_dst": {
         "displayName": "K-DST",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kdst.ogg",
         "dj": "Tommy \"The Nightmare\" Smith",
         "genre": "classic_rock",
         "color": "#7E3E40",
@@ -292,7 +289,6 @@
     },
     "bounce_fm": {
         "displayName": "Bounce FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/bounce.ogg",
         "dj": "The Funktipus",
         "genre": ["disco", "funk"],
         "color": "#3E667E",
@@ -403,7 +399,6 @@
     },
     "sfur": {
         "displayName": "SF-UR",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/sfur.ogg",
         "dj": "Hans Oberlander",
         "genre": ["house", "electro", "dance"],
         "color": "#3E6A7E",
@@ -508,7 +503,6 @@
     },
     "radio_los_santos": {
         "displayName": "Radio Los Santos",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/rls.ogg",
         "dj": "Julio G",
         "genre": "west_coast_hip_hop",
         "color": "#457E3E",
@@ -613,7 +607,6 @@
     },
     "radio_x": {
         "displayName": "Radio X",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/radiox.ogg",
         "dj": "Sage",
         "genre": ["alternative_rock", "grunge"],
         "color": "#3E517E",
@@ -712,7 +705,6 @@
     },
     "csr": {
         "displayName": "CSR 103:9",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/csr.ogg",
         "dj": "Phillip \"PM\" Michaels",
         "genre": ["soul", "funk"],
         "color": "#7E3E65",
@@ -799,7 +791,6 @@
     },
     "k_jah_west": {
         "displayName": "K-Jah Radio West",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/kjah.ogg",
         "dj": ["Marshall Peters", "Johnny Lawton"],
         "genre": "reggae",
         "color": "#617E3E",
@@ -904,7 +895,6 @@
     },
     "master_sounds": {
         "displayName": "Master Sounds 98.3",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/master.ogg",
         "dj": "Johnny \"The Love Giant\" Parkinson",
         "genre": ["soul", "funk_groove"],
         "color": "#7E593E",
@@ -1027,7 +1017,6 @@
                 "name": "WCTR News",
                 "dj": "Lianne Forget",
                 "genre": "news_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_1.ogg",
                 "songs": [
                     {
                         "artist": "Lianne Forget",
@@ -1123,7 +1112,6 @@
                 "name": "The Tight End Zone",
                 "dj": "Derrick Thackery",
                 "genre": "sports_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_2.ogg",
                 "songs": [
                     {
                         "artist": "Derrick Thackery",
@@ -1137,7 +1125,6 @@
                 "name": "The Wild Traveler",
                 "dj": "James Pedeaston",
                 "genre": "travel_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_3.ogg",
                 "songs": [
                     {
                         "artist": "James Pedeaston",
@@ -1161,7 +1148,6 @@
                 "name": "Entertaining America",
                 "dj": ["Billy Dexter", "Lazlow"],
                 "genre": "entertainment_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_4.ogg",
                 "songs": [
                     {
                         "artist": "Billy Dexter",
@@ -1193,7 +1179,6 @@
                 "name": "Gardening with Maurice",
                 "dj": "Maurice",
                 "genre": "gardening_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_5.ogg",
                 "songs": [
                     {
                         "artist": "Maurice",
@@ -1233,7 +1218,6 @@
                 "name": "I Say/You Say",
                 "dj": ["Peyton Phillips", "Mary Phillips"],
                 "genre": "political_debate_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_6.ogg",
                 "songs": [
                     {
                         "artist": "Peyton & Mary Phillips",
@@ -1257,7 +1241,6 @@
                 "name": "Lonely Hearts",
                 "dj": ["Christy MacIntyre", "Fernando Martinez"],
                 "genre": "dating_advice_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_7.ogg",
                 "songs": [
                     {
                         "artist": "Christy MacIntyre",
@@ -1281,7 +1264,6 @@
                 "name": "Area 53",
                 "dj": "Marvin Trill",
                 "genre": "conspiracy_theory_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/SA/wctr_8.ogg",
                 "songs": [
                     {
                         "artist": "Marvin Trill",

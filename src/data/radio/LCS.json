@@ -1,7 +1,6 @@
 {
     "head_radio": {
         "displayName": "Head Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/head.ogg",
         "dj": "Michael Hunt",
         "genre": "soft_rock",
         "color": "#3E717E",
@@ -52,7 +51,6 @@
     },
     "double_clef_fm": {
         "displayName": "Double Clef FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/clef.ogg",
         "dj": "Sergio Boccino",
         "genre": ["classical", "opera"],
         "color": "#3E3E7E",
@@ -97,7 +95,6 @@
     },
     "k_jah_radio": {
         "displayName": "K-Jah Radio",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/kjah.ogg",
         "dj": "Natalee Walsh Davis",
         "genre": "reggae",
         "color": "#3E7E54",
@@ -154,7 +151,6 @@
     },
     "rise_fm": {
         "displayName": "Rise FM",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rise.ogg",
         "dj": "Boy Sanchez",
         "genre": ["dance", "house"],
         "color": "#474776",
@@ -247,7 +243,6 @@
     },
     "lips_106": {
         "displayName": "Lips 106",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lips.ogg",
         "dj": ["Cliff Lane", "Andee"],
         "genre": "teen_pop",
         "color": "#7E3E3F",
@@ -298,7 +293,6 @@
     },
     "radio_del_mundo": {
         "displayName": "Radio del Mundo",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/rdm.ogg",
         "dj": "Panjit Gavaskar",
         "genre": ["world_music_middle_east", "world_music_africa"],
         "color": "#627E3E",
@@ -373,7 +367,6 @@
     },
     "msx_98": {
         "displayName": "MSX 98",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/msx.ogg",
         "dj": ["MC Codebreaker", "DJ Timecode"],
         "genre": "drum_and_bass",
         "color": "#7E743E",
@@ -448,7 +441,6 @@
     },
     "flashback_fm": {
         "displayName": "Flashback 95.6",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/flashback.ogg",
         "dj": "Reni Wassulmaier",
         "genre": ["disco", "electronic"],
         "color": "#7E6D3E",
@@ -493,7 +485,6 @@
     },
     "the_liberty_jam": {
         "displayName": "The Liberty Jam",
-        "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/tlj.ogg",
         "dj": "DJ Clue",
         "genre": "east_coast_hip_hop",
         "color": "#7E3E41",
@@ -580,7 +571,6 @@
                 "name": "Heartland Values with Nurse Bob",
                 "dj": "Nurse Bob",
                 "genre": "medical_advice_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_1.ogg",
                 "songs": [
                     {
                         "artist": "Nurse Bob",
@@ -604,7 +594,6 @@
                 "name": "The Electron Zone",
                 "dj": ["Bill", "Steve"],
                 "genre": "tech_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_2.ogg",
                 "songs": [
                     {
                         "artist": "Bill & Steve",
@@ -628,7 +617,6 @@
                 "name": "Breathing World",
                 "dj": "Melissa Chowder",
                 "genre": "spiritual_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_3.ogg",
                 "songs": [
                     {
                         "artist": "Melissa Chowder",
@@ -652,7 +640,6 @@
                 "name": "Coq O Vin",
                 "dj": "Richard Goblin",
                 "genre": "cooking_show",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_4.ogg",
                 "songs": [
                     {
                         "artist": "Richard Goblin",
@@ -676,7 +663,6 @@
                 "name": "Chatterbox",
                 "dj": "Lazlow",
                 "genre": "talk_radio",
-                "audio": "https://pub-2451def1bf47452dbcc78e0cdd4d6994.r2.dev/LCS/lcfr_5.ogg",
                 "songs": [
                     {
                         "artist": "Lazlow",
