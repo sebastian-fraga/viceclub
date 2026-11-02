@@ -34,6 +34,7 @@ import { buildSelectorOptions } from "./utils/buildSelectorOptions";
 import CopyLink from "@/components/ui/CopyLink";
 import { slugify } from "@/components/artworks/mediaUtils";
 import { useUrlParam } from "@/hooks/useUrlParam";
+import CountBadge from "@/components/ui/CountBadge";
 
 interface CheatsContainerProps {
     cheatsData: CheatsFile;
@@ -173,9 +174,7 @@ export const CheatsContainer = ({
                                 ? categoryName
                                 : t(categoryData.category)}
 
-                            <span className="font-body-condensed text-sm bg-(--button-bg) px-2 py-0.5 rounded-[4px]">
-                                {cheats.length}
-                            </span>
+                            <CountBadge count={cheats.length} />
 
                             <CopyLink
                                 id={slugify(categoryName)}

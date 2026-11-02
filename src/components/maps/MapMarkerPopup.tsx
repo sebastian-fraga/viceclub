@@ -8,6 +8,7 @@ import {
     getThumbWidthFromUrl,
 } from "@/components/maps/utils/collectibleImage";
 import { getDescription } from "@/components/maps/utils/getLabels";
+import CountBadge from "@/components/ui/CountBadge";
 import useLocale from "@/hooks/useLocale";
 import useT from "@/hooks/useT";
 import { themeToCssVars } from "@/lib/theme";
@@ -24,7 +25,7 @@ interface MapMarkerPopupProps {
     isCompleted: boolean;
     onToggleComplete: (id: string) => void;
     onClose: () => void;
-    theme: GameTheme
+    theme: GameTheme;
 }
 
 const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
@@ -98,9 +99,7 @@ const MapMarkerPopup = forwardRef<HTMLDivElement, MapMarkerPopupProps>(
                             </span>
 
                             {totalForType > 1 && (
-                                <span className="shrink-0 rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
-                                    {collectible.id}
-                                </span>
+                                <CountBadge count={collectible.id} />
                             )}
                         </div>
 

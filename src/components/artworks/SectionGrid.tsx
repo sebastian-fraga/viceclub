@@ -8,12 +8,10 @@ import {
     getImageUrl,
     getSectionLabel,
 } from "@/components/artworks/mediaUtils";
-import { Tooltip } from "@/components/ui/Tooltip";
-import { IconCheck, IconLink } from "@tabler/icons-react";
-import { useEffect, useRef, useState } from "react";
-import { flushSync } from "react-dom";
-import useT from "@/hooks/useT";
 import CopyLink from "@/components/ui/CopyLink";
+import CountBadge from "@/components/ui/CountBadge";
+import { useState } from "react";
+import { flushSync } from "react-dom";
 
 interface Props {
     gameId: string;
@@ -89,7 +87,6 @@ export function SectionGrid({
     onSelect,
     registerThumb,
 }: Props) {
-
     const slug = slugify(section);
     const label = getSectionLabel(section, lang);
 
@@ -124,9 +121,7 @@ export function SectionGrid({
             <h3 className="mb-8 flex items-center gap-3 text-4xl font-medium text-indigo-50 max-mobile:max-w-120 max-mobile:text-2xl group">
                 <span className="min-w-0 truncate">{label}</span>
 
-                <span className="shrink-0 rounded-[4px] bg-(--button-bg) px-2 py-0.5 font-body-condensed text-sm">
-                    {images.length}
-                </span>
+                <CountBadge count={images.length} />
 
                 <CopyLink id={slug} label={label} searchParams={{ category }} />
             </h3>
