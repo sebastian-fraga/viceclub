@@ -19,7 +19,11 @@ interface Props {
     buttonClass: string;
 }
 
-export default function TrailerDropdown({ variantId, trailers, buttonClass }: Props) {
+export default function TrailerDropdown({
+    variantId,
+    trailers,
+    buttonClass,
+}: Props) {
     const t = useT();
 
     return (
@@ -27,7 +31,7 @@ export default function TrailerDropdown({ variantId, trailers, buttonClass }: Pr
             variant="secondary"
             label={t("home.buttons.trailers")}
             buttonClass={buttonClass}
-            contentClassName="max-w-120 pt-2"
+            contentClassName="max-w-120 pt-2 shadow-2xl shadow-black/60"
         >
             <div className="flex items-center gap-3 px-6 border-b pb-2 pt-1 border-white/10 max-mobile:gap-2 max-mobile:px-4">
                 <div className="w-6 max-mobile:w-5">
@@ -67,22 +71,17 @@ export default function TrailerDropdown({ variantId, trailers, buttonClass }: Pr
                                 exit: { opacity: 0, y: -4 },
                             }}
                             transition={{ duration: 0.15 }}
-                            className={`w-full flex items-center gap-2 px-4 py-3 text-sm font-thin transition-all hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs ${
+                            className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-thin transition-all hover:bg-white/10 max-mobile:px-3 max-mobile:py-2.5 max-mobile:text-xs group ${
                                 isLast
                                     ? "pb-4 rounded-b-2xl max-mobile:pb-3"
                                     : ""
                             }`}
                         >
-                            <span className="text-white/40 text-xs font-mono w-4 max-mobile:w-3.5 max-mobile:text-[11px]">
-                                {index + 1}
+                            <span className="text-white/50 text-xs font-body-condensed w-4 max-mobile:w-3.5 max-mobile:text-[11px] group-hover:text-white transition tabular-nums">
+                                {String(index + 1).padStart(2, "0")}
                             </span>
 
-                            <span
-                                className="truncate"
-                                title={t(
-                                    `home.${variantId.toLocaleLowerCase()}.trailers.${trailer.name}`,
-                                )}
-                            >
+                            <span className="truncate text-white/80 group-hover:text-white transition">
                                 {t(
                                     `home.${variantId.toLocaleLowerCase()}.trailers.${trailer.name}`,
                                 )}
