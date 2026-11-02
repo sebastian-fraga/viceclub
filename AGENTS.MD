@@ -113,7 +113,7 @@ studio/             Separate Sanity Studio (current schema: notificationBanner)
 ### Content sources
 
 - **Build-time/local:** games, mods, characters, translations, SEO, and artworks/cheats/checklists/maps/radio JSON live in `src/data`.
-- **S3 at runtime:** artworks/map images, `news.json`, `{game}/timeline.json`, and other assets. The base URL is hardcoded: `https://viceclub.s3.us-east-1.amazonaws.com`.
+- **S3 at runtime:** artworks/map images, `news.json`, `{game}/timeline.json`, and other assets. The base URL is defined in the `PUBLIC_S3_BUCKET` environment variable.
 - **Sanity at runtime:** only the notification banner (`NotificationBanner.tsx`). Project `8nstyewt`, dataset `production`; the Studio is in `studio/`.
 - **There are no data API routes**; islands fetch directly from S3/Sanity. The only API routes are the OG images, prerendered with satori/resvg/sharp.
 

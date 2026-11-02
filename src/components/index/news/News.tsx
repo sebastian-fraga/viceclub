@@ -12,7 +12,6 @@ import "./news.css";
 import NewsArticle from "./NewsArticle";
 import type { NewsItem } from "./types";
 
-const NEWS_URL = "https://viceclub.s3.us-east-1.amazonaws.com/news.json";
 const STEP = 2;
 const SCROLL_RETRY_DELAY_MS = 50;
 const SCROLL_RETRY_MAX_ATTEMPTS = 20;
@@ -123,7 +122,7 @@ export default function News() {
     useEffect(() => {
         const controller = new AbortController();
 
-        fetch(NEWS_URL, {
+        fetch(`${import.meta.env.PUBLIC_S3_BUCKET}/news.json`, {
             cache: "no-cache",
             signal: controller.signal,
         })

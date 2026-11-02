@@ -138,7 +138,7 @@ export default function Timeline({ gameCode, initialData }: TimelineProps) {
         async function loadTimeline() {
             try {
                 const response = await fetch(
-                    `https://viceclub.s3.us-east-1.amazonaws.com/${gameCode}/timeline.json?t=${Date.now()}`,
+                    `${import.meta.env.PUBLIC_S3_BUCKET}/${gameCode}/timeline.json?t=${Date.now()}`,
                 );
 
                 if (!response.ok) {

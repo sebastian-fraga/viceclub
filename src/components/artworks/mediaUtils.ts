@@ -8,7 +8,7 @@ import type {
 import { resolveLocalizedText } from "@/lib/localizedText";
 import { sectionLabels } from "@/components/artworks/sectionLabels";
 
-const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
+const S3_BASE = import.meta.env.PUBLIC_S3_BUCKET;
 
 export function getImageUrl(
     gameId: string,

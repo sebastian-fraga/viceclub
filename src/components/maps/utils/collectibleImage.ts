@@ -1,6 +1,6 @@
 import thumbConfig from "@/data/map-thumb-widths.json";
 
-const S3_BASE = "https://viceclub.s3.us-east-1.amazonaws.com";
+const S3_BASE = import.meta.env.PUBLIC_S3_BUCKET;
 
 const buildPath = (segments: (string | undefined)[]) =>
     segments.filter(Boolean).join("/");

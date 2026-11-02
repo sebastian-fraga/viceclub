@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 
     try {
         const response = await fetch(
-            "https://viceclub.s3.us-east-1.amazonaws.com/VI/timeline.json",
+            `${import.meta.env.PUBLIC_S3_BUCKET}/VI/timeline.json`,
         );
 
         if (response.ok) {
@@ -50,8 +50,7 @@ const gameSeo = getPageSeo(
     canonical={`https://www.viceclub.app/${locale}/${game}/timeline`}
     game={gameData}
 >
-    <main
-    >
+    <main>
         <Timeline gameCode={game} initialData={timelineData} client:load />
     </main>
 </BaseLayout>
