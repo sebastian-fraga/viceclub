@@ -176,6 +176,7 @@ export default function RadioPage({
             <AnimatePresence>
                 {isFullscreenVisible && (
                     <RadioFullscreen
+                        game={game}
                         key="radio-fullscreen"
                         radio={radio}
                         currentIndex={currentIndex}
