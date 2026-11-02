@@ -1,0 +1,44 @@
+{
+    "cocoteo_fm": {
+        "displayName": "Cocoteo FM",
+        "dj": ["El Martillo", "La Gata"],
+        "genre": "latin_music",
+        "color": "#7E3E68",
+        "songs": []
+    },
+    "back_country_radio": {
+        "displayName": "Back Country Radio",
+        "dj": ["MW", "Delta Dawne"],
+        "genre": "country_music",
+        "color": "#7E613E",
+        "songs": []
+    },
+    "afrobank_fm": {
+        "displayName": "Afrobank FM",
+        "dj": ["Burna", "Palmsy"],
+        "genre": "afrobeats",
+        "color": "#3E7E4E",
+        "songs": []
+    },
+    "the_chamber": {
+        "displayName": "The Chamber",
+        "dj": ["DJ Tom", "DJ Kerry"],
+        "genre": "heavy_metal",
+        "color": "#7E3E4A",
+        "songs": []
+    },
+    "flash_fm": {
+        "displayName": "Flash FM",
+        "dj": ["Robyn", "Alex"],
+        "genre": "pop",
+        "color": "#7E4C3E",
+        "songs": []
+    },
+    "dirty_south_classics": {
+        "displayName": "Dirty South Classics",
+        "dj": ["Trick", "Trina"],
+        "genre": "hip_hop",
+        "color": "#7E663E",
+        "songs": []
+    }
+}
