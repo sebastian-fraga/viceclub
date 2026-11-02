@@ -181,8 +181,7 @@ studio/             Separate Sanity Studio (current schema: notificationBanner)
 
 - **The build depends on network access for VI:** `src/pages/[locale]/VI/timeline.astro` fetches from S3 in `getStaticPaths`. If it fails, the error is logged and the island fetches the JSON again on the client; the build does not fail.
 - **External content at runtime:** the banner (Sanity), news (`news.json`), and timeline depend on the network. They are not shown offline.
-- **Hardcoded S3:** the base `https://viceclub.s3.us-east-1.amazonaws.com` appears in several modules. If the bucket/domain changes, it must be updated everywhere.
 - **Map thumbnails:** the frontend builds the `srcset` from `src/data/map-thumb-widths.json`; if different widths are generated with `pnpm thumbs --widths=...`, images will be missing.
 - **Silently omitted pages:** if a game's JSON/SEO/mods are missing, its route is not generated. Confirm the route list in the build output.
-- **Environment:** the app does not read environment variables in `src/` (only `import.meta.env.DEV/PROD`). `.env.local` contains only `VERCEL_OIDC_TOKEN`. `pnpm thumbs` does use `S3_BUCKET` and AWS CLI credentials.
+- **Environment:** `PUBLIC_S3_BUCKET` defines the public S3 base URL and is accessed through `import.meta.env.PUBLIC_S3_BUCKET`. It must be configured in Vercel for each deployment environment. `.env.local` contains `VERCEL_OIDC_TOKEN`. `pnpm thumbs` uses `S3_BUCKET` and AWS CLI credentials.
 - **Achievements:** the section renders `UnderConstruction` and `UNFINISHED_SECTIONS` marks it as unfinished for several games.
