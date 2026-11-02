@@ -1,9 +1,9 @@
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { IconChevronDown } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { ComponentType } from "react";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useClickOutside } from "@/hooks/useClickOutside";
 
 interface Option<T extends string = string> {
     id: T;
@@ -27,14 +27,11 @@ export default function DropdownSelector<T extends string = string>({
     onSelect,
     disabled,
 }: Props<T>) {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    useClickOutside(
-        () => setIsOpen(false),
-        [dropdownRef],
-    );
+    useClickOutside(() => setIsOpen(false), [dropdownRef]);
 
     const handleSelect = (id: T) => {
         onSelect(id);
@@ -57,7 +54,8 @@ export default function DropdownSelector<T extends string = string>({
                 onClick={() => !disabled && setIsOpen((prev) => !prev)}
             >
                 <span className="font-medium">
-                    {selectedOption?.label ?? "Selecciona una plataforma🌴"}
+                    {selectedOption?.label ??
+                        t("common.buttons.selectPlatform")}
                 </span>
 
                 <motion.div
