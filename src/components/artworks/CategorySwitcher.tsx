@@ -9,7 +9,7 @@ interface Props {
 }
 
 const buttonClass =
-    "rounded-full px-10 py-4 font-bold transition-colors text-xl max-mobile:text-lg max-mobile:px-4 max-mobile:py-2";
+    "rounded-full px-10 py-4 font-bold transition-colors text-xl max-mobile:text-lg max-mobile:px-6 max-mobile:py-2";
 
 export function CategorySwitcher({ active, onChange, onPreview }: Props) {
     const t = useT();
