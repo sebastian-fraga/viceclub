@@ -36,7 +36,7 @@ if (!radioDataRaw) {
     throw new Error(`Radio data not found for ${gameId}`);
 }
 
-const stations = parseRadioData(radioDataRaw);
+const stations = parseRadioData(radioDataRaw, gameId);
 ---
 
 <BaseLayout

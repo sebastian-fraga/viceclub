@@ -1,3 +1,4 @@
+import type { GameId } from "@/config/games";
 import type {
     RadioStation,
     Song,
@@ -7,6 +8,7 @@ import type {
     RawRadioStation,
     RawRadioSong,
 } from "../types/types";
+import { getStationAudioUrl } from "./getStationAudioUrl";
 
 function toArray<T>(value: T | T[] | undefined): T[] {
     if (value === undefined) return [];
@@ -39,9 +41,30 @@ function parseSong(raw: RawRadioSong): Song {
     };
 }
 
+/**
+ * Resolves the numeric file index of a playlist.
+ *
+ * The type marks `id` as required, but JSON is only asserted by
+ * `import.meta.glob` and never validated, so a missing value has to fail here
+ * rather than silently producing `{stationId}_undefined.ogg`.
+ */
+function requirePlaylistId(
+    stationId: string,
+    playlist: RawRadioPlaylist,
+): number {
+    if (typeof playlist.id !== "number") {
+        throw new Error(
+            `Radio playlist "${playlist.name}" of station "${stationId}" has no numeric "id"`,
+        );
+    }
+
+    return playlist.id;
+}
+
 function parsePlaylist(
     raw: RawRadioPlaylist | RawRadioStation,
     fallbackName: string,
+    audio: string,
 ): Playlist {
     const name = "name" in raw ? raw.name : fallbackName;
 
@@ -50,23 +73,38 @@ function parsePlaylist(
         name,
         djs: toArray(raw.dj),
         genres: toArray(raw.genre),
-        audio: raw.audio,
+        audio,
         songs: raw.songs.map(parseSong),
     };
 }
 
 export function parseRadioStation(
-    id: string,
+    stationId: string,
     raw: RawRadioStation,
+    gameId: GameId,
 ): RadioStation {
     const playlists = raw.playlists
         ? raw.playlists.map((playlist) =>
-              parsePlaylist(playlist, raw.displayName),
+              parsePlaylist(
+                  playlist,
+                  raw.displayName,
+                  getStationAudioUrl(
+                      gameId,
+                      stationId,
+                      requirePlaylistId(stationId, playlist),
+                  ),
+              ),
           )
-        : [parsePlaylist(raw, raw.displayName)];
+        : [
+              parsePlaylist(
+                  raw,
+                  raw.displayName,
+                  getStationAudioUrl(gameId, stationId),
+              ),
+          ];
 
     return {
-        id,
+        id: stationId,
         displayName: raw.displayName,
         displayNameKey: raw.displayNameKey,
         image: raw.image,
@@ -75,8 +113,11 @@ export function parseRadioStation(
     };
 }
 
-export function parseRadioData(raw: RawRadioData): RadioStation[] {
-    return Object.entries(raw).map(([id, station]) =>
-        parseRadioStation(id, station),
+export function parseRadioData(
+    raw: RawRadioData,
+    gameId: GameId,
+): RadioStation[] {
+    return Object.entries(raw).map(([stationId, station]) =>
+        parseRadioStation(stationId, station, gameId),
     );
 }

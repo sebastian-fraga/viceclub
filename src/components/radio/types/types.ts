@@ -15,6 +15,7 @@ export interface Playlist {
     name: string;
     djs: string[];
     genres: string[];
+    /** Derived by `parseRadioData` from `PUBLIC_R2_BUCKET`; not stored in the JSON. */
     audio: string;
     songs: Song[];
 }
@@ -43,7 +44,6 @@ export interface RawRadioStation {
     displayNameKey?: string;
     color?: string;
     image: string;
-    audio: string;
     dj: string | string[];
     genre: string | string[];
     songs: RawRadioSong[];
@@ -51,8 +51,15 @@ export interface RawRadioStation {
 }
 
 export interface RawRadioPlaylist {
+    /**
+     * Numeric index (1, 2, 3…) used ONLY to build the audio file name
+     * (`{stationId}_{id}.ogg`) via `getStationAudioUrl`.
+     *
+     * It is NOT `Playlist.id`, which is the slug of the playlist name and is
+     * what the UI uses to track the selected playlist.
+     */
+    id: number;
     name: string;
-    audio: string;
     dj?: string | string[];
     genre?: string | string[];
     songs: RawRadioSong[];
