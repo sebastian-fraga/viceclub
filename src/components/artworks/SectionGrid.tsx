@@ -13,6 +13,7 @@ import { IconCheck, IconLink } from "@tabler/icons-react";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import useT from "@/hooks/useT";
+import CopyLink from "@/components/ui/CopyLink";
 
 interface Props {
     gameId: string;
@@ -88,44 +89,9 @@ export function SectionGrid({
     onSelect,
     registerThumb,
 }: Props) {
-    const sectionRef = useRef<HTMLElement>(null);
-    const copiedTimeout = useRef<number | undefined>(undefined);
-    const [copied, setCopied] = useState(false);
 
     const slug = slugify(section);
     const label = getSectionLabel(section, lang);
-
-    const t = useT()
-
-    useEffect(() => {
-        if (window.location.hash.slice(1) === slug) {
-            sectionRef.current?.scrollIntoView();
-        }
-    }, [slug]);
-
-    useEffect(() => {
-        return () => window.clearTimeout(copiedTimeout.current);
-    }, []);
-
-    async function handleCopyLink() {
-        const url = new URL(window.location.href);
-        url.searchParams.set("category", category);
-        url.hash = slug;
-
-        history.replaceState(null, "", url);
-
-        try {
-            await navigator.clipboard.writeText(url.toString());
-            setCopied(true);
-            window.clearTimeout(copiedTimeout.current);
-            copiedTimeout.current = window.setTimeout(
-                () => setCopied(false),
-                1200,
-            );
-        } catch (err) {
-            console.error("No se pudo copiar el link:", err);
-        }
-    }
 
     function handleSelect(
         e: React.MouseEvent<HTMLButtonElement>,
@@ -152,7 +118,6 @@ export function SectionGrid({
 
     return (
         <section
-            ref={sectionRef}
             id={slug}
             className="mx-auto w-full max-mobile:mt-20 first:mobile:mt-30 mobile:mt-50 flex max-w-430 flex-col scroll-mt-50"
         >
@@ -163,43 +128,7 @@ export function SectionGrid({
                     {images.length}
                 </span>
 
-                <Tooltip
-                    label={
-                        copied
-                            ? t("common.buttons.copiedLink")
-                            : t("common.buttons.copyLink")
-                    }
-                >
-                    <button
-                        type="button"
-                        onClick={handleCopyLink}
-                        aria-label={
-                            copied
-                                ? t("common.buttons.copiedLink")
-                                : t("common.buttons.copyLinkTo", { label })
-                        }
-                        className={`relative ml-1 size-6 shrink-0 cursor-pointer transition duration-250 hover:text-yellow-100 focus-visible:opacity-100 max-mobile:opacity-100 group-hover:opacity-100 ${
-                            copied ? "opacity-100" : "opacity-0"
-                        }`}
-                    >
-                        <IconLink
-                            aria-hidden="true"
-                            className={`absolute inset-0 transition duration-300 motion-reduce:transition-none ${
-                                copied
-                                    ? "scale-50 rotate-90 opacity-0 blur-[2px]"
-                                    : "scale-100 rotate-0 opacity-100 blur-0"
-                            }`}
-                        />
-                        <IconCheck
-                            aria-hidden="true"
-                            className={`absolute inset-0 transition duration-300 motion-reduce:transition-none ${
-                                copied
-                                    ? "scale-100 rotate-0 opacity-100 blur-0"
-                                    : "scale-50 -rotate-90 opacity-0 blur-[2px]"
-                            }`}
-                        />
-                    </button>
-                </Tooltip>
+                <CopyLink id={slug} label={label} searchParams={{ category }} />
             </h3>
 
             <div className="grid w-full lg:grid-cols-3 md:grid-cols-2 gap-x-6 gap-y-8 max-mobile:grid-cols-1">
