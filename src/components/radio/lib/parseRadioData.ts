@@ -41,26 +41,6 @@ function parseSong(raw: RawRadioSong): Song {
     };
 }
 
-/**
- * Resolves the numeric file index of a playlist.
- *
- * The type marks `id` as required, but JSON is only asserted by
- * `import.meta.glob` and never validated, so a missing value has to fail here
- * rather than silently producing `{stationId}_undefined.ogg`.
- */
-function requirePlaylistId(
-    stationId: string,
-    playlist: RawRadioPlaylist,
-): number {
-    if (typeof playlist.id !== "number") {
-        throw new Error(
-            `Radio playlist "${playlist.name}" of station "${stationId}" has no numeric "id"`,
-        );
-    }
-
-    return playlist.id;
-}
-
 function parsePlaylist(
     raw: RawRadioPlaylist | RawRadioStation,
     fallbackName: string,
@@ -84,15 +64,11 @@ export function parseRadioStation(
     gameId: GameId,
 ): RadioStation {
     const playlists = raw.playlists
-        ? raw.playlists.map((playlist) =>
+        ? raw.playlists.map((playlist, index) =>
               parsePlaylist(
                   playlist,
                   raw.displayName,
-                  getStationAudioUrl(
-                      gameId,
-                      stationId,
-                      requirePlaylistId(stationId, playlist),
-                  ),
+                  getStationAudioUrl(gameId, stationId, index + 1),
               ),
           )
         : [

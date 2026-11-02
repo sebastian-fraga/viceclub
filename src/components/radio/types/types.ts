@@ -51,14 +51,6 @@ export interface RawRadioStation {
 }
 
 export interface RawRadioPlaylist {
-    /**
-     * Numeric index (1, 2, 3…) used ONLY to build the audio file name
-     * (`{stationId}_{id}.ogg`) via `getStationAudioUrl`.
-     *
-     * It is NOT `Playlist.id`, which is the slug of the playlist name and is
-     * what the UI uses to track the selected playlist.
-     */
-    id: number;
     name: string;
     dj?: string | string[];
     genre?: string | string[];
