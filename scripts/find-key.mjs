@@ -6,7 +6,7 @@
  *   node scripts/find-key.mjs "search-term"
  *
  * Example:
- *   node scripts/find-key.mjs "home.title"
+ *   node scripts/find-key.mjs "home.titles"
  *
  * Output:
  *   Matching file paths, line numbers, and lines containing the search term.
