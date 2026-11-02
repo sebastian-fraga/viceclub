@@ -24,8 +24,6 @@ export default function RadioImage({ station, game }: RadioImageProps) {
         setHasImageError(false);
     }, [imageSrc]);
 
-    console.log({ game, station, stationId: station?.id });
-
     return imageSrc && !hasImageError ? (
         <img
             src={imageSrc}
