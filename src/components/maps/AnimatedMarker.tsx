@@ -1,5 +1,6 @@
 import type { CollectibleData } from "@/components/maps/types";
 import { COLLECTIBLE_IMAGE_SIZES } from "@/components/maps/utils/collectibleImage";
+import useT from "@/hooks/useT";
 import { preloadImage } from "@/lib/preloadImage";
 import { motion } from "framer-motion";
 import { divIcon } from "leaflet";
@@ -62,6 +63,8 @@ export default function AnimatedMarker({
         return { customIcon: icon, containerEl: el };
     }, []);
     const currentScale = isSelected ? zoomScale * 1.25 : zoomScale;
+
+    const t = useT();
 
     return (
         <>
@@ -135,7 +138,7 @@ export default function AnimatedMarker({
                     >
                         <motion.img
                             src={marker.icon}
-                            alt=""
+                            alt={t("maps.accessibility.collectibleImage")}
                             animate={{
                                 boxShadow: isSelected
                                     ? `0 0 0 3px #000000, 0 0 20px ${meta.color}, 0 0 35px ${meta.color}`

@@ -103,7 +103,9 @@ export default function SectionContent({
                                             >
                                                 <img
                                                     src={marker.icon}
-                                                    alt=""
+                                                    alt={i18n(
+                                                        "maps.accessibility.collectibleImage"
+                                                    )}
                                                     className="h-12 w-12 shrink-0 rounded-xl object-contain p-1.5"
                                                     style={{
                                                         backgroundColor:

@@ -131,7 +131,7 @@ export default function Hero() {
                     <motion.img
                         key={currentImage}
                         src={currentImage}
-                        alt=""
+                        alt={t("index.welcome.accessibility.heroImage")}
                         fetchPriority={isFirstPaint ? "high" : undefined}
                         initial={imageInitial}
                         animate={imageAnimate}
