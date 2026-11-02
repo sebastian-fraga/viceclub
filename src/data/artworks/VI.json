@@ -1551,6 +1551,116 @@
                     "pt": "Captura de tela 04"
                 }
             }
+        ],
+        "edge": [
+            {
+                "id": "vi-edge-01",
+                "caption": {
+                    "es": "Captura 01",
+                    "en": "Screenshot 01",
+                    "fr": "Capture d’écran 01",
+                    "pt": "Captura de tela 01"
+                }
+            },
+            {
+                "id": "vi-edge-02",
+                "caption": {
+                    "es": "Captura 02",
+                    "en": "Screenshot 02",
+                    "fr": "Capture d’écran 02",
+                    "pt": "Captura de tela 02"
+                }
+            },
+            {
+                "id": "vi-edge-03",
+                "caption": {
+                    "es": "Captura 03",
+                    "en": "Screenshot 03",
+                    "fr": "Capture d’écran 03",
+                    "pt": "Captura de tela 03"
+                }
+            },
+            {
+                "id": "vi-edge-04",
+                "caption": {
+                    "es": "Captura 04",
+                    "en": "Screenshot 04",
+                    "fr": "Capture d’écran 04",
+                    "pt": "Captura de tela 04"
+                }
+            },
+            {
+                "id": "vi-edge-05",
+                "caption": {
+                    "es": "Captura 05",
+                    "en": "Screenshot 05",
+                    "fr": "Capture d’écran 05",
+                    "pt": "Captura de tela 05"
+                }
+            },
+            {
+                "id": "vi-edge-06",
+                "caption": {
+                    "es": "Captura 06",
+                    "en": "Screenshot 06",
+                    "fr": "Capture d’écran 06",
+                    "pt": "Captura de tela 06"
+                }
+            },
+            {
+                "id": "vi-edge-07",
+                "caption": {
+                    "es": "Captura 07",
+                    "en": "Screenshot 07",
+                    "fr": "Capture d’écran 07",
+                    "pt": "Captura de tela 07"
+                }
+            },
+            {
+                "id": "vi-edge-08",
+                "caption": {
+                    "es": "Captura 08",
+                    "en": "Screenshot 08",
+                    "fr": "Capture d’écran 08",
+                    "pt": "Captura de tela 08"
+                }
+            },
+            {
+                "id": "vi-edge-09",
+                "caption": {
+                    "es": "Captura 09",
+                    "en": "Screenshot 09",
+                    "fr": "Capture d’écran 09",
+                    "pt": "Captura de tela 09"
+                }
+            },
+            {
+                "id": "vi-edge-10",
+                "caption": {
+                    "es": "Captura 10",
+                    "en": "Screenshot 10",
+                    "fr": "Capture d’écran 10",
+                    "pt": "Captura de tela 10"
+                }
+            },
+            {
+                "id": "vi-edge-11",
+                "caption": {
+                    "es": "Captura 11",
+                    "en": "Screenshot 11",
+                    "fr": "Capture d’écran 11",
+                    "pt": "Captura de tela 11"
+                }
+            },
+            {
+                "id": "vi-edge-12",
+                "caption": {
+                    "es": "Captura 12",
+                    "en": "Screenshot 12",
+                    "fr": "Capture d’écran 12",
+                    "pt": "Captura de tela 12"
+                }
+            }
         ]
     }
 }
