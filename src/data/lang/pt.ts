@@ -1277,6 +1277,7 @@ export default {
             "Hardcore Punk": "Hardcore Punk",
             acid_jazz: "Acid jazz",
             afrobeat: "Afrobeat",
+            afrobeats: "Afrobeats",
             alternative_dance: "Dance alternativo",
             alternative_rock: "Rock alternativo",
             ambient: "Música ambiente",
