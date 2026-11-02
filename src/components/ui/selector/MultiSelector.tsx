@@ -15,9 +15,7 @@ export interface MultiSelectorOption<
         label: string;
         labelEdition?: string;
         icon?: ComponentType<any>;
-        infoBanner?: ReactNode;
     }>;
-    infoBanner?: ReactNode;
 }
 
 export interface MultiSelectorProps<
@@ -51,9 +49,6 @@ export function MultiSelector<
     const activeSecondary = activePrimary?.subOptions?.find(
         (option) => option.id === selectedSecondaryId,
     );
-
-    const activeBanner =
-        activeSecondary?.infoBanner ?? activePrimary?.infoBanner;
 
     return (
         <div className="flex flex-col gap-4 w-full">
@@ -94,16 +89,6 @@ export function MultiSelector<
                         />
                     </div>
                 )}
-
-            {activeBanner && (
-                <div className="p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800/80 text-zinc-300 text-xs flex items-start gap-3 animate-in fade-in duration-200">
-                    <div className="text-yellow-500 shrink-0 font-bold text-base leading-none">
-                        ℹ
-                    </div>
-
-                    <div className="leading-relaxed">{activeBanner}</div>
-                </div>
-            )}
         </div>
     );
 }
