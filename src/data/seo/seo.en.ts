@@ -286,6 +286,11 @@ export const seoEn: SeoMap = {
             description:
                 "Download GTA 6 artworks and screenshots featuring Jason, Lucia, Leonida locations, vehicles and weapons.",
         },
+        radio: {
+            title: "GTA 6 Radio Stations",
+            description:
+                "Listen to GTA 6's radio stations and songs, including Cocoteo FM, Flash FM, Dirty South Classics and many more.",
+        },
         timeline: {
             title: "GTA 6 Timeline | Leaks and News",
             description:

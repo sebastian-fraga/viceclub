@@ -286,6 +286,11 @@ export const seoPt: SeoMap = {
             description:
                 "Baixe artworks e capturas de tela de GTA 6 com Jason, Lucia, cenários de Leonida, veículos e armas.",
         },
+        radio: {
+            title: "Rádios de GTA 6",
+            description:
+                "Ouça as estações de rádio de GTA 6 e suas músicas, incluindo Cocoteo FM, Flash FM, Dirty South Classics e muitas outras.",
+        },
         timeline: {
             title: "Linha do tempo de GTA 6 | Vazamentos e notícias",
             description:
