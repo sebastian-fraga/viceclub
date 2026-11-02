@@ -21,10 +21,12 @@ export default function Footer() {
                     <div className="absolute inset-0 z-0 bg-linear-to-r from-pink-700/60 via-yellow-300/20 to-blue-500/70 blur-3xl"></div>
 
                     <img
-                        className="relative z-1 w-[4em] max-mobile:w-15"
+                        className="relative z-1 w-16 h-16 max-mobile:w-15 max-mobile:h-15"
                         src="/assets/images/app/logo.webp"
                         alt="Vice Club Logo"
                         loading="lazy"
+                        width={64}
+                        height={64}
                     />
 
                     <span className="relative z-1 select-none text-center font-body-condensed text-5xl tracking-tight text-blue-400 [-webkit-text-stroke:2px_#101525aa] max-mobile:text-[2.3em]">

@@ -41,6 +41,8 @@ function SidebarGameButton({
                 <img
                     src={`/assets/images/icons/games/logos/${game.id.toUpperCase()}.webp`}
                     alt={game.name}
+                    width={12}
+                    height={12}
                     className={clsx(
                         "w-12 h-12 shrink-0 object-contain transition",
                         isActiveGame

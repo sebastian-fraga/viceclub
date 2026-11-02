@@ -50,8 +50,8 @@ export function ChecklistItem({
     const ariaLabel = item.texts
         ? item.texts.map((e) => localizedText(e.text)).join(" / ")
         : item.text
-          ? localizedText(item.text)
-          : "";
+            ? localizedText(item.text)
+            : "";
 
     const mapUrl = item.mapSlug
         ? lp(
@@ -127,10 +127,12 @@ export function ChecklistItem({
                                   {entry.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${entry.icon}.webp`}
-                                          className="h-auto max-w-6 w-auto"
+                                          className="size-6 shrink-0 object-contain"
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}
+                                          width={24}
+                                          height={24}
                                           loading="lazy"
                                       />
                                   )}
@@ -150,7 +152,9 @@ export function ChecklistItem({
                                   {item.icon && (
                                       <img
                                           src={`/assets/images/icons/blips/${game}/${item.icon}.webp`}
-                                          className="h-auto max-w-6 w-auto"
+                                          className="size-6 shrink-0 object-contain"
+                                          width={24}
+                                          height={24}
                                           alt={t(
                                               "checklist.accessibility.entryIcon",
                                           )}

@@ -25,10 +25,16 @@ interface Props {
     selectedPlatform: Platform;
     game: GameId;
     gameData: Game;
-    index: number
+    index: number;
 }
 
-export function CheatCard({ cheat, selectedPlatform, game, gameData, index }: Props) {
+export function CheatCard({
+    cheat,
+    selectedPlatform,
+    game,
+    gameData,
+    index,
+}: Props) {
     const t = useLocalizedText();
     const i18n = useT();
     const shouldLoadEagerly = index < 8;
@@ -83,8 +89,10 @@ export function CheatCard({ cheat, selectedPlatform, game, gameData, index }: Pr
                                     button,
                                 )}
                                 loading={shouldLoadEagerly ? "eager" : "lazy"}
+                                width={36}
+                                height={36}
                                 alt={button}
-                                className="h-9 w-auto object-contain shadow-2xl shadow-violet-300/25"
+                                className="size-9 object-contain shadow-2xl shadow-violet-300/25"
                             />
                         );
                     })

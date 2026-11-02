@@ -61,7 +61,9 @@ export function ChecklistSection({
                 {section.icon && (
                     <img
                         src={`/assets/images/icons/blips/${game}/${section.icon}.webp`}
-                        className="h-auto max-w-6 w-auto"
+                        className="size-6 shrink-0 object-contain"
+                        width={24}
+                        height={24}
                         alt={t("checklist.accessibility.entryIcon")}
                         loading="lazy"
                     />
