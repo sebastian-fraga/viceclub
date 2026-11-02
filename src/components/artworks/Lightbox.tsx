@@ -197,10 +197,10 @@ export function Lightbox({
         >
             <div className="mobile:absolute mobile:right-8 mobile:top-8 z-10 flex items-center gap-4 max-mobile:justify-between max-mobile:px-8 max-mobile:pt-4">
                 <div className="w-full flex-col truncate">
-                    <span className="hidden max-mobile:block truncate max-w-50 text-lg max-mobile:text-sm font-medium text-violet-200">
+                    <span className="hidden max-mobile:block truncate max-w-80 text-lg max-mobile:text-sm font-medium text-violet-200">
                         {sectionLabel}
                     </span>
-                    <span className="hidden max-mobile:block truncate max-w-50 text-lg max-mobile:text-base font-bold text-violet-100">
+                    <span className="hidden max-mobile:block truncate max-w-90 text-lg max-mobile:text-base font-bold text-violet-100">
                         {caption}
                     </span>
                 </div>
