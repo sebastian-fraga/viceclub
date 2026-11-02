@@ -144,5 +144,5 @@ export const GAME_SECTIONS: Record<GameId, SectionId[]> = {
     VCS: STORIES_SECTIONS,
     IV: FULL_SECTIONS,
     V: FULL_SECTIONS,
-    VI: ["inicio", "artworks", "timeline"],
+    VI: ["inicio", "artworks", "radio", "timeline"],
 };
