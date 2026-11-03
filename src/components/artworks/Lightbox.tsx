@@ -191,6 +191,7 @@ export function Lightbox({
         <div
             role="dialog"
             aria-modal="true"
+            aria-label={caption}
             className={`fixed z-40 flex flex-col bg-black left-(--sidebar-width) right-0 top-[calc(var(--banner-height)+var(--header-height))] bottom-0 transition-[top,opacity] duration-[700ms,400ms] ease-in-out ${
                 isClosing ? "opacity-0" : "opacity-100"
             }`}
