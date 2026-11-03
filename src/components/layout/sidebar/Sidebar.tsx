@@ -177,7 +177,9 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         <>
             <AnimatePresence>
                 {isMobile && mobileOpen && (
-                    <motion.div
+                    <motion.button
+                        type="button"
+                        aria-label={t("common.accessibility.closeMenu")}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
