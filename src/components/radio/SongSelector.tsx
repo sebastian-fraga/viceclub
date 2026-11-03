@@ -120,7 +120,7 @@ export function SongSelector({
 
     const cardSpacing = compact
         ? "px-4 max-mobile:pl-3 max-mobile:pr-0 py-4 gap-3"
-        : "px-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5";
+        : "pl-6 max-mobile:pl-4 max-mobile:pr-6 py-10 max-mobile:py-6 gap-8 max-mobile:gap-5";
 
     const selectorClasses =
         "text-gray-300/80 flex flex-col rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5";
