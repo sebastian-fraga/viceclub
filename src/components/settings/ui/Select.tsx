@@ -145,9 +145,11 @@ export default function Select({
 
                 <IconChevronDown
                     size={14}
-                    className={`text-gray-400 transition-colors duration-200 group-hover:text-indigo-200 ${
-                        open ? "rotate-180" : ""
-                    } ${disabled ? "text-white/20" : ""}`}
+                    className={`text-gray-400 transition-colors duration-200 ${
+                        disabled
+                            ? "text-white/20"
+                            : "group-hover:text-indigo-200"
+                    } ${open ? "rotate-180" : ""}`}
                 />
             </button>
 
