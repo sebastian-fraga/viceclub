@@ -6,7 +6,7 @@ import {
     IconSettings,
     IconX,
 } from "@tabler/icons-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
@@ -18,7 +18,6 @@ import {
 } from "@/config/games";
 
 import SidebarGame from "@/components/layout/sidebar/SidebarGame";
-import { useClickOutside } from "@/hooks/useClickOutside";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { useSidebarSounds } from "@/hooks/useSidebarSounds";
@@ -118,12 +117,6 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
         );
     }, [isMobile, mobileOpen]);
 
-    useClickOutside(
-        () => setMobileOpen(false),
-        [asideRef],
-        isMobile === true && mobileOpen && !settingsOpen,
-    );
-
     useSidebarSounds(asideRef as React.RefObject<HTMLElement>);
 
     const { activeGame, activeSection } = useMemo(() => {
@@ -174,196 +167,169 @@ function Sidebar({ currentPath: initialPath }: SidebarProps) {
     );
 
     return (
-        <>
-            <AnimatePresence>
-                {isMobile && mobileOpen && (
-                    <motion.button
-                        type="button"
-                        aria-label={t("common.accessibility.closeMenu")}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        onClick={() => setMobileOpen(false)}
-                        className="hidden max-mobile:block fixed inset-0 bg-black/60 z-15000"
-                    />
-                )}
-            </AnimatePresence>
-
-            <motion.aside
-                ref={asideRef}
-                initial={false}
-                animate={
-                    isMobile
-                        ? { x: mobileOpen ? 0 : "-100%", width: "100%" }
-                        : { width: expanded ? 224 : 88, x: 0 }
-                }
-                transition={{
-                    type: "spring",
-                    stiffness: 280,
-                    damping: 28,
-                }}
-                style={{
-                    paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
-                }}
-                className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0 max-mobile:h-dvh overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-white/10 z-15000 max-mobile:w-full transition-[top,height] duration-700 ease-in-out scroll-sidebar"
-                data-lenis-prevent
-            >
-                {isMobile && (
-                    <button
-                        type="button"
-                        onClick={() => setMobileOpen(false)}
-                        aria-label={t("sidebar.close")}
-                        className="absolute top-3 right-3 z-10 mt-1 p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/5 transition cursor-pointer"
-                    >
-                        <IconX size={22} />
-                    </button>
-                )}
-
-                <nav
-                    aria-label={t("sidebar.navigation")}
-                    className="flex flex-col justify-between items-stretch h-full min-h-0 gap-1 max-mobile:pt-16 p-2"
+        <motion.aside
+            ref={asideRef}
+            initial={false}
+            animate={
+                isMobile
+                    ? { x: mobileOpen ? 0 : "-100%", width: "100%" }
+                    : { width: expanded ? 224 : 88, x: 0 }
+            }
+            transition={{
+                type: "spring",
+                stiffness: 280,
+                damping: 28,
+            }}
+            style={{
+                paddingBottom: "max(2rem, env(safe-area-inset-bottom))",
+            }}
+            className="flex flex-col fixed left-0 top-[calc(var(--header-height)+var(--banner-height))] h-[calc(100vh-var(--header-height)-var(--banner-height))] max-mobile:top-0 max-mobile:h-dvh overflow-y-auto bg-[#15151F]/80 max-mobile:bg-[#15151F] backdrop-blur-md border-r border-white/10 z-15000 max-mobile:w-full transition-[top,height] duration-700 ease-in-out scroll-sidebar"
+            data-lenis-prevent
+        >
+            {isMobile && (
+                <button
+                    type="button"
+                    onClick={() => setMobileOpen(false)}
+                    aria-label={t("common.accessibility.closeMenu")}
+                    className="absolute top-3 right-3 z-10 mt-1 p-2 rounded-full text-slate-400 hover:text-white hover:bg-white/5 transition cursor-pointer"
                 >
-                    <div className="flex flex-col items-stretch w-full gap-1">
-                        <Tooltip
-                            label={t("sidebar.home")}
-                            position="right"
-                            disabled={showLabels}
-                        >
-                            {isHomeActive ? (
-                                <span
-                                    aria-current="page"
-                                    className={clsx(
-                                        baseNavButtonStyle,
-                                        "bg-(--button-bg-hover)/60 text-indigo-300 cursor-default",
-                                    )}
-                                >
-                                    <IconHomeFilled size={20} />
+                    <IconX size={22} />
+                </button>
+            )}
 
-                                    {showLabels && (
-                                        <span>{t("sidebar.home")}</span>
-                                    )}
-                                </span>
-                            ) : (
-                                <a
-                                    href={localePath(
-                                        "/",
-                                        i18n.language as Language,
-                                    )}
-                                    aria-label={
-                                        !showLabels
-                                            ? t("sidebar.home")
-                                            : undefined
-                                    }
-                                    className={clsx(
-                                        baseNavButtonStyle,
-                                        "text-slate-300 hover:bg-white/5 hover:text-white cursor-pointer",
-                                    )}
-                                >
-                                    <IconHome size={20} />
+            <nav
+                aria-label={t("sidebar.navigation")}
+                className="flex flex-col justify-between items-stretch h-full min-h-0 gap-1 max-mobile:pt-16 p-2"
+            >
+                <div className="flex flex-col items-stretch w-full gap-1">
+                    <Tooltip
+                        label={t("sidebar.home")}
+                        position="right"
+                        disabled={showLabels}
+                    >
+                        {isHomeActive ? (
+                            <span
+                                aria-current="page"
+                                className={clsx(
+                                    baseNavButtonStyle,
+                                    "bg-(--button-bg-hover)/60 text-indigo-300 cursor-default",
+                                )}
+                            >
+                                <IconHomeFilled size={20} />
 
-                                    {showLabels && (
-                                        <span>{t("sidebar.home")}</span>
-                                    )}
-                                </a>
-                            )}
-                        </Tooltip>
-
-                        <Tooltip
-                            label={t("sidebar.settings")}
-                            position="right"
-                            disabled={showLabels}
-                        >
-                            <button
-                                type="button"
-                                onClick={() => setSettingsOpen(true)}
+                                {showLabels && <span>{t("sidebar.home")}</span>}
+                            </span>
+                        ) : (
+                            <a
+                                href={localePath(
+                                    "/",
+                                    i18n.language as Language,
+                                )}
+                                aria-label={
+                                    !showLabels ? t("sidebar.home") : undefined
+                                }
                                 className={clsx(
                                     baseNavButtonStyle,
                                     "text-slate-300 hover:bg-white/5 hover:text-white cursor-pointer",
                                 )}
                             >
-                                <IconSettings size={20} />
+                                <IconHome size={20} />
 
-                                {showLabels && (
-                                    <span>{t("sidebar.settings")}</span>
-                                )}
-                            </button>
-                        </Tooltip>
-
-                        <div className="h-px bg-white/10 my-2 mx-1" />
-
-                        {showLabels && (
-                            <span className="px-2 py-1.5 text-[14px] font-body-condensed uppercase text-indigo-200/50">
-                                {t("sidebar.games")}
-                            </span>
+                                {showLabels && <span>{t("sidebar.home")}</span>}
+                            </a>
                         )}
+                    </Tooltip>
 
-                        {gamesList.map((game) => (
-                            <SidebarGame
-                                key={game.id}
-                                game={game}
-                                sections={GAME_SECTIONS[game.id]}
-                                isOpen={openGame === game.id}
-                                isActiveGame={activeGame === game.id}
-                                activeSection={activeSection}
-                                showLabels={showLabels}
-                                onToggle={() => toggleGame(game.id)}
-                            />
-                        ))}
-                    </div>
+                    <Tooltip
+                        label={t("sidebar.settings")}
+                        position="right"
+                        disabled={showLabels}
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setSettingsOpen(true)}
+                            className={clsx(
+                                baseNavButtonStyle,
+                                "text-slate-300 hover:bg-white/5 hover:text-white cursor-pointer",
+                            )}
+                        >
+                            <IconSettings size={20} />
 
-                    <div className="flex flex-col items-stretch w-full max-mobile:hidden">
-                        <div className="h-px bg-white/10 my-3 mx-1" />
+                            {showLabels && <span>{t("sidebar.settings")}</span>}
+                        </button>
+                    </Tooltip>
 
-                        <Tooltip
-                            label={
+                    <div className="h-px bg-white/10 my-2 mx-1" />
+
+                    {showLabels && (
+                        <span className="px-2 py-1.5 text-[14px] font-body-condensed uppercase text-indigo-200/50">
+                            {t("sidebar.games")}
+                        </span>
+                    )}
+
+                    {gamesList.map((game) => (
+                        <SidebarGame
+                            key={game.id}
+                            game={game}
+                            sections={GAME_SECTIONS[game.id]}
+                            isOpen={openGame === game.id}
+                            isActiveGame={activeGame === game.id}
+                            activeSection={activeSection}
+                            showLabels={showLabels}
+                            onToggle={() => toggleGame(game.id)}
+                        />
+                    ))}
+                </div>
+
+                <div className="flex flex-col items-stretch w-full max-mobile:hidden">
+                    <div className="h-px bg-white/10 my-3 mx-1" />
+
+                    <Tooltip
+                        label={
+                            expanded
+                                ? t("sidebar.collapse")
+                                : t("sidebar.expand")
+                        }
+                        position="right"
+                        disabled={expanded}
+                    >
+                        <button
+                            type="button"
+                            onClick={() => setExpanded((prev) => !prev)}
+                            aria-label={
                                 expanded
                                     ? t("sidebar.collapse")
                                     : t("sidebar.expand")
                             }
-                            position="right"
-                            disabled={expanded}
+                            className={clsx(
+                                baseNavButtonStyle,
+                                "text-slate-400 hover:bg-white/5 hover:text-slate-200 cursor-pointer",
+                            )}
                         >
-                            <button
-                                type="button"
-                                onClick={() => setExpanded((prev) => !prev)}
-                                aria-label={
-                                    expanded
-                                        ? t("sidebar.collapse")
-                                        : t("sidebar.expand")
-                                }
-                                className={clsx(
-                                    baseNavButtonStyle,
-                                    "text-slate-400 hover:bg-white/5 hover:text-slate-200 cursor-pointer",
-                                )}
-                            >
-                                <span className="shrink-0">
-                                    {expanded ? (
-                                        <div className="flex items-center gap-2">
-                                            <IconLayoutSidebarRightExpand
-                                                size={20}
-                                            />
-                                            <span className="text-sm">
-                                                {t("sidebar.collapse")}
-                                            </span>
-                                        </div>
-                                    ) : (
-                                        <IconLayoutSidebarLeftExpand
+                            <span className="shrink-0">
+                                {expanded ? (
+                                    <div className="flex items-center gap-2">
+                                        <IconLayoutSidebarRightExpand
                                             size={20}
                                         />
-                                    )}
-                                </span>
-                            </button>
-                        </Tooltip>
-                    </div>
-                </nav>
+                                        <span className="text-sm">
+                                            {t("sidebar.collapse")}
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <IconLayoutSidebarLeftExpand size={20} />
+                                )}
+                            </span>
+                        </button>
+                    </Tooltip>
+                </div>
+            </nav>
 
-                <SettingsModal
-                    open={settingsOpen}
-                    onClose={() => setSettingsOpen(false)}
-                />
-            </motion.aside>
-        </>
+            <SettingsModal
+                open={settingsOpen}
+                onClose={() => setSettingsOpen(false)}
+            />
+        </motion.aside>
     );
 }
 
