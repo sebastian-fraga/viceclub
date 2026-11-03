@@ -128,9 +128,10 @@ export default function SettingItem({
 
     const iconStyles = setting.destructive ? "text-red-400" : "text-yellow-200";
 
+    // Success messages aren't currently implemented, but these styles are kept for future use
     const descriptionStyles =
         statusMessage?.variant === "error"
-            ? "text-xs text-pretty text-red-400 max-mobile:max-w-90 pr-2"
+            ? "text-xs text-pretty text-red-300/80 max-mobile:max-w-60 max-mobile:text-pretty pr-4"
             : statusMessage?.variant === "success"
               ? "text-xs text-pretty text-emerald-400 max-mobile:max-w-90 pr-2"
               : "text-xs text-pretty text-gray-400 max-mobile:max-w-90 pr-2";
