@@ -63,9 +63,7 @@ export function RadioFullscreen({
                 <button
                     type="button"
                     onClick={onClose}
-                    aria-label={t("radio.common.close", {
-                        defaultValue: "Cerrar",
-                    })}
+                    aria-label={t("common.accessibility.close")}
                     className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-slate-200 active:bg-white/10"
                 >
                     <IconChevronDown size={28} />
