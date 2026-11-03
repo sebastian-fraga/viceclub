@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import type { RadioStation } from "./types/types";
 
-import type { GameId } from "@/config/games";
 import RadioImage from "@/components/radio/RadioImage";
+import CountBadge from "@/components/ui/CountBadge";
+import type { GameId } from "@/config/games";
 
 interface StationSelectorProps {
     game: GameId;
@@ -55,14 +56,22 @@ export function StationSelector({
 
     return (
         <motion.div
-            className="flex flex-col px-4 py-6 rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
+            className="flex flex-col pl-3 py-6 rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_45%,transparent)] shadow-2xl shadow-pink-300/5 text-slate-50 min-h-0 h-full"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
-            <h3 className="mb-3 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
-                {t("radio.stations.title")}
-            </h3>
+            <div className="flex items-center gap-3 mb-3 pl-4 max-mobile:pl-3">
+                <h3 className=" text-2xl max-mobile:text-xl font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
+                    {t("radio.stations.title")}
+                </h3>
+                <CountBadge
+                    count={stations.length}
+                    backgroundColor="color-mix(in oklch, var(--radio-station-accent) 90%, black)"
+                    color="color-mix(in oklch, var(--radio-station-accent) 15%, white)"
+                />
+            </div>
+
             <div
                 ref={scrollRef}
                 onScroll={handleScroll}
