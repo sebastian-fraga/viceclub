@@ -103,7 +103,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                                 type="button"
                                 onClick={handleClose}
                                 className="absolute right-3 top-3 p-2 text-slate-400 hover:text-white transition cursor-pointer z-10"
-                                aria-label={t("sidebar.close")}
+                                aria-label={t("common.accessibility.close")}
                             >
                                 <IconX size={20} />
                             </button>
