@@ -1,16 +1,16 @@
 import FeaturedMod from "@/components/mods/FeaturedMod";
 import ModModal from "@/components/mods/ModModal";
 import ModsGrid from "@/components/mods/ModsGrid";
+import NotFoundContent from "@/components/ui/NotFoundContent";
 import { MultiSelector } from "@/components/ui/selector/MultiSelector";
 import Title from "@/components/ui/Title";
 import { gamesList, type GameId } from "@/config/games";
 import { MOD_CATEGORIES, type ModCategoryId } from "@/data/mods/categories";
 import type { ModEntry } from "@/data/mods/types";
-import { useModParam } from "./hooks/useModParam";
 import useT from "@/hooks/useT";
-import { IconMoodPuzzled } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useModParam } from "./hooks/useModParam";
 import "./mods.css";
 
 interface Props {
@@ -83,10 +83,7 @@ export default function ModsContainer({ gameId, mods }: Props) {
                 <div className="">
                     <ModsGrid mods={normalMods} onSelect={handleSelectMod} />
                     {normalMods.length === 0 && (
-                        <div className="flex flex-col justify-center items-center gap-4 bg-(--button-bg)/80 py-20 rounded-2xl">
-                            <IconMoodPuzzled />
-                            <p>{i18n("common.other.notAvailable")}</p>
-                        </div>
+                        <NotFoundContent variant="panel" />
                     )}
                 </div>
             </motion.section>
