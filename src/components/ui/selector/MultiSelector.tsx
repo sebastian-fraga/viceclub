@@ -1,6 +1,6 @@
 import DropdownSelector from "@/components/ui/selector/DropdownSelector";
 import useT from "@/hooks/useT";
-import type { ComponentType, ReactNode } from "react";
+import type { ComponentType } from "react";
 import { useTranslation } from "react-i18next";
 
 export interface MultiSelectorOption<
