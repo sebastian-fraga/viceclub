@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { BR, ES, FR, GB } from "country-flag-icons/react/3x2";
 
+import { useClickOutside } from "@/hooks/useClickOutside";
 import type { SelectOption, SelectSetting } from "@/types/settings";
 
 const MENU_MARGIN = 8;
@@ -49,6 +50,7 @@ export default function Select({
         openUp: false,
     });
     const buttonRef = useRef<HTMLButtonElement>(null);
+    const menuRef = useRef<HTMLUListElement>(null);
     const selectOptions = options ?? setting.options;
 
     const flags = {
@@ -61,6 +63,8 @@ export default function Select({
     const selectedOption = selectOptions.find(
         (option) => option.value === value,
     );
+
+    useClickOutside(() => setOpen(false), [buttonRef, menuRef], open);
 
     useLayoutEffect(() => {
         if (!open || !buttonRef.current) return;
@@ -96,9 +100,19 @@ export default function Select({
         if (!open) return;
 
         const close = () => setOpen(false);
-        window.addEventListener("resize", close);
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setOpen(false);
+        };
 
-        return () => window.removeEventListener("resize", close);
+        window.addEventListener("resize", close);
+        window.addEventListener("scroll", close, { passive: true });
+        window.addEventListener("keydown", onKeyDown);
+
+        return () => {
+            window.removeEventListener("resize", close);
+            window.removeEventListener("scroll", close);
+            window.removeEventListener("keydown", onKeyDown);
+        };
     }, [open]);
 
     const SelectedFlag = selectedOption
@@ -141,84 +155,74 @@ export default function Select({
                 createPortal(
                     <AnimatePresence>
                         {open && (
-                            <>
-                                <div
-                                    className="fixed inset-0 z-20050"
-                                    onClick={() => setOpen(false)}
-                                    data-lenis-prevent
-                                />
-
-                                <motion.ul
-                                    role="listbox"
-                                    initial={{
-                                        opacity: 0,
-                                        y: coords.openUp ? 4 : -4,
-                                        scale: 0.97,
-                                    }}
-                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    exit={{
-                                        opacity: 0,
-                                        y: coords.openUp ? 4 : -4,
-                                        scale: 0.97,
-                                    }}
-                                    transition={{ duration: 0.15 }}
-                                    style={{
-                                        top: coords.top,
-                                        bottom: coords.bottom,
-                                        right: coords.right,
-                                        minWidth: Math.min(
-                                            MENU_MIN_WIDTH,
-                                            coords.maxWidth,
-                                        ),
-                                        maxWidth: coords.maxWidth,
-                                        maxHeight: coords.maxHeight,
-                                    }}
-                                    className="fixed bg-[#1c1c28] rounded-lg shadow-2xl overflow-hidden z-20100 scroll-settings overflow-y-auto"
-                                    data-lenis-prevent
-                                >
-                                    {selectOptions.map((option) => {
-                                        return (
-                                            <li
-                                                key={option.value}
-                                                role="option"
-                                                aria-selected={
+                            <motion.ul
+                                ref={menuRef}
+                                role="listbox"
+                                initial={{
+                                    opacity: 0,
+                                    y: coords.openUp ? 4 : -4,
+                                    scale: 0.97,
+                                }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                exit={{
+                                    opacity: 0,
+                                    y: coords.openUp ? 4 : -4,
+                                    scale: 0.97,
+                                }}
+                                transition={{ duration: 0.15 }}
+                                style={{
+                                    top: coords.top,
+                                    bottom: coords.bottom,
+                                    right: coords.right,
+                                    minWidth: Math.min(
+                                        MENU_MIN_WIDTH,
+                                        coords.maxWidth,
+                                    ),
+                                    maxWidth: coords.maxWidth,
+                                    maxHeight: coords.maxHeight,
+                                }}
+                                className="fixed bg-[#1c1c28] rounded-lg shadow-2xl overflow-hidden z-20100 scroll-settings overflow-y-auto"
+                                data-lenis-prevent
+                            >
+                                {selectOptions.map((option) => {
+                                    return (
+                                        <li
+                                            key={option.value}
+                                            role="option"
+                                            aria-selected={
+                                                option.value === value
+                                            }
+                                        >
+                                            <button
+                                                type="button"
+                                                onClick={() => {
+                                                    onChange(option.value);
+                                                    setOpen(false);
+                                                }}
+                                                className={`flex items-center justify-between w-full px-3 py-3.5 text-xs text-left duration-200 transition-colors cursor-pointer ${
                                                     option.value === value
-                                                }
+                                                        ? "bg-(--button-bg) text-white"
+                                                        : "text-gray-200 hover:bg-(--button-bg-hover)/40 group"
+                                                }`}
                                             >
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        onChange(option.value);
-                                                        setOpen(false);
-                                                    }}
-                                                    className={`flex items-center justify-between w-full px-3 py-3.5 text-xs text-left duration-200 transition-colors cursor-pointer ${
-                                                        option.value === value
-                                                            ? "bg-(--button-bg) text-white"
-                                                            : "text-gray-200 hover:bg-(--button-bg-hover)/40 group"
-                                                    }`}
-                                                >
-                                                    <div className="flex items-center gap-2">
-                                                        <span className="font-medium px-3">
-                                                            {t(option.label)}
-                                                        </span>
-                                                    </div>
+                                                <div className="flex items-center gap-2">
+                                                    <span className="font-medium px-3">
+                                                        {t(option.label)}
+                                                    </span>
+                                                </div>
 
-                                                    <input
-                                                        type="radio"
-                                                        checked={
-                                                            option.value ===
-                                                            value
-                                                        }
-                                                        readOnly
-                                                        tabIndex={-1}
-                                                        className="appearance-none w-4 h-4 rounded-full border-2 border-indigo-300/25 bg-[#1c1c28] relative cursor-pointer transition-colors duration-150 checked:border-indigo-300/80 group-hover:border-indigo-300 before:absolute before:inset-1 before:rounded-full before:bg-indigo-300/80 before:scale-0 checked:before:scale-200 before:transition-transform before:duration-150"
-                                                    />
-                                                </button>
-                                            </li>
-                                        );
-                                    })}
-                                </motion.ul>
-                            </>
+                                                <span
+                                                    aria-hidden="true"
+                                                    data-checked={
+                                                        option.value === value
+                                                    }
+                                                    className="w-4 h-4 shrink-0 rounded-full border-2 border-indigo-300/25 bg-[#1c1c28] relative transition-colors duration-150 data-[checked=true]:border-indigo-300/80 group-hover:border-indigo-300 before:absolute before:inset-1 before:rounded-full before:bg-indigo-300/80 before:scale-0 data-[checked=true]:before:scale-200 before:transition-transform before:duration-150"
+                                                />
+                                            </button>
+                                        </li>
+                                    );
+                                })}
+                            </motion.ul>
                         )}
                     </AnimatePresence>,
                     document.body,
