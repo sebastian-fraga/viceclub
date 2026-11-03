@@ -1426,7 +1426,6 @@ export default {
         },
     },
     sidebar: {
-        close: "Cerrar menú",
         home: "Inicio",
         settings: "Ajustes",
         games: "Juegos",
