@@ -14,7 +14,8 @@ body {
     }
 }
 
-.scroll-home-dropdown, .scroll-home-variant-selector {
+.scroll-home-dropdown,
+.scroll-home-variant-selector {
     --sb-track-color: #1C222524;
     --sb-thumb-color: #fbf9c8;
     --sb-size: 4px;
@@ -38,11 +39,15 @@ body {
 }
 
 .scroll-radio {
-    --sb-thumb-color: rgba(251, 249, 200, 0.55);
-    --sb-size: 4px;
-
-    scrollbar-width: thin;
-    scrollbar-color: var(--sb-thumb-color) transparent;
+    --sb-track-color: color-mix(in oklch,
+            var(--radio-station-accent, hsl(58 86% 88%)) 30%,
+            transparent);
+    --sb-thumb-color: color-mix(in oklch,
+            color-mix(in oklch,
+                var(--radio-station-accent, hsl(58 86% 88%)) 70%,
+                white) 55%,
+            transparent);
+    --sb-size: 6px;
 
     &::-webkit-scrollbar {
         width: var(--sb-size);
@@ -54,11 +59,19 @@ body {
     }
 
     &::-webkit-scrollbar-track {
-        background: transparent;
+        background: var(--sb-track-color);
+        border-radius: 999px;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-width: thin;
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
 }
 
-.scroll-settings, .scroll-sidebar, .scroll-mod {
+.scroll-settings,
+.scroll-sidebar,
+.scroll-mod {
     --sb-track-color: #1c222525;
     --sb-thumb-color: #9a9a9a5e;
     --sb-size: 4px;
@@ -98,7 +111,8 @@ body {
             transparent 100%);
 }
 
-.scroll-selector, .scroll-map {
+.scroll-selector,
+.scroll-map {
     scroll-behavior: smooth;
 
     scrollbar-width: thin;
