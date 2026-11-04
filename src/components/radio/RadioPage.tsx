@@ -11,6 +11,7 @@ import { getNextSeekTarget, getPrevSeekTarget } from "./lib/getAdjacentSong";
 import { RadioFullscreen } from "./RadioFullscreen";
 import RadioPlayer from "./RadioPlayer";
 import type { RadioStation } from "./types/types";
+import { useIsAtBottom } from "@/hooks/useIsAtBottom";
 
 interface RadioPageProps {
     stations: RadioStation[];
@@ -95,25 +96,7 @@ export default function RadioPage({
     const isFullscreenVisible =
         isMobile === true && isFullscreenOpen && radio.activeStation !== null;
 
-    const [isAtBottom, setIsAtBottom] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const isBottom =
-                window.innerHeight + window.scrollY >=
-                document.documentElement.scrollHeight - 75;
-
-            setIsAtBottom(isBottom);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        handleScroll();
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    const isAtBottom = useIsAtBottom();
 
     return (
         <div
