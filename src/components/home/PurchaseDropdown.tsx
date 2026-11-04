@@ -194,7 +194,6 @@ export default function PurchaseDropdown({
 
             <motion.div layout className="overflow-hidden">
                 <AnimatePresence mode="wait" custom={direction}>
-                    {/* El wrapper define el espacio: cada estado tiene el suyo */}
                     <motion.div
                         key={selectedPlatform}
                         variants={listVariants}
