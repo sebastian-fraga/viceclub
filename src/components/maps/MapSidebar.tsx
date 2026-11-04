@@ -1,12 +1,13 @@
 import SectionContent from "@/components/maps/SectionContent";
 import SectionHeader from "@/components/maps/SectionHeader";
-import type { TypeMeta } from "@/components/maps/utils/sectionUtils";
 import type { CollectibleData } from "@/components/maps/types";
 import {
     MAP_CATEGORIES,
     type MapCategory,
 } from "@/components/maps/types/categories";
+import type { TypeMeta } from "@/components/maps/utils/sectionUtils";
 import { MAP_MARKERS } from "@/data/maps/markers";
+import { useIsAtBottom } from "@/hooks/useIsAtBottom";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import useT from "@/hooks/useT";
 import { themeToCssVars } from "@/lib/theme";
@@ -78,6 +79,8 @@ export default function MapSidebar({
 
     if (sections.length === 0) return null;
 
+    const isAtBottom = useIsAtBottom();
+
     return (
         <>
             <aside
@@ -121,21 +124,29 @@ export default function MapSidebar({
 
             <div className="hidden max-mobile:block">
                 <AnimatePresence>
-                    {!isOpen && (
-                        <motion.button
-                            type="button"
-                            onClick={() => setIsOpen(true)}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 20 }}
-                            transition={{ duration: 0.2 }}
-                            className="fixed bottom-12 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-(--button-bg)/95 px-5 py-3 font-body-condensed text-base text-white shadow-2xl shadow-black/40 backdrop-blur-md cursor-pointer hover:bg-(--button-bg-hover) transition duration-300"
+                    {!isOpen && !isAtBottom && (
+                        <motion.div
+                            initial={{ y: "100%", opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: "100%", opacity: 0 }}
+                            transition={{
+                                type: "tween",
+                                duration: 0.45,
+                                ease: "easeInOut",
+                            }}
+                            className="fixed bottom-12 left-[calc(50%+var(--sidebar-width)/2)] -translate-x-1/2 z-1000 max-mobile:left-1/2"
                         >
-                            <IconFilter size={18} />
-                            <span className="uppercase">
-                                {i18n("maps.markers.title")}
-                            </span>
-                        </motion.button>
+                            <button
+                                type="button"
+                                onClick={() => setIsOpen(true)}
+                                className="flex items-center gap-2 rounded-full bg-(--button-bg)/95 px-5 py-3 font-body-condensed text-base text-white shadow-2xl shadow-black/40 backdrop-blur-md cursor-pointer hover:bg-(--button-bg-hover) transition-colors duration-300"
+                            >
+                                <IconFilter size={18} />
+                                <span className="uppercase">
+                                    {i18n("maps.markers.title")}
+                                </span>
+                            </button>
+                        </motion.div>
                     )}
                 </AnimatePresence>
 
