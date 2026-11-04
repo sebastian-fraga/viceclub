@@ -14,6 +14,7 @@ import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
 
 import RadioImage from "@/components/radio/RadioImage";
 import SongLabel from "@/components/radio/SongLabel";
+import CountBadge from "@/components/ui/CountBadge";
 import NotFoundContent from "@/components/ui/NotFoundContent";
 import { Tooltip } from "@/components/ui/Tooltip";
 import type { GameId } from "@/config/games";
@@ -286,9 +287,16 @@ export function SongSelector({
                     )}
 
                     <div className="pt-1 flex-1 min-h-0 flex flex-col">
-                        <p className="mb-2 text-2xl max-mobile:text-xl pl-4 max-mobile:pl-3 font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
-                            {t("radio.tracks")}
-                        </p>
+                        <div className="flex items-center gap-3 mb-3 pl-4 max-mobile:pl-3">
+                            <p className=" text-2xl max-mobile:text-xl font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
+                                {t("radio.tracks")}
+                            </p>
+                            <CountBadge
+                                count={songs.length}
+                                backgroundColor="color-mix(in oklch, var(--radio-station-accent) 90%, black)"
+                                color="color-mix(in oklch, var(--radio-station-accent) 15%, white)"
+                            />
+                        </div>
                         {hasSongs ? (
                             <ul
                                 key={activePlaylist.id}
@@ -407,7 +415,7 @@ export function SongSelector({
                                                         <div className="flex items-center gap-2 min-w-0 max-mobile:gap-1">
                                                             <span
                                                                 className={clsx(
-                                                                    "font-medium max-w-100 max-mobile:max-w-60 truncate max-mobile:text-sm transition",
+                                                                    "min-w-0 font-medium max-w-100 max-mobile:max-w-75 truncate max-mobile:text-sm transition",
                                                                     isActive
                                                                         ? "text-[color-mix(in_oklch,var(--radio-station-accent)_50%,black)]"
                                                                         : "text-[color-mix(in_oklch,var(--radio-station-accent)_30%,white)]",
@@ -421,7 +429,7 @@ export function SongSelector({
                                                             <SongLabel
                                                                 song={song}
                                                                 className={clsx(
-                                                                    "text-xs ml-1 pt-0.5 pb-0.5",
+                                                                    "shrink-0 text-xs ml-1 mr-4 pt-0.5 pb-0.5",
                                                                     !isActive &&
                                                                         "opacity-60",
                                                                 )}
@@ -433,7 +441,7 @@ export function SongSelector({
 
                                                         <span
                                                             className={clsx(
-                                                                "text-sm max-mobile:text-xs font-medium truncate max-mobile:max-w-60 transition",
+                                                                "text-sm max-mobile:text-xs font-medium truncate transition",
                                                                 isActive
                                                                     ? "text-[color-mix(in_oklch,var(--radio-station-accent)_95%,white)]"
                                                                     : "text-[color-mix(in_oklch,var(--radio-station-accent)_60%,white)]",
