@@ -62,7 +62,7 @@ export function StationSelector({
             transition={{ type: "spring", stiffness: 260, damping: 24 }}
         >
             <div className="flex items-center gap-3 mb-3 pl-4 max-mobile:pl-3">
-                <h3 className=" text-2xl max-mobile:text-xl font-medium font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
+                <h3 className=" text-2xl max-mobile:text-xl font-body-condensed text-[color-mix(in_oklch,var(--radio-station-accent)_20%,white)]">
                     {t("radio.stations.title")}
                 </h3>
                 <CountBadge

@@ -119,7 +119,7 @@ export default function SettingsModal({ open, onClose }: Props) {
                                         <IconChevronLeft size={22} />
                                     </button>
                                 )}
-                                <h2 className="text-2xl max-mobile:text-xl leading-tight font-bold font-body-condensed">
+                                <h2 className="text-2xl max-mobile:text-xl leading-tight font-body-condensed">
                                     {currentStep === "main" &&
                                         t("settings.title")}
                                     {currentStep === "reset" &&

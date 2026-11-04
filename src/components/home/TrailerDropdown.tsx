@@ -37,7 +37,7 @@ export default function TrailerDropdown({
                 <div className="w-6 max-mobile:w-5">
                     <YouTubeIcon />
                 </div>
-                <span className="font-black text-xl font-body-condensed max-mobile:text-sm">
+                <span className="text-xl font-body-condensed max-mobile:text-sm">
                     YouTube
                 </span>
             </div>

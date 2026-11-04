@@ -121,7 +121,7 @@ export default function CharacterCard({ character, variantId }: Props) {
                         />
 
                         <span
-                            className={`absolute right-4 top-4 z-10 rounded-full px-4 py-1 text-[14px] font-extrabold uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${BACKFACE} ${statusStyle}`}
+                            className={`absolute right-4 top-4 z-10 rounded-full px-4 py-1 text-[14px] uppercase font-body-condensed max-mobile:right-1.5 max-mobile:top-2.5 max-mobile:px-5 max-mobile:py-1 max-mobile:text-[12px] ${BACKFACE} ${statusStyle}`}
                         >
                             {t(
                                 `home.characters.statusLabel.${character.status}`,

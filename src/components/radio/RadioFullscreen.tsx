@@ -69,7 +69,7 @@ export function RadioFullscreen({
                     <IconChevronDown size={28} />
                 </button>
 
-                <h2 className="truncate text-center text-lg font-medium uppercase font-body-condensed">
+                <h2 className="truncate text-center text-lg uppercase font-body-condensed">
                     {stationName}
                 </h2>
             </header>

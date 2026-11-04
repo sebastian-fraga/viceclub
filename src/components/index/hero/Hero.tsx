@@ -166,7 +166,7 @@ export default function Hero() {
                         duration: 0.9,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="text-8xl max-mobile:text-6xl text-balance font-black text-yellow-100 uppercase font-body-condensed"
+                    className="text-8xl max-mobile:text-6xl text-balance text-yellow-100 uppercase font-body-condensed"
                 >
                     {t("index.welcome.title")}
                 </motion.h1>

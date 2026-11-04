@@ -13,7 +13,7 @@ export default function Title({ label, options, align = "center" }: Props) {
 
     return (
         <h2
-            className={`text-5xl max-mobile:text-4xl/10 text-white uppercase font-bold tracking-wide mb-2 font-body-condensed text-pretty ${
+            className={`text-5xl max-mobile:text-4xl/10 text-white uppercase tracking-wide mb-2 font-body-condensed text-pretty ${
                 isCentered ? "text-center max-mobile:px-12" : "text-left"
             }`}
         >

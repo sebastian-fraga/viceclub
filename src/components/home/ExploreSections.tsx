@@ -158,7 +158,7 @@ export default function ExploreSections({ game, variantId }: Props) {
                           : 0;
 
                     const bentoBadge =
-                        "absolute left-4 top-4 max-mobile:left-3 max-mobile:top-3 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] font-black tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide";
+                        "absolute left-4 top-4 max-mobile:left-3 max-mobile:top-3 z-20 flex gap-px rounded-2xl bg-(--game-accent)/80 px-6 py-1.5 text-[12px] tabular-nums text-(--game-buttons-primary-text)/90 font-body-condensed tracking-wide";
 
                     const hasVariants = Boolean(game.variants?.length);
 
