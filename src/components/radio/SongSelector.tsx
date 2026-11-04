@@ -9,17 +9,15 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { useDragToScroll } from "./hooks/useDragToScroll";
-import { useHorizontalScrollMask } from "./hooks/useHorizontalScrollMask";
-
 import RadioImage from "@/components/radio/RadioImage";
 import SongLabel from "@/components/radio/SongLabel";
 import CountBadge from "@/components/ui/CountBadge";
 import NotFoundContent from "@/components/ui/NotFoundContent";
-import { Tooltip } from "@/components/ui/Tooltip";
 import type { GameId } from "@/config/games";
 import clsx from "clsx";
 import { EqualizerBars } from "./EqualizerBars";
+import { InfoChips } from "./InfoChips";
+import { PlaylistTabs } from "./PlaylistTabs";
 import { formatTime } from "./lib/formatTime";
 import { translateRadioText } from "./lib/translateRadioText";
 import type { Playlist, RadioStation } from "./types/types";
@@ -60,21 +58,6 @@ export function SongSelector({
     const [canScrollUp, setCanScrollUp] = useState(false);
     const [canScrollDown, setCanScrollDown] = useState(false);
 
-    const genresScroll = useHorizontalScrollMask<HTMLDivElement>();
-    const djsScroll = useHorizontalScrollMask<HTMLDivElement>();
-    const playlistsScroll = useHorizontalScrollMask<HTMLDivElement>();
-
-    const genresDrag = useDragToScroll<HTMLDivElement>();
-    const djsDrag = useDragToScroll<HTMLDivElement>();
-    const playlistsDrag = useDragToScroll<HTMLDivElement>();
-
-    useEffect(() => {
-        genresScroll.updateScrollState();
-        djsScroll.updateScrollState();
-        playlistsScroll.updateScrollState();
-        updateScrollState();
-    }, [activePlaylist]);
-
     const updateScrollState = () => {
         const el = scrollRef.current;
         if (!el) return;
@@ -82,18 +65,17 @@ export function SongSelector({
         setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 1);
     };
 
+    useEffect(() => {
+        updateScrollState();
+    }, [activePlaylist]);
+
     const handleScroll = () => updateScrollState();
 
-    const updateAllMasksRef = useRef(() => {});
-    updateAllMasksRef.current = () => {
-        updateScrollState();
-        genresScroll.updateScrollState();
-        djsScroll.updateScrollState();
-        playlistsScroll.updateScrollState();
-    };
+    const updateScrollStateRef = useRef(updateScrollState);
+    updateScrollStateRef.current = updateScrollState;
 
     const handleCardMount = useCallback((el: HTMLDivElement | null) => {
-        if (el) updateAllMasksRef.current();
+        if (el) updateScrollStateRef.current();
     }, []);
 
     useEffect(() => {
@@ -164,7 +146,7 @@ export function SongSelector({
                     )}
 
                     {!compact && (
-                        <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start">
+                        <div className="grid w-full min-w-0 grid-cols-[104px_minmax(0,1fr)] max-mobile:grid-cols-1 gap-6 max-mobile:gap-3 max-mobile:mb-4 max-mobile:mt-2 items-start pr-4">
                             <div className="flex aspect-square w-full items-center justify-center bg-[color-mix(in_oklch,var(--radio-station-accent)_40%,black)] rounded-xl p-2 max-mobile:mx-auto max-mobile:h-40 max-mobile:w-40">
                                 <RadioImage station={station} game={game} />
                             </div>
@@ -174,117 +156,37 @@ export function SongSelector({
                                     {stationName}
                                 </h3>
 
-                                {activePlaylist.genres.length > 0 && (
-                                    <div
-                                        ref={genresScroll.scrollRef}
-                                        onScroll={genresScroll.handleScroll}
-                                        {...genresDrag}
-                                        className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
-                                        style={{
-                                            maskImage: genresScroll.maskImage,
-                                            WebkitMaskImage:
-                                                genresScroll.maskImage,
-                                        }}
-                                    >
-                                        {activePlaylist.genres.map((genre) => (
-                                            <div
-                                                key={genre}
-                                                className="flex items-center gap-2 bg-violet-400/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
-                                            >
-                                                <Tooltip
-                                                    position="bottom"
-                                                    label={t(
-                                                        "radio.common.genre",
-                                                    )}
-                                                >
-                                                    <IconMusic className="text-violet-400 shrink-0 cursor-help" />
-                                                </Tooltip>
+                                <InfoChips
+                                    items={activePlaylist.genres}
+                                    icon={IconMusic}
+                                    tooltipLabel={t("radio.common.genre")}
+                                    getLabel={(genre) =>
+                                        t(`radio.genres.${genre}`, {
+                                            defaultValue: genre,
+                                        })
+                                    }
+                                    chipClassName="bg-violet-400/20"
+                                    iconClassName="text-violet-400"
+                                    textClassName="text-violet-200"
+                                />
 
-                                                <span className="text-violet-200 text-base max-mobile:text-sm truncate font-medium min-w-0">
-                                                    {t(
-                                                        `radio.genres.${genre}`,
-                                                        {
-                                                            defaultValue: genre,
-                                                        },
-                                                    )}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-
-                                {activePlaylist.djs.length > 0 && (
-                                    <div
-                                        ref={djsScroll.scrollRef}
-                                        onScroll={djsScroll.handleScroll}
-                                        {...djsDrag}
-                                        className="flex flex-wrap @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain gap-2 w-full min-w-0"
-                                        style={{
-                                            maskImage: djsScroll.maskImage,
-                                            WebkitMaskImage:
-                                                djsScroll.maskImage,
-                                        }}
-                                    >
-                                        {activePlaylist.djs.map((dj) => (
-                                            <div
-                                                key={dj}
-                                                className="flex items-center gap-2 bg-yellow-200/20 px-8 max-mobile:px-3 py-1.5 rounded-full shrink-0 max-w-full max-mobile:first:ml-auto max-mobile:last:mr-auto"
-                                            >
-                                                <Tooltip
-                                                    position="bottom"
-                                                    label={t("radio.common.dj")}
-                                                >
-                                                    <IconHeadphones className="text-yellow-200 shrink-0 cursor-help" />
-                                                </Tooltip>
-
-                                                <span className="text-yellow-100 text-base max-mobile:text-sm truncate min-w-0 font-medium">
-                                                    {dj}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
+                                <InfoChips
+                                    items={activePlaylist.djs}
+                                    icon={IconHeadphones}
+                                    tooltipLabel={t("radio.common.dj")}
+                                    chipClassName="bg-yellow-200/20"
+                                    iconClassName="text-yellow-200"
+                                    textClassName="text-yellow-100"
+                                />
                             </div>
                         </div>
                     )}
 
-                    {station.playlists.length > 1 && (
-                        <div
-                            ref={playlistsScroll.scrollRef}
-                            onScroll={playlistsScroll.handleScroll}
-                            {...playlistsDrag}
-                            className="flex flex-wrap gap-2 w-full min-w-0 @max-2xl:flex-nowrap @max-2xl:overflow-x-auto scrollbar-hide @max-2xl:cursor-grab @max-2xl:select-none @max-2xl:overscroll-x-contain"
-                            style={{
-                                maskImage: playlistsScroll.maskImage,
-                                WebkitMaskImage: playlistsScroll.maskImage,
-                            }}
-                        >
-                            {station.playlists.map((playlist) => {
-                                const isActive =
-                                    playlist.id === activePlaylist.id;
-
-                                return (
-                                    <button
-                                        key={playlist.id}
-                                        onClick={() =>
-                                            onSelectPlaylist(playlist.id)
-                                        }
-                                        aria-pressed={isActive}
-                                        data-active={isActive}
-                                        className={clsx(
-                                            "shrink-0 px-4 max-mobile:px-3 py-1.5 rounded-full text-sm max-mobile:text-xs font-medium transition-colors cursor-pointer truncate max-w-[25ch]",
-                                            "focus-visible:outline-none focus-visible:ring focus-visible:ring-violet-400",
-                                            isActive
-                                                ? "bg-violet-400 text-[#2B2939]"
-                                                : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white",
-                                        )}
-                                    >
-                                        {translateRadioText(playlist.name, t)}
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    )}
+                    <PlaylistTabs
+                        playlists={station.playlists}
+                        activePlaylistId={activePlaylist.id}
+                        onSelect={onSelectPlaylist}
+                    />
 
                     <div className="pt-1 flex-1 min-h-0 flex flex-col">
                         <div className="flex items-center gap-3 mb-3 pl-4 max-mobile:pl-3">
