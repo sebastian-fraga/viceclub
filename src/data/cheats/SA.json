@@ -1253,10 +1253,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Otorga el Cuchillo, Desert Eagle, Escopeta recortada, Tec-9, M4, Rifle de francotirador, Lanzallamas, Extintor y Granadas.",
-                            "en": "Grants the Knife, Desert Eagle, Sawn-off Shotgun, Tec-9, M4, Sniper Rifle, Flamethrower, Fire Extinguisher, and Grenades.",
-                            "fr": "Accorde le couteau, le Desert Eagle, le fusil à canon scié, le Tec-9, le M4, le fusil de précision, le lance-flammes, l’extincteur et les grenades.",
-                            "pt": "Concede a Faca, Desert Eagle, Escopeta de Cano Serrado, Tec-9, M4, Rifle de Precisão, Lança-chamas, Extintor de Incêndio e Granadas."
+                            "es": "Otorga el Cuchillo, Desert Eagle, Escopeta recortada, Tec-9, M4, Rifle de francotirador, Lanzallamas, Granadas y Extintor.",
+                            "en": "Grants the Knife, Desert Eagle, Sawn-off Shotgun, Tec-9, M4, Sniper Rifle, Flamethrower, Grenades and Fire Extinguisher.",
+                            "fr": "Accorde le couteau, le Desert Eagle, le fusil à canon scié, le Tec-9, le M4, le fusil de précision, le lance-flammes, les grenades et l’extincteur.",
+                            "pt": "Concede a Faca, Desert Eagle, Escopeta de Cano Serrado, Tec-9, M4, Rifle de Precisão, Lança-chamas, Granadas e Extintor de Incêndio e."
                         },
                         "noteType": "info"
                     }
@@ -2871,10 +2871,10 @@
             {
                 "id": "player_25",
                 "title": {
-                    "es": "Capacidad pulmonar al máximo",
-                    "en": "Maximum lung capacity",
-                    "fr": "Capacité pulmonaire au maximum",
-                    "pt": "Capacidade pulmonar no máximo"
+                    "es": "Capacidad pulmonar infinita",
+                    "en": "Infinite lung capacity",
+                    "fr": "Capacité pulmonaire illimitée",
+                    "pt": "Capacidade pulmonar ilimitada"
                 },
                 "codes": {
                     "ps2": [
@@ -4124,10 +4124,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "es": "Aparecer un Hotring Racer V2",
-                    "en": "Spawn Hotring Racer V2",
-                    "fr": "Faire apparaître un Hotring Racer V2",
-                    "pt": "Gerar um Hotring Racer V2"
+                    "es": "Aparecer un Hotring Racer V1",
+                    "en": "Spawn Hotring Racer V1",
+                    "fr": "Faire apparaître un Hotring Racer V1",
+                    "pt": "Gerar um Hotring Racer V1"
                 },
                 "codes": {
                     "ps2": [
@@ -4244,10 +4244,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "es": "Aparecer un Hotring Racer V3",
-                    "en": "Spawn Hotring Racer V3",
-                    "fr": "Faire apparaître un Hotring Racer V3",
-                    "pt": "Gerar um Hotring Racer V3"
+                    "es": "Aparecer un Hotring Racer V2",
+                    "en": "Spawn Hotring Racer V2",
+                    "fr": "Faire apparaître un Hotring Racer V2",
+                    "pt": "Gerar um Hotring Racer V2"
                 },
                 "codes": {
                     "ps2": [
@@ -4369,6 +4369,18 @@
                     "fr": "Faire apparaître un Rancher",
                     "pt": "Gerar um Rancher"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "<code>DOUGHNUTHANDICAP</code> en la Edición Definitiva",
+                            "en": "<code>DOUGHNUTHANDICAP</code> in the Definitive Edition",
+                            "fr": "<code>DOUGHNUTHANDICAP</code> dans Definitive Edition",
+                            "pt": "<code>DOUGHNUTHANDICAP</code> na Definitive Edition"
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "UP",
@@ -4460,7 +4472,7 @@
                         "Y",
                         "ZL"
                     ],
-                    "pc": ["JQNTDMH", "DOUGHNUTHANDICAP"]
+                    "pc": ["JQNTDMH"]
                 }
             },
             {
@@ -8543,10 +8555,10 @@
             {
                 "id": "peds_10",
                 "title": {
-                    "es": "Tráfico de coches rurales",
-                    "en": "Rural car traffic",
-                    "fr": "Circulation de voitures rurales",
-                    "pt": "Trânsito de carros rurais"
+                    "es": "Tráfico pobre",
+                    "en": "Poor traffic",
+                    "fr": "Circulation pauvre",
+                    "pt": "Trânsito pobre"
                 },
                 "codes": {
                     "ps2": [
@@ -9120,12 +9132,22 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2"],
+                        "platforms": ["ps2, pc"],
                         "note": {
                             "es": "Este truco estará activado si has completado las misiones de chulo con anterioridad.",
                             "en": "This cheat will be enabled if you have previously completed the pimping missions.",
                             "fr": "Ce code de triche sera activé si vous avez déjà terminé les missions de proxénète.",
                             "pt": "Esta trapaça estará ativada se você já tiver concluído as missões de cafetão."
+                        },
+                        "noteType": "info"
+                    },
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Solo disponible en la Edición Definitiva.",
+                            "en": "Only available in the Definitive Edition.",
+                            "fr": "Disponible uniquement dans l'Édition Définitive.",
+                            "pt": "Disponível apenas na Edição Definitiva."
                         },
                         "noteType": "info"
                     }
@@ -9229,7 +9251,8 @@
                         "UP",
                         "ZL",
                         "ZR"
-                    ]
+                    ],
+                    "pc": ["DOTHEPIMPCHEAT"]
                 }
             },
             {
@@ -9336,17 +9359,16 @@
                         "ZR",
                         "RIGHT",
                         "DOWN"
-                    ],
-                    "pc": ["ONLYHOMIESALLOWED"]
+                    ]
                 }
             },
             {
                 "id": "peds_17",
                 "title": {
-                    "es": "Las bandas aparecen en todos lados",
-                    "en": "Gangs appear everywhere",
-                    "fr": "Les gangs apparaissent partout",
-                    "pt": "As gangues aparecem por toda parte"
+                    "es": "Bandas de Los Santos en todas partes",
+                    "en": "Los Santos gangs everywhere",
+                    "fr": "Les gangs de Los Santos partout",
+                    "pt": "Gangues de Los Santos por toda parte"
                 },
                 "codes": {
                     "ps2": [
@@ -9457,7 +9479,7 @@
                         "Y",
                         "RIGHT"
                     ],
-                    "pc": ["MROEMZH"]
+                    "pc": ["MROEMZH", "ONLYHOMIESALLOWED"]
                 }
             },
             {
