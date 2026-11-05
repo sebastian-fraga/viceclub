@@ -531,10 +531,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Otorga la Katana, Granadas a control remoto, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
-                            "en": "Grants the Katana, Remote Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
-                            "fr": "Accorde le katana, les grenades télécommandées, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
-                            "pt": "Concede a Katana, Granadas por Controle Remoto, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
+                            "es": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
+                            "en": "Grants the Katana, Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
+                            "fr": "Accorde le katana, les grenades, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
+                            "pt": "Concede a Katana, Granadas, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
                         },
                         "noteType": "info"
                     }
@@ -1039,10 +1039,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto.",
-                            "en": "A message will appear on the interface when you have a high wanted level",
-                            "fr": "Un texte apparaîtra dans l'interface lorsque vous aurez un niveau de recherche élevé",
-                            "pt": "Uma mensagem aparecerá na interface ao ter um alto nível de procurado"
+                            "es": "Se mostrará un texto en la interfaz al tener un nivel de búsqueda alto y causar disturbios.",
+                            "en": "A message will appear in the interface when you have a high wanted level and cause disturbances.",
+                            "fr": "Un message apparaîtra à l'écran lorsque vous aurez un indice de recherche élevé et provoquerez des troubles.",
+                            "pt": "Uma mensagem aparecerá na interface quando você tiver um alto nível de procurado e causar distúrbios."
                         },
                         "noteType": "info"
                     }
@@ -1155,6 +1155,18 @@
                     "fr": "Changer le skin de Tommy",
                     "pt": "Mudar a skin do Tommy"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Para volver a la skin de Tommy, habrá que recargar la partida.",
+                            "en": "To return to Tommy's skin, you will need to reload the game.",
+                            "fr": "Pour revenir au skin de Tommy, vous devrez recharger la partie.",
+                            "pt": "Para voltar à skin do Tommy, será necessário recarregar a partida."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "RIGHT",
@@ -1263,6 +1275,18 @@
                     "fr": "Tommy maigre",
                     "pt": "Tommy magro"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Este truco no tiene diálogo de confirmación.",
+                            "en": "This cheat has no confirmation dialogue.",
+                            "fr": "Ce cheat ne possède pas de dialogue de confirmation.",
+                            "pt": "Este truque não possui diálogo de confirmação."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "pc": ["PROGRAMMER"]
                 }
@@ -1275,6 +1299,18 @@
                     "fr": "Tommy gros",
                     "pt": "Tommy gordo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Este truco no tiene diálogo de confirmación.",
+                            "en": "This cheat has no confirmation dialogue.",
+                            "fr": "Ce cheat ne possède pas de dialogue de confirmation.",
+                            "pt": "Este truque não possui diálogo de confirmação."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "pc": ["DEEPFRIEDMARSBARS"]
                 }
@@ -1287,6 +1323,18 @@
                     "fr": "Tommy fumeur",
                     "pt": "Tommy fumante"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Este truco no tiene diálogo de confirmación.",
+                            "en": "This cheat has no confirmation dialogue.",
+                            "fr": "Ce cheat ne possède pas de dialogue de confirmation.",
+                            "pt": "Este truque não possui diálogo de confirmação."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "pc": ["CERTAINDEATH"]
                 }
@@ -2805,11 +2853,23 @@
             {
                 "id": "vehicles_17",
                 "title": {
-                    "es": "Vehículos con ruedas gigantes",
-                    "en": "Vehicles with giant wheels",
-                    "fr": "Véhicules avec des roues géantes",
-                    "pt": "Veículos com rodas gigantes"
+                    "es": "El vehículo más cercano tendrá ruedas gigantes",
+                    "en": "The nearest vehicle will have giant wheels",
+                    "fr": "Le véhicule le plus proche aura des roues géantes",
+                    "pt": "O veículo mais próximo terá rodas gigantes"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Solo puede activarse una vez",
+                            "en": "Can only be activated once",
+                            "fr": "Ne peut être activé qu'une seule fois",
+                            "pt": "Só pode ser ativado uma vez"
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "R1",
@@ -5287,6 +5347,18 @@
                     "fr": "Réduire la vitesse du jeu",
                     "pt": "Diminuir velocidade do jogo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Son seis Os.",
+                            "en": "There are six O's.",
+                            "fr": "Il y a six O.",
+                            "pt": "São seis letras O."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "TRIANGLE",
