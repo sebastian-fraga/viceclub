@@ -384,258 +384,433 @@
             },
             {
                 "id": "vi-ss-16",
-                "caption": "Jason Duval 01"
+                "caption": {
+                    "es": "Jason y Lucia 16",
+                    "en": "Jason and Lucia 16",
+                    "fr": "Jason et Lucia 16",
+                    "pt": "Jason e Lucia 16"
+                }
             },
             {
                 "id": "vi-ss-17",
-                "caption": "Jason Duval 02"
+                "caption": {
+                    "es": "Jason y Lucia 17",
+                    "en": "Jason and Lucia 17",
+                    "fr": "Jason et Lucia 17",
+                    "pt": "Jason e Lucia 17"
+                }
             },
             {
                 "id": "vi-ss-18",
-                "caption": "Jason Duval 03"
+                "caption": {
+                    "es": "Jason y Lucia 18",
+                    "en": "Jason and Lucia 18",
+                    "fr": "Jason et Lucia 18",
+                    "pt": "Jason e Lucia 18"
+                }
             },
             {
                 "id": "vi-ss-19",
-                "caption": "Jason Duval 04"
+                "caption": {
+                    "es": "Jason y Lucia 19",
+                    "en": "Jason and Lucia 19",
+                    "fr": "Jason et Lucia 19",
+                    "pt": "Jason e Lucia 19"
+                }
             },
             {
                 "id": "vi-ss-20",
-                "caption": "Jason Duval 05"
+                "caption": {
+                    "es": "Jason y Lucia 20",
+                    "en": "Jason and Lucia 20",
+                    "fr": "Jason et Lucia 20",
+                    "pt": "Jason e Lucia 20"
+                }
             },
             {
                 "id": "vi-ss-21",
-                "caption": "Jason Duval 06"
+                "caption": {
+                    "es": "Jason y Lucia 21",
+                    "en": "Jason and Lucia 21",
+                    "fr": "Jason et Lucia 21",
+                    "pt": "Jason e Lucia 21"
+                }
             },
             {
                 "id": "vi-ss-22",
-                "caption": "Jason Duval 07"
+                "caption": {
+                    "es": "Jason y Lucia 22",
+                    "en": "Jason and Lucia 22",
+                    "fr": "Jason et Lucia 22",
+                    "pt": "Jason e Lucia 22"
+                }
             },
             {
                 "id": "vi-ss-23",
-                "caption": "Jason Duval 08"
+                "caption": "Jason Duval 01"
             },
             {
                 "id": "vi-ss-24",
-                "caption": "Jason Duval 09"
+                "caption": "Jason Duval 02"
             },
             {
                 "id": "vi-ss-25",
-                "caption": "Jason Duval 10"
+                "caption": "Jason Duval 03"
             },
             {
                 "id": "vi-ss-26",
-                "caption": "Jason Duval 11"
+                "caption": "Jason Duval 04"
             },
             {
                 "id": "vi-ss-27",
-                "caption": "Lucia Caminos 01"
+                "caption": "Jason Duval 05"
             },
             {
                 "id": "vi-ss-28",
-                "caption": "Lucia Caminos 02"
+                "caption": "Jason Duval 06"
             },
             {
                 "id": "vi-ss-29",
-                "caption": "Lucia Caminos 03"
+                "caption": "Jason Duval 07"
             },
             {
                 "id": "vi-ss-30",
-                "caption": "Lucia Caminos 04"
+                "caption": "Jason Duval 08"
             },
             {
                 "id": "vi-ss-31",
-                "caption": "Lucia Caminos 05"
+                "caption": "Jason Duval 09"
             },
             {
                 "id": "vi-ss-32",
-                "caption": "Lucia Caminos 06"
+                "caption": "Jason Duval 10"
             },
             {
                 "id": "vi-ss-33",
-                "caption": "Lucia Caminos 07"
+                "caption": "Jason Duval 11"
             },
             {
                 "id": "vi-ss-34",
-                "caption": "Lucia Caminos 08"
+                "caption": "Jason Duval 12"
             },
             {
                 "id": "vi-ss-35",
-                "caption": "Lucia Caminos 09"
+                "caption": "Jason Duval 13"
             },
             {
                 "id": "vi-ss-36",
-                "caption": "Lucia Caminos 10"
+                "caption": "Jason Duval 14"
             },
             {
                 "id": "vi-ss-37",
-                "caption": "Lucia Caminos 11"
+                "caption": "Jason Duval 15"
             },
             {
                 "id": "vi-ss-38",
-                "caption": "Cal Hampton 01"
+                "caption": "Jason Duval 16"
             },
             {
                 "id": "vi-ss-39",
-                "caption": "Cal Hampton 02"
+                "caption": "Jason Duval 17"
             },
             {
                 "id": "vi-ss-40",
-                "caption": "Cal Hampton 03"
+                "caption": "Jason Duval 18"
             },
             {
                 "id": "vi-ss-41",
-                "caption": "Cal Hampton 04"
+                "caption": "Jason Duval 19"
             },
             {
                 "id": "vi-ss-42",
-                "caption": "Boobie Ike 01"
+                "caption": "Jason Duval 20"
             },
             {
                 "id": "vi-ss-43",
-                "caption": "Boobie Ike 02"
+                "caption": "Lucia Caminos 01"
             },
             {
                 "id": "vi-ss-44",
-                "caption": "Boobie Ike 03"
+                "caption": "Lucia Caminos 02"
             },
             {
                 "id": "vi-ss-45",
-                "caption": "Boobie Ike 04"
+                "caption": "Lucia Caminos 03"
             },
             {
                 "id": "vi-ss-46",
-                "caption": "Boobie Ike 05"
+                "caption": "Lucia Caminos 04"
             },
             {
                 "id": "vi-ss-47",
-                "caption": "Dre'Quan Priest 01"
+                "caption": "Lucia Caminos 05"
             },
             {
                 "id": "vi-ss-48",
-                "caption": "Dre'Quan Priest 02"
+                "caption": "Lucia Caminos 06"
             },
             {
                 "id": "vi-ss-49",
-                "caption": "Dre'Quan Priest 03"
+                "caption": "Lucia Caminos 07"
             },
             {
                 "id": "vi-ss-50",
-                "caption": "Dre'Quan Priest 04"
+                "caption": "Lucia Caminos 08"
             },
             {
                 "id": "vi-ss-51",
-                "caption": "Real Dimez 01"
+                "caption": "Lucia Caminos 09"
             },
             {
                 "id": "vi-ss-52",
-                "caption": "Real Dimez 02"
+                "caption": "Lucia Caminos 10"
             },
             {
                 "id": "vi-ss-53",
-                "caption": "Real Dimez 03"
+                "caption": "Lucia Caminos 11"
             },
             {
                 "id": "vi-ss-54",
-                "caption": "Real Dimez 04"
+                "caption": "Lucia Caminos 12"
             },
             {
                 "id": "vi-ss-55",
-                "caption": "Roxy"
+                "caption": "Lucia Caminos 13"
             },
             {
                 "id": "vi-ss-56",
-                "caption": "Bae-Luxe"
+                "caption": "Lucia Caminos 14"
             },
             {
                 "id": "vi-ss-57",
-                "caption": "Raul Bautista 01"
+                "caption": "Lucia Caminos 15"
             },
             {
                 "id": "vi-ss-58",
-                "caption": "Raul Bautista 02"
+                "caption": "Cal Hampton 01"
             },
             {
                 "id": "vi-ss-59",
-                "caption": "Raul Bautista 03"
+                "caption": "Cal Hampton 02"
             },
             {
                 "id": "vi-ss-60",
-                "caption": "Raul Bautista 04"
+                "caption": "Cal Hampton 03"
             },
             {
                 "id": "vi-ss-61",
-                "caption": "Raul Bautista 05"
+                "caption": "Cal Hampton 04"
             },
             {
                 "id": "vi-ss-62",
-                "caption": "Brian Heder 01"
+                "caption": "Boobie Ike 01"
             },
             {
                 "id": "vi-ss-63",
-                "caption": "Brian Heder 02"
+                "caption": "Boobie Ike 02"
             },
             {
                 "id": "vi-ss-64",
-                "caption": "Brian Heder 03"
+                "caption": "Boobie Ike 03"
             },
             {
                 "id": "vi-ss-65",
-                "caption": "Brian Heder 04"
+                "caption": "Boobie Ike 04"
             },
             {
                 "id": "vi-ss-66",
-                "caption": "Vice City 01"
+                "caption": "Boobie Ike 05"
             },
             {
                 "id": "vi-ss-67",
-                "caption": "Vice City 02"
+                "caption": "Dre'Quan Priest 01"
             },
             {
                 "id": "vi-ss-68",
-                "caption": "Vice City 03"
+                "caption": "Dre'Quan Priest 02"
             },
             {
                 "id": "vi-ss-69",
-                "caption": "Vice City 04"
+                "caption": "Dre'Quan Priest 03"
             },
             {
                 "id": "vi-ss-70",
-                "caption": "Vice City 05"
+                "caption": "Dre'Quan Priest 04"
             },
             {
                 "id": "vi-ss-71",
-                "caption": "Vice City 06"
+                "caption": "Real Dimez 01"
             },
             {
                 "id": "vi-ss-72",
-                "caption": "Vice City 07"
+                "caption": "Real Dimez 02"
             },
             {
                 "id": "vi-ss-73",
-                "caption": "Vice City 08"
+                "caption": "Real Dimez 03"
             },
             {
                 "id": "vi-ss-74",
-                "caption": "Vice City 09"
+                "caption": "Real Dimez 04"
             },
             {
                 "id": "vi-ss-75",
-                "caption": "Vice City 10"
+                "caption": "Roxy"
             },
             {
                 "id": "vi-ss-76",
-                "caption": "Vice City 11"
+                "caption": "Bae-Luxe"
             },
             {
                 "id": "vi-ss-77",
-                "caption": "Vice City 12"
+                "caption": "Raul Bautista 01"
             },
             {
                 "id": "vi-ss-78",
-                "caption": "Vice City 13"
+                "caption": "Raul Bautista 02"
             },
             {
                 "id": "vi-ss-79",
+                "caption": "Raul Bautista 03"
+            },
+            {
+                "id": "vi-ss-80",
+                "caption": "Raul Bautista 04"
+            },
+            {
+                "id": "vi-ss-81",
+                "caption": "Raul Bautista 05"
+            },
+            {
+                "id": "vi-ss-82",
+                "caption": "Brian Heder 01"
+            },
+            {
+                "id": "vi-ss-83",
+                "caption": "Brian Heder 02"
+            },
+            {
+                "id": "vi-ss-84",
+                "caption": "Brian Heder 03"
+            },
+            {
+                "id": "vi-ss-85",
+                "caption": "Brian Heder 04"
+            },
+            {
+                "id": "vi-ss-86",
+                "caption": "Vice City 01"
+            },
+            {
+                "id": "vi-ss-87",
+                "caption": "Vice City 02"
+            },
+            {
+                "id": "vi-ss-88",
+                "caption": "Vice City 03"
+            },
+            {
+                "id": "vi-ss-89",
+                "caption": "Vice City 04"
+            },
+            {
+                "id": "vi-ss-90",
+                "caption": "Vice City 05"
+            },
+            {
+                "id": "vi-ss-91",
+                "caption": "Vice City 06"
+            },
+            {
+                "id": "vi-ss-92",
+                "caption": "Vice City 07"
+            },
+            {
+                "id": "vi-ss-93",
+                "caption": "Vice City 08"
+            },
+            {
+                "id": "vi-ss-94",
+                "caption": "Vice City 09"
+            },
+            {
+                "id": "vi-ss-95",
+                "caption": "Vice City 10"
+            },
+            {
+                "id": "vi-ss-96",
+                "caption": "Vice City 11"
+            },
+            {
+                "id": "vi-ss-97",
+                "caption": "Vice City 12"
+            },
+            {
+                "id": "vi-ss-98",
+                "caption": "Vice City 13"
+            },
+            {
+                "id": "vi-ss-99",
+                "caption": "Vice City 14"
+            },
+            {
+                "id": "vi-ss-100",
+                "caption": "Vice City 15"
+            },
+            {
+                "id": "vi-ss-101",
+                "caption": "Vice City 16"
+            },
+            {
+                "id": "vi-ss-102",
+                "caption": "Vice City 17"
+            },
+            {
+                "id": "vi-ss-103",
+                "caption": "Vice City 18"
+            },
+            {
+                "id": "vi-ss-104",
+                "caption": "Vice City 19"
+            },
+            {
+                "id": "vi-ss-105",
+                "caption": "Vice City 20"
+            },
+            {
+                "id": "vi-ss-106",
+                "caption": "Vice City 21"
+            },
+            {
+                "id": "vi-ss-107",
+                "caption": "Vice City 22"
+            },
+            {
+                "id": "vi-ss-108",
+                "caption": "Vice City 23"
+            },
+            {
+                "id": "vi-ss-109",
+                "caption": "Vice City 24"
+            },
+            {
+                "id": "vi-ss-110",
+                "caption": "Vice City 25"
+            },
+            {
+                "id": "vi-ss-111",
+                "caption": "Vice City 26"
+            },
+            {
+                "id": "vi-ss-112",
+                "caption": "Vice City 27"
+            },
+            {
+                "id": "vi-ss-113",
+                "caption": "Vice City 28"
+            },
+            {
+                "id": "vi-ss-114",
                 "caption": {
                     "es": "Cayos de Leonida 01",
                     "en": "Leonida Keys 01",
@@ -644,7 +819,7 @@
                 }
             },
             {
-                "id": "vi-ss-80",
+                "id": "vi-ss-115",
                 "caption": {
                     "es": "Cayos de Leonida 02",
                     "en": "Leonida Keys 02",
@@ -653,7 +828,7 @@
                 }
             },
             {
-                "id": "vi-ss-81",
+                "id": "vi-ss-116",
                 "caption": {
                     "es": "Cayos de Leonida 03",
                     "en": "Leonida Keys 03",
@@ -662,7 +837,7 @@
                 }
             },
             {
-                "id": "vi-ss-82",
+                "id": "vi-ss-117",
                 "caption": {
                     "es": "Cayos de Leonida 04",
                     "en": "Leonida Keys 04",
@@ -671,7 +846,7 @@
                 }
             },
             {
-                "id": "vi-ss-83",
+                "id": "vi-ss-118",
                 "caption": {
                     "es": "Cayos de Leonida 05",
                     "en": "Leonida Keys 05",
@@ -680,7 +855,7 @@
                 }
             },
             {
-                "id": "vi-ss-84",
+                "id": "vi-ss-119",
                 "caption": {
                     "es": "Cayos de Leonida 06",
                     "en": "Leonida Keys 06",
@@ -689,79 +864,100 @@
                 }
             },
             {
-                "id": "vi-ss-85",
+                "id": "vi-ss-120",
+                "caption": {
+                    "es": "Cayos de Leonida 07",
+                    "en": "Leonida Keys 07",
+                    "fr": "Leonida Keys 07",
+                    "pt": "Leonida Keys 07"
+                }
+            },
+            {
+                "id": "vi-ss-121",
                 "caption": "Port Gellhorn 01"
             },
             {
-                "id": "vi-ss-86",
+                "id": "vi-ss-122",
                 "caption": "Port Gellhorn 02"
             },
             {
-                "id": "vi-ss-87",
+                "id": "vi-ss-123",
                 "caption": "Port Gellhorn 03"
             },
             {
-                "id": "vi-ss-88",
+                "id": "vi-ss-124",
                 "caption": "Port Gellhorn 04"
             },
             {
-                "id": "vi-ss-89",
+                "id": "vi-ss-125",
                 "caption": "Port Gellhorn 05"
             },
             {
-                "id": "vi-ss-90",
+                "id": "vi-ss-126",
                 "caption": "Port Gellhorn 06"
             },
             {
-                "id": "vi-ss-91",
+                "id": "vi-ss-127",
+                "caption": "Port Gellhorn 07"
+            },
+            {
+                "id": "vi-ss-128",
                 "caption": "Ambrosia 01"
             },
             {
-                "id": "vi-ss-92",
+                "id": "vi-ss-129",
                 "caption": "Ambrosia 02"
             },
             {
-                "id": "vi-ss-93",
+                "id": "vi-ss-130",
                 "caption": "Ambrosia 03"
             },
             {
-                "id": "vi-ss-94",
+                "id": "vi-ss-131",
                 "caption": "Ambrosia 04"
             },
             {
-                "id": "vi-ss-95",
+                "id": "vi-ss-132",
                 "caption": "Ambrosia 05"
             },
             {
-                "id": "vi-ss-96",
+                "id": "vi-ss-133",
                 "caption": "Ambrosia 06"
             },
             {
-                "id": "vi-ss-97",
+                "id": "vi-ss-134",
                 "caption": "Grassrivers 01"
             },
             {
-                "id": "vi-ss-98",
+                "id": "vi-ss-135",
                 "caption": "Grassrivers 02"
             },
             {
-                "id": "vi-ss-99",
+                "id": "vi-ss-136",
                 "caption": "Grassrivers 03"
             },
             {
-                "id": "vi-ss-100",
+                "id": "vi-ss-137",
                 "caption": "Grassrivers 04"
             },
             {
-                "id": "vi-ss-101",
+                "id": "vi-ss-138",
                 "caption": "Grassrivers 05"
             },
             {
-                "id": "vi-ss-102",
+                "id": "vi-ss-139",
                 "caption": "Grassrivers 06"
             },
             {
-                "id": "vi-ss-103",
+                "id": "vi-ss-140",
+                "caption": "Grassrivers 07"
+            },
+            {
+                "id": "vi-ss-141",
+                "caption": "Grassrivers 08"
+            },
+            {
+                "id": "vi-ss-142",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 01",
                     "en": "Mount Kalaga National Park 01",
@@ -770,7 +966,7 @@
                 }
             },
             {
-                "id": "vi-ss-104",
+                "id": "vi-ss-143",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 02",
                     "en": "Mount Kalaga National Park 02",
@@ -779,7 +975,7 @@
                 }
             },
             {
-                "id": "vi-ss-105",
+                "id": "vi-ss-144",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 03",
                     "en": "Mount Kalaga National Park 03",
@@ -788,7 +984,7 @@
                 }
             },
             {
-                "id": "vi-ss-106",
+                "id": "vi-ss-145",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 04",
                     "en": "Mount Kalaga National Park 04",
@@ -797,7 +993,7 @@
                 }
             },
             {
-                "id": "vi-ss-107",
+                "id": "vi-ss-146",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 05",
                     "en": "Mount Kalaga National Park 05",
@@ -806,7 +1002,7 @@
                 }
             },
             {
-                "id": "vi-ss-108",
+                "id": "vi-ss-147",
                 "caption": {
                     "es": "Parque nacional del monte Kalaga 06",
                     "en": "Mount Kalaga National Park 06",
