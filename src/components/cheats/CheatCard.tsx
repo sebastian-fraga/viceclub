@@ -150,7 +150,7 @@ export function CheatCard({
                     return (
                         <div
                             key={index}
-                            className={`mt-2 flex items-start gap-1.5 ${noteType.color}`}
+                            className={`first:mt-2.5 flex items-start gap-1.5 ${noteType.color}`}
                         >
                             <NoteIcon
                                 size={14}
