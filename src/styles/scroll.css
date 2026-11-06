@@ -113,13 +113,14 @@ body {
 
 .scroll-selector,
 .scroll-map {
+    --sb-thumb-color: #726AA7;
+    --sb-track-color: color-mix(in oklch, #726AA7 20%, transparent);
+    --sb-size: 6px;
+
     scroll-behavior: smooth;
 
-    scrollbar-width: thin;
-    scrollbar-color: #726AA7 transparent;
-
     &::-webkit-scrollbar {
-        width: 4px;
+        width: var(--sb-size);
     }
 
     &::-webkit-scrollbar-button {
@@ -127,12 +128,18 @@ body {
     }
 
     &::-webkit-scrollbar-track {
-        background: transparent;
+        background: var(--sb-track-color);
+        border-radius: 999px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #726AA7;
-        border-radius: 12px;
+        background: var(--sb-thumb-color);
+        border-radius: 999px;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-width: thin;
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
 }
 
