@@ -5,7 +5,7 @@ import type { Platform, PlatformFamily } from "@/config/platforms";
 export type PlatformId = Platform;
 export type { PlatformFamily };
 
-export type CheatNoteType = "info" | "warning";
+export type CheatNoteType = "info" | "warning" | "bug";
 
 export interface PlatformNotes {
     platforms: PlatformId[];

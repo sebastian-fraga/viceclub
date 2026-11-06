@@ -17,6 +17,7 @@ import useT from "@/hooks/useT";
 import {
     IconAlertTriangleFilled,
     IconArrowUpRight,
+    IconBugFilled,
     IconInfoCircleFilled,
 } from "@tabler/icons-react";
 
@@ -46,6 +47,24 @@ export function CheatCard({
     );
 
     const isAvailable = codeButtons.length > 0;
+
+    const NOTE_TYPES = {
+        warning: {
+            icon: IconAlertTriangleFilled,
+            color: "text-red-100",
+            iconColor: "text-red-300",
+        },
+        info: {
+            icon: IconInfoCircleFilled,
+            color: "text-blue-100",
+            iconColor: "text-blue-300",
+        },
+        bug: {
+            icon: IconBugFilled,
+            color: "text-orange-100",
+            iconColor: "text-orange-300",
+        },
+    } as const;
 
     return (
         <motion.div
@@ -121,24 +140,20 @@ export function CheatCard({
                         });
                     }
 
-                    const isWarning = platformNote.noteType === "warning";
-                    const NoteIcon = isWarning
-                        ? IconAlertTriangleFilled
-                        : IconInfoCircleFilled;
+                    const noteType =
+                        NOTE_TYPES[platformNote.noteType ?? "info"];
+
+                    const NoteIcon = noteType.icon;
 
                     return (
                         <div
                             key={index}
-                            className={`mt-2 flex items-start gap-1.5 ${
-                                isWarning ? "text-red-100" : "text-blue-100"
-                            }`}
+                            className={`mt-2 flex items-start gap-1.5 ${noteType.color}`}
                         >
                             <NoteIcon
                                 size={14}
                                 aria-hidden="true"
-                                className={`mt-[3px] shrink-0 ${
-                                    isWarning ? "text-red-300" : "text-blue-300"
-                                }`}
+                                className={`mt-[3px] shrink-0 ${noteType.iconColor}`}
                             />
 
                             <div className="rounded-2xl text-xs/5 text-pretty cheat-note-entry font-thin flex flex-wrap items-center gap-1">
