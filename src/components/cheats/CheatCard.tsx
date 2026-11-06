@@ -1,10 +1,10 @@
-import parse from "html-react-parser";
 import { motion } from "framer-motion";
+import parse from "html-react-parser";
 
-import type { Cheat } from "@/types/cheats";
 import type { GameId } from "@/config/games";
-import type { Game } from "@/types/game";
 import type { Platform } from "@/config/platforms";
+import type { Cheat } from "@/types/cheats";
+import type { Game } from "@/types/game";
 
 import { GAME_MODS } from "@/data/mods";
 
@@ -15,9 +15,9 @@ import { useLocalizedText } from "@/hooks/useLocalizedText";
 import useT from "@/hooks/useT";
 
 import {
-    IconAlertTriangle,
+    IconAlertTriangleFilled,
     IconArrowUpRight,
-    IconInfoCircle,
+    IconInfoCircleFilled,
 } from "@tabler/icons-react";
 
 interface Props {
@@ -77,7 +77,7 @@ export function CheatCard({
                         return isText ? (
                             <kbd
                                 key={`${button}-${index}`}
-                                className="bg-(--button-bg) px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15 pc-cheat-note"
+                                className="bg-[color-mix(in_oklab,var(--button-bg),white_5%)] px-6 py-1.5 max-mobile:px-2.5 max-mobile:py-1 rounded-full text-sm first:font-black max-mobile:text-xs font-body text-(--title-color) shadow-2xl shadow-violet-300/15 pc-cheat-note"
                             >
                                 {value}
                             </kbd>
@@ -123,8 +123,8 @@ export function CheatCard({
 
                     const isWarning = platformNote.noteType === "warning";
                     const NoteIcon = isWarning
-                        ? IconAlertTriangle
-                        : IconInfoCircle;
+                        ? IconAlertTriangleFilled
+                        : IconInfoCircleFilled;
 
                     return (
                         <div
