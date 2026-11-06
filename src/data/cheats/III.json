@@ -1935,7 +1935,7 @@
                             "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
                             "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
-                        "noteType": "warning"
+                        "noteType": "bug"
                     }
                 ],
                 "codes": {
@@ -2047,7 +2047,7 @@
                             "fr": "Ce cheat est irréversible. Il est recommandé de ne pas sauvegarder la partie après l'avoir activé.",
                             "pt": "Este truque é irreversível. Recomenda-se não salvar o jogo após ativá-lo."
                         },
-                        "noteType": "warning"
+                        "noteType": "bug"
                     }
                 ],
                 "codes": {
