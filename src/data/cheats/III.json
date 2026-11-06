@@ -751,6 +751,18 @@
                     "fr": "Changer le skin de Claude",
                     "pt": "Mudar a skin do Claude"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Para volver a la skin de Claude, habrá que recargar la partida.",
+                            "en": "To return to Claude's skin, you will need to reload the game.",
+                            "fr": "Pour revenir au skin de Claude, vous devrez recharger la partie.",
+                            "pt": "Para voltar à skin do Claude, será necessário recarregar a partida."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "RIGHT",
@@ -873,10 +885,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Este truco no tiene diálogo de confirmación.",
-                            "en": "This cheat has no confirmation dialogue.",
-                            "fr": "Ce cheat ne possède pas de dialogue de confirmation.",
-                            "pt": "Este truque não possui diálogo de confirmação."
+                            "es": "Este truco no tiene diálogo de confirmación. Solo disponible para las versiones censuradas",
+                            "en": "This cheat has no confirmation dialogue. Only available in censored versions",
+                            "fr": "Ce cheat ne possède pas de dialogue de confirmation. Disponible uniquement dans les versions censurées",
+                            "pt": "Este truque não possui diálogo de confirmação. Disponível apenas nas versões censuradas"
                         },
                         "noteType": "info"
                     }
@@ -1726,6 +1738,18 @@
                     "fr": "Réduire la vitesse du jeu",
                     "pt": "Diminuir velocidade do jogo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["pc"],
+                        "note": {
+                            "es": "Son cinco Os.",
+                            "en": "There are five O's.",
+                            "fr": "Il y a cinq O.",
+                            "pt": "São cinco letras O."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "TRIANGLE",
