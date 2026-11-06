@@ -78,7 +78,9 @@ export function CheatCard({
                     : "bg-(--button-bg)/20 opacity-50 cursor-not-allowed"
             }`}
         >
-            <h3 className="text-xl text-violet-50 font-body-condensed">
+            <h3
+                className={`text-xl text-violet-50 font-body-condensed ${!isAvailable && "opacity-50"}`}
+            >
                 {t(cheat.title)}
             </h3>
 
