@@ -143,10 +143,10 @@
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "es": "Otorga el Puño americano, Cuchillo, Cócteles molotov, Pistola Colt 45, Rifle de francotirador, Uzi y AK-47.",
-                            "en": "Gives the Brass Knuckles, Knife, Molotov Cocktails, Colt 45 Pistol, Sniper Rifle, Uzi and AK-47",
-                            "fr": "Donne le Poing américain, Couteau, Cocktails Molotov, Pistolet Colt 45, Fusil de sniper, Uzi et AK-47",
-                            "pt": "Concede Soco-inglês, Faca, Coquetéis Molotov, Pistola Colt 45, Rifle de precisão, Uzi e AK-47"
+                            "es": "Otorga el Puño americano, Cuchillo, Cócteles molotov, Pistola Colt 45, Escopeta, Skorpion, AK-47, Lanzallamas y Rifle de francotirador.",
+                            "en": "Gives the Brass Knuckles, Knife, Molotov Cocktails, Colt 45 Pistol, Shotgun, Scorpion, AK-47, Flamethrower and Sniper Rifle",
+                            "fr": "Donne le Poing américain, Couteau, Cocktails Molotov, Pistolet Colt 45, Fusil à pompe, Scorpion, AK-47, Lance-flammes et Fusil de sniper",
+                            "pt": "Concede Soco-inglês, Faca, Coquetéis Molotov, Pistola Colt 45, Escopeta, Skorpion, AK-47, Lança-chamas e Rifle de precisão"
                         },
                         "noteType": "info"
                     }
@@ -186,10 +186,10 @@
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "es": "Otorga la Katana, Cuchillo, Granadas a control remoto, Revólver Equalizer, Escopeta, Ingram Mac-10, M16, Rifle de francotirador y Lanzacohetes.",
-                            "en": "Gives the Katana, Knife, Remote Grenades, Equalizer Revolver, Shotgun, Ingram Mac-10, M16, Sniper Rifle and Rocket Launcher",
-                            "fr": "Donne le Katana, Couteau, Grenades télécommandées, Revolver Equalizer, Fusil à pompe, Ingram Mac-10, M16, Fusil de sniper et Lance-roquettes",
-                            "pt": "Concede Katana, Faca, Granadas com controle remoto, Revólver Equalizer, Escopeta, Ingram Mac-10, M16, Rifle de precisão e Lança-foguetes"
+                            "es": "Otorga la Katana, Granadas a control remoto, Revólver Equalizer, Escopeta recortada, Mac-10, M16, Lanzacohetes y Rifle de francotirador láser.",
+                            "en": "Gives the Katana, Remote Grenades, Equalizer Revolver, Stubby Shotgun, Mac-10, M16, Rocket Launcher and Laser Sniper",
+                            "fr": "Donne le Katana, Grenades télécommandées, Revolver Equalizer, Fusil Stubby, Mac-10, M16, Lance-roquettes et Fusil de sniper laser",
+                            "pt": "Concede Katana, Granadas com controle remoto, Revólver Equalizer, Escopeta de Cano Serrado, Mac-10, M16, Lança-foguetes e Rifle de precisão PSG-1"
                         },
                         "noteType": "info"
                     }
@@ -229,10 +229,10 @@
                     {
                         "platforms": ["ps2", "psp"],
                         "note": {
-                            "es": "Otorga la Motosierra, Granadas, Revólver Equalizer, Escopeta, MP5, M36, Rifle de francotirador y Minigun.",
-                            "en": "Gives the Chainsaw, Grenades, Equalizer Revolver, Shotgun, MP5, M16, Sniper Rifle and Minigun",
-                            "fr": "Donne la Tronçonneuse, Grenades, Revolver Equalizer, Fusil à pompe, MP5, M16, Fusil de sniper et Minigun",
-                            "pt": "Concede Motosserra, Granadas, Revólver Equalizer, Escopeta, MP5, M16, Rifle de precisão e Minigun"
+                            "es": "Otorga la Motosierra, Granadas, Revólver Equalizer, S.P.A.S. 12, MP5, M36, Minigun y Rifle de francotirador láser.",
+                            "en": "Gives the Chainsaw, Grenades, Equalizer Revolver, S.P.A.S. 12, SMG, M16, Minigun and Laser Sniper",
+                            "fr": "Donne la Tronçonneuse, Grenades, Revolver Equalizer, S.P.A.S. 12, MP5, M16, Minigun et Fusil de sniper laser",
+                            "pt": "Concede Motosserra, Granadas, Revólver Equalizer, S.P.A.S. 12, MP5, M16, Minigun e Rifle de precisão PSG-1"
                         },
                         "noteType": "info"
                     }
@@ -244,7 +244,7 @@
                         "TRIANGLE",
                         "UP",
                         "DOWN",
-                        "TRIANGLE",
+                        "CIRCLE",
                         "LEFT",
                         "RIGHT"
                     ],
@@ -254,7 +254,7 @@
                         "TRIANGLE",
                         "UP",
                         "DOWN",
-                        "TRIANGLE",
+                        "CIRCLE",
                         "LEFT",
                         "RIGHT"
                     ]
@@ -307,8 +307,8 @@
                         "TRIANGLE",
                         "DOWN",
                         "LEFT",
-                        "CIRCLE",
-                        "CIRCLE"
+                        "CROSS",
+                        "CROSS"
                     ],
                     "ps2": [
                         "UP",
@@ -317,8 +317,8 @@
                         "TRIANGLE",
                         "DOWN",
                         "LEFT",
-                        "CIRCLE",
-                        "CIRCLE"
+                        "CROSS",
+                        "CROSS"
                     ]
                 }
             }
@@ -450,10 +450,10 @@
             {
                 "id": "vehicles_5",
                 "title": {
-                    "es": "Conductores agresivos",
-                    "en": "Aggressive drivers",
-                    "fr": "Conducteurs agressifs",
-                    "pt": "Motoristas agressivos"
+                    "es": "Los conductores esquivarán a Vic",
+                    "en": "Drivers will avoid Vic",
+                    "fr": "Les conducteurs éviteront Vic",
+                    "pt": "Os motoristas desviarão de Vic"
                 },
                 "codes": {
                     "psp": [
@@ -517,6 +517,18 @@
                     "fr": "Circulation chromée",
                     "pt": "Trânsito cromado"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Solo se puede desactivar al reiniciar el juego",
+                            "en": "Can only be disabled by restarting the game",
+                            "fr": "Ne peut être désactivé qu'en redémarrant le jeu",
+                            "pt": "Só pode ser desativado reiniciando o jogo"
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "RIGHT",
@@ -568,37 +580,6 @@
                         "R1",
                         "LEFT",
                         "CIRCLE"
-                    ]
-                }
-            },
-            {
-                "id": "vehicles_9",
-                "title": {
-                    "es": "El tráfico te evitará",
-                    "en": "Traffic avoids you",
-                    "fr": "La circulation vous évite",
-                    "pt": "O tráfego evitará você"
-                },
-                "codes": {
-                    "psp": [
-                        "UP",
-                        "UP",
-                        "RIGHT",
-                        "LEFT",
-                        "TRIANGLE",
-                        "CIRCLE",
-                        "CIRCLE",
-                        "SQUARE"
-                    ],
-                    "ps2": [
-                        "UP",
-                        "UP",
-                        "RIGHT",
-                        "LEFT",
-                        "TRIANGLE",
-                        "CIRCLE",
-                        "CIRCLE",
-                        "SQUARE"
                     ]
                 }
             }
@@ -904,11 +885,23 @@
             {
                 "id": "peds_5",
                 "title": {
-                    "es": "Los peatones se subirán al vehículo de Vic",
-                    "en": "Pedestrians get into Vic's vehicle",
-                    "fr": "Les piétons monteront dans le véhicule de Vic",
-                    "pt": "Os pedestres entrarão no veículo de Vic"
+                    "es": "El peatón más cercano se subirá al vehículo de Vic",
+                    "en": "Nearest pedestrian gets into Vic's vehicle",
+                    "fr": "Le piéton le plus proche montera dans le véhicule de Vic",
+                    "pt": "O pedestre mais próximo entrará no veículo de Vic"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Requiere estar dentro de un vehículo y con un peatón cerca.",
+                            "en": "You must be inside a vehicle with a pedestrian nearby.",
+                            "fr": "Vous devez être dans un véhicule avec un piéton à proximité.",
+                            "pt": "É necessário estar dentro de um veículo com um pedestre por perto."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "DOWN",
@@ -1034,6 +1027,18 @@
                     "fr": "Monde à l'envers",
                     "pt": "Mundo de cabeça para baixo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2"],
+                        "note": {
+                            "es": "Pese a tener un diálogo de confirmación, no tendrá efecto en la versión de PS2.",
+                            "en": "Despite displaying a confirmation message, it has no effect in the PS2 version.",
+                            "fr": "Bien qu'un message de confirmation s'affiche, cela n'a aucun effet dans la version PS2.",
+                            "pt": "Apesar de exibir uma mensagem de confirmação, não tem efeito na versão de PS2."
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "SQUARE",
@@ -1065,6 +1070,18 @@
                     "fr": "Monde inversé",
                     "pt": "Mundo invertido"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2"],
+                        "note": {
+                            "es": "Pese a tener un diálogo de confirmación, no tendrá efecto en la versión de PS2.",
+                            "en": "Despite displaying a confirmation message, it has no effect in the PS2 version.",
+                            "fr": "Bien qu'un message de confirmation s'affiche, cela n'a aucun effet dans la version PS2.",
+                            "pt": "Apesar de exibir uma mensagem de confirmação, não tem efeito na versão de PS2."
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "LEFT",

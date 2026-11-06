@@ -647,6 +647,18 @@
                     "fr": "Circulation chromée",
                     "pt": "Trânsito cromado"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Solo se puede desactivar al reiniciar el juego",
+                            "en": "Can only be disabled by restarting the game",
+                            "fr": "Ne peut être désactivé qu'en redémarrant le jeu",
+                            "pt": "Só pode ser desativado reiniciando o jogo"
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "TRIANGLE",
