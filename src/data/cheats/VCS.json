@@ -486,6 +486,18 @@
                     "fr": "Circulation noire",
                     "pt": "Trânsito negro"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Solo se puede desactivar al reiniciar el juego",
+                            "en": "Can only be disabled by restarting the game",
+                            "fr": "Ne peut être désactivé qu'en redémarrant le jeu",
+                            "pt": "Só pode ser desativado reiniciando o jogo"
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "L",
@@ -569,7 +581,7 @@
                         "L",
                         "R",
                         "LEFT",
-                        "CROSS"
+                        "CIRCLE"
                     ],
                     "ps2": [
                         "UP",
@@ -1059,49 +1071,6 @@
                         "R1",
                         "LEFT",
                         "RIGHT"
-                    ]
-                }
-            },
-            {
-                "id": "other_5",
-                "title": {
-                    "es": "Mundo invertido",
-                    "en": "Mirrored world",
-                    "fr": "Monde inversé",
-                    "pt": "Mundo invertido"
-                },
-                "platformNotes": [
-                    {
-                        "platforms": ["ps2"],
-                        "note": {
-                            "es": "Pese a tener un diálogo de confirmación, no tendrá efecto en la versión de PS2.",
-                            "en": "Despite displaying a confirmation message, it has no effect in the PS2 version.",
-                            "fr": "Bien qu'un message de confirmation s'affiche, cela n'a aucun effet dans la version PS2.",
-                            "pt": "Apesar de exibir uma mensagem de confirmação, não tem efeito na versão de PS2."
-                        },
-                        "noteType": "bug"
-                    }
-                ],
-                "codes": {
-                    "psp": [
-                        "LEFT",
-                        "LEFT",
-                        "LEFT",
-                        "R",
-                        "R",
-                        "L",
-                        "RIGHT",
-                        "LEFT"
-                    ],
-                    "ps2": [
-                        "LEFT",
-                        "LEFT",
-                        "LEFT",
-                        "R1",
-                        "R1",
-                        "L1",
-                        "RIGHT",
-                        "LEFT"
                     ]
                 }
             }
