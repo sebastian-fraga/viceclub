@@ -753,12 +753,12 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["pc"],
+                        "platforms": ["ps2", "pc"],
                         "note": {
-                            "es": "Para volver a la skin de Claude, habrá que recargar la partida.",
-                            "en": "To return to Claude's skin, you will need to reload the game.",
-                            "fr": "Pour revenir au skin de Claude, vous devrez recharger la partie.",
-                            "pt": "Para voltar à skin do Claude, será necessário recarregar a partida."
+                            "es": "Para volver a la skin de Claude, es necesario recargar la partida.",
+                            "en": "To return to Claude's skin, you need to reload the game.",
+                            "fr": "Pour revenir au skin de Claude, il est nécessaire de recharger la partie.",
+                            "pt": "Para voltar à skin do Claude, é necessário recarregar a partida."
                         },
                         "noteType": "info"
                     }

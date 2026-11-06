@@ -385,10 +385,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Otorga el Puño americano, Bate de béisbol, Cócteles molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de francotirador y Lanzallamas.",
-                            "en": "Grants Brass Knuckles, Baseball Bat, Molotov Cocktails, Pistol, Shotgun, Tec-9, Kruger, Sniper Rifle, and Flamethrower.",
-                            "fr": "Accorde les Poings américains, la batte de baseball, les cocktails Molotov, le pistolet, le fusil à pompe, le Tec-9, le Kruger, le fusil de précision et le lance-flammes.",
-                            "pt": "Concede os Socos Ingleses, Taco de Beisebol, Coquetéis Molotov, Pistola, Escopeta, Tec-9, Kruger, Rifle de Precisão e Lança-chamas."
+                            "es": "Otorga el Puño americano, Bate de béisbol, Cócteles molotov, Pistola, Escopeta, Tec-9, Kruger, Lanzallamas y Rifle de francotirador.",
+                            "en": "Grants Brass Knuckles, Baseball Bat, Molotov Cocktails, Pistol, Shotgun, Tec-9, Kruger, Flamethrower and Sniper Rifle.",
+                            "fr": "Accorde les Poings américains, la batte de baseball, les cocktails Molotov, le pistolet, le fusil à pompe, le Tec-9, le Kruger, le lance-flammes et le fusil de précision.",
+                            "pt": "Concede os Socos Ingleses, Taco de Beisebol, Coquetéis Molotov, Pistola, Escopeta, Tec-9, Kruger, Lança-chamas e Rifle de Precisão."
                         },
                         "noteType": "info"
                     }
@@ -531,10 +531,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Mac-10, M4, Rifle de francotirador .308 y Lanzacohetes.",
-                            "en": "Grants the Katana, Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, .308 Sniper Rifle, and Rocket Launcher.",
-                            "fr": "Accorde le katana, les grenades, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le fusil de précision .308 et le lance-roquettes.",
-                            "pt": "Concede a Katana, Granadas, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Rifle de Precisão .308 e Lança-foguetes."
+                            "es": "Otorga la Katana, Granadas, Revólver .357, Escopeta recortada, Mac-10, M4, Lanzacohetes y Rifle de francotirador .308.",
+                            "en": "Grants the Katana, Grenades, .357 Revolver, Sawn-off Shotgun, Mac-10, M4, Rocket Launcher and .308 Sniper Rifle.",
+                            "fr": "Accorde le katana, les grenades, le revolver .357, le fusil à canon scié, le Mac-10, le M4, le lance-roquettes et le fusil de précision .308.",
+                            "pt": "Concede a Katana, Granadas, Revólver .357, Escopeta de Cano Serrado, Mac-10, M4, Lança-foguetes e Rifle de precisão .308."
                         },
                         "noteType": "info"
                     }
@@ -551,8 +551,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "LEFT"
                     ],
                     "ps3": [
                         "R1",
@@ -565,8 +565,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "LEFT"
                     ],
                     "ps4": [
                         "R1",
@@ -579,8 +579,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "LEFT"
                     ],
                     "ps5": [
                         "R1",
@@ -593,8 +593,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "LEFT"
                     ],
                     "xbox": [
                         "RT",
@@ -649,8 +649,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "LEFT"
                     ],
                     "pc": ["PROFESSIONALTOOLS"]
                 }
@@ -677,10 +677,10 @@
                             "pc"
                         ],
                         "note": {
-                            "es": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de francotirador .308 y Minigun.",
-                            "en": "Grants the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, MP5, M4, .308 Sniper Rifle, and Minigun.",
-                            "fr": "Accorde la tronçonneuse, les grenades, le revolver .357, le S.P.A.S. 12, le MP5, le M4, le fusil de précision .308 et la minigun.",
-                            "pt": "Concede a Motosserra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Rifle de Precisão .308 e Minigun."
+                            "es": "Otorga la Motosierra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Minigun y Rifle de francotirador .308.",
+                            "en": "Grants the Chainsaw, Grenades, .357 Revolver, S.P.A.S. 12, MP5, M4, Minigun and .308 Sniper Rifle.",
+                            "fr": "Accorde la tronçonneuse, les grenades, le revolver .357, le S.P.A.S. 12, le MP5, le M4, la minigun et le fusil de précision .308.",
+                            "pt": "Concede a Motosserra, Granadas, Revólver .357, S.P.A.S. 12, MP5, M4, Minigun e Rifle de precisão .308."
                         },
                         "noteType": "info"
                     }
@@ -697,8 +697,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "DOWN"
                     ],
                     "ps3": [
                         "R1",
@@ -711,8 +711,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "DOWN"
                     ],
                     "ps4": [
                         "R1",
@@ -725,8 +725,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "DOWN"
                     ],
                     "ps5": [
                         "R1",
@@ -739,8 +739,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "DOWN"
                     ],
                     "xbox": [
                         "RT",
@@ -795,8 +795,8 @@
                         "UP",
                         "LEFT",
                         "DOWN",
-                        "RIGHT",
-                        "UP"
+                        "DOWN",
+                        "DOWN"
                     ],
                     "pc": ["NUTTERTOOLS"]
                 }
@@ -1049,100 +1049,100 @@
                 ],
                 "codes": {
                     "ps2": [
-                        "R2",
                         "CIRCLE",
-                        "UP",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
                         "L1",
                         "RIGHT",
-                        "R1",
-                        "RIGHT",
-                        "UP",
-                        "SQUARE",
-                        "TRIANGLE"
+                        "CROSS"
                     ],
                     "ps3": [
-                        "R2",
                         "CIRCLE",
-                        "UP",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
                         "L1",
                         "RIGHT",
-                        "R1",
-                        "RIGHT",
-                        "UP",
-                        "SQUARE",
-                        "TRIANGLE"
+                        "CROSS"
                     ],
                     "ps4": [
-                        "R2",
                         "CIRCLE",
-                        "UP",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
                         "L1",
                         "RIGHT",
-                        "R1",
-                        "RIGHT",
-                        "UP",
-                        "SQUARE",
-                        "TRIANGLE"
+                        "CROSS"
                     ],
                     "ps5": [
-                        "R2",
                         "CIRCLE",
-                        "UP",
+                        "L1",
+                        "DOWN",
+                        "L2",
+                        "LEFT",
+                        "CROSS",
+                        "R1",
                         "L1",
                         "RIGHT",
-                        "R1",
-                        "RIGHT",
-                        "UP",
-                        "SQUARE",
-                        "TRIANGLE"
+                        "CROSS"
                     ],
                     "xbox": [
-                        "BLACK",
                         "B",
-                        "UP",
-                        "LT",
+                        "LB",
+                        "DOWN",
+                        "WHITE",
+                        "LEFT",
+                        "A",
+                        "RB",
+                        "WHITE",
                         "RIGHT",
-                        "RT",
-                        "RIGHT",
-                        "UP",
-                        "X",
-                        "Y"
+                        "A"
                     ],
                     "xboxOne": [
-                        "RT",
                         "B",
-                        "UP",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
                         "LB",
                         "RIGHT",
-                        "RB",
-                        "RIGHT",
-                        "UP",
-                        "X",
-                        "Y"
+                        "A"
                     ],
                     "xboxSeries": [
-                        "RT",
                         "B",
-                        "UP",
+                        "LB",
+                        "DOWN",
+                        "LT",
+                        "LEFT",
+                        "A",
+                        "RB",
                         "LB",
                         "RIGHT",
-                        "RB",
-                        "RIGHT",
-                        "UP",
-                        "X",
-                        "Y"
+                        "A"
                     ],
                     "switch": [
-                        "ZR",
                         "A",
-                        "UP",
+                        "L",
+                        "DOWN",
+                        "ZL",
+                        "LEFT",
+                        "B",
+                        "R",
                         "L",
                         "RIGHT",
-                        "R",
-                        "RIGHT",
-                        "UP",
-                        "Y",
-                        "X"
+                        "B"
                     ],
                     "pc": ["CHASESTAT"]
                 }
@@ -1157,12 +1157,12 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["pc"],
+                        "platforms": ["ps2", "pc"],
                         "note": {
-                            "es": "Para volver a la skin de Tommy, habrá que recargar la partida.",
-                            "en": "To return to Tommy's skin, you will need to reload the game.",
-                            "fr": "Pour revenir au skin de Tommy, vous devrez recharger la partie.",
-                            "pt": "Para voltar à skin do Tommy, será necessário recarregar a partida."
+                            "es": "Para volver a la skin de Tommy, es necesario recargar la partida.",
+                            "en": "To return to Tommy's skin, you need to reload the game.",
+                            "fr": "Pour revenir au skin de Tommy, il est nécessaire de recharger la partie.",
+                            "pt": "Para voltar à skin do Tommy, é necessário recarregar a partida."
                         },
                         "noteType": "info"
                     }
@@ -2008,10 +2008,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "es": "Aparecer un Hotring Racer V2",
-                    "en": "Spawn Hotring Racer V2",
-                    "fr": "Faire apparaître un Hotring Racer V2",
-                    "pt": "Gerar um Hotring Racer V2"
+                    "es": "Aparecer un Hotring Racer V1",
+                    "en": "Spawn Hotring Racer V1",
+                    "fr": "Faire apparaître un Hotring Racer V1",
+                    "pt": "Gerar um Hotring Racer V1"
                 },
                 "codes": {
                     "ps2": [
@@ -2116,10 +2116,10 @@
             {
                 "id": "vehicles_8",
                 "title": {
-                    "es": "Aparecer un Hotring Racer V3",
-                    "en": "Spawn Hotring Racer V3",
-                    "fr": "Faire apparaître un Hotring Racer V3",
-                    "pt": "Gerar um Hotring Racer V3"
+                    "es": "Aparecer un Hotring Racer V2",
+                    "en": "Spawn Hotring Racer V2",
+                    "fr": "Faire apparaître un Hotring Racer V2",
+                    "pt": "Gerar um Hotring Racer V2"
                 },
                 "codes": {
                     "ps2": [
@@ -2224,10 +2224,10 @@
             {
                 "id": "vehicles_9",
                 "title": {
-                    "es": "Aparecer un Bloodring Banger",
-                    "en": "Spawn Bloodring Banger",
-                    "fr": "Faire apparaître un Bloodring Banger",
-                    "pt": "Gerar um Bloodring Banger"
+                    "es": "Aparecer un Bloodring Banger V1",
+                    "en": "Spawn Bloodring Banger V1",
+                    "fr": "Faire apparaître un Bloodring Banger V1",
+                    "pt": "Gerar um Bloodring Banger V1"
                 },
                 "codes": {
                     "ps2": [
@@ -2637,6 +2637,18 @@
                     "pt": "Barcos voadores"
                 },
                 "codes": {
+                    "ps2": [
+                        "R2",
+                        "CIRCLE",
+                        "UP",
+                        "L1",
+                        "RIGHT",
+                        "R1",
+                        "RIGHT",
+                        "UP",
+                        "SQUARE",
+                        "TRIANGLE"
+                    ],
                     "pc": ["AIRSHIP"]
                 }
             },
@@ -2853,19 +2865,29 @@
             {
                 "id": "vehicles_17",
                 "title": {
-                    "es": "El vehículo más cercano tendrá ruedas gigantes",
-                    "en": "The nearest vehicle will have giant wheels",
-                    "fr": "Le véhicule le plus proche aura des roues géantes",
-                    "pt": "O veículo mais próximo terá rodas gigantes"
+                    "es": "Vehículos con ruedas gigantes",
+                    "en": "Vehicles with giant wheels",
+                    "fr": "Véhicules à roues géantes",
+                    "pt": "Veículos com rodas gigantes"
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["pc"],
+                        "platforms": ["ps2", "pc"],
                         "note": {
-                            "es": "Solo puede activarse una vez",
-                            "en": "Can only be activated once",
-                            "fr": "Ne peut être activé qu'une seule fois",
-                            "pt": "Só pode ser ativado uma vez"
+                            "es": "No se puede desactivar durante la partida.",
+                            "en": "Cannot be disabled during gameplay.",
+                            "fr": "Ne peut pas être désactivé pendant la partie.",
+                            "pt": "Não pode ser desativado durante a partida."
+                        },
+                        "noteType": "bug"
+                    },
+                    {
+                        "platforms": ["ps2", "pc"],
+                        "note": {
+                            "es": "No afecta a todos los vehículos.",
+                            "en": "Does not affect all vehicles.",
+                            "fr": "Ne concerne pas tous les véhicules.",
+                            "pt": "Não afeta todos os veículos."
                         },
                         "noteType": "info"
                     }
@@ -2965,11 +2987,23 @@
             {
                 "id": "vehicles_18",
                 "title": {
-                    "es": "Tráfico agresivo",
-                    "en": "Aggressive traffic",
-                    "fr": "Circulation agressive",
-                    "pt": "Trânsito agressivo"
+                    "es": "Los conductores esquivarán a Tommy",
+                    "en": "Drivers will avoid Tommy",
+                    "fr": "Les conducteurs éviteront Tommy",
+                    "pt": "Os motoristas desviarão de Tommy"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "pc"],
+                        "note": {
+                            "es": "No se puede desactivar durante la partida.",
+                            "en": "Cannot be disabled during gameplay.",
+                            "fr": "Ne peut pas être désactivé pendant la partie.",
+                            "pt": "Não pode ser desativado durante a partida."
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "R2",
@@ -4082,6 +4116,18 @@
                     "fr": "Les femmes suivent Tommy",
                     "pt": "As mulheres seguem Tommy"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "pc"],
+                        "note": {
+                            "es": "No se puede desactivar durante la partida.",
+                            "en": "Cannot be disabled during gameplay.",
+                            "fr": "Ne peut pas être désactivé pendant la partie.",
+                            "pt": "Não pode ser desativado durante a partida."
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "CIRCLE",
@@ -4262,41 +4308,6 @@
                 },
                 "codes": {
                     "pc": ["HOPINGIRL"]
-                }
-            },
-            {
-                "id": "peds_7",
-                "title": {
-                    "es": "Los policías resucitarán",
-                    "en": "Police cops will resurrect",
-                    "fr": "Les policiers ressusciteront",
-                    "pt": "Os policiais ressuscitarão"
-                },
-                "codes": {
-                    "ps2": [
-                        "CIRCLE",
-                        "L1",
-                        "DOWN",
-                        "L2",
-                        "LEFT",
-                        "CROSS",
-                        "R1",
-                        "L1",
-                        "RIGHT",
-                        "CROSS"
-                    ],
-                    "ps3": [
-                        "CIRCLE",
-                        "L1",
-                        "DOWN",
-                        "L2",
-                        "LEFT",
-                        "CROSS",
-                        "R1",
-                        "L1",
-                        "RIGHT",
-                        "CROSS"
-                    ]
                 }
             }
         ]
@@ -5302,7 +5313,7 @@
                         "RIGHT",
                         "DOWN",
                         "L2",
-                        "R1",
+                        "L1",
                         "SQUARE"
                     ],
                     "ps3": [
@@ -5311,7 +5322,7 @@
                         "RIGHT",
                         "DOWN",
                         "L2",
-                        "R1",
+                        "L1",
                         "SQUARE"
                     ],
                     "ps4": [
@@ -5320,7 +5331,7 @@
                         "RIGHT",
                         "DOWN",
                         "L2",
-                        "R1",
+                        "L1",
                         "SQUARE"
                     ],
                     "ps5": [
@@ -5329,7 +5340,7 @@
                         "RIGHT",
                         "DOWN",
                         "L2",
-                        "R1",
+                        "L1",
                         "SQUARE"
                     ],
                     "xbox": ["Y", "UP", "RIGHT", "DOWN", "WHITE", "LT", "X"],
