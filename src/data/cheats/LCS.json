@@ -287,27 +287,6 @@
                 }
             },
             {
-                "id": "player_10",
-                "title": {
-                    "es": "Cambiar la skin de Toni",
-                    "en": "Change Toni's skin",
-                    "fr": "Changer le skin de Toni",
-                    "pt": "Mudar a skin do Toni"
-                },
-                "codes": {
-                    "psp": [
-                        "L",
-                        "L",
-                        "LEFT",
-                        "L",
-                        "L",
-                        "RIGHT",
-                        "SQUARE",
-                        "TRIANGLE"
-                    ]
-                }
-            },
-            {
                 "id": "player_11",
                 "title": {
                     "es": "Aparecer en las noticias",
@@ -549,10 +528,10 @@
             {
                 "id": "vehicles_7",
                 "title": {
-                    "es": "Conductores agresivos",
-                    "en": "Aggressive drivers",
-                    "fr": "Conducteurs agressifs",
-                    "pt": "Motoristas agressivos"
+                    "es": "Los conductores esquivarán a Toni",
+                    "en": "Drivers will avoid Toni",
+                    "fr": "Les conducteurs éviteront Toni",
+                    "pt": "Os motoristas desviarão de Toni"
                 },
                 "codes": {
                     "psp": [
@@ -585,6 +564,18 @@
                     "fr": "Circulation blanche",
                     "pt": "Trânsito branco"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Solo se puede desactivar al reiniciar el juego",
+                            "en": "Can only be disabled by restarting the game",
+                            "fr": "Ne peut être désactivé qu'en redémarrant le jeu",
+                            "pt": "Só pode ser desativado reiniciando o jogo"
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "CROSS",
@@ -616,6 +607,18 @@
                     "fr": "Circulation noire",
                     "pt": "Trânsito negro"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps2", "psp"],
+                        "note": {
+                            "es": "Solo se puede desactivar al reiniciar el juego",
+                            "en": "Can only be disabled by restarting the game",
+                            "fr": "Ne peut être désactivé qu'en redémarrant le jeu",
+                            "pt": "Só pode ser desativado reiniciando o jogo"
+                        },
+                        "noteType": "bug"
+                    }
+                ],
                 "codes": {
                     "psp": [
                         "CIRCLE",
@@ -1190,43 +1193,21 @@
             {
                 "id": "other_5",
                 "title": {
-                    "es": "Mundo invertido",
-                    "en": "Mirrored world",
-                    "fr": "Monde inversé",
-                    "pt": "Mundo invertido"
+                    "es": "Desactivar mundo al revés",
+                    "en": "Disable upside-down world",
+                    "fr": "Désactiver le monde à l'envers",
+                    "pt": "Desativar mundo de cabeça para baixo"
                 },
-                "platformNotes": [
-                    {
-                        "platforms": ["ps2"],
-                        "note": {
-                            "es": "Pese a tener un diálogo de confirmación, no tendrá efecto en la versión de PS2.",
-                            "en": "Despite displaying a confirmation message, it has no effect in the PS2 version.",
-                            "fr": "Bien qu'un message de confirmation s'affiche, cela n'a aucun effet dans la version PS2.",
-                            "pt": "Apesar de exibir uma mensagem de confirmação, não tem efeito na versão de PS2."
-                        },
-                        "noteType": "bug"
-                    }
-                ],
                 "codes": {
                     "psp": [
-                        "CROSS",
-                        "CROSS",
-                        "CROSS",
-                        "DOWN",
-                        "DOWN",
-                        "RIGHT",
-                        "L",
-                        "R"
-                    ],
-                    "ps2": [
-                        "CROSS",
-                        "CROSS",
-                        "CROSS",
-                        "DOWN",
-                        "DOWN",
-                        "RIGHT",
-                        "L1",
-                        "R1"
+                        "UP",
+                        "UP",
+                        "UP",
+                        "TRIANGLE",
+                        "TRIANGLE",
+                        "SQUARE",
+                        "R",
+                        "L"
                     ]
                 }
             },
@@ -1238,6 +1219,18 @@
                     "fr": "Afficher les crédits du jeu",
                     "pt": "Mostrar créditos do jogo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["psp"],
+                        "note": {
+                            "es": "Este truco no tiene diálogo de confirmación.",
+                            "en": "This cheat has no confirmation dialogue.",
+                            "fr": "Ce cheat ne possède pas de dialogue de confirmation.",
+                            "pt": "Este truque não possui diálogo de confirmação."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "psp": ["L", "R", "L", "R", "UP", "DOWN", "L", "R"],
                     "ps2": ["L1", "R1", "L1", "R1", "UP", "DOWN", "L1", "R1"]
