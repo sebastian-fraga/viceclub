@@ -120,7 +120,7 @@
                         "fr": "Casse de la bijouterie",
                         "pt": "O Golpe à Joalheria"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-13",
@@ -220,7 +220,7 @@
                         "fr": "Room Service",
                         "pt": "O Assassinato no Hotel"
                     },
-                    "icon": "lester_f"
+                    "icon": "lester-f"
                 },
                 {
                     "id": "mp-23",
@@ -260,7 +260,7 @@
                         "fr": "Le Coup de Merryweather",
                         "pt": "O Golpe da Merryweather"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-27",
@@ -280,7 +280,7 @@
                         "fr": "Mise à sac",
                         "pt": "Jogada Ensaiada"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-29",
@@ -290,7 +290,7 @@
                         "fr": "Mort aux vaches",
                         "pt": "Eu Lutei Contra a Lei..."
                     },
-                    "icon": "devin_m"
+                    "icon": "devin-m"
                 },
                 {
                     "id": "mp-30",
@@ -300,7 +300,7 @@
                         "fr": "Un œil dans le ciel",
                         "pt": "Vigilância Aérea"
                     },
-                    "icon": "devin_t"
+                    "icon": "devin-t"
                 },
                 {
                     "id": "mp-31",
@@ -310,7 +310,7 @@
                         "fr": "Silence, on tourne",
                         "pt": "Infiltrado"
                     },
-                    "icon": "devin_f"
+                    "icon": "devin-f"
                 },
                 {
                     "id": "mp-32",
@@ -370,7 +370,7 @@
                         "fr": "Coup de Paleto Bay",
                         "pt": "O Golpe de Paleto Bay"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-39",
@@ -420,7 +420,7 @@
                         "fr": "Convoi dangereux",
                         "pt": "O Homem do Saco"
                     },
-                    "icon": "devin_f"
+                    "icon": "devin-f"
                 },
                 {
                     "id": "mp-44",
@@ -500,7 +500,7 @@
                         "fr": "Les Plans de l'architecte",
                         "pt": "A Planta do Arquiteto"
                     },
-                    "icon": "lester_f"
+                    "icon": "lester-f"
                 },
                 {
                     "id": "mp-52",
@@ -510,7 +510,7 @@
                         "fr": "Attaque du FIB",
                         "pt": "A Invasão do FIB"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-53",
@@ -530,7 +530,7 @@
                         "fr": "Le Coup du siècle",
                         "pt": "O Grande Golpe"
                     },
-                    "icon": "golpe"
+                    "icon": "heist"
                 },
                 {
                     "id": "mp-55",
@@ -560,7 +560,7 @@
                                 "fr": "La Troisième Option",
                                 "pt": "A Opção C"
                             },
-                            "icon": "lester_f"
+                            "icon": "lester-f"
                         }
                     ]
                 }
@@ -574,7 +574,7 @@
                 "fr": "Missions d’assassinat",
                 "pt": "Missões de assassinato"
             },
-            "icon": "lester_f",
+            "icon": "lester-f",
             "items": [
                 {
                     "id": "ma-01",
@@ -944,7 +944,7 @@
                         "fr": "4 courses nautiques terminés",
                         "pt": "4 corridas marítimas completadas"
                     },
-                    "icon": "carrera_maritima"
+                    "icon": "sea-race"
                 },
                 {
                     "id": "ap-02",
@@ -954,7 +954,7 @@
                         "fr": "6 courses tout-terrain terminés",
                         "pt": "6 corridas Off-Road completadas"
                     },
-                    "icon": "carrera_todoterreno"
+                    "icon": "offroad-race"
                 },
                 {
                     "id": "ap-03",
@@ -964,7 +964,7 @@
                         "fr": "5 courses de rue terminés",
                         "pt": "5 corridas de rua completadas"
                     },
-                    "icon": "carrera_urbana"
+                    "icon": "street-race"
                 },
                 {
                     "id": "ap-04",
@@ -974,7 +974,7 @@
                         "fr": "Défis du stand de tir terminés",
                         "pt": "Desafios do estande de tiro completados"
                     },
-                    "icon": "galeria"
+                    "icon": "shooting-range"
                 },
                 {
                     "id": "ap-05",
@@ -984,7 +984,7 @@
                         "fr": "École de pilotage terminée",
                         "pt": "Escola de aviação completada"
                     },
-                    "icon": "escuela"
+                    "icon": "flight-school"
                 },
                 {
                     "id": "ap-06",
@@ -994,7 +994,7 @@
                         "fr": "Partie de fléchettes gagnée",
                         "pt": "Partida de dardos vencida"
                     },
-                    "icon": "dardos"
+                    "icon": "darts"
                 },
                 {
                     "id": "ap-07",
@@ -1004,7 +1004,7 @@
                         "fr": "Partie de tennis gagnée",
                         "pt": "Partida de tênis vencida"
                     },
-                    "icon": "tenis"
+                    "icon": "tennis"
                 },
                 {
                     "id": "ap-08",
@@ -1030,7 +1030,7 @@
                         "fr": "3 triathlons terminés",
                         "pt": "3 triatlos completados"
                     },
-                    "icon": "triatlon"
+                    "icon": "triathlon"
                 },
                 {
                     "id": "ap-10",
@@ -1040,7 +1040,7 @@
                         "fr": "13 sauts en parachute terminés",
                         "pt": "13 saltos de base completados"
                     },
-                    "icon": "paracaidas"
+                    "icon": "base-jump"
                 },
                 {
                     "id": "ap-11",
@@ -1060,7 +1060,7 @@
                         "fr": "Cinéma visité",
                         "pt": "Cinema visitado"
                     },
-                    "icon": "cine"
+                    "icon": "cinema"
                 }
             ]
         },
@@ -1086,7 +1086,7 @@
                         "fr": "Strip-Club",
                         "pt": "Clube de striptease"
                     },
-                    "icon": "clubstriptease"
+                    "icon": "strip-club"
                 },
                 {
                     "id": "act-03",
@@ -1096,7 +1096,7 @@
                         "fr": "Cinéma",
                         "pt": "Cinema"
                     },
-                    "icon": "cine"
+                    "icon": "cinema"
                 },
                 {
                     "id": "act-04",
@@ -1106,7 +1106,7 @@
                         "fr": "Fléchettes",
                         "pt": "Dardos"
                     },
-                    "icon": "dardos"
+                    "icon": "darts"
                 }
             ]
         },
@@ -1127,7 +1127,7 @@
                         "fr": "5 propriétés achetées",
                         "pt": "5 propriedades compradas"
                     },
-                    "icon": "propiedad"
+                    "icon": "property"
                 },
                 {
                     "id": "misc-02",
@@ -1173,7 +1173,7 @@
                         "fr": "Magasin braqué",
                         "pt": "Loja assaltada"
                     },
-                    "icon": "tienda"
+                    "icon": "store"
                 },
                 {
                     "id": "misc-07",

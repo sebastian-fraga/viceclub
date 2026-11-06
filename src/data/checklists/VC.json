@@ -305,7 +305,7 @@
                 {
                     "id": "mp-31",
                     "text": "Love Juice",
-                    "icon": "fist"
+                    "icon": "love-fist"
                 },
                 {
                     "id": "mp-32",
@@ -315,7 +315,7 @@
                         "fr": "Psychopathe",
                         "pt": "Psycho Killer"
                     },
-                    "icon": "fist"
+                    "icon": "love-fist"
                 },
                 {
                     "id": "mp-33",
@@ -355,7 +355,7 @@
                         "fr": "Promo",
                         "pt": "Publicity Tour"
                     },
-                    "icon": "fist"
+                    "icon": "love-fist"
                 },
                 {
                     "id": "mp-37",
@@ -380,7 +380,7 @@
                         "fr": "La mèche est vendue",
                         "pt": "Spilling the Beans"
                     },
-                    "icon": "imprenta"
+                    "icon": "print-works"
                 },
                 {
                     "id": "mp-40",
@@ -390,7 +390,7 @@
                         "fr": "Halte au messager",
                         "pt": "Hit the Courier"
                     },
-                    "icon": "imprenta"
+                    "icon": "print-works"
                 },
                 {
                     "id": "mp-41",
@@ -400,7 +400,7 @@
                         "fr": "L'Encaisseur",
                         "pt": "Cap the Collector"
                     },
-                    "icon": "imprenta"
+                    "icon": "print-works"
                 },
                 {
                     "id": "mp-42",
@@ -422,7 +422,7 @@
                 "fr": "Chantier naval",
                 "pt": "Estaleiro"
             },
-            "icon": "astillero",
+            "icon": "business-boatyard",
             "items": [
                 {
                     "id": "ast-01",
@@ -438,7 +438,7 @@
                 "fr": "Cherry Popper",
                 "pt": "Cherry Popper"
             },
-            "icon": "cherry",
+            "icon": "business-cherry-popper",
             "items": [
                 {
                     "id": "chp-01",
@@ -459,8 +459,8 @@
         },
         {
             "id": "ig",
-            "title": "Interglobal Films",
-            "icon": "estudio",
+            "title": "InterGlobal Films",
+            "icon": "business-studio",
             "items": [
                 {
                     "id": "ig-01",
@@ -503,7 +503,7 @@
         {
             "id": "kc",
             "title": "Kaufman Cabs",
-            "icon": "taxi",
+            "icon": "business-cabs",
             "items": [
                 {
                     "id": "kc-01",
@@ -537,7 +537,7 @@
                 "fr": "Malibu Club",
                 "pt": "Malibu Club"
             },
-            "icon": "malibu",
+            "icon": "business-malibu",
             "items": [
                 {
                     "id": "cm-01",
@@ -580,7 +580,7 @@
         {
             "id": "sa",
             "title": "Sunshine Autos",
-            "icon": "sunshine",
+            "icon": "business-sunshine",
             "items": [
                 {
                     "id": "sa-01",
@@ -601,7 +601,7 @@
                 "fr": "Pole Position Club",
                 "pt": "Pole Position Club"
             },
-            "icon": "pole",
+            "icon": "business-pole-position",
             "items": [
                 {
                     "id": "pp-01",
@@ -686,7 +686,7 @@
                 "fr": "Missions téléphoniques",
                 "pt": "Missões telefônicas"
             },
-            "icon": "telefono",
+            "icon": "phone",
             "items": [
                 {
                     "id": "mt-01",

@@ -17,7 +17,7 @@
                         "fr": "À moi Liberty",
                         "pt": "Give Me Liberty"
                     },
-                    "icon": "8ball"
+                    "icon": "8-ball"
                 },
                 {
                     "id": "mp-02",
@@ -217,7 +217,7 @@
                         "fr": "La Bombe : acte 2",
                         "pt": "Bomb Da Base: Act II"
                     },
-                    "icon": "8ball"
+                    "icon": "8-ball"
                 },
                 {
                     "id": "mp-22",
@@ -606,17 +606,17 @@
                 {
                     "id": "mt-01",
                     "text": "El Burro",
-                    "icon": "burro"
+                    "icon": "phone-el-burro"
                 },
                 {
                     "id": "mt-02",
                     "text": "D-Ice",
-                    "icon": "d-ice"
+                    "icon": "phone-d-ice"
                 },
                 {
                     "id": "mt-03",
                     "text": "King Courtney",
-                    "icon": "king"
+                    "icon": "phone-king-courtney"
                 },
                 {
                     "id": "mt-04",

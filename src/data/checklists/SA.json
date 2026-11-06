@@ -102,22 +102,22 @@
                 {
                     "id": "mp-19",
                     "text": "Life's a Beach",
-                    "icon": "ogloc"
+                    "icon": "og-loc"
                 },
                 {
                     "id": "mp-20",
                     "text": "Madd Dogg's Rhymes",
-                    "icon": "ogloc"
+                    "icon": "og-loc"
                 },
                 {
                     "id": "mp-21",
                     "text": "Management Issues",
-                    "icon": "ogloc"
+                    "icon": "og-loc"
                 },
                 {
                     "id": "mp-22",
                     "text": "House Party",
-                    "icon": "ogloc"
+                    "icon": "og-loc"
                 },
                 {
                     "id": "mp-23",
@@ -177,7 +177,7 @@
                 {
                     "id": "mp-34",
                     "text": "Body Harvest",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-35",
@@ -197,12 +197,12 @@
                 {
                     "id": "mp-38",
                     "text": "Are You Going to San Fierro?",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-39",
                     "text": "Wear Flowers in Your Hair",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-40",
@@ -262,7 +262,7 @@
                 {
                     "id": "mp-51",
                     "text": "Outrider",
-                    "icon": "triadas"
+                    "icon": "triads"
                 },
                 {
                     "id": "mp-52",
@@ -272,22 +272,22 @@
                 {
                     "id": "mp-53",
                     "text": "Ice Cold Killa",
-                    "icon": "triadas"
+                    "icon": "triads"
                 },
                 {
                     "id": "mp-54",
                     "text": "Pier 69",
-                    "icon": "triadas"
+                    "icon": "triads"
                 },
                 {
                     "id": "mp-55",
                     "text": "Toreno's Last Flight",
-                    "icon": "triadas"
+                    "icon": "triads"
                 },
                 {
                     "id": "mp-56",
                     "text": "Yay Ka-Boom-Boom",
-                    "icon": "triadas"
+                    "icon": "triads"
                 },
                 {
                     "id": "mp-57",
@@ -312,57 +312,57 @@
                 {
                     "id": "mp-61",
                     "text": "Learning to Fly",
-                    "icon": "verdant"
+                    "icon": "airstrip"
                 },
                 {
                     "id": "mp-62",
                     "text": "N.O.E.",
-                    "icon": "verdant"
+                    "icon": "airstrip"
                 },
                 {
                     "id": "mp-63",
                     "text": "Stowaway",
-                    "icon": "verdant"
+                    "icon": "airstrip"
                 },
                 {
                     "id": "mp-64",
                     "text": "Black Project",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-65",
                     "text": "Green Goo",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-66",
                     "text": "Fender Ketchup",
-                    "icon": "four_dragons"
+                    "icon": "four-dragons"
                 },
                 {
                     "id": "mp-67",
                     "text": "Explosive Situation",
-                    "icon": "four_dragons"
+                    "icon": "four-dragons"
                 },
                 {
                     "id": "mp-68",
                     "text": "You've Had Your Chips",
-                    "icon": "four_dragons"
+                    "icon": "four-dragons"
                 },
                 {
                     "id": "mp-69",
                     "text": "Don Peyote",
-                    "icon": "truth"
+                    "icon": "the-truth"
                 },
                 {
                     "id": "mp-70",
                     "text": "Intensive Care",
-                    "icon": "caligula"
+                    "icon": "caligula-casino"
                 },
                 {
                     "id": "mp-71",
                     "text": "The Meat Business",
-                    "icon": "caligula"
+                    "icon": "caligula-casino"
                 },
                 {
                     "id": "mp-72",
@@ -372,17 +372,17 @@
                 {
                     "id": "mp-73",
                     "text": "Madd Dogg",
-                    "icon": "madddogg"
+                    "icon": "madd-dogg"
                 },
                 {
                     "id": "mp-74",
                     "text": "Fish in a Barrel",
-                    "icon": "four_dragons"
+                    "icon": "four-dragons"
                 },
                 {
                     "id": "mp-75",
                     "text": "Freefall",
-                    "icon": "caligula"
+                    "icon": "caligula-casino"
                 },
                 {
                     "id": "mp-76",
@@ -392,12 +392,12 @@
                 {
                     "id": "mp-77",
                     "text": "Saint Mark's Bistro",
-                    "icon": "caligula"
+                    "icon": "caligula-casino"
                 },
                 {
                     "id": "mp-78",
                     "text": "A Home in the Hills",
-                    "icon": "four_dragons"
+                    "icon": "four-dragons"
                 },
                 {
                     "id": "mp-79",
@@ -412,7 +412,7 @@
                 {
                     "id": "mp-81",
                     "text": "Cut Throat Business",
-                    "icon": "madddogg"
+                    "icon": "madd-dogg"
                 },
                 {
                     "id": "mp-82",
@@ -501,7 +501,7 @@
                 "fr": "Missions du braquage du casino Caligula",
                 "pt": "Missões do roubo ao Cassino Calígula"
             },
-            "icon": "robo",
+            "icon": "heist",
             "items": [
                 {
                     "id": "cal-01",
@@ -613,7 +613,7 @@
                         "fr": "Niveau 8 de routier complété",
                         "pt": "Nível 8 de caminhoneiro completado"
                     },
-                    "icon": "camionero"
+                    "icon": "trucking"
                 },
                 {
                     "id": "ms-09",
@@ -623,7 +623,7 @@
                         "fr": "7 missions de la carrière complétées",
                         "pt": "7 missões da pedreira completadas"
                     },
-                    "icon": "cantera"
+                    "icon": "quarry"
                 }
             ]
         },
@@ -688,7 +688,7 @@
                 "fr": "Courses de Los Santos",
                 "pt": "Corridas de Los Santos"
             },
-            "icon": "carrera",
+            "icon": "race",
             "items": [
                 {
                     "id": "cls-01",
@@ -736,7 +736,7 @@
                 "fr": "Courses de San Fierro",
                 "pt": "Corridas de San Fierro"
             },
-            "icon": "carrera",
+            "icon": "race",
             "items": [
                 {
                     "id": "csf-01",
@@ -772,7 +772,7 @@
                 "fr": "Courses de Las Venturas",
                 "pt": "Corridas de Las Venturas"
             },
-            "icon": "carrera",
+            "icon": "race",
             "items": [
                 {
                     "id": "clv-01",
@@ -800,7 +800,7 @@
                 "fr": "Courses aériennes",
                 "pt": "Corridas aéreas"
             },
-            "icon": "carrera",
+            "icon": "race",
             "items": [
                 {
                     "id": "ca-01",
@@ -1040,7 +1040,7 @@
                 "fr": "Stades",
                 "pt": "Estádios"
             },
-            "icon": "estadio",
+            "icon": "stadium",
             "items": [
                 {
                     "id": "est-01",
@@ -1080,7 +1080,7 @@
                 "fr": "Écoles",
                 "pt": "Escolas"
             },
-            "icon": "escuela",
+            "icon": "driving-school",
             "items": [
                 {
                     "id": "esc-01",
@@ -1128,7 +1128,7 @@
                 "fr": "Styles de combat",
                 "pt": "Estilos de luta"
             },
-            "icon": "gimnasio",
+            "icon": "gym",
             "items": [
                 {
                     "id": "gym-01",
@@ -1203,7 +1203,8 @@
                         "en": "Available after Yay Ka-Boom-Boom",
                         "fr": "Disponible après Yay Ka-Boom-Boom",
                         "pt": "Disponível após Yay Ka-Boom-Boom"
-                    }
+                    },
+                    "icon": "ammu-nation"
                 },
                 {
                     "id": "misc-04",
@@ -1213,7 +1214,7 @@
                         "fr": "Posséder toutes les propriétés",
                         "pt": "Comprar todas as propriedades"
                     },
-                    "icon": "propiedad"
+                    "icon": "property"
                 }
             ]
         }
