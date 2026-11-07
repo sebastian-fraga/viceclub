@@ -60,10 +60,10 @@
                 {
                     "platforms": ["pc"],
                     "note": {
-                        "es": "Otorga el Bate de béisbol, Granadas, Pistola de combate, Escopeta de combate, Subfusil, Carabina, Rifle de combate y Lanzacohetes",
-                        "en": "Grants the Baseball Bat, Grenades, Combat Pistol, Combat Shotgun, SMG, Carbine Rifle, Combat Sniper and RPG",
-                        "fr": "Accorde la Batte de baseball, Grenades, Pistolet de combat, Fusil à pompe de combat, Pistolet-mitrailleur, Carabine, Fusil de combat et Lance-roquettes",
-                        "pt": "Concede o Taco de baseball, Granadas, Pistola de combate, Espingarda de combate, Subfusil, Carabina, Rifle de combate e Lançador de foguetes"
+                        "es": "Otorga el Bate de béisbol, Pistola de combate, Escopeta de combate, Subfusil, Carabina, Rifle de combate, Lanzacohetes y Granadas",
+                        "en": "Grants the Baseball Bat, Combat Pistol, Combat Shotgun, SMG, Carbine Rifle, Combat Sniper, RPG and Grenades",
+                        "fr": "Accorde la Batte de baseball, Pistolet de combat, Fusil à pompe de combat, Pistolet-mitrailleur, Carabine, Fusil de combat, Lance-roquettes et Grenades",
+                        "pt": "Concede o Taco de baseball, Pistola de combate, Espingarda de combate, Subfusil, Carabina, Rifle de combate, Lançador de foguetes e Granadas"
                     },
                     "noteType": "info"
                 },
@@ -94,10 +94,10 @@
                 {
                     "platforms": ["pc"],
                     "note": {
-                        "es": "Otorga el Cuchillo, Cócteles molotov, Pistola, Escopeta corredera, Subfusil micro, Fusil de asalto, Rifle de precisión y Lanzacohetes",
-                        "en": "Grants the Knife, Molotov Cocktails, Pistol, Pump Shotgun, Micro-SMG, Assault Rifle, Sniper Rifle and RPG",
-                        "fr": "Accorde le Couteau, Cocktails molotov, Pistolet, Fusil à pompe, Micro pistolet-mitrailleur, Fusil d'assaut, Fusil de précision et Lance-roquettes",
-                        "pt": "Concede a Faca, Coquetéis molotov, Pistola, Espingarda de bombeamento, Subfusil micro, Rifle de assalto, Rifle de precisão e Lançador de foguetes"
+                        "es": "Otorga el Cuchillo, Pistola, Escopeta corredera, Subfusil micro, Fusil de asalto, Rifle de precisión, Lanzacohetes y Cócteles molotov",
+                        "en": "Grants the Knife, Pistol, Pump Shotgun, Micro-SMG, Assault Rifle, Sniper Rifle, RPG and Molotov Cocktails",
+                        "fr": "Accorde le Couteau, Pistolet, Fusil à pompe, Micro pistolet-mitrailleur, Fusil d'assaut, Fusil de précision, Lance-roquettes et Cocktails molotov",
+                        "pt": "Concede a Faca, Pistola, Espingarda de bombeamento, Subfusil micro, Rifle de assalto, Rifle de precisão, Lançador de foguetes e Coquetéis molotov"
                     },
                     "noteType": "info"
                 },
@@ -360,10 +360,10 @@
                 {
                     "platforms": ["pc"],
                     "note": {
-                        "es": "Otorga el Cuchillo, Bombas lapa, Pistola 44, Escopeta explosiva, Subfusil de asalto, MG avanzada, Rifle de francotirador avanzado y Lanzagranadas",
-                        "en": "Grants the Knife, Sticky Bombs, Pistol .44, Explosive Shotgun, Assault SMG, Advanced MG, Advanced Sniper and Grenade Launcher",
-                        "fr": "Accorde le Couteau, Bombes collantes, Pistolet 44, Fusil à pompe explosif, Pistolet-mitrailleur d'assaut, MG avancée, Fusil de sniper avancé et Lance-grenades",
-                        "pt": "Concede a Faca, Bombas adesivas, Pistola 44, Espingarda explosiva, Subfusil de assalto, MG avançada, Rifle de sniper avançado e Lançador de granadas"
+                        "es": "Otorga el Cuchillo, Pistola 44, Escopeta explosiva, Subfusil de asalto, MG avanzada, Rifle de francotirador avanzado, Lanzagranadas y Bombas lapa",
+                        "en": "Grants the Knife, Pistol .44, Explosive Shotgun, Assault SMG, Advanced MG, Advanced Sniper, Grenade Launcher and Sticky Bombs",
+                        "fr": "Accorde le Couteau, Pistolet 44, Fusil à pompe explosif, Pistolet-mitrailleur d'assaut, MG avancée, Fusil de sniper avancé, Lance-grenades et Bombes collantes",
+                        "pt": "Concede a Faca, Pistola 44, Espingarda explosiva, Subfusil de assalto, MG avançada, Rifle de sniper avançado, Lançador de granadas e Bombas adesivas"
                     },
                     "noteType": "info"
                 }
@@ -388,6 +388,18 @@
                 "fr": "Coups de poing explosifs",
                 "pt": "Socos explosivos"
             },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "es": "Truco desactivado dentro de las misiones",
+                        "en": "Cheat disabled during missions",
+                        "fr": "Triche désactivée pendant les missions",
+                        "pt": "Trapaça desativada durante as missões"
+                    },
+                    "noteType": "info"
+                }
+            ],
             "codes": { "pc": ["276-555-2666"] }
         },
         {
@@ -398,6 +410,18 @@
                 "fr": "Balles de sniper explosives",
                 "pt": "Balas de sniper explosivas"
             },
+            "platformNotes": [
+                {
+                    "platforms": ["pc"],
+                    "note": {
+                        "es": "Truco desactivado dentro de las misiones",
+                        "en": "Cheat disabled during missions",
+                        "fr": "Triche désactivée pendant les missions",
+                        "pt": "Trapaça desativada durante as missões"
+                    },
+                    "noteType": "info"
+                }
+            ],
             "codes": { "pc": ["486-555-2526"] }
         },
         {
