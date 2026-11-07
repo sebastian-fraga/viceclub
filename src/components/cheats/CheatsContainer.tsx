@@ -128,6 +128,7 @@ export const CheatsContainer = ({
     };
 
     const categories = Object.entries(cheatsData);
+    const showSelector = availablePlatforms.length > 1;
 
     let globalIndex = 0;
 
@@ -147,13 +148,15 @@ export const CheatsContainer = ({
                     />
                 </div>
 
-                <MultiSelector<PlatformFamily, Platform>
-                    options={selectorOptions}
-                    selectedPrimaryId={selectedFamily}
-                    selectedSecondaryId={selectedPlatform}
-                    onSelectPrimary={handleFamilyChange}
-                    onSelectSecondary={handlePlatformChange}
-                />
+                {showSelector && (
+                    <MultiSelector<PlatformFamily, Platform>
+                        options={selectorOptions}
+                        selectedPrimaryId={selectedFamily}
+                        selectedSecondaryId={selectedPlatform}
+                        onSelectPrimary={handleFamilyChange}
+                        onSelectSecondary={handlePlatformChange}
+                    />
+                )}
             </div>
 
             {categories.map(([categoryName, categoryData]) => {
@@ -161,7 +164,7 @@ export const CheatsContainer = ({
                     ? categoryData
                     : categoryData.cheats;
 
-                    const id = slugify(categoryName);
+                const id = slugify(categoryName);
 
                 return (
                     <section
