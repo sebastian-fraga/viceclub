@@ -42,7 +42,7 @@ export function RadioPlayer({
             <div className="flex flex-col gap-4 max-mobile:gap-3">
                 <div className="relative h-190 min-w-0 max-mobile:h-[70vh] max-mobile:min-h-105 max-mobile:max-h-190">
                     <div className="grid h-full w-full grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-4 max-mobile:grid-cols-1">
-                        <div className="h-full min-h-0 min-w-0">
+                        <div className="h-full min-h-0 max-mobile:min-h-[75dvh] min-w-0">
                             <StationSelector
                                 game={game}
                                 stations={stations}
