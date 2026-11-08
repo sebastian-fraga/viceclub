@@ -156,7 +156,7 @@ function CarouselItem({
             className="shrink-0 px-2"
             style={{ width: itemWidth, scale, opacity }}
         >
-            <div className="flex aspect-square w-full items-center justify-center rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-6 shadow-2xl shadow-black/40">
+            <div className="flex aspect-square w-full h-full mx-auto max-w-60 max-h-60 items-center justify-center rounded-4xl bg-[color-mix(in_oklch,var(--radio-station-accent)_30%,black)] p-6 shadow-2xl shadow-black/40">
                 <RadioImage station={station} game={game} />
             </div>
         </motion.div>
