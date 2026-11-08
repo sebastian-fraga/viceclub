@@ -80,20 +80,26 @@ export function SongSelector({
 
     useEffect(() => {
         if (currentIndex === -1) return;
-        const el = songRefs.current.get(currentIndex);
-        if (!el) return;
 
-        const isMobile = window.matchMedia(MOBILE_QUERY).matches;
+        const scrollToActive = () => {
+            const el = songRefs.current.get(currentIndex);
+            if (!el) return;
 
-        if (isMobile && preventAutoScrollOnMobile) {
-            return;
-        }
+            const isMobile = window.matchMedia(MOBILE_QUERY).matches;
 
-        el.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
-        });
-    }, [currentIndex, preventAutoScrollOnMobile]);
+            if (isMobile && preventAutoScrollOnMobile) {
+                return;
+            }
+
+            el.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+            });
+        };
+        
+        const frame = requestAnimationFrame(scrollToActive);
+        return () => cancelAnimationFrame(frame);
+    }, [currentIndex, activePlaylist, preventAutoScrollOnMobile]);
 
     const maskParts = [
         canScrollUp ? "transparent 0%, black 10%" : "black 0%",
