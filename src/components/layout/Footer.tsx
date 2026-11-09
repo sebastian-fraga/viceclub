@@ -1,40 +1,35 @@
-import { APP_VERSION, COMMIT } from "@/lib/app/version";
-
-import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
-
+import ViceClubLogo from "@/components/ui/ViceClubLogo";
 import useT from "@/hooks/useT";
-
+import { APP_VERSION, COMMIT } from "@/lib/app/version";
+import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
 import Support from "../index/support/Support";
 
 const anchorClasses =
-    "text-black bg-white p-2 mobile:px-8 mobile:py-3 rounded-full transition";
+    "text-white bg-white/5 p-2.5 mobile:px-7 mobile:py-3 rounded-full transition hover:bg-white/10 border border-white/5";
+
+const footerDisclaimerClasses =
+    "text-white/60 text-center text-xs text-balance";
 
 export default function Footer() {
     const t = useT();
+
     return (
         <footer
             style={{ transition: "margin-left 0.3s" }}
-            className="ml-0 mobile:ml-(--sidebar-width) pt-10 pb-22 text-neutral-50 gap-10 flex flex-col border-t border-t-slate-800 overflow-hidden"
+            className="ml-0 mobile:ml-(--sidebar-width) bg-slate-950 pt-16 text-neutral-50 flex flex-col overflow-hidden border-t border-white/10"
         >
-            <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-6 mobile:px-12 lg:px-32">
+            <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-6 mobile:px-12 lg:px-32 pb-12">
                 <div className="relative flex items-center gap-4 shrink-0">
-                    <div className="absolute inset-0 z-0 bg-linear-to-r from-pink-700/60 via-yellow-300/20 to-blue-500/70 blur-3xl"></div>
+                    <div className="absolute inset-0 z-0 bg-linear-to-r from-pink-700/40 via-yellow-300/10 to-blue-500/40 blur-3xl"></div>
 
-                    <img
-                        className="relative z-1 w-16 h-16 max-mobile:w-15 max-mobile:h-15"
-                        src="/assets/images/app/logo.webp"
-                        alt="Vice Club Logo"
-                        loading="lazy"
-                        width={64}
-                        height={64}
-                    />
+                    <ViceClubLogo className="relative z-1 w-20 h-20 max-mobile:w-15 max-mobile:h-15 fill-slate-100/90" />
 
-                    <span className="relative z-1 select-none text-center font-body-condensed text-5xl tracking-tight text-blue-400 [-webkit-text-stroke:2px_#101525aa] max-mobile:text-[2.3em]">
+                    <span className="relative z-1 select-none text-center font-body-condensed text-4xl text-slate-100/90 max-mobile:text-[2.3em]">
                         VICE CLUB
                     </span>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-10 gap-y-6 w-full lg:w-auto">
+                <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-6 gap-y-4 w-full lg:w-auto">
                     <nav
                         aria-label={t("footer.socialNetworks")}
                         className="flex items-center gap-3"
@@ -42,25 +37,25 @@ export default function Footer() {
                         <a
                             href="https://github.com/sebastian-fraga/viceclub"
                             aria-label="GitHub"
-                            className={`${anchorClasses} hover:bg-pink-100`}
+                            className={`${anchorClasses} hover:text-pink-300`}
                         >
-                            <IconBrandGithub stroke={1.5} />
+                            <IconBrandGithub stroke={1.5} size={20} />
                         </a>
 
                         <a
                             href="https://x.com/ViceClubApp"
                             aria-label="X"
-                            className={`${anchorClasses} hover:bg-yellow-100`}
+                            className={`${anchorClasses} hover:text-yellow-200`}
                         >
-                            <IconBrandX stroke={1.5} />
+                            <IconBrandX stroke={1.5} size={20} />
                         </a>
 
                         <a
                             href="mailto:contact@viceclub.app"
                             aria-label="Email"
-                            className={`${anchorClasses} hover:bg-blue-100`}
+                            className={`${anchorClasses} hover:text-blue-300`}
                         >
-                            <IconMail stroke={1.5} />
+                            <IconMail stroke={1.5} size={20} />
                         </a>
                     </nav>
 
@@ -68,24 +63,34 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="flex flex-col mobile:flex-row items-center justify-center gap-2 mobile:gap-3 text-base text-center">
-                <span className="text-slate-300 font-extrabold">
-                    © {new Date().getFullYear()} VICE CLUB
-                </span>
+            <div className="w-full border-t border-white/5 py-8 px-6">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 text-lg text-center">
+                    <span className="text-slate-400 font-medium">
+                        © {new Date().getFullYear()} VICE CLUB
+                    </span>
 
-                <span className="hidden mobile:inline text-slate-500"> • </span>
+                    <span className="text-slate-400 font-light">
+                        v{APP_VERSION} •{" "}
+                        <a
+                            href={`https://github.com/sebastian-fraga/viceclub/commit/${COMMIT}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-300 hover:text-white transition underline decoration-slate-700 hover:decoration-slate-400 underline-offset-2"
+                        >
+                            {COMMIT}
+                        </a>
+                    </span>
+                </div>
 
-                <span className="text-slate-300 font-thin">
-                    v{APP_VERSION} •{" "}
-                    <a
-                        href={`https://github.com/sebastian-fraga/viceclub/commit/${COMMIT}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-slate-100 transition underline decoration-slate-600 underline-offset-2"
-                    >
-                        {COMMIT}
-                    </a>
-                </span>
+                <div className="flex flex-col items-center gap-1.5 max-w-4xl mx-auto mt-6">
+                    <p className={footerDisclaimerClasses}>
+                        {t("footer.disclaimer.1")}
+                    </p>
+
+                    <p className={footerDisclaimerClasses}>
+                        {t("footer.disclaimer.2")}
+                    </p>
+                </div>
             </div>
         </footer>
     );
