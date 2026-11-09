@@ -81,7 +81,7 @@ export default function DropdownSelector<T extends string = string>({
                             </span>
 
                             <div
-                                className="flex flex-col items-start gap-2 pr-5 max-mobile:pr-4 overflow-y-auto scroll-selector"
+                                className="flex flex-col items-start gap-2 pr-5 max-mobile:pr-4 overflow-y-auto overscroll-y-contain scroll-selector"
                                 data-lenis-prevent
                             >
                                 {options.map((option) => {
