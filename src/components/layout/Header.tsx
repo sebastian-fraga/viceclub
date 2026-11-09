@@ -1,5 +1,5 @@
-import useT from "@/hooks/useT";
 import useLocalePath from "@/hooks/useLocalePath";
+import useT from "@/hooks/useT";
 import { useEffect, useState } from "react";
 
 export default function Header() {
@@ -24,7 +24,7 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-(--banner-height) inset-x-0 z-100 flex h-22 items-center justify-start max-mobile:justify-center overflow-hidden border-b-2 border-slate-700/40 bg-linear-90 from-[#15151F] via-slate-950 to-[#15151F] transition-[top] duration-700 ease-in-out">
+        <header className="fixed top-(--banner-height) inset-x-0 z-100 flex h-22 items-center justify-start max-mobile:justify-center overflow-hidden bg-slate-950 shadow-2xl transition-[top] duration-700 ease-in-out">
             <button
                 type="button"
                 id="mobile-menu-toggle"
@@ -58,14 +58,14 @@ export default function Header() {
 
             <a
                 href={lp("/")}
-                className="m-0 p-0 leading-none transition-all duration-400 ease-in-out active:scale-90 hover:brightness-75 flex items-center justify-start gap-4 max-mobile:flex-none max-mobile:gap-2 max-mobile:mr-2"
+                className="m-0 p-0 leading-none transition-all duration-400 ease-in-out active:scale-90 hover:brightness-75 flex items-center justify-start gap-3 max-mobile:flex-none max-mobile:gap-2 max-mobile:mr-2"
             >
                 <img
-                    className="ml-7.5 w-[4em] drop-shadow-2xl drop-shadow-purple-800/40 max-mobile:ml-0 max-mobile:w-15"
-                    src="/assets/images/app/logo.webp"
-                    alt=""
+                    className="ml-10 w-16 max-mobile:ml-0 max-mobile:w-14 fill-pink-50"
+                    src="/public/assets/images/app/logos/logo.webp"
+                    alt="Vice Club logo"
                 />
-                <span className="select-none text-center font-body-condensed text-5xl tracking-tight bg-linear-to-b from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent [-webkit-text-stroke:1.5px_#101525] drop-shadow-[0_2px_6px_#667AFF4A] transition-all ease-in-out max-mobile:text-[2.3em]">
+                <span className="select-none text-center font-body-condensed tracking-tighter text-5xl bg-linear-to-b from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent [-webkit-text-stroke:1.5px_#101525] drop-shadow-[0_2px_6px_#667AFF4A]">
                     VICE CLUB
                 </span>
             </a>
