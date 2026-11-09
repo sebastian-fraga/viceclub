@@ -1529,6 +1529,10 @@ export default {
     },
     footer: {
         socialNetworks: "Redes sociales",
+        disclaimer: {
+            1: "Vice Club es un sitio web de fans independiente, no afiliado, respaldado ni patrocinado por Take-Two Interactive ni Rockstar Games.",
+            2: "Grand Theft Auto y sus marcas, personajes y elementos relacionados son propiedad de sus respectivos titulares.",
+        },
     },
     common: {
         editionLabels: {
