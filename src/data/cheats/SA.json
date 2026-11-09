@@ -2815,11 +2815,23 @@
             {
                 "id": "player_25",
                 "title": {
-                    "es": "Resistencia y capacidad pulmonar al máximo",
-                    "en": "Maximum stamina and lung capacity",
-                    "fr": "Endurance et capacité pulmonaire maximales",
-                    "pt": "Resistência e capacidade pulmonar no máximo"
+                    "es": "Resistencia al máximo",
+                    "en": "Maximum stamina",
+                    "fr": "Endurance au maximum",
+                    "pt": "Resistência no máximo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps3", "xbox360"],
+                        "note": {
+                            "es": "También maximiza la capacidad pulmonar",
+                            "en": "Also maximizes lung capacity",
+                            "fr": "Maximise également la capacité pulmonaire",
+                            "pt": "Também maximiza a capacidade pulmonar"
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "UP",
@@ -5489,11 +5501,34 @@
             {
                 "id": "vehicles_19",
                 "title": {
-                    "es": "Coche invencible",
-                    "en": "Invincible car",
-                    "fr": "Voiture invincible",
-                    "pt": "Carro invencível"
+                    "es": "Coche indestructible",
+                    "en": "Indestructible car",
+                    "fr": "Voiture indestructible",
+                    "pt": "Carro indestrutível"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xbox360",
+                            "xboxOne",
+                            "xboxSeries",
+                            "pc",
+                            "switch"
+                        ],
+                        "note": {
+                            "es": "Se aplicará al próximo vehículo que subas. También destruirá cualquier otro vehículo con el que choques.",
+                            "en": "It will apply to the next vehicle you get into. It will also destroy any other vehicle you crash into.",
+                            "fr": "Il s'appliquera au prochain véhicule dans lequel vous montez. Il détruira aussi tout autre véhicule que vous percutez.",
+                            "pt": "Será aplicado ao próximo veículo em que você entrar. Também destruirá qualquer outro veículo com o qual você colidir."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "L1",
@@ -5660,7 +5695,7 @@
                         "LEFT"
                     ],
                     "xbox": [
-                        "B",
+                        "X",
                         "DOWN",
                         "WHITE",
                         "UP",
@@ -5671,7 +5706,7 @@
                         "LEFT"
                     ],
                     "xbox360": [
-                        "B",
+                        "X",
                         "DOWN",
                         "LB",
                         "UP",
@@ -6092,9 +6127,9 @@
             {
                 "id": "vehicles_25",
                 "title": {
-                    "es": "Mejor conducción",
+                    "es": "Mejor manejo",
                     "en": "Better handling",
-                    "fr": "Meilleure conduite",
+                    "fr": "Meilleure tenue de route",
                     "pt": "Melhor dirigibilidade"
                 },
                 "codes": {
@@ -6604,11 +6639,33 @@
             {
                 "id": "vehicles_30",
                 "title": {
-                    "es": "Los conductores esquivarán a CJ",
-                    "en": "Drivers will avoid CJ",
-                    "fr": "Les conducteurs éviteront CJ",
-                    "pt": "Os motoristas desviarão de CJ"
+                    "es": "Tráfico agresivo",
+                    "en": "Aggressive traffic",
+                    "fr": "Circulation agressive",
+                    "pt": "Trânsito agressivo"
                 },
+                "platformNotes": [
+                    {
+                        "platforms": [
+                            "ps2",
+                            "ps3",
+                            "ps4",
+                            "ps5",
+                            "xbox",
+                            "xbox360",
+                            "xboxOne",
+                            "xboxSeries",
+                            "switch"
+                        ],
+                        "note": {
+                            "es": "También hace que los conductores esquiven a CJ cuando esté a pie.",
+                            "en": "It also makes drivers avoid CJ when he is on foot.",
+                            "fr": "Fait aussi en sorte que les conducteurs évitent CJ lorsqu'il est à pied.",
+                            "pt": "Também faz com que os motoristas desviem de CJ quando ele estiver a pé."
+                        },
+                        "noteType": "info"
+                    }
+                ],
                 "codes": {
                     "ps2": [
                         "R2",
@@ -7352,16 +7409,6 @@
                         "L2",
                         "L2",
                         "CROSS"
-                    ],
-                    "xbox": [
-                        "BLACK",
-                        "A",
-                        "LT",
-                        "LT",
-                        "WHITE",
-                        "WHITE",
-                        "WHITE",
-                        "A"
                     ],
                     "xbox360": ["RB", "A", "LT", "LT", "LB", "LB", "LB", "A"],
                     "xboxOne": ["RT", "A", "LB", "LB", "LT", "LT", "LT", "A"],
@@ -8372,9 +8419,9 @@
                         "Y",
                         "LEFT",
                         "X",
-                        "WHITE",
-                        "UP",
                         "BLACK",
+                        "UP",
+                        "WHITE",
                         "DOWN",
                         "LT",
                         "A",
@@ -8628,18 +8675,6 @@
                         "L2",
                         "L1",
                         "R2",
-                        "DOWN",
-                        "LEFT",
-                        "UP"
-                    ],
-                    "xbox": [
-                        "LT",
-                        "LT",
-                        "RT",
-                        "RT",
-                        "WHITE",
-                        "LT",
-                        "BLACK",
                         "DOWN",
                         "LEFT",
                         "UP"
@@ -9155,7 +9190,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2, pc"],
+                        "platforms": ["ps2", "pc"],
                         "note": {
                             "es": "Este truco estará activado si has completado las misiones de chulo con anterioridad.",
                             "en": "This cheat will be enabled if you have previously completed the pimping missions.",
@@ -9286,18 +9321,6 @@
                         "R1",
                         "R1",
                         "R2",
-                        "RIGHT",
-                        "DOWN"
-                    ],
-                    "xbox": [
-                        "LT",
-                        "UP",
-                        "RT",
-                        "RT",
-                        "LEFT",
-                        "RT",
-                        "RT",
-                        "BLACK",
                         "RIGHT",
                         "DOWN"
                     ],
@@ -10043,74 +10066,6 @@
             {
                 "id": "other_4",
                 "title": {
-                    "es": "Congelar el reloj a medianoche",
-                    "en": "Freeze the clock at midnight",
-                    "fr": "Figer l'horloge à minuit",
-                    "pt": "Congelar o relógio à meia-noite"
-                },
-                "platformNotes": [
-                    {
-                        "platforms": ["pc"],
-                        "note": {
-                            "es": "Truco removido en la Edición Definitiva.",
-                            "en": "Cheat removed in the Definitive Edition.",
-                            "fr": "Triche supprimée dans la Definitive Edition.",
-                            "pt": "Trapaça removida na Definitive Edition."
-                        },
-                        "noteType": "info"
-                    }
-                ],
-                "codes": {
-                    "ps2": [
-                        "SQUARE",
-                        "L1",
-                        "R1",
-                        "RIGHT",
-                        "CROSS",
-                        "UP",
-                        "L1",
-                        "LEFT",
-                        "LEFT"
-                    ],
-                    "ps3": [
-                        "SQUARE",
-                        "L2",
-                        "R2",
-                        "RIGHT",
-                        "CROSS",
-                        "UP",
-                        "L2",
-                        "LEFT",
-                        "LEFT"
-                    ],
-                    "xbox": [
-                        "X",
-                        "LT",
-                        "RT",
-                        "RIGHT",
-                        "A",
-                        "UP",
-                        "LT",
-                        "LEFT",
-                        "LEFT"
-                    ],
-                    "xbox360": [
-                        "X",
-                        "LT",
-                        "RT",
-                        "RIGHT",
-                        "A",
-                        "UP",
-                        "LT",
-                        "LEFT",
-                        "LEFT"
-                    ],
-                    "pc": ["XJVSNAJ", "NIGHTPROWLER"]
-                }
-            },
-            {
-                "id": "other_5",
-                "title": {
                     "es": "Congelar el reloj al anochecer",
                     "en": "Freeze the clock at dusk",
                     "fr": "Figer l'horloge au crépuscule",
@@ -10229,61 +10184,74 @@
                 }
             },
             {
-                "id": "other_6",
+                "id": "other_5",
                 "title": {
-                    "es": "Obtener automáticamente la recompensa por completar 50 viajes como taxista",
-                    "en": "Automatically receive the reward for completing 50 taxi fares",
-                    "fr": "Obtenir automatiquement la récompense pour avoir effectué 50 courses en taxi",
-                    "pt": "Obter automaticamente a recompensa por completar 50 corridas de táxi"
+                    "es": "Congelar el reloj a medianoche",
+                    "en": "Freeze the clock at midnight",
+                    "fr": "Figer l'horloge à minuit",
+                    "pt": "Congelar o relógio à meia-noite"
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2"],
+                        "platforms": ["pc"],
                         "note": {
-                            "es": "Todos los taxis tendrán nitro y saltarán al tocar el claxon.",
-                            "en": "All taxis will have nitro and jump when you honk the horn.",
-                            "fr": "Tous les taxis auront du nitro et sauteront lorsque vous klaxonnerez.",
-                            "pt": "Todos os táxis terão nitro e saltarão ao tocar a buzina."
+                            "es": "Truco removido en la Edición Definitiva.",
+                            "en": "Cheat removed in the Definitive Edition.",
+                            "fr": "Triche supprimée dans la Definitive Edition.",
+                            "pt": "Trapaça removida na Definitive Edition."
                         },
                         "noteType": "info"
                     }
                 ],
                 "codes": {
                     "ps2": [
-                        "UP",
-                        "CROSS",
-                        "TRIANGLE",
-                        "CROSS",
-                        "TRIANGLE",
-                        "CROSS",
                         "SQUARE",
+                        "L1",
+                        "R1",
+                        "RIGHT",
+                        "CROSS",
+                        "UP",
+                        "L1",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "ps3": [
+                        "SQUARE",
+                        "L2",
                         "R2",
-                        "RIGHT"
+                        "RIGHT",
+                        "CROSS",
+                        "UP",
+                        "L2",
+                        "LEFT",
+                        "LEFT"
                     ],
                     "xbox": [
-                        "UP",
-                        "A",
-                        "Y",
-                        "A",
-                        "Y",
-                        "A",
                         "X",
-                        "BLACK",
-                        "RIGHT"
+                        "LT",
+                        "RT",
+                        "RIGHT",
+                        "A",
+                        "UP",
+                        "LT",
+                        "LEFT",
+                        "LEFT"
                     ],
                     "xbox360": [
-                        "UP",
-                        "A",
-                        "Y",
-                        "A",
-                        "Y",
-                        "A",
                         "X",
-                        "RB",
-                        "RIGHT"
-                    ]
+                        "LT",
+                        "RT",
+                        "RIGHT",
+                        "A",
+                        "UP",
+                        "LT",
+                        "LEFT",
+                        "LEFT"
+                    ],
+                    "pc": ["XJVSNAJ", "NIGHTPROWLER"]
                 }
             },
+
             {
                 "id": "other_7",
                 "title": {
