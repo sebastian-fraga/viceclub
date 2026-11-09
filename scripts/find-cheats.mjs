@@ -217,28 +217,26 @@ function printSpecificCheat(game, id, language, codes, notes) {
 }
 
 function printUsage() {
-    console.log(`Usage: node scripts/find-cheats.mjs [gameId] [cheatId] [lang] [--codes] [--notes]
+    console.log(`
+Usage: 
+    node scripts/find-cheats.mjs [gameId] [cheatId] [lang] [--codes] [--notes]
 
 Arguments:
-  gameId  Game ID (e.g. III, VC, SA, IV, V, LCS, VCS). Case-insensitive.
-  cheatId Cheat ID (optional). Case-insensitive. If omitted, all cheats of
-          the game are listed.
-  lang    Language code for the title and notes (optional). Defaults to '${DEFAULT_LANG}'.
+    [gameId]:  Game ID (e.g. III, VC, SA, IV, V, LCS, VCS). Case-insensitive.
+    [cheatId]: Cheat ID (optional). Case-insensitive. If omitted, all cheats of the game are listed.
+    [lang]:    Language code for the title and notes (optional). Defaults to 'en'.
 
 Options:
-  --codes, -c  Show the button codes of a specific cheat per platform.
-               Only applies when a cheatId is provided.
-  --notes, -n  Show the platform notes of a specific cheat.
-               Only applies when a cheatId is provided.
+    --codes, -c  Show the button codes of a specific cheat per platform. Only applies when a cheatId is provided.
+    --notes, -n  Show the platform notes of a specific cheat. Only applies when a cheatId is provided.
 
 Examples:
-  node scripts/find-cheats.mjs III player_1
-  node scripts/find-cheats.mjs SA
-  node scripts/find-cheats.mjs III player_1 es
-  node scripts/find-cheats.mjs III player_1 --codes
-  node scripts/find-cheats.mjs III player_1 es --codes
-  node scripts/find-cheats.mjs IV iv_1 --notes
-  node scripts/find-cheats.mjs IV iv_1 es --notes --codes
+    node scripts/find-cheats.mjs SA player_10
+    node scripts/find-cheats.mjs SA
+    node scripts/find-cheats.mjs SA player_10 es
+    node scripts/find-cheats.mjs SA player_10 --codes
+    node scripts/find-cheats.mjs SA player_10 --notes
+    node scripts/find-cheats.mjs SA player_10 pt --codes --notes
 `);
 }
 
