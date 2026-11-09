@@ -20,13 +20,12 @@
  *                Only applies when a cheatId is provided.
  *
  * Examples:
- *   node scripts/find-cheats.mjs III player_1
+ *   node scripts/find-cheats.mjs SA player_10
  *   node scripts/find-cheats.mjs SA
- *   node scripts/find-cheats.mjs III player_1 es
- *   node scripts/find-cheats.mjs III player_1 --codes
- *   node scripts/find-cheats.mjs IV iv_1 --notes
- *   node scripts/find-cheats.mjs III player_1 es --codes
- *   node scripts/find-cheats.mjs SA peds_15 pt --codes --notes
+ *   node scripts/find-cheats.mjs SA player_10 es
+ *   node scripts/find-cheats.mjs SA player_10 --codes
+ *   node scripts/find-cheats.mjs SA player_10 --notes
+ *   node scripts/find-cheats.mjs SA player_10 pt --codes --notes
  *   node scripts/find-cheats.mjs
  */
 
@@ -152,9 +151,7 @@ function formatNotes(cheat, language) {
                 note.note?.[DEFAULT_LANG] ||
                 note.note?.es ||
                 "";
-            const noteType = note.noteType
-                ? ` [${note.noteType}]`
-                : "";
+            const noteType = note.noteType ? ` [${note.noteType}]` : "";
             const platformsLabel = formatPlatforms(platforms);
             return `    - Platforms: ${platformsLabel}${noteType}\n        ${noteText}`;
         })
