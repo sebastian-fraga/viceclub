@@ -1555,6 +1555,61 @@
             {
                 "id": "player_13",
                 "title": {
+                    "es": "Set de armas 4",
+                    "en": "Weapons set 4",
+                    "fr": "Ensemble d'armes 4",
+                    "pt": "Conjunto de armas 4"
+                },
+                "platformNotes": [
+                    {
+                        "platforms": ["ps3", "xbox360"],
+                        "note": {
+                            "es": "Otorga la Minigun, el Vibrador y las Gafas térmicas",
+                            "en": "Grants the Minigun, the Vibrator, and the Thermal Goggles.",
+                            "fr": "Accorde le Minigun, le Vibromasseur et les Lunettes infrarouges.",
+                            "pt": "Concede a Minigun, o Vibrador e os Óculos térmicos."
+                        },
+                        "noteType": "info"
+                    },
+                    {
+                        "platforms": ["ps3", "xbox360"],
+                        "note": {
+                            "es": "Al volver a ingresar el truco, cambia las Gafas térmicas por las Gafas de visión nocturna",
+                            "en": "Entering the cheat again swaps the Thermal Goggles for the Night Vision Goggles.",
+                            "fr": "Saisir à nouveau le cheat remplace les Lunettes infrarouges par les Lunettes de vision nocturne.",
+                            "pt": "Ao inserir o cheat novamente, os Óculos térmicos são trocados pelos Óculos de visão noturna."
+                        },
+                        "noteType": "info"
+                    }
+                ],
+                "codes": {
+                    "ps3": [
+                        "RIGHT",
+                        "L1",
+                        "L1",
+                        "DOWN",
+                        "L1",
+                        "UP",
+                        "UP",
+                        "L1",
+                        "R1"
+                    ],
+                    "xbox360": [
+                        "RIGHT",
+                        "LB",
+                        "LB",
+                        "DOWN",
+                        "LB",
+                        "UP",
+                        "UP",
+                        "LB",
+                        "RB"
+                    ]
+                }
+            },
+            {
+                "id": "player_14",
+                "title": {
                     "es": "Obtener paracaídas",
                     "en": "Get a parachute",
                     "fr": "Obtenir un parachute",
@@ -1682,7 +1737,7 @@
                 }
             },
             {
-                "id": "player_14",
+                "id": "player_15",
                 "title": {
                     "es": "Obtener jetpack",
                     "en": "Get a jetpack",
@@ -1802,7 +1857,7 @@
                 }
             },
             {
-                "id": "player_15",
+                "id": "player_16",
                 "title": {
                     "es": "Obtener 2 niveles de búsqueda",
                     "en": "Get 2 wanted levels",
@@ -1823,10 +1878,10 @@
                         "RIGHT"
                     ],
                     "ps3": [
-                        "R1",
-                        "R1",
-                        "CIRCLE",
                         "R2",
+                        "R2",
+                        "CIRCLE",
+                        "R1",
                         "LEFT",
                         "RIGHT",
                         "LEFT",
@@ -1922,7 +1977,7 @@
                 }
             },
             {
-                "id": "player_16",
+                "id": "player_17",
                 "title": {
                     "es": "Obtener 6 niveles de búsqueda",
                     "en": "Get 6 wanted levels",
@@ -2024,7 +2079,7 @@
                 }
             },
             {
-                "id": "player_17",
+                "id": "player_18",
                 "title": {
                     "es": "Eliminar nivel de búsqueda",
                     "en": "Remove wanted level",
@@ -2144,7 +2199,7 @@
                 }
             },
             {
-                "id": "player_18",
+                "id": "player_19",
                 "title": {
                     "es": "Bloquear nivel de búsqueda",
                     "en": "Lock wanted level",
@@ -2246,7 +2301,7 @@
                 }
             },
             {
-                "id": "player_19",
+                "id": "player_20",
                 "title": {
                     "es": "Gordura al máximo",
                     "en": "Maximum fat",
@@ -2348,7 +2403,7 @@
                 }
             },
             {
-                "id": "player_20",
+                "id": "player_21",
                 "title": {
                     "es": "Musculatura al máximo",
                     "en": "Maximum muscle",
@@ -2450,7 +2505,7 @@
                 }
             },
             {
-                "id": "player_21",
+                "id": "player_22",
                 "title": {
                     "es": "Gordura y musculatura al mínimo",
                     "en": "Minimum fat and muscle",
@@ -2552,7 +2607,7 @@
                 }
             },
             {
-                "id": "player_22",
+                "id": "player_23",
                 "title": {
                     "es": "CJ nunca tendrá hambre",
                     "en": "CJ never gets hungry",
@@ -2620,7 +2675,7 @@
                 }
             },
             {
-                "id": "player_23",
+                "id": "player_24",
                 "title": {
                     "es": "Respeto al máximo",
                     "en": "Maximum respect",
@@ -2758,12 +2813,12 @@
                 }
             },
             {
-                "id": "player_24",
+                "id": "player_25",
                 "title": {
-                    "es": "Resistencia al máximo",
-                    "en": "Maximum stamina",
-                    "fr": "Endurance au maximum",
-                    "pt": "Resistência no máximo"
+                    "es": "Resistencia y capacidad pulmonar al máximo",
+                    "en": "Maximum stamina and lung capacity",
+                    "fr": "Endurance et capacité pulmonaire maximales",
+                    "pt": "Resistência e capacidade pulmonar no máximo"
                 },
                 "codes": {
                     "ps2": [
@@ -2869,7 +2924,7 @@
                 }
             },
             {
-                "id": "player_25",
+                "id": "player_26",
                 "title": {
                     "es": "Capacidad pulmonar infinita",
                     "en": "Infinite lung capacity",
@@ -2980,7 +3035,7 @@
                 }
             },
             {
-                "id": "player_26",
+                "id": "player_27",
                 "title": {
                     "es": "Sex-appeal al máximo",
                     "en": "Maximum sex appeal",
@@ -3118,7 +3173,7 @@
                 }
             },
             {
-                "id": "player_27",
+                "id": "player_28",
                 "title": {
                     "es": "Habilidad de conducción al máximo",
                     "en": "Maximum driving skill",
@@ -3996,7 +4051,7 @@
                 "id": "vehicles_7",
                 "title": {
                     "es": "Aparecer un Quad",
-                    "en": "Spawn Quad",
+                    "en": "Spawn Quadbike",
                     "fr": "Faire apparaître un Quad",
                     "pt": "Gerar um Quad"
                 },
@@ -6549,10 +6604,10 @@
             {
                 "id": "vehicles_30",
                 "title": {
-                    "es": "Tráfico agresivo",
-                    "en": "Aggressive traffic",
-                    "fr": "Circulation agressive",
-                    "pt": "Trânsito agressivo"
+                    "es": "Los conductores esquivarán a CJ",
+                    "en": "Drivers will avoid CJ",
+                    "fr": "Les conducteurs éviteront CJ",
+                    "pt": "Os motoristas desviarão de CJ"
                 },
                 "codes": {
                     "ps2": [
@@ -7278,26 +7333,6 @@
                     "pt": "Tempo chuvoso"
                 },
                 "codes": {
-                    "ps2": [
-                        "R2",
-                        "CROSS",
-                        "L1",
-                        "L1",
-                        "L2",
-                        "L2",
-                        "L2",
-                        "CROSS"
-                    ],
-                    "ps3": [
-                        "R1",
-                        "CROSS",
-                        "L2",
-                        "L2",
-                        "L1",
-                        "L1",
-                        "L1",
-                        "CROSS"
-                    ],
                     "ps4": [
                         "R2",
                         "CROSS",
@@ -8573,18 +8608,6 @@
                         "LEFT",
                         "UP"
                     ],
-                    "ps3": [
-                        "L2",
-                        "L2",
-                        "R2",
-                        "R2",
-                        "L1",
-                        "L2",
-                        "R1",
-                        "DOWN",
-                        "LEFT",
-                        "UP"
-                    ],
                     "ps4": [
                         "L1",
                         "L1",
@@ -8793,7 +8816,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "ps3", "xbox", "pc"],
+                        "platforms": ["ps2", "xbox", "pc"],
                         "note": {
                             "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
                             "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
@@ -8916,7 +8939,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "ps3", "xbox", "pc"],
+                        "platforms": ["ps2", "xbox", "pc"],
                         "note": {
                             "es": "Este truco es irreversible. Se recomienda no guardar partida tras activarlo.",
                             "en": "This cheat is irreversible. It is recommended not to save the game after activating it.",
@@ -9164,17 +9187,6 @@
                         "L2",
                         "R2"
                     ],
-                    "ps3": [
-                        "RIGHT",
-                        "L1",
-                        "L1",
-                        "DOWN",
-                        "L1",
-                        "UP",
-                        "UP",
-                        "L1",
-                        "R1"
-                    ],
                     "ps4": [
                         "RIGHT",
                         "L2",
@@ -9207,17 +9219,6 @@
                         "UP",
                         "WHITE",
                         "BLACK"
-                    ],
-                    "xbox360": [
-                        "RIGHT",
-                        "LB",
-                        "LB",
-                        "DOWN",
-                        "LB",
-                        "UP",
-                        "UP",
-                        "LB",
-                        "RB"
                     ],
                     "xboxOne": [
                         "RIGHT",
@@ -9264,18 +9265,6 @@
                     "pt": "Mais Families pelas ruas"
                 },
                 "codes": {
-                    "ps3": [
-                        "L2",
-                        "UP",
-                        "R2",
-                        "R2",
-                        "LEFT",
-                        "R2",
-                        "R2",
-                        "R1",
-                        "RIGHT",
-                        "DOWN"
-                    ],
                     "ps4": [
                         "L1",
                         "UP",
@@ -10269,17 +10258,6 @@
                         "CROSS",
                         "SQUARE",
                         "R2",
-                        "RIGHT"
-                    ],
-                    "ps3": [
-                        "UP",
-                        "CROSS",
-                        "TRIANGLE",
-                        "CROSS",
-                        "TRIANGLE",
-                        "CROSS",
-                        "SQUARE",
-                        "R1",
                         "RIGHT"
                     ],
                     "xbox": [
