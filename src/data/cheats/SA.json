@@ -8242,18 +8242,6 @@
                     "fr": "Thème Elvis",
                     "pt": "Tema do Elvis"
                 },
-                "platformNotes": [
-                    {
-                        "platforms": ["ps2"],
-                        "note": {
-                            "es": "Este truco no puede desactivarse manualmente. Requiere recargar la partida.",
-                            "en": "This cheat cannot be disabled manually. Reloading the game is required.",
-                            "fr": "Ce code de triche ne peut pas être désactivé manuellement. Il faut recharger la partie.",
-                            "pt": "Esta trapaça não pode ser desativada manualmente. É necessário recarregar o jogo."
-                        },
-                        "noteType": "bug"
-                    }
-                ],
                 "codes": {
                     "ps2": [
                         "L1",
@@ -9190,7 +9178,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "xbox", "pc"],
                         "note": {
                             "es": "Este truco estará activado si has completado las misiones de chulo con anterioridad.",
                             "en": "This cheat will be enabled if you have previously completed the pimping missions.",
