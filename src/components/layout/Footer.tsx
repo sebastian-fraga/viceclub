@@ -8,7 +8,7 @@ const anchorClasses =
     "inline-flex items-center justify-center px-12 py-3 mobile:px-8 mobile:py-3 rounded-full transition-colors duration-200 text-white bg-(--button-bg)/30 hover:bg-(--button-bg)/50";
 
 const footerDisclaimerClasses =
-    "text-white/40 text-center text-[11px] mobile:text-xs text-balance leading-relaxed";
+    "text-slate-300/70 text-center text-[11px] mobile:text-xs text-balance leading-relaxed";
 
 export default function Footer() {
     const t = useT();
