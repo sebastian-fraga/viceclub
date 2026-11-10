@@ -1023,6 +1023,7 @@ export default {
                 4: 'Tráiler anuncio de "Una mirada extendida"',
                 5: "Una mirada extendida",
                 6: "Tráiler de lanzamiento",
+                7: "Anuncio de precarga",
             },
             paragraphs: {
                 1: "Grand Theft Auto VI es el próximo juego que será lanzado por Rockstar Games el 19 de noviembre de 2026. Corresponde al desarrollo más largo de un videojuego de la saga, habiendo pasado más de 13 años desde su antecesor.",

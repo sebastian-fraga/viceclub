@@ -1023,6 +1023,7 @@ export default {
                 4: 'Bande-annonce d\'annonce "Un large aperçu"',
                 5: "Un large aperçu",
                 6: "Bande-annonce de lancement",
+                7: "Annonce du préchargement",
             },
             paragraphs: {
                 1: "Grand Theft Auto VI est le prochain jeu qui sera lancé par Rockstar Games le 19 novembre 2026. Il s'agit du développement le plus long d'un jeu de la saga, avec plus de 13 ans écoulés depuis son prédécesseur.",
