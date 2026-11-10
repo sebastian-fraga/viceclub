@@ -28,10 +28,10 @@ GTA III, Vice City, San Andreas, Liberty City Stories, Vice City Stories, GTA IV
 <div align="center">
   <img src="public/assets/images/app/readme/screenshots/preview-index.png" alt="Vice Club index page" width="49%" />
   <img src="public/assets/images/app/readme/screenshots/preview-home.png" alt="Vice Club home page" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-radio.png" alt="Vice Club radio" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-radio.png" alt="Vice Club radio page" width="49%" />
   <img src="public/assets/images/app/readme/screenshots/preview-artworks.png" alt="Vice Club artworks gallery" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-timeline.png" alt="Vice Club radio" width="49%" />
-  <img src="public/assets/images/app/readme/screenshots/preview-artworks.png" alt="Vice Club artworks gallery" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-timeline.png" alt="Vice Club timeline page" width="49%" />
+  <img src="public/assets/images/app/readme/screenshots/preview-map.png" alt="Vice Club map page" width="49%" />
 </div>
 
 <br><br>
