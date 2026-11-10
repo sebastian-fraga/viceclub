@@ -62,7 +62,7 @@ export default function Header() {
             >
                 <img
                     className="ml-10 w-16 max-mobile:ml-0 max-mobile:w-14 fill-pink-50"
-                    src="/public/assets/images/app/logos/logo.webp"
+                    src="assets/images/app/logos/logo.webp"
                     alt="Vice Club logo"
                 />
                 <span className="select-none text-center font-body-condensed tracking-tighter text-5xl bg-linear-to-b from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent [-webkit-text-stroke:1.5px_#101525] drop-shadow-[0_2px_6px_#667AFF4A]">
