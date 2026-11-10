@@ -8,7 +8,7 @@ const anchorClasses =
     "inline-flex items-center justify-center px-12 py-3 mobile:px-8 mobile:py-3 rounded-full transition-colors duration-200 text-white bg-(--button-bg)/30 hover:bg-(--button-bg)/50";
 
 const footerDisclaimerClasses =
-    "text-slate-300/70 text-center text-[11px] mobile:text-xs text-balance leading-relaxed";
+    "text-slate-300/70 text-center max-mobile:text-[13px] text-xs text-pretty leading-relaxed";
 
 export default function Footer() {
     const t = useT();
@@ -29,7 +29,7 @@ export default function Footer() {
                     </span>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-6 gap-y-4 w-full lg:w-auto">
+                <div className="flex flex-wrap items-center justify-center lg:justify-end gap-10 w-full lg:w-auto">
                     <nav
                         aria-label={t("footer.socialNetworks")}
                         className="flex items-center gap-3"
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
 
             <div className="w-full border-t border-white/5 py-8 px-6">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 mobile:gap-12 text-sm mobile:text-base text-center">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 mobile:gap-12 max-mobile:text-lg text-base text-center">
                     <span className="text-slate-400 font-medium">
                         © {new Date().getFullYear()} VICE CLUB
                     </span>
@@ -82,7 +82,7 @@ export default function Footer() {
                     </span>
                 </div>
 
-                <div className="flex flex-col items-center gap-2 max-mobile:gap-4 max-w-4xl mx-auto mt-6 px-4 max-mobile:px-2 max-mobile:pb-8">
+                <div className="flex flex-col items-center gap-2 max-mobile:gap-6 max-w-4xl max-mobile:max-w-120 mx-auto mt-6 max-mobile:mt-10 px-4 max-mobile:px-6 max-mobile:pb-8">
                     <p className={footerDisclaimerClasses}>
                         {t("footer.disclaimer.1")}
                     </p>
