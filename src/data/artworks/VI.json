@@ -67,6 +67,15 @@
             {
                 "id": "vi-aaw-08",
                 "caption": {
+                    "es": "Jason y Lucia 07",
+                    "en": "Jason and Lucia 07",
+                    "fr": "Jason et Lucia 07",
+                    "pt": "Jason e Lucia 07"
+                }
+            },
+            {
+                "id": "vi-aaw-09",
+                "caption": {
                     "es": "Arte de la portada oficial",
                     "en": "Official Cover Art",
                     "fr": "Illustration officielle de la jaquette",
@@ -74,31 +83,31 @@
                 }
             },
             {
-                "id": "vi-aaw-09",
+                "id": "vi-aaw-10",
                 "caption": "Cal Hampton"
             },
             {
-                "id": "vi-aaw-10",
+                "id": "vi-aaw-11",
                 "caption": "Boobie Ike"
             },
             {
-                "id": "vi-aaw-11",
+                "id": "vi-aaw-12",
                 "caption": "Dre'Quan Priest"
             },
             {
-                "id": "vi-aaw-12",
+                "id": "vi-aaw-13",
                 "caption": "Real Dimez"
             },
             {
-                "id": "vi-aaw-13",
+                "id": "vi-aaw-14",
                 "caption": "Raul Bautista"
             },
             {
-                "id": "vi-aaw-14",
+                "id": "vi-aaw-15",
                 "caption": "Brian Heder"
             },
             {
-                "id": "vi-aaw-15",
+                "id": "vi-aaw-16",
                 "caption": {
                     "es": "Postal de Vice City",
                     "en": "Vice City Postcard",
@@ -107,7 +116,7 @@
                 }
             },
             {
-                "id": "vi-aaw-16",
+                "id": "vi-aaw-17",
                 "caption": {
                     "es": "Postal de los cayos de Leonida",
                     "en": "Leonida Keys Postcard",
@@ -116,7 +125,7 @@
                 }
             },
             {
-                "id": "vi-aaw-17",
+                "id": "vi-aaw-18",
                 "caption": {
                     "es": "Postal de Port Gellhorn",
                     "en": "Port Gellhorn Postcard",
@@ -125,7 +134,7 @@
                 }
             },
             {
-                "id": "vi-aaw-18",
+                "id": "vi-aaw-19",
                 "caption": {
                     "es": "Postal de Ambrosia",
                     "en": "Ambrosia Postcard",
@@ -134,7 +143,7 @@
                 }
             },
             {
-                "id": "vi-aaw-19",
+                "id": "vi-aaw-20",
                 "caption": {
                     "es": "Postal de Grassrivers",
                     "en": "Grassrivers Postcard",
@@ -143,7 +152,7 @@
                 }
             },
             {
-                "id": "vi-aaw-20",
+                "id": "vi-aaw-21",
                 "caption": {
                     "es": "Postal del parque nacional del monte Kalaga",
                     "en": "Mount Kalaga National Park Postcard",
