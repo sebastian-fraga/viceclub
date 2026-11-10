@@ -5,10 +5,10 @@ import { IconBrandGithub, IconBrandX, IconMail } from "@tabler/icons-react";
 import Support from "../index/support/Support";
 
 const anchorClasses =
-    "inline-flex items-center justify-center px-12 mobile:px-8 mobile:py-3 rounded-full transition-colors duration-200 text-white bg-(--button-bg)/30 hover:bg-(--button-bg)/50";
+    "inline-flex items-center justify-center px-12 py-3 mobile:px-8 mobile:py-3 rounded-full transition-colors duration-200 text-white bg-(--button-bg)/30 hover:bg-(--button-bg)/50";
 
 const footerDisclaimerClasses =
-    "text-white/60 text-center text-xs text-balance";
+    "text-white/40 text-center text-[11px] mobile:text-xs text-balance leading-relaxed";
 
 export default function Footer() {
     const t = useT();
@@ -20,7 +20,7 @@ export default function Footer() {
         >
             <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-6 mobile:px-12 lg:px-32 pb-12">
                 <div className="relative flex items-center gap-4 shrink-0">
-                    <div className="absolute inset-0 z-0 bg-linear-to-r from-pink-700/30 via-yellow-300/30 to-blue-500/30 blur-2xl"></div>
+                    <div className="absolute inset-0 z-0 bg-linear-to-r from-pink-700/40 via-yellow-200/25 to-blue-500/30 blur-2xl"></div>
 
                     <ViceClubLogo className="relative z-1 w-20 h-20 max-mobile:w-15 max-mobile:h-15 fill-slate-100/90" />
 
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
 
             <div className="w-full border-t border-white/5 py-8 px-6">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 text-lg text-center">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 mobile:gap-12 text-sm mobile:text-base text-center">
                     <span className="text-slate-400 font-medium">
                         © {new Date().getFullYear()} VICE CLUB
                     </span>
@@ -82,7 +82,7 @@ export default function Footer() {
                     </span>
                 </div>
 
-                <div className="flex flex-col items-center gap-1.5 max-w-4xl mx-auto mt-6">
+                <div className="flex flex-col items-center gap-2 max-w-3xl mx-auto mt-6 px-4 max-mobile:px-2 max-mobile:pb-4">
                     <p className={footerDisclaimerClasses}>
                         {t("footer.disclaimer.1")}
                     </p>
