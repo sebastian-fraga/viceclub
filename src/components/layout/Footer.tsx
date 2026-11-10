@@ -82,7 +82,7 @@ export default function Footer() {
                     </span>
                 </div>
 
-                <div className="flex flex-col items-center gap-2 max-w-3xl mx-auto mt-6 px-4 max-mobile:px-2 max-mobile:pb-4">
+                <div className="flex flex-col items-center gap-2 max-mobile:gap-4 max-w-4xl mx-auto mt-6 px-4 max-mobile:px-2 max-mobile:pb-8">
                     <p className={footerDisclaimerClasses}>
                         {t("footer.disclaimer.1")}
                     </p>
