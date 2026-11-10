@@ -156,8 +156,9 @@ const OG_LOCALE = {
 
         <div style={game ? themeToCssVars(game.theme) : undefined}>
             <slot />
-            <CursorGlow client:idle transition:persist />
         </div>
+
+        <CursorGlow client:idle transition:persist />
 
         <Footer client:visible />
         <slot name="scripts" />
