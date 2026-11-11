@@ -1098,13 +1098,13 @@
                     ],
                     "xbox": [
                         "B",
-                        "LB",
+                        "LT",
                         "DOWN",
                         "WHITE",
                         "LEFT",
                         "A",
-                        "RB",
-                        "WHITE",
+                        "RT",
+                        "LT",
                         "RIGHT",
                         "A"
                     ],
@@ -1157,7 +1157,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
                             "es": "Para volver a la skin de Tommy, es necesario recargar la partida.",
                             "en": "To return to Tommy's skin, you need to reload the game.",
@@ -2170,18 +2170,6 @@
                         "CIRCLE",
                         "R2"
                     ],
-                    "xbox": [
-                        "BLACK",
-                        "LT",
-                        "B",
-                        "RIGHT",
-                        "LT",
-                        "RT",
-                        "RIGHT",
-                        "UP",
-                        "B",
-                        "BLACK"
-                    ],
                     "xboxOne": [
                         "RT",
                         "LB",
@@ -2269,16 +2257,6 @@
                         "UP",
                         "SQUARE",
                         "L2"
-                    ],
-                    "xbox": [
-                        "UP",
-                        "RIGHT",
-                        "RIGHT",
-                        "LT",
-                        "RIGHT",
-                        "UP",
-                        "X",
-                        "WHITE"
                     ],
                     "xboxOne": [
                         "UP",
@@ -2872,7 +2850,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
                             "es": "No se puede desactivar durante la partida.",
                             "en": "Cannot be disabled during gameplay.",
@@ -2882,7 +2860,7 @@
                         "noteType": "bug"
                     },
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "pc", "xbox"],
                         "note": {
                             "es": "No afecta a todos los vehículos.",
                             "en": "Does not affect all vehicles.",
@@ -2994,7 +2972,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
                             "es": "No se puede desactivar durante la partida.",
                             "en": "Cannot be disabled during gameplay.",
@@ -4118,7 +4096,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "ps3", "xbox", "pc"],
                         "note": {
                             "es": "No se puede desactivar durante la partida.",
                             "en": "Cannot be disabled during gameplay.",
@@ -4759,16 +4737,16 @@
                         "L1"
                     ],
                     "xbox": [
-                        "RT",
-                        "WHITE",
                         "BLACK",
                         "LT",
+                        "UP",
+                        "LT",
                         "RIGHT",
-                        "BLACK",
-                        "LEFT",
-                        "A",
-                        "X",
-                        "LT"
+                        "RT",
+                        "RIGHT",
+                        "UP",
+                        "B",
+                        "Y"
                     ],
                     "xboxOne": [
                         "RB",
@@ -4976,14 +4954,14 @@
                     ],
                     "xbox": [
                         "BLACK",
-                        "LT",
+                        "B",
                         "UP",
                         "LT",
                         "RIGHT",
                         "RT",
                         "RIGHT",
                         "UP",
-                        "B",
+                        "X",
                         "Y"
                     ],
                     "xboxOne": [
