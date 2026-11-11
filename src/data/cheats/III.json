@@ -753,7 +753,7 @@
                 },
                 "platformNotes": [
                     {
-                        "platforms": ["ps2", "pc"],
+                        "platforms": ["ps2", "pc", "xbox"],
                         "note": {
                             "es": "Para volver a la skin de Claude, es necesario recargar la partida.",
                             "en": "To return to Claude's skin, you need to reload the game.",
