@@ -406,7 +406,7 @@
             { "id": "34", "x": 802, "y": 1077 },
             { "id": "35", "x": 741, "y": 1642 }
         ],
-        "pizzaBoy_VC": [{ "id": "1", "x": 2693, "y": 2013 }],
+        "pizzaBoy_VC": [{ "id": "1", "x": 2678, "y": 2049 }],
         "chopperCheckpoint_VC": [
             {
                 "id": "1",
@@ -484,8 +484,8 @@
         "offRoad_VC": [
             {
                 "id": "1",
-                "x": 2783,
-                "y": 1613,
+                "x": 2776,
+                "y": 1627,
                 "description": {
                     "es": "Prueba de PCJ",
                     "en": "PCJ Playground",
@@ -495,8 +495,8 @@
             },
             {
                 "id": "2",
-                "x": 2390,
-                "y": 745,
+                "x": 2393,
+                "y": 763,
                 "description": {
                     "es": "Conocircuito",
                     "en": "Cone Crazy",
@@ -506,8 +506,8 @@
             },
             {
                 "id": "3",
-                "x": 1838,
-                "y": 3384,
+                "x": 1829,
+                "y": 3375,
                 "description": {
                     "es": "Prueba por tierra",
                     "en": "Trial by Dirt",
@@ -517,8 +517,8 @@
             },
             {
                 "id": "4",
-                "x": 1847,
-                "y": 3398,
+                "x": 1829,
+                "y": 3393,
                 "description": {
                     "es": "Probar pista",
                     "en": "Test Track",
@@ -530,8 +530,8 @@
         "rcMission_VC": [
             {
                 "id": "1",
-                "x": 2983,
-                "y": 2680,
+                "x": 3030,
+                "y": 2663,
                 "description": {
                     "es": "Carrera Bandit RC",
                     "en": "RC Bandit Race",
@@ -541,8 +541,8 @@
             },
             {
                 "id": "2",
-                "x": 2532,
-                "y": 3222,
+                "x": 2563,
+                "y": 3221,
                 "description": {
                     "es": "Carrera Barón RC",
                     "en": "RC Baron Race",
@@ -552,8 +552,8 @@
             },
             {
                 "id": "3",
-                "x": 989,
-                "y": 743,
+                "x": 1002,
+                "y": 693,
                 "description": {
                     "es": "Recogidas del Raider RC",
                     "en": "RC Raider Pickup",
@@ -582,13 +582,84 @@
     },
     "locations": {
         "safehouses_VC": [
-            { "id": "1", "x": 2274, "y": 414 },
-            { "id": "2", "x": 2396, "y": 1117 },
-            { "id": "3", "x": 2589, "y": 2316 },
-            { "id": "4", "x": 2696, "y": 2581 },
-            { "id": "5", "x": 2794, "y": 3243 },
-            { "id": "6", "x": 1406, "y": 3270 },
-            { "id": "7", "x": 1676, "y": 2650 }
+            {
+                "id": "1",
+                "x": 2275,
+                "y": 418,
+                "description": {
+                    "es": "Apartamento de Ocean Heights",
+                    "en": "Ocean Heights Apartment",
+                    "fr": "Appartement d'Ocean Heights",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "2",
+                "x": 2344,
+                "y": 1128,
+                "description": {
+                    "es": "1102 de la calle Washington",
+                    "en": "1102 Washington Street",
+                    "fr": "1102 Washington Street",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "3",
+                "x": 2567,
+                "y": 2321,
+                "description": {
+                    "es": "Apartamento de Links View",
+                    "en": "Links View Apartment",
+                    "fr": "Appartement de Links View",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "4",
+                "x": 2696,
+                "y": 2570,
+                "description": {
+                    "es": "Casa Swanko",
+                    "en": "El Swanko Casa",
+                    "fr": "El Swanko Casa",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "5",
+                "x": 2805,
+                "y": 3249,
+                "description": {
+                    "es": "3321 de Vice Point",
+                    "en": "3321 Vice Point",
+                    "fr": "3321 Vice Point",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "6",
+                "x": 1404,
+                "y": 3277,
+                "description": {
+                    "es": "Hyman Condo",
+                    "en": "Hyman Condo",
+                    "fr": "Hyman Condo",
+                    "pt": "🌴"
+                }
+            },
+            {
+                "id": "7",
+                "x": 1688,
+                "y": 2666,
+                "guide": { "fromX": 1726, "fromY": 2655 },
+                "description": {
+                    "es": "Chabola Skumole",
+                    "en": "Skumole Shack",
+                    "fr": "Skumole Terrace",
+                    "pt": "🌴"
+                }
+            }
         ]
     }
 }

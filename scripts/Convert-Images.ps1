@@ -1,20 +1,23 @@
 <#
 .SYNOPSIS
-    Converts PNG images to WebP and adds a custom watermark to each one.
+    Converts PNG/JPG/JPEG images to WebP and adds a custom watermark to each one.
 
 .DESCRIPTION
-    For every .png file in <project root>/temp/convert-images, the script:
-    1. Places the watermark in the top-left corner (32px offset),
+    For every .png, .jpg or .jpeg file in <project root>/temp/convert-images, the script:
+    1. Applies the EXIF orientation (so rotated photos end up upright).
+    2. Places the watermark in the top-left corner (32px offset),
         resized to fit 450x180 and at 60% opacity.
-    2. Saves the result as .webp (quality 60) in
-        <project root>/temp/convert/webp.
+    3. Saves the result as .webp (quality 60) in
+        <project root>/temp/convert-images/webp.
 
-    The original PNGs are not modified. Existing .webp files with the
-    same name in the output folder are overwritten.
+    The original images are not modified. Existing .webp files with the
+    same name in the output folder are overwritten. If two source images
+    share the same name with different extensions (e.g. photo.png and
+    photo.jpg), the script aborts to avoid overwriting one with the other.
 
 .REQUIREMENTS
     - ImageMagick installed and available in PATH (the `magick` command).
-    - A folder with the PNG images to convert:
+    - A folder with the PNG/JPG/JPEG images to convert:
         <project root>/temp/convert-images/
     - The watermark image:
         <project root>/public/assets/images/app/watermark.png
@@ -54,10 +57,16 @@ try {
     New-Item -ItemType Directory -Path $outputDir -Force |
     Out-Null
 
-    $images = @(Get-ChildItem -Path $inputDir -File -Filter "*.png")
+    $images = @(Get-ChildItem -Path $inputDir -File | Where-Object { $_.Extension -in '.png', '.jpg', '.jpeg' })
 
     if ($images.Count -eq 0) {
-        throw "No PNG images ready to convert."
+        throw "No images ready to convert."
+    }
+
+    $duplicates = @($images | Group-Object BaseName | Where-Object Count -gt 1)
+
+    if ($duplicates.Count -gt 0) {
+        throw "Duplicate names would overwrite each other: $($duplicates.Name -join ', ')"
     }
 
     foreach ($image in $images) {
@@ -65,6 +74,7 @@ try {
 
         $arguments = @(
             $image.FullName
+            "-auto-orient"
             "("
             $watermark
             "-resize", "450x180"
