@@ -24,7 +24,7 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-(--banner-height) inset-x-0 z-100 flex h-22 items-center justify-start max-mobile:justify-center overflow-hidden bg-slate-950 shadow-2xl transition-[top] duration-700 ease-in-out">
+        <header className="fixed top-(--banner-height) inset-x-0 z-100 flex h-22 items-center justify-start max-mobile:justify-center overflow-hidden bg-slate-950 shadow-2xl transition-[top] duration-700 ease-in-out border-b border-slate-100/10">
             <button
                 type="button"
                 id="mobile-menu-toggle"

@@ -16,7 +16,7 @@ export default function Footer() {
     return (
         <footer
             style={{ transition: "margin-left 0.3s" }}
-            className="relative z-20 ml-0 mobile:ml-(--sidebar-width) bg-slate-950 pt-16 text-neutral-50 flex flex-col overflow-hidden border-t border-white/10"
+            className="relative z-20 ml-0 mobile:ml-(--sidebar-width) bg-slate-950 pt-16 text-neutral-50 flex flex-col overflow-hidden border-t border-slate-100/10"
         >
             <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 px-6 mobile:px-12 lg:px-32 pb-12">
                 <div className="relative flex items-center gap-4 shrink-0">
@@ -63,7 +63,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="w-full border-t border-white/5 py-8 px-6">
+            <div className="w-full border-t border-slate-200/5 py-8 px-6">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 mobile:gap-12 max-mobile:text-lg text-base text-center">
                     <span className="text-slate-400 font-medium">
                         © {new Date().getFullYear()} VICE CLUB
