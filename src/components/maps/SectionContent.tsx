@@ -1,4 +1,4 @@
-import { colorGradient } from "@/components/maps/AnimatedMarker";
+import { colorGradient } from "@/components/maps/utils/colorGradient";
 import ToggleButton from "@/components/maps/ToggleButton";
 import {
     getRenderableTypes,

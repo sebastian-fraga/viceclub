@@ -1,3 +1,4 @@
+import { colorGradient } from "@/components/maps/utils/colorGradient";
 import type { CollectibleData } from "@/components/maps/types";
 import { COLLECTIBLE_IMAGE_SIZES } from "@/components/maps/utils/collectibleImage";
 import useT from "@/hooks/useT";
@@ -7,9 +8,6 @@ import { divIcon } from "leaflet";
 import { useMemo } from "react";
 import { createPortal } from "react-dom";
 import { Marker, Polyline } from "react-leaflet";
-
-export const colorGradient = (color: string) =>
-    `linear-gradient(135deg, color-mix(in srgb, ${color} 70%, white), color-mix(in srgb, ${color} 75%, black))`;
 
 export const guidePointIcon = (color: string) =>
     divIcon({
