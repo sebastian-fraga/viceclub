@@ -9,8 +9,13 @@ import { useMemo } from "react";
 import { createPortal } from "react-dom";
 import { Marker, Polyline } from "react-leaflet";
 
-export const guidePointIcon = (color: string) =>
-    divIcon({
+const guidePointIconCache = new Map<string, ReturnType<typeof divIcon>>();
+
+export const guidePointIcon = (color: string) => {
+    const cached = guidePointIconCache.get(color);
+    if (cached) return cached;
+
+    const icon = divIcon({
         className: "",
         html: `
             <div style="
@@ -25,6 +30,9 @@ export const guidePointIcon = (color: string) =>
         iconSize: [14, 14],
         iconAnchor: [7, 7],
     });
+    guidePointIconCache.set(color, icon);
+    return icon;
+};
 
 interface AnimatedMarkerProps {
     collectible: CollectibleData;
