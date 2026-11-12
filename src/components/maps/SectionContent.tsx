@@ -1,3 +1,4 @@
+import { colorGradient } from "@/components/maps/AnimatedMarker";
 import ToggleButton from "@/components/maps/ToggleButton";
 import {
     getRenderableTypes,
@@ -104,12 +105,14 @@ export default function SectionContent({
                                                 <img
                                                     src={marker.icon}
                                                     alt={i18n(
-                                                        "maps.accessibility.collectibleImage"
+                                                        "maps.accessibility.collectibleImage",
                                                     )}
                                                     className="h-12 w-12 shrink-0 rounded-xl object-contain p-1.5"
                                                     style={{
-                                                        backgroundColor:
-                                                            meta.color,
+                                                        background:
+                                                            colorGradient(
+                                                                meta.color,
+                                                            ),
                                                         boxShadow: `0 0 4px ${meta.color}`,
                                                     }}
                                                 />

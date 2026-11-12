@@ -8,6 +8,9 @@ import { useMemo } from "react";
 import { createPortal } from "react-dom";
 import { Marker, Polyline } from "react-leaflet";
 
+export const colorGradient = (color: string) =>
+    `linear-gradient(135deg, color-mix(in srgb, ${color} 70%, white), color-mix(in srgb, ${color} 75%, black))`;
+
 export const guidePointIcon = (color: string) =>
     divIcon({
         className: "",
@@ -15,7 +18,7 @@ export const guidePointIcon = (color: string) =>
             <div style="
                 width: 14px;
                 height: 14px;
-                background: ${color};
+                background: ${colorGradient(color)};
                 border: 2.5px solid #000000;
                 border-radius: 100%;
                 box-shadow: 0 0 5px rgba(0, 0, 0, 0.9), 0 0 8px ${color};
@@ -150,7 +153,7 @@ export default function AnimatedMarker({
                                 height: "100%",
                                 objectFit: "contain",
                                 display: "block",
-                                background: meta.color,
+                                background: colorGradient(meta.color),
                                 borderRadius: "100%",
                                 padding: "2px",
                                 border: "1px solid",
