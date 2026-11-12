@@ -20,6 +20,7 @@ export interface ChallengeRequirements {
     };
     availableAfter?: LocalizedRequirement[];
     unlockedBy?: LocalizedRequirement[];
+    clothes?: LocalizedRequirement;
 }
 
 export interface CollectibleData {

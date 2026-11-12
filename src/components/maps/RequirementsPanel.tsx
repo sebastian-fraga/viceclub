@@ -6,6 +6,7 @@ import {
     IconClockFilled,
     IconFlagFilled,
     IconGaugeFilled,
+    IconShirtFilled,
     IconStarFilled,
 } from "@tabler/icons-react";
 
@@ -20,9 +21,12 @@ export default function RequirementsPanel({
     const lang = useLocale();
     if (!requirements) return null;
 
-    const { schedule, minLevel, availableAfter, unlockedBy } = requirements;
+    const { schedule, minLevel, availableAfter, unlockedBy, clothes } =
+        requirements;
 
     if (!schedule && !minLevel && !availableAfter && !unlockedBy) return null;
+
+    const clothesText = clothes ? getRequirement(clothes, lang) : "";
 
     return (
         <div className="flex flex-col gap-5 rounded-xl border border-(--button-bg)/60 bg-(--button-bg-hover) p-3.5">
@@ -115,6 +119,28 @@ export default function RequirementsPanel({
                                     {getRequirement(requirement, lang)}
                                 </strong>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {clothesText && (
+                <div className="flex items-start gap-2.5 text-sm text-white/70">
+                    <IconShirtFilled
+                        size={18}
+                        className="shrink-0 text-(--game-accent)"
+                        stroke={1.5}
+                    />
+                    <div className="leading-tight">
+                        <span>
+                            {i18n(
+                                "maps.markers.popup.requirements.clothes",
+                            )}{" "}
+                        </span>
+                        <div className="mt-1 ml-0.5 flex flex-col gap-0.5 text-xs">
+                            <strong className="font-semibold text-white">
+                                {clothesText}
+                            </strong>
                         </div>
                     </div>
                 </div>
