@@ -1240,6 +1240,7 @@ export default {
                     minLevel: "Niveau minimum en {{skill}} :",
                     availableAfter: "Disponible après",
                     unlockedBy: "Se débloque après avoir terminé",
+                    clothes: "Nécessite de porter",
                 },
             },
         },

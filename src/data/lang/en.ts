@@ -1240,6 +1240,7 @@ export default {
                     minLevel: "Minimum {{skill}} skill required",
                     availableAfter: "Available after",
                     unlockedBy: "Unlocked by completing",
+                    clothes: "Requires wearing",
                 },
             },
         },
