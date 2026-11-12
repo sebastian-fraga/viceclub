@@ -6,6 +6,7 @@ export function CoordinatesPicker({ height }: { height: number }) {
     if (!ENABLE_COORDINATE_PICKER) return null;
 
     useMapEvents({
+        // left click to copy normal coords
         click(e) {
             const x = Math.round(e.latlng.lng);
             const y = Math.round(height - e.latlng.lat);
@@ -15,6 +16,7 @@ export function CoordinatesPicker({ height }: { height: number }) {
             navigator.clipboard.writeText(coordinates);
         },
 
+        // right click to copy guide coords
         contextmenu(e) {
             e.originalEvent.preventDefault();
 
