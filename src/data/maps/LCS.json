@@ -291,71 +291,106 @@
     },
     "sideMissions": {
         "rampages_LCS": [
-            { "id": "1", "x": 1384, "y": 904 },
+            { "id": "1", "x": 1380, "y": 904 },
             { "id": "2", "x": 1477, "y": 863 },
             { "id": "3", "x": 1560, "y": 748 },
             { "id": "4", "x": 1318, "y": 699 },
-            { "id": "5", "x": 1518, "y": 671 },
+            { "id": "5", "x": 1512, "y": 671 },
             { "id": "6", "x": 1325, "y": 608 },
             { "id": "7", "x": 966, "y": 920 },
-            { "id": "8", "x": 922, "y": 620 },
+            { "id": "8", "x": 924, "y": 623 },
             { "id": "9", "x": 994, "y": 623 },
             { "id": "10", "x": 953, "y": 461 },
-            { "id": "11", "x": 1027, "y": 348 },
-            { "id": "12", "x": 815, "y": 247 },
-            { "id": "13", "x": 936, "y": 152 },
-            { "id": "14", "x": 300, "y": 1207 },
-            { "id": "15", "x": 673, "y": 1075 },
-            { "id": "16", "x": 631, "y": 955 },
+            {
+                "id": "11",
+                "x": 1027,
+                "y": 342,
+                "guide": { "fromX": 1027, "fromY": 314 }
+            },
+            { "id": "12", "x": 825, "y": 240 },
+            { "id": "13", "x": 942, "y": 154 },
+            { "id": "14", "x": 317, "y": 1206 },
+            { "id": "15", "x": 673, "y": 1078 },
+            { "id": "16", "x": 634, "y": 957 },
             { "id": "17", "x": 658, "y": 913 },
-            { "id": "18", "x": 366, "y": 921 },
-            { "id": "19", "x": 487, "y": 842 },
-            { "id": "20", "x": 394, "y": 795 }
+            { "id": "18", "x": 375, "y": 926 },
+            {
+                "id": "19",
+                "x": 487,
+                "y": 845,
+                "guide": { "fromX": 473, "fromY": 856 }
+            },
+            { "id": "20", "x": 398, "y": 795 }
         ],
-        "noodlePunk": [{ "id": "1", "x": 1409, "y": 619 }],
-        "pizzaBoy_LCS": [{ "id": "1", "x": 975, "y": 316 }],
-        "seeTheSightBeforeYouFlight": [{ "id": "1", "x": 555, "y": 581 }],
-        "carSalesman": [{ "id": "1", "x": 1505, "y": 882 }],
-        "bikeSalesman": [{ "id": "1", "x": 861, "y": 705 }],
+        "noodlePunk": [{ "id": "1", "x": 1409, "y": 605 }],
+        "pizzaBoy_LCS": [{ "id": "1", "x": 970, "y": 316 }],
+        "seeTheSightBeforeYouFlight": [{ "id": "1", "x": 589, "y": 570 }],
+        "carSalesman": [
+            {
+                "id": "1",
+                "x": 1505,
+                "y": 878,
+                "requirements": {
+                    "schedule": { "from": "08:00", "to": "18:00" }
+                }
+            }
+        ],
+        "bikeSalesman": [
+            {
+                "id": "1",
+                "x": 861,
+                "y": 700,
+                "requirements": {
+                    "schedule": { "from": "08:00", "to": "18:00" }
+                }
+            }
+        ],
         "karmageddon": [{ "id": "1", "x": 859, "y": 723 }],
         "slashTv": [
             {
                 "id": "1",
-                "x": 1681,
-                "y": 390,
+                "x": 1677,
+                "y": 382,
                 "requirements": {
+                    "schedule": { "from": "18:00", "to": "05:00" },
+                    "clothes": {
+                        "es": "el Mono",
+                        "en": "the Overalls Outfit",
+                        "fr": "🌴",
+                        "pt": "🌴"
+                    },
                     "availableAfter": ["The Portland Chainsaw Masquerade"]
                 }
             }
         ],
         "trashDash": [
-            { "id": "1", "x": 1447, "y": 959 },
+            { "id": "1", "x": 1447, "y": 958 },
             { "id": "2", "x": 1068, "y": 953 },
             { "id": "3", "x": 457, "y": 747 }
         ],
         "rcMission_LCS": [
-            { "id": "1", "x": 1363, "y": 846, "description": "Thrashin' RC" },
+            { "id": "1", "x": 1366, "y": 852, "description": "Thrashin' RC" },
             {
                 "id": "2",
                 "x": 1402,
-                "y": 551,
+                "y": 548,
                 "description": "RC Triad Take-Down"
             },
             {
                 "id": "3",
-                "x": 949,
-                "y": 654,
+                "x": 939,
+                "y": 643,
                 "description": "Ragin' RC"
             },
             {
                 "id": "4",
                 "x": 495,
-                "y": 569,
+                "y": 559,
                 "description": "Chasin' RC"
             }
         ],
         "offRoad_LCS": [
-            { "id": "1", "x": 1300, "y": 925, "description": "Bumps & Grinds" },
+            { "id": "1", "x": 1295, "y": 934, "description": "Bumps & Grinds" },
             {
                 "id": "2",
                 "x": 1472,
@@ -370,8 +405,8 @@
             },
             {
                 "id": "4",
-                "x": 1128,
-                "y": 592,
+                "x": 1124,
+                "y": 571,
                 "description": "Go Go Faggio"
             }
         ],
@@ -385,7 +420,7 @@
             {
                 "id": "2",
                 "x": 1315,
-                "y": 622,
+                "y": 619,
                 "description": "Red Light Racing"
             },
             {
@@ -402,28 +437,28 @@
             },
             {
                 "id": "5",
-                "x": 689,
-                "y": 937,
+                "x": 687,
+                "y": 930,
                 "description": "Wi-Cheetah Run"
             },
             {
                 "id": "6",
-                "x": 415,
-                "y": 914,
+                "x": 412,
+                "y": 917,
                 "description": "Gangsta GP"
             }
         ]
     },
     "challenges": {
         "driveBy": [
-            { "id": "1", "x": 1364, "y": 734, "description": "9mm Mayhem" },
+            { "id": "1", "x": 1366, "y": 730, "description": "9mm Mayhem" },
             {
                 "id": "2",
-                "x": 1333,
-                "y": 539,
+                "x": 1330,
+                "y": 538,
                 "description": "Scooter Shooter"
             },
-            { "id": "3", "x": 572, "y": 968, "description": "AWOL Angels" }
+            { "id": "3", "x": 570, "y": 966, "description": "AWOL Angel" }
         ]
     }
 }
