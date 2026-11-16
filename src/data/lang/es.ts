@@ -1420,7 +1420,7 @@ export default {
         title: "Error 404",
         subtitle:
             "La página solicitada no fue encontrada o no se encuentra disponible.",
-        backToHome: "Volver a inicio",
+        backToHome: "Volver al inicio",
         underConstruction: {
             title: "Página en construcción",
             subtitle:
