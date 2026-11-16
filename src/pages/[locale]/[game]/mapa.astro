@@ -1,4 +1,5 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import GameMap from "@/components/maps/GameMap";
 import "@/components/maps/map.css";
 import type { GameId } from "@/config/games";
@@ -9,15 +10,18 @@ import { seo } from "@/data/seo/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    const availableGames = Object.entries(seo).filter(
-        ([, pages]) => pages?.mapa,
-    );
+    const availableGames: GameId[] = [
+        ...Object.entries(seo)
+            .filter(([, pages]) => pages?.mapa)
+            .map(([game]) => game as GameId),
+        "VI",
+    ];
 
     return LOCALES.flatMap((locale) =>
-        availableGames.map(([game]) => ({
+        availableGames.map((game) => ({
             params: { locale, game },
             props: {
-                gameData: games[game as GameId],
+                gameData: games[game],
             },
         })),
     );
@@ -38,10 +42,16 @@ const gameSeo = getPageSeo(game, "mapa", LOCALE_TO_LANG[locale as LocaleSlug]);
     game={gameData}
 >
     <main class="mt-4" id="map-main">
-        <div class="h-screen">
-            <GameMap client:only="react" gameId={game} />
-        </div>
+        {game === "VI" ? (
+            <UnderConstruction client:load gameId={game} />
+        ) : (
+            <>
+                <div class="h-screen">
+                    <GameMap client:only="react" gameId={game} />
+                </div>
 
-        <div class="h-48 max-mobile:h-22"></div>
+                <div class="h-48 max-mobile:h-22"></div>
+            </>
+        )}
     </main>
 </BaseLayout>

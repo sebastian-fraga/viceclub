@@ -1,4 +1,5 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import { CheatsContainer } from "@/components/cheats/CheatsContainer";
 import type { GameId } from "@/config/games";
 import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
@@ -8,12 +9,15 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { loadCheats } from "@/lib/cheats/loadCheats";
 
 export function getStaticPaths() {
-    const availableGames = Object.entries(games).filter(([, gameData]) =>
-        loadCheats(gameData.id as GameId),
-    );
+    const availableGames: GameId[] = [
+        ...Object.entries(games)
+            .filter(([, gameData]) => loadCheats(gameData.id as GameId))
+            .map(([game]) => game as GameId),
+        "VI",
+    ];
 
     return LOCALES.flatMap((locale) =>
-        availableGames.map(([game]) => ({
+        availableGames.map((game) => ({
             params: { locale, game },
         })),
     );
@@ -33,9 +37,9 @@ if (!gameData) {
 }
 
 const gameId = gameData.id as GameId;
-const cheatsData = loadCheats(gameId);
+const cheatsData = game === "VI" ? null : loadCheats(gameId);
 
-if (!cheatsData) {
+if (game !== "VI" && !cheatsData) {
     throw new Error(`Cheats file not found for game: ${gameId}`);
 }
 ---
@@ -49,11 +53,15 @@ if (!cheatsData) {
     game={gameData}
 >
     <main>
-        <CheatsContainer
-            cheatsData={cheatsData}
-            platforms={gameData.platforms}
-            game={gameId}
-            client:load
-        />
+        {game === "VI" ? (
+            <UnderConstruction client:load gameId={game} />
+        ) : (
+            <CheatsContainer
+                cheatsData={cheatsData!}
+                platforms={gameData.platforms}
+                game={gameId}
+                client:load
+            />
+        )}
     </main>
 </BaseLayout>

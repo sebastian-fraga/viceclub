@@ -1,4 +1,5 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import ModsContainer from "@/components/mods/ModsContainer";
 import type { GameId } from "@/config/games";
 import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
@@ -8,20 +9,25 @@ import { getPageSeo } from "@/data/seo/getSeo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
+    const availableGames = [
+        ...Object.keys(GAME_MODS),
+        "VI",
+    ] as GameId[];
+
     return LOCALES.flatMap((locale) =>
-        Object.entries(GAME_MODS).map(([game]) => ({
+        availableGames.map((game) => ({
             params: { locale, game },
             props: {
-                gameData: games[game as GameId],
+                gameData: games[game],
             },
         })),
     );
 }
 
 const { locale } = Astro.params;
-const game = Astro.params.game as keyof typeof GAME_MODS;
-const gameData = games[game as GameId];
-const modsData = GAME_MODS[game];
+const game = Astro.params.game as GameId;
+const gameData = games[game];
+const modsData = GAME_MODS[game as keyof typeof GAME_MODS];
 const pageSeo = getPageSeo(
     game as GameId,
     "herramientas-y-mods",
@@ -38,6 +44,10 @@ const pageSeo = getPageSeo(
     game={gameData}
 >
     <main class="mt-4">
-        <ModsContainer client:load gameId={game} mods={modsData.mods} />
+        {game === "VI" || !modsData ? (
+            <UnderConstruction gameId={game} client:load />
+        ) : (
+            <ModsContainer client:load gameId={game} mods={modsData.mods} />
+        )}
     </main>
 </BaseLayout>

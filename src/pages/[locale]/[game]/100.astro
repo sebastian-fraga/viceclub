@@ -1,4 +1,5 @@
 ---
+import UnderConstruction from "@/components/404/UnderConstruction";
 import { ChecklistContainer } from "@/components/checklist/ChecklistContainer";
 import type { GameId } from "@/config/games";
 import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
@@ -8,21 +9,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import type { ChecklistData } from "@/types/checklist";
 
 export function getStaticPaths() {
-    const checklistModules = import.meta.glob(
-        "../../../data/checklists/*.json",
-        {
-            eager: true,
-        },
-    );
-
-    const availableGames = Object.entries(games).filter(([game]) =>
-        Object.keys(checklistModules).some((path) =>
-            path.endsWith(`/checklists/${game}.json`),
-        ),
-    );
-
     return LOCALES.flatMap((locale) =>
-        availableGames.map(([game, gameData]) => ({
+        Object.entries(games).map(([game, gameData]) => ({
             params: { locale, game },
             props: { gameData },
         })),
@@ -34,19 +22,23 @@ const game = Astro.params.game as GameId;
 const gameData = games[game];
 const pageSeo = getPageSeo(game, "100", LOCALE_TO_LANG[locale as LocaleSlug]);
 
-const checklistModules = import.meta.glob("../../../data/checklists/*.json", {
-    eager: true,
-});
-
-const checklistEntry = Object.entries(checklistModules).find(([path]) =>
-    path.endsWith(`/checklists/${game}.json`),
+const checklistModules = import.meta.glob<{ default: ChecklistData }>(
+    "../../../data/checklists/*.json",
 );
 
-if (!checklistEntry) {
+const checklistPath = `../../../data/checklists/${game}.json`;
+const checklistLoader = checklistModules[checklistPath];
+
+const data =
+    game === "VI"
+        ? null
+        : checklistLoader
+          ? (await checklistLoader()).default
+          : null;
+
+if (game !== "VI" && !data) {
     throw new Error(`No se encontró checklist para el juego "${game}"`);
 }
-
-const data = (checklistEntry[1] as { default: ChecklistData }).default;
 ---
 
 <BaseLayout
@@ -58,11 +50,18 @@ const data = (checklistEntry[1] as { default: ChecklistData }).default;
     game={gameData}
 >
     <main class="mt-4">
-        <ChecklistContainer
-            game={game}
-            variantId={game}
-            data={data}
-            client:load
-        />
+        {game === "VI" ? (
+            <UnderConstruction 
+                gameId={game} 
+                client:load 
+            />
+        ) : (
+            <ChecklistContainer
+                game={game}
+                variantId={game}
+                data={data!}
+                client:load
+            />
+        )}
     </main>
 </BaseLayout>
