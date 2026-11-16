@@ -281,10 +281,30 @@ export const seoFr: SeoMap = {
             description:
                 "Toutes les infos sur GTA 6 : personnages, carte de Leonida, actualités, nouveautés et fiche technique sur Vice Club.",
         },
+        "100": {
+            title: "Checklist 100 % de GTA 6 | Missions et objets à collectionner",
+            description:
+                "Suivez votre progression dans GTA 6 : missions de l'histoire, objets à collectionner et missions secondaires pour terminer le jeu à 100 %.",
+        },
         artworks: {
             title: "Artworks de GTA 6 | Personnages et véhicules",
             description:
                 "Téléchargez des artworks et des captures de GTA 6 avec Jason, Lucia, les décors de Leonida, des véhicules et des armes.",
+        },
+        "herramientas-y-mods": {
+            title: "Mods et outils pour GTA 6",
+            description:
+                "Découvrez des outils et des mods pour la version PC de GTA 6 : correctifs, améliorations du gameplay et modifications essentielles.",
+        },
+        logros: {
+            title: "Guide des succès et trophées de GTA 6",
+            description:
+                "Consultez tous les succès et trophées de GTA 6, leurs conditions et comment les débloquer pour terminer le jeu à 100 %.",
+        },
+        mapa: {
+            title: "Carte interactive de GTA 6",
+            description:
+                "Explorez la carte interactive de Leonida et Vice City dans GTA 6 et trouvez les objets à collectionner, les sauts uniques et plus encore.",
         },
         radio: {
             title: "Stations de radio de GTA 6",
@@ -295,6 +315,11 @@ export const seoFr: SeoMap = {
             title: "Chronologie de GTA 6 | Fuites et actualités",
             description:
                 "Chronologie de GTA 6 avec fuites, actualités, rumeurs et informations officielles depuis son annonce.",
+        },
+        trucos: {
+            title: "Codes de triche de GTA 6",
+            description:
+                "Découvrez tous les codes de triche de GTA 6 pour PlayStation 5, Xbox Series et PC, avec les codes pour chaque plateforme.",
         },
     },
 };

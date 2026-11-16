@@ -10,7 +10,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA 3 100% Checklist | Missions and Collectibles",
             description:
-                "Track your progress in GTA 3: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA 3: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA 3 Artworks | Characters and Vehicles",
@@ -38,9 +38,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA 3's radio stations and songs, including Flashback FM, MSX, Double Clef FM and many more.",
         },
         trucos: {
-            title: "GTA 3 Cheats",
+            title: "GTA 3 Cheat Codes",
             description:
-                "Discover every GTA 3 cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
+                "Discover all GTA 3 cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
         },
     },
     VC: {
@@ -52,7 +52,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA Vice City 100% Checklist | Missions and Collectibles",
             description:
-                "Track your progress in GTA Vice City: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA Vice City: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA Vice City Artworks | Characters and Vehicles",
@@ -80,9 +80,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA Vice City's radio stations and songs, including Flash FM, V-Rock, Fever 105 and many more.",
         },
         trucos: {
-            title: "GTA Vice City Cheats",
+            title: "GTA Vice City Cheat Codes",
             description:
-                "Discover every GTA Vice City cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
+                "Discover all GTA Vice City cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
         },
     },
     SA: {
@@ -94,7 +94,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA San Andreas 100% Checklist | Missions and Collectibles",
             description:
-                "Track your progress in GTA San Andreas: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA San Andreas: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA San Andreas Artworks | Characters and Vehicles",
@@ -122,9 +122,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA San Andreas' radio stations and songs, including Radio Los Santos, Radio X, SF-UR and many more.",
         },
         trucos: {
-            title: "GTA San Andreas Cheats",
+            title: "GTA San Andreas Cheat Codes",
             description:
-                "Discover every GTA San Andreas cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
+                "Discover all GTA San Andreas cheat for PlayStation 2, Xbox, PC and the Definitive Edition, with codes for each platform.",
         },
     },
     LCS: {
@@ -136,7 +136,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA Liberty City Stories 100% Checklist | Missions",
             description:
-                "Track your progress in GTA Liberty City Stories: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA Liberty City Stories: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA Liberty City Stories Artworks | Characters",
@@ -154,9 +154,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA Liberty City Stories' radio stations and songs, including Flashback 95.6, Liberty Jam and many more.",
         },
         trucos: {
-            title: "GTA Liberty City Stories Cheats",
+            title: "GTA Liberty City Stories Cheat Codes",
             description:
-                "Discover every GTA Liberty City Stories cheat for PlayStation Portable and PlayStation 2, with codes for each platform.",
+                "Discover all GTA Liberty City Stories cheat for PlayStation Portable and PlayStation 2, with codes for each platform.",
         },
     },
     VCS: {
@@ -168,7 +168,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA Vice City Stories 100% Checklist | Missions",
             description:
-                "Track your progress in GTA Vice City Stories: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA Vice City Stories: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA Vice City Stories Artworks | Characters",
@@ -186,9 +186,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA Vice City Stories' radio stations and songs, including Flash FM, Radio Espantoso, Wave 103 and many more.",
         },
         trucos: {
-            title: "GTA Vice City Stories Cheats",
+            title: "GTA Vice City Stories Cheat Codes",
             description:
-                "Discover every GTA Vice City Stories cheat for PlayStation Portable and PlayStation 2, with codes for each platform.",
+                "Discover all GTA Vice City Stories cheat for PlayStation Portable and PlayStation 2, with codes for each platform.",
         },
     },
     IV: {
@@ -228,9 +228,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA 4's radio stations and songs, including San Juan Sounds, Electro-Choc, Radio Broker and many more.",
         },
         trucos: {
-            title: "GTA 4 Cheats",
+            title: "GTA 4 Cheat Codes",
             description:
-                "Discover every cheat for GTA 4 and its expansions The Lost and Damned and The Ballad of Gay Tony, with cell phone codes for each game.",
+                "Discover all cheat for GTA 4 and its expansions The Lost and Damned and The Ballad of Gay Tony, with cell phone codes for each game.",
         },
     },
     V: {
@@ -242,7 +242,7 @@ export const seoEn: SeoMap = {
         "100": {
             title: "GTA 5 100% Checklist | Missions and Collectibles",
             description:
-                "Track your progress in GTA 5: story missions, collectibles and side jobs to complete 100% of the game.",
+                "Track your progress in GTA 5: story missions, collectibles and side jobs to reach 100% completion.",
         },
         artworks: {
             title: "GTA 5 Artworks | Characters and Vehicles",
@@ -270,9 +270,9 @@ export const seoEn: SeoMap = {
                 "Listen to GTA 5's radio stations and songs, including Non-Stop-Pop FM, Los Santos Rock Radio and many more.",
         },
         trucos: {
-            title: "GTA 5 Cheats",
+            title: "GTA 5 Cheat Codes",
             description:
-                "Discover every GTA 5 cheat for PlayStation 3, Xbox 360, PC and the remastered version, with codes for each platform.",
+                "Discover all GTA 5 cheat for PlayStation 3, Xbox 360, PC and the remastered version, with codes for each platform.",
         },
     },
     VI: {
@@ -281,10 +281,30 @@ export const seoEn: SeoMap = {
             description:
                 "Everything about GTA 6: characters, the Leonida map, news, updates and game info at Vice Club.",
         },
+        "100": {
+            title: "GTA 6 100% Checklist | Missions and Collectibles",
+            description:
+                "Track your progress in GTA 6: story missions, collectibles and side jobs to reach 100% completion.",
+        },
         artworks: {
             title: "GTA 6 Artworks | Characters and Vehicles",
             description:
                 "Download GTA 6 artworks and screenshots featuring Jason, Lucia, Leonida locations, vehicles and weapons.",
+        },
+        "herramientas-y-mods": {
+            title: "GTA 6 Mods and Tools",
+            description:
+                "Explore tools and mods for the PC version of GTA 6: fixes, gameplay improvements and essential modifications.",
+        },
+        logros: {
+            title: "GTA 6 Achievements and Trophies Guide",
+            description:
+                "Browse every GTA 6 achievement and trophy, their requirements and how to unlock them to complete the game 100%.",
+        },
+        mapa: {
+            title: "GTA 6 Interactive Map",
+            description:
+                "Explore the interactive map of Leonida and Vice City in GTA 6 and find collectibles, unique stunt jumps, side missions and more.",
         },
         radio: {
             title: "GTA 6 Radio Stations",
@@ -295,6 +315,11 @@ export const seoEn: SeoMap = {
             title: "GTA 6 Timeline | Leaks and News",
             description:
                 "A GTA 6 timeline with leaks, news, rumors and official information since its announcement.",
+        },
+        trucos: {
+            title: "GTA 6 Cheat Codes",
+            description:
+                "Discover all GTA 6 cheat for PlayStation 5, Xbox Series and PC, with codes for each platform.",
         },
     },
 };

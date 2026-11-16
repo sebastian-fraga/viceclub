@@ -288,10 +288,30 @@ export const seo: SeoMap = {
             description:
                 "Toda la información de GTA 6: personajes, mapa de Leonida, noticias, novedades y ficha técnica en Vice Club.",
         },
+        "100": {
+            title: "Checklist 100% de GTA 6 | Misiones y coleccionables",
+            description:
+                "Rastrea tu progreso en GTA 6: misiones de la historia, coleccionables y trabajos secundarios para completar el 100% del juego.",
+        },
         artworks: {
             title: "Artworks de GTA 6 | Personajes y vehículos",
             description:
                 "Descarga artworks y capturas de GTA 6 con Jason, Lucia, escenarios de Leonida, vehículos y armas.",
+        },
+        "herramientas-y-mods": {
+            title: "Mods y herramientas para GTA 6",
+            description:
+                "Explora herramientas y mods para la versión de PC de GTA 6: fixes, mejoras de jugabilidad y modificaciones esenciales.",
+        },
+        logros: {
+            title: "Guía de logros y trofeos para GTA 6",
+            description:
+                "Consulta todos los logros y trofeos de GTA 6, sus requisitos y cómo desbloquearlos para completar el juego al 100%.",
+        },
+        mapa: {
+            title: "Mapa interactivo de GTA 6",
+            description:
+                "Explora el mapa interactivo de Leonida y Vice City en GTA 6 y encuentra coleccionables, saltos únicos, misiones secundarias y más.",
         },
         radio: {
             title: "Radios de GTA 6",
@@ -302,6 +322,11 @@ export const seo: SeoMap = {
             title: "Línea de tiempo de GTA 6 | Filtraciones y noticias",
             description:
                 "Línea de tiempo de GTA 6 con filtraciones, noticias, rumores e información oficial desde su anuncio.",
+        },
+        trucos: {
+            title: "Trucos de GTA 6",
+            description:
+                "Descubre todos los trucos de GTA 6 para PlayStation 5, Xbox Series y PC, con códigos para cada plataforma.",
         },
     },
 };

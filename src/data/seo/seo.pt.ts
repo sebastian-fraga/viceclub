@@ -281,10 +281,30 @@ export const seoPt: SeoMap = {
             description:
                 "Todas as informações de GTA 6: personagens, mapa de Leonida, notícias, novidades e ficha técnica no Vice Club.",
         },
+        "100": {
+            title: "Checklist 100% de GTA 6 | Missões e colecionáveis",
+            description:
+                "Acompanhe seu progresso em GTA 6: missões da história, colecionáveis e trabalhos secundários para completar 100% do jogo.",
+        },
         artworks: {
             title: "Artworks de GTA 6 | Personagens e veículos",
             description:
                 "Baixe artworks e capturas de tela de GTA 6 com Jason, Lucia, cenários de Leonida, veículos e armas.",
+        },
+        "herramientas-y-mods": {
+            title: "Mods e ferramentas para GTA 6",
+            description:
+                "Explore ferramentas e mods para a versão de PC de GTA 6: correções, melhorias de jogabilidade e modificações essenciais.",
+        },
+        logros: {
+            title: "Guia de conquistas e troféus de GTA 6",
+            description:
+                "Consulte todas as conquistas e troféus de GTA 6, seus requisitos e como desbloqueá-los para completar o jogo em 100%.",
+        },
+        mapa: {
+            title: "Mapa interativo de GTA 6",
+            description:
+                "Explore o mapa interativo de Leonida e Vice City em GTA 6 e encontre colecionáveis, saltos únicos, missões secundárias e mais.",
         },
         radio: {
             title: "Rádios de GTA 6",
@@ -295,6 +315,11 @@ export const seoPt: SeoMap = {
             title: "Linha do tempo de GTA 6 | Vazamentos e notícias",
             description:
                 "Linha do tempo de GTA 6 com vazamentos, notícias, rumores e informações oficiais desde o seu anúncio.",
+        },
+        trucos: {
+            title: "Cheats de GTA 6",
+            description:
+                "Descubra todos os cheats de GTA 6 para PlayStation 5, Xbox Series e PC, com códigos para cada plataforma.",
         },
     },
 };
