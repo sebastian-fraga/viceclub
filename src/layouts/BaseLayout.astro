@@ -1,22 +1,22 @@
 ---
-import { ClientRouter } from "astro:transitions";
 import Analytics from "@vercel/analytics/astro";
+import { ClientRouter } from "astro:transitions";
 
-import type { Game } from "@/types/game";
 import { HTML_LANG, LOCALE_TO_LANG, defaultLanguage } from "@/config/languages";
-import { themeToCssVars } from "@/lib/theme";
 import i18n from "@/i18n";
+import { themeToCssVars } from "@/lib/theme";
+import type { Game } from "@/types/game";
 import { isLocaleSlug } from "@/utils/locale";
 
-import Sidebar from "../components/layout/sidebar/Sidebar";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer.tsx";
 import NotificationBanner from "@/components/layout/NotificationBanner";
+import Footer from "../components/layout/Footer.tsx";
+import Header from "../components/layout/Header";
+import Sidebar from "../components/layout/sidebar/Sidebar";
 
 import CursorManager from "@/components/providers/CursorManager";
 
-import "../styles/main.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
+import "../styles/main.css";
 
 import CursorGlow from "@/components/layout/CursorGlow";
 
