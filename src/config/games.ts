@@ -87,6 +87,7 @@ export const UNFINISHED_SECTIONS: Partial<Record<GameId, SectionId[]>> = {
     VCS: [],
     IV: ["logros"],
     V: ["logros"],
+    VI: ["100", "herramientas-y-mods", "logros", "mapa", "trucos"]
 };
 
 export const gamesList: { id: GameId; name: string; fullName: string }[] = [
@@ -144,5 +145,5 @@ export const GAME_SECTIONS: Record<GameId, SectionId[]> = {
     VCS: STORIES_SECTIONS,
     IV: FULL_SECTIONS,
     V: FULL_SECTIONS,
-    VI: ["inicio", "artworks", "radio", "timeline"],
+    VI: [...FULL_SECTIONS, "timeline"],
 };
