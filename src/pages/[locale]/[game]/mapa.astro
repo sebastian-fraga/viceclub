@@ -10,12 +10,9 @@ import { seo } from "@/data/seo/seo";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export function getStaticPaths() {
-    const availableGames: GameId[] = [
-        ...Object.entries(seo)
-            .filter(([, pages]) => pages?.mapa)
-            .map(([game]) => game as GameId),
-        "VI",
-    ];
+    const availableGames: GameId[] = Object.entries(seo)
+        .filter(([, pages]) => pages?.mapa)
+        .map(([game]) => game as GameId);
 
     return LOCALES.flatMap((locale) =>
         availableGames.map((game) => ({
