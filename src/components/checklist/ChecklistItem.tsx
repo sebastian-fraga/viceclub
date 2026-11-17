@@ -162,7 +162,7 @@ export function ChecklistItem({
                                       />
                                   )}
                                   <div className="flex flex-1 items-center gap-2 min-w-0">
-                                      <span className="truncate font-bold">
+                                      <span className="max-mobile:text-xs font-bold">
                                           {localizedText(item.text)}
                                       </span>
 
