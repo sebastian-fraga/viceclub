@@ -1088,6 +1088,12 @@ export default {
         accessibility: {
             entryIcon: "Checklist icon",
         },
+        rewards: {
+            title: "100% Completion Rewards",
+            paragraph:
+                "When you complete 100% of the game, you will get the following rewards:",
+            empty: "This game has no rewards available.",
+        },
     },
     artworks: {
         title: "{{fullName}} artworks",

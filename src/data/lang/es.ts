@@ -1088,6 +1088,12 @@ export default {
         accessibility: {
             entryIcon: "Icono de checklist",
         },
+        rewards: {
+            title: "Recompensas por completar el 100%",
+            paragraph:
+                "Al completar el 100% del juego, obtendrás las siguientes recompensas:",
+            empty: "Este juego no tiene recompensas disponibles.",
+        },
     },
     artworks: {
         title: "Artworks de {{fullName}}",
