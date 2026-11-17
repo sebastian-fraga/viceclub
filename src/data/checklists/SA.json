@@ -1218,5 +1218,47 @@
                 }
             ]
         }
+    ],
+    "rewards": [
+        {
+            "item": {
+                "es": "Obtendrás $1.000.000",
+                "en": "You will get $1,000,000",
+                "fr": "Vous obtiendrez 1 000 000 $",
+                "pt": "Você receberá $1.000.000"
+            }
+        },
+        {
+            "item": {
+                "es": "Munición infinita con todas las armas",
+                "en": "Infinite ammo for all weapons",
+                "fr": "Munitions infinies pour toutes les armes",
+                "pt": "Munição infinita para todas as armas"
+            }
+        },
+        {
+            "item": {
+                "es": "Los vehículos que conduzcas resistirán el doble de daño",
+                "en": "Vehicles you drive will withstand twice as much damage",
+                "fr": "Les véhicules que vous conduisez résisteront à deux fois plus de dégâts",
+                "pt": "Os veículos que você dirigir resistirão ao dobro de dano"
+            }
+        },
+        {
+            "item": {
+                "es": "Aparecerá un Hydra arriba de la casa de Sweet",
+                "en": "A Hydra will spawn above Sweet's house",
+                "fr": "Un Hydra apparaîtra au-dessus de la maison de Sweet",
+                "pt": "Um Hydra aparecerá em cima da casa do Sweet"
+            }
+        },
+        {
+            "item": {
+                "es": "Aparecerá un Rhino debajo del puente de Ganton",
+                "en": "A Rhino will spawn under the Ganton bridge",
+                "fr": "Un Rhino apparaîtra sous le pont de Ganton",
+                "pt": "Um Rhino aparecerá debaixo da ponte de Ganton"
+            }
+        }
     ]
 }

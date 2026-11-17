@@ -1367,5 +1367,37 @@
                 }
             ]
         }
+    ],
+    "rewards": [
+        {
+            "item": {
+                "es": "Munición infinita con todas las armas",
+                "en": "Infinite ammo for all weapons",
+                "fr": "Munitions infinies pour toutes les armes",
+                "pt": "Munição infinita para todas as armas"
+            }
+        },
+        {
+            "item": {
+                "es": "Podrás mirar la mayoría de cinemáticas en The Clymenus Suite",
+                "en": "You will be able to watch most cutscenes in The Clymenus Suite",
+                "fr": "Vous pourrez regarder la plupart des cinématiques dans The Clymenus Suite",
+                "pt": "Você poderá assistir à maioria das cutscenes na The Clymenus Suite"
+            }
+        },
+        {
+            "item": {
+                "es": "Se desbloqueará todo el contenido multijugador",
+                "en": "All multiplayer content will be unlocked",
+                "fr": "Tout le contenu multijoueur sera débloqué",
+                "pt": "Todo o conteúdo multijogador será desbloqueado"
+            },
+            "tooltipText": {
+                "es": "Solo disponible en la versión de PSP",
+                "en": "Only available in the PSP version",
+                "fr": "Disponible uniquement dans la version PSP",
+                "pt": "Disponível apenas na versão de PSP"
+            }
+        }
     ]
 }

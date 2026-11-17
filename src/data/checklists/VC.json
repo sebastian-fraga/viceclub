@@ -1211,5 +1211,55 @@
                 }
             ]
         }
+    ],
+    "rewards": [
+        {
+            "item": {
+                "es": "200 puntos de salud máxima",
+                "en": "200 maximum health points",
+                "fr": "200 points de santé maximum",
+                "pt": "200 pontos máximos de saúde"
+            }
+        },
+        {
+            "item": {
+                "es": "200 puntos de blindaje máximo",
+                "en": "200 maximum armor points",
+                "fr": "200 points de blindage maximum",
+                "pt": "200 pontos máximos de colete"
+            }
+        },
+        {
+            "item": {
+                "es": "Munición infinita con todas las armas",
+                "en": "Infinite ammo for all weapons",
+                "fr": "Munitions infinies pour toutes les armes",
+                "pt": "Munição infinita para todas as armas"
+            }
+        },
+        {
+            "item": {
+                "es": "Los vehículos que conduzcas resistirán el doble de daño",
+                "en": "Vehicles you drive will withstand twice as much damage",
+                "fr": "Les véhicules que vous conduisez résisteront à deux fois plus de dégâts",
+                "pt": "Os veículos que você dirigir resistirão ao dobro de dano"
+            }
+        },
+        {
+            "item": {
+                "es": "Podrás reclutar a 3 guardaespaldas en la Mansión Vercetti por $2000",
+                "en": "You will be able to recruit 3 bodyguards at the Vercetti Estate for $2,000",
+                "fr": "Vous pourrez recruter 3 gardes du corps au Domaine Vercetti pour 2 000 $",
+                "pt": "Você poderá recrutar 3 guarda-costas na Mansão Vercetti por $2.000"
+            }
+        },
+        {
+            "item": {
+                "es": "Obtendrás el traje \"Frankie\" disponible para equipar en la Mansión Vercetti",
+                "en": "You will get the \"Frankie\" outfit, available to equip at the Vercetti Estate",
+                "fr": "Vous obtiendrez la tenue « Frankie », disponible à équiper au Domaine Vercetti",
+                "pt": "Você receberá o traje \"Frankie\", disponível para equipar na Mansão Vercetti"
+            }
+        }
     ]
 }

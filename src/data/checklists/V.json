@@ -1186,5 +1186,37 @@
                 }
             ]
         }
+    ],
+    "rewards": [
+        {
+            "item": {
+                "es": "Se desbloqueará la misión de Extraños y locos \"La última\"",
+                "en": "The Strangers and Freaks mission \"The Last One\" will be unlocked",
+                "fr": "La mission Inconnus et détraqués « Espèce menacée » sera débloquée",
+                "pt": "A missão de Estranhos e Doidos \"O Último da Espécie\" será desbloqueada"
+            }
+        },
+        {
+            "item": {
+                "es": "Obtendrás una nueva camiseta para Franklin",
+                "en": "You will get a new T-shirt for Franklin",
+                "fr": "Vous obtiendrez un nouveau t-shirt pour Franklin",
+                "pt": "Você receberá uma nova camiseta para o Franklin"
+            }
+        },
+        {
+            "item": {
+                "es": "Aparecerán 3 OVNIs en el mapa",
+                "en": "3 UFOs will spawn on the map",
+                "fr": "3 OVNI apparaîtront sur la carte",
+                "pt": "3 OVNIs aparecerão no mapa"
+            },
+            "tooltipText": {
+                "es": "Uno en la cima del Monte Chiliad, otro en Fort Zancudo y el último en Sandy Shores",
+                "en": "One at the top of Mount Chiliad, another at Fort Zancudo and the last one in Sandy Shores",
+                "fr": "Un au sommet du mont Chiliad, un autre à Fort Zancudo et le dernier à Sandy Shores",
+                "pt": "Um no topo do Monte Chiliad, outro em Fort Zancudo e o último em Sandy Shores"
+            }
+        }
     ]
 }

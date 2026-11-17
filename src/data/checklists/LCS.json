@@ -832,5 +832,51 @@
                 }
             ]
         }
+    ],
+    "rewards": [
+        {
+            "item": {
+                "es": "Munición infinita con todas las armas",
+                "en": "Infinite ammo for all weapons",
+                "fr": "Munitions infinies pour toutes les armes",
+                "pt": "Munição infinita para todas as armas"
+            }
+        },
+        {
+            "item": {
+                "es": "Aparecerá un Rhino en Fort Staunton",
+                "en": "A Rhino will spawn at Fort Staunton",
+                "fr": "Un Rhino apparaîtra à Fort Staunton",
+                "pt": "Um Rhino aparecerá em Fort Staunton"
+            }
+        },
+        {
+            "item": {
+                "es": "Aparecerán dos Speeders en Portland",
+                "en": "Two Speeders will spawn in Portland",
+                "fr": "Deux Speeders apparaîtront à Portland",
+                "pt": "Dois Speeders aparecerão em Portland"
+            },
+            "tooltipText": {
+                "es": "Uno aparecerá en el muelle al lado de la terminal de ferrys y el otro en Callahan Point",
+                "en": "One will spawn on the dock next to the ferry terminal and the other at Callahan Point",
+                "fr": "L'un apparaîtra sur le quai à côté du terminal des ferries et l'autre à Callahan Point",
+                "pt": "Um aparecerá no cais ao lado do terminal de balsas e o outro em Callahan Point"
+            }
+        },
+        {
+            "item": {
+                "es": "Se desbloqueará todo el contenido multijugador",
+                "en": "All multiplayer content will be unlocked",
+                "fr": "Tout le contenu multijoueur sera débloqué",
+                "pt": "Todo o conteúdo multijogador será desbloqueado"
+            },
+            "tooltipText": {
+                "es": "Solo disponible en la versión de PSP",
+                "en": "Only available in the PSP version",
+                "fr": "Disponible uniquement dans la version PSP",
+                "pt": "Disponível apenas na versão de PSP"
+            }
+        }
     ]
 }

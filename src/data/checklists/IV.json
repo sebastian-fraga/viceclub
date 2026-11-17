@@ -1094,6 +1094,16 @@
                         }
                     ]
                 }
+            ],
+            "rewards": [
+                {
+                    "item": {
+                        "es": "Posibilidad de comprar munición ilimitada",
+                        "en": "Ability to buy unlimited ammo",
+                        "fr": "Possibilité d'acheter des munitions illimitées",
+                        "pt": "Possibilidade de comprar munição ilimitada"
+                    }
+                }
             ]
         },
         {
@@ -1445,6 +1455,16 @@
                             "mapSlug": "seagulls"
                         }
                     ]
+                }
+            ],
+            "rewards": [
+                {
+                    "item": {
+                        "es": "Posibilidad de comprar munición ilimitada",
+                        "en": "Ability to buy unlimited ammo",
+                        "fr": "Possibilité d'acheter des munitions illimitées",
+                        "pt": "Possibilidade de comprar munição ilimitada"
+                    }
                 }
             ]
         },
@@ -1868,6 +1888,16 @@
                             "mapSlug": "seagulls"
                         }
                     ]
+                }
+            ],
+            "rewards": [
+                {
+                    "item": {
+                        "es": "Posibilidad de comprar munición ilimitada",
+                        "en": "Ability to buy unlimited ammo",
+                        "fr": "Possibilité d'acheter des munitions illimitées",
+                        "pt": "Possibilidade de comprar munição ilimitada"
+                    }
                 }
             ]
         }
