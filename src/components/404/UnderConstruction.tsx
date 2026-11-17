@@ -48,7 +48,6 @@ export default function UnderConstruction({ gameId }: UnderConstructionProps) {
 
     return (
         <div className="relative flex min-h-[calc(90vh-var(--header-height)-var(--banner-height))] items-center justify-center overflow-hidden px-4 text-center">
-            {/* Resplandor de fondo: puramente decorativo */}
             <div
                 aria-hidden="true"
                 className="pointer-events-none absolute left-1/2 top-1/2 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-200/10 blur-3xl"
