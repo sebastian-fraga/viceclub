@@ -26,9 +26,16 @@ export interface ChecklistTabData {
     id: string;
     label: string;
     sections: ChecklistSectionData[];
+    rewards?: CompletionRewardsData[];
 }
 
 export interface ChecklistData {
     tabs?: ChecklistTabData[];
     sections?: ChecklistSectionData[];
+    rewards?: CompletionRewardsData[];
+}
+
+export interface CompletionRewardsData {
+    item: MaybeLocalizedText;
+    tooltipText?: MaybeLocalizedText;
 }
