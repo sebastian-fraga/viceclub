@@ -1,8 +1,7 @@
 import VariantSelector from "@/components/home/VariantSelector";
 import type { GameId } from "@/config/games";
 import { games } from "@/data/games";
-import type { CSSProperties } from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 import type { ChecklistProgress } from "../../hooks/useChecklistProgress";
 import type { ChecklistData } from "../../types/checklist";
 import { ChecklistPanel } from "./ChecklistPanel";
@@ -11,43 +10,19 @@ interface ChecklistContainerProps {
     game: GameId;
     variantId: string;
     data: ChecklistData;
+    activeVariantId: string;
+    onVariantChange: (variantId: string) => void;
 }
 
 export function ChecklistContainer({
     game,
     variantId,
     data,
+    activeVariantId,
+    onVariantChange,
 }: ChecklistContainerProps) {
     const gameData = games[game];
     const hasTabs = Boolean(data.tabs && data.tabs.length > 1);
-
-    const [activeVariantId, setActiveVariantId] = useState(() => {
-        if (typeof window === "undefined") {
-            return variantId;
-        }
-
-        const variant = new URLSearchParams(window.location.search).get(
-            "variant",
-        );
-
-        return (
-            gameData.variants?.find(
-                (item) => item.id.toLowerCase() === variant?.toLowerCase(),
-            )?.id ?? variantId
-        );
-    });
-
-    useEffect(() => {
-        const url = new URL(window.location.href);
-
-        if (activeVariantId === game) {
-            url.searchParams.delete("variant");
-        } else {
-            url.searchParams.set("variant", activeVariantId);
-        }
-
-        window.history.replaceState({}, "", url);
-    }, [activeVariantId, game]);
 
     const progressByTab = useRef<Record<string, ChecklistProgress>>({});
 
@@ -64,27 +39,13 @@ export function ChecklistContainer({
                 (tab) => tab.id.toLowerCase() === activeVariantId.toLowerCase(),
             ) ?? data.tabs[0];
 
-        const variantData = gameData.variants?.find(
-            (variant) =>
-                variant.id.toLowerCase() === activeTab.id.toLowerCase(),
-        );
-
-        const accent =
-            variantData?.theme.accent.default ?? gameData.theme.accent.default;
-
         return (
-            <div
-                style={
-                    {
-                        "--game-accent": accent,
-                    } as CSSProperties
-                }
-            >
-                <div className="my-4 flex justify-center">
+            <div className="flex flex-col gap-12">
+                <div className="my-2 flex justify-center">
                     <VariantSelector
                         variants={gameData.variants ?? []}
                         selected={activeVariantId}
-                        onChange={setActiveVariantId}
+                        onChange={onVariantChange}
                     />
                 </div>
 
@@ -104,13 +65,7 @@ export function ChecklistContainer({
     const tabId = data.tabs?.[0]?.id ?? "default";
 
     return (
-        <div
-            style={
-                {
-                    "--game-accent": gameData.theme.accent.default,
-                } as CSSProperties
-            }
-        >
+        <section>
             <ChecklistPanel
                 game={game}
                 variantId={variantId}
@@ -118,6 +73,6 @@ export function ChecklistContainer({
                 sections={sections}
                 onProgressChange={handleProgressChange}
             />
-        </div>
+        </section>
     );
 }

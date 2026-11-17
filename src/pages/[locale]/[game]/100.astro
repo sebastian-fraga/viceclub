@@ -1,6 +1,6 @@
 ---
 import UnderConstruction from "@/components/404/UnderConstruction";
-import { ChecklistContainer } from "@/components/checklist/ChecklistContainer";
+import ChecklistPage from "@/components/checklist/ChecklistPage";
 import type { GameId } from "@/config/games";
 import { LOCALES, LOCALE_TO_LANG, type LocaleSlug } from "@/config/languages";
 import { games } from "@/data/games";
@@ -50,18 +50,15 @@ if (game !== "VI" && !data) {
     game={gameData}
 >
     <main class="mt-4">
-        {game === "VI" ? (
-            <UnderConstruction 
-                gameId={game} 
-                client:load 
-            />
-        ) : (
-            <ChecklistContainer
-                game={game}
-                variantId={game}
-                data={data!}
-                client:load
-            />
-        )}
-    </main>
+    {game === "VI" ? (
+        <UnderConstruction gameId={game} client:load />
+    ) : (
+        <ChecklistPage
+            game={game}
+            variantId={game}
+            data={data!}
+            client:load
+        />
+    )}
+</main>
 </BaseLayout>

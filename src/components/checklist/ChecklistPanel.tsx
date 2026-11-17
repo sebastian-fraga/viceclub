@@ -70,10 +70,7 @@ export function ChecklistPanel({
     }, [progress, tabId, onProgressChange, loaded]);
 
     return (
-        <div
-            data-tab-id={tabId}
-            className="w-full max-w-400 mx-auto max-mobile:px-4 mobile:px-6 flex flex-col gap-6 max-mobile:gap-8 mb-12 mt-8"
-        >
+        <div className="flex flex-col gap-6">
             <motion.div
                 className="flex-col flex gap-8"
                 initial={{ opacity: 0, y: 12 }}
