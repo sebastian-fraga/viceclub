@@ -1521,6 +1521,8 @@
             "image": "/assets/images/characters/VI/lucia.webp",
             "age": "home.characters.unknown",
             "status": "main",
+            "portrayedBy": "Manni Perez",
+            "portrayedByUrl": "https://www.imdb.com/name/nm9168780/",
             "quote": "home.vi.characters.2.quote"
         },
         {
