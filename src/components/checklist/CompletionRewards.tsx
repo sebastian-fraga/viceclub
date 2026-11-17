@@ -97,7 +97,7 @@ export default function CompletionRewards({
                                 <motion.li
                                     key={index}
                                     variants={itemVariants}
-                                    className="group relative flex items-center gap-5 rounded-2xl px-4 py-3.5 transition-colors duration-400 bg-(--button-bg)/30 hover:bg-(--button-bg-hover)/70 max-mobile:gap-3 cursor-default font-body-condensed shadow-lg shadow-(color:--game-accent)/5"
+                                    className="group relative flex items-center gap-5 rounded-2xl px-4 py-3.5 transition-colors duration-400 bg-(--button-bg)/20 hover:bg-(--button-bg)/50 shadow-(color:--button-bg-hover)/5 max-mobile:gap-3 cursor-default font-body-condensed shadow-lg"
                                 >
                                     <span className="w-6 shrink-0 text-left text-2xl font-bold tabular-nums leading-none text-(--game-accent) opacity-60 font-body transition-opacity duration-400 group-hover:opacity-100 max-mobile:w-8 max-mobile:text-2xl">
                                         {String(index + 1).padStart(2, "0")}
