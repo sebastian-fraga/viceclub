@@ -9,7 +9,7 @@ import GradientBorder from "./GradientBorder";
 import PS5Icon from "../../icons/playstation/PS5Icon";
 import XboxSeries from "../../icons/xbox/XboxSeriesIcon";
 
-const RELEASE_DATE = new Date("Nov 12, 2026 00:00:00").getTime();
+const RELEASE_DATE = new Date("Nov 19, 2026 00:00:00").getTime();
 
 type TimeLeft = {
     days: number;
