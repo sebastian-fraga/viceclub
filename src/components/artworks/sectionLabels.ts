@@ -199,4 +199,10 @@ export const sectionLabels: Record<string, Caption> = {
         fr: "Magazine Edge",
         pt: "Revista Edge",
     },
+    weather: {
+        es: "The Weather Channel",
+        en: "The Weather Channel",
+        fr: "The Weather Channel",
+        pt: "The Weather Channel",
+    },
 };
