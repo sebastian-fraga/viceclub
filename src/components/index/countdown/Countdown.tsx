@@ -1,13 +1,15 @@
 import useT from "@/hooks/useT";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import CountdownTimer from "./CountdownTimer";
+import GradientBorder from "./GradientBorder";
 
 import PS5Icon from "../../icons/playstation/PS5Icon";
 import XboxSeries from "../../icons/xbox/XboxSeriesIcon";
 
-const RELEASE_DATE = new Date("Nov 19, 2026 00:00:00").getTime();
+const RELEASE_DATE = new Date("Nov 12, 2026 00:00:00").getTime();
 
 type TimeLeft = {
     days: number;
@@ -17,6 +19,23 @@ type TimeLeft = {
 };
 
 const EMPTY_TIME: TimeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+const PLATFORMS = [
+    {
+        name: "PlayStation 5",
+        href: "https://www.playstation.com/games/grand-theft-auto-vi/",
+        Icon: PS5Icon,
+        iconClass:
+            "size-12 opacity-85 group-hover:opacity-100 transition-opacity",
+    },
+    {
+        name: "Xbox Series",
+        href: "https://www.xbox.com/games/store/grand-theft-auto-vi/9nl3wwnzlzzn",
+        Icon: XboxSeries,
+        iconClass:
+            "size-7 opacity-85 group-hover:opacity-100 transition-opacity",
+    },
+] as const;
 
 function getTimeLeft(): TimeLeft {
     const distance = RELEASE_DATE - Date.now();
@@ -34,16 +53,35 @@ function getTimeLeft(): TimeLeft {
 }
 
 const sectionBaseClass =
-    "bg-[url('/assets/images/main/countdown.webp')] bg-cover bg-top flex flex-col justify-center items-center text-center mx-auto my-6 rounded-2xl max-mobile:rounded-4xl text-slate-50 p-6 max-mobile:p-5 w-full max-w-7xl max-mobile:h-auto max-mobile:min-h-56 h-[clamp(220px,28vw,280px)] drop-shadow-2xl drop-shadow-cyan-300/15 relative overflow-hidden";
+    "flex flex-col justify-center items-center text-center mx-auto my-6 [--gb-radius:1rem] max-mobile:[--gb-radius:2rem] rounded-(--gb-radius) text-slate-50 p-6 max-mobile:p-5 w-full max-w-7xl max-mobile:h-auto max-mobile:min-h-56 h-[clamp(220px,28vw,280px)] drop-shadow-2xl drop-shadow-cyan-300/15 relative overflow-hidden";
+
+const countingBgClass =
+    "bg-[url('/assets/images/main/countdown.webp')] bg-cover max-mobile:bg-[40%_50%]";
+
+const finishedBgClass =
+    "bg-[url('/assets/images/main/countdown-finished.webp')] bg-cover bg-top";
 
 const overlayClass =
     "absolute inset-0 pointer-events-none bg-linear-to-t from-black/40 via-black/10 to-black/5 hidden max-mobile:inline";
 
 const titleClass =
-    "font-black text-[clamp(1rem,3vw,2.5rem)] max-mobile:text-[26px] leading-tight bg-linear-to-b from-[#7374f4] via-[#dc8ee4] to-[#e59e7a] bg-clip-text text-transparent text-balance";
+    "font-black text-[clamp(1rem,3vw,2.5rem)] max-mobile:text-[26px] leading-tight bg-linear-to-b bg-clip-text text-transparent text-balance";
+
+const countingTitleClass = "from-[#7374f4] via-[#dc8ee4] to-[#e59e7a]";
+
+const finishedTitleClass =
+    "from-[#9295ff] via-[#f0a5f2] to-[#ffbd91] drop-shadow-[0_0_12px_rgba(220,142,228,0.45)]";
 
 const platformLinkClass =
-    "bg-slate-800 px-[clamp(0.75rem,2vw,1.5rem)] py-[clamp(0.4rem,1vw,0.75rem)] rounded-full hover:bg-slate-700 transition flex items-center justify-center";
+    "group flex flex-col items-center justify-center gap-1.5 w-56 h-18 max-mobile:w-auto max-mobile:min-w-0 max-mobile:flex-1 rounded-3xl bg-slate-900/70 backdrop-blur-sm transition-colors hover:bg-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 shadow-xl shadow-yellow-100/10";
+
+const platformLabelClass =
+    "flex items-center justify-center gap-1 text-xs font-semibold tracking-wider text-yellow-50/90 group-hover:text-yellow-100 whitespace-nowrap relative w-full";
+
+const platformArrowClass =
+    "transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transform-none absolute right-5";
+
+const platformLogoSlotClass = "flex h-7 items-center justify-center";
 
 export default function Countdown() {
     const t = useT();
@@ -130,43 +168,68 @@ export default function Countdown() {
                         scale: shouldReduceMotion ? 1 : 0.96,
                     }}
                     transition={sectionTransition}
-                    className={sectionBaseClass}
+                    className={`${sectionBaseClass}`}
                 >
+                    <div
+                        aria-hidden="true"
+                        className={`${finishedBgClass} absolute inset-0 scale-105 bg-linear-90 from-black-15 pointer-events-none`}
+                    />
                     <div aria-hidden="true" className={overlayClass} />
+                    <GradientBorder />
 
                     <div className="space-y-6 w-full relative">
-                        <h2
-                            className={titleClass}
-                            style={{
-                                WebkitTextStroke: "1px rgba(70, 50, 120, 0.7)",
-                            }}
-                        >
+                        <h2 className={`${titleClass} ${finishedTitleClass}`}>
                             {t("index.countdown.finishedTitle")}
                         </h2>
 
                         <motion.div
-                            className="flex justify-center gap-4 max-mobile:gap-2"
+                            className="flex flex-wrap justify-center gap-4 max-mobile:gap-2"
                             variants={containerVariants}
                             initial="hidden"
                             animate="visible"
                         >
-                            <motion.a
-                                variants={itemVariants}
-                                href="https://www.playstation.com/games/grand-theft-auto-vi/"
-                                aria-label="PlayStation 5"
-                                className={platformLinkClass}
-                            >
-                                <PS5Icon />
-                            </motion.a>
+                            {PLATFORMS.map(
+                                ({ name, href, Icon, iconClass }) => (
+                                    <motion.a
+                                        key={name}
+                                        variants={itemVariants}
+                                        whileHover={
+                                            shouldReduceMotion
+                                                ? undefined
+                                                : { scale: 1.04 }
+                                        }
+                                        whileTap={
+                                            shouldReduceMotion
+                                                ? undefined
+                                                : { scale: 0.97 }
+                                        }
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${t("index.countdown.getOn")} ${name}`}
+                                        className={platformLinkClass}
+                                    >
+                                        <span
+                                            aria-hidden="true"
+                                            className={platformLabelClass}
+                                        >
+                                            {t("index.countdown.getOn")}
+                                            <IconArrowUpRight
+                                                size={12}
+                                                stroke={2.5}
+                                                className={platformArrowClass}
+                                            />
+                                        </span>
 
-                            <motion.a
-                                variants={itemVariants}
-                                href="https://www.xbox.com/games/store/grand-theft-auto-vi/9nl3wwnzlzzn"
-                                aria-label="Xbox Series X|S"
-                                className={platformLinkClass}
-                            >
-                                <XboxSeries />
-                            </motion.a>
+                                        <span className={platformLogoSlotClass}>
+                                            <Icon
+                                                aria-hidden="true"
+                                                className={`shrink-0 ${iconClass}`}
+                                            />
+                                        </span>
+                                    </motion.a>
+                                ),
+                            )}
                         </motion.div>
                     </div>
                 </motion.section>
@@ -185,13 +248,14 @@ export default function Countdown() {
                         scale: shouldReduceMotion ? 1 : 0.96,
                     }}
                     transition={sectionTransition}
-                    className={sectionBaseClass}
+                    className={`${sectionBaseClass} ${countingBgClass}`}
                 >
                     <div aria-hidden="true" className={overlayClass} />
+                    <GradientBorder />
 
                     <div className="space-y-6 w-full relative">
                         <h2
-                            className={titleClass}
+                            className={`${titleClass} ${countingTitleClass}`}
                             style={{
                                 WebkitTextStroke: "1px rgba(70, 50, 120, 0.7)",
                             }}
