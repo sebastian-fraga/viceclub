@@ -19,6 +19,7 @@ export default {
             hours: "Hours",
             minutes: "Minutes",
             seconds: "Seconds",
+            getOn: "Get it on"
         },
         news: {
             buttons: {
