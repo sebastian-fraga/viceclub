@@ -11,11 +11,9 @@ interface CompletionRewardsProps {
     game: GameId;
     variantId: string;
     rewards: CompletionRewardsData[];
-    /** Segundos de espera antes de animar (para entrar después del checklist). */
     startDelay?: number;
 }
 
-// Mismo movimiento que el título del ChecklistPanel (opacity + y 12, 0.4s)
 const headerVariants: Variants = {
     hidden: { opacity: 0, y: 12 },
     show: {
@@ -25,7 +23,6 @@ const headerVariants: Variants = {
     },
 };
 
-// Mismo movimiento que las secciones del checklist (opacity + y 16, 0.35s)
 const itemVariants: Variants = {
     hidden: { opacity: 0, y: 16 },
     show: {
