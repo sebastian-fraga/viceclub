@@ -1,0 +1,46 @@
+@property --gb-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes gb-spin {
+    from {
+        --gb-angle: 0deg;
+    }
+
+    to {
+        --gb-angle: 360deg;
+    }
+}
+
+.gb-ring {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    padding: var(--gb-width, 2px);
+    border-radius: var(--gb-radius, 1rem);
+    background: conic-gradient(from var(--gb-angle),
+            #00a9ff,
+            #ff23b5,
+            #ffa339,
+            #ff0cd7,
+            #00a9ff);
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+
+    animation: gb-spin var(--gb-duration, 8s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gb-ring {
+        animation: none;
+    }
+}
